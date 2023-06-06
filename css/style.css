@@ -35,3 +35,17 @@ html {
   code {
     font-size: 80%;
   }
+  .code-funkce{
+    color: orange;
+  }
+  .code-promena{
+    color: red;
+  }
+  .python-table {
+    font-weight: bold;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    border-color: gray;
+    border-style: solid;
+    border-width: 20px 5px;
+  }
