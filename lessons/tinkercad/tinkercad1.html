@@ -1,407 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TinkerCAD</title>
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    
-    <link href="/JA-MON-O-03-23/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TinkerCAD</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <link href="/JA-MON-O-03-23/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/JA-MON-O-03-23/index.html">My Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/JA-MON-O-03-23">Home</a>
-            </li>
-            <div class="btn-group">
-              <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                Lekce
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/construct/construct3.html">Construct-3</a></li>
-                <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
-                <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/wordpress/wordpress.html">Wordpress</a></li>
-                <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/python/python.html">Python</a></li>
-                <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/roblox/roblox.html">Roblox</a></li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="/JA-MON-O-03-23/Mystat.html">Mystat</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/JA-MON-O-03-23/contact.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  
-    <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5" style="margin-bottom: 10px; ">TinkerCAD - Lekce 1</h1>
-      <h3 style="margin-bottom: 64px; ">Úvod a vytvoření jednoduchých modelů</h3>
-     
-      <div style="margin-bottom: 64px; ">
-      
-        <h3 >TincerCAD</h3>
-        <p style="margin-bottom: 64px; ">
-          Je to stránka, na které můžeme vytvořit jakékoliv 3D modely, jaké si jen dovedeme
-          představit a dokonce i takové, které nepodléhají
-          naší představivosti, počínaje nejmenším objektem, například
-          knoflíkem až po kosmické stanice pro celý vesmír,
-          který si sami vymyslíme a k tomu se postupně dostaneme.
-          Na konci kurzu budeme mít celý vesmír se svými hrdiny,
-          zvířaty, dopravou a dokonce i s jídlem.
-        </p>
-
-        <h3 style="margin-bottom: 100;">Důležité klávesové zkratky</h3>
-        <h5>Pohyb objektů</h5>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Zkratka</th>
-              <th scope="col">Popis</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td><span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> <span>&#8725;</span> <span>&#8594;</span></td>
-              <td>Posouvání objektu po ose X a Y</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>CTRL <span>&#43;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> </td>
-              <td>Posouvání po ose Z (nahoru a dolů)</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>SHIFT <span>&#43;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> </td>
-              <td>Posouvání po ose X a Y o 10 bodů</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>CTRL <span>&#43;</span> SHIFT <span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> <span>&#8725;</span> <span>&#8594;</span> </td>
-              <td>Posouvání po ose Z</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h5>Užitečné zkratky</h5>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Zkratka</th>
-              <th scope="col">Popis</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>CTRL <span>&#43;</span> C</td>
-              <td>Kopírování objektů</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>CTRL <span>&#43;</span> V</td>
-              <td>Vložení objektů</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>CTRL <span>&#43;</span> Z</td>
-              <td>Vrátit se o krok zpět</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>CTRL <span>&#43;</span> SHIFT <span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> <span>&#8725;</span> <span>&#8594;</span> </td>
-              <td>Posouvání po ose Z</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>CTRL <span>&#43;</span> SHIFT <span>&#43;</span> Z</td>
-              <td>Předělat zpět</td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-              <td>CTRL <span>&#43;</span> G</td>
-              <td>Seskupení objektů</td>
-            </tr>
-            <tr>
-              <th scope="row">7</th>
-              <td>CTRL <span>&#43;</span> SHIFT <span>&#43;</span> G</td>
-              <td>Rozdělení objektů</td>
-            </tr>
-            <tr>
-              <th scope="row">8</th>
-              <td>CTRL <span>&#43;</span> D</td>
-              <td>Duplikovat objekt</td>
-            </tr>
-            <tr>
-              <th scope="row">9</th>
-              <td>CTRL <span>&#43;</span> L</td>
-              <td>Uzamknout objekt</td>
-            </tr>
-            <tr>
-              <th scope="row">10</th>
-              <td>CTRL <span>&#43;</span> A</td>
-              <td>Vybrat vše</td>
-            </tr>
-            <tr>
-              <th scope="row">11</th>
-              <td>DELETE</td>
-              <td>Smazání vybraného objektu</td>
-            </tr>
-            <tr>
-              <th scope="row">12</th>
-              <td>W</td>
-              <td>Přepnutí pracovní plochy</td>
-            </tr>
-            <tr>
-              <th scope="row">13</th>
-              <td>R</td>
-              <td>Pravítko</td>
-            </tr>
-            <tr>
-              <th scope="row">14</th>
-              <td>F</td>
-              <td>Upevnit pohled k vybranému objektu</td>
-            </tr>
-            <tr>
-              <th scope="row">15</th>
-              <td>D</td>
-              <td>Shodit objekt dolů na plochu</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h5>Zkratky pro pohyb po ploše</h5>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Zkratka</th>
-              <th scope="col">Popis</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>ALT <span>&#43;</span> levé tlačítko myši</td>
-              <td>Duplikování objektů, stejné jako CTRL <span>&#43;</span> D.</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>SHIFT <span>&#43;</span> levé tlačítko myši</td>
-              <td>Výběr více objektů.</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>SHIFT <span>&#43;</span> levé tlačítko myši</td>
-              <td>Při točení tělesa otočí vždy o 45°, posunutí tělesa v rovině.</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Kolečko na myši</td>
-              <td>Při držení kolečka na myši se mohu pohybovat po ploše.</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>CTRL <span>&#43;</span> levé tlačítko myši</td>
-              <td>Otáčím s pohledem na pracovní plochu.</td>
-            </tr>
-          </tbody>
-        </table>
-         
-        <h3>Úkol č.1 - Vytvoření parníku</h3>
-        <p>
-          Našim úkolem bude vytvoření si parníku za pomocí základních obrazců a funkcí. V tomto úkolu se naučíme používat užitečné funkce jako je třeba zarovnání, shození předmětů dolů na plochu,
-          sloučení objektů a pohyb objektů a kemry v TinkerCAD prostředí.
-        </p>
-        <table class="table table-bordered">
-          <tr>
-            <td>
-              <p>Vyvoříme si dva objekty kvádr a trojúhelník tyhle dva objekty nám budou tvořit spodek naší lodi.</p>
-              <p>Velikost objektů:</p>
-              <ul>
-                <li>Kvádr - 30x70x5</li>
-                <li>Trojúhelník - 30x14x5</li>
-              </ul>
-              <p>Objekty pomocí klávesy D shodíme dolů na plochu. Ty poté zarovnáme k sobě tak jak je to na obrázku vedle.</p>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme si další kvádr, který nám bude tvořit naše kajuty parníku.</p>
-              <p>Velikost kajut:</p>
-              <ul>
-                <li>14x62x15 </li>
-              </ul>
-              <p>Kvádru změníme barvu na žlutou a položíme jej na námi už vytvořený spodek lodi. Kajuty zarovnáme se spodním dílem lodi. Kajuty nesmí zasahovat do naší přídi lodi.</p>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-2.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme si jeden válec, ten nám bude sloužit jako předloha pro komíny našeho parníku. Ty budeme mít celkem 3.</p>
-              <p>Velikost komínu:</p>
-              <ul>
-                <li>8x8x12</li>
-              </ul>
-              <p>Postup:</p>
-              <ul>
-                <li>Po vytvoření a nastavení velikostí válec umístíme na náš žlutý kvádr.</li>
-                <li>Umístíme válce na střed a naduplikujete tak ještě 2 válce. Tak aby náš parník měl 3 komíny.</li>
-              </ul>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-3.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme si jeden válec bez výplně. Tohle budeme používat jako okna našeho parníku.</p>              
-              <p>velikosti válce:</p>
-              <ul>
-                <li>11x8x3</li>
-              </ul>
-              <p>Vytvořený válec zanoříme do boku našeho žlutého válce a pomocí seskupení těles vyřežeme díry do strany.</p>
-              <p>Stejný postup uděláme i na druhé straně.</p>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-4.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-        </table>
-        <p>
-          Nyní jsme si vytvořili náše první dílo v 3D editoru TinkerCAD. Dají se zde tvořit spousta zajímavých obrázků a těles. Co jen vás napadne zde můžete
-          graficky ztvárnit.
-        </p>
-        <h3>Úkol č.2 - Vytvoření pizzy</h3>
-        <p>
-          plátek salámu válec 4 výška 16 průměr,
-          kousky ananasu jehlan 17 šířka a 25 výška špičku jehlany umažeme,
-          plátek hřibu, nejprve vytvoříme celý hřib z polokoule a válce a pak jej ořežeme na plátek,
-          kroužky cibule,
-          tešto se skláda z tělesa torus a polokoule 
-        </p>
-        <table class="table table-bordered">
-          <tr>
-            <td>
-              <p>Vyvoříme válec jako plátek salámu s velikostí:</p>
-              <ul>
-                <li>16x16x4</li>
-              </ul>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-5.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme ananas, jako objekt použijeme jehlan o velikosti:</p>
-              <ul>
-                <li>17x25x17 </li>
-              </ul>
-              <p>Protože ani ananas není jehlan, uřízneme tomu našemu špičku.</p>
-              <p>Použijeme na to čtverec bez výplbě a sjednotíme ho s našim jehlanem.</p>
-            </td>
-            <td>
-              <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-6.png" alt="tinkercad-kavrd" width="400" height="350">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme houbu z objektů válce a koule</p>
-              <p>Postup:</p>
-              <ul>
-                <li>Umístíme na plochu kouli a válec</li>
-                <li>Z koule odřízneme polovinu a otočíme jí tak aby byla plochou stranou dole</li>
-                <li>Naši polokouli zarovnáme s válcem</li>
-                <li>Poslední krok je už odřezat strany tak, aby nám vznikl plochý obrázek, tak jak je to na obrázku vedle</li>
-              </ul>
-            </td>
-            <td>
-              <table>
-                <tr>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-7.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-8.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Vytvoříme si jeden kousek cibule:</p>              
-              <p>Postup:</p>
-              <ul>
-                <li>Umístíme na plochu kouli</li>
-                <li>Z kouli ořežeme tak jak to je na prvním obrázku vedle</li>
-                <li>Poté pomocí koule vyřežeme díru, aby to vypadalo jako stroužek cibule</li>
-              </ul>
-            </td>
-            <td>
-              <table>
-                <tr>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-12.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-9.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                </tr>
-                <tr>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-10.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/inkercad-ukol1-11.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>A teď vše spojíme dohromady</p>              
-              <p>Postup:</p>
-              <ul>
-                <li>Nejprve si uděláme z torusu kůrku</li>
-                <li>Poté naši kůrku vyplníme za pomocí válce</li>
-                <li>Pak už jsem budeme potřebovat vše naházat na pizzu a máme hotovo.</li>
-              </ul>
-            </td>
-            <td>
-              <table>
-                <tr>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-13.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                  <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-14.png" alt="tinkercad-kavrd" width="200" height="175"></td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/JA-MON-O-03-23/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/JA-MON-O-03-23">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/JA-MON-O-03-23/lessons/roblox/roblox.html">Roblox</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/JA-MON-O-03-23/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/JA-MON-O-03-23/contact.html">Kontakt</a>
+          </li>
+        </ul>
       </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">All rights reserved.</span>
-        </div>
-    </footer>
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <h1 class="mt-5" style="margin-bottom: 10px; ">TinkerCAD - Lekce 1</h1>
+    <h3 style="margin-bottom: 64px; ">Úvod a vytvoření jednoduchých modelů</h3>
+
+    <div style="margin-bottom: 64px; ">
+
+      <h3>TincerCAD</h3>
+      <p style="margin-bottom: 64px; ">
+        Je to stránka, na které můžeme vytvořit jakékoliv 3D modely, jaké si jen dovedeme
+        představit a dokonce i takové, které nepodléhají
+        naší představivosti, počínaje nejmenším objektem, například
+        knoflíkem až po kosmické stanice pro celý vesmír,
+        který si sami vymyslíme a k tomu se postupně dostaneme.
+        Na konci kurzu budeme mít celý vesmír se svými hrdiny,
+        zvířaty, dopravou a dokonce i s jídlem.
+      </p>
+
+      <h3 style="margin-bottom: 100;">Důležité klávesové zkratky</h3>
+      <h5>Pohyb objektů</h5>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Zkratka</th>
+            <th scope="col">Popis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span>
+              <span>&#8725;</span> <span>&#8594;</span></td>
+            <td>Posouvání objektu po ose X a Y</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>CTRL <span>&#43;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> </td>
+            <td>Posouvání po ose Z (nahoru a dolů)</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>SHIFT <span>&#43;</span> <span>&#8593;</span> <span>&#8725;</span> <span>&#8595;</span> </td>
+            <td>Posouvání po ose X a Y o 10 bodů</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>CTRL <span>&#43;</span> SHIFT <span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span>
+              <span>&#8725;</span> <span>&#8595;</span> <span>&#8725;</span> <span>&#8594;</span> </td>
+            <td>Posouvání po ose Z</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>Užitečné zkratky</h5>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Zkratka</th>
+            <th scope="col">Popis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>CTRL <span>&#43;</span> C</td>
+            <td>Kopírování objektů</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>CTRL <span>&#43;</span> V</td>
+            <td>Vložení objektů</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>CTRL <span>&#43;</span> Z</td>
+            <td>Vrátit se o krok zpět</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>CTRL <span>&#43;</span> SHIFT <span>&#8592;</span> <span>&#8725;</span> <span>&#8593;</span>
+              <span>&#8725;</span> <span>&#8595;</span> <span>&#8725;</span> <span>&#8594;</span> </td>
+            <td>Posouvání po ose Z</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>CTRL <span>&#43;</span> SHIFT <span>&#43;</span> Z</td>
+            <td>Předělat zpět</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>CTRL <span>&#43;</span> G</td>
+            <td>Seskupení objektů</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>CTRL <span>&#43;</span> SHIFT <span>&#43;</span> G</td>
+            <td>Rozdělení objektů</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>CTRL <span>&#43;</span> D</td>
+            <td>Duplikovat objekt</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>CTRL <span>&#43;</span> L</td>
+            <td>Uzamknout objekt</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>CTRL <span>&#43;</span> A</td>
+            <td>Vybrat vše</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>DELETE</td>
+            <td>Smazání vybraného objektu</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>W</td>
+            <td>Přepnutí pracovní plochy</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>R</td>
+            <td>Pravítko</td>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <td>F</td>
+            <td>Upevnit pohled k vybranému objektu</td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td>D</td>
+            <td>Shodit objekt dolů na plochu</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>Zkratky pro pohyb po ploše</h5>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Zkratka</th>
+            <th scope="col">Popis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>ALT <span>&#43;</span> levé tlačítko myši</td>
+            <td>Duplikování objektů, stejné jako CTRL <span>&#43;</span> D.</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>SHIFT <span>&#43;</span> levé tlačítko myši</td>
+            <td>Výběr více objektů.</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>SHIFT <span>&#43;</span> levé tlačítko myši</td>
+            <td>Při točení tělesa otočí vždy o 45°, posunutí tělesa v rovině.</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Kolečko na myši</td>
+            <td>Při držení kolečka na myši se mohu pohybovat po ploše.</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>CTRL <span>&#43;</span> levé tlačítko myši</td>
+            <td>Otáčím s pohledem na pracovní plochu.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Úkol č.1 - Vytvoření parníku</h3>
+      <p>
+        Našim úkolem bude vytvoření si parníku za pomocí základních obrazců a funkcí. V tomto úkolu se naučíme používat
+        užitečné funkce jako je třeba zarovnání, shození předmětů dolů na plochu,
+        sloučení objektů a pohyb objektů a kemry v TinkerCAD prostředí.
+      </p>
+      <table class="table table-bordered">
+        <tr>
+          <td>
+            <p>Vyvoříme si dva objekty kvádr a trojúhelník tyhle dva objekty nám budou tvořit spodek naší lodi.</p>
+            <p>Velikost objektů:</p>
+            <ul>
+              <li>Kvádr - 30x70x5</li>
+              <li>Trojúhelník - 30x14x5</li>
+            </ul>
+            <p>Objekty pomocí klávesy D shodíme dolů na plochu. Ty poté zarovnáme k sobě tak jak je to na obrázku vedle.
+            </p>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme si další kvádr, který nám bude tvořit naše kajuty parníku.</p>
+            <p>Velikost kajut:</p>
+            <ul>
+              <li>14x62x15 </li>
+            </ul>
+            <p>Kvádru změníme barvu na žlutou a položíme jej na námi už vytvořený spodek lodi. Kajuty zarovnáme se
+              spodním dílem lodi. Kajuty nesmí zasahovat do naší přídi lodi.</p>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-2.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme si jeden válec, ten nám bude sloužit jako předloha pro komíny našeho parníku. Ty budeme mít
+              celkem 3.</p>
+            <p>Velikost komínu:</p>
+            <ul>
+              <li>8x8x12</li>
+            </ul>
+            <p>Postup:</p>
+            <ul>
+              <li>Po vytvoření a nastavení velikostí válec umístíme na náš žlutý kvádr.</li>
+              <li>Umístíme válce na střed a naduplikujete tak ještě 2 válce. Tak aby náš parník měl 3 komíny.</li>
+            </ul>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-3.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme si jeden válec bez výplně. Tohle budeme používat jako okna našeho parníku.</p>
+            <p>velikosti válce:</p>
+            <ul>
+              <li>11x8x3</li>
+            </ul>
+            <p>Vytvořený válec zanoříme do boku našeho žlutého válce a pomocí seskupení těles vyřežeme díry do strany.
+            </p>
+            <p>Stejný postup uděláme i na druhé straně.</p>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-4.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+      </table>
+      <p>
+        Nyní jsme si vytvořili náše první dílo v 3D editoru TinkerCAD. Dají se zde tvořit spousta zajímavých obrázků a
+        těles. Co jen vás napadne zde můžete
+        graficky ztvárnit.
+      </p>
+      <h3>Úkol č.2 - Vytvoření pizzy</h3>
+      <p>
+        plátek salámu válec 4 výška 16 průměr,
+        kousky ananasu jehlan 17 šířka a 25 výška špičku jehlany umažeme,
+        plátek hřibu, nejprve vytvoříme celý hřib z polokoule a válce a pak jej ořežeme na plátek,
+        kroužky cibule,
+        tešto se skláda z tělesa torus a polokoule
+      </p>
+      <table class="table table-bordered">
+        <tr>
+          <td>
+            <p>Vyvoříme válec jako plátek salámu s velikostí:</p>
+            <ul>
+              <li>16x16x4</li>
+            </ul>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-5.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme ananas, jako objekt použijeme jehlan o velikosti:</p>
+            <ul>
+              <li>17x25x17 </li>
+            </ul>
+            <p>Protože ani ananas není jehlan, uřízneme tomu našemu špičku.</p>
+            <p>Použijeme na to čtverec bez výplbě a sjednotíme ho s našim jehlanem.</p>
+          </td>
+          <td>
+            <img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-6.png" alt="tinkercad-kavrd" width="400"
+              height="350">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme houbu z objektů válce a koule</p>
+            <p>Postup:</p>
+            <ul>
+              <li>Umístíme na plochu kouli a válec</li>
+              <li>Z koule odřízneme polovinu a otočíme jí tak aby byla plochou stranou dole</li>
+              <li>Naši polokouli zarovnáme s válcem</li>
+              <li>Poslední krok je už odřezat strany tak, aby nám vznikl plochý obrázek, tak jak je to na obrázku vedle
+              </li>
+            </ul>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-7.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-8.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Vytvoříme si jeden kousek cibule:</p>
+            <p>Postup:</p>
+            <ul>
+              <li>Umístíme na plochu kouli</li>
+              <li>Z kouli ořežeme tak jak to je na prvním obrázku vedle</li>
+              <li>Poté pomocí koule vyřežeme díru, aby to vypadalo jako stroužek cibule</li>
+            </ul>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-12.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-9.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+              </tr>
+              <tr>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-10.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/inkercad-ukol1-11.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>A teď vše spojíme dohromady</p>
+            <p>Postup:</p>
+            <ul>
+              <li>Nejprve si uděláme z torusu kůrku</li>
+              <li>Poté naši kůrku vyplníme za pomocí válce</li>
+              <li>Pak už jsem budeme potřebovat vše naházat na pizzu a máme hotovo.</li>
+            </ul>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-13.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+                <td><img src="/JA-MON-O-03-23/img/tinkerCAD/lekce1/tinkercad-ukol1-14.png" alt="tinkercad-kavrd"
+                    width="200" height="175"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="/JA-MON-O-03-23/contact.html">Richard Ficek</a>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>
