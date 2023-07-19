@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Python</title>
+    <title>HTML & CSS</title>
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     
     <link href="/JA-MON-O-03-23/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+    // $(document).ready(function(){
+    //   $("p").click(function(){
+    //     $(this).hide();
+    //   });
+    // });
+    // $(document).ready(function(){
+    //   $("button").click(function(){
+    //     $("#div2").load("ukazka1.txt #p1");
+    //   });
+    // });
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#div2").load("ukazka1.txt", function(responseTxt, statusTxt, xhr){
+          if(statusTxt == "success")
+            alert("External content loaded successfully!");
+          if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+        });
+      });
+    });
+    </script>
 </head>
 <body>
     <header>
@@ -50,10 +74,14 @@
     <!-- Begin page content -->
     <main role="main" class="container">
       <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce č. 1. Úvod do světa tvorby webových stránek</h1>
-      <p style="margin-bottom: 64px; ">
+      <p>
         V této lekci si vysvětlíme malou část veliké IT oblasti. Touto oblastí je právě web.
         Na vytvoření webových stránek můžeme použít strašnou spoustu nějakých technologii. V této 
         lekci se koukmeme právě na tu nejzákladnější a to je HTML a spolu s tím i CSS.
+      </p>
+      <p>
+        Nejprve začneme s lehkou teorii a poté si uděláme naše vývojářské prostředí. 
+        Kde si bytvoříme náši první webovou stránku.
       </p>
       
       <h3>Povolání ve vývoji</h3>
@@ -106,7 +134,45 @@
         </ul>
       </p>
       <p><strong>Název domény</strong></p>
+      <p>
+        Je to jedinečný název stránky, který
+        slouží pro přístup k hostingu.
+        <strong>Příklad domény</strong> – site.com, site.org.
+      </p>
     
+      <table>
+        <tr>
+          <td>
+            <h1>Prostředí pro vývoj</h1>
+            <p>
+              Je spousta možných prostředí, které nám umožní vývoj webových stránek. Ale já pro naši lekci vybral právě 
+              program <a href="https://code.visualstudio.com/download">Visual Studio Code</a>. Hlavní důvod proč budeme používat
+              tento program je, že jednoduše nám udělá server, který se bude automaticky aktualizovat a nemusíte ručně znova načíst
+              celou stránku.
+            </p>
+            <p>
+              <strong>Potřebné rozšíření</strong>
+              <p>
+                Níže jsou názvy rozšíření, které si doinstalujeme a svou práci si ulehčíme. 
+                Červená čtvereček na fotce vedle nám ukazuje místo kde se instalují veškeré rozšíření.
+                Do zeleného obdélníku vložíme níže napsané nazázvy a jeden po druhém je stáhneme.
+              </p>
+              <ul>
+                <li>ms-vscode.live-server</li>
+                <li>ecmel.vscode-html-css</li>
+              </ul>
+            </p>
+          </td>
+          <td>
+            <img src="/img/html-css/visual-studio-code-extension.png" alt="visual-studio-code-extension" width="500">
+          </td>
+        </tr>
+      </table>
+
+      <div id="div2"><button>Get External Content</button></div>
+      
+      
+      
 
 
 
