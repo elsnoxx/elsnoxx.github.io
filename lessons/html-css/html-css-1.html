@@ -18,21 +18,6 @@
     //     $(this).hide();
     //   });
     // });
-    // $(document).ready(function(){
-    //   $("button").click(function(){
-    //     $("#div2").load("ukazka1.txt #p1");
-    //   });
-    // });
-    $(document).ready(function(){
-      $("button").click(function(){
-        $("#div2").load("ukazka1.txt", function(responseTxt, statusTxt, xhr){
-          if(statusTxt == "success")
-            alert("External content loaded successfully!");
-          if(statusTxt == "error")
-            alert("Error: " + xhr.status + ": " + xhr.statusText);
-        });
-      });
-    });
     </script>
 </head>
 <body>
@@ -164,7 +149,7 @@
             </p>
           </td>
           <td>
-            <img src="/img/html-css/visual-studio-code-extension.png" alt="visual-studio-code-extension" width="500">
+            <img src="/JA-MON-O-03-23/img/html-css/visual-studio-code-extension.png" alt="visual-studio-code-extension" width="500">
           </td>
         </tr>
       </table>
