@@ -238,7 +238,7 @@
             </p>
           </td>
           <td>
-            <img id="myImg" src="/JA-MON-O-03-23/img/html-css/visual-studio-code-extension.png" alt="visual-studio-code-extension" style="width:100%; max-width:3000px">
+            <img id="myImg" src="/img/html-css/visual-studio-code-extension.png" alt="visual-studio-code-extension" style="width:100%; max-width:3000px">
           </td>
         </tr>
       </table>
@@ -254,7 +254,7 @@
               stačí napsat zkratku doc. Pak bychom měli dostat nápovědu a poté ji potvrdit enterem.
             </p></td>
           <td>
-            <img id="myImg" src="/JA-MON-O-03-23/img/html-css/prvni-web.png" alt="První webová stránka" style="width:100%; max-width:3000px">
+            <img id="myImg" src="/img/html-css/prvni-web.png" alt="První webová stránka" style="width:100%; max-width:3000px">
           </td>
         </tr>
       </table>
@@ -272,9 +272,14 @@
       <script>
       // Get the modal
       var modal = document.getElementById("myModal");
+      $(document).click(function () {
+          alert($(this));
+      });
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       var img = document.getElementById("myImg");
+      console.log(img)
+      
       var modalImg = document.getElementById("img01");
       var captionText = document.getElementById("caption");
       img.onclick = function(){
