@@ -5,13 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Toto lekce první ohledně HTML a CSS">
   <title>HTML & CSS</title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" defer>
 
-  <link href="/css/style.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet" defer>
+  <link href="/css/html-css.css" rel="stylesheet" defer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer async></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer async></script>
+  <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/html-css.js" defer></script>
 
 </head>
 
@@ -68,42 +76,51 @@
     </p>
     <div class="odstavec">
       <h1>Povolání ve vývoji</h1>
-      <p><strong>Designer</strong></p>
-      <p>
-        Je to člověk, který vypracovává vnější vzhled
-        stránky. Obvykle se design vytváří v grafických editorech
-        (Photoshop, Illustrator a jiné). Specifikum práce designéra je ve
-        vytváření příjemného a pohodlného rozhraní pro uživatele.
-      </p>
-      <p><strong>Vývojář</strong></p>
-      <p>
-        Je to člověk zabývající se provedením designu
-        do života. Vývojáři se mohou zabývat frontend, backendem
-        nebo všem současně.
-      </p>
-      <p><strong>Tester</strong></p>
-      <p>
-        Je to člověk, který testuje funkčnost stránky. Ze
-        všech sil se snaží najít nejrůznější chyby.
-        Mohou vývojářům jednoduše poukázat na chybu.
-        Zkušenější testeři dokážou stanovit příčinu dané chyby.
-      </p>
-      <p><strong>SEO specialista</strong></p>
-      <p>
-        Je to člověk, který se zabývá propagací
-        webové stránky na internetu. Většina webových stránek se
-        vytváří na komerční účely. Pro jejich produktivitu je nezbytné,
-        aby měli co největší návštěvnost. Proto je pro libovolnou
-        webovou stránku důležitým úkolem její propagace.
-        SEO specialista se zabývá reklamou stránky, nastavením
-        stránky pro vyhledávací systémy a ostatními podobnými úkoly.
-      </p>
+      <p><strong>Designer</strong> &emsp; <button class="designer">Odpověď</button></p>
+      <div class="odpoved-designer">
+        <p>
+          Je to člověk, který vypracovává vnější vzhled
+          stránky. Obvykle se design vytváří v grafických editorech
+          (Photoshop, Illustrator a jiné). Specifikum práce designéra je ve
+          vytváření příjemného a pohodlného rozhraní pro uživatele.
+        </p>
+      </div>
+      <p><strong>Vývojář</strong> &emsp; <button class="vyvojar">Odpověď</button></p>
+      <div class="odpoved-vyvojar">
+        <p>
+          Je to člověk zabývající se provedením designu
+          do života. Vývojáři se mohou zabývat frontend, backendem
+          nebo všem současně.
+        </p>
+      </div>
+      <p><strong>Tester</strong> &emsp; <button class="tester">Odpověď</button></p>
+      <div class="odpoved-tester">
+        <p>
+          Je to člověk, který testuje funkčnost stránky. Ze
+          všech sil se snaží najít nejrůznější chyby.
+          Mohou vývojářům jednoduše poukázat na chybu.
+          Zkušenější testeři dokážou stanovit příčinu dané chyby.
+        </p>
+      </div>
+      <p><strong>SEO specialista</strong> &emsp; <button class="seo">Odpověď</button></p>
+      <div class="odpoved-seo">
+        <p>
+          Je to člověk, který se zabývá propagací
+          webové stránky na internetu. Většina webových stránek se
+          vytváří na komerční účely. Pro jejich produktivitu je nezbytné,
+          aby měli co největší návštěvnost. Proto je pro libovolnou
+          webovou stránku důležitým úkolem její propagace.
+          SEO specialista se zabývá reklamou stránky, nastavením
+          stránky pro vyhledávací systémy a ostatními podobnými úkoly.
+        </p>
+      </div>
     </div>
 
 
     <div class="odstavec">
       <h1>Jak fungují stránky</h1>
-      <p><strong>Hosting</strong></p>
+      <p class="otazka"><strong>Hosting</strong></p>
+
       <p>
         Je to služba, která poskytuje místo pro umístění
         informací na serveru trvale připojeném k internetu.
@@ -119,12 +136,13 @@
         <li>statická IP-adresa</li>
       </ul>
       </p>
-      <p><strong>Název domény</strong></p>
+      <p class="otazka"><strong>Název domény</strong></p>
       <p>
         Je to jedinečný název stránky, který
         slouží pro přístup k hostingu.
         <strong>Příklad domény</strong> – site.com, site.org.
       </p>
+
     </div>
 
     <div class="odstavec">
@@ -155,7 +173,7 @@
           </td>
           <td>
             <img class="myImg" src="/img/html-css/visual-studio-code-extension.png"
-              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px">
+              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px; height: auto" loading="lazy">
           </td>
         </tr>
       </table>
@@ -165,14 +183,13 @@
       <h1>První webová stránka</h1>
       <p>
         <strong>Co to znamená HTML?</strong>
-        <ul>
-          <li>Hyper Text Markup Language neboli Hypertextový značkovací jazyk</li>
-        </ul>
+      <ul>
+        <li>Hyper Text Markup Language neboli Hypertextový značkovací jazyk</li>
+      </ul>
       </p>
       <table>
         <tr>
           <td>
-
             <p>
               Pokud jsme vše zvládly. Vytvoříme si náš první web. Souborv vytvoříme za pomocí Visual Studia Code.
               Ten si pojmenujeme takhle: <strong>prvniweb.html</strong>. A pokud máme vše dobře nainstalované tak
@@ -182,10 +199,31 @@
           </td>
           <td>
             <img class="myImg" src="/img/html-css/prvni-web.png" alt="První webová stránka"
-              style="width:100%; max-width:3000px">
+              style="width:100%; max-width:3000px; height: auto" loading="lazy">
           </td>
         </tr>
       </table>
+    </div>
+    <div class="odstavec">
+      <h1>Základní struktura HTML dokumentu</h1>
+      <ul>
+        <li>
+          <p class="DOCTYPE"><strong> &lt;! DOCTYPE html &gt;</strong>&emsp; <button class="designer">Odpověď</button></p>
+          <div class="odpoved-DOCTYPE">
+            <p>
+                todo
+            </p>
+          </div>
+        </li>
+        <li>
+          <p class="html"><strong> &lt; html &gt;</strong>&emsp; <button class="designer">Odpověď</button></p>
+          <div class="odpoved-html">
+            <p>
+                todo
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
 
 
@@ -193,7 +231,7 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
+      <img class="modal-content" id="img01" loading="lazy">
       <div id="caption"></div>
     </div>
 
@@ -205,11 +243,6 @@
       <span class="text-muted">All rights reserved.</span>
     </div>
   </footer>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="/js/JQuery-general.js"></script>
 </body>
 
 </html>

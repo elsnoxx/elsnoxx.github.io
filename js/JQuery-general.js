@@ -23,6 +23,7 @@ $(document).ready(function() {
         // Skryjeme modální okno
         $(".modal").css("display", "none");
       });
+
   });
 
 
