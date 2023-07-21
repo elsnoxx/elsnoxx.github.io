@@ -17,4 +17,13 @@ $(document).ready(function() {
       // Skryjeme modální okno
       $(".modal").css("display", "none");
     });
+
+    // Akce po kliknutí na zavírací ikonu
+    $(".modal").on("click", function() {
+        // Skryjeme modální okno
+        $(".modal").css("display", "none");
+      });
   });
+
+
+  
