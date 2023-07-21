@@ -12,17 +12,6 @@
     <link href="/css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <script>
-    // $(document).ready(function(){
-    //   $("p").click(function(){
-    //     $(this).hide();
-    //   });
-    // });
-    </script>
-    <style>
-      
-      
-      </style>
 </head>
 <body>
     <header>
@@ -184,30 +173,7 @@
         <div id="caption"></div>
       </div>
 
-      <script>
-      // Počkáme, až se načte celý dokument
-        $(document).ready(function() {
-          // Nastavíme akci po kliknutí na obrázek
-          $(".myImg").on("click", function() {
-            // Zobrazíme modální okno
-            var altText = $(this).attr("alt");
-            $(".modal").css("display", "block");
-            // Nastavíme zdroj obrázku v modálním okně na ten, který byl kliknutý
-            $("#img01").attr("src", $(this).attr("src"));
-            $("#img01").attr("alt", altText);
-            console.log(altText)
-            $("#caption").text(altText);
-          });
-
-          // Akce po kliknutí na zavírací ikonu
-          $(".close").on("click", function() {
-            // Skryjeme modální okno
-            $(".modal").css("display", "none");
-          });
-        });
-
-
-      </script>
+      
 
     </main>
     <footer class="footer">
@@ -219,5 +185,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="/js/JQuery-general.js"></script>
 </body>
 </html>
