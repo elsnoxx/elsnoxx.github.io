@@ -10,15 +10,15 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" defer>
-  <link href="/css/style.css" rel="stylesheet" defer>
-  <link href="/css/html-css/html-css.css" rel="stylesheet" defer>
+  <link href="/JA-MON-O-03-23/css/style.css" rel="stylesheet" defer>
+  <link href="/JA-MON-O-03-23/css/html-css/html-css.css" rel="stylesheet" defer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer async></script>
   <!-- Latest compiled JavaScript -->
-  <script src="/js/bootstrap.min.js" defer></script>
-  <script src="/js/JQuery-general.js" defer></script>
-  <script src="/js/html-css.js" defer></script>
+  <script src="/JA-MON-O-03-23/js/bootstrap.min.js" defer></script>
+  <script src="/JA-MON-O-03-23/js/JQuery-general.js" defer></script>
+  <script src="/JA-MON-O-03-23/js/html-css.js" defer></script>
 
 </head>
 
@@ -76,7 +76,7 @@
     </p>
     <div class="odstavec">
       <h1>Povolání ve vývoji</h1>
-      <p><strong>Designer</strong> &emsp; <button class="designer">Odpověď</button></p>
+      <p><strong>Designer</strong> &emsp; <button class="otazka" id="designer">Odpověď</button></p>
       <div class="odpoved-designer">
         <p>
           Je to člověk, který vypracovává vnější vzhled
@@ -85,7 +85,7 @@
           vytváření příjemného a pohodlného rozhraní pro uživatele.
         </p>
       </div>
-      <p><strong>Vývojář</strong> &emsp; <button class="vyvojar">Odpověď</button></p>
+      <p><strong>Vývojář</strong> &emsp; <button class="otazka" id="vyvojar">Odpověď</button></p>
       <div class="odpoved-vyvojar">
         <p>
           Je to člověk zabývající se provedením designu
@@ -93,7 +93,7 @@
           nebo všem současně.
         </p>
       </div>
-      <p><strong>Tester</strong> &emsp; <button class="tester">Odpověď</button></p>
+      <p><strong>Tester</strong> &emsp; <button class="otazka" id="tester">Odpověď</button></p>
       <div class="odpoved-tester">
         <p>
           Je to člověk, který testuje funkčnost stránky. Ze
@@ -102,7 +102,7 @@
           Zkušenější testeři dokážou stanovit příčinu dané chyby.
         </p>
       </div>
-      <p><strong>SEO specialista</strong> &emsp; <button class="seo">Odpověď</button></p>
+      <p><strong>SEO specialista</strong> &emsp; <button class="otazka" id="seo">Odpověď</button></p>
       <div class="odpoved-seo">
         <p>
           Je to člověk, který se zabývá propagací
@@ -209,48 +209,82 @@
       <h1>Základní struktura HTML dokumentu</h1>
       <ul>
         <li>
-          <p class="DOCTYPE"><strong> &lt;! DOCTYPE html &gt;</strong>&emsp; <button class="designer">Odpověď</button>
+          <p class="DOCTYPE"><strong> &lt;! DOCTYPE html &gt;</strong>&emsp; <button class="otazka"
+              id="DOCTYPE">Odpověď</button>
           </p>
           <div class="odpoved-DOCTYPE">
             <p>
-              todo
+              Určuje typ dokumentu. Je to nezbytné pro to, aby prohlížeč chápal, jak má
+              interpretovat aktuální webovou stránku. Vždyť HTML existuje v
+              několika verzích.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; html &gt;</strong>&emsp; <button class="html">Odpověď</button></p>
+          <p><strong> &lt; html &gt;</strong>&emsp; <button class="otazka" id="html">Odpověď</button></p>
           <div class="odpoved-html">
             <p>
-              todo
+              Určije začátek našeho html souboru. vněm jse uloŽeno záhlaví <strong>&lt; head &gt;</strong> a tělo
+              dokumentu <strong> &lt; body &gt;</strong>.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; title &gt;</strong>&emsp; <button class="title">Odpověď</button></p>
-          <div class="odpoved-title">
+          <p><strong> &lt; head &gt;</strong>&emsp; <button class="otazka" id="head">Odpověď</button></p>
+          <div class="odpoved-head">
             <p>
-              todo
+              Hlavička dokumentu, nazývaná také jako blok
+
+              <head>,
+                může obsahovat text a tagy. No to, co je obsaženo v této části,
+                není zobrazeno přímo na stránce, kromě tagu .
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; meta &gt;</strong>&emsp; <button class="meta">Odpověď</button></p>
+          <p><strong> &lt; meta &gt;</strong>&emsp; <button class="otazka" id="meta">Odpověď</button></p>
           <div class="odpoved-meta">
             <p>
-              todo
+              Je to univerzální tag a dává celou skupinu možností, hlavně
+              pomocí metatagů. S jejich pomocí je možné měnit kódování podstránky,
+              přidávat klíčová slova, popis dokumentu a mnoho jiného. Na to, aby
+              prohlížeč chápal, že má co do činění s kódováním UTF-8 (Unicode
+              transformation format) a přidává se daný řádek.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; style &gt;</strong>&emsp; <button class="style">Odpověď</button></p>
+          <p><strong> &lt; title &gt;</strong>&emsp; <button class="otazka" id="title">Odpověď</button></p>
+          <div class="odpoved-title">
+            <p>
+              Určuje hlavičku webové stránky, je to jeden z
+              důležitých prvků určených k řešení mnoha úkolů. V operačním systému
+              Windows je text hlavičky zobrazený v levém horním úhlu okna
+              prohlížeče.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p><strong> &lt; style &gt;</strong>&emsp; <button class="otazka" id="style">Odpověď</button></p>
           <div class="odpoved-style">
             <p>
-              todo
+              Tag určerý pro vytvoření stylů naší stranky.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; div &gt;</strong>&emsp; <button class="div">Odpověď</button></p>
+          <p><strong> &lt; body &gt;</strong>&emsp; <button class="otazka" id="body">Odpověď</button></p>
+          <div class="odpoved-body">
+            <p>
+              Určuje hlavičku webové stránky, je to jeden z
+              důležitých prvků určených k řešení mnoha úkolů. V operačním systému
+              Windows je text hlavičky zobrazený v levém horním úhlu okna
+              prohlížeče.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p><strong> &lt; div &gt;</strong>&emsp; <button class="otazka" id="div">Odpověď</button></p>
           <div class="odpoved-div">
             <p>
               todo
@@ -258,26 +292,26 @@
           </div>
         </li>
         <li>
-          <p><strong> &lt; h &gt;</strong>&emsp; <button class="h">Odpověď</button></p>
+          <p><strong> &lt; h &gt;</strong>&emsp; <button class="otazka" id="h">Odpověď</button></p>
           <div class="odpoved-h">
             <p>
-              todo
+              Označuje nadpis textu a má až 6 velikostí.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; p &gt;</strong>&emsp; <button class="p">Odpověď</button></p>
+          <p><strong> &lt; p &gt;</strong>&emsp; <button class="otazka" id="p">Odpověď</button></p>
           <div class="odpoved-p">
             <p>
-              todo
+              Označuje odstavec (paragraf) textu.
             </p>
           </div>
         </li>
         <li>
-          <p><strong> &lt; a &gt;</strong>&emsp; <button class="a">Odpověď</button></p>
+          <p><strong> &lt; a &gt;</strong>&emsp; <button class="otazka" id="a">Odpověď</button></p>
           <div class="odpoved-a">
             <p>
-              todo
+              Označuje odkaz na jiné stránky nebo na text.
             </p>
           </div>
         </li>
@@ -306,7 +340,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">Company name</h6>
+            <h6 class="text-uppercase fw-bold mb-4">StepIT academy</h6>
             <p>
               Tyto stránky jsou vytvořené pro vyučování v StepIT academy.
             </p>
