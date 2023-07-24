@@ -1,63 +1,82 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-    position: relative;
-    min-height: 100%;
-  }
-  body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #f5f5f5;
-  }  
-  /* Custom page CSS
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px;
+  /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+/* Custom page CSS
   -------------------------------------------------- */
-  /* Not required for template or sticky footer method. */
-  
-  body > .container {
-    padding: 60px 15px 0;
-  }
-  
-  .footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  
-  code {
-    font-size: 80%;
-  }
-  .code-funkce{
-    color: orange;
-  }
-  .code-promena{
-    color: red;
-  }
-  .python-table {
-    font-weight: bold;
-    background-color: rgb(73, 73, 73);
-    color: white;
-    border-color: rgb(73, 73, 73);
-    border-style: solid;
-    border-width: 20px 5px;
-  }
+/* Not required for template or sticky footer method. */
 
-  .odstavec{
-    margin-top: 64px;
-    margin-bottom: 64px;
-  }
+body>.container {
+  padding: 60px 15px 0;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    color: #0a294b;
-    font-family: Arial;
-    font-weight: bold;
-    margin-bottom: 32px;
+.footer>.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.code-funkce {
+  color: orange;
+}
+
+.code-promena {
+  color: red;
+}
+
+.python-table {
+  font-weight: bold;
+  background-color: rgb(73, 73, 73);
+  color: white;
+  border-color: rgb(73, 73, 73);
+  border-style: solid;
+  border-width: 20px 5px;
+}
+
+.odstavec {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  font-family: Arial;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-decoration: underline;
+  font-weight: bolder ;
+}
+
+p {
+  text-indent: 50px;
+  font-family: Arial;
 }
 
 /* The Modal img */
@@ -68,21 +87,32 @@ html {
   transition: 0.3s;
 }
 
-.myImg:hover {opacity: 0.7;}
+.myImg:hover {
+  opacity: 0.7;
+}
 
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -106,7 +136,8 @@ html {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content,
+#caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -114,13 +145,23 @@ html {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* The Close Button */
@@ -143,7 +184,7 @@ html {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
