@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
@@ -66,17 +66,73 @@
   <main role="main" class="container">
     <h1>Lekce č. 2. Seznamy, Obrázky, Tabulky</h1>
     <p>
-      V této lekci si vysvětlíme malou část možností při tvorbě webových stránek. Touto oblastí je právě web.
+      V této lekci si vysvětlíme malou část možností při tvorbě webových stránek. Touto oblastí je právě pár základních
+      funkcí.
       Na vytvoření webových stránek můžeme použít strašnou spoustu nějakých technologii. V této
       lekci se koukmeme právě na tu nejzákladnější a to je HTML a spolu s tím i CSS.
     </p>
     <p>
-      Nejprve začneme s lehkou teorii a poté si uděláme naše vývojářské prostředí.
-      Kde si bytvoříme náši první webovou stránku. Výsledkem této lekce bude tato
-      <a href="/lessons/html-css/ukazka1.html" target="_blank" rel="noopener noreferrer">webová
-        stránka</a>
+      Nejprve si představíme Seznamy, Obrázky a Tabulky. Ukážeme si vše jak se používá.
+      Na konci si každý vyzkouší sám oři plnení úkolu.
     </p>
-    
+
+
+    <div class="odstavec">
+      <h2>Seznam</h2>
+      <div style="padding-bottom: 30px;">
+        <button class="otazka" id="div">Co je to ?</button>
+      </div>
+
+      <div class="odpoved-div">
+        <p>
+          je to soubor nabídek, které začínají od čísla nebo značky (například tečky nebo odrážky).
+          Umožňuje uspořádat různé informace a prezentovat je způsobem, který je pro uživatele nohem pohodlnější.
+        </p>
+      </div>
+      <p>
+        Seznamy jsou tvořené v html za pomoci kontejneru &lt;ul&gt; a do nej se pak vkladaji prvky s tagem &lt;ol&gt;
+        pro seznam bez značeni a nebo &lt;li&gt; pro seznam s kolečky.
+
+      </p>
+    </div>
+
+
+    <div class="odstavec">
+      <h4>Seznam s odrážky</h4>
+      <p>
+        K vytvoreni seznamu s odrazky budem potrebovat kontejtner &lt;ul&gt;&lt;/ul&gt;, do nej vkladame jedtnotlive
+        body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
+      </p>
+      <table>
+        <tr>
+          <td>
+            <p>kod</p>
+          </td>
+          <td>
+            <p>vizualizace</p>
+          </td>
+        </tr>
+      </table>
+
+      <h4>Seznam s čísli</h4>
+      <p>
+        K vytvoreni seznamu s odrazky budem potrebovat kontejtner &lt;ol&gt;&lt;/ol&gt;, do nej vkladame jedtnotlive
+      body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
+      </p>
+      <table>
+        <tr>
+          <td>
+            <p>kod</p>
+          </td>
+          <td>
+            <p>vizualizace</p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
