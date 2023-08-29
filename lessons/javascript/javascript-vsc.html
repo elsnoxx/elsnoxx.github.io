@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
   <link href="/css/style.css" rel="stylesheet">
+  <script src="/js/bootstrap.min.js" defer></script>
+  <script src="/js/JQuery-general.js" defer></script>
 </head>
 
 <body>
@@ -55,67 +57,49 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">JavaScript</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat online nástroj <a href="/lessons/javascript/javascript-vsc.html">Visual Studio Code</a>.
-      Návod na přihlášení naleznete <a href="">zde</a>.
-    </p>
 
 
-
-    <div style="margin-bottom: 64px; ">
-      <h3>Lekce 1</h3>
-      <ul>
-        <h6>Obsah lekce - 1</h6>
-        <p>Materiály z lekce naleznete <a href="/lessons/javascript/javascript1.html">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 2</h3>
-      <ul>
-        <h6>Obsah lekce - 2</h6>
-        <p>Materiály z lekce naleznete <a href="/lessons/javascript/javascript1.html">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 3</h3>
-      <ul>
-        <h6>Obsah lekce - 3</h6>
-        <p>Materiály z lekce naleznete <a href="/lessons/javascript/javascript1.html">zde</a></p>
-      </ul>
-
-      <h3>Lekce 4</h3>
-      <ul>
-        <h6>Obsah lekce - 4</h6>
-        <p>Materiály z lekce naleznete <a href="/lessons/javascript/javascript1.html">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 5</h3>
-      <ul>
-        <h6>Obsah lekce - 5</h6>
-        <p>Materiály z lekce naleznete <a href="/lessons/javascript/javascript1.html">zde</a>.</p>
-      </ul>
-
-      <h3>Projekt</h3>
-      <ul style="margin-bottom: 64px; ">
-        <p>
-          V dalších lekcích budete vypracovávat závěrečný projekt a prezentaci k němu. Veškeré materiály dostanete na
-          lekci.
-          K tvorbě projektu budou i potřebné znalosti z lekcí, které jsme jič probrali.
-          V případě nejasností se mi <a href="/contact.html">ozvete</a>.
-        </p>
-        <p>Podrobný popis <a href="">zde</a>.</p>
-      </ul>
-
-      <h3>Prezentace</h3>
-      <ul style="margin-bottom: 64px; ">
-        <p>
-          V dalších lekcích budete vypracovávat závěrečný projekt a prezentaci k němu. Veškeré materiály dostanete na
-          lekci.
-          K tvorbě projektu budou i potřebné znalosti z lekcí, které jsme jič probrali.
-          V případě nejasností se mi <a href="/contact.html">ozvete</a>.
-        </p>
-        <p>Podrobný popis <a href="">zde</a>.</p>
-      </ul>
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <h1>Prostředí pro vývoj</h1>
+            <p>
+              Je spousta možných prostředí, které nám umožní vývoj webových stránek. Ale já pro naši lekci vybral právě
+              program <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Visual
+                Studio Code</a>. Hlavní důvod proč budeme
+              používat
+              tento program je, že jednoduše nám udělá server, který se bude automaticky aktualizovat a nemusíte ručně
+              znova načíst
+              celou stránku.
+            </p>
+            <p>
+              <strong>Potřebné rozšíření</strong>
+            <p>
+              Níže jsou názvy rozšíření, které si doinstalujeme a svou práci si ulehčíme.
+              Červená čtvereček na fotce vedle nám ukazuje místo kde se instalují veškeré rozšíření.
+              Do zeleného obdélníku vložíme níže napsané nazázvy a jeden po druhém je stáhneme.
+            </p>
+            <ul>
+              <li>ms-vscode.live-server</li>
+              <li>ecmel.vscode-html-css</li>
+              <li>xabikos.JavaScriptSnippets</li>
+            </ul>
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/html-css/visual-studio-code-extension.png"
+              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
     </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" loading="lazy">
+  <div id="caption"></div>
+</div>
 
 
   </main>
