@@ -66,6 +66,10 @@ code {
   padding-left: 50px;
 }
 
+.odrazky-podtext li {
+  font-weight: bolder;
+}
+
 h1,
 h2,
 h3,

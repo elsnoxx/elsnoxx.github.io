@@ -83,7 +83,7 @@
         <button class="otazka" id="div">Co je to ?</button>
       </div>
 
-      <div class="odpoved-div">
+      <div class="odpoved-div" style="font-weight: bolder;">
         <p>
           je to soubor nabídek, které začínají od čísla nebo značky (například tečky nebo odrážky).
           Umožňuje uspořádat různé informace a prezentovat je způsobem, který je pro uživatele nohem pohodlnější.
@@ -117,7 +117,7 @@
       <h4>Seznam s čísli</h4>
       <p>
         K vytvoreni seznamu s odrazky budem potrebovat kontejtner &lt;ol&gt;&lt;/ol&gt;, do nej vkladame jedtnotlive
-      body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
+        body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
       </p>
       <table>
         <tr>
@@ -132,7 +132,58 @@
 
     </div>
 
+    <div class="odstavec">
+      <h4>Obrázku</h4>
+      <p>
+        Pro přidaní obrázku nejprve potřebujeme si připravit soubor na požadovanou velikost. A poté ho přidáme za pomocí
+        tagu &lt;img&gt; do našeho html dokumentu
+      </p>
+      <h5>URL adresa</h5> <p>Je to cesta k souboru, muže být jako odkaz na internet nebo jako odkaz na soubor ve složce</p>
+      <h5>Atributy</h5>
+      <ul>
+        <li>Width</li>
+        <li>Height</li>
+        <li>SRC</li>
+        <li>ALT</li>
+        <li>Title</li>
+      </ul>
+      <h4>Důležite informace:</h4>
+      <ul>
+        <li>Čím menší obrazek tím se rychleji zobrazi</li>
+        <li>Velikost obrazku upravujeme po šířce neboli (widht)</li>
+      </ul>
+      <table>
+        <tr>
+          <td>
+            <p>kod</p>
+          </td>
+          <td>
+            <p>vizualizace</p>
+          </td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="odstavec">
+      <h4>Tabulky</h4>
+      <p>Pro pridani tabulky je nezbytne znat tagy <strong>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;&lt;/td&gt;</strong></p>
+
+      <ul class="odrazky-podtext">
+        <li>&lt;table&gt;</li><p>Použiva se pro začátek a konec tabulky</p>
+        <li>&lt;tr&gt;</li><p>Table row neboli řádek tabulky, začína a končí řádek tabulky</p>
+        <li>&lt;td&gt;</li><p>Table data neboli tabulkové údaje, začíná a ukončuje buňku řádku tabulky</p>
+      </ul>
+      <h5>Doplňkové atributy</h5>
+      <ul class="odrazky-podtext">
+        <li>Border</li>
+        <p>používa se pro specifikaci tlouštky rámu kolem tabulky</p>
+        <p>Ukázka kod a vyzualizace</p>
+        <li>Align</li><p>Vyrovnani obsahu cele tabulky v jednotlivých buňkách</p>
+        <li>Valign</li><p>Zarovnani vertikalní v buňce</p>
+        <li>Colspan</li><p>Kolik sloupců bude zabírat jedna buňka</p>
+        <li>Rowspan</li><p>Kolik sloupců bude zabírat jedna buňka</p>
+      </ul>
+    </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
