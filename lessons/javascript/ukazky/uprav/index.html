@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function onButton(){
+            for (var i = 1; i <= 3;i++){
+                var text = document.getElementById("pozdav");
+                console.log(text)
+                var c = "ahoj" + i;
+                console.log(c);
+                text.innerHTML = c;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="pozdav">ahoj 3</p>
+    <input type="button" onclick="onButton()" value="Stlač mě">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function onButton(){
+            var cislo1 = document.getElementById('a');
+            var cislo2 = document.getElementById('b');
+            var vysledek = document.getElementById('vysledek');
+            console.log(cislo1);
+            console.log(cislo2);
+            console.log(vysledek);
+            var a = Number(cislo1.value);
+            var b = Number(cislo2.value);;
+            console.log(a);
+            console.log(b);
+            var c = a + b;
+            console.log(c);
+            vysledek.innerHTML = c;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <p>a: <input id="a" type="number"></p>
+        <p>b: <input id="b" type="number"></p>
+        <p id="vysledek">Výsledek</p>
+        <input type="button" value="Stlač mě" onclick="onButton()">
+    </form>
+</body>
