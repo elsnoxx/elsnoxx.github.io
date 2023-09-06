@@ -5,13 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Úvodní strana">
-  <title>JA-MON-O-03-23</title>
+  <meta name="description" content="Toto lekce první ohledně HTML a CSS">
+  <title>HTML & CSS</title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" defer>
+  <link href="/css/style.css" rel="stylesheet" defer>
+  <link href="/css/html-css/html-css.css" rel="stylesheet" defer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer async></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="/js/bootstrap.min.js" defer></script>
+  <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/html-css.js" defer></script>
 
-  <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,8 +33,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
@@ -47,10 +55,7 @@
             <a class="nav-link" href="/Mystat.html">Mystat</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact.html">Kontakt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/bugs.html">Bugs</a>
+            <a class="nav-link " href="/contact.html">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -59,52 +64,34 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Materiály do hodiny StepIT</h1>
+    <h1>Lekce č. 1. Úvod do světa tvorby webových stránek</h1>
+    
+
+    <div class="accordion">
+      <div class="panel">
+        <div class="panel-heading">Sekce 1</div>
+        <div class="panel-content">
+          Obsah sekce 1
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-heading">Sekce 2</div>
+        <div class="panel-content">
+          Obsah sekce 2
+        </div>
+      </div>
+      <!-- Přidat další panely podle potřeby -->
+    </div>
 
 
-    <p style="font-size: 25px;"><strong>Pokud najdete nějakou chybu na webu, nahlásíte mi ji na lekci já ji
-        opravím. Pokud se bude jednat o nějakou větší chybu můžete dostat diamant.</strong> </p>
-    <p>Zde najdete hlavní přehled všech předmětů, které jsme již probrali. Mohou se zde vyskytnout i další témata. Ty
-      však nebudou mít přidané mé materiály.</p>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" loading="lazy">
+      <div id="caption"></div>
+    </div>
 
 
-    <table style="font-weight: bolder;">
-      <tr>
-        <td>
-          <h2>Webové stránky</h2>
-          <ul>
-            <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
-            <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-            <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Grafika a design</h2>
-          <ul>
-            <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Vývoj her</h2>
-          <ul>
-            <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
-            <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <h2>Programování</h2>
-          <ul>
-            <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
-          </ul>
-        </td>
-      </tr>
-    </table>
 
   </main>
   <!-- Footer -->
@@ -117,7 +104,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h4 class="text-uppercase fw-bold mb-4">StepIT academy</h4>
+            <h6 class="text-uppercase fw-bold mb-4">StepIT academy</h6>
             <p>
               Tyto stránky jsou vytvořené pro vyučování v StepIT academy.
             </p>
@@ -125,7 +112,7 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h4 class="text-uppercase fw-bold mb-4">Contact</h4>
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
             <p> Richard Ficek</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
@@ -138,12 +125,6 @@
       </div>
     </section>
   </footer>
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
