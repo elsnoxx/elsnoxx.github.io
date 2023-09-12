@@ -10,11 +10,20 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+  <script src="/js/cas.js" defer></script>
   <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+  <script>
+    function naplcas(){
+    var datum = new Date();
+    aktualniCas = datum.getHours() + "." + datum.getMinutes() + "." + datum.getSeconds();
+    window.document.getElementsByID("cas").innerHTML = aktualniCas;
+}
+naplcas();
+window.setInterval("naplcas()",1000);
+  </script>
   <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -52,6 +61,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/bugs.html">Bugs</a>
           </li>
+          <li class="nav-item">
+            <p id="cas"></p>
+          </li>
         </ul>
       </div>
     </nav>
@@ -66,7 +78,7 @@
         opravím. Pokud se bude jednat o nějakou větší chybu můžete dostat diamant.</strong> </p>
     <p>Zde najdete hlavní přehled všech předmětů, které jsme již probrali. Mohou se zde vyskytnout i další témata. Ty
       však nebudou mít přidané mé materiály.</p>
-
+    <span id="cas">ahoj</span>
 
     <table style="font-weight: bolder;">
       <tr>
