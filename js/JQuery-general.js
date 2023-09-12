@@ -26,5 +26,14 @@ $(document).ready(function() {
 
   });
 
-
+  function naplcas() {
+    var datum = new Date();
+    var aktualniCas = datum.getHours() + ":" + datum.getMinutes() + ":" + datum.getSeconds();
+    $("#cas").text(aktualniCas);
+    console.log(aktualniCas);
+  }
+  
+  naplcas();
+  setInterval(naplcas, 1000);
+  
   

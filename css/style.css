@@ -105,6 +105,11 @@ p {
   opacity: 0.7;
 }
 
+#cas-text {
+  text-align: right;
+  margin-right: 15px; 
+  font-weight: bolder;
+}
 
 .modal {
   display: none;
