@@ -111,6 +111,12 @@ p {
   font-weight: bolder;
 }
 
+#casovac-text {
+  text-align: left;
+  margin-right: 15px; 
+  font-weight: bolder;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
