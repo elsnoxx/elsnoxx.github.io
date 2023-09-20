@@ -123,6 +123,10 @@ p {
   font-weight: bolder;
 }
 
+.otazka{
+  margin-bottom: 20px;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
