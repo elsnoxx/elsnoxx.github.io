@@ -1,0 +1,19 @@
+.import {
+  color: purple;
+  font-weight: bolder;
+}
+
+.turtle{
+  color: darkgreen;
+  font-weight: bolder;
+}
+
+.window{
+  color: lightblue;
+  font-weight: bolder;
+}
+
+.screen, .shape{
+  color: red;
+  font-weight: bolder;
+}
