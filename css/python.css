@@ -1,4 +1,4 @@
-.import {
+.import , .slovo{
   color: purple;
   font-weight: bolder;
 }
@@ -15,5 +15,10 @@
 
 .screen, .shape{
   color: red;
+  font-weight: bolder;
+}
+
+.prikaz{
+  color: blue;
   font-weight: bolder;
 }
