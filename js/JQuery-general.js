@@ -30,14 +30,14 @@ function naplcas() {
   var datum = new Date();
   var hodiny = datum.getHours();
   var minuty = datum.getMinutes();
-  var sekundy = datum.getSeconds();
+  var sekundy = datum.getSeconds().toString();
 
   if (minuty < 10) {
     minuty = "0" + minuty;
   }
-
+  
   if (sekundy < 10) {
-    sekundy = "0" + sekundy;
+    sekundy = "0" +sekundy;
   }
   var aktualniCas = hodiny + ":" + minuty + ":" + sekundy;
   $("#cas").text(aktualniCas);
