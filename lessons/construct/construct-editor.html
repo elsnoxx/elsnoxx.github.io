@@ -50,12 +50,27 @@
   
     <!-- Begin page content -->
     <main role="main" class="container">
+      <div>
+        <table class="moveAndTime">
+          <tr>
+            <td>
+              <button id="left" onclick="location.href = '/lessons/construct/construct3.html';">Předchozí lekce</button>
+              <button id="right" onclick="location.href = '/lessons/construct/construct3-1.html';">Následují lekce</button>
+            </td>
+            <td>
+              <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+            </td>
+          </tr>
+        </table>
+      </div>
         <h1 class="mt-5" style="margin-bottom: 64px; ">Návod na registraci</h1>
         <p>Otevřede online editor <a href="https://www.construct.net/en/register">Costructu 3</a>.</p>
         <p>Na registrační stánce musíte vyplnit do pole Username vaši přezdívku či jméno do poel Password vaše heslo a do pole Your email address vaši emailovou adresu.</p>
         <p>Dále bude potřeba souhlasit s podmínky a pravidly. Pokud jste starší 16 let. Můžete registraci provést sami. Pokud ne musí to být za přítomnosti rodičů!</p>
         <p>Zde je náhled registračního pole.</p>
-        <img src="/img/terms-construct.png" alt="terms-construct" width="300" height="600">
+        <img class="myImg" src="/img/terms-construct.png" alt="terms-construct"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+
     </main>
     <footer class="footer">
         <div class="container">
