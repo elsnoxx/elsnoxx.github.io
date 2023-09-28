@@ -1,78 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Python</title>
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/index.html">My Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="">Home</a>
-            </li>
-            <div class="btn-group">
-              <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                Lekce
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
-                <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
-                <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
-                <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
-                <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="/Mystat.html">Mystat</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="/contact.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  
-    <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 6 -  Python</h1>
-      <p style="margin-bottom: 64px; ">
-        Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-        Návod na přihlášení naleznete <a href="">zde</a>.
-      </p>
-      
-        
-     
-      <div style="margin-bottom: 64px; ">
-          
-      </div>
+<html lang="cs">
 
-    
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">All rights reserved.</span>
-        </div>
-    </footer>
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/python.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <div class="">
+      <table>
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/python/python5.html';" >Předchozí lekce</button>
+          </td>
+          <td>
+            <button id="right" onclick="location.href = '/lessons/python/python7.html';">Následují lekce</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 6 - Python</h1>
+    <p style="margin-bottom: 64px; ">
+      Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
+      Návod na přihlášení naleznete <a href="">zde</a>.
+    </p>
+
+
+
+    <div style="margin-bottom: 64px; ">
+
+    </div>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>

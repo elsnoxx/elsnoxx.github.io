@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Úvodní strana">
   <title>JA-MON-O-03-23</title>
 
-  <!-- Latest compiled and minified CSS -->
+  <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
 </head>
 
@@ -40,6 +42,7 @@
               <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
             </ul>
           </div>
           <li class="nav-item">
@@ -58,54 +61,59 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
+
+    <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+
+
     <h1 class="mt-5" style="margin-bottom: 64px; ">Materiály do hodiny StepIT</h1>
 
 
-    <h4 class="mt-5" style="margin-bottom: 64px; ">Pokud najdete nějakou chybu na webu, nahlásíte mi ji na lekci já ji
-      opravím. Pokud se bude jednat o nějakou větší chybu můžete dostat diamant. </h4>
+    <p style="font-size: 25px;"><strong>Pokud najdete nějakou chybu na webu, nahlásíte mi ji na lekci já ji
+        opravím. Pokud se bude jednat o nějakou větší chybu můžete dostat diamant.</strong> </p>
     <p>Zde najdete hlavní přehled všech předmětů, které jsme již probrali. Mohou se zde vyskytnout i další témata. Ty
       však nebudou mít přidané mé materiály.</p>
 
 
-    <table>
+    <table style="font-weight: bolder;">
       <tr>
         <td>
-          <h3>Webové stránky</h3>
+          <h2>Webové stránky</h2>
           <ul>
-            <li><a href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
-            <li><a href="/lessons/html-css/html-css.html">HTML a CSS</a></li>
+            <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+            <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+            <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
           </ul>
         </td>
       </tr>
       <tr>
         <td>
-          <h3>Grafika a design</h3>
+          <h2>Grafika a design</h2>
           <ul>
-            <li><a href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+            <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+            <li><a class="dropdown-item" href="/lessons/youtube/youtube.html">Youtube</a></li>
+            <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
           </ul>
         </td>
       </tr>
       <tr>
         <td>
-          <h3>Vývoj her</h3>
+          <h2>Vývoj her</h2>
           <ul>
-            <li><a href="/lessons/construct/construct3.html">Construct3</a></li>
-            <li><a href="/lessons/roblox/roblox.html">Roblox</a></li>
+            <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+            <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
           </ul>
         </td>
       </tr>
       <tr>
         <td>
-          <h3>Programování</h3>
+          <h2>Programování</h2>
           <ul>
-            <li><a href="/lessons/javascript/javascript.html">Javascript</a></li>
-            <li><a href="/lessons/python/python.html">Python</a></li>
+            <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
           </ul>
         </td>
       </tr>
     </table>
-    <h3><a href="https://drive.google.com/drive/folders/13XNj4XudsgqwUlGydtxEzbnRvRQsy26R?usp=share_link">Odevzdání</a>
-    </h3>
+
   </main>
   <!-- Footer -->
   <footer class=" bg-darktext-center text-lg-start bg-white text-muted ">
@@ -117,7 +125,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">StepIT academy</h6>
+            <h4 class="text-uppercase fw-bold mb-4">StepIT academy</h4>
             <p>
               Tyto stránky jsou vytvořené pro vyučování v StepIT academy.
             </p>
@@ -125,7 +133,7 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <h4 class="text-uppercase fw-bold mb-4">Contact</h4>
             <p> Richard Ficek</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
@@ -138,6 +146,7 @@
       </div>
     </section>
   </footer>
+  <script src="/js/cas.js" defer></script>
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Popper JS -->

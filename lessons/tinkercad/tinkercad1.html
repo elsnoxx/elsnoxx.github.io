@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="TinkenCAD lekce 1 - uvod">
   <title>TinkerCAD</title>
 
-  <!-- Latest compiled and minified CSS -->
+  <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link href="/css/style.css" rel="stylesheet">
   <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
@@ -36,8 +38,12 @@
               <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
               <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
             </ul>
           </div>
           <li class="nav-item">
@@ -53,6 +59,7 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
+    <p class="nav-link" id="cas-text"><span id="cas"></span></p>
     <h1 class="mt-5" style="margin-bottom: 10px; ">TinkerCAD - Lekce 1</h1>
     <h3 style="margin-bottom: 64px; ">Úvod a vytvoření jednoduchých modelů</h3>
 
@@ -251,8 +258,8 @@
             </p>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
         <tr>
@@ -266,8 +273,8 @@
               spodním dílem lodi. Kajuty nesmí zasahovat do naší přídi lodi.</p>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-2.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-2.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
         <tr>
@@ -285,8 +292,8 @@
             </ul>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-3.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-3.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
         <tr>
@@ -301,8 +308,8 @@
             <p>Stejný postup uděláme i na druhé straně.</p>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-4.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-4.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
       </table>
@@ -328,8 +335,8 @@
             </ul>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-5.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-5.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
         <tr>
@@ -342,8 +349,8 @@
             <p>Použijeme na to čtverec bez výplbě a sjednotíme ho s našim jehlanem.</p>
           </td>
           <td>
-            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-6.png" alt="tinkercad-kavrd" width="400"
-              height="350">
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-6.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
           </td>
         </tr>
         <tr>
@@ -361,10 +368,14 @@
           <td>
             <table>
               <tr>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-7.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-8.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-7.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                </td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-8.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                  </td>
               </tr>
             </table>
           </td>
@@ -382,16 +393,24 @@
           <td>
             <table>
               <tr>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-12.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-9.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-12.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                  </td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-9.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                  </td>
               </tr>
               <tr>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-10.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-11.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-10.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                </td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-11.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                </td>
               </tr>
             </table>
           </td>
@@ -409,10 +428,14 @@
           <td>
             <table>
               <tr>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-13.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
-                <td><img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-14.png" alt="tinkercad-kavrd"
-                    width="200" height="175"></td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-13.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                  </td>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-14.png" alt="První webová stránka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+                  </td>
               </tr>
             </table>
           </td>

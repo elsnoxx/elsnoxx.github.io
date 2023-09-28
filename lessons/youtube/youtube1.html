@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Youtube</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <div class="odstavec">
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 1 - Python</h1>
+      <p style="margin-bottom: 64px; ">
+        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti <strong>JET
+          BRAINS</strong> s nazvem
+        <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.
+        Návod na staženi a zprovozněni naleznete <a href="/lessons/python/python-vsc.html">zde</a>.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>Proč python?</h2>
+      <p>
+        Vysvětlit proč právě Python by tady bylo na velmi dlouho, ale tady jsou pár důvodu proč se ho budeme učit.
+      </p>
+      <ul>
+        <li>jednoduchý pro naučení</li>
+        <li>jednoduchý syntax</li>
+        <li>Je mozne pomocí něj vytvořit spousty veci, jako je <strong>web, aplikace pro PC i mobil</strong></li>
+        <li>Začátek s Pythone je velmi jednoduchý</li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h2>Prostředí pro vývoj</h2>
+      <p>
+        Je spousta možných vývojových prostředí, které nám umožní vývoj v Pythonu. Ale pro naši lekci
+        vybral jsem právě program od společnosti <strong>JET BRAINS</strong>, který se jmenuje
+        <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener noreferrer">PyCharm</a>.
+        Hlavní důvod proč budeme používat tento program je, že nám ulehčí práci a ukáže vám chyby, které jste udělali.
+        Popřípadně vás navede jak dále.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>První program</h2>
+      <p>
+        Jelikož už máme naše vývojové prostřední hotovove vyzkoušíme si napsta náš <strong>První program</strong>
+      </p>
+      <p>
+        Program nebude nijak těžký a pouze se tím naučíme jak jeste lepe pracovat ve vývojovém prostředí.
+      </p>
+      <table>
+        <tr>
+          <td>
+            <code style="font-weight: bolder;">
+              <font  color="#ebe834">print</font>("<font color="#008000">Ahoj Světe</font>")
+            </code>
+          </td>
+          <td>
+            <img class="myImg" src="/img/python/IDE/ahoj-svete.png" alt="Vypis ahoj svete"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <h2>Proměnné</h2>
+      <p>
+        Programátoři často pracují s různými údaji. A pro práci s údaji neexistuje
+        lepší technologie, jako jsou proměnné.
+      </p>
+      <p>
+        Například počet lidí v místnosti je možné spočítat pomocí proměnné,
+        vždyť toto slovo stále promítá reálný počet lidí. Jeden člověk odejde
+        a hodnota proměnné se změní.
+      </p>
+      <table>
+        <tr>
+          <td>
+            <p>Tady mame ukazku jak se použviají proměnné v praxi.</p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/python/lekce1/promenne.png" alt="Promenne v praxi"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <h2>Typy proměnných</h2>
+      <p>
+        Máme celou řadu typy našich proměnnych.
+        Ale niže je ukázka těch nejdůležitější proměnných,
+        které se používají nejvíce. Vždy bude nazav a pote ukazka jak se
+        promenná používá a co může obsahovat
+      </p>
+      <ul>
+        <li>
+          <strong>INTEGER</strong>
+          <ul>
+            <li>
+              Tato promenná se používám jenom na celé čísla. Takže čísla bez desetiné čárky.
+              <br><br>
+              <strong>Např.</strong> 3, 6, 8 , 10 , 10000
+            </li>
+            <li>
+              cislo = 3<br>
+              cislo = 6<br>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>FLOAT</strong>
+          <ul>
+            <li>
+              Tato promenná se používám jenom na desetinné čísla. Takže čísla, které mají desetiné čárky.
+              <strong>V Pythonu pišeme misto desetine čárky (,) tečku (.)</strong>
+              <br><br>
+              <strong>Např.</strong> 3.0, 6.5, 8.3333 , 10.2123123 , 10000.01023
+            </li>
+            <li>
+              cislo = 3.0<br>
+              cislo = 10.2123123<br>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>BOOLEAN</strong>
+          <ul>
+            <li>
+              Tato promenná se používám jenom na logické výsledky. Takže prakticky to je jako odpověď na naše otazky.
+              Jemnuji se pravda a nepravda
+              <br><br>
+              <strong>Např.</strong> true, false
+            </li>
+            <li>
+              pravda = true<br>
+              nepravda = false<br>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>STRING</strong>
+          <ul>
+            <li>
+              Tato promenná se používám jenom na text. Takže pokud se jedná o pismeno, slovo nebo i větu či věty.
+              Použijeme pravě tuto proměnnou.
+              <strong>V Pythonu pišeme text vždy do uvozovek, jsou to tyhle ""</strong>
+              <br><br>
+              <strong>Např.</strong> "s", "ahoj", "Jak se mas" , "10.2123123"
+            </li>
+            <li>
+              pismeno = "s"<br>
+              slovo = "ahoj"<br>
+              veta = "Jak se mas"<br>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="odstavec">
+        <h2>Vstup od uživatele</h2>
+        <p>
+          Pro práci s uživatelským vsupem je nutné poušít funkci <strong>input()</strong>.
+          Je potřeba si zapamatovat že vstum bude vždy <strong>TEXT</strong>.
+        </p>
+        <p>
+          Abychom vstup mohli zmenit vstupní <strong>TEXT</strong> na čísla. Použijeme k tomu funkci
+          <strong>int()</strong>
+        </p>
+        <table>
+          <tr>
+            <td>Ukazka jak na vstup od uživatele</td>
+            <td>
+              <img class="myImg" src="/img/python/lekce1/vstup.png" alt="Promenne v praxi"
+                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="odstavec">
+        <h2>Operace</h2>
+        <p>
+          Operace je možné provádět s libovolnými čísly (celými a také s desetinimi cisli) a také s proměnnými.
+
+        </p>
+        <ul>
+          <li>sčítání</li>
+          <li>odčítání</li>
+          <li>násobek</li>
+          <li>podíl</li>
+          <li>zbytek</li>
+        </ul>
+      </div>
+
+
+      <div class="odstavec">
+        <h2>Samostatna práce</h2>
+        <p>
+          Vašim ukolem bude vytvořit kalkulačku ktera vezme 2 čísla a vy pak vypišete výsledky.
+        </p>
+        <div class="center">
+          <table>
+            <tr>
+              <td>
+                Ukázka zde:
+              </td>
+              <td>
+                <img class="myImg" src="/img/python/lekce1/samostatna-prace.png" alt="Promenne v praxi"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

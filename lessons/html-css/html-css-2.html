@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Toto lekce první ohledně HTML a CSS">
+  <meta name="description" content="HTML a CSSLekce 2 ">
   <title>HTML & CSS</title>
 
   <!-- Latest compiled and minified CSS -->
@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
@@ -48,6 +48,9 @@
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
               <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
             </ul>
           </div>
           <li class="nav-item">
@@ -63,336 +66,139 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1>Lekce č. 1. Úvod do světa tvorby webových stránek</h1>
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/html-css/html-css-1.html';">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/html-css/html-css-3.html';">Následují lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h1>Lekce č. 2. Seznamy, Obrázky, Tabulky</h1>
     <p>
-      V této lekci si vysvětlíme malou část veliké IT oblasti. Touto oblastí je právě web.
+      V této lekci si vysvětlíme malou část možností při tvorbě webových stránek. Touto oblastí je právě pár základních
+      funkcí.
       Na vytvoření webových stránek můžeme použít strašnou spoustu nějakých technologii. V této
       lekci se koukmeme právě na tu nejzákladnější a to je HTML a spolu s tím i CSS.
     </p>
     <p>
-      Nejprve začneme s lehkou teorii a poté si uděláme naše vývojářské prostředí.
-      Kde si bytvoříme náši první webovou stránku. Výsledkem této lekce bude tato
-      <a href="/lessons/html-css/ukazka1.html" target="_blank" rel="noopener noreferrer">webová
-        stránka</a>
+      Nejprve si představíme Seznamy, Obrázky a Tabulky. Ukážeme si vše jak se používá.
+      Na konci si každý vyzkouší sám oři plnení úkolu.
     </p>
+
+
     <div class="odstavec">
-      <h1>Povolání ve vývoji</h1>
-      <p><strong>Designer</strong> &emsp; <button class="otazka" id="designer">Odpověď</button></p>
-      <div class="odpoved-designer">
+      <h2>Seznam</h2>
+      <div style="padding-bottom: 30px;">
+        <button class="otazka" id="div">Co je to ?</button>
+      </div>
+
+      <div class="odpoved-div" style="font-weight: bolder;">
         <p>
-          Je to člověk, který vypracovává vnější vzhled
-          stránky. Obvykle se design vytváří v grafických editorech
-          (Photoshop, Illustrator a jiné). Specifikum práce designéra je ve
-          vytváření příjemného a pohodlného rozhraní pro uživatele.
+          je to soubor nabídek, které začínají od čísla nebo značky (například tečky nebo odrážky).
+          Umožňuje uspořádat různé informace a prezentovat je způsobem, který je pro uživatele nohem pohodlnější.
         </p>
       </div>
-      <p><strong>Vývojář</strong> &emsp; <button class="otazka" id="vyvojar">Odpověď</button></p>
-      <div class="odpoved-vyvojar">
-        <p>
-          Je to člověk zabývající se provedením designu
-          do života. Vývojáři se mohou zabývat frontend, backendem
-          nebo všem současně.
-        </p>
-      </div>
-      <p><strong>Tester</strong> &emsp; <button class="otazka" id="tester">Odpověď</button></p>
-      <div class="odpoved-tester">
-        <p>
-          Je to člověk, který testuje funkčnost stránky. Ze
-          všech sil se snaží najít nejrůznější chyby.
-          Mohou vývojářům jednoduše poukázat na chybu.
-          Zkušenější testeři dokážou stanovit příčinu dané chyby.
-        </p>
-      </div>
-      <p><strong>SEO specialista</strong> &emsp; <button class="otazka" id="seo">Odpověď</button></p>
-      <div class="odpoved-seo">
-        <p>
-          Je to člověk, který se zabývá propagací
-          webové stránky na internetu. Většina webových stránek se
-          vytváří na komerční účely. Pro jejich produktivitu je nezbytné,
-          aby měli co největší návštěvnost. Proto je pro libovolnou
-          webovou stránku důležitým úkolem její propagace.
-          SEO specialista se zabývá reklamou stránky, nastavením
-          stránky pro vyhledávací systémy a ostatními podobnými úkoly.
-        </p>
-      </div>
+      <p>
+        Seznamy jsou tvořené v html za pomoci kontejneru &lt;ul&gt; a do nej se pak vkladaji prvky s tagem &lt;ol&gt;
+        pro seznam bez značeni a nebo &lt;li&gt; pro seznam s kolečky.
+
+      </p>
     </div>
 
 
     <div class="odstavec">
-      <h1>Jak fungují stránky</h1>
-      <p class="otazka"><strong>Hosting</strong></p>
-
+      <h4>Seznam s odrážky</h4>
       <p>
-        Je to služba, která poskytuje místo pro umístění
-        informací na serveru trvale připojeném k internetu.
-        Ve skutečnosti je hosting nějaký počítač, na který můžete
-        umístit svou stránku a libovolný uživatel k němu bude mít
-        přístup.
-        <br><br>
-        Hosting je také možné udělat pomocí svého počítači,
-        avšak existuje několik požadavků:
-      <ul>
-        <li>počítač musí být pořád zapnutý</li>
-        <li>musí být neustály přístup k internetu</li>
-        <li>statická IP-adresa</li>
-      </ul>
+        K vytvoreni seznamu s odrazky budem potrebovat kontejtner &lt;ul&gt;&lt;/ul&gt;, do nej vkladame jedtnotlive
+        body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
       </p>
-      <p class="otazka"><strong>Název domény</strong></p>
-      <p>
-        Je to jedinečný název stránky, který
-        slouží pro přístup k hostingu.
-        <strong>Příklad domény</strong> – site.com, site.org.
-      </p>
-
-    </div>
-
-    <div class="odstavec">
       <table>
         <tr>
           <td>
-            <h1>Prostředí pro vývoj</h1>
-            <p>
-              Je spousta možných prostředí, které nám umožní vývoj webových stránek. Ale já pro naši lekci vybral právě
-              program <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Visual
-                Studio Code</a>. Hlavní důvod proč budeme
-              používat
-              tento program je, že jednoduše nám udělá server, který se bude automaticky aktualizovat a nemusíte ručně
-              znova načíst
-              celou stránku.
-            </p>
-            <p>
-              <strong>Potřebné rozšíření</strong>
-            <p>
-              Níže jsou názvy rozšíření, které si doinstalujeme a svou práci si ulehčíme.
-              Červená čtvereček na fotce vedle nám ukazuje místo kde se instalují veškeré rozšíření.
-              Do zeleného obdélníku vložíme níže napsané nazázvy a jeden po druhém je stáhneme.
-            </p>
-            <ul>
-              <li>ms-vscode.live-server</li>
-              <li>ecmel.vscode-html-css</li>
-            </ul>
-            </p>
+            <p>kod</p>
           </td>
           <td>
-            <img class="myImg" src="/img/html-css/visual-studio-code-extension.png"
-              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px; height: auto" loading="lazy">
+            <p>vizualizace</p>
+          </td>
+        </tr>
+      </table>
+
+      <h4>Seznam s čísli</h4>
+      <p>
+        K vytvoreni seznamu s odrazky budem potrebovat kontejtner &lt;ol&gt;&lt;/ol&gt;, do nej vkladame jedtnotlive
+        body seznamu, a každý radek se nachazi mezi tagy &lt;li&gt; text &lt;/li&gt;
+      </p>
+      <table>
+        <tr>
+          <td>
+            <p>kod</p>
+          </td>
+          <td>
+            <p>vizualizace</p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="odstavec">
+      <h4>Obrázku</h4>
+      <p>
+        Pro přidaní obrázku nejprve potřebujeme si připravit soubor na požadovanou velikost. A poté ho přidáme za pomocí
+        tagu &lt;img&gt; do našeho html dokumentu
+      </p>
+      <h5>URL adresa</h5> <p>Je to cesta k souboru, muže být jako odkaz na internet nebo jako odkaz na soubor ve složce</p>
+      <h5>Atributy</h5>
+      <ul>
+        <li>Width</li>
+        <li>Height</li>
+        <li>SRC</li>
+        <li>ALT</li>
+        <li>Title</li>
+      </ul>
+      <h4>Důležite informace:</h4>
+      <ul>
+        <li>Čím menší obrazek tím se rychleji zobrazi</li>
+        <li>Velikost obrazku upravujeme po šířce neboli (widht)</li>
+      </ul>
+      <table>
+        <tr>
+          <td>
+            <p>kod</p>
+          </td>
+          <td>
+            <p>vizualizace</p>
           </td>
         </tr>
       </table>
     </div>
 
     <div class="odstavec">
-      <h1>První webová stránka</h1>
-      <p>
-        <strong>Co to znamená HTML?</strong>
-      <ul>
-        <li>Hyper Text Markup Language neboli Hypertextový značkovací jazyk</li>
+      <h4>Tabulky</h4>
+      <p>Pro pridani tabulky je nezbytne znat tagy <strong>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;&lt;/td&gt;</strong></p>
+
+      <ul class="odrazky-podtext">
+        <li>&lt;table&gt;</li><p>Použiva se pro začátek a konec tabulky</p>
+        <li>&lt;tr&gt;</li><p>Table row neboli řádek tabulky, začína a končí řádek tabulky</p>
+        <li>&lt;td&gt;</li><p>Table data neboli tabulkové údaje, začíná a ukončuje buňku řádku tabulky</p>
       </ul>
-      </p>
-      <table>
-        <tr>
-          <td>
-            <p>
-              Pokud jsme vše zvládly. Vytvoříme si náš první web. Souborv vytvoříme za pomocí Visual Studia Code.
-              Ten si pojmenujeme takhle: <strong>prvniweb.html</strong>. A pokud máme vše dobře nainstalované tak
-              stačí napsat zkratku <strong>doc </strong>. Pak bychom měli dostat nápovědu a poté ji potvrdit enterem.
-              Výsledek by měl vypadat jak je vedle ukázáno na brázku.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/html-css/prvni-web.png" alt="První webová stránka"
-              style="width:100%; max-width:3000px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <iframe src="/lessons/html-css/ukazky/ukazka1.html" width="100%" height="410" style="border:none;"></iframe>
-
-    <div class="odstavec">
-      <h1>Základní struktura HTML dokumentu</h1>
-      <ul>
-        <li>
-          <strong> &lt;! DOCTYPE html &gt;</strong>&emsp; <button class="otazka" id="DOCTYPE">Odpověď</button>
-          <div class="odpoved-DOCTYPE">
-            <p>
-              Určuje typ dokumentu. Je to nezbytné pro to, aby prohlížeč chápal, jak má
-              interpretovat aktuální webovou stránku. Vždyť HTML existuje v
-              několika verzích.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; html &gt;</strong>&emsp; <button class="otazka" id="html">Odpověď</button>
-          <div class="odpoved-html">
-            <p>
-              Určije začátek našeho html souboru. vněm jse uloŽeno záhlaví <strong>&lt; head &gt;</strong> a tělo
-              dokumentu <strong> &lt; body &gt;</strong>.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; head &gt;</strong>&emsp; <button class="otazka" id="head">Odpověď</button>
-          <div class="odpoved-head">
-            <p>
-              Hlavička dokumentu, nazývaná také jako blok
-
-              <head>,
-                může obsahovat text a tagy. No to, co je obsaženo v této části,
-                není zobrazeno přímo na stránce, kromě tagu .
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; meta &gt;</strong>&emsp; <button class="otazka" id="meta">Odpověď</button>
-          <div class="odpoved-meta">
-            <p>
-              Je to univerzální tag a dává celou skupinu možností, hlavně
-              pomocí metatagů. S jejich pomocí je možné měnit kódování podstránky,
-              přidávat klíčová slova, popis dokumentu a mnoho jiného. Na to, aby
-              prohlížeč chápal, že má co do činění s kódováním UTF-8 (Unicode
-              transformation format) a přidává se daný řádek.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; title &gt;</strong>&emsp; <button class="otazka" id="title">Odpověď</button>
-          <div class="odpoved-title">
-            <p>
-              Určuje hlavičku webové stránky, je to jeden z
-              důležitých prvků určených k řešení mnoha úkolů. V operačním systému
-              Windows je text hlavičky zobrazený v levém horním úhlu okna
-              prohlížeče.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; style &gt;</strong>&emsp; <button class="otazka" id="style">Odpověď</button>
-          <div class="odpoved-style">
-            <p>
-              Tag určerý pro vytvoření stylů naší stranky.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; body &gt;</strong>&emsp; <button class="otazka" id="body">Odpověď</button>
-          <div class="odpoved-body">
-            <p>
-              Určuje hlavičku webové stránky, je to jeden z
-              důležitých prvků určených k řešení mnoha úkolů. V operačním systému
-              Windows je text hlavičky zobrazený v levém horním úhlu okna
-              prohlížeče.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; div &gt;</strong>&emsp; <button class="otazka" id="div">Odpověď</button>
-          <div class="odpoved-div">
-            <p>
-              Sekce v dokumentu, který je stylizován pomocí CSS a lze použít pomocí JavaScriptu.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; h &gt;</strong>&emsp; <button class="otazka" id="h">Odpověď</button>
-          <div class="odpoved-h">
-            <p>
-              Označuje nadpis textu a má až 6 velikostí.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; p &gt;</strong>&emsp; <button class="otazka" id="p">Odpověď</button>
-          <div class="odpoved-p">
-            <p>
-              Označuje odstavec (paragraf) textu.
-            </p>
-          </div>
-        </li>
-        <li>
-          <strong> &lt; a &gt;</strong>&emsp; <button class="otazka" id="a">Odpověď</button>
-          <div class="odpoved-a">
-            <p>
-              Označuje odkaz na jiné stránky nebo na text.
-            </p>
-          </div>
-        </li>
+      <h5>Doplňkové atributy</h5>
+      <ul class="odrazky-podtext">
+        <li>Border</li>
+        <p>používa se pro specifikaci tlouštky rámu kolem tabulky</p>
+        <p>Ukázka kod a vyzualizace</p>
+        <li>Align</li><p>Vyrovnani obsahu cele tabulky v jednotlivých buňkách</p>
+        <li>Valign</li><p>Zarovnani vertikalní v buňce</p>
+        <li>Colspan</li><p>Kolik sloupců bude zabírat jedna buňka</p>
+        <li>Rowspan</li><p>Kolik sloupců bude zabírat jedna buňka</p>
       </ul>
     </div>
-
-    <div class="odstavec">
-      <h6>Samostaný úkol č.1</h6>
-      <p>Vašim úkolem bude vytvořit stánku, která je pod textem ukázána.</p>
-    </div>
-    <iframe src="/lessons/html-css/ukazky/ukazka2.html" width="100%" height="170" style="border:5;"></iframe>
-
-    <div class="odstavec">
-      <h1>Základní struktura CSS</h1>
-      <p>
-        <h6><strong>Co to znamená CSS?</strong></h6>
-      <ul>
-        <li>
-          Kaskádové styly tabulek / CSS je to jazyk stylů
-          určujících zobrazení HTML dokumentů
-        </li>
-      </ul>
-      </p>
-      <table>
-        <tr>
-          <td>
-            <p>
-              Tak jelikož jsme si vytvořili náš první web. Musíme mu ještě přidat styl aby naše stránká vypadala lépe.
-              Na to se používá CSS. Ukázka CSS souboru je na obrázky vedle. Změna stylý pomocí CSS můŽe být provedena
-              několika způsoby. A to buď přímo v HTML souboru a nebo jako soubor, který se přiloží k HTML souboru.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/html-css/prvni-web-2.png" alt="První webová stránka"
-              style="width:100%; max-width:300px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="odstavec">
-      <h6><strong>Nyní si ukážeme pár atributů style</strong></h6>
-      <ul>
-        <li>Změna barvy pozadí - <strong>background-color</strong></li>
-        <li>Změna barvy písma - <strong>color</strong></li>
-        <li>Změna stylu textu - <strong>font-family</strong></li>
-        <li>Změna velikosti textu - <strong>font-size</strong></li>
-        <li>Zarovnání textu - <strong>text-align</strong></li>
-        <li>Odstarnění stylu u odkazu - <strong>text-decoration</strong></li>
-        <li>Vytvoření místa kolem textu - <strong>margin</strong></li>
-        <li>Vytvoření prostoru kolem obsahu - <strong>padding</strong></li>
-        <li>Šířka a výška - <strong>width, height</strong></li>
-        <li>Vytvoři box kolem textu - <strong>border-radius</strong></li>
-      </ul>
-    </div>
-
-    <div class="odstavec">
-      <h6>Samostaný úkol č.2</h6>
-      <p>Vašim úkolem bude napodobit tuhle stránku. K vytvoření použijte stránku z předhozí samostané práce.</p>
-      <iframe src="/lessons/html-css/ukazky/ukazka1.html" width="100%" height="409" style="border:5;"></iframe>
-    </div>
-
-
-    <div class="accordion">
-      <div class="panel">
-        <div class="panel-heading">Sekce 1</div>
-        <div class="panel-content">
-          Obsah sekce 1
-        </div>
-      </div>
-      <div class="panel">
-        <div class="panel-heading">Sekce 2</div>
-        <div class="panel-content">
-          Obsah sekce 2
-        </div>
-      </div>
-      <!-- Přidat další panely podle potřeby -->
-    </div>
-    
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -423,7 +229,7 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p> Richard Ficek</p>
+            <p>Richard Ficek</p>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
               ficek_r@itstep.academy

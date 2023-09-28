@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Audacity</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/audacity/audacity1.html';">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/audacity/audacity3.html';">Následují lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <img src="/img/audacity/logo.jpg" alt="Prostředí pro upravu zvuku"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </td>
+          <td>
+            <h1>Audacity - lekce 2</h1>
+          </td>
+        </tr>
+      </table>
+
+      <p style="margin-bottom: 64px; ">
+        Pro práci na našich úkolů budeme používat nástroj <a href="https://www.audacityteam.org/">AudaCity</a>.
+        Návod na zprovoznění najdete <a href="/lessons/audacity/audacity-env.html">zde</a>.
+      </p>
+      <p>
+        V této lekci si ukážeme další možnosti a úpravy za pomocí aplikace audacity. Ale než se vrhnem na lekci dál.
+        Tak si každý skontrolujte zdali odevzdal svůj domácí úkol. Pokud ne tak si ho teď doďělá.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>Úprava zvuku</h2>
+      <ul>
+        <li>
+          <strong>Normalizace</strong>
+          <ul>
+            <li>
+              Ukážeme si funkci <strong>normalizace</strong>, tu najdete v záložce
+              <strong>effect</strong>. Slouží nám k zvýšení hlasitosti všech vrcholů v naši nahrávce.
+            </li>
+            <br>
+            <img class="myImg" src="/img/audacity/lekce2/normalizace.png" alt="Okno normalizace Audacity"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </ul>
+        </li>
+        <li>
+          <strong>Limiter - přebuření</strong>
+          <ul>
+            <li>
+              Pokud však použijeme funkci <strong>normalizace</strong> je taky dobré použít funkci
+              <strong>limiter</strong>.
+              Kterou najdete taky v záložce <strong>effect</strong>. Tu používáme hlavně proto, abychom
+              omezili nejvyšší tóny a dorovnali jsme zvuk po celé nahrávce.
+            </li>
+            <br>
+            <img src="/img/audacity/lekce2/limiter.png" alt="Okno limiter Audacity"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </ul>
+        </li>
+        <li>
+          <strong>Fade in</strong>
+          <ul>
+            <li>
+              Tenhle efekt se používá pokud chceme vytvořit na nahrávce postupný náběh.
+              Takže bychom šli z ticha aŽ do plné hlasitosti.
+            </li>
+            <br>
+            <img src="/img/audacity/lekce2/fadein.png" alt="Okno fade in Audacity"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </ul>
+        </li>
+        <li>
+          <strong>Fade out</strong>
+          <ul>
+            <li>
+              Tenhle efekt se používá pokud chceme vytvořit na nahrávce postupné zeslabení.
+              Takže bychom šli z plné hlasitosti do ticha.
+            </li>
+            <br>
+            <img src="/img/audacity/lekce2/fadeout.png" alt="Okno fade out Audacity"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </ul>
+        </li>
+        <li>
+          <strong>Zesílení</strong>
+          <ul>
+            <li>
+              Tenhle efekt se používá pokud chceme skladbu zesílít. Tahle funkce
+              je hlídaná ochranou přebuzení. Ta se dá ovšem vypnout, ale to nam vsak písničku jen zhorší.
+            </li>
+            <br>
+            <img src="/img/audacity/lekce2/zesileni.png" alt="Okno fade out Audacity"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h2>Samostatná práce - Podcast</h2>
+      <p>
+        Každý si udělá svůj krátky podcast na jeho oblíbené téma. Ať už to je hra nebo nějaké zajímavosti.
+        To je čistě na vaši fantazii co vymyslíte.
+      </p>
+      <h5>Obsah podcastu:</h5>
+      <ul style="font-weight: bold;">
+        <li>intro - úvodní znělka</li>
+        <li>sponzora - krátký vstup kdo je sponzorem podcastu</li>
+        <li>outro - ukončovací znělka</li>
+        <li>déla maximalně 5 minut</li>
+      </ul>
+
+      <a href="https://drive.google.com/drive/folders/1az3Tovyw9RDTD2SkVkRN_esBo4nZaUbp?usp=sharing">odevzdat<a>
+
+    </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

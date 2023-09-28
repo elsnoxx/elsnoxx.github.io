@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="TinkenCAD lekce 5 vesmirny robot">
   <title>TinkerCAD</title>
 
-  <!-- Latest compiled and minified CSS -->
+  
+  <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
 </head>
 
@@ -25,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
@@ -36,8 +39,12 @@
               <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
               <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
             </ul>
           </div>
           <li class="nav-item">
@@ -61,181 +68,170 @@
         <td>
           <p>
             Jelikož už jsme si v našem vesmíru vše vymodelovali. Stejně nám však chybí něco nejdůležitějšího.
-            A to je naše postava, která tohle vše bude využívat. 
+            A to je naše postava, která tohle vše bude využívat.
             Naší postavou bude robot a nebude jen tak ledajaký. Bude vypadat jako exoskelet či driod.
           </p>
           <p>
-            Na obrázku vedle je ukázáno jak naše postava bude vypadat. 
+            Na obrázku vedle je ukázáno jak naše postava bude vypadat.
             Je pak na vás jakou z další postav si vytvoříte.
           </p>
         </td>
         <td>
-          <a href="/img/tinkerCAD/lekce5/robot1.png"><img
-            src="/img/tinkerCAD/lekce5/robot1.png" alt="Megatron-3000" width="200"
-            height="175"></a>
+          <img class="myImg" src="/img/tinkerCAD/lekce5/robot1.png" alt="První webová stránka"
+            style="width:100%; max-width:3000px; height: auto" loading="lazy">
         </td>
       </tr>
     </table>
-  </div>
+    </div>
 
-  <div class="odstavec">
-    <h3>Vesmírná postava</h3>
-    <table class="table table-bordered">
-      <tr>
-        <td>
-          <p>
-           Nejdříve začneme od trupu, jelikož je to nejdůležitější část naší postavy.
-          </p>
-          <p>
-            Trup má jednoducou konstrukci. Skládá se z koule, která bude poměrně velká.
-            Na kruh umístíme torus, který nám zdůrazní rysy našeho robota.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot2.png"><img
-            src="/img/tinkerCAD/lekce5/robot2.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Do našeho torusu poté umístíme jádro či oko.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot3.png"><img
-            src="/img/tinkerCAD/lekce5/robot3.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Teď už máme náš trup hotový. Nyní se vrhneme na vyvoření ramen pro naše paže.
-            Ty se skládají z koulí, které jsou připojené na náš trup.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot4.png"><img
-            src="/img/tinkerCAD/lekce5/robot4.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-           Po vytvoření nohou nachvíli odběhneme k jiné části a vytvoříme si nohy a trysky.
-          </p>
-          <p>
-            Nohy a trysky musí být masivní a velké. Přece jen musí unést spousty váhy.
-            Ovšem ne větší než je tělo naší postavy.
-            Pro jejich vytvoření použijeme paraboild. 
-          </p>
-          <p>
-            Abychom naše nohy a trysky vystužily. 
-            Použijeme pro to dva tenké torusy.
-            A pomocí klonování si takhle vytvoříme 3 další objekty. Dvě trysky a dvě nohy.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot5.png"><img
-            src="/img/tinkerCAD/lekce5/robot5.png" alt="vesmírná stanice" width="200"
-            height="200"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Teď si vytvoříme úchyt na trysky, který nám pomůže uchytit lépe naše trysky na postavu.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot6.png"><img
-            src="/img/tinkerCAD/lekce5/robot6.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Nyní nás čeká naše trysky a nohy spojit s naším droidem.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot7.png"><img
-            src="/img/tinkerCAD/lekce5/robot7.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Nyní si vytvoříme pravou paži našeho droida. 
-            Ta bude vybaveda kulometem, aby se mohl náš droid bránit.
-          </p>
-          <p>
-            Na paži použijeme válec, na paži pak vytvoříme náš kulomet.
-             Ten bude mít dvě hlavně a zaměřovací zařízení.
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot9.png"><img
-            src="/img/tinkerCAD/lekce5/robot9.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-          <table>
-            <tr>
-              <td>
-                <a href="/img/tinkerCAD/lekce5/robot8.png"><img
-                  src="/img/tinkerCAD/lekce5/robot8.png" alt="vesmírná stanice" width="200"
-                  height="175"></a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Dále máme v pořadí udělat druhou ruku. Tu bude náš droid používat na úchop věcí.
-          </p>
+    <div class="odstavec">
+      <h3>Vesmírná postava</h3>
+      <table class="table table-bordered">
+        <tr>
+          <td>
+            <p>
+              Nejdříve začneme od trupu, jelikož je to nejdůležitější část naší postavy.
+            </p>
+            <p>
+              Trup má jednoducou konstrukci. Skládá se z koule, která bude poměrně velká.
+              Na kruh umístíme torus, který nám zdůrazní rysy našeho robota.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot2.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Do našeho torusu poté umístíme jádro či oko.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot3.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Teď už máme náš trup hotový. Nyní se vrhneme na vyvoření ramen pro naše paže.
+              Ty se skládají z koulí, které jsou připojené na náš trup.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot4.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Po vytvoření nohou nachvíli odběhneme k jiné části a vytvoříme si nohy a trysky.
+            </p>
+            <p>
+              Nohy a trysky musí být masivní a velké. Přece jen musí unést spousty váhy.
+              Ovšem ne větší než je tělo naší postavy.
+              Pro jejich vytvoření použijeme paraboild.
+            </p>
+            <p>
+              Abychom naše nohy a trysky vystužily.
+              Použijeme pro to dva tenké torusy.
+              A pomocí klonování si takhle vytvoříme 3 další objekty. Dvě trysky a dvě nohy.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot5.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Teď si vytvoříme úchyt na trysky, který nám pomůže uchytit lépe naše trysky na postavu.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot6.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Nyní nás čeká naše trysky a nohy spojit s naším droidem.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot7.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Nyní si vytvoříme pravou paži našeho droida.
+              Ta bude vybaveda kulometem, aby se mohl náš droid bránit.
+            </p>
+            <p>
+              Na paži použijeme válec, na paži pak vytvoříme náš kulomet.
+              Ten bude mít dvě hlavně a zaměřovací zařízení.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot9.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+            <table>
+              <tr>
+                <td>
+                  <img class="myImg" src="/img/tinkerCAD/lekce5/robot8.png" alt="První webová stránka"
+                    style="width:100%; max-width:300px; height: auto" loading="lazy">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              Dále máme v pořadí udělat druhou ruku. Tu bude náš droid používat na úchop věcí.
+            </p>
 
-          <p>
-            Ta bude v celku složítá a budete muset najít i speciální tvary v TinkerCADu.
-          </p>
-          <p>
-            Malá nápověda k vytváření této paže. Objekty, které budete potřebovat jsou:
+            <p>
+              Ta bude v celku složítá a budete muset najít i speciální tvary v TinkerCADu.
+            </p>
+            <p>
+              Malá nápověda k vytváření této paže. Objekty, které budete potřebovat jsou:
             <ul>
               <li>Králičí uši</li>
               <li>paraboild</li>
               <li>Válec - jeden jako kruh, druhý jako matice o 6 stranách</li>
             </ul>
-          </p>
-        </td>
-        <td>
-          <a href="/img/tinkerCAD/lekce5/robot10.png"><img
-            src="/img/tinkerCAD/lekce5/robot10.png" alt="vesmírná stanice" width="200"
-            height="175"></a>
-          <table>
-            <tr>
-              <td>
-                <a href="/img/tinkerCAD/lekce5/robot11.png"><img
-                  src="/img/tinkerCAD/lekce5/robot11.png" alt="vesmírná stanice" width="200"
-                  height="175"></a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    <p>
-      Pokud jste došli až sem tak jste právě vytvořili robota, které jsem pojmenoval Megatron 3000.
-      Další postava už bude na vás. Využijte svou představivost a do konce hodiny zkuste navrhnout svou vlastní postavu.
-      Ať už to bude člověk či stroj. Nechám tohle čistě na vás.
-    </p>
-    
-  </div>
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot10.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+            <img class="myImg" src="/img/tinkerCAD/lekce5/robot11.png" alt="První webová stránka"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+      <p>
+        Pokud jste došli až sem tak jste právě vytvořili robota, které jsem pojmenoval Megatron 3000.
+        Další postava už bude na vás. Využijte svou představivost a do konce hodiny zkuste navrhnout svou vlastní
+        postavu.
+        Ať už to bude člověk či stroj. Nechám tohle čistě na vás.
+      </p>
 
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" loading="lazy">
+      <div id="caption"></div>
+    </div>
 
   </main>
   <footer class="footer">

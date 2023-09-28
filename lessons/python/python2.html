@@ -1,82 +1,412 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Python</title>
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    
-    <link href="/css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python</title>
+
+  
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/python.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/index.html">My Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="">Home</a>
-            </li>
-            <div class="btn-group">
-              <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                Lekce
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
-                <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
-                <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
-                <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
-                <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="/Mystat.html">Mystat</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="/contact.html">Kontakt</a>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <div class="">
+      <table>
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/python/python1.html';">Předchozí lekce</button>
+          </td>
+          <td>
+            <button id="right" onclick="location.href = '/lessons/python/python3.html';">Následují lekce</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 2 - Grafika v Pythonu</h1>
+      <p style="margin-bottom: 64px; ">
+        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti <strong>JET
+          BRAINS</strong> s nazvem
+        <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.
+        Návod na staženi a zprovozněni naleznete <a href="/lessons/python/python-vsc.html">zde</a>.
+      </p>
+
+      <p>
+        V dnešní lekci si ukážeme jednu fantastickou věc, kterou má Python zabudovanou.
+        A to je krestlení za pomocí želvy nebo jiného tvaru. 
+        Také se podíváma a vysvětlíme si jak fungují cykly.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>Potřebné funkce</h2>
+      <p>
+        Tady jsou ty hlavni funkce, které při praci budeme potřebovat.
+      </p>
+      <ul>
+        <li>
+          <span class="import">import</span> <span class="turtle">turtle</span> 
+          <ul>
+            <li>
+              tohle je potreba vzdy mit na zacatku kazdeho programu, jelikož Pythonu řekneme že chceme
+              používat tuhle knihovnu
             </li>
           </ul>
-        </div>
-      </nav>
-    </header>
-  
-    <!-- Begin page content -->
-    <main role="main" class="container">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 2 - Python</h1>
-      <p style="margin-bottom: 64px; ">
-        Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-        Návod na přihlášení naleznete <a href="">zde</a>.
-      </p>
-      
-        
-     
-      <div class="box" style="margin-bottom: 64px; ">
-        <py-script>
+        </li>
+        <li>
+          <span class=" window">window</span> = <span class="turtle">turtle</span><span class="screen">.Screen()</span>
+          <ul>
+            <li>
+              tohle je důležitý příkaz, a používá se protože nam nastaví aby Python zobrazil okno aplikace,
+              na kterém by jsme mohli začít kreslit
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="turtle">turtle</span> = <span class="turtle">turtle</span><span class="prikaz">.Turtle()</span>
+          <ul>
+            <li>
+              tohle používame aby jsme si vytvořili naši proměnnou, s kterou budeme pracovat
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="window">window</span><span class="prikaz">.exitonclick()</span>
+          <ul>
+            <li>
+              tento příkaz nám umožní ukončení programu po kliknutí myši
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="turtle">turtle</span><span class="prikaz">.shape("turtle")</span>
+          <ul>
+            <li>
+              tenhle příkaz nám umožní nastavení si vzhledu pera, v <span
+                style="font-weight: bold;">.shape("turtle")</span>
+              právě míto <span style="font-weight: bold;">"turtle"</span> můžemenahradit a použít následují
+              <span style="font-weight: bold;">"arrow", "circle", "triangle", "classic".</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-          print("hi")
-          
-          </py-script>
+      <div class="odstavec">
+        <h3>Funkce potřebné pro grafické nastavení</h3>
+        <p>
+          Zde se nachází potřebné funkce pro ovládání pera, při kreslení .
+        </p>
+        <ul>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.bgcolor("red")</span>
+            <ul>
+              <li>
+                tento příkaz nám nastaví barvu pozadí
+              </li>
+              <li>
+                místo "red" může být libovolnpu barvu v angličtině napsanou mezi "" nebo i proměnnou
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.color("white")</span>
+            <ul>
+              <li>
+                tento příkaz nám nastaví barvu pera
+              </li>
+              <li>
+                místo "red" může být libovolnpu barvu v angličtině napsanou mezi "" nebo i proměnnou
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.pensize(3)</span>
+            <ul>
+              <li>
+                tento příkaz nám nastaví tloušťku pera na 3 pixely
+              </li>
+              <li>
+                místo 3 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.penup()</span>
+            <ul>
+              <li>
+                tento příkaz nám zvedne pero, aby jsem mohli pohnout s naši želvou aniž bychom kreslili
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.pendown()</span>
+            <ul>
+              <li>
+                tento příkaz nám dá pero dolů, aby želva mohla zase kreslit
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
 
-    
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">All rights reserved.</span>
-        </div>
-    </footer>
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <div class="odstavec">
+        <h3>Funkce potřebné pro pohyb</h3>
+        <p>
+          Zde se nachazí souhrn potřebných funkcí, které budeme používat k ovládání pohybu našeho pera.
+        </p>
+        <ul>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.speed(2)</span>
+            <ul>
+              <li>
+                tento příkaz nám nastaví rychlost pera na 2, tím jsme schopni udávat jak rychle
+                se bude naše želva pohybovat
+              </li>
+              <li>
+                místo 2 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.forward(150)</span>
+            <ul>
+              <li>
+                tento příkaz nám posune pero o 150 pixelů na obrazovce rovně,
+                <span style="font-weight: bold;">směr je udáván podle toho kam se želva kouká!!</span>
+              </li>
+              <li>
+                místo 150 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.back(150)</span>
+            <ul>
+              <li>
+                tento příkaz nám posune pero o 150 pixelů na obrazovce dozadu,
+                <span style="font-weight: bold;">směr je udáván podle toho kam se želva kouká!!</span>
+              </li>
+              <li>
+                místo 150 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.left(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám otočí pero do leva o 90 stupňů,
+                <span style="font-weight: bold;">směr kam se želva otočí je udáván podle toho kam se želva
+                  kouká!!</span>
+              </li>
+              <li>
+                místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
+                  0 až do 360</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.right(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám otočí pero do prava o 90 stupňů,
+                <span style="font-weight: bold;">směr kam se želva otočí je udáván podle toho kam se želva
+                  kouká!!</span>
+              </li>
+              <li>
+                místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
+                  0 až do 360</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">turtle</span><span class="prikaz">.cirlce(80)</span>
+            <ul>
+              <li>
+                tento příkaz nám za pomocí želvy nakreslí kruh, který bude o poloměru 80 pixelů
+              </li>
+              <li>
+                místo 80 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="odstavec">
+      <h2>Cykly</h2>
+      <p>
+        Cyklus v programu znamená, že konkrétní množina příkazů se vykonají opakovaně.
+        Například, pokud osoba udělá 10 kliků, tak potom tuhle činost opakuje 10 krát.
+      </p>
+      <h5>Cykly dělíme na:</h5>
+      <ul>
+        <li>Se <strong>známým</strong> početem opakování</li>
+        <li>Se <strong>neznámým</strong> početem opakování</li>
+      </ul>
+
+      <h5>Cykly v Pythonu máme:</h5>
+      <ul>
+        <li style="font-weight: bold;">for</li>
+        <ul>
+          <li>
+            Tento typ cyklu představuje cyklus, který dopředu zná počet opakování.
+          </li>
+          <li>
+            Syntaxe je taková<br>
+            <span class="slovo">for</span> <strong>i</strong> <span class="slovo">in</span> <strong>počet_opakování:</strong> <br>
+            &emsp; &emsp;<strong>úkoly</strong>
+          </li>
+          <li>
+            při používání tohoto cyklu budeme používat nejčastěji funkci <strong>range()</strong>, ta nam udává
+            počet opakovaní, které cyklus vykoná, kolikrát chceme aby se cyklus opakoval poté vložíme číslo mezi závorky <br>
+            <strong>Takhle: </strong> range(<strong>5</strong>) <strong>=></strong> tudíž cyklus se vykoná <strong>5 krát</strong>
+          </li>
+        </ul>
+        <li style="font-weight: bold;">while</li>
+        <ul>
+          <li>
+            Tento typ cyklu se nejčastěji používá jako nekonečný cyklus, 
+            to je cyklus který nikdy nekončí dokud nevypnete program
+          </li>
+          <li>
+            Syntaxe je taková<br>
+            <span class="slovo">while</span> <strong>podmítka:</strong> <br>
+            &emsp; &emsp;<strong>úkoly</strong>
+          </li>
+        </ul>
+      </ul>
+
+      <div class="odstavec">
+        <h2>První úkol</h2>
+        <table>
+          <tr>
+            <td>
+              <p>
+                Jako náš první program bude nakreslení obdélníku a v každém rohu si vykreslíme kruh. Tak jako je na
+                obrazku vedle.
+              </p>
+            </td>
+            <td>
+              <img class="myImg" src="/img/python/lekce2/ukol1.png" alt="Promenne v praxi"
+                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            </td>
+          </tr>
+        </table>
+  
+        <ul>
+          <li>
+            Nejprve si nastavíme vše potřebné
+          </li>
+          <li>
+            Vzhled pera si nastavíme na <span style="font-weight: bold;">"turtle"</span>
+          </li>
+          <li>
+            Pokud je vše nastavené tak za pomocí příkazů <span style="font-weight: bold;">.forward()</span> a
+            <span style="font-weight: bold;">.left()</span> si nakreslíme naš obdélník.
+          </li>
+        </ul>
+      </div>
+
+      <div class="odstavec">
+        <h2>Druhý úkol</h2>
+        <table>
+          <tr>
+            <td>
+              <p>
+                Vyzkoušíme si využití cyklů při tvorbě takového obrazce.
+              </p>
+              <span style="font-weight: bold;">Postup</span>
+              <ul>
+                <li>
+                  vytvoříme si cyklus od 0 až do 360
+                </li>
+                <li>
+                  Pokaždé co cyklus pojede se posuneme o promennou <strong>i</strong> dopredu a otočíme želvu doleva o 59 stupňů
+                </li>
+              </ul>
+            </td>
+            <td>
+              <img class="myImg" src="/img/python/lekce2/ukol2.png" alt="Promenne v praxi"
+                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>

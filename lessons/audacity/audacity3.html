@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Audacity</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/audacity/audacity2.html';">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/audacity/audacity4.html';">Následují lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <img src="/img/audacity/logo.jpg" alt="Prostředí pro upravu zvuku"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </td>
+          <td>
+            <h1 class="mt-5" style="margin-bottom: 64px; ">Audacity - lekce 3</h1>
+          </td>
+        </tr>
+      </table>
+
+      <p style="margin-bottom: 64px; ">
+        Pro práci na našich úkolů budeme používat nástroj <a href="https://www.audacityteam.org/">AudaCity</a>.
+        Návod na zprovoznění najdete <a href="/lessons/audacity/audacity-env.html">zde</a>.
+      </p>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Samostatná práce</h2>
+      <p>
+        Vašim úkolem bude vzít si připravenou písničku a udělat si svůj remix této písně. 
+      </p>
+      <h5>Obsah remixu:</h5>
+      <ul style="font-weight: bold;">
+        <li>aspoň 5 úprav zvuky</li>
+        <li>hlasité a klidné části</li>
+        <li>pořádný refrém</li>
+        <li>déla minimálně 2 minut</li>
+      </ul>
+
+    </div>
+    
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

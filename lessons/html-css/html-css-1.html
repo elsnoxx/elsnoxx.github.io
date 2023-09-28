@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
   <meta charset="UTF-8">
@@ -7,18 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Toto lekce první ohledně HTML a CSS">
   <title>HTML & CSS</title>
+  
+  
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" defer>
-  <link href="/css/style.css" rel="stylesheet" defer>
-  <link href="/css/html-css/html-css.css" rel="stylesheet" defer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer async></script>
-  <!-- Latest compiled JavaScript -->
+  <!-- Potrebne skripty -->
+  <script src="/lib/code.jquery.com_jquery-3.7.1.min.js" defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/bootstrap.min.js" defer></script>
   <script src="/js/JQuery-general.js" defer></script>
   <script src="/js/html-css.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet" defer>
+  <link href="/css/html-css/html-css.css" rel="stylesheet" defer>
 
 </head>
 
@@ -34,7 +34,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
@@ -45,8 +45,12 @@
               <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
               <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">Youtube</a></li>
             </ul>
           </div>
           <li class="nav-item">
@@ -62,6 +66,19 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/html-css/html-css-vsc.html';">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/html-css/html-css-2.html';">Následují lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
     <h1>Lekce č. 1. Úvod do světa tvorby webových stránek</h1>
     <p>
       V této lekci si vysvětlíme malou část veliké IT oblasti. Touto oblastí je právě web.
@@ -71,7 +88,7 @@
     <p>
       Nejprve začneme s lehkou teorii a poté si uděláme naše vývojářské prostředí.
       Kde si bytvoříme náši první webovou stránku. Výsledkem této lekce bude tato
-      <a href="/lessons/html-css/ukazka1.html" target="_blank" rel="noopener noreferrer">webová
+      <a href="/lessons/html-css/html-css-1/ukazka1.html" target="_blank" rel="noopener noreferrer">webová
         stránka</a>
     </p>
     <div class="odstavec">
@@ -206,7 +223,7 @@
       </table>
     </div>
 
-    <iframe src="/lessons/html-css/ukazky/ukazka1.html" width="100%" height="410" style="border:none;"></iframe>
+    <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka1.html" width="100%" height="410" style="border:none;"></iframe>
 
     <div class="odstavec">
       <h1>Základní struktura HTML dokumentu</h1>
@@ -323,12 +340,12 @@
       <h6>Samostaný úkol č.1</h6>
       <p>Vašim úkolem bude vytvořit stánku, která je pod textem ukázána.</p>
     </div>
-    <iframe src="/lessons/html-css/ukazky/ukazka2.html" width="100%" height="170" style="border:5;"></iframe>
+    <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka2.html" width="100%" height="170" style="border:5;"></iframe>
 
     <div class="odstavec">
       <h1>Základní struktura CSS</h1>
       <p>
-        <h6><strong>Co to znamená CSS?</strong></h6>
+      <h6><strong>Co to znamená CSS?</strong></h6>
       <ul>
         <li>
           Kaskádové styly tabulek / CSS je to jazyk stylů
@@ -372,7 +389,7 @@
     <div class="odstavec">
       <h6>Samostaný úkol č.2</h6>
       <p>Vašim úkolem bude napodobit tuhle stránku. K vytvoření použijte stránku z předhozí samostané práce.</p>
-      <iframe src="/lessons/html-css/ukazky/ukazka1.html" width="100%" height="409" style="border:5;"></iframe>
+      <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka1.html" width="100%" height="409" style="border:5;"></iframe>
     </div>
 
 
@@ -391,7 +408,7 @@
       </div>
       <!-- Přidat další panely podle potřeby -->
     </div>
-    
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
