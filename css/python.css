@@ -1,4 +1,4 @@
-.import , .slovo{
+.import , .slovo, .podminka{
   color: purple;
   font-weight: bolder;
 }
@@ -21,4 +21,20 @@
 .prikaz{
   color: blue;
   font-weight: bolder;
+}
+
+.operatory {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.operatory td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.operatory tr:nth-child(even) {
+  background-color: #dddddd;
 }

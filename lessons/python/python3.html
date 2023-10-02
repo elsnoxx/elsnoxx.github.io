@@ -58,35 +58,226 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <div class="">
-      <table>
+    <div>
+      <table class="moveAndTime">
         <tr>
           <td>
             <button id="left" onclick="location.href = '/lessons/python/python2.html';">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/python/python4.html';">Následují lekce</button>
           </td>
           <td>
-            <button id="right" onclick="location.href = '/lessons/python/python4.html';">Následují lekce</button>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
           </td>
         </tr>
       </table>
     </div>
     <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 3 - podmínky</h1>
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 3 - Podmínky a nekonečný cyklus</h1>
       <p style="margin-bottom: 64px; ">
-        Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-        Návod na přihlášení naleznete <a href="">zde</a>.
+        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti <strong>JET
+          BRAINS</strong> s nazvem
+        <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>.
+        Návod na staženi a zprovozněni naleznete <a href="/lessons/python/python-vsc.html">zde</a>.
       </p>
+
       <p>
-        V této lekci se koukneme na to jak se v Pythonu píší podmínky. Je to velmi podstatná část programovaní.
-        Jelikož díky ní jsme schopni řídít program a vykovát rozhodující úkony.
+        V dnešní lekci si ukážeme jednu fantastickou věc, kterou má Python zabudovanou.
+        A to je krestlení za pomocí želvy nebo jiného tvaru.
+        Také se podíváma a vysvětlíme si jak fungují cykly.
       </p>
     </div>
 
     <div class="odstavec">
-      <h2>Podmínky</h2>
+      <h2>Podmínky - konstrukce</h2>
       <p>
-
+        Podmínky si vysvětlíme na příkladu.
       </p>
+      <p>
+        Máme nějakou osobu. Té se zeptáme jestli je bojovník. Teď od osoby můžeme očekávat 2 odpovědi.
+        A to <strong>Ano</strong> a <strong>Ne</strong>. Pokud nám vyjde <strong>Ano</strong> tak osobe dáme mec. Pokud
+        osoba odpoví <strong>Ne</strong> pošleme ji domů.
+      </p>
+
+      <span class="podminka">if</span> <strong>osoba == válečník:</strong> <br>
+      &emsp;&emsp;<strong>zbraň = meč</strong><br>
+      <span class="podminka">else</span>:<br>
+      &emsp;&emsp;<strong><span class="prikaz">print</span>("utíkej domů a schovej se")</strong>
+
+      <div class="odstavec">
+        <h2>Logické operátory</h2>
+        <p>
+          Níže je senzam logických operátorů, které se používají u logických konstrukcí. Fungují
+          Stejně jako v matematice a vrací nám hodnotu True nebo False (pravde a nepravda).
+          Pomocí těchto operátorů jsme schopni porovnávat a řídit logicky kam se kód má ubíhat.
+        </p>
+        <table class="operatory">
+          <tr>
+            <th>Operátor</th>
+            <th>Popis</th>
+            <th>Příklad</th>
+            <th>Výsledek</th>
+          </tr>
+          <tr>
+            <td><strong>&gt;</strong></td>
+            <td>Větší jako</td>
+            <td><span class="prikaz">print</span>(5&gt;2)</td>
+            <td><strong>True</strong></td>
+          </tr>
+          <tr>
+            <td><strong> &lt; </strong></td>
+            <td>Menší jako</td>
+            <td><span class="prikaz">print</span>(5&lt;2) </td>
+            <td><strong>false</strong></td>
+          </tr>
+          <tr>
+            <td><strong> &gt;= </strong></td>
+            <td>Větší nebo rovno</td>
+            <td><span class="prikaz">print</span>(5&gt;=2) </td>
+            <td><strong>True</strong></td>
+          </tr>
+          <tr>
+            <td><strong> &lt;= </strong></td>
+            <td>Menší nebo rovno</td>
+            <td><span class="prikaz">print</span>(5&lt;=2) </td>
+            <td><strong>false</strong></td>
+          </tr>
+          <tr>
+            <td><strong> == </strong></td>
+            <td>Rovný</td>
+            <td><span class="prikaz">print</span>(5==2) </td>
+            <td><strong>false</strong></td>
+          </tr>
+          <tr>
+            <td><strong> </strong></td>
+            <td></td>
+            <td><span class="prikaz">print</span>(5==ř) </td>
+            <td><strong>True</strong></td>
+          </tr>
+          <tr>
+            <td><strong> != </strong></td>
+            <td>není rovný</td>
+            <td><span class="prikaz">print</span>(5!=2) </td>
+            <td><strong>True</strong></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="odstavec">
+        <p>
+          Ovšem tohle nebyly všechny logické operátory. Máme ještě tyhle logické operátory.
+        </p>
+        <table class="operatory">
+          <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>A and B</th>
+            <th>A or B</th>
+            <th>not A</th>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>2</td>
+            <td>false</td>
+            <td>false</td>
+            <td>-5</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>7</td>
+            <td>True</td>
+            <td>True</td>
+            <td>-7</td>
+          </tr>
+          <tr>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+            <td>true</td>
+            <td>true</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>false</td>
+            <td>false</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+          <tr>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>true</td>
+            <td>false</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="odstavec">
+      <h2>Příklady</h2>
+      <p>Zde je pár příkladů jak se používají podmínky.</p>
+      <ul>
+        <li>
+          <strong>Čas</strong>
+          <ul>
+            Dostanete kolik je hodin v hodinách a vypíšete jestli je odpoledne nebo dopoledne.
+          </ul>
+        </li>
+        <li>
+          <strong>Porovnání čísel</strong>
+          <ul>
+            Dostanete dvě čísla a vypíšete jestli první číslo je větší nebo menší než číslo druhé.
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Nekonečný cyklus</h2>
+      <p>
+        V minulé lekci jsme si ukázali jak na cykly. V dnešní lekci si ukážeme, jak uděláme
+        nekonečný cyklus a za pomocí podmínky mu dáme možnost skončit. Toho docílíme pomocí
+        <strong>break</strong> funkce.
+      </p>
+
+      <h3>Konstrukce</h3>
+      <p>
+        Níže se nachází konstrukce nekonečného cyklu.
+      </p>
+      <span class="slovo">while</span> <span class="prikaz">True</span><strong>:</strong><br>
+      &emsp;&emsp;<strong>tělo cyklu</strong>
+    </div>
+
+    
+      <p>
+        Funkci <strong>Break</strong> si ukážeme na příkladě počítání do 100.
+      </p>
+      <strong>pocet = 0 </strong><br>
+      <span class="slovo">while</span> <span class="prikaz">True</span><strong>:</strong><br>
+      &emsp;&emsp;<strong>pocet += 1</strong><br>
+      &emsp;&emsp;<span class="prikaz">print</span><strong>(pocet)</strong><br>
+      &emsp;&emsp;<span class="podminka">if</span> <strong>pocet == 100:</strong><br>
+      &emsp;&emsp;&emsp;&emsp;<span class="podminka">break</span>
+    </div>
+
+    <div class="odstavec">
+      <h4>Samostatná práce</h4>
+      <p>
+        Naprogramujte hru, která se jmenuje <strong>Uhádni číslo, které si mylím</strong>.
+      </p>
+      <ul>
+        <li>použijte modul random</li>
+        <li>čísla budou v rozmezí 0 - 10</li>
+        <li>program napíše jestli jste řekli menší nebo větší číslo, než je hádané</li>
+      </ul>
     </div>
 
 

@@ -60,6 +60,14 @@ code {
   margin-bottom: 64px;
 }
 
+.odstavec-stred {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 .pododstavec {
   margin-top: 64px;
   margin-bottom: 64px;
