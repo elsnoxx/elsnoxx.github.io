@@ -101,34 +101,44 @@
       <h2>Spectrogram</h2>
       <p>
         Tento nástoj nám zobrazuje výšku tónu. Dá se aktivovat na samostné skladbě pomocí kliknutí na šipku
-        vedle skladby. Efekt se jmenuje <strong>Noise Reduction</strong> poté se vám otevře okno kde vyberete 
-        <strong>Get Noise Profile / Získat profil hluku</strong>. Poté is audacity projde vybranou nahrávku a detekuje šum.
-         
+        vedle skladby. Efekt se jmenuje <strong>Noise Reduction</strong> poté se vám otevře okno kde vyberete
+        <strong>Get Noise Profile / Získat profil hluku</strong>. Poté is audacity projde vybranou nahrávku a detekuje
+        šum.
+
       </p>
       <p>
-        Pokud se vám něco nezdá dá se kroky opakovat za pomocí klávesové zkratky <strong>CTRL + R</strong>. 
+        Pokud se vám něco nezdá dá se kroky opakovat za pomocí klávesové zkratky <strong>CTRL + R</strong>.
         A provedené akce se znova provedou.
       </p>
       <p>
-        Samotné snížení šumu se dělá pomocí posuvného jezdce vedle nápisu <strong>Noise Reduction (dB)</strong> a 
-        <strong>Frekvency smoothing (bands)</strong>. Hodnoty, které budete zadávat už je pouze na vás. 
+        Samotné snížení šumu se dělá pomocí posuvného jezdce vedle nápisu <strong>Noise Reduction (dB)</strong> a
+        <strong>Frekvency smoothing (bands)</strong>. Hodnoty, které budete zadávat už je pouze na vás.
         Musíte si zaexperimentovat, aby zvuk zněl lépe.
       </p>
-      <ul>
-        <li>
-          <h5>červené a bíle oblasti</h5>
-          <p>
-            Touto barvou jsou zbarvené hlasité zvuky.
-          </p>
-        </li>
-        <li>
-          <h5>Modré a fialové oblasti</h5>
-          <p>
-            Touto barvou je zbarvený šum.
-          </p>
-        </li>
-      </ul>
-
+      <table>
+        <tr>
+          <td>
+            <ul>
+              <li>
+                <h5>červené a bíle oblasti</h5>
+                <p>
+                  Touto barvou jsou zbarvené hlasité zvuky.
+                </p>
+              </li>
+              <li>
+                <h5>Modré a fialové oblasti</h5>
+                <p>
+                  Touto barvou je zbarvený šum.
+                </p>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <img class="myImg" src="/img/audacity/lekce3/spectogram.webp" alt="Prostředí pro upravu zvuku"
+              style="width:100%; max-width:100px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="odstavec">
@@ -139,15 +149,24 @@
       <ul>
         <li>
           <h5>Bílí šum</h5>
-          <audio src="">hudba</audio>
+          <audio controls>
+            <source src="/lessons/audacity/music/bili.mp3" type="audio/mpeg">
+            Bili sum
+          </audio>
         </li>
         <li>
           <h5>Růžový šum</h5>
-          <audio src=""></audio>
+          <audio controls>
+            <source src="/lessons/audacity/music/ruzovy.mp3" type="audio/mpeg">
+            Ruzovy sum
+          </audio>
         </li>
         <li>
           <h5>Brownův šum</h5>
-          <audio src=""></audio>
+          <audio controls>
+            <source src="/lessons/audacity/music/brownuv.mp3" type="audio/mpeg">
+            Brownuv sum
+          </audio>
         </li>
       </ul>
     </div>
@@ -167,7 +186,12 @@
       </ul>
     </div>
 
-
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer">
     <div class="container">
