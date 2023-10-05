@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    async function fetch_demo()
+{
+	const resp = await fetch('https://finance.yahoo.com/quote/T?p=T&.tsrc=fin-srch');
+
+	console.log(await resp.json());
+}
+
+fetch_demo();
+</script>
+<body>
+    
+</body>
+</html>
