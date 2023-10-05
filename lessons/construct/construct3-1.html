@@ -65,8 +65,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" onclick="location.href = '/lessons/construct/construct-editor.html';">Předchozí lekce</button>
-            <button id="right" onclick="location.href = '/lessons/construct/construct3-2.html';">Následují lekce</button>
+            <button id="left" onclick="location.href = '/lessons/construct/construct-editor.html';">Předchozí
+              lekce</button>
+            <button id="right" onclick="location.href = '/lessons/construct/construct3-2.html';">Následují
+              lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -92,39 +94,111 @@
         </p>
       </div>
 
-      <h3></h3>
-      
-      <h3>Co je potřeba k tomu stát se Herním designerem?</h3>
-      <ul>
-        <li>roky praxe</li>
-        <li>stačí ti tvé růce a hlava</li>
-        <li>k čemu je hlava potřeba</li>
-        <li>zapisovat si myšlenky, které tě napadnou</li>
-      </ul>
+      <h4><strong>Co je potřeba k tomu stát se Herním designerem?</strong> &emsp; <button class="otazka"
+          id="potreba">Odpověď</button></h4>
+      <div class="odpoved-potreba">
+        <ul>
+          <li>roky praxe</li>
+          <li>stačí ti tvé růce a hlava</li>
+          <li>k čemu je hlava potřeba</li>
+          <li>zapisovat si myšlenky, které tě napadnou</li>
+        </ul>
+      </div>
 
-      <h3>Jaké problémy řeší herní designer?</h3>
-      <ul>
-        <li>Vypracování základu hry</li>
-        <li>Sestavení konceptu hry</li>
-        <li>Sestavení a úprava GDD (game design dokument)</li>
-        <li>Upravování ideálového základu hry</li>
-        <li>Řízení procesu vypracování</li>
-        <li>Účas na sestavení technickích specifikací hry</li>
-      </ul>
+      <h4><strong>Jaké problémy řeší herní designer?</strong> &emsp; <button class="otazka"
+          id="problemy">Odpověď</button></h4>
+      <div class="odpoved-problemy">
+        <ul>
+          <li>Vypracování základu hry</li>
+          <li>Sestavení konceptu hry</li>
+          <li>Sestavení a úprava GDD (game design dokument)</li>
+          <li>Upravování ideálového základu hry</li>
+          <li>Řízení procesu vypracování</li>
+          <li>Účas na sestavení technickích specifikací hry</li>
+        </ul>
+      </div>
 
-      <h3>Herní engine</h3>
+      <h4><strong>Herní engine</strong> &emsp; <button class="otazka" id="engine">Odpověď</button></h4>
+      <div class="odpoved-engine">
+        <p>
+          Je to soubor systémů, které zjednoduší nám nejpoužívanější funkce ve hře.
+        </p>
+      </div>
+
+      <h4><strong>Proč se herní engine používá?</strong> &emsp; <button class="otazka" id="používá">Odpověď</button>
+      </h4>
+      <div class="odpoved-používá">
+        <ul>
+          <li>Díky hernímu enginu je hra lépe zorganizovaná a řízená</li>
+          <li>Pomocí herního enginu můžete řídit kód</li>
+          <li>Hra je lépe přenosná, to znamená že ji budete moct hrát na každém operačním systému</li>
+          <li>Zjednodušení proces vývoje her</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="odstavec">
+      <h3>Vytvoření mapy</h3>
       <p>
-        Je to soubor systémů, které zjednoduší nám nejpoužívanější funkce ve hře.
+        Teď si ukážeme jak si vytvořit mapu.
       </p>
 
-      <h3>Proč se herní engine používá?</h3>
-      <ul>
-        <li>Díky hernímu enginu je hra lépe zorganizovaná a řízená</li>
-        <li>Pomocí herního enginu můžete řídit kód</li>
-        <li>Hra je lépe přenosná, to znamená že ji budete moct hrát na každém operačním systému</li>
-        <li>Zjednodušení proces vývoje her</li>
-      </ul>
+      <div class="odstavec">
+        <h5>První plošina - mapa</h5>
+        <p>
+          V dnešní lekci budeme používat ze stažených objektů složku <strong>Tiles</strong> a <strong>Players</strong>.
+          Pomocí těchto objektů si vytvoříme první platformu, vložíme tam svou postavu a <strong>hru spustíme</strong>.
+        </p>
+      </div>
 
+
+      <div class="odstavec">
+        <h5>Nastavení chování a pravidla</h5>
+        <p>
+          Abychom docílili, aby naše zem byla fakt zemí. Použijeme na to pravidlo <strong>Solid</strong>.
+          Ta nám zaručí aby zem byla pevná a postava jí nepropadávala.
+        </p>
+        <p>
+          Další pravidla použijeme pro naši postavu. Pravidla jsou <strong>ScrollTo</strong> a <strong>Platform</strong>. 
+        </p>
+        <ul>
+          <li>
+            <strong>ScrollTo</strong> - tohle pravidlo nam zajistí, aby postava byla vždy v centru naseho pohledu.
+          </li>
+          <li>
+            <strong>Platform</strong> - tohle pravidlo nam zajistí, aby se postava mohla hýbat pomocí šipek
+          </li>
+        </ul>
+        <p>
+          Po těhle krocích hru spusťte a vyzkoušejte jak hra funguje.
+        </p>
+      </div>
+
+      <div class="odstavec">
+        <h3>Vytvoření logiky objektů</h3>
+        <p>
+          Do naší vytvořené plošiny přidáme obrázek mince a hroty (spikes).
+        </p>
+        <h4>Sběr mincí</h4>
+        <p>
+          V záložce s názvem <strong>Level1_Events</strong> najdeme tlačítko <strong>ADD Events</strong>.
+          Pak následně vybereme naši postavu a přidáme ji logiku <strong>On collision with another object</strong>
+          dále se otevře okno s možností <strong> &lt; click to choose &gt; </strong>. Tam vybereme minci.
+        </p>
+        <p>
+          Tohle nám umožní pracovat s možností co by se mohlo stát když se postava dotkne mince. 
+          Abychom toho docílili, za námi vytvořenou logiku nastavíme, aby se nám mince <strong>zničila</strong>.
+        </p>
+        <h4>Umření postavy</h4>
+        <p>
+          Záložka Level1_Events najdeme Add Events vybereme spikes a přidáme jí logiku On collision with another object dále se otevře okno a do <click to choose> přidáme minci
+        </p>
+        <p>
+          Jelikož chceme, aby při dotyku postavy s hroty hra restartovala musíme nastavit restart hry. 
+          To uděláme tak, že přidáme za logiku <strong>System</strong> a poté najdeme <strong>Restart Layout</strong>.
+        </p>
+      </div>
 
     </div>
 
