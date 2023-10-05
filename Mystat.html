@@ -63,19 +63,41 @@
   <main role="main" class="container">
     <div class="mt-5" style="margin-bottom: 64px; ">
       <h1 class="mt-5" style="margin-bottom: 64px; ">Mystat</h1>
-      <p>
-        Mystat je online webový portál vytvořený pro žáky Step IT.
-        Najdete zde svou docházku, pořádní ve třídě, body a diamanty a hlavní učební materiály a domácí úlohy.
-        V Mystatu jsou oficiální materiály, které můžete použít k samostudiu.
-      </p>
+      <table>
+        <tr>
+          <td>
+            <p>
+              Mystat je online webový portál vytvořený pro žáky Step IT.
+              Najdete zde svou docházku, pořádní ve třídě, body a diamanty a hlavní učební materiály a domácí úlohy.
+              V Mystatu jsou oficiální materiály, které můžete použít k samostudiu.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/mystat/mystat.png" alt="Okno fade out Audacity"
+              style="width:100%; max-width:500px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+
 
       <h3 class="mt-5" style="margin-bottom: 64px; ">Body a diamanty</h3>
-      <p>
-        Body získáváte za plnění domácích prací, za docházku a za ohodnocení práce v hodině.
-        Diamaty jsou ale cennější a nelze je získat tak jednoduše jako body.
-        A však bez nich si nedokážete nic koupit. Body a diamanty lze uplatni v obchodě na webu Mystatu.
-        Kde najdete spousty zajímavých předmětů.
-      </p>
+      <table>
+        <tr>
+          <td>
+            <p>
+              Body získáváte za plnění domácích prací, za docházku a za ohodnocení práce v hodině.
+              Diamaty jsou ale cennější a nelze je získat tak jednoduše jako body.
+              A však bez nich si nedokážete nic koupit. Body a diamanty lze uplatni v obchodě na webu Mystatu.
+              Kde najdete spousty zajímavých předmětů.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/mystat/bodování.png" alt="Okno fade out Audacity"
+              style="width:100%; max-width:500px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+
 
       <h3 class="mt-5" style="margin-bottom: 64px; ">Materiály z lekcí</h3>
       <p>
@@ -83,10 +105,9 @@
         Tam najdete záložku <strong>Studijní materiály</strong> a po otevření se dostanete na stránku, kde najdete
         přehled všech materiálů. Tyto materiály jsou oficiální a doporučuji učit se hlavně z nich.
         Než pak využívat mé materiály zde na těchto stránkách. Ty najde v záložce <strong>Lekce</strong> nahoře na
-        stránce.
-        Pokud chcete studovat dopředu je to možné, avšak je lepší se mi ozvat, abych vám přidělal, zveřejnil materiály
-        na stránky
-        , abyste mohli pracovat dopředu. Nebo vymyslím něco jiného, aby jste se mohli rozvíjet.
+        stránce. Pokud chcete studovat dopředu je to možné, avšak je lepší se mi ozvat, abych vám přidělal, 
+        zveřejnil materiály na stránky, abyste mohli pracovat dopředu. Nebo vymyslím něco jiného, aby jste se 
+        mohli rozvíjet.
       </p>
 
       <h3 class="mt-5" style="margin-bottom: 64px; ">Domácí úkoly</h3>
@@ -104,11 +125,17 @@
       <h3 class="mt-5" style="margin-bottom: 64px; ">Časté otázky</h3>
 
       <h4>Zapomněl jsem heslo, co mám dělat?</h4>
-      <p>Pokud jsi zapoměl heslo a nemůžeš se dostat na Mystat kontaktuj mě a pošli ti tvé heslo nebo ho resetujeme.</p>
+      <p>Pokud jsi zapoměl heslo a nemůžeš se dostat na Mystat kontaktuj mě a pošlu ti tvé heslo nebo ho resetujeme.</p>
     </div>
 
     <div class="odstavec">
       <a href="https://mystat.itstep.org/cs/auth/login/admin ">Ukazka Mystatu</a>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
   </main>
   <footer class="footer">
