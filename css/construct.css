@@ -1,0 +1,15 @@
+/*  Pravidlo pro schování veškerých odpovědí*/
+[class^="odpoved-"] {
+    display: none;
+}
+
+.panel-content {
+    display: none;
+  }
+  
+  .panel-heading {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
