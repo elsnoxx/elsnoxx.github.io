@@ -65,7 +65,7 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" onclick="location.href = '/lessons/construct/construct3-.1html';">Předchozí
+            <button id="left" onclick="location.href = '/lessons/construct/construct3-1.html';">Předchozí
               lekce</button>
             <button id="right" onclick="location.href = '/lessons/construct/construct3-3.html';">Následují
               lekce</button>
@@ -78,8 +78,90 @@
     </div>
     <div class="odstavec">
       <h1>Animace, Tvorba levelů</h1>
+      <p>
+        V dnešní lekci si ukážeme jak se dají tvořit animace u postavy nebo u ruzných objeků.
+        Dále se podíváme na uŽeitečné chování, které se dají nastavit u objektů.
+        A pokud zbyte čas ukážeme si jak se přesouvat mezi jednotlivýmí plochy.
+      </p>
     </div>
-    
+
+    <div class="odstavec">
+      <h2>Animace</h2>
+      <p>
+        Pokud si tuhle logiku vytvoříte jednou. Tak poté jí mužete používat u všech her.
+        Jelikož se tohle bude používat vždy stejně.
+        Ukážeme si, ale animaci puze u postavy, za kterou budeme hrát.
+      </p>
+      <p>
+        Jelikož animace je jen shled obrázků, které jdou v řadě za sebou.
+        My můžeme určit rychlost, jak rychle ty obrázky pojedou.
+      </p>
+
+      <h4>Obrázky animací</h4>
+      <p>
+        Nejprve si vytvoříme animace u postovay a poté se vrhneme na logiku, která tohle celé bude ovládat.
+      </p>
+      <ul>
+        <li>
+          <strong>editor postavy</strong>
+          <p>
+            Nejprve si pomocí <strong>dvojkliku na postavě</strong> otevřeme <strong>editor postav</strong>.
+          </p>
+        </li>
+        <li>
+          <strong>Vytvoření animací</strong>
+          <p>
+            Na pravé strane okna <strong>editoru postavy</strong> za pomocí pravého tlačítka přidáme
+            animace s názvem <strong>skok, pád, klid a běh</strong>
+          </p>
+        </li>
+        <li>
+          <strong>Rychlost animace</strong>
+          <p>
+            Každé animaci nastavíme rychlost animace na 5.
+          </p>
+        </li>
+        <li>
+          <strong>Vložení obrázků</strong>
+          <p>
+            Otevřeme si nově vytvořené animace a přidáme do ní obrázky, které nám budou tvořit naši animaci.
+          </p>
+        </li>
+      </ul>
+      <h4>Události</h4>
+      <p>
+        Teď se vrhneme na logku, která bude ovládat animace. Je to velmi jednoduché.
+        A tady tuto strukturu použijete u další her. <strong>Přesuneme se do listu událostí a
+          jdeme tvořit události </strong>
+      </p>
+      <ul>
+        <li>
+          <strong>Hlavní události</strong>
+          <p>
+            V listě událostí přidáme 2 události <br>
+            <strong>Postava – Plošinovka is on floor</strong> <br>
+            <strong>Postava – Plošinovka is jumping</strong>
+          </p>
+
+        </li>
+        <li>
+          <strong>Postava – Plošinovka is on floor</strong>
+          <p>
+            Pod touhle událostí si vytvoříte 2 podudálosti <strong>Postava – Plošinovka is moving</strong>
+            a jednu z nich za pomocí <strong>pravého tlačítka myši</strong>
+            událost <strong>invertujeme</strong>.
+          </p>
+        </li>
+        <li>
+          <strong>Postava – Plošinovka is jumping</strong>
+          <p>
+            Pod touhle událostí si vytvoříte podudálost <strong>Postava – Plošinovka is jumping</strong>
+            a <strong>Postava – Plošinovka is falling</strong>
+          </p>
+        </li>
+      </ul>
+    </div>
+
 
 
   </main>
