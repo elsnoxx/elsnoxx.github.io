@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Construct 3</title>
-    
-    <!-- Potrebne skripty -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Construct 3</title>
+
+  <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
   <script src="/js/construct.js" defer></script>
@@ -14,108 +15,151 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/construct.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/index.html">My Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <div class="btn-group">
-              <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                Lekce
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
-                <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
-                <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
-                <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
-                <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="/Mystat.html">Mystat</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/contact.html">Kontakt</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  
-    <!-- Begin page content -->
-    <main role="main" class="container" style="margin-bottom: 100px; ">
-      <div style="margin-bottom: 64px; ">
-        <h1 class="mt-5" style="margin-bottom: 64px; margin-top: 64px;">Construct 3 Projekt</h1>
-        <p>
-          Projektem ukážete co vše jste se naučili. Projekt se nám skládá ze 3 částí.
-          Tvotba projektu podle zadání, poté tvorba prezentací a jako poslední budete prezenetovat projekty vašim rodičům.
-          Vaše projekty budou po odprezentování hodnocené a můžete za to získat až 20 diamanů!!
-        </p>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/python/python.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
       </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container" style="margin-bottom: 100px; ">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/construct/construct3-7.html';">Předchozí
+              lekce</button>
+            <button id="right" onclick="location.href = '/prezentace.html';">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="odstavec">
+      <h1>Construct 3 Projekt</h1>
+      <p>
+        Skvělým způsobem, jak zjistit, co všechno dokážete, je vytvořit si samostatně vlastní hru v Constructu.
+        Téma hry si vyberete <strong>sami</strong>.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h3>Základní pravidla projektu:</h3>
+      <ul>
+        <li>
+          Hra nesmí používat obrázky, které jsme používali v předchozích lekcí.
+        </li>
+        <li>
+          Veškerou grafiku pro hru můžete stahovat z Internetu, nebo vytvořit svou vlastní.
+        </li>
+        <li>
+          Není dovoleno používat projekty, které jsme dělali společně či jen upravit.
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="odstavec">
+      <h3>Každá hra by měla obsahovat:</h3>
+      <ul>
+        <li>
+          Hlavní nabídky hry (s odkazy na spuštění hry a plochou  s návodem ke hře)
+        </li>
+        <li>
+          Alespoň jednu plochu samotné hry  
+        </li>
+        <li>
+          Herní skóre, životy a jiné proměnné 
+        </li>
+        <li>
+          Zobrazení některých proměnných (životů atd.) 
+        </li>
+        <li>
+          Nepřátele 
+        </li>
+        <li>
+          Animace a efekty 
+        </li>
+        <li>
+          Použití více vrstev 
+        </li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h3>Co je možné tvořit navíc:</h3>
+      <ul>
+        <li>
+          Různé herní objekty, jako lékárničky atd
+        </li>
+        <li>
+          Herní dialogy – postavy, které něco říkají 
+        </li>
+        <li>
+          Herní příběh, kterým hráč prochází 
+        </li>
+        <li>
+          Střelbu objektů a jiné programy
+        </li>
+        <li>
+          Cokoliv, co hru učiní lépe hratelnou a zábavnější.
+        </li>
+      </ul>   
+    </div>
+
+
+    <h5>Zadání ke stažení <a href="/download/construct/ukoly/zaverecnýprojekt.pdf" download onClick="passwd()">zde</a></h5>
     
-
-    <h3 style="margin-bottom: 64px; margin-top: 64px;" ><strong>První část - tvorba projektu</strong></h3>
-    <h4 style="margin-bottom: 20px;">Hra by měla obsahovat</h4>
-    <ul>
-      <li>Hlavní nabídku hry (s tlačítky na spouštění hry a návod k ovládání)</li>
-      <li>Alespoň jednu plochy samotné hry.</li>
-      <li>Herní skóre, životy a jiné proměnné</li>
-      <li>Zobrazení některých proměnných, třeba životy, mince či skóre</li>
-      <li>Nepřátele</li>
-      <li>Animace a efekty</li>
-      <li>Použití vrstev</li>
-    </ul>
-    <h4 style="margin-bottom: 20px;">Pravidla pro tvorbu projektu</h4>
-    <ul style="margin-bottom: 64px;">
-      <li>
-        Ve hře se nesmí objevit obrázky, které jsme používali na hodině.
-        Veškerá grafika může být stažena z Internetu, nebo si vytvořit vlastní.
-      </li>
-      <li>Není dovoleno používat projekty, které jsme dělali společně či jen upravit.</li>
-    </ul>
-
-
     
-
-    <h3 style="margin-bottom: 30px;"><strong>Třetí část - prezentováním rodičům</strong></h3>
-    <p>
-      Při prezentování si zahrajete na lektora. Budete se snažit vysvětlit svím rodičům vaši práci,
-      tak aby pochopili o čem se jedná.
-    </p>
-    <h4 style="margin-bottom: 20px;">Tipy pro dokonalé odprezentování</h4>
-    <ul style="margin-bottom: 64px;">
-      <li>Prezentace by neměla být moc dlouhá, aby poté nenudila</li>
-      <li>Zároveň ani moc krátká, aby popsala vše, co je potřeba</li>
-      <li>Na začátku se představ celým jménem</li>
-      <li>Texty by měly být maximálně stručné a jednoduché, minimální velikost písma je 18 bodů</li>
-      <li>Dej si pozor na pravopisné chyby, velká a malá písmena</li>
-      <li>Mluv nahlas a dobře se připrav</li>
-      <li>Není dobré prezentaci pouze číst</li>
-      <li>Dívej se více do publika</li>
-      <li>Pokud se bude někdo chtít na něco zeptat, vyvolej ho a pokus se mu odpovědět</li>
-    </ul>
-
-
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">All rights reserved.</span>
-        </div>
-    </footer>
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>

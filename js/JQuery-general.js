@@ -78,5 +78,12 @@ function casovac() {
   casovac = function(){};
 }
 
-
+function passwd(){
+  var password = prompt('Enter the password to download the file:');
+  if(password.toLowerCase() == "teacher"){
+    window.open("folder/history.zip")    
+  }else{
+    alert("incorrect password!! please try again");
+  }
+}
 
