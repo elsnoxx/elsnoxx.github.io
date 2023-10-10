@@ -17,6 +17,8 @@ while True:
     turtle.right(180)
     turtle.circle(20)
     turtle.left(270)
+    
+
 
 # turtle.forward(150)
 # turtle.right(90)
