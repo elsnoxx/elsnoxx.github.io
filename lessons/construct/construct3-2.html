@@ -162,6 +162,100 @@
       </ul>
     </div>
 
+    <div class="odstavec">
+      <h4>Zdokonalení animane</h4>
+      <p>
+        Aby, animace skutečnĚ fungovali musíme potřebujeme je jeStě vhodně upravit.
+        Pokud totiž postava běží doleva, musí se i její
+        obrázek zrcadlit směrem vlevo. Ze všeho nejdříve do našeho programu
+        přidáme objekt <strong>Klávesnice</strong> pomocí pravého tlačítka na ploše a zvolíme <strong>vložit nový objekt</strong>.
+      </p>
+      <ul>
+        <li>
+          <strong>Pohoby do leva</strong>
+          <p>
+            Vytvoříme <strong>událost</strong> pokud <strong>klávesnice</strong> pozná, že jsme zmáčkly <strong>šipku do leva</strong>.
+            Tak poté budeme postavu zrcadlit.
+          </p>
+        </li>
+        <li>
+          <strong>Pohyb do prava</strong>
+          <p>
+            Vytvoříme <strong>událost</strong> pokud <strong>klávesnice</strong> pozná, že jsme zmáčkly <strong>šipku do prava</strong>.
+            Tak poté budeme postavu zrcadlit.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h2>Přesun mezi plochy</h2>
+      <p>
+        V okně <strong>Project</strong> pomocí <strong>pravého tlačítka myši</strong> přidáme nový <strong>layout</strong> a
+        následně zvolíme přidat i <strong>list událostí</strong>.
+      </p>
+      <ul>
+        <li>
+          <strong>Hlavní menu</strong>
+          <ul>
+            <li>
+              velikost 854x480
+            </li>
+            <li>
+              přidáme objekty Myš a Browser
+            </li>
+            <li>
+              Tlačítko zapnutí a vypnutí
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Hlavni menu list událostí</strong>
+          <p>
+            Do hlavního menu listu událostí přidáme události:
+          </p>
+          <ul>
+            <li><strong>Myš – on left button click – Play</strong></li>
+            <li><strong>Myš – on left button click – Exit</strong></li>
+          </ul>
+          <p>
+            A k nim akce:
+          </p>
+          <ul>
+            <li><strong>System – go to layout – Level1</strong></li>
+            <li><strong>Browser - Close</strong></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+
+    <div>
+      <h3>Samostatná práce</h3>
+      <table>
+        <tr>
+          <td>
+            <p>
+              Vytvoř si hru, kter8 bude obsahovat:
+            </p>
+            <ul>
+              <li>Animaci postavy</li>
+              <li>Animaci mince, viz. ukázka vedle</li>
+              <li>3 plochy - Úvodní stranu, hru a konečnou stranu</li>
+            </ul>
+            <p>
+              Velikost a objekty jsou na vás.
+            </p>
+          </td>
+          <td>
+            <img src="/img/construct/mince animace.gif" alt="animace mince">
+          </td>
+        </tr>
+      </table>
+      
+    </div>
+
 
 
   </main>
