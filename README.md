@@ -23,7 +23,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 ## Technologie
 - HTML & CSS
 - Javascript
-- Google Analytics - ted probiha zkouska nasazeni
+- Google Analytics - ted probiha zkouska nasazeni, nasazeno 16/10/2023
 
 
 ## Co chybí ?
@@ -44,4 +44,6 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] Youtube
 - [ ] Python Beginer
 - [ ] Wix
-- [ ] Google ads
+- [ ] Google adsence
+- [ ] Google analytic - test nasazení 16/10/2023
+- [ ] Optimalizace pomocí google ligthouse
