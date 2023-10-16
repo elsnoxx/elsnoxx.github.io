@@ -16,6 +16,11 @@ Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spoust
 - V této lekci si představíme 3D grafiku. Zde za pomoci webové stránky [TinkerCad](https://www.tinkercad.com/).
 
 
+## Technologie
+- HTML & CSS
+- Javascript
+- Google Analytics - ted probiha zkouska nasazeni
+
 
 ## Co chybí ?
 - [ ] TinkerCad
@@ -35,3 +40,4 @@ Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spoust
 - [ ] Youtube
 - [ ] Python Beginer
 - [ ] Wix
+- [ ] Google ads
