@@ -1,6 +1,7 @@
 # Web pro lektorování ve Step It Academy
 
-Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spousty učavy použitá pro vyučování dětí v oblasti IT. Veškeré lekce budou sepsané níže tak samo jako použité technologie při vývoji webu.
+Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spousty učavy použitá pro vyučování dětí v oblasti IT. Veškeré lekce budou sepsané níže tak samo jako použité technologie při vývoji webu. 
+Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vytvoří **Závěrečnou prácí** z daného témata. A poté každý student odprezentuje před svími rodiči.
 
 
 
@@ -14,6 +15,9 @@ Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spoust
 
 ### TinkerCad
 - V této lekci si představíme 3D grafiku. Zde za pomoci webové stránky [TinkerCad](https://www.tinkercad.com/).
+
+### Audacity
+- V tato lekce je věnována střihu hudby jeho úpravy a také nahrávání zvuku. Pracujeme v prostředí  [Audacity](https://www.audacityteam.org/).
 
 
 ## Technologie
