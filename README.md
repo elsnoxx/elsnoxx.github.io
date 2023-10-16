@@ -44,6 +44,6 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] Youtube
 - [ ] Python Beginer
 - [ ] Wix
-- [ ] Google adsence
+- [ ] Google adsence - zažádání o kontrolu 16/10/2023
 - [ ] Google analytic - test nasazení 16/10/2023
 - [ ] Optimalizace pomocí google ligthouse
