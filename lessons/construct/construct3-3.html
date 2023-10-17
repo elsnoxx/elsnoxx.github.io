@@ -7,24 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Construct 3</title>
 
- <!-- Potrebne skripty -->
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
- <script src="/js/JQuery-general.js" defer></script>
- <script src="/js/construct.js" defer></script>
- <!-- Potrebne CSS -->
- <link href="/css/style.css" rel="stylesheet">
- <link href="/css/construct.css" rel="stylesheet">
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/construct.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/construct.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -88,13 +88,101 @@
       </table>
     </div>
     <div class="odstavec">
-      <h1> Proměnné, životy, sběr mincí</h1>
+      <h1>Přesun mezi plochy</h1>
       <p>
-        
+        V okně <strong>Project</strong> pomocí <strong>pravého tlačítka myši</strong> přidáme nový
+        <strong>layout</strong> a následně zvolíme přidat i <strong>list událostí</strong>.
+      </p>
+      <div class="odstavec">
+        <p>
+          Níže naleznete postup jak správně vytvořit další plochu. A jak to poté vypadá po přidání.
+        </p>
+        <table>
+          <tr>
+            <td>
+              <h4>1.</h4>
+              <img class="myImg" src="/img/construct/lekce3/vytvoreni-plochy.png"
+                alt="přidání plochy pomocí pravého tlačítka" style="width:100%; max-width:300px; height: auto"
+                loading="lazy">
+            </td>
+            <td>
+              <h4>2.</h4>
+              <img class="myImg" src="/img/construct/lekce3/vytvoreni-plochy2.png" alt="přidání i listu událostí"
+                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            </td>
+            <td>
+              <h4>3.</h4>
+              <img class="myImg" src="/img/construct/lekce3/vytvoreni-plochy3.png"
+                alt="jak to vypadá pokud vše správnĚ přijde" style="width:100%; max-width:300px; height: auto"
+                loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="odstavec">
+        <h3>Hlavní menu</h3>
+        <ul>
+          <li>
+            velikost 854x480
+          </li>
+          <li>
+            přidáme objekty Myš a Browser
+          </li>
+          <li>
+            Tlačítko zapnutí a vypnutí
+          </li>
+        </ul>
+      </div>
+
+      <div class="odstavec">
+        <h3>Hlavni menu list událostí</h3>
+        <ul>
+          <p>
+            Do hlavního menu listu událostí přidáme události:
+          </p>
+          <ul>
+            <li><strong>Myš – on left button click – Play</strong></li>
+            <li><strong>Myš – on left button click – Exit</strong></li>
+          </ul>
+          <p>
+            A k nim akce:
+          </p>
+          <ul>
+            <li><strong>System – go to layout – Level1</strong></li>
+            <li><strong>Browser - Close</strong></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="odstavec">
+      <h3>Samostatná práce</h3>
+      <p>
+        Vašim úkolem bude vypracovat hru v duchu <strong>Jump King</strong>.
+      </p>
+      <ul>
+        <li>Animaci postavy</li>
+        <li>Začáteční plocha</li>
+        <li>Konečná plocha</li>
+      </ul>
+      <p>
+        Velikost a objekty jsou na vás. Objekty můžete použít buď ty
+        <strong><a href="/download/construct/objekty-construct.zip" download>společné</a></strong>
+        a nebo na webové stránce <strong><a href="https://www.kenney.nl/">Kenney</a></strong>.
       </p>
     </div>
-    
 
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
 
   </main>
   <footer class="footer">

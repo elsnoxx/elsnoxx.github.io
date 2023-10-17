@@ -31,12 +31,15 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] projekt
 - [x] Audacity
 - [ ] Construct
+    - [ ] lekce 3
     - [ ] lekce 4
     - [ ] lekce 5
     - [ ] Lekce 6
     - [ ] Lekce 7
     - [ ] odevzdani du
     - [ ] popsani prostredi constructu
+    - [ ] ukaždé prace přidat i ukázkovou práci
+    - [ ] přidání obrázky animace do lekce 2
 - [ ] HTML and CSS
 - [ ] Wordpress
 - [ ] Javascript
@@ -45,5 +48,5 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] Python Beginer
 - [ ] Wix
 - [ ] Google adsence - zažádání o kontrolu 16/10/2023
-- [ ] Google analytic - test nasazení 16/10/2023
+- [x] Google analytic - funkční
 - [ ] Optimalizace pomocí google ligthouse

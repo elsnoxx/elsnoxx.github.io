@@ -15,16 +15,16 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/construct.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -87,11 +87,112 @@
         </tr>
       </table>
     </div>
-    
+
     <div class="odstavec">
-      <h1>Tvorba pohyblivého nepřítele</h1>
+      <h1>Proměnné</h1>
+      <p>
+        V této lekci si na příkladu sběru mincí a počtu životů ukážeme. Jak a co to jsou promnněnné.
+      </p>
     </div>
-    
+
+    <div class="odstavec">
+      <h2>Vytvoření proměnných</h2>
+      <ul>
+        <li>
+          Najdeme si naši postavu tu si naklikneme a najdeme okno <strong>Properties</strong> a záložku <strong>instance
+            variable</strong>
+        </li>
+        <li>
+          Klikneme na tlačítko <strong>instance variable</strong> a přidáme 2 proměnné jednu životy s číslem 5 a mince s
+          číslem 0
+        </li>
+        <li>
+          Do layoutu <strong>Level1</strong> vložíme 2x objekt text a do nich napíšeme
+          <br>
+          <strong>Životy:</strong>
+          <br>
+          <strong>Mince:</strong>
+        </li>
+        <li>
+          K námi přidaným textům přidáme chovaní Ukotvení a pojmenujeme je <strong>život</strong>,
+          <strong>mince</strong>
+        </li>
+        <li>
+          Do událostí přidáme
+          <br>
+          <strong>Systém – every tick</strong>
+          <br>
+          a akce
+          <br>
+          <strong>život – set text</strong>
+          <br>
+          <strong>mince – set text</strong>
+        </li>
+        <li>
+          Texty budou: <br>
+          <strong><span class="text">"Životy: "</span> <strong>&</strong> <span
+              class="promenna">alienBeige.život</span></strong>
+          <br>
+          <strong><span class="text">"Mince: "</span> <strong>&</strong> <span
+              class="promenna">alienBeige.mince</span></strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h2>Práce s proměnnými</h2>
+      <p>
+        Pokud jsme si již vytvořili proměnné teď s nimi začneme i pracovat.
+      </p>
+
+      <ul>
+        <li>
+          Odčítání životů bude docházet když se postava dotkne <strong>spikes</strong> takže přidáme akci
+          <br>
+          <strong>Postava – Subtract 1 from život</strong>
+        </li>
+        <li>
+          A jelikož nechceme aby se nám hry pokaždé restartovala teleportujeme naši postavu na spawn a to pomocí akce
+        </li>
+        <li>
+          Přičítání mincí bude docházet při dotyku postavy s mincí a tam přidáme akci
+          <br>
+          <strong>Postava –Add 1 to mince</strong>
+        </li>
+        <li>
+          Hra skončí pokud životy budou 0 takže přidáme událost níže s proměnou život a hodnota bude <strong>0</strong>
+          <br>
+          <strong>Postava – Compare instance variable </strong>
+        </li>
+        <li>
+          Tak samo pro mince jen s tím rozdílem že si spočítám mince ve hře a to pak vložím do hodnoty
+        </li>
+        <li>
+          Abychom docílili aby se hra ukončila přidáme k oboum akci
+          <br>
+          <strong>Systém – Got HlavniMenu</strong>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="odstavec">
+      <h3>Samostatná práce</h3>
+      <p>
+        Vašim úkolem bude vypracovat hru.
+      </p>
+      <ul>
+        <li>Animaci postavy</li>
+        <li>Začáteční plocha</li>
+        <li>Konečná plocha</li>
+        <li>Proměnná pro sběr mincí a počítání životů</li>
+      </ul>
+      <p>
+        Velikost a objekty jsou na vás. Objekty můžete použít buď ty
+        <strong><a href="/download/construct/objekty-construct.zip" download>společné</a></strong>
+        a nebo na webové stránce <strong><a href="https://www.kenney.nl/">Kenney</a></strong>.
+      </p>
+    </div>
 
 
   </main>
