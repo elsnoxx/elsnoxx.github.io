@@ -1,0 +1,21 @@
+.funkce{
+  color: red;
+}
+  
+
+.typ{
+  color: purple;
+}
+  
+.haskel{
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.bool, .otherwise, .log{
+  color: blue;
+}
+
+.nadpis{
+  font-weight: bold;
+}
