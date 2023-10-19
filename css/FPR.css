@@ -10,6 +10,8 @@
 .haskel{
   font-weight: bold;
   margin-bottom: 30px;
+  background-color: lightgray;
+  border: 1px;
 }
 
 .bool, .otherwise, .log{

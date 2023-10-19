@@ -92,6 +92,19 @@
         <li><a href="#cisl_prumer">Kolik čisel je nad průměrem</a></li>
         <li><a href="#nasobeni">Násobení rekurzí</a></li>
         <li><a href="#scitani">Sčítání rekurzí</a></li>
+      </ul><h5>Cvičení 2</h5>
+      <ul>
+        <li><a href="#delka">Délka listu</a></li>
+        <li><a href="#suma">Suma prvků v listu</a></li>
+        <li><a href="#first">První prvek z listu</a></li>
+        <li><a href="#least">Poslední prvek z listu</a></li>
+        <li><a href="#last">Posledni prvek z listu</a></li>
+        <li><a href="#is">Je prvek v listu</a></li>
+        <li><a href="#bez_posledniho">List bez posledniho posledniho prvku</a></li>
+        <li><a href="#combine">Spoji dva seznamy do jednoho</a></li>
+        <li><a href="#nejvetsi">Napis funkci ktera vybere element s nejvyssi hodnotou</a></li>
+        <li><a href="#dis_order">Napis funkci ktera prehaze prvky v seznamu</a></li>
+        <li><a href="#skalarem">Napiste funkcinasobeni skalarem</a></li>        
       </ul>
     </div>
 
@@ -509,7 +522,7 @@
         <div class="haskel">
           <span class="funkce">length'</span> :: [a] -> <span class="typ">Int</span>
           <br>
-          <span class="funkce">length'</span> [] = 0
+          <span class="funkce">length'</span> [ ] = 0
           <br>
           <span class="funkce">length'</span>(_:xs) = 1 + <span class="funkce">length'</span> xs
         </div>
@@ -520,14 +533,23 @@
         <div class="haskel">
           <span class="funkce">sumIt</span> :: [<span class="typ">Int</span>] -> <span class="typ">Int</span>
           <br>
-          <span class="funkce">sumIt</span> [] = 0
+          <span class="funkce">sumIt</span> [ ] = 0
           <br>
           <span class="funkce">sumIt</span>(x:xs) = x + <span class="funkce">sumIt</span> xs
         </div>
       </div>
 
-      <div class="odstavec" id="suma">
-        <h3>Suma prvků v listu</h3>
+      <div class="odstavec" id="first">
+        <h3>První prvek z listu</h3>
+        <div class="haskel">
+          <span class="funkce">getTail</span> :: [a] -> [a]
+          <br>
+          <span class="funkce">getTail</span>(_ : xs) = xs
+        </div>
+      </div>
+
+      <div class="odstavec" id="least">
+        <h3>Poslední prvek z listu</h3>
         <div class="haskel">
           <span class="funkce">getHead</span> :: [a] -> a
           <br>
@@ -535,6 +557,183 @@
         </div>
       </div>
 
+      <div class="odstavec" id="last">
+        <h3>Posledni prvek z listu</h3>
+        <div class="haskel">
+          <span class="funkce">getLast</span> :: [a] -> a
+          <br>
+          <span class="funkce">getLast</span> [x] = x
+          <br>
+          <span class="funkce">getLast</span> (_ : xs) = <span class="funkce">getLast</span> xs
+        </div>
+      </div>
+
+      <div class="odstavec" id="is">
+        <h3>Je prvek v listu</h3>
+        <div class="haskel">
+          <span class="funkce">isElement</span> :: Eq a => a -> [a] -> <span class="typ">Bool</span>
+          <br>
+          <span class="funkce">isElement</span> _ [ ] = <span class="bool">False</span>
+          <br>
+          <span class="funkce">isElement</span> a (x : xs) | a == x = <span class="bool">True</span>
+          <br>
+          &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="otherwise">otherwise</span> = <span class="funkce">isElement</span> a xs
+        </div>
+      </div>
+
+
+      <div class="odstavec" id="bez_posledniho">
+        <h3>List bez posledniho posledniho prvku</h3>
+        <div class="haskel">
+          <span class="funkce">getInit</span> :: [a] -> [a]
+          <br>
+          <span class="funkce">getInit</span> [x] = [ ]
+          <br>
+          <span class="funkce">getInit</span> (x : xs) = x : <span class="funkce">getInit</span> xs
+        </div>
+      </div>
+
+      <div class="odstavec" id="combine">
+        <h3>Spoji dva seznamy do jednoho</h3>
+        <div class="haskel">
+          <span class="funkce">combine</span> :: [a] -> [a]
+          <br>
+          <span class="funkce">combine</span> :: [a] -> [a] -> [a]
+          <br>
+          <span class="funkce">combine</span> [ ] y = y
+          <br>
+          <span class="funkce">combine</span> (x : xs) y = x : <span class="funkce">combine</span> xs y
+        </div>
+      </div>
+
+      <div class="odstavec" id="nejvetsi">
+        <h3>Napis funkci ktera vybere element s nejvyssi hodnotou</h3>
+        <div class="haskel">
+           <span class="funkce">max''</span> :: [<span class="typ">Int</span>] -> <span class="typ">Int</span>
+           <br>
+           <span class="funkce">max'</span> (x : xs) = tmp x xs <span class="log">where</span>
+           <br>
+           &emsp; &emsp; &emsp; &emsp; tmp m [ ] = m
+           <br>
+           &emsp; &emsp; &emsp; &emsp; tmp m (x : xs) | m < x = tmp x xs
+           <br>
+           &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="log">otherwise</span> = tmp m xs
+           <br>
+           <br><br><br>
+
+           <span class="funkce">max''</span> :: [<span class="typ">Int</span>] -> <span class="typ">Int</span>
+           <br>
+           <span class="funkce">max''</span> [x] = x
+           <br>
+           <span class="funkce">max''</span> (x : y : rest) 
+           <br>
+           &emsp; &emsp; &emsp; &emsp; &emsp; | x < y = <span class="funkce">max''</span> (y : rest)
+           <br>
+           &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="log">otherwise</span> = <span class="funkce">max''</span> (x : rest)
+        </div>
+      </div>
+
+      <div class="odstavec" id="dis_order">
+        <h3>Napis funkci ktera prehaze prvky v seznamu</h3>
+        <div class="haskel">
+          <span class="funkce">reverse'</span> :: [a] -> [a]
+          <br>
+          <span class="funkce">reverse'</span> [ ] = [ ]
+          <br>
+          <span class="funkce">reverse'</span>(x : xs) = <span class="funkce">reverse'</span> xs ++ [x]
+        </div>
+
+        <div class="haskel">
+          <span class="funkce">reverse''</span> :: [a] -> [a]
+          <br>
+          <span class="funkce">reverse''</span> x = tmp x [ ] <span class="log">where</span>
+          <br>
+          &emsp; &emsp; &emsp; &emsp; &emsp; tmp [ ] ys = ys 
+          <br>
+          &emsp; &emsp; &emsp; &emsp; &emsp; tmp (x : xs) ys = tmp xs (x : ys)
+        </div>
+      </div>
+
+      <div class="odstavec" id="skalarem">
+        <h3>Napiste funkcinasobeni skalarem</h3>
+        <div class="haskel">
+           <span class="funkce">scalar</span> :: [<span class="typ">Int</span>] -> [<span class="typ">Int</span>] -> <span class="typ">Int</span>
+           <br>
+           <span class="funkce">scalar</span> [ ] [ ] = 0
+           <br>
+           <span class="funkce">scalar</span> (x : xs) (y : ys) = x * y + <span class="funkce">scalar</span> xs ys
+        </div>
+      </div>
+
+      <div class="odstavec" id="nuly">
+        <h3>Odstraní všechny výskyty nuly v seznamu</h3>
+        <div class="haskel">
+           <span class="funkce">nonZeros </span> :: [<span class="typ">Int</span>] -> [<span class="typ">Int</span>]
+           <br>
+           <span class="funkce">nonZeros</span> [ ] = [ ]
+           <br>
+           <span class="funkce">nonZeros</span> (x:xs)
+           <br>
+           &emsp; &emsp; &emsp; &emsp; &emsp; | x == 0    = <span class="funkce">nonZeros</span> xs
+           <br>
+           &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="otherwise">otherwise</span> = x : <span class="funkce">nonZeros</span> xs  
+        </div>
+      </div>
+
+      <div class="odstavec" id="left">
+        <h3>Rotaci seznamu doleva o jeden prvek.</h3>
+        <div class="haskel">
+          <span class="funkce">rotateLeft1</span> :: [a] -> [a]
+          <br>
+         <span class="funkce">rotateLeft1</span> [ ] = [ ] 
+         <br>
+         <span class="funkce">rotateLeft1</span> (x:xs) = xs ++ [x] 
+        </div>
+      </div>
+
+      <div class="odstavec" id="right">
+        <h3>Rotaci seznamu doprava o jeden prvek.</h3>
+        <div class="haskel">
+          <span class="funkce">rotateRight1</span> :: [a] -> [a]
+          <br>
+         <span class="funkce">rotateRight1</span> [ ] = [ ] 
+         <br>
+         <span class="funkce">rotateRight1</span> xs = last xs : init xs 
+        </div>
+      </div>
+
+      <div class="odstavec" id="right">
+        <h3>Rotaci seznamu doleva o jeden prvek.</h3>
+        <div class="haskel">
+          <span class="funkce">oddMembers</span> :: [<span class="typ">Int</span>] -> [<span class="typ">Int</span>]
+          <br>
+         <span class="funkce">oddMembers</span> [ ] = [ ] 
+         <br>
+         <span class="funkce">oddMembers</span> (x:xs)
+         <br>
+         &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="log">even</span> x = <span class="funkce">oddMembers</span> xs 
+         <br>
+         &emsp; &emsp; &emsp; &emsp; &emsp; | <span class="otherwise">otherwise</span> = x : <span class="funkce">oddMembers</span> xs 
+        </div>
+      </div>
+
+      <div class="odstavec" id="right">
+        <h3>Vytvořte funkci, která spočítá všechna lichá čísla v daném seznamu (definujte ji nerekurzivně pomocí dříve definovaných funkcí).</h3>
+        <div class="haskel">
+          <span class="funkce">countOddMembers</span> :: [<span class="typ">Int</span>] -> [<span class="typ">Int</span>]
+          <br>
+         <span class="funkce">countOddMembers</span> xs = <span class="funkce">length</span> (<span class="funkce">oddMembers</span> xs)
+        </div>
+      </div>
+
+      <div class="odstavec" id="right">
+        <h3>Vytvořte funkci, která spočítá všechna lichá čísla v daném seznamu (definujte ji nerekurzivně pomocí dříve definovaných funkcí).</h3>
+        <div class="haskel">
+          <span class="funkce">compareLists</span> :: <span class="typ">Eq</span> a => [a] -> [a] -> <span class="typ">Bool</span>
+          <br>
+         <span class="funkce">compareLists</span> xs ys = xs == ys
+        </div>
+      </div>
 
 
     </div>
