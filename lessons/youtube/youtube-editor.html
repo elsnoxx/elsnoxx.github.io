@@ -14,16 +14,16 @@
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -91,15 +91,130 @@
         Program Blender se používa k vytváření trojrozměné grafiky, zpracování videa, animace a speciálními efekty.
       </p>
       <p>
-        Můžete v něm vytvářet <strong>cool</strong> pohlednice pro kamarády, videa a mnoho deignových projektů. My se ale budeme věnovat hlavně střihu vedií.
+        Můžete v něm vytvářet <strong>cool</strong> pohlednice pro kamarády, videa a mnoho deignových projektů. My se
+        ale budeme věnovat hlavně střihu vedií.
       </p>
     </div>
 
     <div class="odstavec">
       <h2>Stažení programu</h2>
+      <p>
+        Program si stáhnete na oficiálních stránkách <a href="https://www.blender.org/">blender.org</a>.
+      </p>
+      <p>
+        <strong>OvŠem pro rychlejší a bez hledání můžete použít tento odkaz ke
+          <a href="https://www.blender.org/download/release/Blender3.6/blender-3.6.5-windows-x64.msi/" target="_blank"
+            rel="noopener noreferrer">stažení</a>.</strong>
+      </p>
     </div>
-    
 
+    <div class="odstavec">
+      <h3>Rozhraní Blender</h3>
+      <p>Pokud chcete pracovat s úpravou videa, přejděte na okno Video Editing.</p>
+      <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="Jak najít okno Video Editing"
+        style="width:100%; max-width:300px; height: auto" loading="lazy">
+    </div>
+
+    <div class="odstavec">
+      <h3>Rozhraní Viedo Editing</h3>
+      <p>Okno je rozděleno na několik oken.</p>
+      <div class="nastred">
+        <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png" alt="Rozložení okna Video Editing"
+          style="width:100%; max-width:300px; height: auto" loading="lazy">
+      </div>
+      <ol>
+        <li>
+          <strong>Video Sequence Editor</strong>
+          <p>
+            V tomto okně se provádí úprava videa. Sem můžeme přidat video soubory, hudbu, obrázky, efekty, udělat střih
+            videa atd.
+          </p>
+        </li>
+        <li>
+          <strong>Video Sequence Editor</strong>
+          <p>
+            Používá se pro zobrazení náhledu videa, zde probíhá ukázka videa a vidíte tady změny ve videu.
+          </p>
+        </li>
+        <li>
+          <strong>Timeline (Časová osa)</strong>
+          <p>
+            Zobrazuje se zde časový rozsah filmu, tlačítko přehrávání, protočení, pauzy a mnoho dalšího.
+          </p>
+        </li>
+        <li>
+          <strong>Graph Editor (Editor grafů)</strong>
+          <p>
+            V tomto okně je možné doladit různé přechody nebo efekty, které jsou animované.
+          </p>
+        </li>
+        <li>
+          <strong>Info (Informace)</strong>
+          <p>
+            V tomto okně se uskutečňuje otevírání, zavírání, ukládání, vizualizace a mnoho dalších funkcí.
+          </p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="odstavec">
+      <h2>Vytvoření videa</h2>
+      <h3>TOP užiteční roboti</h3>
+      <p>
+        Když chcete, aby audio a video byly časově rovnoměrně rozloženy v okně
+        <strong>&lt;&lt;Timeline&gt;&gt;</strong>,
+        změňte režim <strong>&lt;&lt;No Sync&gt;&gt;</strong> na <strong>&lt;&lt;AV-Sync&gt;&gt;</strong>.
+      </p>
+      <p>
+        Pokud je tento režim vypnutý, nebude video během přehrávání často synchronizované se zvukem.
+      </p>
+      <table class="nastred">
+        <tr>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png"
+              alt="Nastaveni bota pro synchronizaci audia a videa 1" style="width:100%; max-width:300px; height: auto"
+              loading="lazy">
+          </td>
+          <td>
+            <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png"
+              alt="Nastaveni bota pro synchronizaci audia a videa 2" style="width:100%; max-width:300px; height: auto"
+              loading="lazy">
+          </td>
+        </tr>
+      </table>
+      <div class="odstavec">
+        <p>
+          Změňte nastavení výstupu videa.
+          Za tímto účelem otevřete nabídku <strong>&lt;&lt;Properties&gt;&gt;</strong> a změňte některé parametr
+        </p>
+        <h5>Používáme následující parametry:</h5>
+        <ol>
+          <li>
+            <strong>File Format</strong> — FFmpeg video
+          </li>
+          <li>
+            <strong>Audio Codec:</strong> mp3 (pokud zapomenete vybrat audio kodek, bude vaše video bez zvuku));
+          </li>
+          <li>
+            <strong>Bitrate audio:</strong> 256 .
+          </li>
+        </ol>
+        <div class="center">
+          <img class="myImg" src="/img/tinkerCAD/lekce1/tinkercad-ukol1-1.png"
+            alt="Ukazka a nastavení používajících parametrů" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer">
     <div class="container">
