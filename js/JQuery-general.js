@@ -87,3 +87,12 @@ function passwd(){
   }
 }
 
+function reseni_passwd() {
+  var element = document.getElementsByClassName("reseni")[0];
+  var password = prompt('Zadej heslo k zobrazení řešení: ');
+  if (password.toLowerCase() === "ukazka") {
+    element.style.display = "block";
+  } else {
+    alert("Spatné heslo, zadej znovu");
+  }
+}

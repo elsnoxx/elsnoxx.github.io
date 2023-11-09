@@ -16,16 +16,16 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/construct.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -91,39 +91,128 @@
 
     <div class="odstavec">
       <h1>Tvorba pohyblivého nepřítele</h1>
-      <p>
-        V dnešní lekci využijeme vše co jsme do posud se naučili. Na příkladu pohyblivého nepřítele si ukážeme jak jinak využít proměnné.
-        Po dnešní lekci by jste neměli mít žádný problém s vývojem jaké koliv plošivoné 2D hry.
-      </p>
+      <table>
+        <tr>
+          <td>
+            <p>
+              V dnešní lekci využijeme vše co jsme do posud se naučili. Na příkladu pohyblivého nepřítele si ukážeme jak
+              jinak využít proměnné. Po dnešní lekci by jste neměli mít žádný problém s vývojem jaké koliv plošivoné 2D hry.
+            </p>
+          </td>
+          <td>
+            <img src="/img/construct/lekce5/vysledek.gif" alt="animace mince">
+          </td>
+        </tr>
+      </table>
+
     </div>
-    
+
     <div class="odstavec">
       <h2>Přihlášení do construct editoru</h2>
       <p>
-        Pro vytváření našich projeků budeme používat online nástroj <a href="https://editor.construct.net/" target="_blank" rel="noopener noreferrer">Construct
+        Pro vytváření našich projeků budeme používat online nástroj <a href="https://editor.construct.net/"
+          target="_blank" rel="noopener noreferrer">Construct
           editor</a>.
       </p>
       <p>
         Login do Construct 3 účtu:
-        <ul>
-          <li>Jméno: studen111</li>
-          <li>Heslo: Stepit2023!</li>
-        </ul>
+      <ul>
+        <li>Jméno: studen111</li>
+        <li>Heslo: Stepit2023!</li>
+      </ul>
       </p>
     </div>
 
     <div class="odstavec">
       <h2>Vytvoření plochy</h2>
       <p>
-        Vytvoříme si plochu podobnou jako je na obrazku. 
+        Vytvoříme si plochu podobnou jako je na obrazku.
       </p>
+      <img class="myImg" src="/img/construct/lekce5/pohyblivy-nepritel.png" alt="Plocha pohiblivého nepřítele"
+        style="width:100%; max-width:300px; height: auto" loading="lazy">
+
+      <h5>Pavouk</h5>
+      <ul>
+        <li><strong>Proměnná: </strong> s názvem <strong>Směr</strong> s typem String a nastavena a "r"</li>
+        <li><strong>Chování: </strong> plošinovka, zde ve vlastnostech vypněte možnost <strong>Výchozí ovládání</strong>
+        </li>
+      </ul>
+      <h5>Box</h5>
+      <ul>
+        <li><strong>Chování: </strong> pevné těleso</li>
+      </ul>
+      <h5>Hnědá a Červená houba</h5>
+      <ul>
+        <li>Ve <strong>vlastnostech</strong> najděte možnosti <strong>Viditelný na začátku:</strong> a odšktněte ho</li>
+      </ul>
     </div>
-    
+
+    <div class="odstavec">
+      <h2>Vytvoření logiky pavouka</h2>
+      <p>
+        Tento proces si rozdělíme na dva problémy. Jeden je změna proměnné a druhá je samotný pohyb pavouka.
+      </p>
+      <h4>Nastavení proměnných</h4>
+      <p>
+        U pavouka jsme si již vytvořili proměnnou <strong>Směr</strong>.
+        Tuhle proměnnou budeme měnit v závislosti na tom jakého objektu se pavouk dotkne.
+      </p>
+      <div class="odstavec">
+        <h6>Hnědá houba</h6>
+        <p>
+          Jelikož hnědá houba se nachází na <strong>levé straně</strong>.
+          Je potřeba při dotyku pavouka s ní pavouka otočit a změnin mu v proměnné <strong>Směr</strong> z písmene
+          <strong>r</strong> na <strong>L</strong>.
+        </p>
+        <ul>
+          <strong>Logika</strong>
+          <li>Pavouk při kolizi s hnědou houbou nastaví proměnnou <strong>Směr</strong> na <strong>r</strong>.</li>
+        </ul>
+        <br>
+        <h6>Červená houba</h6>
+        <p>
+          Jelikož červená houba se nachází na <strong>pravé straně</strong>.
+          Je potřeba při dotyku pavouka pavouka otočit a změnin mu v proměnné <strong>Směr</strong> z písmene
+          <strong>L</strong> na <strong>r</strong>.
+        </p>
+        <ul>
+          <strong>Logika</strong>
+          <li>Pavouk při kolizi s červenou houbou nastaví proměnnou <strong>Směr</strong> na <strong>L</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="odstavec">
+        <h4>Pohyb pavouka</h4>
+        <p>
+          Pokud proměnná <strong>Směr</strong> bude nastavena na <strong>"L"</strong> pak:
+        <ul>
+          <li>Pavouk se nebude zrcadlit</li>
+          <li>Pavoukovi se bude simulovat zmáčknutí <strong>Doleva</strong></li>
+        </ul>
+        </p>
+        <p>
+          Pokud proměnná <strong>Směr</strong> bude nastavena na <strong>"r"</strong> pak:
+        <ul>
+          <li>Pavouk se bude zrcadlit</li>
+          <li>Pavoukovi se bude simulovat zmáčknutí <strong>Doprava</strong></li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="odstavec">
+      <h5>Ukázka řešení <button onClick="reseni_passwd()"> řešení</button></h5>
+      <div class="reseni">
+        <img class="myImg" src="/img/construct/lekce5/pohyblivy-nepritel-2.png" alt="Plocha pohiblivého nepřítele"
+          style="width:100%; max-width:3000px; height: auto" loading="lazy">
+      </div>
+    </div>
 
     <div class="odstavec">
       <h3>Samostatná práce</h3>
       <p>
-        Jelikož máme vše z vývoje plošinové hry hotové vrhneme, uděláte si hru kde si tohle vše zopakujeme. 
+        Jelikož máme vše z vývoje plošinové hry hotové vrhneme, uděláte si hru kde si tohle vše zopakujeme.
         Vašim úkolem bude vypracovat hru, která bude splňovat níže nároky.
       </p>
       <p>
@@ -142,10 +231,16 @@
       </ul>
       <h5>Bonus</h5>
       <p>
-        Jako bonus bude zekomponování pohyblivého nepřítele do hry. Ať už si ho <strong>naprogramujete</strong> sami nebo použijete funkci <strong>sinus</strong>.
+        Jako bonus bude zekomponování pohyblivého nepřítele do hry. Ať už si ho <strong>naprogramujete</strong> sami
+        nebo použijete funkci <strong>sinus</strong>.
       </p>
     </div>
-
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" loading="lazy">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer">
     <div class="container">
