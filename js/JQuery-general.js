@@ -87,6 +87,15 @@ function passwd(){
   }
 }
 
+function download(fileUrl){
+  var password = prompt('Enter the password to download the file:');
+  if(password.toLowerCase() == "teacher"){
+    window.open(fileUrl)    
+  }else{
+    alert("incorrect password!! please try again");
+  }
+}
+
 function reseni_passwd() {
   var element = document.getElementsByClassName("reseni")[0];
   var password = prompt('Zadej heslo k zobrazení řešení: ');

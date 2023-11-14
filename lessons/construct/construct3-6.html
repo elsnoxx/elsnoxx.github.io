@@ -16,16 +16,16 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/construct.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -88,8 +88,263 @@ crossorigin="anonymous"></script>
         </tr>
       </table>
     </div>
-    
 
+    <div class="odstavec">
+      <h1>Top down hra</h1>
+      <table>
+        <tr>
+          <td>
+            <p>
+              V dnešní lekci si ukážeme další druh hry, která jse tvořít pomocí Construct 3.
+              Nový projekt si založte s nastavením ukázaním vedle.
+            </p>
+          </td>
+          <td>
+            <img class="myImg" src="/img/construct/lekce6/nastaveni-hry.png" alt="Nastavení počáteční plochy"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Startovací plocha</h2>
+      <p>
+        Tohle bude klasické menu, kde bude tlačítko na zapnutí hry a také na ukončení hry.
+        Pozadí zkuste udělat nějak zajímavě, nic ale nebude vadit kdyz zustane bíle.
+        Velikost tohhoto pole bude 1286x720.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>Plocha Levelu</h2>
+      <p>
+        Níže jsou popsané potřebné objekty a úpravy potřebné pro tuto plochu.
+      </p>
+      <ul>
+        <li>Velikost: <strong>3000x3000</strong></li>
+        <li>Objekt: <strong>Myš</strong></li>
+        <li>Najít si vhodne pozadí, to by mělo být rozměrově čtverec.</li>
+      </ul>
+      <p>
+        Místo roztahovaní pozadí zkuste se podívat na <strong>objekt</strong> dlaždicové pole.
+        Tenhle objek vám váše pozadí dokáže nakopírovat vedle se tak, aby vypadala jako jedno a neničila se kvalita
+        obrázku.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <h2>Konečná plocha</h2>
+      <p>
+        Zde bude kromě vypnutí hry také možnost restartování hry.
+        <strong>Zde se hráč dostante pokud ztratí veškeré životy.</strong>
+        Velikost pole bude <strong>1286x720</strong>.
+      </p>
+    </div>
+
+    <div class="odstavec">
+      <div class="odstavec">
+        <h2>Postavy</h2>
+        <table>
+          <tr>
+            <td>
+              <h5>Vesmírná loď - hráč</h5>
+              <ul>
+                <li>Název: <strong>hráč</strong></li>
+                <li>Chování: <strong>[8 Direction], centrovat</strong></li>
+                <li>Instační proměnná: <strong>HP</strong> a její počáteční hodnota bude 100</li>
+              </ul>
+            </td>
+            <td>
+              <img class="myImg" src="/img/construct/lekce6/hrac.png"
+                alt="Obrazek vesmirné lodi, za kterou bude hráč hrát."
+                style="width:100%; max-width:300px; height: auto; padding-left: 100px;" loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="odstavec">
+        <table>
+          <tr>
+            <td>
+              <h5>Vesmírná loď - nepřítel</h5>
+              <ul>
+                <li>Název: <strong>nepřítel</strong></li>
+                <li>Chování: <strong>smyčka a náboj</strong></li>
+                <li>Instační proměnná: <strong>HP</strong> a její počáteční hodnota bude 100</li>
+              </ul>
+            </td>
+            <td>
+              <img class="myImg" src="/img/construct/lekce6/nepritel.png"
+                alt="Obrazek vesmirné lodi, za kterou bude hráč hrát."
+                style="width:100%; max-width:300px; height: auto; padding-left: 100px;" loading="lazy">
+            </td>
+          </tr>
+        </table>
+        <p>
+          Pokud se nepřítel bude pohybovat moc pomalu upravte nastavení codvání <strong>Náboj</strong>.
+          Tím že změníte <strong>rychlost</strong>.
+        </p>
+      </div>
+
+      <div class="odstavec">
+        <table>
+          <tr>
+            <td>
+              <h5>Vesmírná loď - nepřátelská základna</h5>
+              <ul>
+                <li>Název: <strong>základna</strong></li>
+                <li>Chování: <strong>smyčka a náboj</strong></li>
+                <li>Instační proměnná: <strong>HP</strong> a její počáteční hodnota bude 100</li>
+              </ul>
+            </td>
+            <td>
+              <img class="myImg" src="/img/construct/lekce6/zakladna.png"
+                alt="Obrazek vesmirné lodi, za kterou bude hráč hrát."
+                style="width:100%; max-width:300px; height: auto; padding-left: 100px;" loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <h5>Náboje</h5>
+            <p>
+              Náboje umístíme mimo hrací plochu. A mymo hrací plochu budou dva druhy střel jeden pro hráče druhý
+            </p>
+            <ul>
+              <li>Název: <strong>střela hráč</strong> a <strong>střela nepřítel</strong></li>
+              <li>Chování: <strong>náboj a ZrušMimoPlochu</strong></li>
+            </ul>
+          </td>
+          <td>
+            <img class="myImg" src="/img/construct/lekce6/střela hráč.png"
+              alt="Obrazek náboje, který bude používát hráč."
+              style="width:100%; max-width:300px; height: auto; padding-left: 100px;" loading="lazy">
+            <img class="myImg" src="/img/construct/lekce6/střela nepřítel.png"
+              alt="Obrazek náboje, který bude používát nepřítel."
+              style="width:100%; max-width:300px; height: auto; padding-left: 100px;" loading="lazy">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="odstavec">
+      <h2>Logika - události a akce</h2>
+      <p>
+        Nyní si ukážeme, jak naprogramovat střelbu pomocí stisku tlačítka na myši.
+      </p>
+
+      <br><br>
+
+      <h5>Střelba hráč</h5>
+      <p>
+        Událost: <strong>myš -> při stisku levého tlačítka</strong><br>
+        Akce: <strong>hráč -> vytvoří objekt střela hráč</strong>
+      </p>
+
+      <br><br>
+
+      <h5>Střelba nepřítel</h5>
+      <p>
+        Událost: <strong>system -> každých 1 sekund</strong><br>
+        Akce: <strong>nepřítel -> vytvoří objekt střela nepřítel</strong>
+      </p>
+
+      <br><br>
+
+      <h5>Nový nepřítel a jeho otočení</h5>
+      <p>
+        Událost: <strong>základna -> každých 5 sekund</strong><br>
+        Akce: <strong>základna -> vytvoří objekt nepřítel</strong><br>
+        &emsp; &ensp; &ensp; <strong>nepřítel -> otočí o random(0,360)</strong>
+      </p>
+
+      <br><br>
+
+      <h5>Život hráče</h5>
+      <p>
+        Událost: <strong>system -> každých 1 sekund</strong><br>
+        Akce: <strong>nepřítel -> vytvoří objekt střela nepřítel</strong>
+      </p>
+      
+      <br><br>
+
+      <h5>Život hráče</h5>
+      <p>
+        Nejprve si vytvořte objekt Text, kde budete zobrazovat aktuální počet životů.
+      </p>
+      <ol>
+        <li>Na naši herní plochu přidáme objekt Text, ten bude v levém horním rohu naší plochy</li>
+        <li>Název: <strong>HP</strong></li>
+        <li>Chování: <strong>Ukotvení</strong></li>
+        <li>Každý tik bude nastaven na <strong>“HP: ” & hrač.HP</strong></li>
+      </ol>
+      <br>
+      <h5>Logika</h5>
+      <ul>
+        <li>Při dotyku se nepřátelskou střelou se hráči ubere 10 HP</li>
+        <li>Při dotyku s nepřátelskou lodí se hráči ubere 25 HP</li>
+        <li>Při dotyku s mateřskou lodí se hráči ubere 50 HP</li>
+        <li>Pokud hráč budem mít 0 HP nebo menší hra se ukončí</li>
+      </ul>
+      
+      <br><br>
+
+      <h5>Život nepřátelské lodi</h5>
+      <ul>
+        <li>Při dotyku se hráčskou střelou se mateřské lodi ubere 10 HP</li>
+        <li>Při dotyku s hráčskou lodí se mateřské lodi ubere 25 HP</li>
+        <li>Pokud nepřítel bude mít 0 HP nebo menší loď se zničí</li>
+      </ul>
+
+      <br><br>
+
+      <h5>Život mateřské lodi</h5>
+      <ul>
+        <li>Při dotyku se hráčskou střelou se mateřské lodi ubere 10 HP</li>
+        <li>Při dotyku s hráčskou lodí se mateřské lodi ubere 25 HP</li>
+        <li>Pokud mateřská loď bude mít 0 HP nebo menší loď se zničí</li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h5>Ukázka řešení <button onClick='download("/download/construct/topdown.c3p")'> stažení</button></h5>
+      <a href="/img/ukazka-her/construct/topdown/index.html">top down hra</a>
+    </div>
+
+    <div class="odstavec">
+      <h3>Samostatná práce</h3>
+      <p>
+        Vašim úkolem rozšířit hru níže navržených rozšíření.
+      </p>
+      <ul>
+        <li>Sběr lákárníčky či další předměty které budeme moct sbirat</li>
+        <li>Pohyb Mateřské lodi</li>
+        <li>Počítadlo skóre</li>
+        <li>Generování matřeské lodi</li>
+        <li>Při zničení nepřítele vytvořit předmět</li>
+        <li>Přidání možnosti jak ukončit hru</li>
+      </ul>
+      <p>
+        Velikost a objekty jsou na vás. Objekty můžete použít buď ty
+        <strong><a href="/download/construct/objekty-construct.zip" download>společné</a></strong>
+        a nebo na webové stránce <strong><a href="https://www.kenney.nl/">Kenney</a></strong>.
+      </p>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" loading="lazy">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer">
     <div class="container">
