@@ -89,7 +89,7 @@ function passwd(){
 
 function hodnoceni(fileUrl){
   var password = prompt('Enter the password to download the file:');
-  if(password.toLowerCase() == "test"){
+  if(password.toLowerCase() == "hodnoceni!"){
     window.open(fileUrl)    
   }else{
     alert("incorrect password!! please try again");
