@@ -87,6 +87,15 @@ function passwd(){
   }
 }
 
+function hodnoceni(fileUrl){
+  var password = prompt('Enter the password to download the file:');
+  if(password.toLowerCase() == "test"){
+    window.open(fileUrl)    
+  }else{
+    alert("incorrect password!! please try again");
+  }
+}
+
 function download(fileUrl){
   var password = prompt('Enter the password to download the file:');
   if(password.toLowerCase() == "teacher"){
