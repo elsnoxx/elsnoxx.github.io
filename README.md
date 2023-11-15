@@ -37,7 +37,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] TinkerCad
     - [ ] projekt
     - [ ] uprava lekcí
-    - [ ] přidání času a tlačítka na přeskakování mezi lekci
+    - [x] přidání času a tlačítka na přeskakování mezi lekci
     - [ ] vytvoření nové třídy v tinkecadu, pro novou skupinu, a následne vytvoření nějakého přehledu kde bude název skupiny a odkaz na přihlášení
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
