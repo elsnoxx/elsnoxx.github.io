@@ -23,30 +23,35 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 ## Technologie
 - HTML & CSS
 - Javascript
-- Google Analytics - ted probiha zkouska nasazeni, nasazeno 16/10/2023
+- Google Analytics
 
 
 ## Co chybí ?
+- [x] Google analytic - funkční
+- [x] Construct
+    - [x] lekce 3
+    - [x] lekce 4
+    - [x] lekce 5
+    - [x] Lekce 6
+    - [x] Lekce 7
+    - [x] odevzdani du
+    - [x] popsani prostredi constructu
+    - [x] ukaždé prace přidat i ukázkovou práci
+    - [x] přidání obrázky animace do lekce 2
+- [x] Audacity
 - [ ] TinkerCad
     - [ ] projekt
-- [x] Audacity
-- [ ] Construct
-    - [ ] lekce 3
-    - [ ] lekce 4
-    - [ ] lekce 5
-    - [ ] Lekce 6
-    - [ ] Lekce 7
-    - [ ] odevzdani du
-    - [ ] popsani prostredi constructu
-    - [ ] ukaždé prace přidat i ukázkovou práci
-    - [ ] přidání obrázky animace do lekce 2
 - [ ] HTML and CSS
 - [ ] Wordpress
 - [ ] Javascript
 - [ ] Roblox
 - [ ] Youtube
+    - [ ] lekce 1
+    - [ ] lekce 2
+    - [ ] lekce 3
+    - [ ] Lekce 4
+    - [ ] Lekce 5
 - [ ] Python Beginer
 - [ ] Wix
-- [ ] Google adsence - zažádání o kontrolu 16/10/2023
-- [x] Google analytic - funkční
+- [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 15/11/2023
 - [ ] Optimalizace pomocí google ligthouse
