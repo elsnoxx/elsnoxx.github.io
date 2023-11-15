@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Constuct 3 lekce-4 promenne">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
   <title>Construct 3</title>
 
@@ -97,47 +98,59 @@
     </div>
 
     <div class="odstavec">
-      <h2>Vytvoření proměnných</h2>
-      <ul>
-        <li>
-          Najdeme si naši postavu tu si naklikneme a najdeme okno <strong>Properties</strong> a záložku <strong>instance
-            variable</strong>
-        </li>
-        <li>
-          Klikneme na tlačítko <strong>instance variable</strong> a přidáme 2 proměnné jednu životy s číslem 5 a mince s
-          číslem 0
-        </li>
-        <li>
-          Do layoutu <strong>Level1</strong> vložíme 2x objekt text a do nich napíšeme
-          <br>
-          <strong>Životy:</strong>
-          <br>
-          <strong>Mince:</strong>
-        </li>
-        <li>
-          K námi přidaným textům přidáme chovaní Ukotvení a pojmenujeme je <strong>život</strong>,
-          <strong>mince</strong>
-        </li>
-        <li>
-          Do událostí přidáme
-          <br>
-          <strong>Systém – every tick</strong>
-          <br>
-          a akce
-          <br>
-          <strong>život – set text</strong>
-          <br>
-          <strong>mince – set text</strong>
-        </li>
-        <li>
-          Texty budou: <br>
-          <strong><span class="text">"Životy: "</span> <strong>&</strong> <span
-              class="promenna">alienBeige.život</span></strong>
-          <br>
-          <strong><span class="text">"Mince: "</span> <strong>&</strong> <span
-              class="promenna">alienBeige.mince</span></strong>
-        </li>
-      </ul>
+      <table>
+        <tr>
+          <td>
+            <h2>Vytvoření proměnných</h2>
+            <ul>
+              <li>
+                Najdeme si naši postavu tu si naklikneme a najdeme okno <strong>Properties</strong> a záložku
+                <strong>instanční proměnné</strong>
+              </li>
+              <li>
+                Klikneme na tlačítko <strong>instanční proměnné</strong> a přidáme 2 proměnné jednu životy s číslem 5 a
+                mince s
+                číslem 0
+              </li>
+              <li>
+                Do layoutu <strong>Level1</strong> vložíme 2x objekt text a do nich napíšeme
+                <br>
+                <strong>Životy:</strong>
+                <br>
+                <strong>Mince:</strong>
+              </li>
+              <li>
+                K námi přidaným textům přidáme chovaní Ukotvení a pojmenujeme je <strong>život</strong>,
+                <strong>mince</strong>
+              </li>
+              <li>
+                Do událostí přidáme
+                <br>
+                <strong>Systém – každý tik</strong>
+                <br>
+                a akce
+                <br>
+                <strong>život – nastavit text</strong>
+                <br>
+                <strong>mince – nastavit text</strong>
+              </li>
+              <li>
+                Texty budou: <br>
+                <strong><span class="text">"Životy: "</span> <strong>&</strong> <span
+                    class="promenna">alienBeige.život</span></strong>
+                <br>
+                <strong><span class="text">"Mince: "</span> <strong>&</strong> <span
+                    class="promenna">alienBeige.mince</span></strong>
+              </li>
+            </ul>
+          </td>
+          <td style="padding-left: 50px;">
+            <img class="myImg" src="/img/construct/lekce4/promenna.png" alt="vlastnosi uk8zka kde si vytvorit instancni promenne"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+
     </div>
 
     <div class="odstavec">
@@ -150,7 +163,7 @@
         <li>
           Odčítání životů bude docházet když se postava dotkne <strong>spikes</strong> takže přidáme akci
           <br>
-          <strong>Postava – Subtract 1 from život</strong>
+          <strong>Postava – Odečíst od život 1</strong>
         </li>
         <li>
           A jelikož nechceme aby se nám hry pokaždé restartovala teleportujeme naši postavu na spawn a to pomocí akce
@@ -158,12 +171,12 @@
         <li>
           Přičítání mincí bude docházet při dotyku postavy s mincí a tam přidáme akci
           <br>
-          <strong>Postava –Add 1 to mince</strong>
+          <strong>Postava - Přičíst k mince 1</strong>
         </li>
         <li>
           Hra skončí pokud životy budou 0 takže přidáme událost níže s proměnou život a hodnota bude <strong>0</strong>
           <br>
-          <strong>Postava – Compare instance variable </strong>
+          <strong>Postava – Porovnat instanční proměnou </strong>
         </li>
         <li>
           Tak samo pro mince jen s tím rozdílem že si spočítám mince ve hře a to pak vložím do hodnoty
@@ -171,7 +184,7 @@
         <li>
           Abychom docílili aby se hra ukončila přidáme k oboum akci
           <br>
-          <strong>Systém – Got HlavniMenu</strong>
+          <strong>Systém – Přejít na plochu HlavniMenu</strong>
         </li>
       </ul>
     </div>
@@ -180,7 +193,8 @@
     <div class="odstavec">
       <h3>Samostatná práce</h3>
       <p>
-        Vašim úkolem bude vypracovat hru.
+        Vašim úkolem bude vypracovat hru. Pokud budeš potřebovat inspiraci.
+        Můžeš použít tuto <a href="/lessons/construct/ukazky/lekce4/index.html">ukázkovou hru</a>.
       </p>
       <ul>
         <li>Animaci postavy</li>
@@ -195,7 +209,16 @@
       </p>
     </div>
 
-
+    <div class="odstavec">
+      <h5>Ukázka řešení <button onClick='download("/download/construct/lekce/lekce4.c3p")'> stažení</button></h5>
+    </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </main>
   <footer class="footer">
     <div class="container">
