@@ -4,29 +4,14 @@ Tyto stránky byly vytvořené, pro vyučování v Step It academy. Je ze spoust
 Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vytvoří **Závěrečnou prácí** z daného témata. A poté každý student odprezentuje před svími rodiči.
 
 
-
-
-## Lekce
-
-### Construct 3
-- prostredi construct web editoru, popsat jak na nej
-- stranka na to jak odevzdat du
-- doplnit lekce 4,5,6,7
-
-### TinkerCad
-- V této lekci si představíme 3D grafiku. Zde za pomoci webové stránky [TinkerCad](https://www.tinkercad.com/).
-
-### Audacity
-- V tato lekce je věnována střihu hudby jeho úpravy a také nahrávání zvuku. Pracujeme v prostředí  [Audacity](https://www.audacityteam.org/).
-
-
 ## Technologie
 - HTML & CSS
-- Javascript
+- Javascript, JQuery
 - Google Analytics
+- Construct-3
 
 
-## Co chybí ?
+## To Do list
 - [x] Google analytic - funkční
 - [x] Construct
     - [x] lekce 3
@@ -38,19 +23,28 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] popsani prostredi constructu
     - [x] ukaždé prace přidat i ukázkovou práci
     - [x] přidání obrázky animace do lekce 2
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - [x] Audacity
-- [ ] TinkerCad
-    - [ ] projekt
-- [ ] HTML and CSS
-- [ ] Wordpress
-- [ ] Javascript
-- [ ] Roblox
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - [ ] Youtube
     - [ ] lekce 1
     - [ ] lekce 2
     - [ ] lekce 3
     - [ ] Lekce 4
     - [ ] Lekce 5
+    - [ ] vytovření úkolů
+    - [ ] Optimalizace všech stránek pomocí google ligthouse
+- [ ] TinkerCad
+    - [ ] projekt
+    - [ ] uprava lekcí
+    - [ ] přidání času a tlačítka na přeskakování mezi lekci
+    - [ ] vytvoření nové třídy v tinkecadu, pro novou skupinu, a následne vytvoření nějakého přehledu kde bude název skupiny a odkaz na přihlášení
+    - [ ] Vytvoření zadání pro projekt, pdf a word
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+- [ ] HTML and CSS
+- [ ] Wordpress
+- [ ] Javascript
+- [ ] Roblox
 - [ ] Python Beginer
 - [ ] Wix
 - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 15/11/2023
