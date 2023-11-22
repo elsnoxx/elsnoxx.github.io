@@ -23,6 +23,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] popsani prostredi constructu
     - [x] ukaždé prace přidat i ukázkovou práci
     - [x] přidání obrázky animace do lekce 2
+    - [ ] vytvoření stránky pro nejlepší projekty
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - [x] Audacity
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
@@ -32,6 +33,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] lekce 3
     - [ ] Lekce 4
     - [ ] Lekce 5
+    - [ ] Projekt
+    - [ ] Upravit ukoly přidat informace
+    - [ ] Upravit poradí samostatných prací
     - [ ] vytovření úkolů
     - [ ] Optimalizace všech stránek pomocí google ligthouse
 - [ ] TinkerCad
