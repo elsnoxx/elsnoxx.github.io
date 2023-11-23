@@ -14,16 +14,16 @@
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -69,6 +69,21 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/youtube/youtube4.html';">Předchozí
+              lekce</button>
+            <button id="right" onclick="location.href = '/lessons/youtube/projekt.html';">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
     <div class="odstavec">
       <h1 class="mt-5" style="margin-bottom: 64px; ">Youtube kanál</h1>
       <p style="margin-bottom: 64px; ">
@@ -78,32 +93,61 @@
 
     <div class="odstavec">
       <h2>Co by váš kanál měl obsahovat</h2>
-      <ul>
-        <li>Baner, profilová fotka a informace o kanále</li>
-        <li><a href="/lessons/youtube/youtube1.html#SP">Samostatnou práci č.1</a></li>
-        <li><a href="/lessons/youtube/youtube2.html#SP">Samostatnou práci č.2</a></li>
-        <li><a href="/lessons/youtube/youtube3.html#SP">Samostatnou práci č.3</a></li>
-        <li><a href="/lessons/youtube/youtube4.html#SP">Samostatnou práci č.4</a></li>
-        <li><a href="/lessons/youtube/youtube5.html#SP">Samostatnou práci č.5</a></li>
-      </ul>
+      <p>
+        Kromě nastaveného youtubu kanálu musíte mít splněné i níže uvedené úkoly, které se budou hodnotit.
+      </p>
+      <table>
+        <tr>
+          <td>
+            <ul>
+              <li><strong><a href="/lessons/youtube/youtube1.html#SP">Samostatnou práci č.1</a></strong></li>
+              <li><strong><a href="/lessons/youtube/youtube2.html#SP">Samostatnou práci č.2</a></strong></li>
+              <li><strong><a href="/lessons/youtube/youtube3.html#SP">Samostatnou práci č.3</a></strong></li>
+              <li><strong><a href="/lessons/youtube/youtube4.html#SP">Samostatnou práci č.4</a></strong></li>
+              <li><strong><a href="/lessons/youtube/youtube5.html#SP">Samostatnou práci č.5</a></strong></li>
+            </ul>
+          </td>
+          <td style="padding-left: 50px;">
+            <li><strong>Úkol č.1</strong></li>
+            <li><strong>Úkol č.2</strong></li>
+            <li><strong>Úkol č.3</strong></li>
+            <li><strong>Úkol č.4</strong></li>
+            <li><strong>Úkol č.5</strong></li>
+          </td>
+        </tr>
+      </table>
     </div>
+
 
 
 
     <div class="odstavec">
-      <h6>Hodnocení</h6>
-      <ul>
-        <li>Kanál jako celek</li>
-        <li>Grafika kanálu</li>
-        <li>Popis kanálu</li>
-        <li>Videa a její náhledové obrázky</li>
-      </ul>
+      <table>
+        <tr>
+          <td>
+            <h5>Zadání úkolu</h5>
+          </td>
+          <td style="padding-left: 50px;">
+            <button onClick='download("/download/youtube/projekt.pdf")' style="font-weight: bold;">
+              stažení</button>
+          </td>
+        </tr>
+      </table>
+      <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
     </div>
 
-
-
-    
-
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" onclick="location.href = '/lessons/youtube/youtube4.html';">Předchozí
+              lekce</button>
+            <button id="right" onclick="location.href = '/lessons/youtube/projekt.html';">Následují
+              lekce</button>
+          </td>
+        </tr>
+      </table>
+    </div>
 
   </main>
   <footer class="footer">
