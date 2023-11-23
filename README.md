@@ -36,7 +36,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Projekt
     - [ ] Upravit ukoly přidat informace
     - [ ] Upravit poradí samostatných prací
-    - [ ] vytovření úkolů
+    - [x] vytovření úkolů
     - [ ] Optimalizace všech stránek pomocí google ligthouse
 - [ ] TinkerCad
     - [ ] projekt
