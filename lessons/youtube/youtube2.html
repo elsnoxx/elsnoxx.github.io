@@ -278,13 +278,49 @@
       </p>
     </div>
 
-    <div class="odstavec" id="stazeni-blenderu">
+    <div class="odstavec">
       <h2>Střih a renderování videa</h2>
       <p>
         Střih prováníme v <a href="https://www.blender.org/">Blendru</a> pomocí klávesy <strong>K</strong> a nebo po
         vybrání stopy a přes <strong>prvá talčítko</strong> a pak vyberete <strong>split</strong>. Pokud máte video se
         zvukem v moment když stříháte video, střihněte i zvukovou stopu. Ulehčívám to spoustu práce.
       </p>
+      <h5>Nastavení renderovaní</h5>
+      <table>
+        <tr>
+          <td>
+            <p>
+              Pokud budete již renderovat video. Musíš nastavit ještě tyyo věci.
+            </p>
+            <ul>
+              <li>
+                Záložka <strong>Format</strong> najdete bod <strong>Frame Rate</strong> ten nastavte na vami zvolenou
+                frekvenci. Nejlépe však 60 FPS.
+              </li>
+              <li>
+                Záložka <strong>Output</strong> z vrchu vyberte složku kam se vám má výsledek uložit.
+              </li>
+              <li>
+                Záložka <strong>Output</strong> najdete bod <strong>File format</strong> ten nastavte na <strong>FFmpeg
+                  Video</strong>
+              </li>
+              <li>
+                Záložka <strong>Encoding</strong> najdete bod <strong>Container</strong> ten nastavte na
+                <strong>MPEG-4</strong>
+              </li>
+              <li>
+                Záložka <strong>Audio</strong> najdete bod <strong>Audio codes</strong> ten nastavte na
+                <strong>MP3</strong>, pokud ovšem budete chtit mít vase video beze zvuku nastavte to na <strong>No
+                  audio</strong>.
+              </li>
+            </ul>
+          </td>
+          <td>
+            <img class="myImg" src="/img/youtube/lekce2/render.png" alt="Prostředí Xbox Game Bar"
+              style="padding-left: 30px; width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="odstavec" id="SP">
@@ -321,6 +357,13 @@
         </tr>
       </table>
       <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
   </main>
