@@ -45,6 +45,18 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] vytvoření nové třídy v tinkecadu, pro novou skupinu, a následne vytvoření nějakého přehledu kde bude název skupiny a odkaz na přihlášení
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+- [ ] Arf of presentation
+    - [ ] Lekce 1 - obsah
+    - [ ] Lekce 1 - samostatna prace
+    - [ ] Lekce 2 - obsah
+    - [ ] Lekce 2 - samostatna prace
+    - [ ] Lekce 3 - obsah
+    - [ ] Lekce 3 - samostatna prace
+    - [ ] Lekce 4 - obsah
+    - [ ] Lekce 4 - samostatna prace
+    - [ ] Projekt
+    - [ ] Hodnoceni projektu
+    - [ ] Ukazkove prace
 - [ ] HTML and CSS
 - [ ] Wordpress
 - [ ] Javascript
