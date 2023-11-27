@@ -47,6 +47,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - [ ] Arf of presentation
     - [ ] Lekce 1 - obsah
+    - [ ] Lekce 1 - kontrast barvy textu na strance
     - [ ] Lekce 1 - samostatna prace
     - [ ] Lekce 2 - obsah
     - [ ] Lekce 2 - samostatna prace

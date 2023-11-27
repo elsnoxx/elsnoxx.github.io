@@ -12,19 +12,21 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/prezentace.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/prezentace/prezentace.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -87,9 +89,141 @@
     </div>
     <div class="odstavec">
       <h1>Prezentace lekce 1</h1>
+      <p>
+        V této lekci se seznámime s prostředím <a href="https://www.google.com/slides/about/">Google Slides</a>.
+        Ukážeme si základní úpravy v tomto
+        prostředí a zkusíme si vytvořit grafický návrh prezentace.
+      </p>
     </div>
-    
-    
+
+    <div class="odstavec">
+      <h2 class="otazka" id="druhprezentace">Jaké mohou být prezentace?</h2>
+      <ul class="odpoved-druhprezentace">
+        <li>
+          <h5>Statická stránka</h5>
+          <p>
+            jednoduše pomocí textu a obrázků
+          </p>
+        </li>
+        <li>
+          <h5>Animované stránky</h5>
+          <p>
+            prezentace, ve kterých můžeme použít animace
+          </p>
+        </li>
+        <li>
+          <h5>Videoprezentace</h5>
+          <p>
+            můžeme obsahovat interaktivní prvky, zvuk a trochu videa
+          </p>
+        </li>
+        <li>
+          <h5>3D prezentace</h5>
+          <p>
+            nejpokrročilejší prezentace využívající trojrozměrnou grafiku
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="odstavec">
+      <h2>Návrh prezentace</h2>
+      <p>
+        Základní šablony naleznete v <a href="https://www.google.com/slides/about/">Google Slides</a> popřípadně můžete
+        využít
+        <a href="https://slidesgo.com/." style="font-weight: bold;">slidesgo.com</a> pro nalezení lepší šablony.
+      </p>
+
+    </div>
+
+    <div class="odstavec">
+      <div class="odstavec center">
+        <h2>Prvky designu na prezentaci</h2>
+      </div>
+      <h4>Barvy na prazentaci</h4>
+      <p>
+        Každá barva nám určuje celkovou náladu celé prezentace. Například <strong>světlé pastelové barvy působí klidně,
+          zatímco výrazné vyvolávají emoce.</strong>
+      </p>
+      <h5>Harmonie barev</h5>
+      <p>
+        Jednou ze zásad při použití barev je čitelnost. Text a pozadí by se neměly překrývat a prvky obrázku by měly
+        působit <strong>harmonicky</strong>.
+        To neznamená, že nemůžete použít pouze tmavé nebo pouze světlé barvy, protože potřebujeme dosáhnout
+        <strong>kontrastu</strong>.
+      </p>
+      <h6>Příklady</h6>
+      <ul>
+        <li>
+          <span style="color: aqua; background-color: aquamarine;">Tohle nejde vubec precist...</span>
+        </li>
+        <li>
+          <span style="color: white; background-color: black;">Tady jde videt jak uz vypada kontrasnt...</span>
+        </li>
+        <li>
+          <span style="color: yellow; background-color: black;">Tohle je fajn ale ne vždy dobré je to dobré...</span>
+        </li>
+      </ul>
+      <div class="center">
+        <span id="text">Tohle ukázkový text, ktery zobrazuje konrast barev.</span>
+      </div>
+      <div class="slidecontainer">
+        <table>
+          <tr>
+            <td>
+              <h5>Barva pozadí</h5>
+            </td>
+            <td style="padding-left: 50px;">
+              <input type="range" min="0" max="250" value="50" class="slider" id="background">
+            </td>
+            <td style="padding-left: 50px;">
+              <span id="back-code"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h5>Barva textu</h5>
+            </td>
+            <td style="padding-left: 50px;">
+              <input type="range" min="0" max="250" value="50" class="slider" id="text">
+            </td>
+            <td style="padding-left: 50px;">
+              <span id="text-code"></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="odstavec">
+      <h3>Text a pozice</h3>
+      <p>
+        Další nedílnou složkou harmonie a prezentaci je <strong>font</strong> a <strong>velikost textu</strong>.
+        Jako další můžte použít <strong>vodící lišty</strong> k tomu aby se text lépe umístil a byl. Při umišťování
+        prvků na prezentaci se zamyslete nad významem prázdného prostoru. Také na to co by mělo diváka upoutat jako hlavní.
+      </p>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Samostatná práce</h2>
+      <p>
+        Vaše samostatná práce bude vytvořit prezentaci na téma: <strong>Vaše firma</strong> nebo také váš <strong>Start
+          Up</strong>.
+      </p>
+      <h5>Nároky na prezentaci</h5>
+      <ul>
+        <li><strong>Font textu</strong></li>
+        <li><strong>Stránka, kde budete hovořit o svých zaměstnancích</strong></li>
+        <li><strong>Barvy pozadí by neměli splívat s barvou textu</strong></li>
+        <li><strong>Font textu</strong></li>
+      </ul>
+      <p>
+        <strong>Prvních pět z vás, kteří budou mít prezentavi celou dostanou po jednom diamantu.</strong>
+      </p>
+    </div>
+
+
 
   </main>
   <footer class="footer">

@@ -1,13 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <script src="/js/test.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protfolio</title>
 </head>
+
 <body>
-    <div class="content">
-        <p>Microsoft Stock Price: <span id="price"></span></p>
+    <div>
+        <span id="text">Tohle ukázkový text, ktery zobrazuje konrast barev.</span>
     </div>
+    <div class="slidecontainer">
+        <table>
+            <tr>
+                <td>
+                    <h5>Barva pozadí</h5>
+                </td>
+                <td style="padding-left: 50px;">
+                    <input type="range" min="0" max="250" value="0" class="slider" id="background">
+                </td>
+                <td style="padding-left: 50px;">
+                    <span id="back-code"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Barva textu</h5>
+                </td>
+                <td style="padding-left: 50px;">
+                    <input type="range" min="0" max="255" value="0" class="slider" id="text">
+                </td>
+                <td style="padding-left: 50px;">
+                    <span id="text-code"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var slider1 = document.getElementById("background");
+        var output1 = document.getElementById("back-code");
+
+        output1.innerHTML = slider1.value;
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider1.oninput = function () {
+            output1.innerHTML = this.value;
+            console.log(this.value);
+        }
+    </script>
+    <script>
+        var slider1 = document.getElementById("text");
+        var output1 = document.getElementById("text-code");
+
+        output1.innerHTML = slider1.value;
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider1.oninput = function () {
+            output1.innerHTML = this.value;
+            console.log(this.value);
+        }
+    </script>
 </body>
+
 </html>
