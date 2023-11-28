@@ -38,7 +38,9 @@
     </div>
     <script>
         var slider1 = document.getElementById("background");
+        var slider = document.getElementById("text");
         var output1 = document.getElementById("back-code");
+        var output = document.getElementById("text-code");
 
         output1.innerHTML = slider1.value;
 
@@ -47,16 +49,14 @@
             output1.innerHTML = this.value;
             console.log(this.value);
         }
-    </script>
-    <script>
-        var slider1 = document.getElementById("text");
-        var output1 = document.getElementById("text-code");
 
-        output1.innerHTML = slider1.value;
+
+        console.log(slider.value);
+        output.innerHTML = slider.value;
 
         // Update the current slider value (each time you drag the slider handle)
-        slider1.oninput = function () {
-            output1.innerHTML = this.value;
+        slider.oninput = function () {
+            output.innerHTML = this.value;
             console.log(this.value);
         }
     </script>

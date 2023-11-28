@@ -18,25 +18,30 @@ $(document).ready(function () {
 
 
 function barva() {
-    var slider1 = document.getElementById("background");
-    var output1 = document.getElementById("back-code");
+    var slider = document.getElementById("background");
+    var output = document.getElementById("back-code");
 
-    output1.innerHTML = slider1.value; 
+    output.innerHTML = slider.value; 
     
     // Update the current slider value (each time you drag the slider handle)
-    slider1.oninput = function () {
-        output1.innerHTML = this.value;
-        console.log(this.value);
-    }
-
-    var slider2 = document.getElementById("text");
-    var output2 = document.getElementById("text-code");
-    output2.innerHTML = slider2.value;
-    slider2.oninput = function () {
-        output2.innerHTML = this.value;
+    slider.oninput = function () {
+        output.innerHTML = this.value;
         console.log(this.value);
     }
 }
 
+function text(){
+    var slider = document.getElementById("text");
+    var output = document.getElementById("text-code");
 
+    output.innerHTML = slider.value; 
+    
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+        console.log(this.value);
+    }
+}
+
+text();
 barva();
