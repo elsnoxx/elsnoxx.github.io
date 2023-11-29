@@ -17,31 +17,37 @@ $(document).ready(function () {
 });
 
 
-function barva() {
-    var slider = document.getElementById("background");
-    var output = document.getElementById("back-code");
+function barvy() {
 
-    output.innerHTML = slider.value; 
-    
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-        console.log(this.value);
-    }
+    var backgroundSlider = document.getElementById("background");
+    var textSlider = document.getElementById("text");
+    var backgroundOutput = document.getElementById("back-code");
+    var textOutput = document.getElementById("text-code");
+    var zobrazeni = document.getElementById("zobrazeni");
+
+    // Update the background color and display the value
+    backgroundSlider.oninput = function () {
+        backgroundOutput.innerHTML = this.value;
+        var backgroundColor = "rgb(" + textSlider.value + "," + textSlider.value+ "," + textSlider.value+")";
+        var textColor = "rgb(" + textSlider.value + "," + textSlider.value+ "," + textSlider.value+")";
+
+        zobrazeni.style.backgroundColor = backgroundColor;
+        zobrazeni.style.color = textColor;
+    };
+
+    // Update the text color and display the value
+    textSlider.oninput = function () {
+        textOutput.innerHTML = this.value;
+        var backgroundColor = "rgb(" + backgroundSlider.value + ", 0, 0)";
+        var textColor = "rgb(" + textSlider.value + ", 0, 0)";
+
+        zobrazeni.style.backgroundColor = backgroundColor;
+        zobrazeni.style.color = textColor;
+    };
 }
 
-function text(){
-    var slider = document.getElementById("text");
-    var output = document.getElementById("text-code");
 
-    output.innerHTML = slider.value; 
-    
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-        console.log(this.value);
-    }
-}
 
-text();
-barva();
+barvy();
+
+
