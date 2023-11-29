@@ -13,6 +13,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 
 ## To Do list
 - [x] Google analytic - funkční
+- [ ] Stranka pro prezentaci 
+    - [ ] vytvorit pdf a word verzi pro ukoly
+    - [ ] upravit rozlozeni textu
 - [x] Construct
     - [x] lekce 3
     - [x] lekce 4
@@ -28,15 +31,15 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [x] Audacity
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - [ ] Youtube
-    - [ ] lekce 1
-    - [ ] lekce 2
-    - [ ] lekce 3
-    - [ ] Lekce 4
-    - [ ] Lekce 5
-    - [ ] Projekt
-    - [ ] Upravit ukoly přidat informace
-    - [ ] Upravit poradí samostatných prací
+    - [x] lekce 1
+    - [x] lekce 2
+    - [x] Lekce 5
+    - [x] Projekt
+    - [x] Upravit ukoly přidat informace
+    - [x] Upravit poradí samostatných prací
     - [x] vytovření úkolů
+    - [ ] lekce 3 - obsah
+    - [ ] Lekce 4 - obsah
     - [ ] Optimalizace všech stránek pomocí google ligthouse
 - [ ] TinkerCad
     - [ ] projekt
