@@ -10,8 +10,18 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Google Analytics
 - Construct-3
 
+## To Do List till 4/12/2023
+- TinkerCad
+    - [ ] Vytvoření zadání pro projekt, pdf a word
+    - [ ] projekt zadani
+    - [ ] uprava lekce 2
+- Arf of presentation
+    - [ ] Lekce 1 - kontrast barvy textu na strance
+    - [ ] Lekce 1 - samostatna prace
+    
+    
 
-## To Do list
+## To Do list of tickets
 - Construct
     - [ ] vytvoření stránky pro nejlepší projekty
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
@@ -22,14 +32,12 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Lekce 4 - obsah
     - [ ] Optimalizace všech stránek pomocí google ligthouse
 - TinkerCad
-    - [ ] projekt
-    - [ ] uprava lekcí
-    - [ ] vytvoření nové třídy v tinkecadu, pro novou skupinu, a následne vytvoření nějakého přehledu kde bude název skupiny a odkaz na přihlášení
-    - [ ] Vytvoření zadání pro projekt, pdf a word
+    - [ ] obrazky dat do slide show
+    - [ ] uprava lekce 3
+    - [ ] uprava lekce 4
+    - [ ] uprava lekce 5
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - Arf of presentation
-    - [ ] Lekce 1 - kontrast barvy textu na strance
-    - [ ] Lekce 1 - samostatna prace
     - [ ] Lekce 2 - obsah
     - [ ] Lekce 2 - samostatna prace
     - [ ] Lekce 3 - obsah
@@ -48,7 +56,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 15/11/2023
 - [ ] Optimalizace pomocí google ligthouse
 
-## Done tasks
+## Ticket list
 - Google analytic 
     - [x] zprovozneni google analytic, pro monitorovani traficku na webovce
 - Stranka pro prezentaci 
@@ -75,5 +83,10 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] přidání obrázky animace do lekce 2
 - TinkerCad
     - [x] přidání času a tlačítka na přeskakování mezi lekci
+    - [x] uprava uvodni stranky
+    - [x] vytvoření přehledu kde bude název skupiny a odkaz na přihlášení ja-th-o-10-23
+    - [x] vytvoreni skupiny na tinkercad + pristupove udaje ja-th-o-10-23
+    - [x] pridani jedne bonusove prace
+    - [x] uprava lekce 1
 - Arf of presentation
     - [x] Lekce 1 - obsah
