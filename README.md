@@ -5,12 +5,12 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 
 
 ## Technologie
-- HTML & CSS
+- HTML & CSS, Boostrap
 - Javascript, JQuery
 - Google Analytics
 - Construct-3
 
-## To Do List till 4/12/2023
+## To Do List till 13/12/2023
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] projekt zadani
@@ -18,15 +18,16 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Arf of presentation
     - [ ] Lekce 1 - kontrast barvy textu na strance
     - [ ] Lekce 1 - samostatna prace
+- Audacity
+    - [ ] pridani ukazky metadat na prvni lekci
+    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+- Construct
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     
     
 
 ## To Do list of tickets
-- Construct
-    - [ ] vytvoření stránky pro nejlepší projekty
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-- Audacity
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - Youtube
     - [ ] lekce 3 - obsah
     - [ ] Lekce 4 - obsah
@@ -81,6 +82,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] popsani prostredi constructu
     - [x] ukaždé prace přidat i ukázkovou práci
     - [x] přidání obrázky animace do lekce 2
+    - [x] vytvoření stránky pro nejlepší projekty
 - TinkerCad
     - [x] přidání času a tlačítka na přeskakování mezi lekci
     - [x] uprava uvodni stranky
@@ -90,3 +92,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] uprava lekce 1
 - Arf of presentation
     - [x] Lekce 1 - obsah
+- Youtube
+    - [x] novy projekt + prezentace
+    - [x] oprava odkazu na strance projektu
+    - [x] pridani stazeni coveru
