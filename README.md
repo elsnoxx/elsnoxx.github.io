@@ -14,10 +14,10 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] projekt zadani
-    - [ ] uprava lekce 2
 - Arf of presentation
-    - [ ] Lekce 1 - kontrast barvy textu na strance
-    - [ ] Lekce 1 - samostatna prace
+    - [ ] Lekce 2 - obsah
+    - [ ] Lekce 3 - obsah
+    - [ ] Lekce 3 - samostatna prace
 - Audacity
     - [ ] pridani ukazky metadat na prvni lekci
     - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
@@ -34,19 +34,15 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Optimalizace všech stránek pomocí google ligthouse
 - TinkerCad
     - [ ] obrazky dat do slide show
+    - [ ] uprava lekce 2
     - [ ] uprava lekce 3
     - [ ] uprava lekce 4
     - [ ] uprava lekce 5
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - Arf of presentation
-    - [ ] Lekce 2 - obsah
-    - [ ] Lekce 2 - samostatna prace
-    - [ ] Lekce 3 - obsah
-    - [ ] Lekce 3 - samostatna prace
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt
-    - [ ] Hodnoceni projektu
     - [ ] Ukazkove prace
 - [ ] HTML and CSS
 - [ ] Wordpress
@@ -92,6 +88,10 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] uprava lekce 1
 - Arf of presentation
     - [x] Lekce 1 - obsah
+    - [x] Lekce 1 - kontrast barvy textu na strance
+    - [x] Lekce 1 - samostatna prace
+    - [x] Lekce 2 - samostatna prace
+    - [x] Hodnoceni projektu
 - Youtube
     - [x] novy projekt + prezentace
     - [x] oprava odkazu na strance projektu
