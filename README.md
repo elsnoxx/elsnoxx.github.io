@@ -14,6 +14,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] projekt zadani
+    - [ ] smazat hodnocení ukolů
 - Arf of presentation
     - [ ] Lekce 2 - obsah
     - [ ] Lekce 3 - obsah
@@ -23,6 +24,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 - Construct
+    - [ ] pridani k hram otevirani v dalsim okne
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     
     
