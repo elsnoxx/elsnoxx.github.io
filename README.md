@@ -10,6 +10,14 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Google Analytics
 - Construct-3
 
+## Broken links checker
+- K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
+    - #### Potřeba je mít:
+        - python 3.11.5
+        - pip install bs4
+        - pip install requests
+
+
 ## To Do List till 13/12/2023
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
