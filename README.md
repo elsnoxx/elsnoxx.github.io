@@ -31,9 +31,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] pridani ukazky metadat na prvni lekci
     - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-- Construct
-    - [ ] pridani k hram otevirani v dalsim okne
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+
     
     
 
@@ -60,8 +58,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - [ ] Roblox
 - [ ] Python Beginer
 - [ ] Wix
-- [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 15/11/2023
-- [ ] Optimalizace pomocí google ligthouse
+- [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu dne 15/11/2023
+- Construct
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
 
 ## Ticket list
 - Google analytic 
@@ -89,6 +88,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] ukaždé prace přidat i ukázkovou práci
     - [x] přidání obrázky animace do lekce 2
     - [x] vytvoření stránky pro nejlepší projekty
+    - [x] pridani k hram otevirani v dalsim okne
 - TinkerCad
     - [x] přidání času a tlačítka na přeskakování mezi lekci
     - [x] uprava uvodni stranky
