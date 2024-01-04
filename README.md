@@ -21,7 +21,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 ## To Do List till 13/12/2023
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
-    - [ ] projekt zadani
+    - [ ] projekt ZOO, random 3 zvirata z tohoto seznamu, ty zpracuji a vytvori zoo - lachtan, had, krtek, krava, slon, ovce, krokodyl, zirafa, tucnak, velryba, zebra, delfin, papousek, velbloud, zelva, sova, medved, kun, pes, kocka, lev, koza, nosorozec, zralok, opice, jezek, slepice, chobotnice, prase, kralik, zaba, klokan, tygr
     - [ ] smazat hodnocení ukolů
 - Arf of presentation
     - [ ] Lekce 2 - obsah
