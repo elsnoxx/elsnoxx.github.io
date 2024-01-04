@@ -31,6 +31,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] pridani ukazky metadat na prvni lekci
     - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+    - [ ] co je to koloristika
 
     
     
