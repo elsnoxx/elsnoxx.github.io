@@ -43,7 +43,7 @@ function naplcas() {
   $("#cas").text(aktualniCas);
 }
 
-
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
 //intervalove spusteni funkce, musi pred tim byt i volani funkce
 naplcas();
 setInterval(naplcas, 1000);
