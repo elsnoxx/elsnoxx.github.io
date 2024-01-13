@@ -32,8 +32,6 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
-    - [ ] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
-    - [ ] Sjednoceni navbaru, tak aby nikde nechybeli lekce
     - [ ] Přidat na stranky 
         -
         ```html
@@ -130,3 +128,5 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
 - General
     - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
     - [x] Vytvořit footer
+    - [x] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
+    - [x] Sjednoceni navbaru, tak aby nikde nechybeli lekce
