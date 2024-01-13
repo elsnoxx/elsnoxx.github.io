@@ -9,22 +9,22 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Javascript, JQuery
 - Google Analytics
 - Construct-3
+- AVIF pro brazky
 
 ## Broken links checker
 - K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
 
 - Více informací v [README](scripty/python/broken-links/README.md).
 
+## AVIF konverze
+
+Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při použití funkce export jde obraze vyexportovat na .avif fomát.
+
+
 ## To Do List
 - Arf of presentation
-    - [ ] Projekt
-- Audacity
-    - [ ] pridani ukazky metadat na prvni lekci
-    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-    - [ ] co je to koloristika
-
-    
+    - [ ] Projekt  
+    - [ ] Rozdělení obrázku do složek podle lekce  
     
 
 ## List of requsted tickets
@@ -32,11 +32,19 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
-    - [ ] Vytvořit footer
     - [ ] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
     - [ ] Přidat na stranky 
-        - ```html <meta name="description" content="popis stranky">
-    - [ ] Zmenit title, jelikoz dostavam jine skupiny je potreba to menit
+        -
+        ```html
+        <meta name="description" content="popis stranky">
+
+
+- Audacity
+    - [ ] upravit nadpisi lekci na Lekce 1 - co se bude dit
+    - [ ] pridani ukazky metadat na prvni lekci
+    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+    - [ ] co je to koloristika
 - Youtube
     - [ ] lekce 3 - obsah
     - [ ] Lekce 4 - obsah
@@ -52,7 +60,8 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt
-
+- Construct
+    - [ ] pridat ukazku covani flash na space shooter
 
 - [ ] HTML and CSS
 - [ ] Wordpress
@@ -119,3 +128,4 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] pridani stazeni coveru
 - General
     - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
+    - [x] Vytvořit footer

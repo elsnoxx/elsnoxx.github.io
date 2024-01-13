@@ -14,5 +14,5 @@ For Windows 10, install the Python libraries `requests` and `bs4`:
 
   ```bash
   C:/Users/ficek/AppData/Local/Programs/Python/Python311/python.exe -m pip install beautifulsoup4
-  C:/Users/ficek/AppData/Local/Programs/Python/Python311/python.exe -m pip install requests
+  C:/Users/ficek/AppData/Local/Programs/Python/Python311/python.exe -m pip install requests 
 
