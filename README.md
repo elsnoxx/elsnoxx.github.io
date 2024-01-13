@@ -11,18 +11,11 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Construct-3
 
 ## Broken links checker
-- K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
-    - #### Potřeba je mít:
-        - python 3.11.5
-        - pip install bs4
-        - pip install requests
+- K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
 
+- Více informací v [README](scripty/python/broken-links/README.md).
 
-## To Do List till 13/12/2023
-- TinkerCad
-    - [ ] Vytvoření zadání pro projekt, pdf a word
-    - [ ] projekt ZOO, random 3 zvirata z tohoto seznamu, ty zpracuji a vytvori zoo - lachtan, had, krtek, krava, slon, ovce, krokodyl, zirafa, tucnak, velryba, zebra, delfin, papousek, velbloud, zelva, sova, medved, kun, pes, kocka, lev, koza, nosorozec, zralok, opice, jezek, slepice, chobotnice, prase, kralik, zaba, klokan, tygr
-    
+## To Do List
 - Arf of presentation
     - [ ] Projekt
 - Audacity
@@ -34,10 +27,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     
     
 
-## To Do list of tickets
+## List of requsted tickets
 - GENERAL
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-    - [ ] Opravit linky po zmene nazvu html stranek v tinkercad lekci
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
 - Youtube
@@ -66,7 +58,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Construct
     
 
-## Ticket list
+## List of done ticket lists
 - Google analytic 
     - [x] zprovozneni google analytic, pro monitorovani traficku na webovce
 - Stranka pro prezentaci 
@@ -96,7 +88,11 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - TinkerCad
     - [x] přidání času a tlačítka na přeskakování mezi lekci
     - [x] uprava uvodni stranky
-    - [x] vytvoření přehledu kde bude název skupiny a odkaz na přihlášení ja-th-o-10-23
+    - [x] vytvoření přehledu kde bude název skupiny a odkaz na přihlášení 
+    - [x] Vytvoření zadání pro projekt, pdf a word, odkaz na stazeni zdani na stranku projektu
+    - [x] projekt ZOO, random 3 zvirata z tohoto seznamu, ty zpracuji a vytvori zoo
+    - [x] upravit nadpis lekce 1, 2, 3, 4, 5
+    - [x] pridat odkaz na stranku tinkercadu na kazdou lekci a stranku projektuja-th-o-10-23
     - [x] vytvoreni skupiny na tinkercad + pristupove udaje ja-th-o-10-23
     - [x] pridani jedne bonusove prace
     - [x] uprava lekce 1
@@ -116,3 +112,5 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] novy projekt + prezentace
     - [x] oprava odkazu na strance projektu
     - [x] pridani stazeni coveru
+- General
+    - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
