@@ -8,7 +8,10 @@ import webbrowser
 searched_links = []
 broken_links = []
 
-BASE_URL = sys.argv[1] if len(sys.argv) > 1 else "https://elsnoxx.github.io"
+# Web on internet testing
+# BASE_URL = sys.argv[1] if len(sys.argv) > 1 else "https://elsnoxx.github.io"
+# Local testing
+BASE_URL = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:3000/"
 # FILE_PATH = "C:/Users/admin/Documents/GitHub/JA-MON-O-03-23/"
 FILE_PATH = "C:/Users/ficek/Documents/GitHub/JA-MON-O-03-23/"
 
