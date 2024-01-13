@@ -33,6 +33,7 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
     - [ ] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
+    - [ ] Sjednoceni navbaru, tak aby nikde nechybeli lekce
     - [ ] Přidat na stranky 
         -
         ```html
