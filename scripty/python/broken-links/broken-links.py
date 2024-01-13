@@ -9,7 +9,8 @@ searched_links = []
 broken_links = []
 
 BASE_URL = sys.argv[1] if len(sys.argv) > 1 else "https://elsnoxx.github.io"
-FILE_PATH = "C:/Users/admin/Documents/GitHub/JA-MON-O-03-23/"
+# FILE_PATH = "C:/Users/admin/Documents/GitHub/JA-MON-O-03-23/"
+FILE_PATH = "C:/Users/ficek/Documents/GitHub/JA-MON-O-03-23/"
 
 print(
     f'Running script for {BASE_URL} and saving the file to: {FILE_PATH}broken-links.html')

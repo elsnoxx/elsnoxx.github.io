@@ -22,11 +22,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - TinkerCad
     - [ ] Vytvoření zadání pro projekt, pdf a word
     - [ ] projekt ZOO, random 3 zvirata z tohoto seznamu, ty zpracuji a vytvori zoo - lachtan, had, krtek, krava, slon, ovce, krokodyl, zirafa, tucnak, velryba, zebra, delfin, papousek, velbloud, zelva, sova, medved, kun, pes, kocka, lev, koza, nosorozec, zralok, opice, jezek, slepice, chobotnice, prase, kralik, zaba, klokan, tygr
-    - [ ] smazat hodnocení ukolů
+    
 - Arf of presentation
-    - [ ] Lekce 2 - obsah
-    - [ ] Lekce 3 - obsah
-    - [ ] Lekce 3 - samostatna prace
+    - [ ] Projekt
 - Audacity
     - [ ] pridani ukazky metadat na prvni lekci
     - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
@@ -37,31 +35,36 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     
 
 ## To Do list of tickets
+- GENERAL
+    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+    - [ ] Opravit linky po zmene nazvu html stranek v tinkercad lekci
+    - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
+    - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
 - Youtube
     - [ ] lekce 3 - obsah
     - [ ] Lekce 4 - obsah
-    - [ ] Optimalizace všech stránek pomocí google ligthouse
 - TinkerCad
     - [ ] obrazky dat do slide show
-    - [ ] uprava lekce 2
-    - [ ] uprava lekce 3
-    - [ ] uprava lekce 4
-    - [ ] uprava lekce 5
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-- Arf of presentation
+- [ ] Roblox
+    - [ ] Lekce 1 - obsah
+    - [ ] Lekce 1 - samostatna prace
+    - [ ] Lekce 2 - samostatna prace
+    - [ ] Lekce 2 - obsah
+    - [ ] Lekce 3 - obsah
+    - [ ] Lekce 3 - samostatna prace
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt
-    - [ ] Ukazkove prace
+
+
 - [ ] HTML and CSS
 - [ ] Wordpress
 - [ ] Javascript
-- [ ] Roblox
 - [ ] Python Beginer
 - [ ] Wix
-- [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu dne 15/11/2023
+15/11/2023
 - Construct
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
+    
 
 ## Ticket list
 - Google analytic 
@@ -97,12 +100,18 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
     - [x] vytvoreni skupiny na tinkercad + pristupove udaje ja-th-o-10-23
     - [x] pridani jedne bonusove prace
     - [x] uprava lekce 1
+    - [x] smazat hodnocení ukolů
 - Arf of presentation
     - [x] Lekce 1 - obsah
     - [x] Lekce 1 - kontrast barvy textu na strance
     - [x] Lekce 1 - samostatna prace
     - [x] Lekce 2 - samostatna prace
     - [x] Hodnoceni projektu
+    - [x] Lekce 2 - obsah
+    - [x] Lekce 3 - obsah
+    - [x] Lekce 3 - samostatna prace
+    - [x] Lekce 4 - obsah
+    - [x] Lekce 4 - samostatna prace
 - Youtube
     - [x] novy projekt + prezentace
     - [x] oprava odkazu na strance projektu
