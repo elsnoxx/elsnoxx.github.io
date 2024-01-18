@@ -20,6 +20,8 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 
 Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při použití funkce export jde obraze vyexportovat na .avif fomát.
 
+Pozor zatím se vyskytla chyba že Edge neporpodruje AVIF
+
 
 ## Google Analytics
 
@@ -42,6 +44,8 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
 - Roblox
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
+- TinkerCad
+    - [ ] Přidat popisky k obrázkům
 - GENERAL
     - [ ] opravit broken links
 
@@ -51,6 +55,7 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu
+    - [ ] Oprava obrazku kvuli ruznych prohlizecu Edge to nebere
     - [ ] Přidat na stranky 
         -
         ```html
