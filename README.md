@@ -9,34 +9,50 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - Javascript, JQuery
 - Google Analytics
 - Construct-3
-- AVIF pro brazky
+- AVIF pro obrázky
 
 ## Broken links checker
 - K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
 
-- Více informací v [README](scripty/python/broken-links/README.md).
+- Více informací v [README](scripty/python/broken-links/README.md) této aplikace.
 
 ## AVIF konverze
 
 Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při použití funkce export jde obraze vyexportovat na .avif fomát.
 
 
-## To Do List
-- Arf of presentation
-    - [ ] Projekt  
-    - [ ] Rozdělení obrázku do složek podle lekce  
-    
+## Google Analytics
+
+Google analytic využíváme ke sledování dění na webových stránkách. [WEBove rozhrani](https://analytics.google.com/analytics/web/#/p411707114/reports/reportinghub?params=_u..nav%3Dmaui&collectionId=business-objectives)
+
+- Pokud je potřeba vytvořit novou stránku stačí přidat do head tagu v html dokumentu.
+
+ ``` html
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+ ```
+
+## ToDo List
+- Roblox
+    - [ ] Lekce 1 - obsah
+    - [ ] Lekce 1 - samostatna prace
 
 ## List of requsted tickets
 - GENERAL
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
     - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
-    - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu 
+    - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu
     - [ ] Přidat na stranky 
         -
         ```html
         <meta name="description" content="popis stranky">
-
+        ```
 
 - Audacity
     - [ ] upravit nadpisi lekci na Lekce 1 - co se bude dit
@@ -49,9 +65,7 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
     - [ ] Lekce 4 - obsah
 - TinkerCad
     - [ ] obrazky dat do slide show
-- [ ] Roblox
-    - [ ] Lekce 1 - obsah
-    - [ ] Lekce 1 - samostatna prace
+- Roblox
     - [ ] Lekce 2 - samostatna prace
     - [ ] Lekce 2 - obsah
     - [ ] Lekce 3 - obsah
@@ -60,18 +74,19 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt
 - Construct
-    - [ ] pridat ukazku covani flash na space shooter
+    - [ ] pridat ukazku chovani flash na space shooter
 
 - [ ] HTML and CSS
 - [ ] Wordpress
 - [ ] Javascript
 - [ ] Python Beginer
+    - [ ] změmit Pycharm na vsc
 - [ ] Wix
 15/11/2023
 - Construct
     
 
-## List of done ticket lists
+### List of done ticket lists
 - Google analytic 
     - [x] zprovozneni google analytic, pro monitorovani traficku na webovce
 - Stranka pro prezentaci 
@@ -121,12 +136,28 @@ Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při pou�
     - [x] Lekce 3 - samostatna prace
     - [x] Lekce 4 - obsah
     - [x] Lekce 4 - samostatna prace
+    - [x] Projekt, word verze i pdf
+    - [x] Rozdělení obrázku do složek podle lekce
+    - [x] Vytvoření tabulky hodnoceni na strance projektu 
 - Youtube
     - [x] novy projekt + prezentace
     - [x] oprava odkazu na strance projektu
     - [x] pridani stazeni coveru
+- Python
+    - [x] Prejmenovani na python_beginer
 - General
     - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
     - [x] Vytvořit footer
     - [x] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
     - [x] Sjednoceni navbaru, tak aby nikde nechybeli lekce
+    - [x] Klikaci odkaz na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
+        - [x] Arf of presentation
+        - [x] Audacity
+        - [x] Youtube
+        - [x] TinkerCad
+        - [x] Construct
+        - [x] Roblox
+        - [x] HTML and CSS
+        - [x] Wordpress
+        - [x] Javascript
+        - [x] Python Beginer
