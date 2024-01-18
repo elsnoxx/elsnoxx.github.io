@@ -35,7 +35,8 @@ function zvirata() {
     "Sova", "Medvěd", "Kůň", "Pes", "Kočka", "Lev", "Koza", "Nosorožec", 
     "Žralok", "Opice", "Ježek", "Slepice", "Chobotnice", "Prase", "Králík", 
     "Žába", "Klokan", "Tygr", "Fretka", "Jelen", "Jaguár", "Krokodýl", "Lasice", "Mloček",
-    "Mravenečník", "Pantera", "Pavouk", "Pegas", "Rak", "Ryba", "Sob", "Tetřev", "Vlk", "Vosa", "Včela", "Zebrohlav"
+    "Mravenečník", "Panter", "Pavouk", "Pegas", "Rak", "Ryba", "Sob", "Tetřev", "Vlk", 
+    "Vosa", "Včela"
 ];
   // zobrazeni textu
   var zvirataElement = document.querySelector(".zvirata");
