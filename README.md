@@ -42,6 +42,9 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
 - Roblox
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
+- GENERAL
+    - [ ] opravit broken links
+
 
 ## List of requsted tickets
 - GENERAL
