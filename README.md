@@ -18,9 +18,7 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 
 ## AVIF konverze
 
-Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při použití funkce export jde obraze vyexportovat na .avif fomát.
-
-Pozor zatím se vyskytla chyba že Edge neporpodruje AVIF
+Ke konverzi obrazků na .avif stačí [GIMP](https://www.gimp.org/). A při použití funkce export jde obraze vyexportovat na .avif fomát. Formát podporují všecny nejpoužívanější vyhledávače. Enge pouze od verze 121.xx.
 
 
 ## Google Analytics
@@ -44,30 +42,16 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
 - Roblox
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
-- TinkerCad
-    - [ ] Přidat popisky k obrázkům
-- GENERAL
-    - [ ] opravit broken links
+- Audacity
+    - [ ] pridani ukazky metadat na prvni lekci
+    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
+
 
 
 ## List of requsted tickets
 - GENERAL
     - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-    - [ ] Klikaci odkaz i na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
     - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu
-    - [ ] Oprava obrazku kvuli ruznych prohlizecu Edge to nebere
-    - [ ] Přidat na stranky 
-        -
-        ```html
-        <meta name="description" content="popis stranky">
-        ```
-
-- Audacity
-    - [ ] upravit nadpisi lekci na Lekce 1 - co se bude dit
-    - [ ] pridani ukazky metadat na prvni lekci
-    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-    - [ ] co je to koloristika
 - Youtube
     - [ ] lekce 3 - obsah
     - [ ] Lekce 4 - obsah
@@ -83,18 +67,28 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
     - [ ] Projekt
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
-
-- [ ] HTML and CSS
-- [ ] Wordpress
-- [ ] Javascript
 - [ ] Python Beginer
-    - [ ] změmit Pycharm na vsc
-- [ ] Wix
-15/11/2023
-- Construct
-    
+    - [ ] změmit Pycharm na vsc    
 
-### List of done ticket lists
+# Version
+
+## 1/19/2024 - Update
+- TinkerCad
+    - Přidat popisky k obrázkům
+- Arf of presentation
+    - Oprava textu na poslední lekci
+- Audacity
+    - upravit nadpisi lekci na Lekce 1 - co se bude dit
+    - oprava lekce 1 a klikaci odpovedi
+- GENERAL
+    - opravit broken links
+    - vytvoření ikony webu
+    - Přidat na stranky 
+        ```html
+        <meta name="description" content="popis stranky">
+        ```
+
+## 1/18/2024 - Update
 - Google analytic 
     - [x] zprovozneni google analytic, pro monitorovani traficku na webovce
 - Stranka pro prezentaci 
@@ -157,6 +151,7 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
     - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
     - [x] Vytvořit footer
     - [x] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
+    - [x] Oprava obrazku kvuli ruznych prohlizecu Edge to nebere
     - [x] Sjednoceni navbaru, tak aby nikde nechybeli lekce
     - [x] Klikaci odkaz na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
         - [x] Arf of presentation
