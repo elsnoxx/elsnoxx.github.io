@@ -14,16 +14,16 @@
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-4XPWG9HLN2');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -99,12 +99,12 @@
             <table>
               <tr>
                 <td>
-                  <a href="img/tinkerCAD/bonus/věž.png"><img src="/img/tinkerCAD/bonus/věž.avif" alt="tinkercad-kavrd"
-                      width="200" height="175"></a>
+                  <img class="myImg" src="/img/tinkerCAD/bonus/věž.avif" alt="tinkercad-kavrd"
+                    style="width:100%; max-width:300px; height: auto" loading="lazy">
                 </td>
                 <td>
-                  <a href="img/tinkerCAD/bonus/věž-ořez.png"><img src="/img/tinkerCAD/bonus/věž-ořez.avif"
-                      alt="tinkercad-kavrd" width="200" height="175"></a>
+                  <img class="myImg" src="/img/tinkerCAD/bonus/věž-ořez.avif" alt="Ořez kvůli vziku šikmích stran"
+                    style="width:100%; max-width:300px; height: auto" loading="lazy">
                 </td>
               </tr>
             </table>
@@ -146,18 +146,25 @@
             <table>
               <tr>
                 <td>
-                  <a href="img/tinkerCAD/bonus/věž.png"><img src="/img/tinkerCAD/bonus/pěšec-střelec.avif"
-                      alt="tinkercad-kavrd" width="200" height="175"></a>
+                  <img class="myImg" src="/img/tinkerCAD/bonus/pěšec-střelec.avif" alt="Hlavní pohled na hotové figurky"
+                    style="width:100%; max-width:300px; height: auto" loading="lazy">
                 </td>
                 <td>
-                  <a href="img/tinkerCAD/bonus/věž-ořez.png"><img src="/img/tinkerCAD/bonus/pěšec-střelec-ořez.avif"
-                      alt="tinkercad-kavrd" width="200" height="175"></a>
+                  <img class="myImg" src="/img/tinkerCAD/bonus/pěšec-střelec-ořez.avif"
+                    alt="Ořez na hotové figurky" style="width:100%; max-width:300px; height: auto"
+                    loading="lazy">
                 </td>
               </tr>
             </table>
           </td>
         </tr>
       </table>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
 
