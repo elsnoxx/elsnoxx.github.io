@@ -11,7 +11,6 @@ $(document).ready(function () {
     console.log(altText)
     $("#caption").text(altText);
   });
-
   // Akce po kliknutí na zavírací ikonu
   $(".close").on("click", function () {
     // Skryjeme modální okno
