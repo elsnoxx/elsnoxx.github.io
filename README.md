@@ -38,20 +38,25 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
   </script>
  ```
 
+## Google Analytics
+
+Tato technologie je stále v rozmýšlení. Při poslední pokusu o zprovoznění tedy dne 16/10/2023. Bylo schválení zamítnuto z důvodu nedostatečného kontentu.
+
+## Google ligthouse
+
+Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové stránce. Při vytvoření nové webové stránky, stránka projde kontrolou. Průměrný výsledek jde videt níže.
+<figure style="text-align: center;">
+<img src="img/vysledek-lighthouse.png" alt="vysledek ohodnoceni webu" style="">
+<figcaption markdown="2">
+</figcaption>
+</figure>
+
 ## ToDo List
 - Roblox
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
-- Audacity
-    - [ ] pridani ukazky metadat na prvni lekci
-    - [ ] pridani k ukolum pozadavek na metadata, tak jako v projektu zvukova kolaz
-
-
 
 ## List of requsted tickets
-- GENERAL
-    - [ ] Optimalizace všech stránek lekce pomocí google ligthouse
-    - [ ] Google adsence - zažádání o kontrolu 16/10/2023, zruseno kvuli malo kontentu
 - Youtube
     - [ ] lekce 3 - obsah
     - [ ] Lekce 4 - obsah
@@ -70,7 +75,14 @@ Google analytic využíváme ke sledování dění na webových stránkách. [WE
 - [ ] Python Beginer
     - [ ] změmit Pycharm na vsc    
 
-# Version
+# Versions
+
+## 1/22/2024 - Update
+- Dokumentace
+    - Úprava dokumentace k webu
+- Audacity
+    - pridani ukazky metadat na prvni lekci
+    - pridani k ukolum a samostatných pracích pozadavek na metadata, tak jako v projektu zvukova kolaz
 
 ## 1/19/2024 - Update
 - TinkerCad
