@@ -64,7 +64,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - [ ] Lekce 3 - samostatna prace
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
-    - [ ] Projekt
+    - [ ] Projekt word a pdf
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
@@ -86,6 +86,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - změmit Pycharm na vsc   
 - TinkerCad
     - Oprava formatovani obrazku
+- Roblox
+    - Projekt web stranka
 
 ## 20240119 - Update
 - TinkerCad
