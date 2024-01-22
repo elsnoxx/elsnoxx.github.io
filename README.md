@@ -57,8 +57,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
-- TinkerCad
-    - [ ] obrazky dat do slide show
 - Roblox
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
@@ -87,6 +85,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Lekce 4 - obsah
 - Python Beginer
     - změmit Pycharm na vsc   
+- TinkerCad
+    - Oprava formatovani obrazku
 
 ## 1/19/2024 - Update
 - TinkerCad
