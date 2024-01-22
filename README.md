@@ -52,8 +52,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 </figure>
 
 ## ToDo List
-- General
-    - Upravit nove pridane fotky na avif format
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
@@ -73,10 +71,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## 1/22/2024 - Update
-- Dokumentace
+## 20240122 - Update
+- General
     - Úprava dokumentace k webu
     - Vytvoření stánky kde budou zobrazeny updaty webovek
+    - Upravit nove pridane fotky na avif format
 - Audacity
     - pridani ukazky metadat na prvni lekci
     - pridani k ukolum a samostatných pracích pozadavek na metadata, tak jako v projektu zvukova kolaz
@@ -88,7 +87,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - TinkerCad
     - Oprava formatovani obrazku
 
-## 1/19/2024 - Update
+## 20240119 - Update
 - TinkerCad
     - Přidat popisky k obrázkům
 - Arf of presentation
