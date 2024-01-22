@@ -46,23 +46,21 @@ Tato technologie je stále v rozmýšlení. Při poslední pokusu o zprovozněn�
 
 Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové stránce. Při vytvoření nové webové stránky, stránka projde kontrolou. Průměrný výsledek jde videt níže.
 <figure style="text-align: center;">
-<img src="img/vysledek-lighthouse.png" alt="vysledek ohodnoceni webu" style="">
+<img src="img/vysledek-lighthouse.png" alt="vysledek ohodnoceni webu">
 <figcaption markdown="2">
 </figcaption>
 </figure>
 
 ## ToDo List
-- Roblox
-    - [ ] Lekce 1 - obsah
-    - [ ] Lekce 1 - samostatna prace
 
-## List of requsted tickets
 - Youtube
-    - [ ] lekce 3 - obsah
-    - [ ] Lekce 4 - obsah
+    - [ ] lekce 3 - obrazky
+    - [ ] Lekce 4 - obrazky
 - TinkerCad
     - [ ] obrazky dat do slide show
 - Roblox
+    - [ ] Lekce 1 - obsah
+    - [ ] Lekce 1 - samostatna prace
     - [ ] Lekce 2 - samostatna prace
     - [ ] Lekce 2 - obsah
     - [ ] Lekce 3 - obsah
@@ -80,9 +78,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## 1/22/2024 - Update
 - Dokumentace
     - Úprava dokumentace k webu
+    - Vytvoření stánky kde budou zobrazeny updaty webovek
 - Audacity
     - pridani ukazky metadat na prvni lekci
     - pridani k ukolum a samostatných pracích pozadavek na metadata, tak jako v projektu zvukova kolaz
+- Youtube
+    - Lekce 3 - obsah
+    - Lekce 4 - obsah
 
 ## 1/19/2024 - Update
 - TinkerCad
