@@ -52,7 +52,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 </figure>
 
 ## ToDo List
-
+- General
+    - Upravit nove pridane fotky na avif format
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
@@ -70,8 +71,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - [ ] Projekt
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
-- [ ] Python Beginer
-    - [ ] změmit Pycharm na vsc    
+ 
 
 # Versions
 
@@ -85,6 +85,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Youtube
     - Lekce 3 - obsah
     - Lekce 4 - obsah
+- Python Beginer
+    - změmit Pycharm na vsc   
 
 ## 1/19/2024 - Update
 - TinkerCad
