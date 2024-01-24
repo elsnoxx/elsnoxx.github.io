@@ -52,6 +52,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 </figure>
 
 ## ToDo List
+- General
+    - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
+     ``` html
+        <section>
+            text goes here
+        </section>
+    ```
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
@@ -70,6 +77,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
  
 
 # Versions
+
+## 20240124 - Update
+- Roblox
+    - Vytvoření env, kde se popisují základní vlastnosti v Roblox studiu.
 
 ## 20240122 - Update
 - General
