@@ -59,10 +59,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
             text goes here
         </section>
     ```
+- Art of presentation
+    - oprava spaného zobrazení tabulky na strance projekt.html
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
 - Roblox
+    - vytvoreni stranky o lua jazyku
     - [ ] Lekce 1 - obsah
     - [ ] Lekce 1 - samostatna prace
     - [ ] Lekce 2 - samostatna prace
@@ -105,6 +108,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Přidat popisky k obrázkům
 - Arf of presentation
     - Oprava textu na poslední lekci
+    - optimalni velikost nadpisu a text
 - Audacity
     - upravit nadpisi lekci na Lekce 1 - co se bude dit
     - oprava lekce 1 a klikaci odpovedi
