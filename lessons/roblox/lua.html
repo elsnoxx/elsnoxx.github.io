@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Roblox uvodni stranka">
+  <meta name="description" content="Roblox lekce 2">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
   <title>Roblox</title>
 
@@ -73,122 +73,79 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1>Roblox</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat nástroj <a href="https://create.roblox.com/">Roblox Studio</a>.
-      Návod na zprovoznění a základní vlastnosti naleznete <a href="/lessons/roblox/env.html">zde</a>.
+    <h1>Roblox skryptování</h1>
+    <p>
+      Jednotlivé skrypty vytvořené v <strong>Robloxu</strong> se budou tvořit v jazyce <strong>LUA</strong>.
     </p>
 
+
     <section>
-      <a href="/lessons/roblox/lua.html">
-        <h3>LUA</h3>
-      </a>
+      <h2>Vytvoření proměnné</h2>
       <p>
-        Na strance věnované jazyce <a href="/lessons/roblox/lua.html">LUA</a> naleznete základní syntaxi jazyka.
+        V jazyce Lua se proměnná vytvoří takto local variableName = variableValue.
+      </p>
+      <p>
+        Termín local znamená, že proměnná bude použita pouze v
+        této části skriptu. Znak = slouží k nastavení hodnoty proměnné.
+      </p>
+      <p>
+        Nejčastěji budete používat <strong>local platform = script.Parent</strong>
+        script.Parent najde objekt, ve kterém se skript nachází. Jak
+        jste asi uhodli, script odkazuje na skript, který píšete, a Parent se tam nachází.
       </p>
     </section>
 
-    <div style="margin-bottom: 64px; ">
-      <a href="/lessons/roblox/roblox1.html">
-        <h3>Lekce 1</h3>
-      </a>
+    <section>
+      <h2>Funkce</h2>
+      <p>
+        Funkci v jazyce <strong>LUA</strong> vytváříme nasledným způsobem:
       <ul>
-        <a href="/lessons/roblox/roblox1.html">
-          <h6>Obsah lekce - První hra s mizejícímí objekty a lávou</h6>
-        </a>
-        <p>
-          V této lekci si ukážeme, jak se pracuje v <strong>Roblox studiu</strong>. Vytvoříme si první hru, kde na
-          příkladu mizejícího objeku a smrtící lávy si ukážeme skriptování
-        </p>
+        <li>
+          <h5>Bez parametru</h5>
+          <br>
+          local function disappear() <br>
+          <br>
+          end <br>
+        </li>
+        <li>
+          <h5>S parametru</h5>
+          <br>
+          local function killPlayer(otherPart) <br>
+          <br>
+          end <br>
+        </li>
       </ul>
 
-      <a href="/lessons/roblox/roblox2.html">
-        <h3>Lekce 2</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox2.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
+      </p>
+    </section>
 
-      <a href="/lessons/roblox/roblox3.html">
-        <h3>Lekce 3</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox3.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
+    <section>
+      <h2>Cyklus</h2>
+      <p>
+        Cyklus v jazyce <strong>LUA</strong> definujeme tímto způsobem:
+      </p>
+      <p>
+        <br><br>
+        end<br>
+        <br>
+        while true do<br>
+        <br>
+        end<br>
+      </p>
+    </section>
 
-      <a href="/lessons/roblox/roblox4.html">
-        <h3>Lekce 4</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox4.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
 
-      <a href="/lessons/roblox/roblox5.html">
-        <h3>Lekce 5</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox5.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
-
-      <a href="/lessons/roblox/roblox6.html">
-        <h3>Lekce 6</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox6.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
-
-      <a href="/lessons/roblox/roblox7.html">
-        <h3>Lekce 7</h3>
-      </a>
-      <ul>
-        <a href="/lessons/roblox/roblox7.html">
-          <h6>Obsah lekce - </h6>
-        </a>
-        <p>popis lekce zde</p>
-      </ul>
-
-      <a href="/lessons/roblox/projekt.html">
-        <h3>Projekt</h3>
-      </a>
-      <ul style="margin-bottom: 64px; ">
-        <p>
-          V dalších lekcích budete vypracovávat závěrečný projekt a prezentaci k němu. Veškeré materiály dostanete na
-          lekci.
-          K tvorbě projektu budou i potřebné znalosti z lekcí, které jsme jič probrali.
-          V případě nejasností se mi <a href="/contact.html">ozvete</a>.
-        </p>
-        <p>Podrobný popis <a href="/lessons/roblox/projekt.html">zde</a>.</p>
-      </ul>
-
-      <a href="/prezentace.html">
-        <h3>Prezentace</h3>
-      </a>
-      <ul style="margin-bottom: 64px; ">
-        <p>
-          V dalších lekcích budete vypracovávat závěrečný projekt a prezentaci k němu. Veškeré materiály dostanete na
-          lekci.
-          K tvorbě projektu budou i potřebné znalosti z lekcí, které jsme jič probrali.
-          V případě nejasností se mi <a href="/contact.html">ozvete</a>.
-        </p>
-        <p>Podrobný popis <a href="/prezentace.html">zde</a>.</p>
-      </ul>
-    </div>
-
+    <section>
+      <h2>Podmínky</h2>
+      <p>
+        Podmínky v jazyce <strong>LUA</strong> zapisují tímto způsobem:
+      </p>
+      <p>
+        if humanoid then<br>
+        <br>
+        end<br>
+      </p>
+    </section>
 
   </main>
   <footer class="footer">
