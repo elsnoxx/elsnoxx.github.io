@@ -65,8 +65,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
 - Roblox
-    - vytvoreni stranky o lua jazyku
-    - [ ] Lekce 1 - obsah
+    - pridani obrazku k strance env
+    - pridani orbazku k strnace lua
+    - pridani obrazku k strance lekce 1
     - [ ] Lekce 1 - samostatna prace
     - [ ] Lekce 2 - samostatna prace
     - [ ] Lekce 2 - obsah
@@ -81,9 +82,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## 20240124 - Update
+## 20240126 - Update
 - Roblox
-    - Vytvoření env, kde se popisují základní vlastnosti v Roblox studiu.
+    - Vytvoření env, kde se popisují základní vlastnosti v Roblox studiu
+    - Vytvoreni stranky o jazyku LUA a jeho základní syntaxe
+    - Vytvoření obsahu lekce 1, spolu i vytvořené výsledné skripty
 
 ## 20240122 - Update
 - General
