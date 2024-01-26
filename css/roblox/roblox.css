@@ -19,3 +19,11 @@
 .variable{
     color: darkgreen;
 }
+
+.subsekce {
+    padding-left: 5%;
+}
+
+.important{
+    font-weight: bold;
+}
