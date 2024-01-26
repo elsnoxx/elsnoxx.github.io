@@ -1,0 +1,21 @@
+.code {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.code-content {
+    text-align: left;
+}
+.prikaz {
+    color: red;
+}
+
+.skript {
+    color: blue;
+}
+
+.variable{
+    color: darkgreen;
+}

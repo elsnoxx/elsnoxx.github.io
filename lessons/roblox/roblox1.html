@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/roblox/roblox.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -89,8 +90,185 @@
       </p>
     </section>
 
-    
+    <section>
+      <h2>První Roblox mapa</h2>
+      <p>
+        Nyní si vytvoříme první hru, která bude obsahovat <strong>smrtící lávu a mizející podlahu</strong>.
+      </p>
 
+      <section>
+        <h3>Mizející podlaha</h3>
+        <section>
+          <h4>Zmizení bez skriptu</h4>
+          <p>
+            Prvně si ukážeme jak dokázat aby námi vytvořená platforma zmizela bez použití skriptu.
+            Každý blok má okno <strong>Properties</strong> a tam najdete veškeré vlastnosti našeho objektu.
+          </p>
+          <ul>
+            <li>
+              <h5>Transparency</h5>
+              <p>
+                Tato vlastnost určuje <strong>průhlednost</strong> lze nastavit z 0 na 1, kde <strong>1</strong> je
+                zcela
+                <strong>průhledný</strong>, a tudíž <strong>neviditelný</strong>
+              </p>
+            </li>
+            <li>
+              <h5>CanCollide</h5>
+              <p>
+                Určuje, zda ostatní části (a hráči) mohou procházet přímo skrz část. Pokud nastavíte
+                <strong>false</strong>, hráči <strong>propadnou</strong> plošinou.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Zmizení za pomocí skriptu</h4>
+          <ol>
+            <li>
+              Vložte Part a pojmenujte ji například, Disappearing-Platform
+            </li>
+            <li>
+              Změňte jeho velikost tak, aby na něj hráč mohl skočit
+            </li>
+            <li>
+              Umístěte plošinu tak, abyste na ni mohli při testování hry skočit
+            </li>
+            <li>
+              Nastavte vlastnosti Anchored vlastnost na true v Properties
+            </li>
+            <li>
+              Otevřeme si námi vytvořený skrip. V něm si vytvoříme proměnnou <strong>local platform =
+                script.Parent</strong>
+            </li>
+            <li>
+              Nyní si vytvoříme funkci, která vybraný objekt nechá zmizet
+              <div class="code">
+                <div class="code-content">
+                  <br>
+                  <span class="prikaz">local function </span>  disappear() <br>
+                  <span class="prikaz">end</span>
+                </div>
+              </div>          
+            </li>
+            <li>
+              Ve funkci disappear nastavit vlastnost platformy CanCollide na false, a na dalším řádku nastavte
+              Transparency vlastnost na 1
+              <div class="code">
+                <div class="code-content">
+                  <br>
+                  <span class="prikaz">local function </span>  disappear() <br>
+                  platform.CanCollide = <span class="variable">false</span> <br>
+                  platform.Transparency = <span class="variable">1</span> <br>
+                  <span class="prikaz">end</span>
+                </div>
+              </div>
+              <p>
+                Kód otestujte stisknutím tlačítka Play. Pokud kód funguje
+                správně, měla by plošina zmizet v okamžiku, kdy se hráč
+                objeví ve hře.
+              </p>
+            </li>
+            <li>
+              Nyní si vytvoříme opačnou funkci ke zmizení. Tu si pojmenujte <strong>appear()</strong>. Jelikož má být
+              poačná tak nastavte
+              <strong>platform.CanCollide = true</strong> a <strong>platform.Transparency = 0</strong>. Výsledek by měl
+              vypadat následovně:
+              <div class="code">
+                <div class="code-content">
+                  <span class="prikaz">local function</span> disappear() <br>
+                  platform.CanCollide = <span class="variable">true</span> <br>
+                  platform.Transparency = <span class="variable">0</span> <br>
+                  <span class="prikaz">end</span>
+                </div>
+              </div>
+              <p>
+            </li>
+            <li>
+              Jako poslední krok bude vytvořit si nekonečný cyklus, který vždy se na nějaký čas zastaví a usne.
+              Toho docolíme tak že pouzijeme příkaz <strong>wait( x )</strong>. Pokud za <strong>x</strong> dáte
+              jaké koliv číslo tak to tam bude určovat na kolik sekund se cyklus uspí.
+              <div class="code">
+                <div class="code-content">
+                  <span class="prikaz">while</span> <span class="variable">true</span> <span
+                    class="prikaz">do</span><br>
+                  <span class="skript">wait(3)</span><br>
+                  disappear()<br>
+                  <span class="skript">wait(3)</span><br>
+                  appear()<br>
+                  <span class="prikaz">end</span>
+                </div>
+              </div>
+              <p>
+                Zde kód usne na 3 sekundy a zavolá funkci <strong>disappear</strong>, pak zase usne a zavolá funkci
+                <strong>appear</strong>.
+                A takhle jede porad dokola.
+              </p>
+            </li>
+          </ol>
+        </section>
+      </section>
+
+
+      <section>
+        <h3>Smrtící láva</h3>
+        <p>
+          Jelikož jsme si vytvořili mizející objekt přidáme k tomu ještě <strong>smrtící lávu</strong>.
+        </p>
+        <ol>
+          <li>
+            Vložte součástku a přesuňte ji na správné místo v herním světě.
+            Pojmenujte ji LavaFloor.
+          </li>
+          <li>
+            Změňte velikost dílu tak, aby přesně zakrýval podlahu
+          </li>
+          <li>
+            Podlaha bude vypadat jako láva díky instalaci materiálu
+            Neon a dodá mu oranžovou barvu
+          </li>
+          <li>
+            Vložte skript do vzoru a přejmenujte jej na KillPlayer a odstraňte výchozí kód a vytvořte proměnnou pro lávu
+          </li>
+          <li>
+            Vytvoříme si proměnnou <strong>lava = script.Parent</strong> a funkci <strong>local function
+              killPlayer(otherPart)</strong>
+          </li>
+          <li>
+            Jestliže chceme zabít hráče, musíte z modelu postavy získat objekt Humanoid. To lze provést pomocí
+            FindFirstChild. Předejte
+            mu název hledaného objektu a on vypíše první odpovídající podřízený prvek, který v tomto objektu najde.
+            Volejte FindFirstChild
+            pro proměnnou partParent с Humanoid jako podřízený prvek, který má být nalezen, a výsledek uložte do nové
+            proměnné s názvem humanoid.
+            <div class="code">
+              <div class="code-content">
+                <br><br>
+                <span class="prikaz">local</span> partParent = otherPart.Parent<br>
+                <span class="prikaz">local</span> humanoid = partParent:FindFirstChild("Humanoid")<br>
+                <br>
+              </div>
+            </div>
+          </li>
+          <li>
+            Vytvoříme si podmínku, která bude určovat jestli se jedna opravdu ho <strong>Humanoida</strong>, který se
+            dotkl <strong>lávy</strong>.
+            A pokud se podmínka vyplní tak nastavíme život <strong>Humanoida</strong> na 0. Výsledek by měl vypadat
+            takhle.
+            <div class="code">
+              <div class="code-content">
+                <br><br>
+                <span class="prikaz">if</span> humanoid <span class="prikaz">then</span><br>
+                humanoid.Health = <span class="variable">0</span><br>
+                <span class="prikaz">end</span>
+                <br>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </section>
 
   </main>
   <footer class="footer">
