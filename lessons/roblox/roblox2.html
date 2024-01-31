@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/roblox/roblox.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -73,7 +74,185 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Roblox lekce 2</h1>
+    <h1>Roblox lekce 2</h1>
+
+    <section>
+      <h2>Mizejících platformy</h2>
+      <p>
+        V předchozí lekci jste se naučili spouštět kód na základě
+        chování hráče. A v této lekci budete moci vytvořit plošinu,
+        která zmizí, když na ni hráč vstoupí.
+      </p>
+      <section>
+        <section>
+          <h3>Základní kostra programu</h3>
+          <p>
+            Níže je ukázka základní kostry programu. Pro náš pomalu mizející platformu
+          </p>
+          <div class="code">
+            <div class="code-content">
+              <span class="prikaz">local</span> platform = <span class="variable">script.Parent</span>, <span
+                class="variable">10</span> <span class="prikaz">do</span><br>
+              <span class="variable">local function</span> zmizeni()<br>
+              <br><br>
+              <span class="prikaz">end</span><br>
+              platform.Touches:Connect(Fade)<br>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Postupný záník platformy</h3>
+          <p>
+            Jelikož chceme, aby platforma nezmizela až moc rychle. Ale jak na to? Můžeme si prvně říct, jak vlastně
+            dokážeme nechat zmizet platformu.
+            Tohle docílíme pomocí vlastnosti <strong>Transparency</strong>. Existuji dvě cesty.
+          </p>
+          <ol>
+            <li>
+              <h4>První a lehčí ale zdlouhavější cesta</h4>
+              <p>
+                Ručně nastavíme <strong>platform.Transparency </strong> na číslo od <strong>0,1</strong> až po
+                <strong>1</strong>.
+                Mezi jednotlivím nastavením uspíme kod vždy na <strong>0,1</strong> sekundy. Výsledek by byl následovně.
+              </p>
+              <div class="code">
+                <div class="code-content">
+                  platform.Transparency = <span class="variable">0.1</span><br>
+                  <span class="skript">wait</span>(0.1)<br>
+                  platform.Transparency = <span class="variable">0.2</span><br>
+                  <span class="skript">wait</span>(0.1)<br>
+                  . <br>
+                  . <br>
+                  . <br>
+                  platform.Transparency = <span class="variable">1</span><br>
+                  <span class="skript">wait</span>(0.1)<br>
+                  <br>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h4>Druhá těžší ale kratší cesta</h4>
+              <p>
+                K vytvoření myzení použijeme <strong>Cyklus</strong>. Přesněji <strong>For</strong> cyklus. Ukázka
+                použítí se nachází níže.
+              </p>
+              <div class="code">
+                <div class="code-content">
+                  <span class="prikaz">for</span> count = <span class="variable">1</span>, <span
+                    class="variable">10</span> <span class="prikaz">do</span><br>
+                  platform.Transparency = <span class="variable">count / 10</span><br>
+                  <span class="skript">wait</span>(0.1)<br>
+                  <span class="prikaz">end</span><br>
+                  <br>
+                </div>
+              </div>
+              <h5>Vysvětlení cyklu</h5>
+              <ul>
+                <li>
+                  <strong>count</strong> = proměnná, do které v průběhu cyklu ukládáme čísla od 1 až do 10
+                </li>
+                <li>
+                  <strong>platform.Transparency</strong> = count / 10, tohle nám nastaví
+                  <strong>platform.Transparency</strong> a cisla 0.1, 0.2,....., 1
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <section>
+            <h4>Chybějící vlastnosti</h4>
+            <p>
+              Již nám chybí pouze nastavení, aby hráž platformou propadl.
+              A poté nechat znova objevit objekt, a nastavit, aby hráč na něj mohl skočit.
+            </p>
+            <div class="code">
+              <div class="code-content">
+                platform.CanCollide = <span class="prikaz">false</span><br>
+                <span class="skript">wait</span>(4)<br>
+                platform.CanCollide = <span class="prikaz">true</span><br>
+                platform.Transparency = <span class="variable">0</span><br>
+              </div>
+            </div>
+          </section>
+
+        </section>
+        <section>
+          <h2>Opatření skriptu</h2>
+          <p>
+            Jelikož teď se nám při každém dotyku spustí script znova. Musíme ošetřit skript tak, aby se spustil pouze
+            jednou.
+            Opatření spočívá v tom, že si vytvoříme jednu <strong>proměnnou</strong>. A ta nám bude určovat jestli skrit
+            už běží nebo ne.
+            Níže je postup jak tohle opatření vyřešit.
+          </p>
+          <ol>
+            <li>
+              <p>
+                Vytvořte si proměnnou <strong><span class="prikaz">local</span> isTouched</strong> a nastavte ji na
+                hodnovtu <strong><span class="prikaz">false</span></strong>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Do funkce zmizeni přidáme logiku pomocí <strong><span class="prikaz">if not</span> isTouched <span
+                    class="prikaz">than</span></strong>
+              </p>
+              <p>
+                Nezapomeňte že na konci musí být <strong><span class="prikaz">end</span></strong>, jelikož ten nám
+                ukončí logiku
+              </p>
+            </li>
+            <li>
+              <p>
+                Hned pod logikou nastavíte proměnnou <strong>isTouched</strong> na hodnotu <strong><span
+                    class="prikaz">true</span></strong>
+              </p>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </section>
+
+
+    <section>
+      <h2>Modelování</h2>
+      <p>
+        V minulých lekcích jste se naučili vytvářet základní obrazce,
+        jako jsou kvádry, koule a válce. Lze je seskupit a vytvořit tak
+        složitější model, ale ne všechny objekty lze tímto způsobem
+        efektivně modelovat, zejména pokud mají "duté" plochy.
+      </p>
+      <p>
+        Při tvoření 3D objektu nezapomeňte na to, že je potřeba mít vypnuté <strong>Collisions</strong>.
+        Panel pro tvorbu najdete v záložce <strong>Model</strong>. Tam najdete dvě tlačítka.
+      <ul>
+        <li>
+          <strong>Union</strong> = nástroj spojuje více částí do jedné
+        </li>
+        <li>
+          <strong>Negate</strong> = odstraní geometrický tvar jedné části z
+          druhé a vytvoří duté oblasti
+        </li>
+      </ul>
+      </p>
+      <h2>Aplikace obrázku na povrch</h2>
+      <p>
+        Všechny primitivní části v Robloxu (bloky, válce, koule a
+        klíny) mají povrch a můžete na ně aplikovat obrázky pomocí
+        funkce Texture nebo Decal.
+      </p>
+      <ul>
+        <li>
+          <strong>Texture</strong> = Textura se opakuje horizontálně i vertikálně po
+          celé ploše. Velikost jednotlivých "dlaždic" vzoru lze
+          měnit a dlaždice samotné lze dokonce posouvat.
+        </li>
+        <li>
+          <strong> Decal </strong> = Obtisk je natažen na celou plochu, což znamená, že
+          jeho vzhled závisí na velikosti plochy
+        </li>
+      </ul>
+    </section>
 
 
 
