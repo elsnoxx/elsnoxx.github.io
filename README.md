@@ -64,13 +64,16 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Youtube
     - [ ] lekce 3 - obrazky
     - [ ] Lekce 4 - obrazky
+    - pridat popisky obsahu k uvodu cele lekce
 - Roblox
     - pridani obrazku k strance env
-    - pridani orbazku k strnace lua
+    - pridani obrazku k strnace lua
     - pridani obrazku k strance lekce 1
-    - [ ] Lekce 1 - samostatna prace
+    - pridani obrazku k strance lekce 2
+    - oprava scirptu na lekci 1
+    - lekce 1 pridat ukazkovou hru
+    - lekce 2 pridat ukazkovou hru
     - [ ] Lekce 2 - samostatna prace
-    - [ ] Lekce 2 - obsah
     - [ ] Lekce 3 - obsah
     - [ ] Lekce 3 - samostatna prace
     - [ ] Lekce 4 - obsah
@@ -81,6 +84,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
  
 
 # Versions
+
+## 20240202 - Update
+- Roblox
+    - Vytvoření lekce 2
 
 ## 20240126 - Update
 - Roblox

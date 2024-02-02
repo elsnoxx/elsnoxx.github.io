@@ -73,10 +73,80 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Roblox lekce 3</h1>
+    <h1>Lekce 3</h1>
 
 
+    <section>
+      <h2>Počítadlo bodů</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <p>
+                V tomto tutoriálu se naučíte, jak vytvořit počítadlo skóre v horní části obrazovky, jako je to na
+                obrázku.
+                Nejlepší je přidat ji do StarterGui tak, aby se zkopírovala do místní herní relace každého hráče při
+                jeho připojení.
+              </p>
+            </td>
+            <td>
+              <img src="" alt="todo">
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
+      <h3>Postup</h3>
+      <ol>
+        <li>
+          V okně průzkumníka umístěte kurzor na položku StarterGui a klikněte na tlačítko plus.
+        </li>
+        <li>
+          Vyberte ScreenGui z nabídky. Tím se vytvoří nová 2D obrazovka překrytá 3D herním světem.
+        </li>
+        <li>
+          Přesuňte kurzor nad objekt ScreenGui, stiskněte tlačítko a vyberte Frame. V levém horním rohu obrazovky se
+          vytvoří prázdný rámeček.
+          Přejmenovat podle jeho obsahu, např. nazvat jej <strong>ScoreBarFrame</strong>.
+        </li>
+        <li>
+          V Properties najděte Size a kliknutím na šipku rozbalte podnabídku. Změňte velikost <strong>X</strong> na
+          <strong>0.25, 0</strong> a <strong>Y</strong> na <strong>0.08, 0</strong>
+        </li>
+      </ol>
+    </section>
+
+
+    <section>
+      <h2>Interaktivní tlačítka</h2>
+      <p>
+        Dále se naučíte vytvářet tlačítka na obrazovce, která lze použít pro nabídky, akce uživatelského rozhraní a
+        další.
+      </p>
+      <section>
+        <h3>Typy tlačítek</h3>
+        <ul>
+          <li>
+            <strong>TextButton</strong> - je podobný jako TextLabel, kromě toho, že jej
+            hráči mohou aktivovat jedním kliknutím nebo dotykem.
+            Jejich vizuální vlastnosti (písmo, barva pozadí, barva tahu
+            atd.) jsou také z velké části stejné
+          </li>
+          <li>
+            <strong>ImageButton</strong> - je podobný interaktivní verzi ImageLabel.
+            Jejich vlastnosti jsou také velmi podobné
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Vytvoření tlačítka</h3>
+        <p>
+          Dále se podíváme na to, jak přidat ImageButton na
+          obrazovku a měnit stav tohoto tlačítka v závislosti na akcích
+          hráče.
+        </p>
+      </section>
+    </section>
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
