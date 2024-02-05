@@ -59,12 +59,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
             text goes here
         </section>
     ```
-- Art of presentation
-    - oprava spaného zobrazení tabulky na strance projekt.html
-- Youtube
-    - [ ] lekce 3 - obrazky
-    - [ ] Lekce 4 - obrazky
-    - pridat popisky obsahu k uvodu cele lekce
+    
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
@@ -73,9 +68,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - oprava scirptu na lekci 1
     - lekce 1 pridat ukazkovou hru
     - lekce 2 pridat ukazkovou hru
-    - [ ] Lekce 2 - samostatna prace
-    - [ ] Lekce 3 - obsah
-    - [ ] Lekce 3 - samostatna prace
+    - Lekce 3 - dodelat obsah
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt word a pdf
@@ -85,9 +78,15 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## 20240202 - Update
+## 20240205 - Update
 - Roblox
     - Vytvoření lekce 2
+    - Vytvoření Lekce 3
+    - Vytvoření Lekce 4
+- Art of presentation
+    - Oprava správného zobrazení tabulky na strance projekt.html
+- Youtube
+    - pridat popisky obsahu k uvodu cele lekce
 
 ## 20240126 - Update
 - Roblox
