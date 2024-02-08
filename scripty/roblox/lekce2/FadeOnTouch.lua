@@ -12,8 +12,8 @@ local function zmizeni()
         wait(3)
         platform.CanCollide = true
         platform.Transparency = 0
-        isTouched = false
+        dotyk = false
     end
 end
 
-platform.Touches:Connect(Fade)
+platform.Touched:Connect(Fade)

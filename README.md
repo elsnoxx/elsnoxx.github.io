@@ -76,6 +76,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt word a pdf
+    - pridani ukazky jak zmenit barvu pomoci scriptu, nize ukazka nastavi objekt na cervenou barvu
+        ``` lua
+        local platform = script.Parent
+        platform.BrickColor = BrickColor.Red()
+        ```
+    - 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
