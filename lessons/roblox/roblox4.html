@@ -73,7 +73,128 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Roblox lekce 4</h1>
+    <h1>Roblox lekce 4</h1>
+    <p>
+      V této leksi si ukážeme jak přidat efekty do prostředí robloxu.
+    </p>
+
+    <section>
+      <h2>Přidání efektů</h2>
+      <p>
+        Chcete-li povolit efekty následného zpracování, přidejte je
+        buď v položce <strong>Camera</strong> pro jednotlivé hráče, nebo do Lighting
+        pro celý server.
+      </p>
+      <ul>
+        <li>
+          <strong>Workspace.Camera</strong> - se používá pro efekty, které se
+          vztahují pouze na konkrétního hráče: rozmazání kamery
+          hráče, pokud je postava zasažena
+        </li>
+        <li>
+          <strong>Lighting</strong> - se používá pro globální efekty, které vidí všichni
+          hráči, např. sluneční světlo
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2>Možné efekty</h2>
+      <ul>
+        <li>
+          <h5>Záře</h5>
+          <p>
+            <strong>BloomEffect</strong> simuluje jasnou záři a používá se k vylepšení
+            stávajících světelných zdrojů. Při zvýšení intenzity efektu
+            budou zářit všechny světlejší části (např. bílý plast nebo
+            neonové materiály)
+          </p>
+        </li>
+        <li>
+          <h5>Rozmazání</h5>
+          <p>
+            BlurEffect rozostří celý herní svět. Jedním z případů
+            použití je rozmazání scény, když má hráč otevřenou nabídku
+            grafického uživatelského rozhraní
+          </p>
+        </li>
+        <li>
+          <h5>Korekce barev</h5>
+          <p>
+            <strong>ColorCorrectionEffect</strong> upravuje vlastnosti barev ve scéně:
+            sytost, odstín, kontrast. Tento efekt se používá ke zlepšení
+            vzhledu světa nebo k vytvoření určité nálady (strašidelné,
+            klidné atd.). Tento efekt lze použít také pro
+            zpětnou vazbu hráče: scéna zčervená, pokud je hráč zasažen.
+          </p>
+        </li>
+        <li>
+          <h5>Hloubka ostrosti</h5>
+          <p>
+            <strong>DepthOfFieldEffect</strong> rozostří části scény, které nejsou
+            zaostřené. Vzdálené objekty mohou být rozmazány, aby hráč upoutal pozornost na určité části scény, například
+            na
+            předmět v obchodě ve hře
+          </p>
+        </li>
+        <li>
+          <h5>Sluneční paprsky</h5>
+          <p>
+            <strong>SunRaysEffect</strong> vytváří kolem Slunce světelnou aureolu s
+            paprsky, které se pohybují po obloze v závislosti na <strong>ClockTime</strong>
+            nebo <strong>TimeOfDay</strong>. Tento efekt vzniká tím, že se objekty ve
+            světě nacházejí mezi hráčovou kamerou a sluncem, což vede k
+            realistickému vykreslení světla a stínu
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>ATMOSFÉRICKÉ ÚČINKY</h3>
+      <p>
+        Objekt <strong>Atmosphere</strong> přibližuje grafiku Robloxu realitě:
+        sluneční světlo se rozptyluje různě v závislosti na hustotě
+        vzduchu a dalších vlastnostech. Simuluje skutečnou "leteckou
+        perspektivu", umožňuje ovládat průchod světla skrz vzdálené
+        objekty, řídí opary, mlhu a záři, takže můžete vytvářet dokonalé
+        západy slunce, mlhavá odpoledne a další.
+      </p>
+    </section>
+
+    <section>
+      <h3>Noční osvětlení - Bodové zdroje světla</h3>
+      <p>
+        <strong>PointLight</strong> vytváří kruhové světlo v jednom bodě. Tento
+        objekt je ideální pro nesměrové zdroje světla: žárovky,
+        pochodně, ohnivé koule. Bodové zdroje světla je třeba vkládat přímo do dílů, sítí
+        nebo přípravků.
+      </p>
+      <ol>
+        <li>
+          Vytvořte model sloupu veřejného osvětlení vedle centrální
+          fontány a vyberte ji.
+        </li>
+        <li>
+          V okně průzkumníka rozbalte podnabídku model a vyberte
+díl <strong>LightCasing</strong>.
+        </li>
+        <li>
+          Změňte <strong>Material</strong> na <strong>Neon</strong> - Vzor bude jasně zářit, i když ve
+skutečnosti nebude vydávat žádné světlo
+        </li>
+        <li>
+          Bez zrušení výběru <strong>LightCasing</strong>, vložte nový <strong>PointLight</strong>
+        </li>
+        <li>
+          Výběrem <strong>PointLight</strong>, upravte hodnoty jasu a barev
+        </li>
+        <li>
+          Poté upravte světlo pomocí vlastnosti Rozsah. Tím se nastaví vzdálenost, na kterou tento zdroj šíří světlo
+        </li>
+      </ol>
+    </section>
 
 
   </main>
