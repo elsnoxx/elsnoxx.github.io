@@ -77,7 +77,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         local platform = script.Parent
         platform.BrickColor = BrickColor.Red()
         ```
-    - 
+    
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
