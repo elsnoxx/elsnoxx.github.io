@@ -102,10 +102,11 @@
           V okně průzkumníka umístěte kurzor na položku StarterGui a klikněte na tlačítko plus.
         </li>
         <li>
-          Vyberte ScreenGui z nabídky. Tím se vytvoří nová 2D obrazovka překrytá 3D herním světem.
+          Vyberte <strong>ScreenGui</strong> z nabídky. Tím se vytvoří nová 2D obrazovka překrytá 3D herním světem.
         </li>
         <li>
-          Přesuňte kurzor nad objekt ScreenGui, stiskněte tlačítko a vyberte Frame. V levém horním rohu obrazovky se
+          Přesuňte kurzor nad objekt <strong>ScreenGui</strong>, stiskněte tlačítko a vyberte <strong>Frame</strong>. V
+          levém horním rohu obrazovky se
           vytvoří prázdný rámeček.
           Přejmenovat podle jeho obsahu, např. nazvat jej <strong>ScoreBarFrame</strong>.
         </li>
@@ -113,6 +114,48 @@
           V Properties najděte Size a kliknutím na šipku rozbalte podnabídku. Změňte velikost <strong>X</strong> na
           <strong>0.25, 0</strong> a <strong>Y</strong> na <strong>0.08, 0</strong>
         </li>
+        <li>
+          Najeďte kurzorem na <strong>ScoreBarFrame</strong>, klikněte na tlačítko
+          plus a vložte <strong>UISizeConstraint</strong>. Vyberte nový objekt omezení
+          a nastavte jeho <strong>MinSize</strong> hodnota <strong>0, 40</strong>.
+          Tím se zabrání zmenšení rámu o méně než 40 pixelů na výšku.
+        </li>
+        <li>
+          Změňte vlastnosti <strong>AnchorPoint</strong> rámu na </strong>0,5, 0</strong>, aby byl umístěn vodorovně
+          uprostřed.
+        </li>
+        <li>
+          Vytvořme průsvitný černý rámeček. Za tímto účelem změňte jeho vlastnosti pozadí.
+        </li>
+        <li>
+          Najeďte kurzorem na <strong>ScoreBarFrame</strong>, klikněte na tlačítko <strong>plus</strong> a vložte
+          <strong>UIListLayout</strong>.
+          Poté nastavta <strong>FillDirection</strong> na <strong>Horizontal</strong> a
+          <strong>VerticalAlignment</strong> na <strong>center</strong>.
+        </li>
+        <li>
+          Najeďte kurzorem na <strong>Frame</strong>, klikněte na tlačítko <strong>plus</strong> a vložte
+          <strong>ImageLabel</strong>.
+          Poté do <strong>Image</strong> vložte <strong>rbxassetid://5673786644</strong> a <strong>Size</strong>
+          nastavte <strong>X</strong> na <strong>0.25, 0</strong> a <strong>Y</strong> na <strong>0, 1</strong>.
+          Dále nastavte <strong>LayoutOrder</strong> na <strong>1</strong> a také
+          <strong>BackgroundTransparency</strong> na <strong>1</strong>.
+        </li>
+        <li>
+          Najeďte kurzorem na <strong>Frame</strong>, klikněte na tlačítko <strong>plus</strong> a vložte
+          <strong>TextLabel</strong>.
+          Poté nastavte v zálozce <strong>Size</strong> hodnotu <strong>X</strong> na <strong>1, 0</strong> a
+          <strong>Y</strong> na <strong>1, 0</strong> jako poslední <strong>SizeConstraint</strong> nastavit na
+          <strong>RelativeYY</strong>.
+        </li>
+        <li>
+          Dále nastavíme <strong>Text</strong> a to <strong>TextColor3</strong> na <strong>255, 200, 100</strong>,
+          <strong>TextSize</strong> na <strong>30</strong> a změňte <strong>Text</strong> na <strong>0</strong>.
+          Také <strong>TextXAlignment</strong> na <strong>Left</strong> a jako poslední nezapomeňte na
+          <strong>BackgroundTransparency</strong> nastavit na <strong>1</strong>.
+
+        </li>
+
       </ol>
     </section>
 
@@ -139,53 +182,51 @@
         </ul>
       </section>
       <section>
-        <h3>Vytvoření tlačítka</h3>
+        <h3>Vytvoření interaktivního tlačítka</h3>
         <p>
-          Dále se podíváme na to, jak přidat ImageButton na
+          Dále se podíváme na to, jak přidat <strong>ImageButton</strong> na
           obrazovku a měnit stav tohoto tlačítka v závislosti na akcích
           hráče.
         </p>
         <ol>
           <li>
-            V okně průzkumníka umístěte kurzor na položku StarterGui,
-            klikněte na tlačítko plus a vložte ScreenGui.
+            V okně průzkumníka umístěte kurzor na položku <strong>StarterGui</strong>,
+            klikněte na tlačítko <strong>plus</strong> a vložte <strong>ScreenGui</strong>.
+            Vyberte nový objekt <strong>ScreenGui</strong> a podobně vložte <strong>ImageButton</strong> ten poté
+            pojmenujte jako <strong>MapGui</strong>.
           </li>
           <li>
-            Vyberte nový objekt ScreenGui a podobně vložte
-          <strong>ImageButton</strong>. Tím přidáte do rohu obrazovky tlačítko s prázdným
-            obrázkem
-          </li>
-          <li>
-            Přejmenujte nové tlačítko tak, aby bylo jasné, co dělá,
-            například pojmenujte tlačítko, které vyvolá mapu,
-            <strong>MapButton</strong>.
-          </li>
-        </ol>
-        <p>
-          Aby se tlačítko dynamicky přizpůsobovalo různým
-          velikostem obrazovky, je nejlepší použít příkaz <strong>Scale</strong>.
-        <ol>
-          <li>
-            V Properties najděte Size a kliknutím na šipku rozbalte její
-            podnabídku.
-          </li>
-          <li>
-            Nastavte vlastnosti velikosti:
+            Vložte obrázky:
             <ul>
               <li>
-                <strong>X</strong> = 0.15, 0
+                Image a vložte rbxassetid://6025368017
               </li>
               <li>
-                <strong>Y</strong> = 0.15, 0
+                HoverImage vložte rbxassetid:// 6025452347
+              </li>
+              <li>
+                PressedImage vložte rbxassetid:// 6025454897
               </li>
             </ul>
           </li>
           <li>
-            Omezte velikost tlačítka na čtverec nastavením parametru
-            <strong>SizeConstraint</strong> na <strong>RelativeYY</strong>.
+            Nastavte <strong>BackgroundTransparency</strong> na <strong>1</strong>.
+          </li>
+          <li>
+            V okně průzkumníka najeďte kurzorem na položku <strong>MapButton</strong> a vložte
+            <strong>LocalScript</strong>. Okamžitě se otevře.
+            Poté vložte tento script:
+            <ul>
+              local button = script.Parent <br>
+              local function onButtonActivated() <br>
+              print("Button activated!") <br>
+              <br>
+              end <br>
+              <br>
+              button.Activated:Connect(onButtonActivated) <br>
+            </ul>
           </li>
         </ol>
-        </p>
       </section>
       <section>
         <h3>Funkce tlačítek</h3>
@@ -194,7 +235,8 @@
         </p>
         <ol>
           <li>
-            Vytvoříme si tlačítko, objekt, který nazveme <strong>Test</strong>. U tlačítka vytvoříte <strong>Script</strong> a <strong>ClickDetector</strong>
+            Vytvoříme si tlačítko, objekt, který nazveme <strong>Test</strong>. U tlačítka vytvoříte
+            <strong>Script</strong> a <strong>ClickDetector</strong>
           </li>
           <li>
             Poté si vytvoříme script
@@ -204,7 +246,7 @@
               local colouredPart = workspace.Test <br>
               <br>
               button.Activated:Connect(function() <br>
-                colouredPart.Color = Color3.new(1, 0, 0) <br>
+              colouredPart.Color = Color3.new(1, 0, 0) <br>
               end) <br>
             </p>
           </li>
@@ -212,7 +254,7 @@
       </section>
     </section>
 
-    <section>
+    <!-- <section>
       <h2>Vytvoření nápovědy</h2>
       <p>
         Výzvy na obrazovce se vytvářejí pomocí příkazu
@@ -255,6 +297,25 @@
         </li>
       </ul>
     </section>
+    <section>
+      <h2>Vytvoření grafického uživatelského rozhraní Surface</h2>
+      <ol>
+        <li>
+          Vytvořte část s názvem InfoBoard.
+        </li>
+        <li>
+          Změňte velikost dílu na 15, 18, 1
+        </li>
+        <li>
+          Vložte SurfaceGui a přejmenujte ji na InfoSurfaceGui.
+        </li>
+        <li>
+          Vložte rámeček do grafického uživatelského rozhraní a
+          pojmenujte ho <strong>BackgroundFrame</strong>. Jedná se o pozadí, na
+          kterém se budou informace zobrazovat.
+        </li>
+      </ol>
+    </section> -->
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
