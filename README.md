@@ -65,6 +65,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridani obrazku k strnace lua
     - pridani obrazku k strance lekce 1
     - pridani obrazku k strance lekce 2
+    - pridani ukazky jak na kolaboraci mezi lidmi na jednom projektu
     - oprava scirptu na lekci 1
     - lekce 1 pridat ukazkovou hru
     - lekce 2 pridat ukazkovou hru
