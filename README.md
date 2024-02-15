@@ -59,7 +59,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
             text goes here
         </section>
     ```
-    
+- Art of presentation
+    - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
@@ -70,6 +71,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 1 pridat ukazkovou hru
     - lekce 2 pridat ukazkovou hru
     - Lekce 3 - dodelat obsah
+    - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt word a pdf
