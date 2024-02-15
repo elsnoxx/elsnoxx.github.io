@@ -61,6 +61,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     ```
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
+    - lekce 2 zmenit "ty naleznete zde" na nejake tlacitko aby to bylo lepe poznat kde najdou hry
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
