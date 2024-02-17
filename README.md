@@ -72,6 +72,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 1 pridat ukazkovou hru
     - lekce 2 pridat ukazkovou hru
     - Lekce 3 - dodelat obsah
+    - pridat stranku jak na kolaboraci, tkj spolu práci mezi vice lidmi na jednom projektu
     - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
     - [ ] Lekce 4 - obsah
     - [ ] Lekce 4 - samostatna prace
