@@ -89,6 +89,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
+## 20240219 - Update
+- Roblox
+    - PPřidání na stránky přeskakove tlacika mimo lekce
+
 ## 20240205 - Update
 - Roblox
     - Vytvoření lekce 2
