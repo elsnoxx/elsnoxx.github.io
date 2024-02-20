@@ -60,9 +60,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         </section>
     ```
     - Upravit vzhled talcitek, zacit pouzivat vice boostrap
+        - zatim vytvoreno pro art of presentation
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
+    - Vytvořit ukol č. 5
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
@@ -93,8 +95,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## 20240220 - Update
 - Roblox
     - Přidání na stránky přeskakove tlacika mimo lekce
+    - Přidání pár obrázku pro stránky env
 - Art of presentation
-    - lekce 2 zmenit "ty naleznete zde" na nejake tlacitko aby to bylo lepe poznat kde najdou hry
+    - Lekce 2 změnění "ty naleznete zde" na tlačítko, tak aby to bylo lépe poznat, kde návŠtěvníci najdou hry
+    - Velepšení vzhledu talačítek
+    - Uprava responzivního texu na úvodní straně lekce
+    - Přidání tlačítka na stažení zadání úkolu a projektu
 
 ## 20240205 - Update
 - Roblox
