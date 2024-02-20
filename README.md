@@ -59,6 +59,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
             text goes here
         </section>
     ```
+    - Upravit vzhled talcitek, zacit pouzivat vice boostrap
+    
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
 - Roblox
