@@ -175,6 +175,60 @@
         objekty, řídí opary, mlhu a záři, takže můžete vytvářet dokonalé
         západy slunce, mlhavá odpoledne a další.
       </p>
+      <ul>
+        <li>
+          Použití <strong>Density</strong> (vlastnost slouží k nastavení počtu částic
+          ve vzduchu). Čím vyšší je hustota, tím více částic a tím více
+          herních objektů a terénu pokryjí. Hustota nemá přímý vliv na
+          skybox (oblohu a horizont), ovlivňuje pouze herní objekty a
+          terén a to, jak bude skybox přes ně viditelný.
+        </li>
+        <li>
+          Majetek <strong>Offset</strong> (kontrast) určuje, jak světlo prochází mezi
+          fotoaparátem a oblohou v pozadí. Pokud tuto hodnotu zvýšíte,
+          získáte siluetu horizontu proti obloze, zatímco pokud ji snížíte,
+          vzdálené objekty se na horizontu rozostří a vytvoří dojem
+          nekonečného otevřeného světa.
+        </li>
+        <li>
+          Vlastnost <strong>Haze</strong> (opar, mlha) vytváří mlžnou atmosféru s
+          viditelným efektem nad obzorem a v dálce. Lze jej kombinovat
+          s Color a navodit tak atmosféru prostředí, např. kouřový odstín
+          vyvolává dojem znečištěné planety
+        </li>
+        <li>
+          Vlastnost <strong>Color</strong> (barva) mění odstín atmosféry a vytváří
+          neuchopitelnou atmosféru. To je nejlepší v kombinaci se
+          zvýšenou hodnotou Haze pro zvýšení viditelného efektu
+        </li>
+        <li>
+          Vlastnost <strong>Glare</strong> nastavuje záři atmosféry a jas slunce.
+          Nastavením vyšší hodnoty pro efekt záře zvýšíte jas slunečního
+          světla ve světě. Chcete-li vidět nějaký účinek <strong>Glare</strong>, hodnota Haze musí
+          být vyšší než <strong>0</strong>.
+        </li>
+        <li>
+          Vlastnost <strong>Decay</strong> (rozpad) nastavuje stín atmosféry směrem
+          od Slunce, které se po obloze pohybuje na základě <strong>ClockTime</strong>
+          nebo TimeOfDay, postupně klesající od hodnoty <strong>Color</strong> na Decay
+        </li>
+      </ul>
+      <p>
+        Abyste viděli jakýkoli účinek <strong>Decay</strong>, hodnoty <strong>Haze</strong> a <strong>Glare</strong> by
+        měla být vyšší než <strong>0</strong>.
+      </p>
+      <h5>Příklady atmosféry</h5>
+      <ol>
+        <li>
+          Západ slunce na Sahaře
+        </li>
+        <li>
+          Noční záliv
+        </li>
+        <li>
+          Tichý les
+        </li>
+      </ol>
     </section>
 
     <section>
@@ -192,11 +246,11 @@
         </li>
         <li>
           V okně průzkumníka rozbalte podnabídku model a vyberte
-díl <strong>LightCasing</strong>.
+          díl <strong>LightCasing</strong>.
         </li>
         <li>
           Změňte <strong>Material</strong> na <strong>Neon</strong> - Vzor bude jasně zářit, i když ve
-skutečnosti nebude vydávat žádné světlo
+          skutečnosti nebude vydávat žádné světlo
         </li>
         <li>
           Bez zrušení výběru <strong>LightCasing</strong>, vložte nový <strong>PointLight</strong>
@@ -208,8 +262,131 @@ skutečnosti nebude vydávat žádné světlo
           Poté upravte světlo pomocí vlastnosti Rozsah. Tím se nastaví vzdálenost, na kterou tento zdroj šíří světlo
         </li>
       </ol>
+      <p>
+        <strong>SpotLight</strong> vyzařuje světelný paprsek ve tvaru kužele. Tento
+        objekt je ideální pro pouliční osvětlení nebo světlomety.
+      </p>
+      <ol>
+        <li>
+          Vyberte si model zakřivené lucerny s názvem <strong>StreetLight</strong>
+          vedle budovy na druhé straně ulice. Jeho světlo nyní směřuje
+          ke stěně budovy, nikoli dolů
+        </li>
+        <li>
+          Otevřete objekt <strong>SpotLight</strong> a zkuste nastavit různé hodnoty
+          vlastnosti <strong>Face</strong>, abyste vybrali plochu nebo osu, ze které má
+          světlo vycházet
+        </li>
+        <li>
+          Upravte vlastnost <strong>Angle</strong>, abyste zvýšili nebo zmenšili úhel
+          šíření světla. Maximální hodnota je <strong>180</strong>, kdy je celá
+          polokoule osvětlena z vrcholu kužele.
+        </li>
+        <li>
+          Experimentujte s různými hodnotami jasu a barvami jako
+          s bodovým zdrojem světla.
+        </li>
+      </ol>
     </section>
 
+
+    <section>
+      <h2>HUDBA NA POZADÍ</h2>
+      <p>
+        Zvuk v Robloxu se vytváří pomocí Sound. Zvuky mohou být
+        lokální, například zvuk vodopádu, nebo globální, tedy sdílené
+        všemi hráči. V této části výukového programu vytvoříme
+        globální zvuk, který bude přehrávat hudbu na pozadí.
+      </p>
+      <ol>
+        <li>
+          Otevřít <strong>Toolbox</strong> a klikněte na <strong>Marketplace</strong>. V rozevírací
+          nabídce vyberte <strong>Audio</strong>.
+        </li>
+        <li>
+          Stiskněte tlačítko <strong>Sort</strong>, a pak v <strong>Creator</strong> zadejte autora, např,
+          <strong>Roblox</strong> nebo <strong>Monstercat</strong> (partnerský label elektronické hudby Robloxu).
+        </li>
+        <li>
+          Úryvky skladeb si můžete poslechnout kliknutím na tlačítko náhledu.
+        </li>
+        <li>
+          Najděte skladbu, klikněte pravým tlačítkem myši na
+          seznam skladeb a vyberte možnost <strong>Copy Asset ID</strong>.
+          Pomocí tohoto ID můžete přidat hudbu na pozadí.
+        </li>
+      </ol>
+      <section>
+        <h3>Přehrávání hudby</h3>
+        <p>
+          Pomocí zkopírovaného ID Asset lze vytvořit nový zvukový
+          objekt Sound. Po konfiguraci skript přehraje hudbu pro
+          každého hráče.
+        </p>
+        <p>
+          Pokud je zvukový objekt spojen s částí, bude zvuk vycházet
+          z této části. Pokud je zvukový objekt potomkem objektu
+          SoundService, bude se přehrávat se stejnou hlasitostí na
+          každém místě herního světa. To znamená SoundService - je
+          ideálním objektem pro ukládání hudby na pozadí.
+        </p>
+        <ol>
+          <li>
+            Do služby <strong>SoundService</strong> vložte objekt <strong>Sound</strong> s názvem
+            <strong>BackgroundMusic</strong>.
+          </li>
+          <li>
+            Ve zvuku, který jste vytvořili, najděte <strong>SoundId</strong>. Vložte zkopírované ID zvuku a stiskněte
+            <strong>Enter</strong>.
+          </li>
+          <li>
+            Zkontrolujte, zda zvuk funguje, stisknutím tlačítka <strong>Preview</strong>.
+          </li>
+          <li>
+            Hudbu na pozadí lze ve hře přehrávat pomocí skriptu.
+            Ve <strong>StarterPlayer</strong>> </strong>StarterPlayerScripts</strong> vytvořte
+            <strong>LocalScript</strong>
+            s názvem <strong>MusicPlayer</strong>.
+          </li>
+          <li>
+            Ve skriptu vytvořte proměnné pro uložení <strong>SoundService</strong> a objekt
+            <strong>BackgroundMusic</strong>.
+          </li>
+          <li>
+            Zvuky se přehrávají pomocí funkce Play. Na novém řádku ji
+            zavolejte do proměnné backgroundMusic
+          </li>
+          <li>
+            Vyzkoušejte hru a ujistěte se, že je hudba slyšet.
+          </li>
+        </ol>
+        <p>
+          Hudba se aktuálně nepřehrává ve smyčce. Původní zvukový
+          soubor může být také příliš hlasitý pro hudbu na pozadí. Tato
+          nastavení lze změnit:
+        <ol>
+          <li>
+            Ve vlastnostech BackgroundMusic povolte Looped.
+          </li>
+          <li>
+            Snižte hlasitost na přibližně 0,25.
+          </li>
+        </ol>
+        </p>
+        <span>
+          local SoundService = game:GetService("SoundService") <br>
+          local backgroundMusic = SoundService.BackgroundMusic <br>
+          <br>
+          backgroundMusic:Play() <br>
+        </span>
+        <p>
+          Po dokončení tohoto projektu můžete experimentovat se
+          skripty, které využívají další funkce v systému Sound. Můžete
+          například míchat skladby v soundtracku nebo hrát různé
+          skladby v různých oblastech herního světa.
+        </p>
+      </section>
+    </section>
 
   </main>
   <footer class="footer">
