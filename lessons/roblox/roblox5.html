@@ -88,7 +88,45 @@
       </table>
     </div>
     <h1 class="mt-5" style="margin-bottom: 64px; ">Roblox lekce 5</h1>
+    <p>
+      V dnešní lekci si ukážeme jak vytvořit lékarníčku a tím oživit hráče.
+    </p>
 
+    <section>
+      <h3>Obnovení zdraví</h3>
+      <p>
+        Nejprve musí skript obnovit zdraví hráče. Tento mechanismus
+        byste měli znát z lekce 2, kde jsme vytvářeli smrtící lávu.
+      </p>
+      <ol>
+        <li>
+          V <strong>ServerScriptService</strong> přidejte skript s názvem <strong>PickupManager</strong>.
+        </li>
+        <li>
+          V tomto skriptu deklarujte konstantu <strong>MAX_HEALTH</strong> s hodnotou <strong>100</strong>.
+        </li>
+        <li>
+          Vytvořte funkci s názvem <strong>onTouchHealthPickup</strong>, přidejte
+          k ní parametr části, která se lékárničky dotýká, a parametr samotné lékárničky.
+          <span>
+            local MAX_HEALTH = 100 <br>
+            <br>
+            local function onTouchHealthPickup(otherPart, healthPickup) <br>
+            <br>
+            end <br>
+          </span>
+        </li>
+        <li>
+          Ve funkci získáte model postavy z nadřazeného prvku
+          <strong>otherPart</strong>. Pak zkontrolujte, zda má <strong>Humanoid</strong>, s použitím
+          <strong>FindFirstChildWhichIsA</strong>.
+        </li>
+        <li>
+          Pokud má objekt <strong>Humanoid</strong>, pak nastavte jeho vlastnost
+          <strong>Health</strong> na hodnotu <strong>MAX_HEALTH</strong>.
+        </li>
+      </ol>
+    </section>
 
 
 
