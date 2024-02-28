@@ -109,11 +109,12 @@
           Vytvořte funkci s názvem <strong>onTouchHealthPickup</strong>, přidejte
           k ní parametr části, která se lékárničky dotýká, a parametr samotné lékárničky.
           <span>
+            <br><br><br>
             local MAX_HEALTH = 100 <br>
             <br>
             local function onTouchHealthPickup(otherPart, healthPickup) <br>
             <br>
-            end <br>
+            end <br><br>
           </span>
         </li>
         <li>
@@ -126,6 +127,127 @@
           <strong>Health</strong> na hodnotu <strong>MAX_HEALTH</strong>.
         </li>
       </ol>
+      <section>
+        <h5>Konečený kód</h5>
+        <span>
+          <br><br><br>
+          local MAX_HEALTH = 100 <br>
+          local ENABLED_TRANSPARENCY = 0.4 <br>
+          local DISABLED_TRANSPARENCY = 0.9 <br>
+          local COOLDOWN = 20 <br>
+          local healthPickupsFolder = workspace:WaitForChild("HealthPickups") <br>
+          local healthPickups = healthPickupsFolder:GetChildren() <br>
+          <br>
+          local function onTouchHealthPickup(otherPart,healthPickup) <br>
+          if healthPickup:GetAttribute("Enabled") then <br>
+          local character = otherPart.Parent <br>
+          local humanoid = character:FindFirstChildWhichIsA("Humanoid") <br>
+          if humanoid then <br>
+          humanoid.Health = MAX_HEALTH <br>
+          healthPickup.Transparency = DISABLED_TRANSPARENCY <br>
+          healthPickup:SetAttribute("Enabled", false) <br>
+          wait(COOLDOWN) <br>
+          healthPickup.Transparency = ENABLED_TRANSPARENCY <br>
+          healthPickup:SetAttribute("Enabled", true) <br>
+          end <br>
+          end <br>
+          end <br>
+          <br>
+          for _, healthPickup in ipairs(healthPickups) do <br>
+          healthPickup:SetAttribute("Enabled", true) <br>
+          healthPickup.Touched:Connect(function(otherPart) <br>
+          onTouchHealthPickup(otherPart, healthPickup) <br>
+          end) <br>
+          end <br>
+        </span>
+      </section>
+    </section>
+
+
+    <section>
+      <h2>Nástroje</h2>
+      <p>
+        Objekt <strong>Tool</strong> je základem každého nástroje v <strong>Roblox</strong>, takže si
+        ho musíte nejprve vytvořit. Vzhled nástrojů lze snadno změnit
+        přidáním objektů, jako jsou např <strong>Parts</strong> a <strong>MeshParts</strong>, v pracovním
+        prostoru, kde je můžete vidět.
+      </p>
+      <ol>
+        <li>Vložte nástroj do pracovní oblasti a pojmenujte jej <strong>Blaster</strong>.</li>
+        <li>Vložte <strong>MeshPart</strong> do nástroje.</li>
+        <li>Nastavte vlastnost <strong>MeshId</strong> na <strong>rbxassetid: //92656610</strong>.</li>
+        <li>Nastavte vlastnost <strong>TextureId</strong> na <strong>rbxassetid: //92658105</strong></li>
+        <li>Nástroj potřebuje část nazvanou <strong>Handle</strong>, kterou si hráč může podržet. Změňte výchozí název <strong>MeshPart</strong> na Handle.</li>
+      </ol>
+      <p>
+        Pokud je nástroj uložen do StarterPack, znamená to, že
+        se bude nacházet v hráčově batohu, když hráč vstoupí do hry
+        nebo je oživen.
+      </p>
+      <section>
+        <h3>Vlastnosti nástroje</h3>
+        <p>
+          Polohu a orientaci nástroje lze změnit pomocí vlastností
+          rukojeti (grip). GripPos změní polohu rukojeti, а GripForward,
+          GripRight a GripUp ovlivní jeho otáčení.
+          Hráč nyní drží blaster za střed, nikoli za rukojeť.
+        </p>
+        <ol>
+          <li>
+            Nastavte vlastnost GripPos nástroje, která má být nastavena na 0, -0.4, 1.1.
+          </li>
+          <li>
+            Stiskněte tlačítko Play a otestujte nástroj.
+          </li>
+        </ol>
+      </section>
+      <p>
+        Popisek je malý textový popis, který se zobrazí, když
+        najedete myší na nástroj na panelu nástrojů Rychlý přístup.
+        Popis obvykle obsahuje název nástroje nebo stručný popis
+        jeho funkce. <strong>Změňte ToolTip na Blaster</strong>.
+      </p>
+      <section>
+        <h3>Přidání zvuků</h3>
+        <p>
+          Chcete-li hráče na tyto události upozornit, můžete při
+          jejich spuštění přehrát zvuk. Nejprve musíme vytvořit zvukové
+          objekty, které budeme používat.
+        </p>
+        <ol>
+          <li>
+            Vložte dva objekty <strong>Sound</strong> do <strong>Handle</strong>.
+          </li>
+          <li>
+            Přejmenujte jeden zvuk na <strong>Equip</strong> a nastavit jeho <strong>SoundId</strong> vlastnost na <strong>rbxassetid://282906960</strong>.
+          </li>
+          <li>
+            Přejmenujte druhý zvuk na <strong>Activate</strong> a nastavte jeho <strong>SoundId</strong> vlastnost na <strong>rbxassetid://130113322</strong>.
+          </li>
+          <li>
+            Vložte <strong>LocalScript</strong> do nástroje a pojmenujte jej <strong>Tool-Controller</strong>.
+            <span>
+              <br><br><br>
+              local tool = script.Parent <br>
+              <br>
+              local function toolEquipped() <br>
+              tool.Handle.Equip:Play() <br>
+              end <br>
+              <br>
+              local function toolActivated() <br>
+              tool.Handle.Activate:Play() <br>
+              end <br>
+              <br>
+              tool.Equipped:Connect(toolEquipped) <br>
+              tool.Activated:Connect(toolActivated) <br>
+              <br> <br> <br> <br>
+            </span>
+          </li>
+          <li>
+            Zvukové efekty blasteru zkontrolujte tak, že nástroj vybavíte a aktivujete kliknutím levým tlačítkem myši.
+          </li>
+        </ol>
+      </section>
     </section>
 
 
