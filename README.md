@@ -78,6 +78,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat stranku jak na kolaboraci, tkj spolu práci mezi vice lidmi na jednom projektu
     - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
     - [ ] Lekce 4 - obsah
+    - zmena pohledu osoby - starterplayer => Camera => cameramode == LockFirstPerson
     - [ ] Lekce 4 - samostatna prace
     - [ ] Projekt word a pdf
     - pridani ukazky jak zmenit barvu pomoci scriptu, nize ukazka nastavi objekt na cervenou barvu

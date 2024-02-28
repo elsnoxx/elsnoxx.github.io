@@ -1,68 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF from File</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-
 <body>
-    <div>
-        <span id="zobrazeni">Tohle ukázkový text, ktery zobrazuje konrast barev.</span>
-    </div>
-    <div class="slidecontainer">
-        <table>
-            <tr>
-                <td>
-                    <h5>Barva pozadí</h5>
-                </td>
-                <td style="padding-left: 50px;">
-                    <input type="range" min="0" max="250" value="0" class="slider" id="background">
-                </td>
-                <td style="padding-left: 50px;">
-                    <span id="back-code"></span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h5>Barva textu</h5>
-                </td>
-                <td style="padding-left: 50px;">
-                    <input type="range" min="0" max="255" value="0" class="slider" id="text">
-                </td>
-                <td style="padding-left: 50px;">
-                    <span id="text-code"></span>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <input type="file" id="fileInput">
+    <button id="generatePDFButton">Generate PDF from File</button>
+
     <script>
-        var backgroundSlider = document.getElementById("background");
-        var textSlider = document.getElementById("text");
-        var backgroundOutput = document.getElementById("back-code");
-        var textOutput = document.getElementById("text-code");
-        var zobrazeni = document.getElementById("zobrazeni");
+        document.getElementById('generatePDFButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file) {
+                generatePDFFromFile(file);
+            } else {
+                console.error('No file selected.');
+            }
+        });
 
-        // Update the background color and display the value
-        backgroundSlider.oninput = function () {
-            backgroundOutput.innerHTML = this.value;
-            updateColors();
-        };
-
-        // Update the text color and display the value
-        textSlider.oninput = function () {
-            textOutput.innerHTML = this.value;
-            updateColors();
-        };
-
-        function updateColors() {
-            var backgroundColor = "rgb(" + backgroundSlider.value + "," + backgroundSlider.value+ "," + backgroundSlider.value+")";
-            var textColor = "rgb(" + textSlider.value + "," + textSlider.value+ "," + textSlider.value+")";
-
-            zobrazeni.style.backgroundColor = backgroundColor;
-            zobrazeni.style.color = textColor;
+        function generatePDFFromFile(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileContent = event.target.result;
+                const pdf = new jsPDF();
+                pdf.fromHTML(fileContent, {
+                    callback: function (pdf) {
+                        pdf.save("generated.pdf");
+                    }
+                });
+            };
+            reader.readAsText(file);
         }
     </script>
 </body>
-
 </html>
