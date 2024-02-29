@@ -65,6 +65,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
     - Vytvořit ukol č. 5
+    - pridani ukazky praci k ukoluvm ve forme pdf, aby to nemohli kopirova
+    
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
