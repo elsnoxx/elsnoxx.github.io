@@ -53,6 +53,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 ## ToDo List
 - General
+    - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat do html a pak vytvaret
     - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
      ``` html
         <section>
