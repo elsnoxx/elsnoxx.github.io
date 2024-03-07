@@ -71,8 +71,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
-    - pridani obrazku k strance lekce 1
+    - pridani obrazku k strance lekce 1, pridat datum pridani robloxu na windows 2006
     - pridani obrazku k strance lekce 2
+    - pridani ukazku jak upravovat teren je to tlacitko Editor, a pote zalozka create se da vygenerovat teren, a v zalozce Edit je mozna editace terenu
     - pridani ukazky jak na kolaboraci mezi lidmi na jednom projektu
     - oprava scirptu na lekci 1
     - lekce 1 pridat ukazkovou hru
@@ -89,7 +90,18 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         local platform = script.Parent
         platform.BrickColor = BrickColor.Red()
         ```
-    
+- Html & CSS
+    - lekce 1 obsah
+    - lekce 2 obsah
+    - lekce 3 obsah
+    - lekce 4 obsah
+    - lekce 5 obsah
+    - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
+    - Aktualizovat IDE ktere se bude pouzivat, pouzivat se bude VSC, a extensiony na html a css a prote live server
+
+
+
+
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
