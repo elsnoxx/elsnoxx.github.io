@@ -12,4 +12,52 @@
     background-color: #f1f1f1;
     padding: 10px;
   }
+
+
+  .mid {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 200px;
+  }
+
+.samprace {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-size: 30px;
+}
+
+
+.tag{
+  color: blue;
+}
+.tag1{
+  color: blue;
+  margin-left: 20px;
+}
+.tag2{
+  color: blue;
+  margin-left: 30px;
+}
+.tag3{
+  color: blue;
+  margin-left: 40px;
+}
+.tag4{
+  color: blue;
+  margin-left: 50px;
+}
+.stred {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.code{
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: lightcyan;
+  padding: 10px;
+}
   

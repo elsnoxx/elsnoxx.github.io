@@ -100,9 +100,7 @@
     </p>
     <p>
       Nejprve začneme s lehkou teorii a poté si uděláme naše vývojářské prostředí.
-      Kde si bytvoříme náši první webovou stránku. Výsledkem této lekce bude tato
-      <a href="/lessons/html-css/ukazky/html-css-1/ukazka1.html" target="_blank" rel="noopener noreferrer">webová
-        stránka</a>
+      Kde si bytvoříme náši první webovou stránku. Výsledkem této lekce bude vámi vytvořená první stránka.
     </p>
     <div class="odstavec">
       <h1>Povolání ve vývoji</h1>
@@ -146,98 +144,32 @@
       </div>
     </div>
 
+    <section>
+      <h2>Technologické směry ve vývoji webových stránek</h2>
+      <img class="myImg" src="/img/html-css/backend-frontend.png" alt="První webová stránka"
+              style="width:100%; max-width:3000px; height: auto" loading="lazy">
+    </section>
 
-    <div class="odstavec">
-      <h1>Jak fungují stránky</h1>
-      <p class="otazka"><strong>Hosting</strong></p>
 
-      <p>
-        Je to služba, která poskytuje místo pro umístění
-        informací na serveru trvale připojeném k internetu.
-        Ve skutečnosti je hosting nějaký počítač, na který můžete
-        umístit svou stránku a libovolný uživatel k němu bude mít
-        přístup.
-        <br><br>
-        Hosting je také možné udělat pomocí svého počítači,
-        avšak existuje několik požadavků:
-      <ul>
-        <li>počítač musí být pořád zapnutý</li>
-        <li>musí být neustály přístup k internetu</li>
-        <li>statická IP-adresa</li>
-      </ul>
-      </p>
-      <p class="otazka"><strong>Název domény</strong></p>
-      <p>
-        Je to jedinečný název stránky, který
-        slouží pro přístup k hostingu.
-        <strong>Příklad domény</strong> – site.com, site.org.
-      </p>
-
-    </div>
-
-    <div class="odstavec">
-      <table>
-        <tr>
-          <td>
-            <h1>Prostředí pro vývoj</h1>
-            <p>
-              Je spousta možných prostředí, které nám umožní vývoj webových stránek. Ale já pro naši lekci vybral právě
-              program <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Visual
-                Studio Code</a>. Hlavní důvod proč budeme
-              používat
-              tento program je, že jednoduše nám udělá server, který se bude automaticky aktualizovat a nemusíte ručně
-              znova načíst
-              celou stránku.
-            </p>
-            <p>
-              <strong>Potřebné rozšíření</strong>
-            <p>
-              Níže jsou názvy rozšíření, které si doinstalujeme a svou práci si ulehčíme.
-              Červená čtvereček na fotce vedle nám ukazuje místo kde se instalují veškeré rozšíření.
-              Do zeleného obdélníku vložíme níže napsané nazázvy a jeden po druhém je stáhneme.
-            </p>
-            <ul>
-              <li>ms-vscode.live-server</li>
-              <li>ecmel.vscode-html-css</li>
-            </ul>
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/html-css/visual-studio-code-extension.avif"
-              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
-    </div>
 
     <div class="odstavec">
       <h1>První webová stránka</h1>
       <p>
         <strong>Co to znamená HTML?</strong>
       <ul>
-        <li>Hyper Text Markup Language neboli Hypertextový značkovací jazyk</li>
+        <li>Hyper Text Markup Language neboli <strong>Hypertextový značkovací jazyk</strong></li>
       </ul>
       </p>
-      <table>
-        <tr>
-          <td>
-            <p>
-              Pokud jsme vše zvládly. Vytvoříme si náš první web. Souborv vytvoříme za pomocí Visual Studia Code.
-              Ten si pojmenujeme takhle: <strong>prvniweb.html</strong>. A pokud máme vše dobře nainstalované tak
-              stačí napsat zkratku <strong>doc </strong>. Pak bychom měli dostat nápovědu a poté ji potvrdit enterem.
-              Výsledek by měl vypadat jak je vedle ukázáno na brázku.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/html-css/prvni-web.avif" alt="První webová stránka"
-              style="width:100%; max-width:3000px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
+      <p>
+        <strong>Víte co znamená slovo Hypertext</strong>
+        <ul>
+          <li>
+            Je to způsob strukturování textu. Obsahuje hyper linky neboli odkazy.
+          </li>
+        </ul>
+      </p>      
     </div>
 
-    <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka1.html" width="100%" height="410"
-      style="border:none;"></iframe>
 
     <div class="odstavec">
       <h1>Základní struktura HTML dokumentu</h1>
@@ -350,11 +282,12 @@
       </ul>
     </div>
 
-    <div class="odstavec">
-      <h6>Samostaný úkol č.1</h6>
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1</h3>
       <p>Vašim úkolem bude vytvořit stánku, která je pod textem ukázána.</p>
+      <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka2.html" width="100%" height="170" style="border:5;"></iframe>
     </div>
-    <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka2.html" width="100%" height="170" style="border:5;"></iframe>
+    
 
     <div class="odstavec">
       <h1>Základní struktura CSS</h1>
@@ -391,37 +324,32 @@
         <li>Změna barvy písma - <strong>color</strong></li>
         <li>Změna stylu textu - <strong>font-family</strong></li>
         <li>Změna velikosti textu - <strong>font-size</strong></li>
+        <li>Tučnost text - <strong>font-weight</strong></li>
         <li>Zarovnání textu - <strong>text-align</strong></li>
         <li>Odstarnění stylu u odkazu - <strong>text-decoration</strong></li>
         <li>Vytvoření místa kolem textu - <strong>margin</strong></li>
         <li>Vytvoření prostoru kolem obsahu - <strong>padding</strong></li>
         <li>Šířka a výška - <strong>width, height</strong></li>
         <li>Vytvoři box kolem textu - <strong>border-radius</strong></li>
+        <li>Odsazení textu - <strong>text-indent</strong></li>
       </ul>
     </div>
 
-    <div class="odstavec">
-      <h6>Samostaný úkol č.2</h6>
+    <section>
+      <h3>Používání CSS</h3>
+      <p>
+        Stylovaní v HTML za pomocí CSS můžeme docílit různými zpusoby. A to buď přímo v HTML tagu, nebo pomocí třídy či ID HTML tagu.
+      </p>
+      <p>
+        Stylování můžeme použít přímo v HTML dokumentu a nebo v souborem mimo.
+      </p>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.2</h3>
       <p>Vašim úkolem bude napodobit tuhle stránku. K vytvoření použijte stránku z předhozí samostané práce.</p>
       <iframe src="/lessons/html-css/ukazky/html-css-1/ukazka1.html" width="100%" height="409"
         style="border:5;"></iframe>
-    </div>
-
-
-    <div class="accordion">
-      <div class="panel">
-        <div class="panel-heading">Sekce 1</div>
-        <div class="panel-content">
-          Obsah sekce 1
-        </div>
-      </div>
-      <div class="panel">
-        <div class="panel-heading">Sekce 2</div>
-        <div class="panel-content">
-          Obsah sekce 2
-        </div>
-      </div>
-      <!-- Přidat další panely podle potřeby -->
     </div>
 
 
