@@ -99,7 +99,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
     - Aktualizovat IDE ktere se bude pouzivat, pouzivat se bude VSC, a extensiony na html a css a prote live server
 
-
+- Python Beginer
+    - lekce 1 obsah - upravit text k vyvojovemu prostredi
 
 
 - Construct
