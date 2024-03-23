@@ -91,23 +91,33 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         platform.BrickColor = BrickColor.Red()
         ```
 - Html & CSS
-    - lekce 1 obsah
-    - lekce 2 obsah
-    - lekce 3 obsah
-    - lekce 4 obsah
-    - lekce 5 obsah
+    - lekce 3 obsah, ukol
+    - lekce 4 obsah, ukol
+    - lekce 5 obsah, ukol
     - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
-    - Aktualizovat IDE ktere se bude pouzivat, pouzivat se bude VSC, a extensiony na html a css a prote live server
 
 - Python Beginer
-    - lekce 1 obsah - upravit text k vyvojovemu prostredi
-
+    - lekce 2 obsah, ukol
+    - lekce 3 obsah, ukol
+    - lekce 4 obsah, ukol
+    - lekce 5 obsah, ukol
+    - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
 
 # Versions
+
+## 20240323 - Update
+- Html & CSS
+    - lekce 1 obsah, ukol
+    - lekce 2 obsah, ukol
+    - Aktualizovat IDE ktere se bude pouzivat, pouzivat se bude VSC, a extensiony na html a css a prote live server
+- Python Beginer
+    - lekce 1 obsah - upravý text, upravý text k vyvojovemu prostredi, úkol č. 1, formátovaný tisk
+- Závěrečná prezentace
+    - opravit tak aby byla více k pochopení, trochu mate a dost nevystihuje co mají děti udělat
 
 ## 20240220 - Update
 - Roblox
