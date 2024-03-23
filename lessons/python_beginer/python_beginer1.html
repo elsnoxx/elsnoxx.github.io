@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/python.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -74,16 +75,15 @@
   <!-- Begin page content -->
   <main role="main" class="container">
     <div>
-      <table class="nav-time">
+      <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer.html';">Předchozí
-              lekce</button>
-            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer2.html';">Následují
+            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer.html';" class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer2.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
-            <p class="nav-time-span" id="cas-text"><span id="cas"></span></p>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
           </td>
         </tr>
       </table>
@@ -93,10 +93,11 @@
     <div class="odstavec">
       <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 1 - Python</h1>
       <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti <strong>Microsoft</strong> s názvem
-      <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-      Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginer/vsc.html">zde</a>.
-    </p>
+        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
+        <strong>Microsoft</strong> s názvem
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
+        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginer/vsc.html">zde</a>.
+      </p>
     </div>
 
     <div class="odstavec">
@@ -108,17 +109,6 @@
         <li>Je mozne pomocí něj vytvořit spousty veci, jako je <strong>web, aplikace pro PC i mobil</strong></li>
       </ul>
     </div>
-
-<!--     <div class="odstavec">
-      <h2>Prostředí pro vývoj</h2>
-      <p>
-        Je spousta možných vývojových prostředí, které nám umožní vývoj v Pythonu. Ale pro naši lekci
-        vybral jsem právě program od společnosti <strong>JET BRAINS</strong>, který se jmenuje
-        <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener noreferrer">PyCharm</a>.
-        Hlavní důvod proč budeme používat tento program je, že nám ulehčí práci a ukáže vám chyby, které jste udělali.
-        Popřípadně vás navede jak dále.
-      </p>
-    </div> -->
 
     <div class="odstavec">
       <h2>První program</h2>
@@ -143,6 +133,20 @@
           </td>
         </tr>
       </table>
+
+      <h3>Formátovaný tisk</h3>
+      <p>
+        Jelikož jsme si ukázali jak vytisknout cokoliv do konzole.
+        Ted si ještě ukážeme jak tohle zkráslit a k tomu použijeme funkci <span class="prikaz">format()</span>.
+        Níže naleznete jak se funkce používá a jak vám vypíše do konzole.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <font  color="purple">print</font>(<font color="#008000">"Moje jméno je {0}, a je mi {1}". <span class="prikaz">format</span>("Richard",23)</font>)
+        </code>
+      </pre>
+      <img class="myImg" src="/img/python/lekce1/formatPrint.png" alt="Formátovaný výpis"
+        style="width:100%; max-width:300px; height: auto" loading="lazy">
     </div>
 
     <div class="odstavec">
@@ -180,89 +184,112 @@
       <p>
         Máme celou řadu typy našich proměnnych.
         Ale niže je ukázka těch nejdůležitější proměnných,
-        které se používají nejvíce. Vždy bude nazav a pote ukazka jak se
-        promenná používá a co může obsahovat
-      </p>
-      <ul>
-        <li>
-          <strong>INTEGER</strong>
-          <ul>
-            <li>
-              Tato promenná se používám jenom na celé čísla. Takže čísla bez desetiné čárky.
-              <br><br>
-              <strong>Např.</strong> 3, 6, 8 , 10 , 10000
-            </li>
-            <li>
-              cislo = 3<br>
-              cislo = 6<br>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>FLOAT</strong>
-          <ul>
-            <li>
-              Tato promenná se používám jenom na desetinné čísla. Takže čísla, které mají desetiné čárky.
-              <strong>V Pythonu pišeme misto desetine čárky (,) tečku (.)</strong>
-              <br><br>
-              <strong>Např.</strong> 3.0, 6.5, 8.3333 , 10.2123123 , 10000.01023
-            </li>
-            <li>
-              cislo = 3.0<br>
-              cislo = 10.2123123<br>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>BOOLEAN</strong>
-          <ul>
-            <li>
-              Tato promenná se používám jenom na logické výsledky. Takže prakticky to je jako odpověď na naše otazky.
-              Jemnuji se pravda a nepravda
-              <br><br>
-              <strong>Např.</strong> true, false
-            </li>
-            <li>
-              pravda = true<br>
-              nepravda = false<br>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>STRING</strong>
-          <ul>
-            <li>
-              Tato promenná se používám jenom na text. Takže pokud se jedná o pismeno, slovo nebo i větu či věty.
-              Použijeme pravě tuto proměnnou.
-              <strong>V Pythonu pišeme text vždy do uvozovek, jsou to tyhle ""</strong>
-              <br><br>
-              <strong>Např.</strong> "s", "ahoj", "Jak se mas" , "10.2123123"
-            </li>
-            <li>
-              pismeno = "s"<br>
-              slovo = "ahoj"<br>
-              veta = "Jak se mas"<br>
-            </li>
-          </ul>
-        </li>
+        které se používají nejvíce. Vždy bude nazav a pote ukázka jak se
+        promenná používá a co může obsahovat.
+      <ul style="font-weight: bold;">
+        <li>Celá čísla (integer)</li>
+        <li>Desetinná čísla (float)</li>
+        <li>Řetězce (string)</li>
+        <li>Booleovské hodnoty (boolean)</li>
       </ul>
+      </p>
+
+      <section class="odstavec">
+        <h5>
+          A teď si ukážeme jednu po druhém, vysvětlíme na co jsou a jak fungují.
+        </h5>
+        <ul>
+          <li>
+            <strong>INTEGER</strong>
+            <ul>
+              <li>
+                Tato promenná se používám jenom na celé čísla. Takže čísla bez desetiné čárky.
+                <br><br>
+                <strong>Např.</strong> 3, 6, 8 , 10 , 10000
+              </li>
+              <li>
+                cislo = 3<br>
+                cislo = 6<br>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>FLOAT</strong>
+            <ul>
+              <li>
+                Tato promenná se používám jenom na desetinné čísla. Takže čísla, které mají desetiné čárky.
+                <strong>V Pythonu pišeme misto desetine čárky (,) tečku (.)</strong>
+                <br><br>
+                <strong>Např.</strong> 3.0, 6.5, 8.3333 , 10.2123123 , 10000.01023
+              </li>
+              <li>
+                cislo = 3.0<br>
+                cislo = 10.2123123<br>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>BOOLEAN</strong>
+            <ul>
+              <li>
+                Tato promenná se používám jenom na logické výsledky. Takže prakticky to je jako odpověď na naše otazky.
+                Jemnuji se pravda a nepravda
+                <br><br>
+                <strong>Např.</strong> true, false
+              </li>
+              <li>
+                pravda = true<br>
+                nepravda = false<br>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>STRING</strong>
+            <ul>
+              <li>
+                Tato promenná se používám jenom na text. Takže pokud se jedná o pismeno, slovo nebo i větu či věty.
+                Použijeme pravě tuto proměnnou.
+                <strong>V Pythonu pišeme text vždy do uvozovek, jsou to tyhle ""</strong>
+                <br><br>
+                <strong>Např.</strong> "s", "ahoj", "Jak se mas" , "10.2123123"
+              </li>
+              <li>
+                pismeno = "s"<br>
+                slovo = "ahoj"<br>
+                veta = "Jak se mas"<br>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
       <div class="odstavec">
         <h2>Vstup od uživatele</h2>
         <p>
           Pro práci s uživatelským vsupem je nutné poušít funkci <strong>input()</strong>.
-          Je potřeba si zapamatovat že vstum bude vždy <strong>TEXT</strong>.
+          Je potřeba si zapamatovat že vstum bude vždy <strong>TEXT</strong>. Níže naleznete ukázku
+          jak se tento příkaz používá.
         </p>
+        <pre class="python">
+          <code style="font-weight: bolder;">
+            <span class="prommenna">jmeno</span> = <span class="prikaz">input</span>(<span class="text">"Zadej své jméno: "</span>)
+          </code>
+        </pre>
         <p>
           Abychom vstup mohli zmenit vstupní <strong>TEXT</strong> na čísla. Použijeme k tomu funkci
           <strong>int()</strong>
         </p>
+        <pre class="python">
+          <code style="font-weight: bolder;">
+            <span class="prommenna">jmeno</span> = <span class="prikaz">int</span>(<span class="prikaz">input</span>(<span class="text">"Zadej svůj věk: "</span>))
+          </code>
+        </pre>
         <table>
           <tr>
-            <td>Ukazka jak na vstup od uživatele</td>
-            <td>
-              <img class="myImg" src="/img/python/lekce1/vstup.avif" alt="Promenne v praxi"
-                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            <td>Ukázka jak to v praxi funguje</td>
+            <td style="padding-left: 30px;">
+              <img class="myImg" src="/img/python/lekce1/ukazkaVstupu.avif" alt="Promenne v praxi"
+                style="width:100%; max-width:3000px; height: auto" loading="lazy">
             </td>
           </tr>
         </table>
@@ -272,15 +299,107 @@
         <h2>Operace</h2>
         <p>
           Operace je možné provádět s libovolnými čísly (celými a také s desetinimi cisli) a také s proměnnými.
-
         </p>
-        <ul>
-          <li>sčítání</li>
-          <li>odčítání</li>
-          <li>násobek</li>
-          <li>podíl</li>
-          <li>zbytek</li>
+        <ul style="font-weight: bold;">
+          <li>Sčítání</li>
+          <li>Odčítání</li>
+          <li>Násobek</li>
+          <li>Podíl</li>
+          <li>Celé dělení</li>
+          <li>Zbytek (Modulo)</li>
         </ul>
+        <section class="odstavec">
+          <h5>
+            A teď si ukážeme jednu po druhém, vysvětlíme na co jsou a jak fungují.
+          </h5>
+          <ul>
+            <li>
+              <strong>Sčítání</strong>
+              <ul>
+                <li>
+                  Používáme pro sčítání dvou čísel. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">3</span> + <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>Odčítání</strong>
+              <ul>
+                <li>
+                  Používáme pro odečítání jednoho čísla od druhého. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">3</span> - <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>Násobení</strong>
+              <ul>
+                <li>
+                  Používáme pro násobení dvou čísel. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">3</span> * <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>Dělení</strong>
+              <ul>
+                <li>
+                  Používáme pro dělení jednoho čísla druhým. Výsledek může být desetinné číslo. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">20</span> / <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>Celé dělení</strong>
+              <ul>
+                <li>
+                  Používáme pro dělení jednoho čísla druhým, ale výsledek bude celé číslo, pokud je to možné. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">21</span> // <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            <li>
+              <strong>Modulo neboli Zbytek</strong>
+              <ul>
+                <li>
+                  Vrací zbytek po celočíselném dělení jednoho čísla druhým. Například:
+                </li>
+              </ul>
+              <pre class="python">
+                <code style="font-weight: bolder;">
+                  <span class="prommenna">vysledek </span> = <span class="cislo">21</span> % <span class="cislo">5</span>
+                  <span class="prikaz">print</span>(<span class="prommenna">vysledek</span>) 
+                </code>
+              </pre>
+            </li>
+            
+          </ul>
+        </section>
       </div>
 
 
@@ -304,6 +423,42 @@
         </div>
 
       </div>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Domácí úkol</h2>
+      <p>
+        Vašim úkolem bude napsat program, který vyzve uživatele, aby zadal svoje
+        jméno a potom toho uživatele pozdraví. Program musí obsahovat
+        části uvedené níž. Veškeré použité dovednosti jsme si ukázali na
+        dnešní lekci.
+        Jakmile budete to mít hotové odevzdejte do <a
+          href="https://mystat.itstep.org/cs/auth/login/index?returnUrl=%2Fcs%2Fmain%2Fdashboard%2Fpage%2Findex">
+          <strong>Mystat</strong>
+        </a>
+      </p>
+      <ul>
+        <li><strong>Vstup jmena se udělá přes funkci <span class="prikaz">input()</span>.</strong></li>
+        <li><strong>Výstupní pozdrav se udělá přes funkci <span class="prikaz">print()</span>.</strong></li>
+      </ul>
+      <h5 style="padding-top: 50px;">Nechci aby jste použili jaké koliv AI na generování tohoto úkol.</h5>
+    </div>
+
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <h5>Zadání úkolu</h5>
+          </td>
+          <td style="padding-left: 50px;">
+            <button onClick='download("/download/html-css/html-css-1.pdf")' class="btn btn-primary"
+              style="font-weight: bold;">
+              stažení</button>
+          </td>
+        </tr>
+      </table>
+      <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
     </div>
 
     <!-- The Modal -->
