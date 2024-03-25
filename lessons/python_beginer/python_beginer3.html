@@ -78,8 +78,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer2.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer4.html';" class="btn btn-primary">Následují
+            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer2.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer4.html';"
+              class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -103,7 +105,36 @@
         Také se podíváma a vysvětlíme si jak fungují cykly.
       </p>
     </div>
+    <section class="odstavec">
+      <h3>Random čísla</h3>
+      <p>
+        Jelikož budeme často potřebovat nějké random číslo. Ukážeme si jak toho docíli v pythonu a jak vygenerovat
+        random čísla. Pokud budem chtit používat random čísla budeme muset přidat knihovnu pomocí <strong><span class="prikaz">import</span> random</strong>.
+        Poté čísla 0 a 10 v <strong>random.randint(0, 10)</strong>, značí v jakém rozsahu se mi má číslo pohybovat.
+      </p>
+      <table>
+        <tr>
+          <td>
+            <pre class="python">
+              <code style="font-weight: bolder;">
+                <span class="prikaz">import</span> random
 
+                <span class="text">nahodne_cislo</span> = <span class="prikaz">random.randint</span>(<span class="cislo">0</span>, <span class="cislo">10</span>)
+                <span class="prommenna">print</font>(<span class="text">nahodne_cislo</span>)
+              </code>
+            </pre>
+          </td>
+          <td style="padding-left: 50px;">
+            <img class="myImg" src="/img/python/lekce3/randomcislo.png" alt="Formátovaný výpis"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </td>
+        </tr>
+      </table>
+
+
+      </div>
+
+    </section>
     <div class="odstavec">
       <h2>Podmínky - konstrukce</h2>
       <p>
