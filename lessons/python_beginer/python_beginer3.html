@@ -109,7 +109,8 @@
       <h3>Random čísla</h3>
       <p>
         Jelikož budeme často potřebovat nějké random číslo. Ukážeme si jak toho docíli v pythonu a jak vygenerovat
-        random čísla. Pokud budem chtit používat random čísla budeme muset přidat knihovnu pomocí <strong><span class="prikaz">import</span> random</strong>.
+        random čísla. Pokud budem chtit používat random čísla budeme muset přidat knihovnu pomocí <strong><span
+            class="prikaz">import</span> random</strong>.
         Poté čísla 0 a 10 v <strong>random.randint(0, 10)</strong>, značí v jakém rozsahu se mi má číslo pohybovat.
       </p>
       <table>
@@ -284,6 +285,24 @@
             Dostanete dvě čísla a vypíšete jestli první číslo je větší nebo menší než číslo druhé.
           </ul>
         </li>
+        <li>
+          <strong>Nákupní kalkulačka</strong>
+          <table>
+            <tr>
+              <td>
+                <p>
+                  Dostanete kolik stojí jablka a banány za kilo. Poté dostanete kolik kilo jablek nebo banánů bylo
+                  naváženo a vy poté vypíšete kolik za to zaplatíte. Jak by tohle mělo vypadat naleznete níže.
+                </p>
+              </td>
+              <td style="padding-left: 50px;">
+                <img class="myImg" src="/img/python/lekce3/priklad3.png" alt="Nákupní kalkulačka"
+                  style="width:100%; max-width:300px; height: auto" loading="lazy">
+              </td>
+            </tr>
+          </table>
+
+        </li>
       </ul>
     </div>
 
@@ -316,16 +335,31 @@
     &emsp;&emsp;&emsp;&emsp;<span class="podminka">break</span>
     </div>
 
+
     <div class="odstavec">
-      <h4>Samostatná práce</h4>
+      <h2>Samostatna práce</h2>
       <p>
-        Naprogramujte hru, která se jmenuje <strong>Uhádni číslo, které si mylím</strong>.
+        Naprogramujte hru, která se jmenuje <strong>Uhádni číslo, které si mylím</strong>. Hádané číslo se vygeneruje jednou a potom se to číslo hádá.
+        Hra pojede tak dlouho dokud uživatel neuhádne číslo a nebo udělá 3 špatných odpovědí.
       </p>
       <ul>
-        <li>použijte modul random</li>
-        <li>čísla budou v rozmezí 0 - 10</li>
-        <li>program napíše jestli jste řekli menší nebo větší číslo, než je hádané</li>
+        <li><strong>Použijte modul random <span class="prikaz">input</span> <span class="text">random</span></strong></li>
+        <li><strong>čísla budou v rozmezí <span class="cislo">0</span> - <span class="cislo">10</span></strong></li>
+        <li><strong>Program napíše jestli jste řekli menší nebo větší číslo, než je hádané</strong></li>
       </ul>
+      <div class="center">
+        <table>
+          <tr>
+            <td>
+              Ukázka zde:
+            </td>
+            <td>
+              <img class="myImg" src="/img/python/lekce1/samostatna-prace.avif" alt="Promenne v praxi"
+                style="width:100%; max-width:300px; height: auto" loading="lazy">
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
 
 
@@ -362,6 +396,13 @@
         </tr>
       </table>
       <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
   </main>
