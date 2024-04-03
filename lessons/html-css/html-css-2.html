@@ -118,8 +118,8 @@
         </p>
       </div>
       <p>
-        Seznamy jsou tvořené v html za pomoci kontejneru &lt;ul&gt; a do nej se pak vkladaji prvky s tagem &lt;ol&gt;
-        pro seznam bez značeni a nebo &lt;li&gt; pro seznam s kolečky.
+        Seznamy jsou tvořené v html za pomoci kontejneru <strong>&lt;ul&gt;</strong> a do nej se pak vkladaji prvky s tagem <strong>&lt;ol&gt;</strong>
+        pro seznam bez značeni a nebo <strong>&lt;li&gt;</strong> pro seznam s kolečky.
       </p>
     </div>
 
@@ -144,8 +144,8 @@
               <span class="tag">&lt; /ul &gt;</span> <br>
             </span>
           </td>
-          <td>
-            <ul class="code">
+          <td class="code">
+            <ul>
               <li>Width</li>
               <li>Height</li>
               <li>SRC</li>
@@ -175,8 +175,8 @@
               <span class="tag">&lt; /ol &gt;</span> <br>
             </span>
           </td>
-          <td>
-            <ol class="code">
+          <td class="code">
+            <ol >
               <li>Width</li>
               <li>Height</li>
               <li>SRC</li>
@@ -215,60 +215,60 @@
         <tr>
           <td class="code">
             <span class="tag">&lt; table &gt;</span> <br>
-            <span class="tag1">&lt; /caption &gt;</span>Monthly savings<span class="tag">&lt; /caption &gt;</span> <br>
+            <span class="tag1">&lt; /caption &gt;</span>Měsícly úspory<span class="tag">&lt; /caption &gt;</span> <br>
             <span class="tag2">&lt; thead &gt;</span> <br>
             <span class="tag3">&lt; tr &gt;</span> <br>
-            <span class="tag4">&lt; th &gt;</span>Month<span class="tag">&lt; /th &gt;</span> <br>
-            <span class="tag4">&lt; th &gt;</span>Savings<span class="tag">&lt; /th &gt;</span> <br>
-            <span class="tag4">&lt; th &gt;</span>Savings<span class="tag">&lt; /th &gt;</span> <br>
+            <span class="tag4">&lt; th &gt;</span>Měsíc<span class="tag">&lt; /th &gt;</span> <br>
+            <span class="tag4">&lt; th &gt;</span>2023<span class="tag">&lt; /th &gt;</span> <br>
+            <span class="tag4">&lt; th &gt;</span>2024<span class="tag">&lt; /th &gt;</span> <br>
             <span class="tag3">&lt; /tr &gt;</span> <br>
             <span class="tag2">&lt; /thead &gt;</span> <br>
             <span class="tag2">&lt; tbody &gt;</span> <br>
             <span class="tag3">&lt; tr &gt;</span> <br>
-            <span class="tag4">&lt; td &gt;</span>January<span class="tag">&lt; /td &gt;</span> <br>
+            <span class="tag4">&lt; td &gt;</span>Leden<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag4">&lt; td &gt;</span>$100<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag4">&lt; td &gt;</span>$100<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag3">&lt; /tr &gt;</span> <br>
             <span class="tag3">&lt; tr &gt;</span> <br>
-            <span class="tag4">&lt; td &gt;</span>February<span class="tag">&lt; /td &gt;</span> <br>
+            <span class="tag4">&lt; td &gt;</span>Únor<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag4">&lt; td &gt;</span>$80<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag4">&lt; td &gt;</span>$100<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag3">&lt; /tr &gt;</span> <br>
             <span class="tag2">&lt; /tbody &gt;</span> <br>
             <span class="tag2">&lt; tfoot &gt;</span> <br>
             <span class="tag3">&lt; tr &gt;</span> <br>
-            <span class="tag4">&lt; td &gt;</span>Sum<span class="tag">&lt; /td &gt;</span> <br>
+            <span class="tag4">&lt; td &gt;</span>Součet<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag4">&lt; td &gt;</span>$180<span class="tag">&lt; /td &gt;</span> <br>
             <span class="tag3">&lt; /tr &gt;</span> <br>
             <span class="tag2">&lt; /tfoot &gt;</span> <br>
             <span class="tag">&lt; /table &gt;</span> <br>
           </td>
-          <td class="code" style="padding-left: 20px;">
-            <table>
-              <caption>Monthly savings</caption>
+          <td  style="padding-left: 20px;">
+            <table class="code">
+              <caption>Měsíční úspory</caption>
               <thead>
                 <tr>
-                  <th>Month</th>
-                  <th>Savings</th>
-                  <th>Savings</th>
+                  <th>Měsíc</th>
+                  <th style="padding-left: 20px;">2023</th>
+                  <th style="padding-left: 20px;">2024</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>January</td>
-                  <td>$100</td>
-                  <td>$100</td>
+                  <td>Leden</td>
+                  <td style="padding-left: 20px;">$100</td>
+                  <td style="padding-left: 20px;">$100</td>
                 </tr>
                 <tr>
-                  <td>February</td>
-                  <td>$80</td>
-                  <td>$100</td>
+                  <td>Únor</td>
+                  <td style="padding-left: 20px;">$80</td>
+                  <td style="padding-left: 20px;">$100</td>
                 </tr>
               </tbody>
               <tfoot>
                 <tr>
-                  <td>Sum</td>
-                  <td>$180</td>
+                  <td>Součet</td>
+                  <td style="padding-left: 20px;">$180</td>
                 </tr>
               </tfoot>
             </table>
@@ -298,12 +298,15 @@
       <h2>Obrázku</h2>
       <p>
         Pro přidaní obrázku nejprve potřebujeme si připravit soubor na požadovanou velikost. A poté ho přidáme za pomocí
-        tagu &lt;img&gt; do našeho html dokumentu
+        tagu <strong>&lt;img&gt;</strong> do našeho html dokumentu
       </p>
       <h5>URL adresa</h5>
       <p>Je to cesta k souboru, muže být jako odkaz na internet nebo jako odkaz na soubor ve složce</p>
       <h5>Atributy</h5>
-      <ul>
+      <p>
+        Níže je seznam atributů, které můžeme nastavovat u obrázku.
+      </p>
+      <ul style="font-weight: bold;">
         <li>Width</li>
         <li>Height</li>
         <li>SRC</li>
