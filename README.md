@@ -95,6 +95,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 4 obsah, ukol
     - lekce 5 obsah, ukol
     - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
+    - pridat vice ukazek pouziti k lekci 1
+    - lekce 1 pridat ukázku na třidu
 
 - Python Beginer
     - lekce 2 obsah, ukol
