@@ -1,4 +1,4 @@
-.import , .slovo, .podminka, .prommenna{
+.import , .slovo, .podminka, .prommenna, .escape{
   color: purple;
   font-weight: bolder;
 }
@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.operatory td, th {
+.operatory {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -37,4 +37,11 @@
 
 .operatory tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.escapeSekvence td, .escapeSekvenc th{
+  border:  1px solid black;
+  padding: 0 15px;
+  border-collapse: collapse;
+  text-align: center;
 }

@@ -78,8 +78,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer3.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer5.html';" class="btn btn-primary">Následují
+            <button id="left" onclick="location.href = '/lessons/python_beginer/python_beginer3.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" onclick="location.href = '/lessons/python_beginer/python_beginer5.html';"
+              class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -100,10 +102,311 @@
     </p>
 
 
+    <section class="odstavec">
+      <h2>Řetězce</h2>
+      <p>
+        Do teď jsem si hráli s čísli a písmeny. Nyní si v teto lekci ukážeme jak pracovat s řetězci. Tim si ukážeme jak
+        lepe vypisovat text efektivně a formátovat.
+      </p>
+      <p>
+        Z pohledu počítače je každý text množina znaku. Kazdy znak ať už male nebo velké písmeno má svůj vlastni kód. Na
+        ukázne níže
+        rozhodnněte zdali se jednotlivé textové řetězce shodují.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="text">Richard</span> == <span class="text">richard</span>
+        </code>
+      </pre>
+      <p>
+        Pokud se teda zaceňme v Pythone pračovat s řetězcemi. Už tím jsme schopni si vytvořit jednoduchý program.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">text </span> = <span class="text">"Tohle je prvni textovy retezec"</span>
+          <span class="prikaz">print</span>(<span class="prommenna">text</span>) 
+        </code>
+      </pre>
+      <p>
+        Pokud ovsem bychom chtěli rozdělit obsah řetězce na vice řádku. Avšak výsledek by mel byt pouze na jednom řádku
+        použijeme k tomu zpětné lomítko \
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">text </span> = <span class="text">"Tohle je prvni textovy\ <br> retezec"</span>
+          <span class="prikaz">print</span>(<span class="prommenna">text</span>) 
+        </code>
+      </pre>
+    </section>
 
-    <div style="margin-bottom: 64px; ">
+    <section class="odstavec">
+      <h2>Escape sekvence</h2>
+      <p>
+        Při práci s řetězci a programováním v jazyce Python se často setkáme s situacemi, kdy potřebujeme vložit
+        speciální znaky do řetězce nebo uniknout z omezení běžného zápisu. Právě k tomu slouží escape sekvence. Tyto
+        sekvence umožňují vkládat do řetězce znaky, které by jinak nebylo možné jednoduše vepsat.
+      </p>
+      <p>
+        V jazyce Python jsou escape sekvence zapsány jako kombinace obráceného lomítka "\" a některých specifikovaných
+        znaků. Kombinací tohoto speciálního znaku s jiným znakem můžeme dosáhnout vložení speciálního symbolu do
+        řetězce.
+      </p>
 
-    </div>
+      <table class="escapeSekvence">
+        <thead>
+          <tr>
+            <th>ESCAPE SEKVENCE </th>
+            <th>VÝZNAM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>\n </td>
+            <td>novy radek</td>
+          </tr>
+          <tr>
+            <td>\t </td>
+            <td>tabulator</td>
+          </tr>
+          <tr>
+            <td>\' </td>
+            <td>apostrof</td>
+          </tr>
+          <tr>
+            <td>\" </td>
+            <td>uvozovka</td>
+          </tr>
+          <tr>
+            <td>\\ </td>
+            <td>opacne lomitko</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h5>Ukázka použití:</h5>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prikaz">print</span>(<span class="text">"Začátek:<span class="escape">\n\t</span>Ahoj,<span class="escape">\n\t</span>tímto vás zdravím<span class="escape">\n\t</span>A přeji hezký den<span class="escape">\n</span>Konec"</span>)
+        </code>
+      </pre>
+    </section>
+
+
+    <section class="odstavec">
+      <h2>Základní operace a práce retezci</h2>
+      <p>
+        V nyni se zaměříme na některé běžné operace prováděné s řetězci.
+      </p>
+
+      <section class="odstavec">
+        <h3>Spojeni retezcu </h3>
+        <p>
+          Spojeni dvou řetězců dokážeme pomocí operátoru +.
+        </p>
+        <pre class="python">
+          <code style="font-weight: bolder;">
+            <span class="prommenna">string1</span> = <span class="text">"Ahoj"</span>
+            <span class="prommenna">string2</span> = <span class="text">"Světe"</span>
+            <span class="prikaz">print</span>(<span class="prommenna">string1</span> + <span class="prommenna">string2</span>) 
+          </code>
+        </pre>
+      </section>
+
+      <section class="odstavec">
+        <h3>Opakovaní řetězce</h3>
+        <p>
+          Pokud potřebujete z duplikovat text nebo množinu znaků, dokonce i více než jednou, můžete využít násobení
+          řetězců:
+        </p>
+        <pre class="python">
+          <code style="font-weight: bolder;">
+            <span class="prommenna">string1</span> = <span class="text">"Ahoj"</span>
+            <span class="prikaz">print</span>(<span class="prommenna">string1</span> * <span class="cislo">3</span>) 
+          </code>
+        </pre>
+      </section>
+
+      <section class="odstavec">
+        <h3>Délka řetězce</h3>
+        <p>
+          Délku řetězce zjistíme pomocí funkce <span class="prikaz">len()</span>, která se používá v různých kontextech.
+          Například, pokud požádáme
+          uživatele, aby zadal kód složený ze šesti znaků, můžeme potom zkontrolovat, zda skutečně zadal požadovaný
+          počet znaků.
+        </p>
+        <pre class="python">
+          <code style="font-weight: bolder;">
+            <span class="prommenna">string1</span> = <span class="text">"Ahoj"</span>
+            <span class="prikaz">print</span>(<span class="prikaz">len(<span class="prommenna">string1</span>)</span>)
+          </code>
+        </pre>
+      </section>
+    </section>
+
+    <section class="odstavec">
+      <h3>Indexování v řetězci</h3>
+      <p>
+        V řetězci jsou jednotlivé znaky uspořádány a můžeme k nim přistupovat pomocí jejich indexu, tedy jejich
+        pořadového čísla. Důležité je si uvědomit, že index prvního prvku v řetězci je vždy nula. Podívejme se na
+        příklad využití indexů:
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"Ahoj Světe"</span>
+          <span class="prikaz">print</span>(<span class="text">"Znak [0]: "</span> + <span class="prikaz">str</span>(<span class="prommenna">string1</span>[<span class="cislo">0</span>]))
+          <span class="prikaz">print</span>(<span class="text">"Znak [6]: "</span> + <span class="prikaz">str</span>(<span class="prommenna">string1</span>[<span class="cislo">6</span>]))
+
+        </code>
+      </pre>
+    </section>
+
+    <section class="odstavec">
+      <h3>Praktické metody pro práci s řetězci</h3>
+      <p>
+        Při práci s řetězci se často setkáme s potřebou provádět různé operace, jako je nahrazování znaků, vyhledávání
+        podřetězců atd. Pro tyto účely programovací jazyky poskytují sadu metod, které pokrývají běžné potřeby.
+      </p>
+
+      <h4>capitalize</h4>
+      <p>
+        Metoda capitalize převádí první písmeno řetězce na velké a zbytek na malá písmena. Například, pokud máte řetězec
+        "vEtRníK", po aplikaci metody capitalize se změní na "Vetrník".
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"vEtRníK"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">capitalize()</span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>title</h4>
+      <p>
+        Metoda title převádí každé slovo v řetězci na velké písmeno na začátku. Například, pokud máte řetězec "vEtRníK",
+        po aplikaci metody title se změní na "Vetrník".
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"vEtRníK"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">title()</span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>upper</h4>
+      <p>
+        Metoda upper převede všechna písmena v řetězci na velká písmena. Například, pokud máte řetězec "vEtRníK", po
+        aplikaci metody upper se změní na "VETRNÍK".
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"vEtRníK"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">upper()</span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>lower</h4>
+      <p>
+        Metoda lower převede všechna písmena v řetězci na malá písmena. Například, pokud máte řetězec "vEtRníK", po
+        aplikaci metody lower se změní na "vetrník".
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"vEtRníK"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">lower()</span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>find</h4>
+      <p>
+        Tato metoda hledá zadaný podřetězec v řetězci a vrátí pozici prvního výskytu. Pokud podřetězec není nalezen,
+        vrátí -1.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">find(<span class="text">"t"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">find(<span class="text">"k"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">find(<span class="text">"x"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>rfind</h4>
+      <p>
+        Tato metoda hledá zadaný podřetězec v řetězci, ale začíná hledání od konce řetězce a vrátí pozici prvního
+        výskytu. Pokud podřetězec není nalezen, vrátí -1.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">rfind(<span class="text">"t"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">rfind(<span class="text">"k"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"řetězec"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">rfind(<span class="text">"x"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>replace</h4>
+      <p>
+        Tato metoda nahrazuje všechny výskyty zadaného podřetězce v řetězci zadaným novým podřetězcem. Můžete také
+        specifikovat maximální počet nahrazení, pokud chcete nahradit pouze určitý počet výskytů.
+      </p>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"Ahoj Ahoj"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">replace(<span class="text">"Ahoj"</span>, <span class="text">"Čau"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"Ahoj Ahoj"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">replace(<span class="text">"Ahoj"</span>, <span class="text">"Čau"</span>, <span class="cislo">1</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+
+      <h4>count</h4>
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">string1</span> = <span class="text">"Hello World"</span>
+          <span class="prommenna">string1</span>.<span class="prikaz">count(<span class="text">"t"</span>) </span> 
+          <span class="prikaz">print</span>(<span class="prommenna">string1</span>) 
+        </code>
+      </pre>
+    </section>
 
 
   </main>
