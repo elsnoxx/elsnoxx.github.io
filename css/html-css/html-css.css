@@ -55,9 +55,54 @@
 }
 
 .code{
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bolder;
   background-color: lightcyan;
   padding: 5px;
 }
+
+.text {
+  color: chocolate;
+}
+.doplnek{
+  color: red;
+}
+.atribut {
+  color: blue;
+}
+.lekce3-styl-1{
+  color: red;
+}
+.lekce3-styl-2:hover{
+  background-color: yellow;
+}
+.lekce3-styl-3{
+  font-family: Arial, sans-serif;
+}
+.lekce3-styl-4{
+  text-decoration: underline;
+}
+.lekce3-styl-5{
+  cursor: crosshair;
+}
+.lekce3-styl-6{
+  text-decoration: none;
+}
+
+.lekce3-styl-7 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lekce3-styl-7:hover {
+  background-color: #0056b3;
+}
+
+
   

@@ -92,12 +92,333 @@
         </tr>
       </table>
     </div>
-    <h1>Lekce 3 - Odkazy a více stránek</h1>
+    <h1 id="section2">Lekce 3 - Odkazy a více stránek</h1>
     <p>
-      V této lekci si představíme jakými způsoby tag &lt; a &gt; dokážeme využít. Ukážeme si jak vytvořit více podstránek webu.
+      V této lekci si představíme jakými způsoby tag <strong>&lt;a&gt;</strong> dokážeme využít. Ukážeme si jak vytvořit
+      více podstránek webu.
     </p>
 
-    
+    <h2>Atributy v tagu &lt;a&gt;</h2>
+
+    <p>
+      Nejdůležitějším atributem, který potřebujeme znát, je <strong>href</strong>. To je to, co určuje, kam odkaz
+      povede. A nemusí to být
+      jen webová stránka - může to být taky odkaz na obrázek, na soubor ke stažení nebo dokonce na e-mailovou adresu.
+    </p>
+
+    <p>
+      Pak tu máme atributy <strong>target</strong> a <strong>rel</strong>. Ty jsou trochu pokročilejší.
+      <strong>Target</strong> určuje, kde se otevře cílový odkaz - jestli
+      v novém okně, nové kartě nebo ve stejném okně. A <strong>rel</strong> nám říká něco o vztahu mezi naší stránkou a
+      cílovou stránkou.
+      Například, zda by měla být stránka indexována ve vyhledávačích.
+    </p>
+
+    <section class="odstavec">
+      <h3>Prace s tagem &lt;a&gt;</h3>
+      <ul>
+        <li>
+          <h4>Odkaz na e-mailovou adresu:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"mailto:ficek_r@itstep.academy"</span> &gt;</span>
+                  <strong>ficek_r@itstep.academy</strong> <span class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="mailto:ficek_r@itstep.academy">ficek_r@itstep.academy</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz na jinou webovou stránku:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"https://www.example.com"</span> &gt;</span> <strong>Klikni zde pro přesměrování na
+                    jinou stránku</strong> <span class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://www.example.com">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz na soubor ke stažení:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"/download/pdfobraze.png"
+                      <span class="atribut">download</span></span> &gt;</span> <strong>Stazeni obrazku</strong> <span
+                    class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="/download/pdfobraze.png" download>Stazeni obrazku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz na konkrétní část téže stránky:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span class="text">"#section2" </span>
+                    &gt;</span> <strong>Skočit na druhou sekci této stránky</strong> <span
+                    class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="#section2">Skočit na druhou sekci této stránky</a>
+
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz s otevřením v novém okně/tabulce:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"/download/pdfobraze.png"
+                      <span class="atribut">target=</span><span class="text">"_blank"</span></span> &gt;</span>
+                  <strong>Otevřít v novém okně</strong> <span class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://www.example.com" target="_blank">Otevřít v novém okně</a>
+
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz s rel="nofollow" pro odkazy, které nechceme, aby byly sledovány vyhledávači:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"https://www.example.com"
+                      <span class="atribut">rel=</span><span class="text">"nofollow"</span></span> &gt;</span>
+                  <strong>Odkaz, který není sledován vyhledávačem</strong> <span class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://www.example.com" rel="nofollow">Odkaz, který není sledován vyhledávačem</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odkaz podstranky webu:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"ukazky/html-css-3/about.html"</span> &gt;</span>
+                  <strong>O nás</strong> <span class="tag">&lt;/a&gt;</span><br>
+                  <span class="tag">&lt;a <span class="atribut">href=</span> <span
+                      class="text">"ukazky/html-css-3/contact.html"</span> &gt;</span>
+                  <strong>Kontakt</strong> <span class="tag">&lt;/a&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="ukazky/html-css-3/about.html">O nás</a>
+                <a href="ukazky/html-css-3/contact.html">Kontakt</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Tlacitko jako odkaz:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">&lt;button <span class="atribut">onclick=</span> <span
+                      class="text">"<span class="atribut">document</span>.<span class="atribut">location</span>='/index.html'"</span> &gt;</span>
+                  <strong>Hlavni stranka</strong> <span class="tag">&lt;/button&gt;</span><br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <button onclick="document.location='/index.html'">Hlavni stranka</button>
+              </td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </section>
+
+    <section class="odstavec">
+      <h3>Stylovani odkazu</h3>
+      <ul>
+        <li>
+          <h4>Změna barvy textu:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span> { <br>
+                    <span class="tag2"></span><span class="atribut">color</span>: <span class="text">red</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-1">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Zvýraznění při najetí myší:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span><span class="doplnek">:hover</span> { <br>
+                    <span class="tag2"></span><span class="atribut">background-color</span>: <span class="text">yellow</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-2">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          <h4>Změna písma:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span> { <br>
+                    <span class="tag2"></span><span class="atribut">font-family</span>: <span class="text">Arial, sans-serif</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-3">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Zvýraznění podtržením:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span> { <br>
+                    <span class="tag2"></span><span class="atribut">text-decoration</span>: <span class="text">underline</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-4">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Změna stylu kurzoru:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span> { <br>
+                    <span class="tag2"></span><span class="atribut">cursor</span>: <span class="text">crosshair</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-5">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Odstanění podtržení:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">a</span> { <br>
+                    <span class="tag2"></span><span class="atribut">text-decoration</span>: <span class="text">none</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <a href="https://elsnoxx.github.io/" class="lekce3-styl-6">Klikni zde pro přesměrování na jinou stránku</a>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Tlacitko jako odkaz:</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  <span class="tag">.lekce3-styl-7</span> { <br>
+                    <span class="tag2"></span><span class="atribut">padding</span>: <span class="text">10px 20px</span>; <br>
+                    <span class="tag2"></span><span class="atribut">background-color</span>: <span class="text">#007bff</span>; <br>
+                    <span class="tag2"></span><span class="atribut">color</span>: <span class="text">white</span>; <br>
+                    <span class="tag2"></span><span class="atribut">border-radius</span>: <span class="text">5px</span>; <br>
+                    <span class="tag2"></span><span class="atribut">border</span>: <span class="text">none</span>; <br>
+                    <span class="tag2"></span><span class="atribut">font-size</span>: <span class="text">16px</span>; <br>
+                    <span class="tag2"></span><span class="atribut">font-weight</span>: <span class="text">bold</span>; <br>
+                    <span class="tag2"></span><span class="atribut">cursor</span>: <span class="text">pointer</span>; <br>
+                  } <br>
+                  <br>
+                  <span class="tag">.lekce3-styl-7</span><span class="doplnek">:hover</span> { <br>
+                    <span class="tag2"></span><span class="atribut">background-color</span>: <span class="text">#0056b3</span>; <br>
+                  } <br>
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <button onclick="document.location='/index.html'" class="lekce3-styl-7">Hlavni stranka</button>
+              </td>
+            </tr>
+          </table>
+        </li>
+        
+      </ul>
+    </section>
+
+
     
 
     <!-- The Modal -->
