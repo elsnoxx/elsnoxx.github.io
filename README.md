@@ -53,7 +53,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 ## ToDo List
 - General
-    - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat do html a pak vytvaret
+    - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat vymyslet lepsi zpracovani
     - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
      ``` html
         <section>
@@ -91,12 +91,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         platform.BrickColor = BrickColor.Red()
         ```
 - Html & CSS
-    - lekce 3 obsah, ukol
+    - lekce 3 ukol, procist a opravit prekliky
     - lekce 4 obsah, ukol
     - lekce 5 obsah, ukol
     - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
     - pridat vice ukazek pouziti k lekci 1
     - lekce 1 pridat ukázku na třidu
+    - lekce 2 ukolu upravit aby v zadani mohli pracovat i o hre, zamyslet se o obsahu tabulky
 
 - Python Beginer
     - lekce 2 obsah, ukol
