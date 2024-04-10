@@ -98,6 +98,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat vice ukazek pouziti k lekci 1
     - lekce 1 pridat ukázku na třidu
     - lekce 2 ukolu upravit aby v zadani mohli pracovat i o hre, zamyslet se o obsahu tabulky
+    - lekce 3 opravit vytvareni dalsich souboru a pridat popis k adresari
 
 - Python Beginer
     - lekce 2 obsah, ukol
@@ -111,6 +112,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
  
 
 # Versions
+
+## 20240410 - Update
+- Html & CSS
+    - lekce 3 obsah, ukol
 
 ## 20240323 - Update
 - Html & CSS
