@@ -294,7 +294,8 @@
             <span class="turtle">turtle</span><span class="prikaz">.cirlce(80)</span>
             <ul>
               <li>
-                tento příkaz nám za pomocí želvy nakreslí <strong>kruh</strong>, který bude o <strong>poloměru 80 pixelů</strong>
+                tento příkaz nám za pomocí želvy nakreslí <strong>kruh</strong>, který bude o <strong>poloměru 80
+                  pixelů</strong>
               </li>
               <li>
                 místo <strong>80</strong> může být libovolné číslo nebo i proměnná
@@ -305,14 +306,16 @@
             <span class="turtle">turtle</span><span class="prikaz">.cirlce(100, 180)</span>
             <ul>
               <li>
-                tento příkaz nám za pomocí želvy nakreslí <strong>půlkruh</strong>, který bude o <strong>poloměru 100 pixelů</strong>, <strong>180</strong> značí
+                tento příkaz nám za pomocí želvy nakreslí <strong>půlkruh</strong>, který bude o <strong>poloměru 100
+                  pixelů</strong>, <strong>180</strong> značí
                 stupně kruhu, které se mají vykreslit
               </li>
               <li>
                 místo <strong>100</strong> může být libovolné číslo nebo i proměnná
               </li>
               <li>
-                místo <strong>180</strong> může být jakékoliv číslo nebo i proměnná, avšak tímto ztratíte možnost vykreslení půlkruhu
+                místo <strong>180</strong> může být jakékoliv číslo nebo i proměnná, avšak tímto ztratíte možnost
+                vykreslení půlkruhu
               </li>
             </ul>
           </li>
@@ -386,15 +389,22 @@
 
         <ul>
           <li>
-            Nejprve si nastavíme vše potřebné
-          </li>
-          <li>
-            Vzhled pera si nastavíme na <span class="prikaz" style="font-weight: bold;">"turtle"</span>
+            Nejprve si nastavíme vše potřebné. Vzhled pera si nastavíme na <span class="prikaz"
+              style="font-weight: bold;">"turtle"</span>.
+            Kdo chce si může změnit barvy jak pera tak i pozadí.
           </li>
           <li>
             Pokud je vše nastavené tak za pomocí příkazů <span class="prikaz"
-              style="font-weight: bold;">.forward()</span>, <span class="prikaz" style="font-weight: bold;">.circle()</span> a
+              style="font-weight: bold;">.forward()</span> a
             <span class="prikaz" style="font-weight: bold;">.left()</span> si nakreslíme naš obdélník.
+          </li>
+          <li>
+            Jakmile budete mít hotová obdélní v rozch vykreslíte kruhy za použití příkazu <span class="prikaz"
+              style="font-weight: bold;">.circle()</span>
+          </li>
+          <li>
+            Nakonec zapřemýšlejte jak tento kod zkratit o opakující příkazy. Při tom využijte nekonečný cyklus <span
+              class="prommenna">while</span> <span class="prommenna">1</span>:
           </li>
         </ul>
       </div>
@@ -410,13 +420,14 @@
               <span style="font-weight: bold;">Postup</span>
               <ul>
                 <li>
-                  vytvoříme si <span class="prikaz">cyklus</span> od <span class="prommenna">0</span> až do <span
-                    class="prommenna">360</span>
+                  vytvoříme si <strong>cyklus </strong><span class="prikaz">for</span> a v něm funkci <span
+                    class="prikaz">range()</span>
+                  ten bude nastavený na <span class="prommenna">360</span>.
                 </li>
                 <li>
                   Pokaždé co <span class="prikaz">cyklus</span> pojede se posuneme o promennou <strong
                     class="prommenna">i</strong> dopredu a otočíme želvu doleva o
-                  59 stupňů
+                  <span class="prommenna">59</span> stupňů
                 </li>
               </ul>
             </td>
