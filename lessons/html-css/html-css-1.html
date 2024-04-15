@@ -327,7 +327,7 @@
             <p>
               Tak jelikož jsme si vytvořili náš první web. Musíme mu ještě přidat styl aby naše stránká vypadala lépe.
               Na to se používá CSS. Ukázka CSS souboru je na obrázky vedle. Změna stylý pomocí CSS můŽe být provedena
-              několika způsoby. A to buď přímo v HTML souboru a nebo jako soubor, který se přiloží k HTML souboru.
+              několika způsoby. A to buď přímo v HTML souboru a nebo jako soubor, který se přiloží k HTML souboru. 
             </p>
           </td>
           <td>
@@ -338,23 +338,7 @@
       </table>
     </div>
 
-    <div class="odstavec">
-      <h6><strong>Nyní si ukážeme pár atributů style</strong></h6>
-      <ul>
-        <li>Změna barvy pozadí - <strong>background-color</strong></li>
-        <li>Změna barvy písma - <strong>color</strong></li>
-        <li>Změna stylu textu - <strong>font-family</strong></li>
-        <li>Změna velikosti textu - <strong>font-size</strong></li>
-        <li>Tučnost text - <strong>font-weight</strong></li>
-        <li>Zarovnání textu - <strong>text-align</strong></li>
-        <li>Odstarnění stylu u odkazu - <strong>text-decoration</strong></li>
-        <li>Vytvoření místa kolem textu - <strong>margin</strong></li>
-        <li>Vytvoření prostoru kolem obsahu - <strong>padding</strong></li>
-        <li>Šířka a výška - <strong>width, height</strong></li>
-        <li>Vytvoři box kolem textu - <strong>border-radius</strong></li>
-        <li>Odsazení textu - <strong>text-indent</strong></li>
-      </ul>
-    </div>
+
 
     <section>
       <h3>Používání CSS</h3>
@@ -363,8 +347,160 @@
         ID HTML tagu.
       </p>
       <p>
-        Stylování můžeme použít přímo v HTML dokumentu a nebo v souborem mimo.
+        Stylování můžeme použít přímo v HTML dokumentu a nebo v souborem mimo. My se především budeme věnovat jak stylování používat za pomocí třídy v HTML souboru.
       </p>
+      <div class="code center">
+        <span class="tag">&lt;html <span class="atribut">lang=</span><span class="text">"cs"</span>&gt;</span> <br>
+        <span class="tag">&lt;head&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;meta <span class="atribut">charset=</span><span
+            class="text">"UTF-8"</span>&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;meta <span class="atribut">name=</span><span class="text">"viewport"</span>
+          <span class="atribut">content=</span><span class="text">"width=device-width,
+            initial-scale=1.0"</span>&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;title&gt;</span>Ukázka použití třídy v HTML<span
+          class="tag">&lt;/title&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;style&gt;</span> <br>
+        <span class="text">&nbsp;&nbsp; /* Stylování třídy "header" */</span> <br>
+        <span class="text">&nbsp;&nbsp; <span class="atribut">.header</span> {</span> <br>
+        <span class="text">&nbsp;&nbsp; background-color: #333;</span> <br>
+        <span class="text">&nbsp;&nbsp; color: #fff;</span> <br>
+        <span class="text">&nbsp;&nbsp; padding: 20px;</span> <br>
+        <span class="text">&nbsp;&nbsp; text-align: center;</span> <br>
+        <span class="text">&nbsp;&nbsp; }</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;/style&gt;</span> <br>
+        <span class="tag">&lt;/head&gt;</span> <br>
+        <span class="tag">&lt;body&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;!-- Element s použitím třídy "header" --&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;div <span class="atribut">class=</span><span
+            class="text">"header"</span>&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;</span>Vítejte na našem webu!<span
+          class="tag">&lt;/h1&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;</span>Toto je ukázka použití třídy v HTML.<span
+          class="tag">&lt;/p&gt;</span> <br>
+        <span class="tag">&nbsp;&nbsp;&lt;/div&gt;</span> <br>
+        <span class="tag">&lt;/body&gt;</span> <br>
+        <span class="tag">&lt;/html&gt;</span> <br>
+      </div>
+
+      <section class="odstavec">
+        <h3><strong>Nyní si ukážeme pár atributů style</strong></h3>
+        <div style="display: flex; flex-direction: row;">
+          <!-- Zdrojový kód -->
+          <div style="flex: 1;">
+            <table style="border-collapse: separate; border-spacing: 20px;">
+              <tr>
+                <th>Vlastnost</th>
+                <th>Zdrojový kód</th>
+              </tr>
+              <tr>
+                <td>Změna barvy pozadí</td>
+                <td><code>background-color: yellow;</code></td>
+              </tr>
+              <tr>
+                <td>Změna barvy písma</td>
+                <td><code>color: blue;</code></td>
+              </tr>
+              <tr>
+                <td>Změna stylu textu</td>
+                <td><code>font-family: Arial, sans-serif;</code></td>
+              </tr>
+              <tr>
+                <td>Změna velikosti textu</td>
+                <td><code>font-size: 20px;</code></td>
+              </tr>
+              <tr>
+                <td>Tučnost textu</td>
+                <td><code>font-weight: bold;</code></td>
+              </tr>
+              <tr>
+                <td>Zarovnání textu</td>
+                <td><code>text-align: center;</code></td>
+              </tr>
+              <tr>
+                <td>Odstarnění stylu u odkazu</td>
+                <td><code>text-decoration: none;</code></td>
+              </tr>
+              <tr>
+                <td>Vytvoření místa kolem textu</td>
+                <td><code>margin: 10px;</code></td>
+              </tr>
+              <tr>
+                <td>Vytvoření prostoru kolem obsahu</td>
+                <td><code>padding: 10px;</code></td>
+              </tr>
+              <tr>
+                <td>Šířka a výška</td>
+                <td><code>width: 100px; height: 50px;</code></td>
+              </tr>
+              <tr>
+                <td>Vytvoři box kolem textu</td>
+                <td><code>border-radius: 5px; border: 1px solid black; padding: 5px;</code></td>
+              </tr>
+              <tr>
+                <td>Odsazení textu</td>
+                <td><code>text-indent: 20px;</code></td>
+              </tr>
+            </table>
+          </div>
+          <!-- Výsledek -->
+          <div style="flex: 1;">
+            <table style="border-collapse: separate; border-spacing: 20px;">
+              <tr>
+                <th>Vlastnost</th>
+                <th>Výsledek</th>
+              </tr>
+              <tr>
+                <td>Změna barvy pozadí</td>
+                <td style="background-color: yellow;">Background color</td>
+              </tr>
+              <tr>
+                <td>Změna barvy písma</td>
+                <td style="color: blue;">Colored text</td>
+              </tr>
+              <tr>
+                <td>Změna stylu textu</td>
+                <td style="font-family: Arial, sans-serif;">Font family</td>
+              </tr>
+              <tr>
+                <td>Změna velikosti textu</td>
+                <td style="font-size: 20px;">Font size</td>
+              </tr>
+              <tr>
+                <td>Tučnost textu</td>
+                <td style="font-weight: bold;">Bold text</td>
+              </tr>
+              <tr>
+                <td>Zarovnání textu</td>
+                <td style="text-align: center;">Centered text</td>
+              </tr>
+              <tr>
+                <td>Odstarnění stylu u odkazu</td>
+                <td style="text-decoration: none;">Link without underline</td>
+              </tr>
+              <tr>
+                <td>Vytvoření místa kolem textu</td>
+                <td style="margin: 10px;">Margin around text</td>
+              </tr>
+              <tr>
+                <td>Vytvoření prostoru kolem obsahu</td>
+                <td style="padding: 10px;">Padding around content</td>
+              </tr>
+              <tr>
+                <td>Šířka a výška</td>
+                <td style="width: 100px; height: 50px; display: inline-block;">Width and height</td>
+              </tr>
+              <tr>
+                <td>Vytvoři box kolem textu</td>
+                <td style="border-radius: 5px; border: 1px solid black; padding: 5px;">Text with border radius</td>
+              </tr>
+              <tr>
+                <td>Odsazení textu</td>
+                <td style="text-indent: 20px;">Indented text</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
     </section>
 
     <div class="odstavec samprace">
@@ -379,17 +515,20 @@
       <p>
         Vašim úkolem vytvořit si webovou stránku, kde umístíte text básničky. Stránku naformátuje te tak,
         aby vypadala jako stránka v knížce s básničkou.
-        Jakmile budete to mít hotové odevzdejte do <a href="https://mystat.itstep.org/cs/auth/login/index?returnUrl=%2Fcs%2Fmain%2Fdashboard%2Fpage%2Findex">
+        Jakmile budete to mít hotové odevzdejte do <a
+          href="https://mystat.itstep.org/cs/auth/login/index?returnUrl=%2Fcs%2Fmain%2Fdashboard%2Fpage%2Findex">
           <strong>Mystat</strong>
         </a>
       </p>
       <p>
-        Pro rozdělení textu v tagu <strong> &lt; p &gt;</strong> <strong> &lt; / p &gt;</strong> použijte tag <strong> &lt; br &gt;</strong>.
+        Pro rozdělení textu v tagu <strong> &lt; p &gt;</strong> <strong> &lt; / p &gt;</strong> použijte tag <strong>
+          &lt; br &gt;</strong>.
       </p>
       <div class="row">
         <h5>Text ke stažení: </h5>
         <div style="padding-left: 50px;">
-          <a href="/download/html-css/ukol1-basnicka.txt" download="ukol1-basnicka.txt" ><button class="btn btn-primary">Stáhnout soubor</button></a>
+          <a href="/download/html-css/ukol1-basnicka.txt" download="ukol1-basnicka.txt"><button
+              class="btn btn-primary">Stáhnout soubor</button></a>
         </div>
       </div>
       <h5 style="padding-top: 50px;">Nechci aby jste použili jaké koliv AI na generování tohoto úkol.</h5>
@@ -402,7 +541,8 @@
             <h5>Zadání úkolu</h5>
           </td>
           <td style="padding-left: 50px;">
-            <button onClick='download("/download/html-css/html-css-1.pdf")' class="btn btn-primary" style="font-weight: bold;">
+            <button onClick='download("/download/html-css/html-css-1.pdf")' class="btn btn-primary"
+              style="font-weight: bold;">
               stažení</button>
           </td>
         </tr>
