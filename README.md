@@ -54,14 +54,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## ToDo List
 - General
     - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat vymyslet lepsi zpracovani
-    - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
-     ``` html
-        <section>
-            text goes here
-        </section>
-    ```
-    - Upravit vzhled talcitek, zacit pouzivat vice boostrap
-        - zatim vytvoreno pro art of presentation
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
@@ -81,31 +73,22 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Lekce 3 - dodelat obsah
     - pridat stranku jak na kolaboraci, tkj spolu práci mezi vice lidmi na jednom projektu
     - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
-    - [ ] Lekce 4 - obsah
     - zmena pohledu osoby - starterplayer => Camera => cameramode == LockFirstPerson
     - [ ] Lekce 4 - samostatna prace
-    - [ ] Projekt word a pdf
-    - pridani ukazky jak zmenit barvu pomoci scriptu, nize ukazka nastavi objekt na cervenou barvu
-        ``` lua
-        local platform = script.Parent
-        platform.BrickColor = BrickColor.Red()
-        ```
+    - hodnoceni lekce
+    
+    
 - Html & CSS
-    - lekce 3 ukol, procist a opravit prekliky
     - lekce 4 obsah, ukol
     - lekce 5 obsah, ukol
     - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
-    - pridat vice ukazek pouziti k lekci 1
-    - lekce 1 pridat ukázku na třidu
-    - lekce 2 ukolu upravit aby v zadani mohli pracovat i o hre, zamyslet se o obsahu tabulky
     - lekce 3 opravit vytvareni dalsich souboru a pridat popis k adresari
+    
 
 - Python Beginer
-    - lekce 2 obsah, ukol
-    - lekce 3 obsah, ukol
-    - lekce 4 obsah, ukol
+    - lekce 4 ukol
     - lekce 5 obsah, ukol
-    - Pridani navodu jak udelat publish webu na githubu, popripadne naji freehosting na staticky web
+    
 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
@@ -113,11 +96,40 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## 20240410 - Update
+## 2024 April - Update
+- General
+    - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
+     ``` html
+        <section>
+            text goes here
+        </section>
+    ```
+    - Upravit vzhled talcitek, zacit pouzivat vice boostrap
+        - zatim vytvoreno pro art of presentation
+    
 - Html & CSS
-    - lekce 3 obsah, ukol
+    - lekce 3 obsah, ukol, procist a opravit prekliky
+    - lekce 2 ukolu upravit aby v zadani mohli pracovat i o hre, zamyslet se o obsahu tabulky
+    - lekce 1 pridat ukázku na třidu
+    - pridat vice ukazek pouziti k lekci 1
+    - hodnoceni lekce
 
-## 20240323 - Update
+- Python Beginer
+    - lekce 2 obsah, ukol
+    - lekce 3 obsah, ukol
+    - lekce 4 obsah
+    - hodnoceni lekce
+
+Roblox
+    - Lekce 4 - obsah
+    - pridani ukazky jak zmenit barvu pomoci scriptu, nize ukazka nastavi objekt na cervenou barvu
+        ``` lua
+        local platform = script.Parent
+        platform.BrickColor = BrickColor.Red()
+        ```
+    -  Projekt word a pdf
+
+## 2024 March - Update
 - Html & CSS
     - lekce 1 obsah, ukol
     - lekce 2 obsah, ukol
@@ -127,40 +139,43 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Závěrečná prezentace
     - opravit tak aby byla více k pochopení, trochu mate a dost nevystihuje co mají děti udělat
 
-## 20240220 - Update
+## 2024 February - Update
 - Roblox
     - Přidání na stránky přeskakove tlacika mimo lekce
     - Přidání pár obrázku pro stránky env
+    - Vytvoření lekce 2
+    - Vytvoření Lekce 3
+    - Vytvoření Lekce 4
 - Art of presentation
     - Lekce 2 změnění "ty naleznete zde" na tlačítko, tak aby to bylo lépe poznat, kde návŠtěvníci najdou hry
     - Velepšení vzhledu talačítek
     - Uprava responzivního texu na úvodní straně lekce
     - Přidání tlačítka na stažení zadání úkolu a projektu
-
-## 20240205 - Update
-- Roblox
-    - Vytvoření lekce 2
-    - Vytvoření Lekce 3
-    - Vytvoření Lekce 4
-- Art of presentation
     - Oprava správného zobrazení tabulky na strance projekt.html
 - Youtube
     - pridat popisky obsahu k uvodu cele lekce
 
-## 20240126 - Update
+## 2024 January - Update
 - Roblox
     - Vytvoření env, kde se popisují základní vlastnosti v Roblox studiu
     - Vytvoreni stranky o jazyku LUA a jeho základní syntaxe
     - Vytvoření obsahu lekce 1, spolu i vytvořené výsledné skripty
-
-## 20240122 - Update
+    - Projekt web stranka
 - General
     - Úprava dokumentace k webu
     - Vytvoření stánky kde budou zobrazeny updaty webovek
     - Upravit nove pridane fotky na avif format
+    - opravit broken links
+    - vytvoření ikony webu
+    - Přidat na stranky 
+        ```html
+        <meta name="description" content="popis stranky">
+        ```
 - Audacity
     - pridani ukazky metadat na prvni lekci
     - pridani k ukolum a samostatných pracích pozadavek na metadata, tak jako v projektu zvukova kolaz
+    - upravit nadpisi lekci na Lekce 1 - co se bude dit
+    - oprava lekce 1 a klikaci odpovedi
 - Youtube
     - Lekce 3 - obsah
     - Lekce 4 - obsah
@@ -168,25 +183,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - změmit Pycharm na vsc   
 - TinkerCad
     - Oprava formatovani obrazku
-- Roblox
-    - Projekt web stranka
-
-## 20240119 - Update
-- TinkerCad
     - Přidat popisky k obrázkům
 - Arf of presentation
     - Oprava textu na poslední lekci
     - optimalni velikost nadpisu a text
-- Audacity
-    - upravit nadpisi lekci na Lekce 1 - co se bude dit
-    - oprava lekce 1 a klikaci odpovedi
-- GENERAL
-    - opravit broken links
-    - vytvoření ikony webu
-    - Přidat na stranky 
-        ```html
-        <meta name="description" content="popis stranky">
-        ```
+
+    
 
 ## 1/18/2024 - Update
 - Google analytic 
@@ -246,7 +248,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - [x] oprava odkazu na strance projektu
     - [x] pridani stazeni coveru
 - Python
-    - [x] Prejmenovani na python_beginer
+    - [x] Prejmenovani na python_beginner
 - General
     - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
     - [x] Vytvořit footer
