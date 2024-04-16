@@ -58,7 +58,8 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -83,8 +84,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/html-css/html-css-3.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/html-css/projekt.html';">Následují lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/html-css/html-css-3.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/html-css/projekt.html';">Následují lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -92,7 +95,145 @@
         </tr>
       </table>
     </div>
-    <h1>Lekce č. 4</h1>
+    <section class="odstavec">
+      <h1>Lekce č. 4 - Formuláře</h1>
+      <p>
+        V této lekci si ukážeme jak vkládat a vytvářet formuláře. Také si ukážeme jak tyto fotmuláře stylovat. Jako
+        poslední věc v dnešní lekci si ukážeme vkládání multimediálních prvků na web.
+      </p>
+    </section>
+
+    <section class="odstavec">
+      <h2>Vytváření formulářů v HTML</h2>
+      <p>
+        V této části se naučíme vytvářet formuláře pomocí značek HTML a atributů.
+      </p>
+      <h4>1. Prvky ovládání v HTML</h4>
+      <p>
+        Tag <code>&lt;input&gt;</code> je jedním z nejčastěji používaných prvků formuláře,
+        umožňuje vytvářet různé prvky jako textová pole, tlačítka nebo přepínače.
+        Atribut <code>type</code> určuje druh prvku (např. <code>text</code>, <code>radio</code>).
+      </p>
+      <h4>2. Přidání formuláře na web</h4>
+      <p>
+        Pro vytvoření formuláře použijeme značku <code>&lt;form&gt;</code> a značky pro jednotlivé prvky formuláře,
+        jako je <code>&lt;input&gt;</code> pro textová pole a tlačítka.
+      </p>
+
+      <ul>
+        <li>
+          <h4>Textové pole</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  &lt;input type="text" value="text"&gt;
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <input type="text" value="text">
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Heslové pole</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  &lt;input type="password" value="password"&gt;
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <input type="password" value="password">
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Přepínač</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  &lt;input type="radio" value="radio"&gt;
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <input type="radio" value="radio">
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Zaškrtávací políčko</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  &lt;input type="checkbox" value="checkbox"&gt;
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <input type="checkbox" value="checkbox">
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h4>Skryté pole</h4>
+
+          <table>
+            <tr>
+              <td>
+                <span class="code">
+                  &lt;input type="hidden" value="hidden"&gt;
+                </span>
+              </td>
+              <td style="padding-left: 20px; font-weight: bolder;">
+                <input type="hidden" value="hidden">
+              </td>
+            </tr>
+          </table>
+        </li>
+
+      </ul>
+
+
+      <pre><code>
+        &lt;form action="#" method="post"&gt;
+          &lt;label for="name"&gt;Jméno:&lt;/label&gt;
+          &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+      
+          &lt;label for="phone"&gt;Značka telefonu:&lt;/label&gt;
+          &lt;select id="phone" name="phone"&gt;
+            &lt;option value="iPhone"&gt;iPhone&lt;/option&gt;
+            &lt;option value="Samsung"&gt;Samsung&lt;/option&gt;
+            &lt;option value="Huawei"&gt;Huawei&lt;/option&gt;
+          &lt;/select>&lt;br&gt;&lt;br&gt;
+      
+          &lt;label for="message"&gt;Zpráva:&lt;/label&gt;&lt;br&gt;
+          &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+          &lt;br&gt;&lt;br&gt;
+          &lt;input type="submit" value="Odeslat"&gt;
+        &lt;/form&gt;
+      </code></pre>
+
+    </section>
+
+    <section class="odstavec">
+      <h2>Stylování formulářů pomocí CSS</h2>
+    </section>
+
+    <section class="odstavec">
+      <h2>Vkládání multimediálních prvků na web</h2>
+    </section>
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
