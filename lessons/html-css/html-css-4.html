@@ -108,13 +108,13 @@
       <p>
         V této části se naučíme vytvářet formuláře pomocí značek HTML a atributů.
       </p>
-      <h4>1. Prvky ovládání v HTML</h4>
+      <h4>Prvky ovládání v HTML</h4>
       <p>
         Tag <code>&lt;input&gt;</code> je jedním z nejčastěji používaných prvků formuláře,
         umožňuje vytvářet různé prvky jako textová pole, tlačítka nebo přepínače.
         Atribut <code>type</code> určuje druh prvku (např. <code>text</code>, <code>radio</code>).
       </p>
-      <h4>2. Přidání formuláře na web</h4>
+      <h4>Přidání formuláře na web</h4>
       <p>
         Pro vytvoření formuláře použijeme značku <code>&lt;form&gt;</code> a značky pro jednotlivé prvky formuláře,
         jako je <code>&lt;input&gt;</code> pro textová pole a tlačítka.
@@ -122,13 +122,16 @@
 
       <ul>
         <li>
-          <h4>Textové pole</h4>
-
+          <h5>Textové pole</h5>
+          <p>
+            Textové pole slouží k zadání textových informací, jako jsou jméno, příjmení, e-mail apod.
+          </p>
           <table>
             <tr>
               <td>
                 <span class="code">
-                  &lt;input type="text" value="text"&gt;
+                  &lt;input <span class="atribut">type=</span><span class="text">"text"</span> <span
+                    class="atribut">value=</span><span class="text">"text"</span>&gt;
                 </span>
               </td>
               <td style="padding-left: 20px; font-weight: bolder;">
@@ -138,13 +141,16 @@
           </table>
         </li>
         <li>
-          <h4>Heslové pole</h4>
-
+          <h5>Heslové pole</h5>
+          <p>
+            Heslové pole slouží k zadání hesla, kde se zadané znaky zobrazují jako tečky nebo hvězdičky.
+          </p>
           <table>
             <tr>
               <td>
                 <span class="code">
-                  &lt;input type="password" value="password"&gt;
+                  &lt;input <span class="atribut">type=</span><span class="text">"password"</span> <span
+                    class="atribut">value=</span><span class="text">"password"</span>&gt;
                 </span>
               </td>
               <td style="padding-left: 20px; font-weight: bolder;">
@@ -154,13 +160,16 @@
           </table>
         </li>
         <li>
-          <h4>Přepínač</h4>
-
+          <h5>Přepínač</h5>
+          <p>
+            Přepínač je užitečný pro výběr jedné z několika možností, například pro výběr pohlaví.
+          </p>
           <table>
             <tr>
               <td>
                 <span class="code">
-                  &lt;input type="radio" value="radio"&gt;
+                  &lt;input <span class="atribut">type=</span><span class="text">"radio"</span> <span
+                    class="atribut">value=</span><span class="text">"radio"</span>&gt;
                 </span>
               </td>
               <td style="padding-left: 20px; font-weight: bolder;">
@@ -170,13 +179,16 @@
           </table>
         </li>
         <li>
-          <h4>Zaškrtávací políčko</h4>
-
+          <h5>Zaškrtávací políčko</h5>
+          <p>
+            Zaškrtávací políčko umožňuje uživateli zaškrtnout jednu nebo více možností z několika možných.
+          </p>
           <table>
             <tr>
               <td>
                 <span class="code">
-                  &lt;input type="checkbox" value="checkbox"&gt;
+                  &lt;input <span class="atribut">type=</span><span class="text">"checkbox"</span> <span
+                    class="atribut">value=</span><span class="text">"checkbox"</span>&gt;
                 </span>
               </td>
               <td style="padding-left: 20px; font-weight: bolder;">
@@ -186,13 +198,17 @@
           </table>
         </li>
         <li>
-          <h4>Skryté pole</h4>
-
+          <h5>Skryté pole</h5>
+          <p>
+            Skryté pole se používá pro ukládání informací, které nechcete zobrazit uživateli, například identifikátorů
+            nebo hodnot.
+          </p>
           <table>
             <tr>
               <td>
                 <span class="code">
-                  &lt;input type="hidden" value="hidden"&gt;
+                  &lt;input <span class="atribut">type=</span><span class="text">"hidden"</span> <span
+                    class="atribut">value=</span><span class="text">"hidden"</span>&gt;
                 </span>
               </td>
               <td style="padding-left: 20px; font-weight: bolder;">
@@ -203,35 +219,269 @@
         </li>
 
       </ul>
+      <section class="odstavec">
+        <h4>Tlačítka k formulářím</h4>
+        <p>
+          Aby se každý formulář poslal dále a vyplnit budou k tomu potřeba i tlačítka. Ty si ukážeme níže.
+        </p>
+        <ul>
+          <li>
+            <h5>Tlačítko</h5>
+            <p>
+              Tlačítko je interaktivní prvek, který lze kliknutím aktivovat. Používá se pro spouštění různých akcí nebo
+              událostí.
+            </p>
+            <table>
+              <tr>
+                <td>
+                  <span class="code">
+                    &lt;input <span class="atribut">type=</span><span class="text">"button"</span> <span
+                      class="atribut">value=</span><span class="text">"button"</span>&gt;
+                  </span>
+                </td>
+                <td style="padding-left: 20px; font-weight: bolder;">
+                  <input type="button" value="button">
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <h5>Odeslat</h5>
+            <p>
+              Tlačítko "Odeslat" se používá v formulářích pro odeslání dat na server k jejich zpracování.
+            </p>
+            <table>
+              <tr>
+                <td>
+                  <span class="code">
+                    &lt;input <span class="atribut">type=</span><span class="text">"submit"</span> <span
+                      class="atribut">value=</span><span class="text">"submit"</span>&gt;
+                  </span>
+                </td>
+                <td style="padding-left: 20px; font-weight: bolder;">
+                  <input type="submit" value="submit">
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <h5>Reset</h5>
+            <p>
+              Tlačítko "Reset" slouží k vymazání všech hodnot v formuláři a vrácení ho do původního stavu.
+            </p>
+            <table>
+              <tr>
+                <td>
+                  <span class="code">
+                    &lt;input <span class="atribut">type=</span><span class="text">"reset"</span> <span
+                      class="atribut">value=</span><span class="text">"reset"</span>&gt;
+                  </span>
+                </td>
+                <td style="padding-left: 20px; font-weight: bolder;">
+                  <input type="reset" value="reset">
+                </td>
+              </tr>
+            </table>
+          </li>
+          <li>
+            <h5>Zaškrtávací políčko</h5>
+            <p>
+              Tlačítko s výběrem umožňuje uživateli vybrat jednu možnost z několika dostupných.
+            </p>
+            <table>
+              <tr>
+                <td>
+                  <span class="code">
+                    &lt;input <span class="atribut">type=</span><span class="text">"file"</span> <span
+                      class="atribut">value=</span> <span class="text">"file"</span> &gt;
+                  </span>
+                </td>
+                <td style="padding-left: 20px; font-weight: bolder;">
+                  <input type="file" value="file">
+                </td>
+              </tr>
+            </table>
+          </li>
 
+          <li>
+            <h5>Tlačítko s výběrem</h5>
 
-      <pre><code>
-        &lt;form action="#" method="post"&gt;
-          &lt;label for="name"&gt;Jméno:&lt;/label&gt;
-          &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
-      
-          &lt;label for="phone"&gt;Značka telefonu:&lt;/label&gt;
-          &lt;select id="phone" name="phone"&gt;
-            &lt;option value="iPhone"&gt;iPhone&lt;/option&gt;
-            &lt;option value="Samsung"&gt;Samsung&lt;/option&gt;
-            &lt;option value="Huawei"&gt;Huawei&lt;/option&gt;
-          &lt;/select>&lt;br&gt;&lt;br&gt;
-      
-          &lt;label for="message"&gt;Zpráva:&lt;/label&gt;&lt;br&gt;
-          &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
-          &lt;br&gt;&lt;br&gt;
-          &lt;input type="submit" value="Odeslat"&gt;
-        &lt;/form&gt;
-      </code></pre>
+            <table>
+              <tr>
+                <td>
+                  <br>
+                  <span class="code">
+                    &lt;label <span class="atribut">for=</span><span class="text">"phone"</span>&gt;Značka
+                    telefonu:&lt;/label&gt; <br>
+                    &lt;select <span class="atribut">id=</span><span class="text">"phone"</span> <span
+                      class="atribut">name=</span><span class="text">"phone"</span>&gt; <br>
+                    &lt;option <span class="atribut">value=</span><span
+                      class="text">"iPhone"</span>&gt;iPhone&lt;/option&gt; <br>
+                    &lt;option <span class="atribut">value=</span><span
+                      class="text">"Samsung"</span>&gt;Samsung&lt;/option&gt; <br>
+                    &lt;option <span class="atribut">value=</span><span
+                      class="text">"Huawei"</span>&gt;Huawei&lt;/option&gt; <br>
+                    &lt;/select&gt;
+                  </span>
+                </td>
+                <td style="padding-left: 20px; font-weight: bolder;">
+                  <label for="phone">Značka telefonu:</label>
+                  <select id="phone" name="phone">
+                    <option value="iPhone">iPhone</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Huawei">Huawei</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </li>
 
+        </ul>
+      </section>
+
+      <section class="odstavec">
+        <h3>Ukázkový formulář pro web</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <pre><code>
+&lt;form action="#" method="post"&gt;
+  &lt;label for="name"&gt;Jméno:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+              
+  &lt;label for="phone"&gt;Značka telefonu:&lt;/label&gt;
+  &lt;select id="phone" name="phone"&gt;
+    &lt;option value="iPhone"&gt;iPhone&lt;/option&gt;
+    &lt;option value="Samsung"&gt;Samsung&lt;/option&gt;
+    &lt;option value="Huawei"&gt;Huawei&lt;/option&gt;
+  &lt;/select>&lt;br&gt;&lt;br&gt;
+              
+  &lt;label for="message"&gt;Zpráva:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Odeslat"&gt;
+&lt;/form&gt;
+                </code></pre>
+          </div>
+          <div class="col-md-6">
+            <form action="#" method="post">
+              <label for="name">Jméno:</label>
+              <input type="text" id="name" name="name" required><br><br>
+
+              <label for="phone">Značka telefonu:</label>
+              <select id="phone" name="phone">
+                <option value="iPhone">iPhone</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Huawei">Huawei</option>
+              </select><br><br>
+
+              <label for="message">Zpráva:</label><br>
+              <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+              <input type="submit" value="Odeslat">
+            </form>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section class="odstavec">
       <h2>Stylování formulářů pomocí CSS</h2>
+      <p>
+        Stylování formulářů pomocí CSS je důležitou součástí vytváření atraktivních a uživatelsky přívětivých webových
+        stránek.
+        CSS umožňuje úpravu vzhledu různých prvků formulářů, jako jsou textová pole, tlačítka, výběrové seznamy a další.
+        Tímto způsobem můžete přizpůsobit vzhled formulářů dle potřeb vašeho projektu, což zvyšuje uživatelskou
+        přívětivost a estetiku vašich stránek.
+      </p>
     </section>
 
     <section class="odstavec">
       <h2>Vkládání multimediálních prvků na web</h2>
+
+      <section class="odstavec">
+        <h3>Vkládání videí</h3>
+        <p>
+          Pro vložení videí na webové stránky se používá značka <code>&lt;video&gt;</code>. Tato značka umožňuje
+          přehrávání videí přímo v prohlížeči a nabízí různé možnosti pro nastavení videa.
+        </p>
+        <table>
+          <tr>
+            <td>
+              <span class="code">
+                &lt;input <span class="atribut">type=</span><span class="text">"file"</span> <span
+                  class="atribut">value=</span> <span class="text">"file"</span>
+                &lt;video <span class="atribut">src=</span>"video.mp4" <span class="atribut">width=</span>"640" <span
+                  class="atribut">height=</span>"360" <span class="atribut">controls</span>&gt;
+                Tento prohlížeč nepodporuje video značky.
+                &lt;/video&gt;
+              </span>
+            </td>
+            <td style="padding-left: 20px; font-weight: bolder;">
+              <video src="video.mp4" width="640" height="360" controls>
+                Tento prohlížeč nepodporuje video značky.
+              </video>
+            </td>
+          </tr>
+        </table>
+        <p>
+          V tomto příkladu je <strong>src</strong> atribut určuje zdrojový soubor videa, <strong>width</strong> a
+          <strong>height</strong> určují rozměry videa, a <strong>controls</strong> zobrazuje ovládací prvky pro
+          přehrávání videa.
+        </p>
+      </section>
+      <section class="odstavec">
+        <h3>Vkládání zvuků</h3>
+        <p>
+          Pro vkládání zvuků na webové stránky se používá značka <code>&lt;audio&gt;</code>. Tato značka umožňuje
+          přehrávání zvukových souborů přímo v prohlížeči a nabízí různé možnosti pro ovládání přehrávání.
+        </p>
+        <table>
+          <tr>
+            <td>
+              <span class="code">
+                &lt;audio <span class="atribut">src=</span><span class="text">"sound.mp3"</span> <span
+                  class="atribut">controls</span> <span class="atribut">autoplay</span> <span
+                  class="atribut">loop</span>&gt;
+                Tento prohlížeč nepodporuje audio značky.
+                &lt;/audio&gt;
+
+              </span>
+            </td>
+            <td style="padding-left: 20px; font-weight: bolder;">
+              <audio src="sound.mp3" controls autoplay loop>
+                Tento prohlížeč nepodporuje audio značky.
+              </audio>
+
+            </td>
+          </tr>
+        </table>
+        <p>
+          V tomto příkladu je <strong>src</strong> atribut určuje zdrojový soubor zvuku, <strong>controls</strong>
+          zobrazuje ovládací prvky pro přehrávání zvuku, <strong>autoplay</strong> spustí přehrávání zvuku automaticky a
+          <strong>loop</strong> zajišťuje opakované přehrávání zvuku.
+        </p>
+      </section>
+      <section class="odstavec">
+        <h3>Vkládání animací</h3>
+        <p>
+          Pro vkládání animací na webové stránky existuje několik technik, které lze použít pouze pomocí HTML. Jednou z možností je využití animovaných obrázků typu GIF, které se automaticky přehrávají.
+        </p>
+        <table>
+          <tr>
+            <td>
+              <span class="code">
+                &lt;img src="animation.gif" alt="Animovaný obrázek"&gt;
+              </span>
+            </td>
+            <td style="padding-left: 20px; font-weight: bolder;">
+              <img src="animation.gif" alt="Animovaný obrázek">
+            </td>
+          </tr>
+        </table>
+        <p>
+          Tímto způsobem lze vložit animovaný obrázek GIF na webovou stránku, který se přehraje automaticky po načtení stránky.
+        </p>
+      </section>
     </section>
 
 
