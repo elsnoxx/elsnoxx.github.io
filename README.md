@@ -80,7 +80,16 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Html & CSS
     - Pridani navodu jak udelat publish webu na githubu
     - pridat ukázkové práce formou obrázků, kvůli zamezení kopírování
-    
+    - pridani ukazku zakladni tagu
+        - strong
+        - b
+        - big
+        - br
+        - hr
+        - i
+        - small
+    - pridani ukazky stinu textu => textíshadow: 0 1px 1px black
+
 
 - Python Beginer
     - lekce 4 ukol
