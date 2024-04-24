@@ -78,10 +78,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
     
 - Html & CSS
-    - lekce 5 obsah, ukol
     - Pridani navodu jak udelat publish webu na githubu
     - pridat ukázkové práce formou obrázků, kvůli zamezení kopírování
-    
     
 
 - Python Beginer
@@ -114,6 +112,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - hodnoceni lekce
     - lekce 3 opravit vytvareni dalsich souboru a pridat popis k adresari
     - lekce 4 obsah, ukol
+    - lekce 5 obsah, ukol
+    - projekt
 
 - Python Beginer
     - lekce 2 obsah, ukol
