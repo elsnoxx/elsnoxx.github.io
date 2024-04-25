@@ -53,7 +53,8 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -78,9 +79,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner3.html';"
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner3.html';"
               class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner5.html';"
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner5.html';"
               class="btn btn-primary">Následují
               lekce</button>
           </td>
@@ -131,10 +134,28 @@
         Pokud ovsem bychom chtěli rozdělit obsah řetězce na vice řádku. Avšak výsledek by mel byt pouze na jednom řádku
         použijeme k tomu zpětné lomítko \
       </p>
-      <pre class="python">
+      <pre class="python" id="pruchod-retezcem">
         <code style="font-weight: bolder;">
           <span class="prommenna">text </span> = <span class="text">"Tohle je prvni textovy\ <br> retezec"</span>
           <span class="prikaz">print</span>(<span class="prommenna">text</span>) 
+        </code>
+      </pre>
+    </section>
+
+
+    <section class="odstavec" >
+      <h2>Průchod řetězcem</h2>
+      <p>
+        Jelikož se budete často setkávat s tím že budeme procházet řetezcem znak po znaku. Ukážeme si jak toho docílit
+        za pomocí <strong>cyklu</strong> <span class="cyklus">for</span>.
+      </p>
+
+      <pre class="python">
+        <code style="font-weight: bolder;">
+          <span class="prommenna">text </span> = <span class="text">"Company 12"</span>
+
+          <span class="cyklus">for</span> <span class="cislo">i</span> <span class="cyklus">in</span> <span class="cislo">text</span>:
+          <span class="prikaz" style="padding-left: 30px;">print</span>(<span class="cislo">i</span>)
         </code>
       </pre>
     </section>
@@ -408,6 +429,293 @@
       </pre>
     </section>
 
+
+    <section class="odstavec">
+      <h2>Řetězcové metody</h2>
+      <p id="isalpha">
+        Python poskytuje řadu metod pro práci s textem, které umožňují provádět různé operace a kontroly na řetězcích.
+        Nejčastěji se používají při průchodu řetězcem za pomocí cyklu. Zde je stručný přehled některých z těchto metod:
+      </p>
+
+      <h4>pismeno.isalpha()</h4>
+      <p>
+        Pokud je pismeno v abecedě vrátíse, logická hodnota <strong>True</strong>. Pokud není písmoeno v abecedě vrátí se <strong>False</strong>.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"a"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isalpha()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to pismeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"1"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isalpha()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to pismeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <span id="isdigit"></span>
+      </div>
+
+      <h4>pismeno.isdigit()</h4>
+      <p>
+        Pokud je znak číslice, vrátí se logická hodnota <strong>True</strong>. Pokud znak není číslice, vrátí se <strong>False</strong>.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">cislo</span> = <span class="text">"1"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">cislo</span>.isdigit()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to číslo"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to číslo"</span>)
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">cislo</span> = <span class="text">"a"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">cislo</span>.isdigit()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to číslo"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to číslo"</span>)
+            </code>
+          </pre>
+        </div>
+        <span id="islower"></span>
+      </div>
+
+      <h4>pismeno.islower()</h4>
+      <p>
+        Pokud je znak malé písmeno, vrátí se logická hodnota <strong>True</strong>. Pokud znak není malé písmeno, vrátí se <strong>False</strong>.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"a"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.islower()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to malé písmeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to malé písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"A"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.islower()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to malé písmeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to malé písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <span id="isupper"></span>
+      </div>
+
+      <h4>pismeno.isupper()</h4>
+      <p>
+        Pokud je znak velké písmeno, vrátí se logická hodnota <strong>True</strong>. Pokud znak není velké písmeno, vrátí se <strong>False</strong>.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"A"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isupper()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to velké písmeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to velké písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"a"</span>
+    
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isupper()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to velké písmeno"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Není to velké písmeno"</span>)
+            </code>
+          </pre>
+        </div>
+        <span id="isalnum"></span>
+      </div>
+
+      <h4>pismeno.isalnum()</h4>
+      <p>
+        Tato metoda vrací logickou hodnotu <strong>True</strong>, pokud je znak písmeno nebo číslice, jinak vrací <strong>False</strong>.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"a"</span>
+
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isalnum()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to písmeno nebo číslice"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to speciální znak"</span>)
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+              <span class="prommenna">pismeno</span> = <span class="text">"!"</span>
+
+              <span class="podminka">if</span> (<span class="prommenna">pismeno</span>.isalnum()):
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to písmeno nebo číslice"</span>)
+              <span class="podminka">else</span>:
+              &emsp;&emsp;<span class="prikaz">print</span>(<span class="text">"Je to speciální znak"</span>)
+            </code>
+          </pre>
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <div class="odstavec">
+      <h2>Samostatná práce</h2>
+      <p>
+        Jste v únikové místnosti s názvem <strong>Wall-E!</strong> Chcete-li uniknout, proveďte tyto kroky:
+      </p>
+      <ol>
+        <li>
+          Zjištění délky řetězce <strong>string1</strong>, který obsahuje text
+          a vypište tuto délku do <strong>konzoly</strong>.
+        </li>
+        <li>
+          Napište celý text velkými písmeny.
+        </li>
+        <li>
+          Někdo udělal chybu a špatně napsal jméno <strong>Wall-E!</strong>
+          Nahraďte všechny výskyty jména <strong>WallE</strong> správným zápisem <strong>Wall-E</strong>.
+          (V této úloze pracujete s textem uvedeným níže.)
+        </li>
+        <li>
+          Nakonec spočítejte, kolikrát bylo použito slovo Země.
+          (V tomto cvičení pracujete s textem, jak je uveden v tabulce níže.)
+        </li>
+      </ol>
+      <h4>Text</h4>
+      <ul>
+        <li>
+          <strong>string1 = </strong><span class="text">
+            "Ve 22. století na Zemi převládaly
+            Koupit n Velká korporace
+            Large), podporující masový konzum a
+            do roku 2105 zcela pokryla planetu odpadem.
+            Aby tuto situaci vyřešilo, vedení BnL,
+            rozhodlo spustit dva programy: Operaci
+            Clean Up a Recolonization
+            (Přesídlení). Vyslali lidi ze Země na
+            nejmodernější luxusní vesmírnou loď.
+            Axiom, aby strávili pět let ve vesmíru a
+            a mezitím vypustili roboty, kteří.
+            a vyčistí Zemi.
+            Plán však po pěti letech selže a lidstvo
+            je nuceno zůstat ve vesmíru. Sedm set
+            sedmi stech let později se objeví pouze jeden robot.
+            WALLE, který vymění svůj starý
+            díly ze svého vyřazeného
+            příbuzných. WALLE žije na Zemi osamělým životem.
+            svým vlastním životem. Sbírá zajímavé
+            věci, chová švába, sleduje film Hello, Dolly!
+            a pouští si soundtrack z tohoto filmu. WALLE však
+            nezůstane sám navždy."</span>
+        </li>
+      </ul>
+      <div class="row">
+        <h5>Ukázkový výsledek ke stažení: </h5>
+        <div style="padding-left: 50px;">
+          <a href="/download/python-beginer/lekce4/vysledkySP.txt" download="vysledkySP.txt"><button
+              class="btn btn-primary">Stáhnout výsledky</button></a>
+        </div>
+      </div>
+      <h5 style="padding-top: 50px;">Nechci aby jste použili jaké koliv AI na generování tohoto úkol.</h5>
+    </div>
+
+
+    <div class="odstavec">
+      <h2>Domácí úkol</h2>
+      <p>
+        Vašim úkolem vytvořit program, který zkontroluje složitosti hesla.
+        K splnění tohoto úkolu bude potřeba metody, které jsme si na dnešní lekci ukázali.
+        Jakmile budete to mít hotové odevzdejte do <a
+          href="https://mystat.itstep.org/cs/auth/login/index?returnUrl=%2Fcs%2Fmain%2Fdashboard%2Fpage%2Findex">
+          <strong>Mystat</strong>
+        </a>
+      </p>
+      <ul>
+        <li><strong>Vstup hesla se udělá přes funkci <span class="prikaz">input()</span>.</strong> <a href="/lessons/python_beginner/python_beginner1.html#input-funkce">ukázka zde</a></li>
+        <li><strong>Cyklus pro průchod vstupního hesla</strong> <a href="#pruchod-retezcem">ukázka zde</a></li>
+      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Nároky na heslo</h4>
+          <ul style="font-weight: bolder;">
+            <li>Délka alespoň 8 znaků</li>
+            <li>Velké a malé písmeno</li>
+            <li>Číslice 0 až 9</li>
+            <li>Alespoň jeden speciální znak tzv. !, @, #, $, %, &, *</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4>Metody pro rozpoznávání znaků</h4>
+          <ul>
+            <li><strong>isdigit</strong> <span>&#8594;</span> pro rozpoznávání čísel <a href="#isdigit">ukázka zde</a></li>
+            <li><strong>isalpha</strong> <span>&#8594;</span> pro rozpoznávání písmen <a href="#isalpha">ukázka zde</a></li>
+            <li><strong>islower</strong> <span>&#8594;</span> pro rozpoznávání malých písmen <a href="#islower">ukázka zde</a></li>
+            <li><strong>isupper</strong> <span>&#8594;</span> pro rozpoznávání velkých písmen <a href="#isupper">ukázka zde</a></li>
+            <li><strong>isalnum</strong> <span>&#8594;</span> pro rozpoznávání speciálních znaků od písmen <a href="#isalnum">ukázka zde</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h5 style="padding-top: 50px;">Nechci aby jste použili jaké koliv AI na generování tohoto úkol.</h5>
+    </div>
+
+    <div class="odstavec">
+      <table>
+        <tr>
+          <td>
+            <h5>Zadání úkolu</h5>
+          </td>
+          <td style="padding-left: 50px;">
+            <button onClick='download("/download/python-beginer/python-beginer-4.pdf")' class="btn btn-primary"
+              style="font-weight: bold;">
+              stažení</button>
+          </td>
+        </tr>
+      </table>
+      <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
+    </div>
 
   </main>
   <footer class="footer">
