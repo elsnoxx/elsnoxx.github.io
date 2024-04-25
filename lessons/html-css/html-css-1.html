@@ -58,7 +58,8 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -83,8 +84,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/html-css/html-css-vsc.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/html-css/html-css-2.html';">Následují lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/html-css/html-css-vsc.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/html-css/html-css-2.html';">Následují lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -299,6 +302,117 @@
       </ul>
     </div>
 
+
+    <section class="odstavec">
+      <h2>Základní HTML tagy</h2>
+      <p>
+        Níže uvedené tagy se používají pro formátování textu za pomocí HTML.
+      </p>
+
+      <section class="odstavec">
+        <h4>&lt;strong&gt;: Zvýrazněný text</h4>
+        <p>
+          Pomocí tagu &lt;strong&gt; můžeme zvýraznit určitou část textu v HTML.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tohle je &lt;strong&gt;důležitý&lt;/strong&gt; text.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tohle je <strong>důležitý</strong> text.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;b&gt;: Tučný text</h4>
+        <p>
+          Tag &lt;b&gt; se dříve používal k označení tučného textu, ale v HTML5 je preferován tag &lt;strong&gt;.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tohle je &lt;b&gt;tučný&lt;/b&gt; text.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tohle je <b>tučný</b> text.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;big&gt;: Velký text</h4>
+        <p>
+          Tag &lt;big&gt; zvětší text.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tohle je &lt;big&gt;velký&lt;/big&gt; text.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tohle je <big>velký</big> text.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;br&gt;: Přerušení řádku</h4>
+        <p>
+          Tag &lt;br&gt; vloží přerušení řádku.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tento text bude na prvním řádku.&lt;br&gt; A tento text bude na druhém řádku.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tento text bude na prvním řádku.<br> A tento text bude na druhém řádku.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;hr&gt;: Vodorovná čára</h4>
+        <p>
+          Tag &lt;hr&gt; vloží vodorovnou čáru.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;První část textu.&lt;/p&gt;
+            &lt;hr&gt;
+            &lt;p&gt;Druhá část textu.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>První část textu.</p>
+            <hr>
+            <p>Druhá část textu.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;i&gt;: Kurzíva</h4>
+        <p>
+          Tag &lt;i&gt; označuje kurzívu.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tohle je &lt;i&gt;kurzivní&lt;/i&gt; text.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tohle je <i>kurzívní</i> text.</p>
+          </div>
+        </div>
+      </section>
+      <section class="odstavec">
+        <h4>&lt;small&gt;: Malý text</h4>
+        <p>
+          Tag &lt;small&gt; zmenší text.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            &lt;p&gt;Tohle je &lt;small&gt;malý&lt;/small&gt; text.&lt;/p&gt;
+          </div>
+          <div class="col-md-6">
+            <p>Tohle je <small>malý</small> text.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
     <div class="odstavec samprace">
       <h3>Samostaný úkol č.1</h3>
       <p>
@@ -327,7 +441,7 @@
             <p>
               Tak jelikož jsme si vytvořili náš první web. Musíme mu ještě přidat styl aby naše stránká vypadala lépe.
               Na to se používá CSS. Ukázka CSS souboru je na obrázky vedle. Změna stylý pomocí CSS můŽe být provedena
-              několika způsoby. A to buď přímo v HTML souboru a nebo jako soubor, který se přiloží k HTML souboru. 
+              několika způsoby. A to buď přímo v HTML souboru a nebo jako soubor, který se přiloží k HTML souboru.
             </p>
           </td>
           <td>
@@ -347,7 +461,8 @@
         ID HTML tagu.
       </p>
       <p>
-        Stylování můžeme použít přímo v HTML dokumentu a nebo v souborem mimo. My se především budeme věnovat jak stylování používat za pomocí třídy v HTML souboru.
+        Stylování můžeme použít přímo v HTML dokumentu a nebo v souborem mimo. My se především budeme věnovat jak
+        stylování používat za pomocí třídy v HTML souboru.
       </p>
       <div class="code center">
         <span class="tag">&lt;html <span class="atribut">lang=</span><span class="text">"cs"</span>&gt;</span> <br>
@@ -440,6 +555,10 @@
                 <td>Odsazení textu</td>
                 <td><code>text-indent: 20px;</code></td>
               </tr>
+              <tr>
+                <td>Text se stínem</td>
+                <td><code>text-shadow: 2px 2px 4px #000000;</code></td>
+              </tr>
             </table>
           </div>
           <!-- Výsledek -->
@@ -496,6 +615,10 @@
               <tr>
                 <td>Odsazení textu</td>
                 <td style="text-indent: 20px;">Indented text</td>
+              </tr>
+              <tr>
+                <td>Text se stínem</td>
+                <td style="text-shadow: 2px 2px 4px #000000;">Text se stínem</td>
               </tr>
             </table>
           </div>
