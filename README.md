@@ -83,7 +83,17 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 
 - Python Beginer
-    - lekce 5 obsah, ukol
+    - lekce 2 zkusit vymyslet jednodusi ukol, jmeno je asi celkem tezke
+    - lekce 5 obsah, ukol + word a pdf
+    - lekce 6 obsah, ukol + word a pdf
+    - lekce 7 obsah, ukol + word a pdf
+    - projekt + word a pdf
+    - tlacitko pro skopirovani kodu do cliboard nebilo at udelat ctrl + c
+    - opravit odsazeni u ukazky kodu, tak aby se potom nekopirovali spolu s kodem ale bylo to tak naformatovenave ze jen copy paste a melo by to fungovat
+        - lekce 1
+        - lekce 2
+        - lekce 3
+        - lekce 4
     
 
 - Construct
