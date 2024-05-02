@@ -76,13 +76,54 @@
     <h1>Hry pomocí Pythonu</h1>
 
     <section class="odstavec">
-        <h2>Kámen, nůžky, papír</h2>
-        <p>
-
-        </p>
-    </section>
+      <h2>Co bude potřeba</h2>
+      <ul>
+          <li><strong>Random číslo:</strong> Pro generování náhodného výběru kámen, nůžky nebo papír.</li>
+          <li><strong>Nekonečný cyklus:</strong> Pro opakované hraní hry.</li>
+          <li><strong>Vstup od uživatele:</strong> Pro získání vstupu od hráče (volba kámen, nůžky nebo papír).</li>
+          <li><strong>Podmínky:</strong> Pro zpracování vstupu a určení vítěze.</li>
+          <li><strong>Tisk do konzole:</strong> Pro zobrazení výsledků hry.</li>
+          <li><strong>Formátovaný tisk do konzole:</strong> Pro přehledné zobrazení výsledků.</li>
+      </ul>
+  </section>
+  
+  <section class="odstavec">
+      <h2>Postup práce</h2>
+      <ol>
+          <li><strong>Importování knihovny random:</strong> Kód začíná importováním knihovny random, která je použita k generování náhodných čísel.</li>
+          <li><strong>Inicializace proměnných:</strong> Definují se proměnné pro skóre hráče, volbu hráče a možnosti (kámen, nůžky, papír).</li>
+          <li><strong>Výpis pravidel hry:</strong> Zobrazují se pravidla hry, včetně toho, jaké jsou možnosti a jaká je úloha hráče.</li>
+          <li><strong>Hlavní smyčka hry (while True):</strong> Hlavní smyčka hry začíná a bude probíhat, dokud hráč nepřestane hrát.</li>
+          <li><strong>Generování výběru počítače:</strong> Hra vygeneruje náhodný výběr kámen, nůžky nebo papír.</li>
+          <li><strong>Výběr hráče:</strong> Hráč zvolí kámen, nůžky nebo papír.</li>
+          <li><strong>Určení vítěze:</strong> Na základě výběru hráče a počítače se určí vítěz.</li>
+          <li><strong>Zobrazení výsledků:</strong> Zobrazí se výsledky hry, včetně vítězného nebo remízového výsledku.</li>
+      </ol>
+  </section>
+  
+  <section class="odstavec">
+      <h2>Ukázka hry</h2>
+      <div class="row">
+          <div class="col-md-6 mt-3 mb-3">
+              <img class="myImg" src="/img/python/hry/kamen-nuzky-papir/vyhra.png"
+                  alt="Ukázka finálního výřezu, připomínající cibuli" style="width:100%; max-width:300px; height: auto"
+                  loading="lazy">
+          </div>
+          <div class="col-md-6 mt-3 mb-3">
+              <img class="myImg" src="/img/python/hry/kamen-nuzky-papir/vyhra.png"
+                  alt="Ukázka finálního výřezu, připomínající cibuli" style="width:100%; max-width:300px; height: auto"
+                  loading="lazy">
+          </div>
+      </div>
+  </section>
+  
     
-
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
 
   </main>
   <footer class="footer">

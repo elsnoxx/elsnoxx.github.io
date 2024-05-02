@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-adsense-account" content="ca-pub-7668654631963540">
+  <meta name="description" content="Python beginner projekt">
+  <title>Python - beginner</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
+
+  <link rel="icon" href="/img/coding.png">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html">My Site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/youtube/youtube.html">Youtube</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main role="main" class="container">
+    <h1>Hra s duchy za dveřmi</h1>
+
+    <section class="odstavec">
+      <h2>Co bude potřeba</h2>
+      <ul>
+        <li><strong>Random číslo</strong> <span>&#8594;</span> pro generování random čísla <a href="#random">ukázka
+            zde</a></li>
+        <li><strong>Nekonečný cyklus</strong> <span>&#8594;</span> pro hraní pořád dokola použijeme nekonečný cyklus <a
+            href="/lessons/python_beginner/python_beginner3.html#Nekonecny-cyklus">ukázka zde</a></li>
+        <li><strong>Vstup od uživatele</strong> <span>&#8594;</span> pro zpracování vstupu použijte <a
+            href="/lessons/python_beginner/python_beginner1.html#input-funkce">ukázka zde</a></li>
+        <li><strong>Podmínky</strong> <span>&#8594;</span> pro hlavni logiku použijeme <a
+            href="/lessons/python_beginner/python_beginner3.html#podminky-konstrukce">ukázka zde</a></li>
+        <li><strong>Tisk do konzole</strong> <span>&#8594;</span> pro vypsání do konzole bude potřeba print <a
+            href="/lessons/python_beginner/python_beginner1.html#print">ukázka zde</a></li>
+        <li><strong>Formátovaný tisk do konzole</strong> <span>&#8594;</span> pro generování random čísla <a
+            href="/lessons/python_beginner/python_beginner1.html#formatovany-vypis">ukázka zde</a></li>
+      </ul>
+    </section>
+
+    <section class="odstavec">
+      <h2>Postup práce</h2>
+      <ol>
+        <li><strong>Importování knihovny random:</strong> Kód začíná importováním knihovny random, která je použita k
+          generování náhodných čísel.</li>
+        <li><strong>Inicializace proměnných:</strong> Definují se proměnné user_score (skóre hráče), user_choice (volba
+          hráče), door_count (počet dveří) a ghost_index (index dveří, za kterými se skrývá duch).</li>
+        <li><strong>Výpis pravidel hry:</strong> Zobrazují se pravidla hry, včetně toho, kolik dveří je k dispozici a
+          jaký je úkol hráče.</li>
+        <li><strong>Hlavní smyčka hry (while True):</strong> Hlavní smyčka hry začíná a bude probíhat, dokud hráč
+          neprohraje.</li>
+        <li><strong>Generování polohy ducha:</strong> Hráčovi se zobrazí možnosti výběru dveří a požádá se ho, aby
+          vybral číslo dveří.</li>
+        <li><strong>Výběr dveří:</strong> Pomocí funkce random.randint(1, door_count) se generuje náhodný index, který
+          určuje, za kterými dveřmi se skrývá duch.</li>
+        <li><strong>Otevření dveří:</strong> Zobrazí se dveře a hráči se ukáže, za kterými se skrývá duch.</li>
+        <li><strong>Kontrola výběru hráče:</strong> Kontroluje se, zda hráč vybral dveře s duchem nebo bez něj. Pokud
+          hráč vybral dveře s duchem, hra končí a zobrazí se konečné skóre. Pokud hráč vybral dveře bez ducha, jeho
+          skóre se zvýší a hra pokračuje v novém kole.</li>
+        <li><strong>Konec smyčky:</strong> Smyčka se ukončí, pokud hráč prohraje (vybere dveře s duchem) nebo pokud hráč
+          rozhodne, že chce skončit hru.</li>
+      </ol>
+    </section>
+
+    <section class="odstavec">
+      <h2>Ukázka hry</h2>
+
+      <div class="row">
+        <div class="col-md-6 mt-3 mb-3">
+          <img class="myImg" src="/img/python/hry/duch/ukazka-prohry.png"
+            alt="Ukázka finální ho výřezu, připomínající cibuly" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+        <div class="col-md-6 mt-3 mb-3">
+          <img class="myImg" src="/img/python/hry/duch/ukazka-hry.png"
+            alt="Ukázka finální ho výřezu, připomínající cibuly" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="/contact.html">Richard Ficek</a>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
