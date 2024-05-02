@@ -57,6 +57,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
+
+- TinkerCAD
+    - upravit rozložení stránek, za pomocí boostrapu, aby byly i responsivní
+    - přidání dalších prací navíc
     
     
 - Roblox
@@ -84,7 +88,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Beginer
     - lekce 2 zkusit vymyslet jednodusi ukol, jmeno je asi celkem tezke
-    - lekce 5 obsah, ukol + word a pdf
     - lekce 6 obsah, ukol + word a pdf
     - lekce 7 obsah, ukol + word a pdf
     - projekt + word a pdf
@@ -101,6 +104,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
  
 
 # Versions
+## 2024 May - Update
+- Python Beginer
+    - lekce 5 obsah, ukol + word a pdf
+    - stránka se základními hry
+    - scripty k ukazkovým hrá
 
 ## 2024 April - Update
 - General
