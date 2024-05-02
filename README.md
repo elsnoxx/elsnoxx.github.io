@@ -54,6 +54,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## ToDo List
 - General
     - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat vymyslet lepsi zpracovani
+    - uprava novych obrazku na avif format
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
@@ -80,11 +81,17 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Html & CSS
     - Pridani navodu jak udelat publish webu na githubu
     - pridat ukázkové práce formou obrázků, kvůli zamezení kopírování
+    - pridat nejake uazkove video do lekce 4
+    - pridat pisnicky do kolece 4 jako ukazku
 
 
 - Python Beginer
     - lekce 5 obsah, ukol
-    
+    - lekce 4 zmenit ukazkovy obrazek
+    - Projekt
+
+- Python Minecraft python
+    - pripravit si lekce 
 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
