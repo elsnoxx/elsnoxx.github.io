@@ -25,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -54,7 +54,8 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -79,8 +80,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner6.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/projekt.html';" class="btn btn-primary">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner6.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/projekt.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -89,7 +93,7 @@
         </tr>
       </table>
     </div>
-    
+
     <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 7 - Python</h1>
     <p style="margin-bottom: 64px; ">
       Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
@@ -100,10 +104,69 @@
 
 
 
-    <div style="margin-bottom: 64px; ">
+    <section class="odstavec">
+      <h2>Vytvoření grafického textu</h2>
+      <p>
+        Zde se nachaází odkaz na web, pomocí kterého budete moct vytvořit různě grafický text formou speciálních znaků
+        <a href="https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=win">patorjk.com</a>
+      </p>
 
-    </div>
+    </section>
 
+    <h2>Vytvoření hry Wizard Duel</h2>
+<p>Vytvořme hru nazvanou Wizard Duel a nastavme minimální a maximální hodnoty zdraví, stejně jako vytvoření kouzel pro útok a rušení útoků.</p>
+<p>Nejprve si rozluštíme kód uvedený v Seznamu 1 (na konci této lekce), který implementuje duel kouzelníků pomocí jazyka Python.</p>
+
+<h2>Seznamy. Vnořené Seznamy</h2>
+<p>Vytvořme vnořený seznam. Jedná se o novou strukturu, se kterou se seznámíme. Stručně řečeno, vnořený seznam je speciální seznam obsahující další seznamy. K přístupu k prvku v seznamu budete potřebovat ne jedno, ale dva indexy. První je index vnořeného seznamu, druhý je prvek vnořeného seznamu:</p>
+<pre>numbers = [[1, 2, 3], [10, 20, 30], [100, 200, 300]]
+numbers[0] # numbers[0] = [1, 2, 3]
+numbers[0][0] # numbers[0][0] = 1</pre>
+<p>Seznam kouzel, které používají kouzelníci, má následující vlastnosti: název, množství poškození a léčení. Použijeme kouzla uvedená v tabulce při psaní programu. Každé kouzlo má určitou vlastnost, například způsobuje poškození, léčí nebo ruší útoky.</p>
+
+<h2>Implementace</h2>
+<p>Každé kouzlo je prezentováno ve formě seznamu a všechny jsou kombinovány do vnořeného seznamu `spells`:</p>
+<pre>spells = [['fireball', 10, 0], ['metabolism', 0, 8], ['silence', 0, 0]]</pre>
+<p>Rozdělme vlastnosti kouzel: první prvek je název, druhý je poškození, třetí je léčení. Prosím, vezměte na vědomí, že existuje i jiný způsob, jak přistupovat k prvkům vnořeného seznamu:</p>
+<pre>for row in spells:
+    for elem in row:</pre>
+
+<h2>Vytvoření hlavní smyčky hry</h2>
+<p>Nyní nabídněte uživateli, zda chce začít hru, nebo program uzavřít. Hráč může napsat N nebo n a tím uzavře hlavní smyčku, nebo Y nebo y pro začátek duelu:</p>
+<pre>while True:
+    print('\nStart Wizard Duel?\n[Y] - Yes\n[N] - No')
+    select = input('Your select: ')
+    if select == 'N' or select == 'n':
+        break
+    elif (not select == 'Y') and (not select == 'y'):
+        print('Error! Try again.')
+    else:
+        # Start new game</pre>
+
+<h2>Střílení kouzel</h2>
+<p>Podmínka hry má velmi důležitý bod: ticho ruší jakýkoli útok a přesměrovává poškození na nepřítele. To se však netýká léčení. Pokud jak počítač, tak hráč vyberou ticho, další provádění kódu nemá smysl, proto je rozumné použít operátor `continue`:</p>
+<pre>if play_1 == 'silence' and play_2 == 'silence':
+    continue</pre>
+<p>Dále zkontrolujte podmínku. Pokud jeden z kouzelníků rozhodne rušit útok, program musí toto rozpoznat a neodebrat body zdraví hráči:</p>
+<pre>elif play_1 == 'silence':
+    player_select = bot_select
+    player_health += spells[bot_select][damage]
+elif play_2 == 'silence':
+    bot_select = player_select
+    bot_health += spells[player_select][damage]</pre>
+
+<h2>Programování maximálních a minimálních hodnot zdraví</h2>
+<p>Ujistěte se, že hodnota zdraví nepřesáhne maximální nebo nebude pod 0. Takže vytvořte dodatečnou kontrolu:</p>
+<pre>if player_health > max_health and bot_health > max_health:
+    player_health = max_health
+    bot_health = max_health
+elif player_health > max_health:
+    player_health = max_health
+elif bot_health > max_health:
+    bot_health = max_health</pre>
+<p>Pokud je zdraví kouzelníka nižší než 0, hra je u konce a vypíše informace o vítězi:</p>
+<pre>if player_health < min_health or bot_health < min_health:
+    break</pre>
 
   </main>
   <footer class="footer">
