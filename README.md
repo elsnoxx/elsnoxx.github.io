@@ -80,9 +80,25 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 - Html & CSS
     - Pridani navodu jak udelat publish webu na githubu
-    - pridat ukázkové práce formou obrázků, kvůli zamezení kopírování
     - pridat nejake uazkove video do lekce 4
     - pridat pisnicky do kolece 4 jako ukazku
+    - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
+
+    - pridat nejakou hru k otestovaní znalostí z html a css, neco ve stylu na tabuli se zobrazi ukol se zadáním a poté nechám čas a v pořadím jakém se přihlásí tak v takovém budou dostavat body celkem se rozdelí 10 diamantu mezi top 4 - 5 žáků
+        -   úkoly: zkusit udělat větší množství úkolů
+            - tučný text
+            - funkční odkaz na google.com
+            - tlačítko
+            - seznam s tečky
+            - seznam s čísli
+            - největší nadpis
+            - nejmenší nadpis v modé barvě
+            - text kurzivou
+            - obrazek o šířce 300px
+            - odkaz bez formatovaní, černý
+            - rozdělení řádku na 2 řádky (br)
+            - červený text
+            - tabulka
 
 
 - Python Beginer
