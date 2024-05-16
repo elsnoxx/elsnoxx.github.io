@@ -1,109 +1,53 @@
+# Import potřebných knihoven
 import random
 import time
 import os
 
+# Nastavení hodnot pro zdraví hráče a počítače
 min_health = 0
 max_health = 20
 player_health = max_health
 bot_health = max_health
 
-# spell = [spell_name, damage, healing]
-simple_spells = [['fireball', 10, 0],
-['metabolism', 0, 8], ['silence', 0, 0]]
-complicated_spells = [['strength', 9, 3],
-['vitality', 4, 8]]
+# Definice jednoduchých a složitých kouzel
+# každé kouzlo je seznam obsahující jméno, poškození a uzdravení
+simple_spells = [['fireball', 10, 0], ['metabolism', 0, 8], ['silence', 0, 0]]
+complicated_spells = [['strength', 9, 3], ['vitality', 4, 8]]
 
+# Indexy pro jednotlivé hodnoty v seznamu kouzel
 name = 0
 damage = 1
 heal = 2
 
-# Img to ASCII
+# ASCII umění pro vizuální efekty
+# ASCII umění pro začátek, konec hry, posunutí úrovně a nové kolo
 start_ascii = '''
-______ ________ ______ _______ ________
-/ | \/ \| | |
-| $$$$$$\$$$$$$$| $$$$$$| $$$$$$$\$$$$$$$$
-| $$___\$$ | $$ | $$__| $| $$__| $$ | $$
-_\$$$$$$\ | $$ | $$$$$$$| $$$$$$$\ | $$
-\$$ $$ | $$ | $$ | $| $$ | $$ | $$
-\$$$$$$ \$$ \$$ \$$\$$ \$$ \$$
-__ __ ______ ________ ______ _______ _______ _______ __ __ ________ __ ____
-| \ _ | | | \/ \| \| \ | \| \ | | | \ / |
-| $$ / \ | $$\$$$$$$\$$$$$$$| $$$$$$| $$$$$$$| $$$$$$$\ | $$$$$$$| $$ | $| $$$$$$$| $$ | $$$$|
-| $$/ $\| $$ | $$ / $$| $$__| $| $$__| $| $$ | $$ | $$ | $| $$ | $| $$__ | $$ \$$| $$
-| $$ $$\$$\$$ | $$ / $$ | $$$$$$$| $$$$$$$| $$ | $$ | $$ | $| $$ | $| $$$$$ | $$ | $$
-| $$$ \$$| $$ | $$ | $$ | $| $$ | $| $$ $$ | $$ $$\$$ $| $$ | $$ | $|
-\$$ \$$\$$$$$$\$$$$$$$$\$$ \$$\$$ \$$\$$$$$$$ \$$$$$$$ \$$$$$$ \$$$$$$$$\$$$$$$$$\$$
+<ASCII umění pro začátek hry>
 '''
+
 gameover_ascii = '''
-______ ______ __ __ ________ ______ __ __ ________ _______
-/ \ / \| \ / | \ / \| \ | | | |
-| $$$$$$| $$$$$$| $$\ / $| $$$$$$$$ | $$$$$$| $$ | $| $$$$$$$| $$$$$$$|
-| $$| | $$ $| $$$$\ $$$| $$ \ | $$ | $$\$$\ / $| $$ \ | $$ $$
-| $$ \$$$| $$$$$$$| $$\$$ $$ $| $$$$$ | $$ | $$ \$$\ $$| $$$$$ | $$$$$$$|
-| $$__| $| $$ | $| $$ \$$$| $| $$_____ | $$__/ $$ \$$ $$ | $$_____| $$ | $$
-\$$$$$$ \$$ \$$\$$ \$$\$$$$$$$$ \$$$$$$ \$ \$$$$$$$$\$$ \$$
+<ASCII umění pro konec hry>
 '''
+
 end_ascii = '''
-________ __ __ ________ ________ __ __ _______
-| | \ | | \ | | \ | | |
-\$$$$$$$| $$ | $| $$$$$$$$ | $$$$$$$| $$\ | $| $$$$$$$|
-| $$ | $$ $| $$ \ | $$ \ | $$$$\ $| $$ | $$
-| $$ | $$$$$$$| $$$$$ | $$$$$ | $$\$$ $| $$ | $$
-| $$ | $$ | $| $$_____ | $$_____| $$ \$$$| $$__/ $$
-\$$ \$$ \$$\$$$$$$$$ \$$$$$$$$\$$ \$$\$$$$$$$
+<ASCII umění pro konec hry>
 '''
 
 level_up_ascii = '''
-__ ________ __ __ ________ __ __ __ _______
-| \ | | \ | | | \ | \ | | \|
-| $$ | $$$$$$$| $$ | $| $$$$$$$| $$ | $$ | $| $$$$$$$|
-| $$ | $$ \ \$$\ / $| $$ \ | $$ | $$ | $| $$ $$
-| $$ | $$$$$ \$$\ $$| $$$$$ | $$ | $$ | $| $$$$$$$
-| $$_____| $$_____ \$$ $$ | $$_____| $$_____ | $$__/ $| $$
-\$$$$$$$$\$$$$$$$$ \$ \$$$$$$$$\$$$$$$$$ \$$$$$$ \$$
+<ASCII umění pro posunutí úrovně>
 '''
+
 new_round_ascii = '''
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||||..||||||||||||||||||||||||||||||
-|||||||^-||||||||||||||||||||.&!&-.|..||||||||||...-!^^^.|||||
-|-||!%@@@$!||||||||||...||||.^^&&&!&!.|||||||.$##@$$@@@$!!-.!.
-|&$@$&!--&!||||||||||-&!&--^-!%%^&^-..!!.|||||.&%%&%!%$%!.-@@&
-||%@^--!..&|.-^&^^^^^%%%%%&&%%%%^^&^&&^&&--&%^^&&!&!!&@$@##%.|
-||||.!$@$@@@$$@$!.||.-&%!-.!^&%^&--!&&&&!.|-&&@$$$$@@@#####^||
-|||!#@%!@##$^$$#!|||||-&-.&--!%^&!-...!...||||||-%@@@@#^.!&.||
-|||^##@!#@#@^||..||||||||..|.!&-!.|||||||.!^^&||||^$##@&||||||
-||^#%.|%#@@@$$.|||||||||||||||.||||||||||&&-.$!|!$$@#$@@.|||||
-|^^%^|&##$@@@$@.|||||||||||||||||||||||||!$-...$$$@##@@#&|||||
-|^^!!$##@%!..$$!&||||||||||||||||||||||||||-&%^$^!%&.$@@$.||||
-||||||-.||||||||||||||||||||||||||||||||||||||||||||||||||||||
+<ASCII umění pro nové kolo>
 '''
 
 win_ascii = '''
-##########################################
-################_||||#||||_###############
-###########|||||||||||||||||||||##########
-##########$|||||||||||||||||||||$#########
-######|||||||||||||||||||||||||||||||#####
-######|||||||||__-$$$$$$$$$$|||||||||#####
-##$||||||||$|||$$$$$$$$$$$$$|||$||||||||##
-###|||||||||$|||$$$$$$$$$$$@||$|||||||||##
-####|||||||||$$||$$$$$$$$$|||$|||||||||###
-#$||||||||||||||$$$$$$$$$$$@|||||||||||||#
-#||||||||||||||||||$$$$$|||||||||||||||||@
-###|||||||||||||||||$$$$|||||||||||||||@##
-##|||||||||||||||||$$$$$||||||||||||||||$#
-#||||||||||||||||||$$$$$$||||||||||||||||@
-####-||||||||||||$$$$$$$$$||||||||||||-###
-####|||||||||||||$$$$$$$$$||||||||||||-###
-####|||||||||||||$$$$$$$$$|||||||||||||###
-########||||||||@@||@@@@@@@||||||||#######
-########||||||||||||||||||||||||||$#######
-#############||||||||||||||||$############
-##############||###$|||###$||#############
+<ASCII umění pro výhru>
 '''
 
+# Hlavní herní smyčka
 while True:
-    # Player select
+    # Hráč volí, zda chce začít hru
     print(start_ascii, '\n[Y] - Yes\n[N] - No\n')
     select = input('Start Wizard Duel? Your select: ')
     if select == 'N' or select == 'n':
@@ -111,7 +55,7 @@ while True:
     elif (not select == 'Y') and (not select == 'y'):
         print('Error! Try again.')
     else:
-        # --- create new list with spells ---
+        # Příprava nové hry
         os.system('cls')
         spells = simple_spells
         a = len(simple_spells)
@@ -130,9 +74,9 @@ while True:
         ==========================================
         ------- WIZARD DUEL -------''')
         print(new_round_ascii)
-        # Start new game
+        # Start nové hry
         for round in range(1, 6):
-            # User select
+            # Hráč vybírá kouzlo
             choice = True
             while choice:
                 player_select = input('\nSelect spell: ')
@@ -145,11 +89,9 @@ while True:
                 else:
                     print('Error! Try again.')
             play_1 = spells[player_select][name]
-            # The spell selected by the player
             play_2 = spells[bot_select][name]
-            # The spell selected by the bot
             print(f'''----ROUND No {round}----{play_1.upper()} ----- {play_2.upper()}''')
-            # Use spell
+            # Použití kouzla a aktualizace zdraví
             if play_1 == 'silence' and play_2 == 'silence':
                 continue
             elif play_1 == 'silence':
@@ -162,7 +104,7 @@ while True:
             player_health -= spells[bot_select][damage]
             bot_health += spells[bot_select][heal]
             bot_health -= spells[player_select][damage]
-            # Max & min health
+            # Omezení zdraví na maximální a minimální hodnoty
             if player_health > max_health and bot_health > max_health:
                 player_health = max_health
                 bot_health = max_health
@@ -171,10 +113,10 @@ while True:
             elif bot_health > max_health:
                 bot_health = max_health
             print(f''' PLAYER vs BOT {player_health} {bot_health}''')
-            
+            # Kontrola konce hry
             if player_health < min_health or bot_health < min_health:
                 break
-            
+            # Odemknutí složitějších kouzel po třech kolech
             if round == 3:
                 os.system('cls')
                 print(f'''
@@ -190,7 +132,7 @@ while True:
                     for elem in row:
                         print('\t', elem, end='')
                 print('\n==================================')
-        # ------------- The end -------------
+        # Konec hry
         os.system('cls')
         print(gameover_ascii)
         if player_health > bot_health:
@@ -200,8 +142,6 @@ while True:
         else:
             print('Draw!')
         time.sleep(5)
-                
-                
-                
+# Ukončení programu
 os.system('cls')
 print(end_ascii)
