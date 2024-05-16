@@ -103,70 +103,132 @@
     </p>
 
 
-
     <section class="odstavec">
-      <h2>Vytvoření grafického textu</h2>
+      <h2>Vytvoření hry Wizard Duel</h2>
       <p>
-        Zde se nachaází odkaz na web, pomocí kterého budete moct vytvořit různě grafický text formou speciálních znaků
-        <a href="https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=win">patorjk.com</a>
+        Vytvořme hru nazvanou Wizard Duel a nastavme minimální a maximální hodnoty zdraví, stejně jako vytvoření kouzel
+        pro útok a rušení útoků.
       </p>
-
     </section>
 
-    <h2>Vytvoření hry Wizard Duel</h2>
-<p>Vytvořme hru nazvanou Wizard Duel a nastavme minimální a maximální hodnoty zdraví, stejně jako vytvoření kouzel pro útok a rušení útoků.</p>
-<p>Nejprve si rozluštíme kód uvedený v Seznamu 1 (na konci této lekce), který implementuje duel kouzelníků pomocí jazyka Python.</p>
 
-<h2>Seznamy. Vnořené Seznamy</h2>
-<p>Vytvořme vnořený seznam. Jedná se o novou strukturu, se kterou se seznámíme. Stručně řečeno, vnořený seznam je speciální seznam obsahující další seznamy. K přístupu k prvku v seznamu budete potřebovat ne jedno, ale dva indexy. První je index vnořeného seznamu, druhý je prvek vnořeného seznamu:</p>
-<pre>numbers = [[1, 2, 3], [10, 20, 30], [100, 200, 300]]
-numbers[0] # numbers[0] = [1, 2, 3]
-numbers[0][0] # numbers[0][0] = 1</pre>
-<p>Seznam kouzel, které používají kouzelníci, má následující vlastnosti: název, množství poškození a léčení. Použijeme kouzla uvedená v tabulce při psaní programu. Každé kouzlo má určitou vlastnost, například způsobuje poškození, léčí nebo ruší útoky.</p>
-
-<h2>Implementace</h2>
-<p>Každé kouzlo je prezentováno ve formě seznamu a všechny jsou kombinovány do vnořeného seznamu `spells`:</p>
-<pre>spells = [['fireball', 10, 0], ['metabolism', 0, 8], ['silence', 0, 0]]</pre>
-<p>Rozdělme vlastnosti kouzel: první prvek je název, druhý je poškození, třetí je léčení. Prosím, vezměte na vědomí, že existuje i jiný způsob, jak přistupovat k prvkům vnořeného seznamu:</p>
-<pre>for row in spells:
-    for elem in row:</pre>
-
-<h2>Vytvoření hlavní smyčky hry</h2>
-<p>Nyní nabídněte uživateli, zda chce začít hru, nebo program uzavřít. Hráč může napsat N nebo n a tím uzavře hlavní smyčku, nebo Y nebo y pro začátek duelu:</p>
-<pre>while True:
-    print('\nStart Wizard Duel?\n[Y] - Yes\n[N] - No')
-    select = input('Your select: ')
-    if select == 'N' or select == 'n':
-        break
-    elif (not select == 'Y') and (not select == 'y'):
-        print('Error! Try again.')
-    else:
-        # Start new game</pre>
-
-<h2>Střílení kouzel</h2>
-<p>Podmínka hry má velmi důležitý bod: ticho ruší jakýkoli útok a přesměrovává poškození na nepřítele. To se však netýká léčení. Pokud jak počítač, tak hráč vyberou ticho, další provádění kódu nemá smysl, proto je rozumné použít operátor `continue`:</p>
-<pre>if play_1 == 'silence' and play_2 == 'silence':
-    continue</pre>
-<p>Dále zkontrolujte podmínku. Pokud jeden z kouzelníků rozhodne rušit útok, program musí toto rozpoznat a neodebrat body zdraví hráči:</p>
-<pre>elif play_1 == 'silence':
-    player_select = bot_select
-    player_health += spells[bot_select][damage]
-elif play_2 == 'silence':
-    bot_select = player_select
-    bot_health += spells[player_select][damage]</pre>
-
-<h2>Programování maximálních a minimálních hodnot zdraví</h2>
-<p>Ujistěte se, že hodnota zdraví nepřesáhne maximální nebo nebude pod 0. Takže vytvořte dodatečnou kontrolu:</p>
-<pre>if player_health > max_health and bot_health > max_health:
-    player_health = max_health
-    bot_health = max_health
-elif player_health > max_health:
-    player_health = max_health
-elif bot_health > max_health:
-    bot_health = max_health</pre>
-<p>Pokud je zdraví kouzelníka nižší než 0, hra je u konce a vypíše informace o vítězi:</p>
-<pre>if player_health < min_health or bot_health < min_health:
-    break</pre>
+    <section class="odstavec">
+      <h2>Postup k vytvoření Souboje dvou kouzelníků</h2>
+      <ol>
+        <li>
+          <h5>Přidání knohoven</h5>
+          <ul>
+            <li>
+              Importujeme potřebné moduly: <b>random</b>, <b>time</b> a <b>os</b>.
+            </li>
+            <li>
+              Definujeme konstanty pro <b>minimální</b> a <b>maximální zdraví</b> a inicializujeme zdraví <b>hráče</b> a
+              <b>počítače</b>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Definice kouzel:</h5>
+          <ul>
+            <li>
+              Definujeme dva seznamy kouzel: <b>jednoduche_kouzla</b> a <b>slozite_kouzla</b>, každý obsahuje podseznamy
+              s podrobnostmi o kouzlech jako <b>jméno</b>, <b>poškození</b> a <b>uzdravení</b>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>ASCII umění pro vizuální efekty:</h5>
+          <ul>
+            <li>
+              Definujeme ASCII umění pro různé obrazovky hry, jako jsou začátek, konec hry, posunutí úrovně, nové kolo a
+              výhra.
+            </li>
+            <li>
+              Pro lepší a rychleší vykreslení použijeme web <a
+                href="https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=win">patorjk.com</a>
+              k generovaní takového textu.
+            </li>
+          </ul>
+        </li>
+        <li>
+        <h5>Herní smyčka:</h5>
+        <ul>
+          <li>
+            Využijeme <code>while</code> smyčku k udržování hry běžící, dokud hráč nerozhodne ukončit.
+          </li>
+        </ul>
+        </li>
+        <li>
+          <h5>Výběr hráče pro spuštění hry:</h5>
+          <ul>
+            <li>
+              Hráče vyzveme k spuštění hry volbou 'Y' pro ano nebo 'N' pro ne. Pokud je vstup neplatný, opakujeme.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Výběr kouzla:</h5>
+          <ul>
+            <li>
+              Pokud hráč rozhodne začít, vyčistíme obrazovku a zobrazíme dostupné možnosti kouzel.
+            </li>
+            <li>
+              Hráče vyzveme k vybrání kouzla podle jeho indexu.
+            </li>
+            <li>
+              Zpracujeme chyby pro neplatné vstupy.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Hratelnost:</h5>
+          <ul>
+            <li>
+              Provádíme pět kol hry.
+            </li>
+            <li>
+              V každém kole hráč vybere kouzlo a počítač vybere náhodné kouzlo.
+            </li>
+            <li>
+              Efekty vybraných kouzel se aplikují na zdraví hráče a počítače.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Posun úrovně:</h5>
+          <ul>
+            <li>
+              Po třetím kole odemkneme složitější kouzla.
+            </li>
+            <li>
+              Zobrazíme aktualizovaný seznam dostupných kouzel.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Konec hry:</h5>
+          <ul>
+            <li>
+              Po pěti kolech vyčistíme obrazovku a zobrazíme obrazovku konce hry.
+            </li>
+            <li>
+              Na základě zdraví hráče a počítače vyhlásíme vítěze.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Ukončení:</h5>
+          <ul>
+            <li>
+              Před opuštěním herní smyčky počkáme 5 sekund.
+            </li>
+            <li>
+              Vyčistíme obrazovku a zobrazíme ASCII umění pro konec hry.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
   </main>
   <footer class="footer">
