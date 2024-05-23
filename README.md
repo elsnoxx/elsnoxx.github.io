@@ -79,7 +79,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
     
 - Html & CSS
-    - Pridani navodu jak udelat publish webu na githubu
     - pridat nejake uazkove video do lekce 4
     - pridat pisnicky do kolece 4 jako ukazku
     - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
@@ -102,18 +101,29 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 
 - Python Beginer
-    - lekce 5 obsah, ukol
-    - lekce 4 zmenit ukazkovy obrazek
-    - Projekt
+    - lekce 6 obsah
 
 - Python Minecraft python
-    - pripravit si lekce 
+    - lekce 1
+    - lekce 2
+    - lekce 3
+    - lekce 4
+    - lekce 4
 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
  
 
 # Versions
+## 2024 May - Update
+
+- Html & CSS
+    - Pridani navodu jak udelat publish webu na githubu
+
+- Python Beginer
+    - lekce 5 obsah, ukol
+    - lekce 4 zmenit ukazkovy obrazek
+    - Projekt
 
 ## 2024 April - Update
 - General
