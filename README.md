@@ -12,9 +12,9 @@ Kažá lekce má určitý počet lekcí a na každé lekce si každý studen vyt
 - AVIF pro obrázky
 
 ## Broken links checker
-- K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty/python/broken-links/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
+- K naleznutí rozbytých či nefunkčínch linků na web stránce. Se používá tento file [broken-links.py](scripty-sprava-webu/broken-links/broken-links.py). Ten po spuštění vygeneruje stránky a ta se následně zobrazí [zde](/bugs.html)
 
-- Více informací v [README](scripty/python/broken-links/README.md) této aplikace.
+- Více informací v [README](scripty-sprava-webu/broken-links/README.md) této aplikace.
 
 ## AVIF konverze
 
@@ -55,6 +55,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - General
     - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat vymyslet lepsi zpracovani
     - uprava novych obrazku na avif format
+    - vytvorit scrypt pro konverzi uobrazku do avif formy, vytvorit k tomu readme
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
@@ -83,6 +84,27 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat pisnicky do kolece 4 jako ukazku
     - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
 
+
+- Python Beginer
+    - lekce 6 obsah, zkontrolovat obsah
+    - lekce 5, upravit ukol aby byl zajimavejsi + rozsirit to o pokracovani o seznamu
+
+- Python Minecraft python
+    - lekce 1 - dodelat rozpracovane chybi scrreny
+    - lekce 2
+    - lekce 3
+    - lekce 4
+    - lekce 4
+
+- Construct
+    - [ ] pridat ukazku chovani flash na space shooter
+ 
+
+# Versions
+## 2024 May - Update
+
+- Html & CSS
+    - Pridani navodu jak udelat publish webu na githubu
     - pridat nejakou hru k otestovaní znalostí z html a css, neco ve stylu na tabuli se zobrazi ukol se zadáním a poté nechám čas a v pořadím jakém se přihlásí tak v takovém budou dostavat body celkem se rozdelí 10 diamantu mezi top 4 - 5 žáků
         -   úkoly: zkusit udělat větší množství úkolů
             - tučný text
@@ -99,31 +121,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
             - červený text
             - tabulka
 
-
-- Python Beginer
-    - lekce 6 obsah
-
-- Python Minecraft python
-    - lekce 1
-    - lekce 2
-    - lekce 3
-    - lekce 4
-    - lekce 4
-
-- Construct
-    - [ ] pridat ukazku chovani flash na space shooter
- 
-
-# Versions
-## 2024 May - Update
-
-- Html & CSS
-    - Pridani navodu jak udelat publish webu na githubu
-
 - Python Beginer
     - lekce 5 obsah, ukol
     - lekce 4 zmenit ukazkovy obrazek
     - Projekt
+
+- Python Minecraft python
+    - vytvoreni lekce a stranek
 
 ## 2024 April - Update
 - General
