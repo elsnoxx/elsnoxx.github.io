@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
-  <meta name="description" content="Python beginner lekce 6">
+  <meta name="description" content="Python beginner lekce 7">
   <title>Python - beginner</title>
 
   <!-- Potrebne skripty -->
@@ -25,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -80,8 +80,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner5.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner7.html';" class="btn btn-primary">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner5.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/projekt.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -90,7 +93,8 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 6 - Python</h1>
+
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 7 - Python</h1>
     <p style="margin-bottom: 64px; ">
       Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
       <strong>Microsoft</strong> s názvem
@@ -99,11 +103,132 @@
     </p>
 
 
+    <section class="odstavec">
+      <h2>Vytvoření hry Wizard Duel</h2>
+      <p>
+        Vytvořme hru nazvanou Wizard Duel a nastavme minimální a maximální hodnoty zdraví, stejně jako vytvoření kouzel
+        pro útok a rušení útoků.
+      </p>
+    </section>
 
-    <div style="margin-bottom: 64px; ">
 
-    </div>
-
+    <section class="odstavec">
+      <h2>Postup k vytvoření Souboje dvou kouzelníků</h2>
+      <ol>
+        <li>
+          <h5>Přidání knohoven</h5>
+          <ul>
+            <li>
+              Importujeme potřebné moduly: <b>random</b>, <b>time</b> a <b>os</b>.
+            </li>
+            <li>
+              Definujeme konstanty pro <b>minimální</b> a <b>maximální zdraví</b> a inicializujeme zdraví <b>hráče</b> a
+              <b>počítače</b>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Definice kouzel:</h5>
+          <ul>
+            <li>
+              Definujeme dva seznamy kouzel: <b>jednoduche_kouzla</b> a <b>slozite_kouzla</b>, každý obsahuje podseznamy
+              s podrobnostmi o kouzlech jako <b>jméno</b>, <b>poškození</b> a <b>uzdravení</b>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>ASCII umění pro vizuální efekty:</h5>
+          <ul>
+            <li>
+              Definujeme ASCII umění pro různé obrazovky hry, jako jsou začátek, konec hry, posunutí úrovně, nové kolo a
+              výhra.
+            </li>
+            <li>
+              Pro lepší a rychleší vykreslení použijeme web <a
+                href="https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=win">patorjk.com</a>
+              k generovaní takového textu.
+            </li>
+          </ul>
+        </li>
+        <li>
+        <h5>Herní smyčka:</h5>
+        <ul>
+          <li>
+            Využijeme <code>while</code> smyčku k udržování hry běžící, dokud hráč nerozhodne ukončit.
+          </li>
+        </ul>
+        </li>
+        <li>
+          <h5>Výběr hráče pro spuštění hry:</h5>
+          <ul>
+            <li>
+              Hráče vyzveme k spuštění hry volbou 'Y' pro ano nebo 'N' pro ne. Pokud je vstup neplatný, opakujeme.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Výběr kouzla:</h5>
+          <ul>
+            <li>
+              Pokud hráč rozhodne začít, vyčistíme obrazovku a zobrazíme dostupné možnosti kouzel.
+            </li>
+            <li>
+              Hráče vyzveme k vybrání kouzla podle jeho indexu.
+            </li>
+            <li>
+              Zpracujeme chyby pro neplatné vstupy.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Hratelnost:</h5>
+          <ul>
+            <li>
+              Provádíme pět kol hry.
+            </li>
+            <li>
+              V každém kole hráč vybere kouzlo a počítač vybere náhodné kouzlo.
+            </li>
+            <li>
+              Efekty vybraných kouzel se aplikují na zdraví hráče a počítače.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Posun úrovně:</h5>
+          <ul>
+            <li>
+              Po třetím kole odemkneme složitější kouzla.
+            </li>
+            <li>
+              Zobrazíme aktualizovaný seznam dostupných kouzel.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Konec hry:</h5>
+          <ul>
+            <li>
+              Po pěti kolech vyčistíme obrazovku a zobrazíme obrazovku konce hry.
+            </li>
+            <li>
+              Na základě zdraví hráče a počítače vyhlásíme vítěze.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Ukončení:</h5>
+          <ul>
+            <li>
+              Před opuštěním herní smyčky počkáme 5 sekund.
+            </li>
+            <li>
+              Vyčistíme obrazovku a zobrazíme ASCII umění pro konec hry.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
   </main>
   <footer class="footer">
