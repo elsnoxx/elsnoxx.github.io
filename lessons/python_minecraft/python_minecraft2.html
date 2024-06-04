@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/pycraft.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -24,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -53,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -75,8 +78,195 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 2</h1>
-    
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Proměnné a vstup</h1>
+
+    <section class="odstavec">
+      <h2>Hodnoty v programech</h2>
+      <p>
+        Vždy, když hrajete nějakou hru, musí si taková hra v jednu chvíli
+        pamatovat spoustu různých věcí. Jak je to například s Minecraftem?
+      </p>
+      <p>
+        Hra si musí pamatovat, kolik má hráč životů, jak se hráč jmenuje, jaký
+        předmět hráč zrovna drží, jaká je pozice hráče atd.
+      </p>
+      <p>
+        Všechny tyto hodnoty jsou uloženy v paměti počítače. Každá hodnota
+        má v paměti vyhrazeno své místo. Jak ale program pozná, na kterém
+        místě je která hodnota?
+      </p>
+    </section>
+
+    <section class="odstavec">
+      <h2>Proměnné</h2>
+      <p>
+        Proměnná je pojmenované místo v paměti. Tím, že si program místo
+        v paměti pojmenuje, bude vědět, co je v něm uloženo. Je to jako když
+        si v kuchyni na různé dózy napíšete, co v nich je: hladká mouka, káva,
+        ovesné vločky...
+      </p>
+      <p>
+        Program tedy obsahuje různé proměnné. Každá proměnná má své
+        jméno a nějakou hodnotu. Například proměnná s názvem životy by
+        mohla mít hodnotu 10. Pro program to bude znamenat, že má hráč 10
+        životů.
+      </p>
+      <div class="center">
+        <pre class="python">
+          <code style="font-weight: bolder; font-size: 40px;">
+delka = 30
+          </code>
+        </pre>
+      </div>
+      <p>
+        Program vytvoří proměnnou s názvem length. Do proměnné je
+        uložena hodnota 20. Kdykoliv bude program pracovat s proměnnou
+        length, bude ve skutečnosti pracovat s hodnotou 20.
+      </p>
+
+      <section class="odstavec">
+        <h3>Program s proměnnými a jejich použití</h3>
+        <p>
+          Náš dnešní program bude umět stavět libovolně dlouhý most. Uživatel
+          do programu zadá délku mostu a program jej automaticky postaví.
+          Vytvořte tedy program, který bude obsahovat jednu proměnnou.
+          V názvech proměnných nesmí být nikdy mezerník! Je taky vhodné
+          proměnné nepojmenovávat s diakritikou (háčky a čárky).
+          Nezapomeňte na import balíku pycraft_minetest:
+        </p>
+        <div class="center">
+          <pre class="python">
+            <code style="font-weight: bolder;">
+<span class="import">from</span> pycraft_minetest <span class="import">import</span> *
+
+delka = 30
+agent = Trutle(glass)
+agent.forward(delka)
+            </code>
+          </pre>
+        </div>
+      </section>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Vašim úkolem bude vytvořit dům, který bude mít <strong>podlahu, strop, okna a dvere</strong> veškeré délky
+            budou tvořené pomocí proměnné aby se dům dal vždy rozšířit podle potřeby.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="/img/pycraft/lekce2/sam1.png" alt="Minetest samostatná prace 1"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <section class="odstavec">
+      <h2>Vstup od uživatele</h2>
+      <p>
+        Pro práci s uživatelským vsupem je nutné poušít funkci <strong>input()</strong>.
+        Je potřeba si zapamatovat že vstum bude vždy <strong>TEXT</strong>. Níže naleznete ukázku
+        jak se tento příkaz používá.
+      </p>
+      <div class="center">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+<span class="prommenna">jmeno</span> = <span class="prikaz">input</span>(<span class="text">"Zadej své jméno: "</span>)
+            </code>
+          </pre>
+      </div>
+      <p>
+        Abychom vstup mohli zmenit vstupní <strong>TEXT</strong> na čísla. Použijeme k tomu funkci
+        <strong>int()</strong>, která nám přetypuje z textu na číslo
+      </p>
+      <div class="center">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+<span class="prommenna">vek</span> = <span class="prikaz">int</span>(<span class="prikaz">input</span>(<span class="text">"Zadej svůj věk: "</span>))
+            </code>
+          </pre>
+      </div>
+    </section>
+
+
+    <section class="odstavec">
+      <h2>Další operace na datech</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            Níže jsou uvedé základní možné operace. Přehled slouží pouze k připomenutí. Pokud ovčem by jste potřebovali
+            některé operace vysvětlit lepe. Přejděte na stránky lekce Python.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <a href="/lessons/python_beginner/python_beginner4.html" class="btn btn-primary">Textové řetězce a znaky</a>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <strong>Čísla</strong>
+          <ul>
+            <li>
+              Operátory + a – sčítá a odečítá čísla.
+            </li>
+            <li>
+              Operátory * a / násobí a dělí čísla.
+            </li>
+            <li>
+              Operátor ** je mocnina, tedy 3**2 znamená tři na druhou.
+            </li>
+            <li>
+              Operátor % je modulo. Jde o zbytek po celočíselném dělení.
+              Když celočíselně vydělíte 2 čísla, zůstane často nějaký
+              zbytek. Tento zbytek je modulo. 13 % 5 (dvanáct modulo
+              pět) = 3. Pokud totiž 13 vydělíme 5, výsledek je 2, ale zbyde
+              nám ještě 3.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Stringy</strong>
+          <ul>
+            <li>
+              Operátor + zřetězí stringy.
+            </li>
+            <li>
+              Operátor * násobně řetězí string. Například „ahoj“*3 má za
+              výsledek ahojahojahoj.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.2</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Rozšířte vypracovné zadání z Samostaného úkolu č.1, tak že program se zeptá jak velký bude dům a jakým
+            blokem bude postaven.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="/img/pycraft/lekce2/sam1.png" alt="Minetest samostatná prace 1"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">

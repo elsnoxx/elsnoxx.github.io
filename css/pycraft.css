@@ -1,0 +1,60 @@
+.import , .slovo, .podminka, .prommenna, .escape, .cyklus{
+  color: purple;
+  font-weight: bolder;
+}
+
+.turtle, .text{
+  color: darkgreen;
+  font-weight: bolder;
+}
+
+.window{
+  color: lightblue;
+  font-weight: bolder;
+}
+
+.screen, .shape, .cislo{
+  color: red;
+  font-weight: bolder;
+}
+
+.prikaz{
+  color: blue;
+  font-weight: bolder;
+}
+
+.operatory {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.operatory {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.operatory tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.escapeSekvence td, .escapeSekvenc th{
+  border:  1px solid black;
+  padding: 0 15px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.Ukazka {
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.samprace {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-size: 30px;
+}
