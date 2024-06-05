@@ -91,10 +91,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Minecraft python
     - lekce 1 - dodelat rozpracovane chybi scrreny
-    - lekce 2
-    - lekce 3
-    - lekce 4
-    - lekce 4
+    - lekce 2 - obsah
+    - lekce 2 - pridat propojeni na lekci pzthon beginer kde jsou používané věci popsané více 
+    - lekce 3 - obsah
+    - lekce 4 - obsah
+    - lekce 1 - pridat seznam bloku z odkazu https://github.com/sprintingkiwi/pycraft_lib/blob/master/pycraft_minetest/blocklist.py
+    - lekce 1 - upravit prikazy tak abz odpovidali, prideleni prav, nastanevi dne a zastaveni casu
 
 - Construct
     - [ ] pridat ukazku chovani flash na space shooter
