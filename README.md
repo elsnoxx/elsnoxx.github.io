@@ -56,6 +56,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Vylepšní pdf pro domácí úkoly, z wordu nejlepe predelat vymyslet lepsi zpracovani
     - uprava novych obrazku na avif format
     - vytvorit scrypt pro konverzi uobrazku do avif formy, vytvorit k tomu readme
+    - pridat tlacitka dropdown tak ze budou rozdelene podle tematickych okruhu, treba dropdown lekce -> okruhy -> jednotlive lekce
+    - pridat stranku kde se bude zobrazovat z markdownu jednotlive updaty
+    - updaty predelat v hlavniho readme do readme bokem
+    - stranka Mystat, kontakt -> spatne navigacni menu
+    - popremyslet o prepsani tohot webu do reactu nebo angularu
+    
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
@@ -80,10 +86,17 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
     
 - Html & CSS
-    - pridat nejake uazkove video do lekce 4
+    - pridat nejake ukazkove video do lekce 4
     - pridat pisnicky do kolece 4 jako ukazku
     - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
+    - zkusit pridat vice informaci do lekce, vice zajimavych tagu, uprav pomoci css
 
+- TinkerCad
+    - vylepsit html a css kod, udelat responsivni stranky cele lekce
+    - upravit uvodni stranku, tlacitka, popisky
+    - u projeku schovat zadani pro posledni skupinu
+    - pridat aspon 2 bonusove ukoly
+    - udelat prehlednejsi k nalezeni bonusovych ukolu
 
 - Python Beginer
     - lekce 6 obsah, zkontrolovat obsah
@@ -97,9 +110,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 4 - obsah
     - lekce 1 - pridat seznam bloku z odkazu https://github.com/sprintingkiwi/pycraft_lib/blob/master/pycraft_minetest/blocklist.py
     - lekce 1 - upravit prikazy tak abz odpovidali, prideleni prav, nastanevi dne a zastaveni casu
+    - Pridat hodnoceni lekce
 
-- Construct
+- Construct 3
     - [ ] pridat ukazku chovani flash na space shooter
+    - upravit uvodni stranku tak aby byla vice prehlednejsi
  
 
 # Versions
