@@ -8,12 +8,13 @@
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
   <meta name="description" content="Python beginner uvod">
   <title>Python - minecraft</title>
-  
+
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/pycraft.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -24,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -53,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -75,8 +78,198 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 3</h1>
-    
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Cyklus, podmínky a komentáře</h1>
+
+    <section class="odstavec">
+      <h2>Opakování kódu</h2>
+      <p>
+        Programátoři se běžně setkají s potřebou opakovat nějaký kus kódu.
+        Například při stavbě domu je třeba neustále opakovat stejné pohyby.
+        V minulých lekcích jsme dům stavěli obyčejným kopírováním kódu,
+        dnes kopírování nahradíme cyklem.
+      </p>
+      <h2>Cyklus</h2>
+      <p>
+        Cyklus je programová konstrukce, která se několikrát opakuje. Buď
+        předem víme, kolikrát se má zopakovat (vypiš pětkrát nějakou větu),
+        nebo to předem nevíme (piš větu, dokud neřeknu stop).
+      </p>
+    </section>
+    <section class="odstavec">
+      <h2>For Cyklus</h2>
+      <p>
+        For cyklus je jedním z typů cyklu (opakování kódu). Tento cyklus
+        použijeme, když víme, kolikrát se má nějaký úkon provádět:
+      </p>
+      <div class="center">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+for i in range(10):
+    chat(i)
+            </code>
+          </pre>
+      </div>
+      <p>
+        Všimněte si, že za slovem range jsou závorky – to znamená, že range()
+        je obyčejná funkce. Tato funkce vytváří seznam čísel od 0 do 9 (to je
+        celkem 10 čísel). Zápis tak znamená:
+      </p>
+      <p class="center">
+        Pro každé i ze seznamu čísel od 0 do 9 napiš do chatu i.
+      </p>
+      <p>
+        Co je ale samotné i? Je to obyčejná proměnná. Do této proměnné jsou
+        postupně ukládány hodnoty ze seznamu. Při nultém průchodu cyklu (v
+        programování začínáme vždy od nuly) je v proměnné i uloženo číslo 0.
+        Do chatu se vypíše 0. Při dalším průchodu je v proměnné i uloženo číslo
+        1 a to se vypíše do chatu. Takto se pokračuje, dokud se cyklus
+        nezopakuje pro každé číslo ze seznamu, tedy 10×.
+      </p>
+    </section>
+
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            V minulé lekci jsme si vytvořili dům. Ovšem nyní se pokusí vámi vytvořenou práci zkrátit pomocí cyklů.
+            Po této upravě rozšiřté kód tak by vznikl z domu panelák.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="/img/pycraft/lekce2/sam1.png" alt="Minetest samostatná prace 1"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <section class="odstavec">
+      <h2>Komentáře</h2>
+      <p>
+        Protože jsou už naše kódy trochu složitější, je dobré si každou jejich
+        část nějak popisovat. K tomu slouží komentáře. Komentář je Pythonem
+        naprosto ignorován, slouží pouze programátorům, aby se v kódu
+        snadno orientovali. Řádek s komentářem začíná znakem # (napíše se
+        jako AltGr + X):
+      </p>
+      <div class="center">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+# cyklus který se mi provede 10x a pak skončí              
+for i in range(10):
+    # vypisi do chatu cislo cyklu
+    chat(i)
+            </code>
+          </pre>
+      </div>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Sestavte program, který bude v Minetestu vykreslovat pravidelné n-úhelníky:
+          </p>
+          <p>
+            Jak na to? <br>
+            Uživatel do programu nejdřív zadá, kolik
+            úhlů bude n-úhelník mít. Délka strany
+            může být pevně stanovena v programu,
+            nebo ji uživatel taky zadá. <br>
+            Podle počtu úhlů lze taky přesně určit
+            velikost takových úhlů, a tedy i to, o kolik
+            stupňů se agent v každém rohu bude
+
+            muset pootočit. Velikost úhlů v n-
+            úhelníku, kde n je počet úhlů se počítá takto: <br>
+          </p>
+          <div class="center">
+            <img class="myImg" src="/img/pycraft/lekce3/vzorec.png" alt="Minetest samostatná prace 2"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </div>
+        </div>
+        <div class="col-md-4 center">
+          <img class="myImg" src="/img/pycraft/lekce3/uhelniky.png" alt="Minetest samostatná prace 2"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+
+
+    <section class="odstavec">
+      <h2>Podmíněné chování</h2>
+      <p>
+        Doposud jsme tvořili pouze programy, jejichž výsledek byl vždy téměř
+        stejný. Pokud jsme vytvořený program spustili 10× po sobě, vždy udělal
+        totéž. Co když ale budeme chtít, aby se program v určitý moment
+        rozhodl, co provede?
+      </p>
+      <p>
+        Podmínka nám umožňuje nechat program vyhodnotit, jak bude dál pokračovat:
+      </p>
+      <div class="center">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+jmeno = input("Zadej své jméno")
+if jmeno == "Ginny":
+    print("Já se taky jmeniji Ginny")
+            </code>
+          </pre>
+      </div>
+      <h2>Porovnávání v podmínkách</h2>
+      <p>
+        Uvnitř podmínky proběhne vyhodnocení nějakého výrazu – například
+        porovnání, zda se dvě hodnoty sobě rovnají. Pro takové porovnávání
+        nepoužíváme jeden znak =, ale dvě ==.
+      </p>
+      <ul>
+        <li>
+          Porovnání rovnosti: hodnota1 == hodnota2
+        </li>
+        <li>
+          Porovnání větší než: hodnota1 > hodnota2
+        </li>
+        <li>
+          Porovnání menší než: hodnota1 < hodnota2 </li>
+        <li>
+          Porovnání nerovnosti (nerovná se): hodnota1 != hodnota2
+        </li>
+        <li>
+          Porovnání větší nebo rovno: hodnota1 >= hodnota2
+        </li>
+        <li>
+          Porovnání menší nebo rovno: hodnota1 <= hodnota2 </li>
+      </ul>
+    </section>
+
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.3</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Sestavte program, ve kterém bude agent vytvářet šachovnici o rozměrech, které si zvolí (input). Používejte
+            cykly a podmínky.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="/img/pycraft/lekce3/sachy.png" alt="Minetest samostatná prace 1"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
