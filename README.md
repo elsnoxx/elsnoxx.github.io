@@ -104,12 +104,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Minecraft minetest
     - lekce 1 - dodelat rozpracovane chybi scrreny
-    - lekce 2 - pridat propojeni na lekci pzthon beginer kde jsou používané věci popsané více 
-    - lekce 3 - obsah, přidat, kody k domnstraci na lekci
     - lekce 4 - obsah
-    - lekce 1 - pridat seznam bloku z odkazu https://github.com/sprintingkiwi/pycraft_lib/blob/master/pycraft_minetest/blocklist.py
-    - lekce 1 - upravit prikazy tak abz odpovidali, prideleni prav, nastanevi dne a zastaveni casu
-    - Pridat hodnoceni lekce
+    - lekce 5 - obsah
+    - projekt
     - vytvorit scripty aby splnovali zadani samostatnych praci
 
 - Construct 3
@@ -122,7 +119,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## 2024 June - Update
 - Python Minecraft minetest
     - lekce 1 - obsah
+    - lekce 1 - pridat seznam bloku z odkazu https://github.com/sprintingkiwi/pycraft_lib/blob/master/pycraft_minetest/blocklist.py
+    - lekce 1 - upravit prikazy tak aby odpovidali, prideleni prav, nastanevi dne a zastaveni casu
     - lekce 2 - obsah
+    - lekce 2 - pridat propojeni na lekci python beginer kde jsou používané věci popsané více 
+    - lekce 3 - obsah
+    - Pridat hodnoceni lekce
 
 ## 2024 May - Update
 
