@@ -68,6 +68,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 - Audacity
     - Opravit popisky k lekcim
+    - lekce 2 pridat ukazku fazovace, zrychleni tempa, orezat ticho
  
      
 - Roblox
