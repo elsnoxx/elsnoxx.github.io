@@ -66,7 +66,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
     
-    
+- Audacity
+    - Opravit popisky k lekcim
+ 
+     
 - Roblox
     - pridani obrazku k strance env
     - pridani obrazku k strnace lua
@@ -108,6 +111,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 5 - obsah
     - projekt
     - vytvorit scripty aby splnovali zadani samostatnych praci
+    - pridat tlkacika pro posouvani mezi lekcemi
 
 - Construct 3
     - [ ] pridat ukazku chovani flash na space shooter
