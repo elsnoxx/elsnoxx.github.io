@@ -69,7 +69,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Audacity
     - Opravit popisky k lekcim
     - lekce 2 pridat ukazku fazovace, zrychleni tempa, orezat ticho
- 
+    - pridat zkratky v audacity
+    - pridat jak ulozit hudbu v mp3
      
 - Roblox
     - pridani obrazku k strance env
@@ -107,12 +108,10 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 5, upravit ukol aby byl zajimavejsi + rozsirit to o pokracovani o seznamu
 
 - Python Minecraft minetest
-    - lekce 1 - dodelat rozpracovane chybi scrreny
-    - lekce 4 - obsah
-    - lekce 5 - obsah
+    - lekce 1 - dodelat rozpracovane chybi screeny
     - projekt
     - vytvorit scripty aby splnovali zadani samostatnych praci
-    - pridat tlkacika pro posouvani mezi lekcemi
+    
 
 - Construct 3
     - [ ] pridat ukazku chovani flash na space shooter
@@ -130,6 +129,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 2 - pridat propojeni na lekci python beginer kde jsou používané věci popsané více 
     - lekce 3 - obsah
     - Pridat hodnoceni lekce
+    - lekce 4 - obsah
+    - pridat tlkacika pro posouvani mezi lekcemi
+    - lekce 5 - obsah
 
 ## 2024 May - Update
 
