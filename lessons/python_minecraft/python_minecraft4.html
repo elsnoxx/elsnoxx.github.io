@@ -25,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -54,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -80,8 +82,12 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/python_minecraft3.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/python_minecraft5.html';" class="btn btn-primary">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_minecraft/python_minecraft3.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_minecraft/python_minecraft5.html';"
+              class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -90,8 +96,191 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 4</h1>
-    
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Seznamy, Měření času, Buldozer a funkce Block</h1>
+    <p>
+      V této lekci se naučí pracovat se seznamy v Pythonu a měřit čas pomocí knihovny time. Také se dozvíte, jak
+      vytvořit program, který vykresluje bloky na základě uživatelského vstupu a běží v nekonečném cyklu, dokud není
+      ukončen specifickým vstupem. Také se dozvíte jak vytvořit program, který bude fungovat jako buldozer.
+    </p>
+
+    <section class="odstavec">
+      <h2>Seznamy</h2>
+      <p>
+        V Pythonu jsou seznamy jednou z nejdůležitějších datových struktur. Seznam je kolekce prvků, které mohou být
+        různých typů a jsou uloženy v určeném pořadí. Seznamy jsou dynamické, což znamená, že mohou mít různé délky, a
+        mohou být měněny (mutable), což znamená, že můžete přidávat, odebírat nebo měnit jejich prvky.
+      </p>
+      <p>
+        V Pythonu můžete seznamy vytvořit pomocí hranatých závorek <strong>[ ]</strong> a oddělit jednotlivé prvky
+        čárkami. Například:
+      </p>
+      <div class="center">
+        <pre class="python">
+          <code style="font-weight: bolder;">
+<span class="prommenna">Muj_seznam</span> = [<span class="cislo">1</span>, <span class="cislo">2</span>, <span class="cislo">3</span>, <span class="cislo">4</span>, <span class="cislo">5</span>]
+          </code>
+        </pre>
+      </div>
+      <h3>Vypsání seznamu</h3>
+      <p>
+        Seznam jde vypsat několika způsoby níže je ukázka pár takových vúpisů:
+      </p>
+      <ul>
+        <li>
+          Celý list na jednou
+          <div class="center">
+            <pre class="python">
+              <code style="font-weight: bolder;">
+<span class="prommenna">Muj_seznam</span> = [<span class="cislo">1</span>, <span class="cislo">2</span>, <span class="cislo">3</span>, <span class="cislo">4</span>, <span class="cislo">5</span>]
+<span class="prikaz">print</span>(<span class="prommenna">Muj_seznam</span>)
+              </code>
+            </pre>
+          </div>
+        </li>
+        <li>
+          Jednotlive prvky seznamu
+          <div class="center">
+            <pre class="python">
+              <code style="font-weight: bolder;">
+<span class="prommenna">Muj_seznam</span> = [<span class="cislo">1</span>, <span class="cislo">2</span>, <span class="cislo">3</span>, <span class="cislo">4</span>, <span class="cislo">5</span>]
+<span class="prikaz">print</span>(Muj_seznam[<span class="cislo">0</span>])
+              </code>
+            </pre>
+          </div>
+        </li>
+
+        <li>
+          Pomocí cyklu všechny prvky seznamu
+          <div class="center">
+            <pre class="python">
+              <code style="font-weight: bolder;">
+<span class="prommenna">Muj_seznam</span> = [<span class="cislo">1</span>, <span class="cislo">2</span>, <span class="cislo">3</span>, <span class="cislo">4</span>, <span class="cislo">5</span>]
+<span class="cyklus">for</span> <span class="cislo">prvek</span> <span class="cyklus">in</span> <span class="cislo">Muj_seznam</span>:
+<span class="prikaz" style="padding-left: 30px;">print</span>(<span class="cislo">prvek</span>)
+              </code>
+            </pre>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Vaším úkolem je napsat program, který bude vykreslovat dlouhou cestu z různých bloků na základě volby
+            uživatele. Nejprve program zobrazí seznam dostupných bloků, ze kterého si uživatel může vybrat. Uživatel si
+            poté vybere jeden z bloků ze seznamu. Program poběží v nekonečném cyklu, dokud ho uživatel neukončí
+            stisknutím klávesy <strong>X</strong>. Výsledkem bude dlouhá cesta z vybraných bloků podle volby uživatele.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="" alt="Minetest samostatná prace 1" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <section class="odstavec">
+      <h2>Měření času v Pythonu pomocí knihovny <code>time</code></h2>
+      <p>
+        Knihovna <code>time</code> je něco jako stopky v počítači. Pomocí ní můžeme měřit, jak dlouho trvá, než se něco
+        stane.
+        Ukážeme si, jak změřit čas, jak dlouho běží cyklus, a potom tento čas převedeme na sekundy.
+      </p>
+
+      <div class="center code-block">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+import time
+
+# Spustíme stopky
+start = time.time()
+
+# Cyklus, který chceme měřit
+for i in range(100000):
+    print(i)
+
+# Zastavíme stopky
+konec = time.time()
+
+# Spočítáme, jak dlouho cyklus běžel
+vysledny_cas = konec - start
+
+# Převod času na sekundy
+print("Cyklus běžel:", vysledny_cas, "sekund")
+            </code>
+          </pre>
+      </div>
+
+      <h2>Vysvětlení kódu</h2>
+      <ul>
+        <li><code>time.time()</code> - Tohle je jako zmáčknout tlačítko na stopkách.</li>
+        <li><code>start</code> a <code>konec</code> - Tady uložíme čas, kdy jsme stopky spustili a kdy jsme je
+          zastavili.</li>
+        <li><code>vysledny_cas = konec - start</code> - Tady spočítáme, jak dlouho cyklus běžel, tím, že odčteme čas
+          začátku od času konce.</li>
+        <li><code>print("Cyklus běžel:", vysledny_cas, "sekund")</code> - A tady vypíšeme, jak dlouho cyklus běžel.</li>
+      </ul>
+    </section>
+
+
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.2 - Buldozer</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Vašim úkolem je napsat program, který vykope určitý prostor. Velikost prostoru bude předána do programu za
+            použití funkce <strong>input</strong> a budeto velikost x, y, z.
+            Na konci program vypíše jak dlouho agentovy trvalo vykopat tento prostor. K tomu použijte funkci
+            <strong>chat()</strong>.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="" alt="Minetest samostatná prace 1" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+      </div>
+    </div>
+
+
+    <section class="odstavec">
+      <h2>Funkce <code>block</code></h2>
+      <p>
+        Nyní si přiblížíme více funkci <code>block</code>. Funkce <code>block</code> postaví na zadané souřadnice ve
+        světě zvolený typ
+        bloku. Používáme ji takhle: <strong><code>block(gold, 1, 2, 3)</code></strong>. Jako první se nachází vždy jaký
+        blok se použije
+        a zbylé 3 čísla udávají souřednice kam se blok položí. <strong>POZOR - začátek tedy bod 0,0,0 se nachází tam kde
+          stojí hráč!!!</strong>
+      </p>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.3 - Buldozer s funkcí <code>block</code></h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Vašim úkolem je upravit kod, který jste vytvořili v samostatné práci č.1. Místo ničení bloků agentem
+            použijte funkci <code>block</code>. Poté porovnejte, který způsob je rychlejší.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="myImg" src="" alt="Minetest samostatná prace 1" style="width:100%; max-width:300px; height: auto"
+            loading="lazy">
+        </div>
+      </div>
+      <div class="odstavec">
+        <h3>Bonus: </h3>
+        <p>
+          Zamyslete se nad tím jak napsat počítání, která se bude vypisovat do chatu kolik procent již je vykopano. A
+          potom to číslo vypisujte do chatu pomocí funkce <code>chat</code>.
+        </p>
+      </div>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">

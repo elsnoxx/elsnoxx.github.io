@@ -58,3 +58,11 @@
   background-color: yellow;
   font-size: 30px;
 }
+
+.code-block {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
