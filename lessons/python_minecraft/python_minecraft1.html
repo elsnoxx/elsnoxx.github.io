@@ -78,6 +78,20 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/python_minecraft.html';" class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/python_minecraft2.html';" class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
     <h1 class="mt-5" style="margin-bottom: 64px; ">Seznámení s prostředím a první program</h1>
 
 
@@ -269,243 +283,254 @@ aget.forward(3)
     </section>
 
     <div class="odstavec">
-      <h3>Funkce potřebné pro pohyb</h3>
-      <p>
-        Zde se nachazí souhrn potřebných funkcí, které budeme používat k ovládání pohybu našeho pera.
-      </p>
-      <ul>
-        <li>
-          <span class="turtle">agent</span>=<span class="prikaz">Trutle(brick)</span>
-          <ul>
-            <li>
-              tento příkaz nám agenta nastaví na daný blok
-            </li>
-            <li>
-              Nyní můžete použít bloky stone, brick, glass, gold či wood_planks.
-            </li>
-            <li>
-              Pokud budete chtít udělat meyeru můžete nastavit blok na <b>AIR</b> popřípadně na 0 agent.penblock(0)
-            </li>
-          </ul>
-          <div class="row">
-            <div class="col-md-6">
-              <h6>Pokud by jste chtěli jaké všechnz blokz budete moct používat tak seznam naleznete na dokazu.</h6>
+      <div class="odstavec">
+        <h3>Funkce potřebné pro pohyb</h3>
+        <p>
+          Zde se nachazí souhrn potřebných funkcí, které budeme používat k ovládání pohybu našeho pera.
+        </p>
+        <ul>
+          <li>
+            <span class="turtle">agent</span> = <span class="prikaz">Trutle(brick)</span>
+            <ul>
+              <li>
+                tento příkaz nám agenta nastaví na daný blok
+              </li>
+              <li>
+                Nyní můžete použít bloky stone, brick, glass, gold či wood_planks.
+              </li>
+              <li>
+                Pokud budete chtít udělat meyeru můžete nastavit blok na <b>AIR</b> popřípadně na 0 agent.penblock(0)
+              </li>
+            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Pokud by jste chtěli jaké všechnz blokz budete moct používat tak seznam naleznete na dokazu.</h6>
+              </div>
+              <div class="col-md-6">
+                <a href="#seznam-bloku" class="btn btn-primary">Seznam bloků</a>
+              </div>
             </div>
-            <div class="col-md-6">
-              <a href="#seznam-bloku" class="btn btn-primary">Seznam bloků</a>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.forward(150)</span>
+            <ul>
+              <li>
+                tento příkaz nám posune agenta o 150 bloků na obrazovce rovně,
+                <span style="font-weight: bold;">směr je udáván podle toho kam se agent kouká!!</span>
+              </li>
+              <li>
+                místo 150 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.back(150)</span>
+            <ul>
+              <li>
+                tento příkaz nám posune agenta o 150 bloků na obrazovce dozadu,
+                <span style="font-weight: bold;">směr je udáván podle toho kam se agent kouká!!</span>
+              </li>
+              <li>
+                místo 150 může být libovolné číslo nebo i proměnná
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.left(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám otočí pero do leva o 90 stupňů,
+                <span style="font-weight: bold;">směr kam se agent otočí je udáván podle toho kam se agent
+                  kouká!!</span>
+              </li>
+              <li>
+                místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
+                  0 až do 360</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.right(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám otočí pero do prava o 90 stupňů,
+                <span style="font-weight: bold;">směr kam se agent otočí je udáván podle toho kam se agent
+                  kouká!!</span>
+              </li>
+              <li>
+                místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
+                  0 až do 360</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.up(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám agenta otočí nahoru o 90 stupňů
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.down(90)</span>
+            <ul>
+              <li>
+                tento příkaz nám agenta zotočí agenta dolů o 90 stupňů
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Funkce k ovládání agenta</h3>
+        <ul>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.penblock(stone)</span>
+            <ul>
+              <li>
+                kdykoliv v průběhu programu nastaví agentovi příslušný typ bloku.
+              </li>
+            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Pokud by jste chtěli jaké všechnz blokz budete moct používat tak seznam naleznete na dokazu.</h6>
+              </div>
+              <div class="col-md-6">
+                <a href="#seznam-bloku" class="btn btn-primary">Seznam bloků</a>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.forward(150)</span>
-          <ul>
-            <li>
-              tento příkaz nám posune agenta o 150 bloků na obrazovce rovně,
-              <span style="font-weight: bold;">směr je udáván podle toho kam se agent kouká!!</span>
-            </li>
-            <li>
-              místo 150 může být libovolné číslo nebo i proměnná
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.back(150)</span>
-          <ul>
-            <li>
-              tento příkaz nám posune agenta o 150 bloků na obrazovce dozadu,
-              <span style="font-weight: bold;">směr je udáván podle toho kam se agent kouká!!</span>
-            </li>
-            <li>
-              místo 150 může být libovolné číslo nebo i proměnná
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.left(90)</span>
-          <ul>
-            <li>
-              tento příkaz nám otočí pero do leva o 90 stupňů,
-              <span style="font-weight: bold;">směr kam se agent otočí je udáván podle toho kam se agent
-                kouká!!</span>
-            </li>
-            <li>
-              místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
-                0 až do 360</span>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.right(90)</span>
-          <ul>
-            <li>
-              tento příkaz nám otočí pero do prava o 90 stupňů,
-              <span style="font-weight: bold;">směr kam se agent otočí je udáván podle toho kam se agent
-                kouká!!</span>
-            </li>
-            <li>
-              místo 90 může být libovolné číslo nebo i proměnná, stupňe mohou být <span style="font-weight: bold;">od
-                0 až do 360</span>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.up(90)</span>
-          <ul>
-            <li>
-              tento příkaz nám agenta otočí nahoru o 90 stupňů
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.down(90)</span>
-          <ul>
-            <li>
-              tento příkaz nám agenta zotočí agenta dolů o 90 stupňů
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>Funkce k ovládání agenta</h3>
-      <ul>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.penblock(stone)</span>
-          <ul>
-            <li>
-              kdykoliv v průběhu programu nastaví agentovi příslušný typ bloku.
-            </li>
-          </ul>
-          <div class="row">
-            <div class="col-md-6">
-              <h6>Pokud by jste chtěli jaké všechnz blokz budete moct používat tak seznam naleznete na dokazu.</h6>
-            </div>
-            <div class="col-md-6">
-              <a href="#seznam-bloku" class="btn btn-primary">Seznam bloků</a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.penup()</span>
-          <ul>
-            <li>
-              odstraní blok agenta, takže když se bude agent pohybovat, nebude nic stavět.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.pendown()</span>
-          <ul>
-            <li>
-              navrátí blok agentovi, takže opět bude stavět bloky.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="turtle">agent</span><span class="prikaz">.gohome()</span>
-          <ul>
-            <li>
-              teleportuje agenta na souřadnice, na kterých byl vytvořen.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.penup()</span>
+            <ul>
+              <li>
+                odstraní blok agenta, takže když se bude agent pohybovat, nebude nic stavět.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.pendown()</span>
+            <ul>
+              <li>
+                navrátí blok agentovi, takže opět bude stavět bloky.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.gohome()</span>
+            <ul>
+              <li>
+                teleportuje agenta na souřadnice, na kterých byl vytvořen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="turtle">agent</span><span class="prikaz">.speed(12)</span>
+            <ul>
+              <li>
+                nastaví rychlost agenta na <strong>12</strong>, nejrychlejší je agent pokud mu nastavíte
+                <strong>0</strong>
+                v ten moment agenta nevidíte a uvidíte až výsledek
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="container mt-5" id="seznam-bloku">
+    <div class="container mt-5 odstavec" id="seznam-bloku">
       <h3>Seznam bloků, které jdou nastavit agentovi</h3>
       <div class="row">
-          <div class="col-md-4">
-              <ul class="list-group">
-                  <li class="list-group-item">AIR: 0</li>
-                  <li class="list-group-item">STONE: 1</li>
-                  <li class="list-group-item">GRASS: 2</li>
-                  <li class="list-group-item">DIRT: 3</li>
-                  <li class="list-group-item">COBBLESTONE: 4</li>
-                  <li class="list-group-item">WOOD_PLANKS: 5</li>
-                  <li class="list-group-item">SAPLING: 6</li>
-                  <li class="list-group-item">BEDROCK: 7</li>
-                  <li class="list-group-item">WATER_FLOWING: 8</li>
-                  <li class="list-group-item">WATER_STATIONARY: 9</li>
-                  <li class="list-group-item">LAVA_FLOWING: 10</li>
-                  <li class="list-group-item">LAVA_STATIONARY: 11</li>
-                  <li class="list-group-item">SAND: 12</li>
-                  <li class="list-group-item">GRAVEL: 13</li>
-                  <li class="list-group-item">GOLD_ORE: 14</li>
-                  <li class="list-group-item">IRON_ORE: 15</li>
-                  <li class="list-group-item">COAL_ORE: 16</li>
-                  <li class="list-group-item">WOOD: 17</li>
-                  <li class="list-group-item">LEAVES: 18</li>
-                  <li class="list-group-item">GLASS: 20</li>
-                  <li class="list-group-item">LAPIS_LAZULI_ORE: 21</li>
-                  <li class="list-group-item">LAPIS_LAZULI_BLOCK: 22</li>
-                  <li class="list-group-item">SANDSTONE: 24</li>
-                  <li class="list-group-item">BED: 26</li>
-                  <li class="list-group-item">COBWEB: 30</li>
-                  <li class="list-group-item">GRASS_TALL: 31</li>
-              </ul>
-          </div>
-          <div class="col-md-4">
-              <ul class="list-group">
-                  <li class="list-group-item">WOOL: 35</li>
-                  <li class="list-group-item">FLOWER_YELLOW: 37</li>
-                  <li class="list-group-item">FLOWER_CYAN: 38</li>
-                  <li class="list-group-item">MUSHROOM_BROWN: 39</li>
-                  <li class="list-group-item">MUSHROOM_RED: 40</li>
-                  <li class="list-group-item">GOLD_BLOCK: 41</li>
-                  <li class="list-group-item">IRON_BLOCK: 42</li>
-                  <li class="list-group-item">STONE_SLAB_DOUBLE: 43</li>
-                  <li class="list-group-item">STONE_SLAB: 44</li>
-                  <li class="list-group-item">BRICK_BLOCK: 45</li>
-                  <li class="list-group-item">TNT: 46</li>
-                  <li class="list-group-item">BOOKSHELF: 47</li>
-                  <li class="list-group-item">MOSS_STONE: 48</li>
-                  <li class="list-group-item">OBSIDIAN: 49</li>
-                  <li class="list-group-item">TORCH: 50</li>
-                  <li class="list-group-item">FIRE: 51</li>
-                  <li class="list-group-item">STAIRS_WOOD: 53</li>
-                  <li class="list-group-item">CHEST: 54</li>
-                  <li class="list-group-item">DIAMOND_ORE: 56</li>
-                  <li class="list-group-item">DIAMOND_BLOCK: 57</li>
-                  <li class="list-group-item">CRAFTING_TABLE: 58</li>
-                  <li class="list-group-item">FARMLAND: 60</li>
-                  <li class="list-group-item">FURNACE_INACTIVE: 61</li>
-                  <li class="list-group-item">FURNACE_ACTIVE: 62</li>
-                  <li class="list-group-item">DOOR_WOOD: 64</li>
-                  <li class="list-group-item">LADDER: 65</li>
-              </ul>
-          </div>
-          <div class="col-md-4">
-              <ul class="list-group">
-                  <li class="list-group-item">STAIRS_COBBLESTONE: 67</li>
-                  <li class="list-group-item">DOOR_IRON: 71</li>
-                  <li class="list-group-item">REDSTONE_ORE: 73</li>
-                  <li class="list-group-item">STONE_BUTTON: 77</li>
-                  <li class="list-group-item">SNOW: 78</li>
-                  <li class="list-group-item">ICE: 79</li>
-                  <li class="list-group-item">SNOW_BLOCK: 80</li>
-                  <li class="list-group-item">CACTUS: 81</li>
-                  <li class="list-group-item">CLAY: 82</li>
-                  <li class="list-group-item">SUGAR_CANE: 83</li>
-                  <li class="list-group-item">FENCE: 85</li>
-                  <li class="list-group-item">GLOWSTONE_BLOCK: 89</li>
-                  <li class="list-group-item">BEDROCK_INVISIBLE: 95</li>
-                  <li class="list-group-item">STONE_BRICK: 98</li>
-                  <li class="list-group-item">GLASS_PANE: 102</li>
-                  <li class="list-group-item">MELON: 103</li>
-                  <li class="list-group-item">FENCE_GATE: 107</li>
-                  <li class="list-group-item">REDSTONE_LAMP_INACTIVE: 123</li>
-                  <li class="list-group-item">REDSTONE_LAMP_ACTIVE: 124</li>
-                  <li class="list-group-item">WOOD_BUTTON: 143</li>
-                  <li class="list-group-item">REDSTONE_BLOCK: 152</li>
-                  <li class="list-group-item">QUARTZ_BLOCK: 155</li>
-                  <li class="list-group-item">SEA_LANTERN: 169</li>
-                  <li class="list-group-item">CARPET: 171</li>
-                  <li class="list-group-item">GLOWING_OBSIDIAN: 246</li>
-                  <li class="list-group-item">NETHER_REACTOR_CORE: 247</li>
-              </ul>
-          </div>
+        <div class="col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item">AIR: 0</li>
+            <li class="list-group-item">STONE: 1</li>
+            <li class="list-group-item">GRASS: 2</li>
+            <li class="list-group-item">DIRT: 3</li>
+            <li class="list-group-item">COBBLESTONE: 4</li>
+            <li class="list-group-item">WOOD_PLANKS: 5</li>
+            <li class="list-group-item">SAPLING: 6</li>
+            <li class="list-group-item">BEDROCK: 7</li>
+            <li class="list-group-item">WATER_FLOWING: 8</li>
+            <li class="list-group-item">WATER_STATIONARY: 9</li>
+            <li class="list-group-item">LAVA_FLOWING: 10</li>
+            <li class="list-group-item">LAVA_STATIONARY: 11</li>
+            <li class="list-group-item">SAND: 12</li>
+            <li class="list-group-item">GRAVEL: 13</li>
+            <li class="list-group-item">GOLD_ORE: 14</li>
+            <li class="list-group-item">IRON_ORE: 15</li>
+            <li class="list-group-item">COAL_ORE: 16</li>
+            <li class="list-group-item">WOOD: 17</li>
+            <li class="list-group-item">LEAVES: 18</li>
+            <li class="list-group-item">GLASS: 20</li>
+            <li class="list-group-item">LAPIS_LAZULI_ORE: 21</li>
+            <li class="list-group-item">LAPIS_LAZULI_BLOCK: 22</li>
+            <li class="list-group-item">SANDSTONE: 24</li>
+            <li class="list-group-item">BED: 26</li>
+            <li class="list-group-item">COBWEB: 30</li>
+            <li class="list-group-item">GRASS_TALL: 31</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item">WOOL: 35</li>
+            <li class="list-group-item">FLOWER_YELLOW: 37</li>
+            <li class="list-group-item">FLOWER_CYAN: 38</li>
+            <li class="list-group-item">MUSHROOM_BROWN: 39</li>
+            <li class="list-group-item">MUSHROOM_RED: 40</li>
+            <li class="list-group-item">GOLD_BLOCK: 41</li>
+            <li class="list-group-item">IRON_BLOCK: 42</li>
+            <li class="list-group-item">STONE_SLAB_DOUBLE: 43</li>
+            <li class="list-group-item">STONE_SLAB: 44</li>
+            <li class="list-group-item">BRICK_BLOCK: 45</li>
+            <li class="list-group-item">TNT: 46</li>
+            <li class="list-group-item">BOOKSHELF: 47</li>
+            <li class="list-group-item">MOSS_STONE: 48</li>
+            <li class="list-group-item">OBSIDIAN: 49</li>
+            <li class="list-group-item">TORCH: 50</li>
+            <li class="list-group-item">FIRE: 51</li>
+            <li class="list-group-item">STAIRS_WOOD: 53</li>
+            <li class="list-group-item">CHEST: 54</li>
+            <li class="list-group-item">DIAMOND_ORE: 56</li>
+            <li class="list-group-item">DIAMOND_BLOCK: 57</li>
+            <li class="list-group-item">CRAFTING_TABLE: 58</li>
+            <li class="list-group-item">FARMLAND: 60</li>
+            <li class="list-group-item">FURNACE_INACTIVE: 61</li>
+            <li class="list-group-item">FURNACE_ACTIVE: 62</li>
+            <li class="list-group-item">DOOR_WOOD: 64</li>
+            <li class="list-group-item">LADDER: 65</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-group">
+            <li class="list-group-item">STAIRS_COBBLESTONE: 67</li>
+            <li class="list-group-item">DOOR_IRON: 71</li>
+            <li class="list-group-item">REDSTONE_ORE: 73</li>
+            <li class="list-group-item">STONE_BUTTON: 77</li>
+            <li class="list-group-item">SNOW: 78</li>
+            <li class="list-group-item">ICE: 79</li>
+            <li class="list-group-item">SNOW_BLOCK: 80</li>
+            <li class="list-group-item">CACTUS: 81</li>
+            <li class="list-group-item">CLAY: 82</li>
+            <li class="list-group-item">SUGAR_CANE: 83</li>
+            <li class="list-group-item">FENCE: 85</li>
+            <li class="list-group-item">GLOWSTONE_BLOCK: 89</li>
+            <li class="list-group-item">BEDROCK_INVISIBLE: 95</li>
+            <li class="list-group-item">STONE_BRICK: 98</li>
+            <li class="list-group-item">GLASS_PANE: 102</li>
+            <li class="list-group-item">MELON: 103</li>
+            <li class="list-group-item">FENCE_GATE: 107</li>
+            <li class="list-group-item">REDSTONE_LAMP_INACTIVE: 123</li>
+            <li class="list-group-item">REDSTONE_LAMP_ACTIVE: 124</li>
+            <li class="list-group-item">WOOD_BUTTON: 143</li>
+            <li class="list-group-item">REDSTONE_BLOCK: 152</li>
+            <li class="list-group-item">QUARTZ_BLOCK: 155</li>
+            <li class="list-group-item">SEA_LANTERN: 169</li>
+            <li class="list-group-item">CARPET: 171</li>
+            <li class="list-group-item">GLOWING_OBSIDIAN: 246</li>
+            <li class="list-group-item">NETHER_REACTOR_CORE: 247</li>
+          </ul>
+        </div>
       </div>
-  </div>
+    </div>
 
     <div class="odstavec samprace">
       <h3>Samostaný úkol</h3>
