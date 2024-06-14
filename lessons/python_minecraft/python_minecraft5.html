@@ -25,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -54,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -80,8 +82,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/python_minecraft4.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_minecraft/projekt.html';" class="btn btn-primary">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_minecraft/python_minecraft4.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_minecraft/projekt.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -90,8 +95,245 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Lekce 5</h1>
-    
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Funkce</h1>
+    <p>
+      S funkcemi už jsme se setkali v předchozích lekcích. Jsou to konkrétní
+      pokyny, které má náš program provádět, například funkce <code>print()</code>
+      vypíše na obrazovku to, co má v závorkách, funkce <code>int()</code> převede to, co
+      má v závorkách na číslo, a funkce <code>block()</code> má v závorkách mnoho
+      hodnot a na jejich základě postaví blok do světa Minetest.
+    </p>
+
+    <section class="odstavec">
+      <h2>Syntax funkcí</h2>
+      <p>
+        Každá funkce má svůj název a hned za ním píšeme závorky. Do závorek
+        pak píšeme jednotlivé parametry, které funkce potřebuje, a
+        oddělujeme je čárkou. Název funkce nesmí obsahovat mezery.
+      </p>
+
+      <div class="center code-block">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+funkce0( )  # Tato funkce nemá žádné parametry
+funkce1("parametr") # Funkce s textovým parametrem
+funkce2("parametr", 1) # Funkce s texotvým a číselným parametrem
+funkce3(a, b, c, d, e) #Funkci, které předáváme 5 proměnných
+            </code>
+          </pre>
+      </div>
+
+      <section class="odstavec">
+        <h2>Odkud funkce pochází?</h2>
+        <p>
+          Až doposud jsme pracovali s funkcemi, které jsou k dispozici ihned po
+          instalaci Pythonu, případně s funkcemi, které pochází z balíku
+          <strong>pycraft_minetest</strong>. To je důvod, proč jsme na prvním řádku vždy
+          nejprve balík importovali a až potom programovali.
+        </p>
+        <p>
+          Pokud bychom do programu neimportovali balík s funkcemi, nemohli
+          bychom je používat.
+          Funkce tedy pochází buď přímo z distribuce Pythonu, nebo z nějakého
+          importovaného balíku. V obou případech je někdo vytvořil před námi.
+          Co když ale budeme chtít vytvořit vlastní funkci?
+        </p>
+      </section>
+    </section>
+
+    <section class="odstavec">
+      <h2>Vlastní funkce</h2>
+      <p>
+        Podobně, jako tvůrci balíku <strong>pycraft_minetest</strong> vytvořili mnoho funkcí a
+        dali je do uceleného balíčku, může i jakýkoliv programátor (třeba vy)
+        vytvořit své vlastní funkce, a to přímo v programu.
+      </p>
+      <section class="odstavec">
+        <h2>Definice funkce bez parametru</h2>
+        <p>
+          Nejdřív ze všeho musím napsat definici funkce. To je něco, jako recept
+          na vaření – abych mohl upéct bábovku, nejprve někdo musí napsat
+          recept na bábovku. Dnes tyto recepty (funkce) budeme definovat my:
+        </p>
+        <div class="center code-block">
+          <pre class="python">
+              <code style="font-weight: bolder;">
+def papousek():
+    print("Ahoj")
+    print("Ahoj")
+    print("Ahoj")
+
+papousek()
+              </code>
+            </pre>
+        </div>
+        <p>
+          Zadefinovali jsme si funkci, která se jmenuje papousek a nemá žádný
+          parametr. Definici nové funkce provedeme klíčovým slovem def a za
+          něj napíšeme, jak se má funkce jmenovat. Na konci řádku napíšeme
+          dvojtečku (jako u cyklu nebo podmínky) a na další řádky píšeme obsah
+          funkce – to, co má funkce provést.
+        </p>
+        <p>
+          Jednotlivé příkazy zanořujeme stejně, jako u cyklů a podmínek.
+        </p>
+      </section>
+      <section class="odstavec">
+        <h2>Definice funkce s parametrem</h2>
+        <p>
+          Funkce může mít také parametry, což jsou hodnoty, které jí můžeme předat při jejím volání. To je užitečné,
+          když chceme, aby funkce dělala různé věci podle toho, jaké hodnoty jí předáme. Například funkce, která
+          vypíše zadané jméno třikrát:
+        </p>
+        <div class="center code-block">
+          <pre class="python">
+              <code style="font-weight: bolder;">
+def papousek(jmeno):
+    print(jmeno)
+    print(jmeno)
+    print(jmeno)
+
+papousek("Karel")
+papousek("Eva")
+              </code>
+          </pre>
+        </div>
+        <p>
+          Funkce <strong>papousek</strong> má jeden parametr <strong>jmeno</strong>. Když voláme funkci
+          <strong>papousek</strong> a předáme jí argument <strong>"Karel"</strong>, funkce vypíše třikrát slovo
+          <strong>"Karel"</strong>. Podobně při volání s argumentem <strong>"Eva"</strong> funkce vypíše třikrát slovo
+          <strong>"Eva"</strong>.
+        </p>
+      </section>
+    </section>
+
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.1 - Písmena</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Sestavte program, který nejprve uživatele vyzve k zadání činnosti pro agenta:
+          </p>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              Výpis textu
+            </li>
+            <li>
+              Stavba domu
+            </li>
+            <li>
+              Buldozer
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="odstavec">
+      <h2>Lokální proměnné</h2>
+      <p>
+        Co se stane, pokud si uvnitř definice funkce definujeme vlastní
+        proměnnou? Bude fungovat stejně, jako parametr – bude k dispozici
+        jen uvnitř daného volání funkce. Kde je chyba v tomto programu?
+      </p>
+      <div class="center code-block">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+def papousek(pocet):
+  for i in range(pocet):
+      print("Ahoj")
+  jmeno = "Alex"
+
+papousek(3)
+print(pocet)
+print(jmeno)
+            </code>
+        </pre>
+      </div>
+      <p>
+        Kód obsahuje 2 chyby. Když na předposledním řádku printujeme
+        parametr pocet, existuje jen uvnitř funkce papousek, nelze ho použít
+        nikde mimu funkci. Proměnná jmeno je taky definovaná uvnitř funkce,
+        proto selže i její print mimo funkci. Naopak pokud bychom proměnnou
+        printovali zevnitř funkce, bude to fungovat:
+      </p>
+      <div class="center code-block">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+def papousek(pocet):
+  jmeno = "Alex"
+  for i in range(pocet):
+      print("Ahoj, jsem " + jmeno + ".")
+  
+
+papousek(3)
+            </code>
+        </pre>
+      </div>
+    </section>
+
+
+    <section class="odstavec">
+      <h2>Lokální proměnné</h2>
+      <p>
+        V definici funkce můžeme uvést více parametrů a oddělit je čárkami, jako například zde:
+      </p>
+      <div class="center code-block">
+        <pre class="python">
+            <code style="font-weight: bolder;">
+def platba(jablka, hrusky, cenaJablek, cenaHrusek):
+    zaJablka = jablka * cenaJablek
+    zaHrusek = hrusky * cenaHrusek
+    celkem = zaJablka + zaHrusek
+    print("Celkem zaplatím " + str(celkem))
+
+platba(2, 4, 10, 12)
+platba(4, 2, 11, 15)
+            </code>
+        </pre>
+      </div>
+    </section>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.2 - Funkce pro dům</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Sestavte funkci, která postaví v Minetestu dům (podlahu, zdi, strop). Funkce bude mít následující parametry:
+          </p>
+        </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              Výška domu
+            </li>
+            <li>
+              šířka domu
+            </li>
+            <li>
+              délka domu
+            </li>
+            <li>
+              materiál
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="odstavec samprace">
+      <h3>Samostaný úkol č.3 - Abeceda</h3>
+      <p>
+        Sestavte definice funkcí pro různá další písmena. Myslete na to, že
+        agent (předaný jako parametr) by měl vždy na konci písmene dojít zase na místo, kde může začínat další
+        písmeno. Používejte funkce penblock(air), pokud nechcete, aby agent kreslil některé části písmen.
+      </p>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
