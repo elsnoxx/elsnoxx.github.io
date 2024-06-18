@@ -61,6 +61,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - updaty predelat v hlavniho readme do readme bokem
     - stranka Mystat, kontakt -> spatne navigacni menu
     - popremyslet o prepsani tohot webu do reactu nebo angularu
+    - kouknout na https://github.com/xsuchy/programovani_pro_deti/tree/main
     
     
 - Art of presentation
