@@ -59,7 +59,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat tlacitka dropdown tak ze budou rozdelene podle tematickych okruhu, treba dropdown lekce -> okruhy -> jednotlive lekce
     - pridat stranku kde se bude zobrazovat z markdownu jednotlive updaty
     - updaty predelat v hlavniho readme do readme bokem
-    - stranka Mystat, kontakt -> spatne navigacni menu
     - popremyslet o prepsani tohot webu do reactu nebo angularu
     - kouknout na https://github.com/xsuchy/programovani_pro_deti/tree/main
     
@@ -88,19 +87,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
     - zmena pohledu osoby - starterplayer => Camera => cameramode == LockFirstPerson
     - [ ] Lekce 4 - samostatna prace
-    - hodnoceni lekce
+    - hodnoceni lekce   
     
-    
-- Html & CSS
-    - pridat nejake ukazkove video do lekce 4
-    - pridat pisnicky do kolece 4 jako ukazku
-    - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
-    - zkusit pridat vice informaci do lekce, vice zajimavych tagu, uprav pomoci css
 
 - TinkerCad
     - vylepsit html a css kod, udelat responsivni stranky cele lekce
-    - upravit uvodni stranku, tlacitka, popisky
-    - u projeku schovat zadani pro posledni skupinu
     - pridat aspon 2 bonusove ukoly
     - udelat prehlednejsi k nalezeni bonusovych ukolu
 
@@ -120,6 +111,21 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
  
 
 # Versions
+
+## July 2024 - Update
+- TinkerCad
+    - upravit uvodni stranku, tlacitka, popisky
+    - u projeku schovat zadani pro posledni skupinu
+
+
+- General
+    - stranka Mystat, kontakt -> spatne navigacni menu
+
+- Html & CSS
+    - pridat pisnicky do kolece 4 jako ukazku
+    - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
+    - zkusit pridat vice informaci do lekce, vice zajimavych tagu, uprav pomoci css
+    - pridat nejake ukazkove video do lekce 4
 
 ## 2024 June - Update
 - Python Minecraft minetest
