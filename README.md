@@ -57,8 +57,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - uprava novych obrazku na avif format
     - vytvorit scrypt pro konverzi uobrazku do avif formy, vytvorit k tomu readme
     - pridat tlacitka dropdown tak ze budou rozdelene podle tematickych okruhu, treba dropdown lekce -> okruhy -> jednotlive lekce
-    - pridat stranku kde se bude zobrazovat z markdownu jednotlive updaty
-    - updaty predelat v hlavniho readme do readme bokem
     - popremyslet o prepsani tohot webu do reactu nebo angularu
     - kouknout na https://github.com/xsuchy/programovani_pro_deti/tree/main
     
@@ -67,14 +65,11 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
     
 - Audacity
-    - Opravit popisky k lekcim
     - lekce 2 pridat ukazku fazovace, zrychleni tempa, orezat ticho
-    - pridat zkratky v audacity
-    - pridat jak ulozit hudbu v mp3
+    - lekce 2 upravit pospi funkci podle https://manual.audacityteam.org/man/index_of_effects_generators_and_analyzers.html
+    - lekce 3 pridat vytvareni tonu a tak
      
 - Roblox
-    - pridani obrazku k strance env
-    - pridani obrazku k strnace lua
     - pridani obrazku k strance lekce 1, pridat datum pridani robloxu na windows 2006
     - pridani obrazku k strance lekce 2
     - pridani ukazku jak upravovat teren je to tlacitko Editor, a pote zalozka create se da vygenerovat teren, a v zalozce Edit je mozna editace terenu
@@ -86,15 +81,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat stranku jak na kolaboraci, tkj spolu práci mezi vice lidmi na jednom projektu
     - lekce 3 vytvorit vkladani dalsich obrazku z roblox studia, musi to byt ve tvaru rbxassetid:// + ID toho obrázku
     - zmena pohledu osoby - starterplayer => Camera => cameramode == LockFirstPerson
-    - [ ] Lekce 4 - samostatna prace
+    - Lekce 4 - samostatna prace
     - hodnoceni lekce   
     
-
-- TinkerCad
-    - vylepsit html a css kod, udelat responsivni stranky cele lekce
-    - pridat aspon 2 bonusove ukoly
-    - udelat prehlednejsi k nalezeni bonusovych ukolu
-
 - Python Beginer
     - lekce 6 obsah, zkontrolovat obsah
     - lekce 5, upravit ukol aby byl zajimavejsi + rozsirit to o pokracovani o seznamu
@@ -106,20 +95,42 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 
 - Construct 3
-    - [ ] pridat ukazku chovani flash na space shooter
-    - upravit uvodni stranku tak aby byla vice prehlednejsi
+    - pridat ukazku chovani flash na space shooter
+    
  
 
 # Versions
 
 ## July 2024 - Update
+- Roblox
+    - pridani obrazku k strance env
+    - pridani obrazku k strnace lua
+
+- Construct 3
+    - upravit uvodni stranku tak aby byla vice prehlednejsi
+    
+- Audacity
+    - Opravit popisky k lekcim
+    - pridat zkratky v audacity
+    - pridat jak ulozit hudbu v mp3
+
 - TinkerCad
     - upravit uvodni stranku, tlacitka, popisky
     - u projeku schovat zadani pro posledni skupinu
-
+    - udelat prehlednejsi k nalezeni bonusovych ukolu
+    - vylepsit html a css kod, udelat responsivni stranky cele lekce
+        - Lekce 1
+        - Lekce 2
+        - Lekce 3
+        - Lekce 4
+        - Lekce 5
+    - Lekce 1 - změnit obrázky na stejně velké - upraveno
+    - pridat aspon 2 bonusove ukoly
 
 - General
     - stranka Mystat, kontakt -> spatne navigacni menu
+    - pridat stranku kde se bude zobrazovat z markdownu jednotlive updaty
+    - updaty predelat v hlavniho readme do readme bokem - stranky s versions
 
 - Html & CSS
     - pridat pisnicky do kolece 4 jako ukazku
@@ -127,231 +138,3 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - zkusit pridat vice informaci do lekce, vice zajimavych tagu, uprav pomoci css
     - pridat nejake ukazkove video do lekce 4
 
-## 2024 June - Update
-- Python Minecraft minetest
-    - lekce 1 - obsah
-    - lekce 1 - pridat seznam bloku z odkazu https://github.com/sprintingkiwi/pycraft_lib/blob/master/pycraft_minetest/blocklist.py
-    - lekce 1 - upravit prikazy tak aby odpovidali, prideleni prav, nastanevi dne a zastaveni casu
-    - lekce 2 - obsah
-    - lekce 2 - pridat propojeni na lekci python beginer kde jsou používané věci popsané více 
-    - lekce 3 - obsah
-    - Pridat hodnoceni lekce
-    - lekce 4 - obsah
-    - pridat tlkacika pro posouvani mezi lekcemi
-    - lekce 5 - obsah
-
-## 2024 May - Update
-
-- Html & CSS
-    - Pridani navodu jak udelat publish webu na githubu
-    - pridat nejakou hru k otestovaní znalostí z html a css, neco ve stylu na tabuli se zobrazi ukol se zadáním a poté nechám čas a v pořadím jakém se přihlásí tak v takovém budou dostavat body celkem se rozdelí 10 diamantu mezi top 4 - 5 žáků
-        -   úkoly: zkusit udělat větší množství úkolů
-            - tučný text
-            - funkční odkaz na google.com
-            - tlačítko
-            - seznam s tečky
-            - seznam s čísli
-            - největší nadpis
-            - nejmenší nadpis v modé barvě
-            - text kurzivou
-            - obrazek o šířce 300px
-            - odkaz bez formatovaní, černý
-            - rozdělení řádku na 2 řádky (br)
-            - červený text
-            - tabulka
-
-- Python Beginer
-    - lekce 5 obsah, ukol
-    - lekce 4 zmenit ukazkovy obrazek
-    - Projekt
-
-- Python Minecraft python
-    - vytvoreni lekce a stranek
-
-## 2024 April - Update
-- General
-    - Vylepšení rozvržení hlavních stránek lekci, vytvoření sekcí 
-     ``` html
-        <section>
-            text goes here
-        </section>
-    ```
-    - Upravit vzhled talcitek, zacit pouzivat vice boostrap
-        - zatim vytvoreno pro art of presentation
-    
-- Html & CSS
-    - lekce 3 obsah, ukol, procist a opravit prekliky
-    - lekce 2 ukolu upravit aby v zadani mohli pracovat i o hre, zamyslet se o obsahu tabulky
-    - lekce 1 pridat ukázku na třidu
-    - pridat vice ukazek pouziti k lekci 1
-    - hodnoceni lekce
-    - lekce 3 opravit vytvareni dalsich souboru a pridat popis k adresari
-    - lekce 4 obsah, ukol
-    - lekce 5 obsah, ukol
-    - projekt
-    - pridani ukazku zakladni tagu
-        - strong
-        - b
-        - big
-        - br
-        - hr
-        - i
-        - small
-    - pridani ukazky stinu textu => textíshadow: 0 1px 1px black
-
-- Python Beginer
-    - lekce 2 obsah, ukol
-    - lekce 3 obsah, ukol
-    - lekce 4 obsah, ukol
-    - hodnoceni lekce
-
-Roblox
-    - Lekce 4 - obsah
-    - pridani ukazky jak zmenit barvu pomoci scriptu, nize ukazka nastavi objekt na cervenou barvu
-        ``` lua
-        local platform = script.Parent
-        platform.BrickColor = BrickColor.Red()
-        ```
-    -  Projekt word a pdf
-
-- Art of presentation
-    - Vytvořit ukol č. 5
-    - pridani ukazky praci k ukoluvm ve forme pdf, aby to nemohli kopirova
-
-## 2024 March - Update
-- Html & CSS
-    - lekce 1 obsah, ukol
-    - lekce 2 obsah, ukol
-    - Aktualizovat IDE ktere se bude pouzivat, pouzivat se bude VSC, a extensiony na html a css a prote live server
-- Python Beginer
-    - lekce 1 obsah - upravý text, upravý text k vyvojovemu prostredi, úkol č. 1, formátovaný tisk
-- Závěrečná prezentace
-    - opravit tak aby byla více k pochopení, trochu mate a dost nevystihuje co mají děti udělat
-
-## 2024 February - Update
-- Roblox
-    - Přidání na stránky přeskakove tlacika mimo lekce
-    - Přidání pár obrázku pro stránky env
-    - Vytvoření lekce 2
-    - Vytvoření Lekce 3
-    - Vytvoření Lekce 4
-- Art of presentation
-    - Lekce 2 změnění "ty naleznete zde" na tlačítko, tak aby to bylo lépe poznat, kde návŠtěvníci najdou hry
-    - Velepšení vzhledu talačítek
-    - Uprava responzivního texu na úvodní straně lekce
-    - Přidání tlačítka na stažení zadání úkolu a projektu
-    - Oprava správného zobrazení tabulky na strance projekt.html
-- Youtube
-    - pridat popisky obsahu k uvodu cele lekce
-
-## 2024 January - Update
-- Roblox
-    - Vytvoření env, kde se popisují základní vlastnosti v Roblox studiu
-    - Vytvoreni stranky o jazyku LUA a jeho základní syntaxe
-    - Vytvoření obsahu lekce 1, spolu i vytvořené výsledné skripty
-    - Projekt web stranka
-- General
-    - Úprava dokumentace k webu
-    - Vytvoření stánky kde budou zobrazeny updaty webovek
-    - Upravit nove pridane fotky na avif format
-    - opravit broken links
-    - vytvoření ikony webu
-    - Přidat na stranky 
-        ```html
-        <meta name="description" content="popis stranky">
-        ```
-- Audacity
-    - pridani ukazky metadat na prvni lekci
-    - pridani k ukolum a samostatných pracích pozadavek na metadata, tak jako v projektu zvukova kolaz
-    - upravit nadpisi lekci na Lekce 1 - co se bude dit
-    - oprava lekce 1 a klikaci odpovedi
-- Youtube
-    - Lekce 3 - obsah
-    - Lekce 4 - obsah
-- Python Beginer
-    - změmit Pycharm na vsc   
-- TinkerCad
-    - Oprava formatovani obrazku
-    - Přidat popisky k obrázkům
-- Arf of presentation
-    - Oprava textu na poslední lekci
-    - optimalni velikost nadpisu a text
-
-    
-
-## 1/18/2024 - Update
-- Google analytic 
-    - [x] zprovozneni google analytic, pro monitorovani traficku na webovce
-- Stranka pro prezentaci 
-    - [x] vytvorit odkaz na hlavní stránce
-    - [x] vytvorit pdf a word verzi pro ukoly
-    - [x] upravit rozlozeni textu
-- Youtube
-    - [x] lekce 1
-    - [x] lekce 2
-    - [x] Lekce 5
-    - [x] Projekt
-    - [x] Upravit ukoly přidat informace
-    - [x] Upravit poradí samostatných prací
-    - [x] vytovření úkolů
-- Construct
-    - [x] lekce 3
-    - [x] lekce 4
-    - [x] lekce 5
-    - [x] Lekce 6
-    - [x] Lekce 7
-    - [x] odevzdani du
-    - [x] popsani prostredi constructu
-    - [x] ukaždé prace přidat i ukázkovou práci
-    - [x] přidání obrázky animace do lekce 2
-    - [x] vytvoření stránky pro nejlepší projekty
-    - [x] pridani k hram otevirani v dalsim okne
-- TinkerCad
-    - [x] přidání času a tlačítka na přeskakování mezi lekci
-    - [x] uprava uvodni stranky
-    - [x] vytvoření přehledu kde bude název skupiny a odkaz na přihlášení 
-    - [x] Vytvoření zadání pro projekt, pdf a word, odkaz na stazeni zdani na stranku projektu
-    - [x] projekt ZOO, random 3 zvirata z tohoto seznamu, ty zpracuji a vytvori zoo
-    - [x] upravit nadpis lekce 1, 2, 3, 4, 5
-    - [x] pridat odkaz na stranku tinkercadu na kazdou lekci a stranku projektuja-th-o-10-23
-    - [x] vytvoreni skupiny na tinkercad + pristupove udaje ja-th-o-10-23
-    - [x] pridani jedne bonusove prace
-    - [x] uprava lekce 1
-    - [x] smazat hodnocení ukolů
-- Arf of presentation
-    - [x] Lekce 1 - obsah
-    - [x] Lekce 1 - kontrast barvy textu na strance
-    - [x] Lekce 1 - samostatna prace
-    - [x] Lekce 2 - samostatna prace
-    - [x] Hodnoceni projektu
-    - [x] Lekce 2 - obsah
-    - [x] Lekce 3 - obsah
-    - [x] Lekce 3 - samostatna prace
-    - [x] Lekce 4 - obsah
-    - [x] Lekce 4 - samostatna prace
-    - [x] Projekt, word verze i pdf
-    - [x] Rozdělení obrázku do složek podle lekce
-    - [x] Vytvoření tabulky hodnoceni na strance projektu 
-- Youtube
-    - [x] novy projekt + prezentace
-    - [x] oprava odkazu na strance projektu
-    - [x] pridani stazeni coveru
-- Python
-    - [x] Prejmenovani na python_beginner
-- General
-    - [x] Opravit linky po zmene nazvu html stranek v tinkercad lekci
-    - [x] Vytvořit footer
-    - [x] Upravit obrázky, chyba je ve velikosti obrázků a rozměrech, kouknout na formaty AVIF nebo WebP
-    - [x] Oprava obrazku kvuli ruznych prohlizecu Edge to nebere
-    - [x] Sjednoceni navbaru, tak aby nikde nechybeli lekce
-    - [x] Klikaci odkaz na nadpisi lekce, hodnoceni, projek a prezentace v prehledu lekce
-        - [x] Arf of presentation
-        - [x] Audacity
-        - [x] Youtube
-        - [x] TinkerCad
-        - [x] Construct
-        - [x] Roblox
-        - [x] HTML and CSS
-        - [x] Wordpress
-        - [x] Javascript
-        - [x] Python Beginer
