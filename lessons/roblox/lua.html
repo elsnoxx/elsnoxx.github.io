@@ -75,49 +75,62 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1>Roblox skryptování</h1>
+    <div class="row odstavec">
+      <div class="col-md-4">
+        <img src="/img/roblox/lua/logo.png" alt="">
+      </div>
+      <div class="col-md-8 center">
+        <h1>Roblox skryptování</h1>
+      </div>
+    </div>
+    
     <p>
       Jednotlivé skrypty vytvořené v <strong>Robloxu</strong> se budou tvořit v jazyce <strong>LUA</strong>.
     </p>
 
+    <section>
+      <h2>Co je Lua?</h2>
+      <p>
+        Lua je lehký a rychlý skriptovací jazyk, který byl navržen pro vložení do jiných aplikací. Je známý pro svou jednoduchost a flexibilitu, což ho činí ideálním pro použití v různých herních enginech, včetně Robloxu.
+      </p>
+    </section>
+
+    <section>
+      <h2>Jak Roblox používá Lua</h2>
+      <p>
+        Roblox používá Lua jako svůj skriptovací jazyk pro přidání herní logiky a interaktivity. Skripty v Robloxu umožňují manipulaci s herními objekty, vytváření herních mechanik a správu uživatelského rozhraní.
+      </p>
+    </section>
 
     <section>
       <h2>Vytvoření proměnné</h2>
       <p>
-        V jazyce Lua se proměnná vytvoří takto local variableName = variableValue.
+        V jazyce Lua se proměnná vytvoří takto: <code>local variableName = variableValue</code>.
       </p>
       <p>
-        Termín local znamená, že proměnná bude použita pouze v
-        této části skriptu. Znak = slouží k nastavení hodnoty proměnné.
+        Termín <code>local</code> znamená, že proměnná bude použita pouze v této části skriptu. Znak <code>=</code> slouží k nastavení hodnoty proměnné.
       </p>
       <p>
-        Nejčastěji budete používat <strong>local platform = script.Parent</strong>
-        script.Parent najde objekt, ve kterém se skript nachází. Jak
-        jste asi uhodli, script odkazuje na skript, který píšete, a Parent se tam nachází.
+        Nejčastěji budete používat <strong>local platform = script.Parent</strong>, kde <code>script.Parent</code> najde objekt, ve kterém se skript nachází.
       </p>
     </section>
 
     <section>
       <h2>Funkce</h2>
       <p>
-        Funkci v jazyce <strong>LUA</strong> vytváříme nasledným způsobem:
+        Funkci v jazyce <strong>LUA</strong> vytváříme následujícím způsobem:
       <ul>
         <li>
           <h5>Bez parametru</h5>
-          <br>
-          local function disappear() <br>
-          <br>
-          end <br>
+          <pre><code>local function disappear()
+end</code></pre>
         </li>
         <li>
-          <h5>S parametru</h5>
-          <br>
-          local function killPlayer(otherPart) <br>
-          <br>
-          end <br>
+          <h5>S parametrem</h5>
+          <pre><code>local function killPlayer(otherPart)
+end</code></pre>
         </li>
       </ul>
-
       </p>
     </section>
 
@@ -126,36 +139,36 @@
       <p>
         Cyklus v jazyce <strong>LUA</strong> definujeme tímto způsobem:
       </p>
-      <p>
-        <br><br>
-        end<br>
-        <br>
-        while true do<br>
-        <br>
-        end<br>
-      </p>
+      <pre><code>while true do
+end</code></pre>
     </section>
-
 
     <section>
       <h2>Podmínky</h2>
       <p>
         Podmínky v jazyce <strong>LUA</strong> zapisují tímto způsobem:
       </p>
-      <p>
-        if humanoid then<br>
-        <br>
-        end<br>
-      </p>
+      <pre><code>if humanoid then
+end</code></pre>
     </section>
 
+    <section>
+      <h2>Další Užitečné Zdroje</h2>
+      <ul>
+        <li><a href="https://www.lua.org/manual/5.1/" target="_blank">Oficiální dokumentace Lua</a></li>
+        <li><a href="https://developer.roblox.com/" target="_blank">Roblox Developer Hub</a></li>
+        <li><a href="https://devforum.roblox.com/" target="_blank">Roblox Developer Forum</a></li>
+      </ul>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
       © <span id="currentYear"></span> Copyright:
       <a class="text-reset fw-bold" href="/contact.html">Richard Ficek</a>
     </div>
   </footer>
+  
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Popper JS -->
