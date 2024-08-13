@@ -97,7 +97,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Construct 3
     - pridat ukazku chovani flash na space shooter
     
- 
+- Youtube
+    - https://www.blackmagicdesign.com/products/davinciresolve
 
 # Versions
 
