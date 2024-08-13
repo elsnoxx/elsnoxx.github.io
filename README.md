@@ -102,40 +102,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## July 2024 - Update
-- Roblox
-    - pridani obrazku k strance env
-    - pridani obrazku k strnace lua
+## August 2024 - Update
 
-- Construct 3
-    - upravit uvodni stranku tak aby byla vice prehlednejsi
-    
-- Audacity
-    - Opravit popisky k lekcim
-    - pridat zkratky v audacity
-    - pridat jak ulozit hudbu v mp3
-
-- TinkerCad
-    - upravit uvodni stranku, tlacitka, popisky
-    - u projeku schovat zadani pro posledni skupinu
-    - udelat prehlednejsi k nalezeni bonusovych ukolu
-    - vylepsit html a css kod, udelat responsivni stranky cele lekce
-        - Lekce 1
-        - Lekce 2
-        - Lekce 3
-        - Lekce 4
-        - Lekce 5
-    - Lekce 1 - změnit obrázky na stejně velké - upraveno
-    - pridat aspon 2 bonusove ukoly
-
-- General
-    - stranka Mystat, kontakt -> spatne navigacni menu
-    - pridat stranku kde se bude zobrazovat z markdownu jednotlive updaty
-    - updaty predelat v hlavniho readme do readme bokem - stranky s versions
-
-- Html & CSS
-    - pridat pisnicky do kolece 4 jako ukazku
-    - zkontrolovat jestli se nekde na webu objevuje jak udelat podtrzeny text
-    - zkusit pridat vice informaci do lekce, vice zajimavych tagu, uprav pomoci css
-    - pridat nejake ukazkove video do lekce 4
 
