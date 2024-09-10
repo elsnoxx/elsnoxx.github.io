@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/minetest.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -24,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -53,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -75,8 +78,157 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Python - minecraft</h1>
-    
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_minecraft/python_minecraft5.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/prezentace.html';"
+              class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h1>Projekt: Stavba vlastního města v Minecraftu</h1>
+    <p>Cílem tohoto projektu je naprogramovat město v prostředí Minecraft Minetest pomocí Pythonu. Děti si vytvoří
+      vlastní město obsahující domy, cesty a veřejné budovy. Město bude dynamické a bude se měnit na základě vstupu od
+      uživatele.</p>
+
+
+    <h2 class="odstavec">Kroky projektu</h2>
+    <div class="odsazeni">
+      <section>
+        <h3>1. Vytvoření základní struktury města</h3>
+        <p>Začněte tím, že si definujete seznam stavebních bloků, které budete používat (kámen, sklo, dřevo atd.).
+          Pomocí proměnných definujte rozměry budov a počet domů v městě.</p>
+          <pre>
+            <code style="color: blue;">
+<span style="color: #006e04;"># Příklad seznamu a proměnných</span>:
+<span style="color: black;">materialy</span> = [<span style="color: #ff0000;">"stone"</span>, <span style="color: #ff0000;">"wood"</span>, <span style="color: #ff0000;">"glass"</span>]
+<span style="color: black;">pocet_domu</span> = <span style="color: #02c909;">5</span>
+<span style="color: black;">delka_cesty</span> = <span style="color: #02c909;">10</span>
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>2. Vstup od uživatele</h3>
+        <p>Použijte funkci <code>input()</code> k tomu, aby uživatel mohl rozhodnout o velikosti města a vybrat
+          materiály pro stavbu.</p>
+          <pre>
+            <code style="color: blue;">
+<span style="color: #006e04;"># Příklad vstupu od uživatele</span>:
+<span style="color: black;">pocet_domu</span> = <span style="color: #9c27b0;">int</span>(<span style="color: #9c27b0;">input</span>(<span style="color: #ff0000;">"Zadejte počet domů: "</span>))
+<span style="color: black;">material</span> = <span style="color: #9c27b0;">input</span>(<span style="color: #ff0000;">"Zadejte materiál (stone, wood, glass): "</span>)
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>3. Funkce pro generování budov</h3>
+        <p>Naprogramujte funkce, které budou stavět domy, cesty a další budovy. Každá budova by měla mít parametry jako
+          výška, šířka, materiál apod.</p>
+          <pre>
+            <code style="color: blue;">
+<span style="color: #006e04;"># Příklad funkce pro stavbu domu</span>:
+<span style="color: #9c27b0;">def</span> postav_dum(vyska, sirka, delka, material):
+    <span style="color: black;">agent</span> = Turtle(material)
+    <span style="color: #9c27b0;">for</span> i <span style="color: #9c27b0;">in</span> range(<span style="color: #ff0000;">vyska</span>):
+        <span style="color: black;">agent</span>.forward(<span style="color: #ff0000;">sirka</span>)
+        <span style="color: black;">agent</span>.left(<span style="color: #4caf50;">90</span>)
+        <span style="color: black;">agent</span>.forward(<span style="color: #ff0000;">delka</span>)
+        <span style="color: black;">agent</span>.left(<span style="color: #4caf50;">90</span>)
+    <span style="color: black;">agent</span>.up(<span style="color: #4caf50;">10</span>)  <span style="color: #006e04;"># Postavení stěn domu</span>
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>4. Generování cest</h3>
+        <p>Pomocí cyklů naprogramujte generování cest mezi budovami. Cesta může být vybudována opakovaným přidáváním
+          bloků podle volby uživatele.</p>
+          <pre>
+            <code style="color: blue;">
+<span style="color: #006e04;"># Příklad generování cest</span>:
+<span style="color: #9c27b0;">def</span> postav_cestu(<span style="color: #ff0000;">delka</span>, <span style="color: #ff0000;">material</span>):
+    <span style="color: black;">agent</span> = Turtle(<span style="color: #ff0000;">material</span>)
+    <span style="color: black;">agent</span>.forward(<span style="color: #ff0000;">delka</span>)
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>5. Pokročilé funkce – měření času</h3>
+        <p>Použijte knihovnu <code>time</code> pro měření času stavby města a vypisujte výsledky do chatu Minecraftu.
+        </p>
+        <pre>
+          <code style="color: blue;">
+<span style="color: #006e04;"># Příklad měření času</span>:
+<span style="color: #9c27b0;">import</span> time
+
+<span style="color: black;">start</span> = time.time()
+<span style="color: #006e04;"># Kód pro stavbu města</span>
+<span style="color: black;">end</span> = time.time()
+<span style="color: #9c27b0;">print</span>(f<span style="color: #ff0000;">"Stavba trvala {end - start} sekund."</span>)
+          </code>
+      </pre>
+      </section>
+    </div>
+
+    <h2>Samostatné úkoly</h2>
+    <ul>
+      <li>
+        <strong class="samPrace">Samostatná úloha 1:</strong> Rozšiřte program o různé typy budov (např. domy, školy, parky) podle
+        volby uživatele.
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 2:</strong> Vytvořte funkci, která automaticky postaví mosty přes řeky mezi částmi
+        města. Využijte cykly k tomu, aby byl most postaven z různých materiálů.
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 3:</strong> Naprogramujte stavbu silnic tak, aby se napojovaly na všechny hlavní
+        budovy v městě a rozdělte město do čtvrtí (rezidenční, obchodní, parková zóna apod.).
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 4:</strong> Přidejte funkci pro vytváření parků s cestami a stromy. Stromy by měly
+        být náhodně generovány na různých místech parku.
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 5:</strong> Naprogramujte časovač, který měří, jak dlouho trvá postavit různé části
+        města (domy, silnice, parky) a vypište tyto informace do chatu Minetestu.
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 6:</strong> Přidejte do svého města funkční systém osvětlení, který se zapíná a
+        vypíná podle denní doby (např. pomocí přepínače pro zapnutí a vypnutí světla).
+      </li>
+      <li>
+        <strong class="samPrace">Samostatná úloha 7:</strong> Přidejte stavbu městských hradeb kolem města. Město by mělo mít brány,
+        které se automaticky zavírají a otevírají na základě denní doby nebo příkazu uživatele.
+      </li>
+    </ul>
+
+    <div class="odstavec"></div>
+      <table>
+        <tr>
+          <td>
+            <h5>Zadání projektu</h5>
+          </td>
+          <td style="padding-left: 50px;">
+            <button onClick='download("")' class="btn btn-primary"
+              style="font-weight: bold;">
+              stažení</button>
+          </td>
+        </tr>
+      </table>
+      <h5><a href="/download/pdfobraze.png" download>Cover</a></h5>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
