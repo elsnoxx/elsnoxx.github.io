@@ -57,8 +57,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - uprava novych obrazku na avif format
     - vytvorit scrypt pro konverzi uobrazku do avif formy, vytvorit k tomu readme
     - pridat tlacitka dropdown tak ze budou rozdelene podle tematickych okruhu, treba dropdown lekce -> okruhy -> jednotlive lekce
-    - popremyslet o prepsani tohot webu do reactu nebo angularu
     - kouknout na https://github.com/xsuchy/programovani_pro_deti/tree/main
+    - zkusit navrhnout seznam lekci pod card v boostrapu s fotky co se bude dit v lekci
+
     
     
 - Art of presentation
@@ -110,5 +111,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Javascript
     - Lekce 1 - pridan obsah lekce
+    - IDE - popsani jakeho IDE budeme pouzivat v ramci Javascriptu
 
 

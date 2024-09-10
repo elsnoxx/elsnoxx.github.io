@@ -164,7 +164,7 @@ alert('Ahoj, toto je úvodní zpráva!');
             <div class="col-md-6">
               <div id="cursorPosition">Pohybujte kurzorem nad touto oblastí.</div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex align-items-center justify-content-left">
               <div id="output"></div>
             </div>
           </div>
@@ -183,7 +183,6 @@ alert('Ahoj, toto je úvodní zpráva!');
             </div>
           </div>
         </div>
-    </div>
     </div>
     </section>
 
@@ -260,26 +259,46 @@ alert('Prvek není viditelný');
       </div>
     </div>
 
-<!-- Práce s elementy pomocí document.getElementById -->
-<section id="document-get-element-by-id">
-  <h3>Funkce document.getElementById</h3>
-  <p>Funkce <code>document.getElementById()</code> se používá k získání přístupu k HTML elementu podle jeho ID. Tento
-    přístup umožňuje měnit vlastnosti a obsah prvku, například měnit jeho text, styl nebo atributy.</p>
-  <p>V následující ukázce se používá <code>document.getElementById()</code> k měnění obrázku na stránce. Když kliknete na
-    tlačítko "Turn on the light", změní se obrázek na ikonu zapnutého světla. Tlačítko "Turn off the light" vrátí obrázek
-    zpět na ikonu vypnutého světla.</p>
-  <pre><code>&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'"&gt;Turn on the light&lt;/button&gt;
+    <!-- Práce s elementy pomocí document.getElementById -->
+    <section id="document-get-element-by-id">
+      <h3>Funkce document.getElementById</h3>
+      <p>Funkce <code>document.getElementById()</code> se používá k získání přístupu k HTML elementu podle jeho ID.
+        Tento
+        přístup umožňuje měnit vlastnosti a obsah prvku, například měnit jeho text, styl nebo atributy.</p>
+      <p>V následující ukázce se používá <code>document.getElementById()</code> k měnění obrázku na stránce. Když
+        kliknete na
+        tlačítko "Turn on the light", změní se obrázek na ikonu zapnutého světla. Tlačítko "Turn off the light" vrátí
+        obrázek
+        zpět na ikonu vypnutého světla.</p>
+      <pre><code>&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'"&gt;Turn on the light&lt;/button&gt;
 &lt;img id="myImage" src="/img/javascript/pic_bulboff.gif" style="width:100px"&gt;
 &lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulboff.gif'"&gt;Turn off the light&lt;/button&gt;</code></pre>
-  <h4>Ukázka: Ovládání obrázku pomocí tlačítek</h4>
-  <div class="">
-    <button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'">Turn on the light</button>
-    <img id="myImage" src="/img/javascript/pic_bulboff.gif" style="width:100px">
-    <button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulboff.gif'">Turn off the light</button>
-  </div>
-</section>
+      <h4>Ukázka: Ovládání obrázku pomocí tlačítek</h4>
+      <div class="">
+        <button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'">Turn on the
+          light</button>
+        <img id="myImage" src="/img/javascript/pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulboff.gif'">Turn off the
+          light</button>
+      </div>
+    </section>
 
 
+    <div class="row">
+      <div class="col-md-6">
+        <pre>
+          <code>
+            function noveOkno(soubor) { 
+              window.open(soubor, "novyRam", "width=500,height=400") 
+            }
+          </code>
+        </pre>
+      </div>
+      <div class="col-md-6">
+        <img value="Klikni" src="/img/logo.jpg" onclick="noveOkno('/img/javascript/pic_bulboff.gif')">
+      </div>
+    </div>
+    
 
     <div class="odstavec">
       <h2></h2>
@@ -322,6 +341,12 @@ alert('Prvek není viditelný');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
   <script src="/js/javascript/lekce1.js"></script>
+
+  <script>
+    function noveOkno(soubor) { 
+      window.open(soubor, "novyRam", "width=500,height=400") 
+    }
+  </script>
 </body>
 
 </html>
