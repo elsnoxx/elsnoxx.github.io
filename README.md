@@ -90,7 +90,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Minecraft minetest
     - lekce 1 - dodelat rozpracovane chybi screeny
-    - projekt
+    - word a pdf k projektu
     - vytvorit scripty aby splnovali zadani samostatnych praci
     
 
@@ -102,6 +102,13 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 # Versions
 
-## August 2024 - Update
+## September 2024 - Update
+
+- Python Minecraft minetest
+    - projekt
+
+
+- Javascript
+    - Lekce 1 - pridan obsah lekce
 
 
