@@ -24,7 +24,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -53,8 +53,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -79,8 +81,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript1.html';">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript1.html';">Následují
               lekce</button>
           </td>
           <td>
@@ -91,41 +95,91 @@
     </div>
 
 
-    <div class="odstavec">
-      <table>
-        <tr>
-          <td>
-            <h1>Prostředí pro vývoj</h1>
-            <p>
-              Je spousta možných prostředí, které nám umožní vývoj webových stránek. Ale já pro naši lekci vybral právě
-              program <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Visual
-                Studio Code</a>. Hlavní důvod proč budeme
-              používat
-              tento program je, že jednoduše nám udělá server, který se bude automaticky aktualizovat a nemusíte ručně
-              znova načíst
-              celou stránku.
-            </p>
-            <p>
-              <strong>Potřebné rozšíření</strong>
-            <p>
-              Níže jsou názvy rozšíření, které si doinstalujeme a svou práci si ulehčíme.
-              Červená čtvereček na fotce vedle nám ukazuje místo kde se instalují veškeré rozšíření.
-              Do zeleného obdélníku vložíme níže napsané nazázvy a jeden po druhém je stáhneme.
-            </p>
-            <ul>
-              <li>ms-vscode.live-server</li>
-              <li>ecmel.vscode-html-css</li>
-              <li>xabikos.JavaScriptSnippets</li>
-            </ul>
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/html-css/visual-studio-code-extension.avif"
-              alt="Rozšíření ve Visual Studiu Code" style="width:100%; max-width:3000px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
+    <h1>Prostředí pro vývoj</h1>
+    <p>
+      Pro vývoj webových stránek existuje celá řada programů a prostředí, která mohou usnadnit práci vývojářům.
+      Pro naši lekci jsem však vybral <strong>Visual Studio Code (VS Code)</strong>, což je jedno z nejpopulárnějších
+      a nejflexibilnějších IDE (Integrated Development Environment), které je vhodné jak pro začátečníky, tak pokročilé
+      programátory.
+    </p>
+    <h2>Proč používáme Visual Studio Code?</h2>
+    <p>
+      Visual Studio Code nabízí mnoho funkcí, které usnadňují práci na vývoji webových stránek a aplikací:
+    </p>
+    <ul>
+      <li>
+        <strong>Jednoduché uživatelské prostředí</strong> – Intuitivní rozhraní, které umožňuje snadné přizpůsobení
+        a rozšíření o různé pluginy.
+      </li>
+      <li>
+        <strong>Podpora mnoha jazyků</strong> – VS Code podporuje nejen HTML, CSS a JavaScript, ale také mnoho dalších
+        jazyků jako Python, PHP, Ruby a další.
+      </li>
+      <li>
+        <strong>Živý server (Live Server)</strong> – Jedna z klíčových funkcí, kterou budeme využívat, je schopnost
+        spustit živý server, který nám automaticky zobrazí změny na naší stránce. To znamená, že nemusíme manuálně
+        obnovovat stránku při každé úpravě kódu – VS Code to udělá za nás. Toto nám výrazně urychlí práci.
+      </li>
+      <li>
+        <strong>Rozšiřitelnost pomocí rozšíření</strong> – Visual Studio Code umožňuje instalovat různá rozšíření,
+        která nám mohou pomoci při vývoji. Pro naše potřeby budeme potřebovat některá specifická rozšíření,
+        která si doinstalujeme, abychom si usnadnili práci.
+      </li>
+    </ul>
+
+    <h2>Potřebné rozšíření</h2>
+    <p>
+      Rozšíření jsou malé moduly, které přidávají nové funkce do VS Code. Pro naši práci s webovými stránkami
+      nainstalujeme následující rozšíření:
+    </p>
+    <ul>
+      <li><strong>Live Server</strong> – Umožňuje spustit živý server, který se automaticky aktualizuje při změně kódu.
+        Nainstalujte rozšíření s ID <code>ms-vscode.live-server</code>.</li>
+      <li><strong>HTML CSS Support</strong> – Tento plugin přidává podporu pro HTML a CSS, čímž zlepšuje automatické
+        doplňování kódu. Rozšíření má ID <code>ecmel.vscode-html-css</code>.</li>
+      <li><strong>JavaScript (ES6) Snippets</strong> – Toto rozšíření poskytuje šikovné útržky kódu pro JavaScript,
+        které vám ulehčí psaní a urychlí práci s JavaScriptem. Rozšíření má ID <code>xabikos.JavaScriptSnippets</code>.
+      </li>
+    </ul>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Jak rozšíření nainstalovat?</h2>
+        <p>
+          Instalace rozšíření ve VS Code je velmi jednoduchá:
+        </p>
+        <ol>
+          <li>Otevřete Visual Studio Code.</li>
+          <li>Na levé straně najdete ikonu pro "Extensions" (Rozšíření), což je ikona malého čtverečku. Klikněte na ni.
+          </li>
+          <li>Do vyhledávacího pole zadejte názvy rozšíření, které jsou uvedeny výše (například
+            <code>Live Server</code>), a klikněte na tlačítko "Install".
+          </li>
+        </ol>
+        <p>
+          Po instalaci budou rozšíření okamžitě dostupná a budete je moci využívat při práci na svých webových
+          stránkách.
+        </p>
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <img class="myImg" src="/img/html-css/visual-studio-code-extension.avif" alt="Rozšíření ve Visual Studiu Code"
+          style="width:100%; max-width:300px; height: auto" loading="lazy">
+      </div>
     </div>
+
+    <h2>Výhody rozšíření</h2>
+    <p>
+      Tato rozšíření vám nejen usnadní psaní kódu, ale také zlepší produktivitu a zjednoduší práci s webovými
+      technologiemi.
+      Například díky <strong>Live Serveru</strong> okamžitě uvidíte, jak vaše změny ovlivňují vzhled stránky, aniž
+      byste
+      museli manuálně stránku znovu načítat, a pluginy pro HTML, CSS a JavaScript vám poskytnou užitečné návrhy a
+      zkrácení zápisů kódu.
+    </p>
+    </div>
+
+
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
