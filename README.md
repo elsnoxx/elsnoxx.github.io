@@ -101,6 +101,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Youtube
     - https://www.blackmagicdesign.com/products/davinciresolve
 
+- Javascript
+    - Nacrt co ukazovat ve vyuce https://www.jakpsatweb.cz/javascript/javascript-uvod.html
+    
 # Versions
 
 ## September 2024 - Update
