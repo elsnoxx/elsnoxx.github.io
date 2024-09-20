@@ -80,7 +80,7 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/jQuery.html';">Následují lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript5.html';">Následují lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -88,16 +88,147 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Wordpress</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-      Návod na přihlášení naleznete <a href="">zde</a>.
-    </p>
+    <h2>Lekcia 4. Práca s formulármi a tagmi.</h2>
+    <h3>Práca s formulárom</h3>
+    <h4>Zadávanie udalosti v prehliadači</h4>
+    <p>Neoddeliteľnou časťou fungovania programov je vzájomné pôsobenie jednotlivých prvkov. Na to, aby sme získavali reakciu na aktivitu návštevníkov a na vnútorné vzájomné pôsobenie skriptov, boli vytvorené udalosti.</p>
+    <p>Udalosť je akýsi signál prehliadača, ktorý hovorí, že došlo k určitej aktivite. Typov udalostí je pomerne veľa. Poďme si pozrieť zoznam najčastejšie používaných:</p>
+    <h4>Udalosti myši:</h4>
+    <ul>
+        <li>click – kliknutie na prvok ľavým tlačidlom myši</li>
+        <li>contextmenu – kliknutie na prvok pravým tlačidlom myši</li>
+        <li>mouseover – používateľ navádza myš na určitý prvok</li>
+        <li>mousedown a mouseup – tlačidlo myši stlačili alebo pustili</li>
+        <li>mousemove – pohyb myši</li>
+    </ul>
+    <h4>Udalosti ovládacích prvkov:</h4>
+    <ul>
+        <li>submit – návštevník odoslal formulár &lt;form&gt;</li>
+        <li>focus – návštevník sa sústredí na prvok (napr. klikol na &lt;input&gt;).</li>
+    </ul>
+    <h4>Udalosti klávesnice:</h4>
+    <ul>
+        <li>keydown – návštevník stlačí klávesu</li>
+        <li>keyup – návštevník pustí klávesu</li>
+    </ul>
+    
+    <h3>Priradenie obslužných programov udalostí</h3>
+    <p>Ako má program reagovať, keď došlo k nejakému úkonu? Práve na sledovanie udalostí bol vytvorený obslužný program. Obslužný program je určitá funkcia, ktorá zafunguje akonáhle dôjde k nejakej udalosti.</p>
+    <p>Existuje niekoľko spôsobov, s pomocou ktorých je možné priradiť udalosti obslužný program:</p>
+    <p>Obslužný program možno zadefinovať priamo v návrhu, v atribúte, ktorý sa nazýva <strong>on-udalosť</strong>. Napríklad:</p>
+    
+    <pre><code>&lt;input value="Stlač ma" onclick="alert('Klik!')" type="button"&gt;</code></pre>
+    
+    <h3>Príklad s funkciou countRabbits:</h3>
+    <pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;script&gt;
+        function countRabbits() {
+            for (var i = 1; i &lt;= 3; i++) {
+                alert("Králik číslo " + i);
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="button" onclick="countRabbits()" value="Spočítať králikov!" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    
+    <h3>Získanie hodnoty zo vstupného poľa:</h3>
+    <p>Pre získanie hodnoty zo vstupného poľa je potrebné najskôr vytvoriť prvok:</p>
+    
+    <pre><code>&lt;input type="button" value="Odpovedať" onclick="onButton()" /&gt;</code></pre>
+    <p>Na získanie hodnoty použijeme príkaz:</p>
+    <pre><code>var answer = document.getElementById('userText').value;</code></pre>
 
+    <h2>Práca s dokumentom</h2>
+    <h3>Úvod do DOM</h3>
+    <p>Počas práce v HTML sa môžeme stretnúť s dynamickými zmenami na stránke. Základným prvkom práce s takýmito zmenami je DOM (Document Object Model).</p>
+    <p>DOM predstavuje objektový model HTML dokumentov a slúži na dynamické zmeny prvkov stránky pomocou JavaScriptu.</p>
 
+    <h3>Vyhľadávanie: getElement*</h3>
+    <p>DOM poskytuje metódy na vyhľadávanie prvkov v dokumente. Medzi hlavné metódy patrí:</p>
+    <ul>
+        <li><strong>document.getElementById</strong> - nájde prvok podľa atribútu <code>id</code></li>
+        <li><strong>document.getElementsByTagName</strong> - nájde všetky prvky s daným tagom</li>
+        <li><strong>document.getElementsByName</strong> - nájde všetky prvky s atribútom <code>name</code></li>
+    </ul>
 
+    <h3>Praktické príklady:</h3>
+    
+    <h4>Príklad 1: Po stlačení tlačidla zmeniť hodnotu.</h4>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;script&gt;
+        function onButton() {
+            var text = document.getElementById('text');
+            text.innerHTML = "Tlačidlo už stlačili";
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;p id="text"&gt;Tlačidlo nikto nestlačil!&lt;/p&gt;
+        &lt;input type="button" value="Stlač ma!" onclick="onButton()" /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    
+    <h4>Príklad 2: Po stlačení tlačidla sa zmení farba na náhodnú.</h4>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;script&gt;
+        function onButton() {
+            var text = document.getElementById('text');
+            var r = Math.floor(Math.random() * 250);
+            var g = Math.floor(Math.random() * 250);
+            var b = Math.floor(Math.random() * 250);
+            text.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;p id="text"&gt;Demo text!&lt;/p&gt;
+        &lt;input type="button" value="Stlač ma!" onclick="onButton()" /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-
+    <h4>Príklad 3: Malá kalkulačka.</h4>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;script&gt;
+        function onButton() {
+            var aEl = document.getElementById('a');
+            var bEl = document.getElementById('b');
+            var cEl = document.getElementById('c');
+            var a = Number(aEl.value);
+            var b = Number(bEl.value);
+            var c = a + b;
+            cEl.value = c;
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form&gt;
+        &lt;p&gt;a:&lt;input id="a" type="number" value="0" /&gt;&lt;/p&gt;
+        &lt;p&gt;b:&lt;input id="b" type="number" value="0" /&gt;&lt;/p&gt;
+        &lt;p&gt;a + b:&lt;input id="c" readonly /&gt;&lt;/p&gt;
+        &lt;input type="button" value="Stlač ma!" onclick="onButton()" /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
   </main>
   <footer class="footer">

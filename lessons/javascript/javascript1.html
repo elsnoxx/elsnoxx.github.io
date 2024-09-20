@@ -204,60 +204,82 @@ alert('Ahoj, toto je úvodní zpráva!');
     <section id="zacatek">
       <h3>Začátek práce s JavaScript</h3>
       <p>Programy v JavaScript můžeme vložit do HTML dokumentu pomocí tagu <code>&lt;script&gt;</code>.</p>
-      <pre><code>&lt;script&gt;
-alert('Ahoj!');
-&lt;/script&gt;</code></pre>
+      <div class="example">
+        <code>
+          <pre>
+&lt;script&gt; 
+  alert('Ahoj!'); 
+&lt;/script&gt;
+          </pre>
+        </code>
+      </div>
       <p>Příkaz <code>alert()</code> zobrazí zprávu v okně a čeká na potvrzení uživatele.</p>
       <h4>Ukázka: Zobrazení více zpráv</h4>
-      <div class="example-code">
-        <pre><code>&lt;script&gt;
-alert('Zpráva 1');
-alert('Zpráva 2');
-&lt;/script&gt;</code></pre>
+      <div class="example">
+        <code>
+          <pre>
+&lt;script&gt;
+  alert('Zpráva 1');
+  alert('Zpráva 2');
+&lt;/script&gt;
+            </pre>
+          </code>
       </div>
     </section>
 
 
-    <div class="row">
-      <div class="col-md-6">
-        <!-- Proměnné -->
-        <section id="promenne">
-          <h3>Proměnné v JavaScript</h3>
-          <p>Proměnné v JavaScript se vytvářejí pomocí klíčového slova <code>var</code>. Proměnné slouží k ukládání
-            hodnot, které můžeme později použít.</p>
-          <pre><code>var message = 'Ahoj!';
-alert(message);</code></pre>
-          <h4>Ukázka: Definování více proměnných</h4>
-          <div class="example-code">
-            <pre><code>var username = 'Petr';
-var age = 30;
-alert('Uživatel: ' + username + ', Věk: ' + age);</code></pre>
-          </div>
-        </section>
+    <!-- Proměnné -->
+    <section id="promenne">
+      <h3>Proměnné v JavaScript</h3>
+      <p>Proměnné v JavaScript se vytvářejí pomocí klíčového slova <code>var</code>. Proměnné slouží k ukládání
+        hodnot, které můžeme později použít.</p>
+      <div class="example">
+        <code>
+          <pre>
+&lt;script&gt; 
+  var message = 'Ahoj!';
+  alert(message);
+&lt;/script&gt;
+          </pre>
+        </code>
       </div>
+      <h4>Ukázka: Definování více proměnných</h4>
+      <div class="example">
+        <code>
+          <pre>
+&lt;script&gt; 
+  var username = 'Petr';
+  var age = 30;
+  alert('Uživatel: ' + username + ', Věk: ' + age);
+&lt;/script&gt;
+          </pre>
+        </code>
+      </div>
+    </section>
 
-      <div class="col-md-6">
-        <!-- Čísla a Logické hodnoty -->
-        <section id="cisla-logika">
-          <h3>Čísla a Logické hodnoty</h3>
-          <p>V JavaScript pracujeme s čísly a logickými hodnotami. Číselné hodnoty mohou být celé nebo desetinné.
-            Logické
-            proměnné mohou mít hodnotu <code>true</code> nebo <code>false</code>.</p>
-          <pre><code>var n = 123;
-var m = 12.345;
-var isChecked = true;</code></pre>
-          <h4>Ukázka: Práce s logickými hodnotami</h4>
-          <div class="example-code">
-            <pre><code>var isVisible = true;
+    <!-- Čísla a Logické hodnoty -->
+    <section id="cisla-logika">
+      <h3>Čísla a Logické hodnoty</h3>
+      <p>V JavaScript pracujeme s čísly a logickými hodnotami. Číselné hodnoty mohou být celé nebo desetinné.
+        Logické
+        proměnné mohou mít hodnotu <code>true</code> nebo <code>false</code>.</p>
+
+
+      <h4>Ukázka: Práce s logickými hodnotami</h4>
+      <div class="example">
+        <pre>
+          <code>
+var isVisible = true;
 if (isVisible) {
-alert('Prvek je viditelný');
+  alert('Prvek je viditelný');
 } else {
-alert('Prvek není viditelný');
-}</code></pre>
-          </div>
-        </section>
+  alert('Prvek není viditelný');
+}
+          </code>
+        </pre>
       </div>
-    </div>
+    </section>
+
 
     <!-- Práce s elementy pomocí document.getElementById -->
     <section id="document-get-element-by-id">
@@ -270,9 +292,16 @@ alert('Prvek není viditelný');
         tlačítko "Turn on the light", změní se obrázek na ikonu zapnutého světla. Tlačítko "Turn off the light" vrátí
         obrázek
         zpět na ikonu vypnutého světla.</p>
-      <pre><code>&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'"&gt;Turn on the light&lt;/button&gt;
+      <div class="example example-small">
+        <pre>
+            <code>
+&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'"&gt;Turn on the light&lt;/button&gt;
 &lt;img id="myImage" src="/img/javascript/pic_bulboff.gif" style="width:100px"&gt;
-&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulboff.gif'"&gt;Turn off the light&lt;/button&gt;</code></pre>
+&lt;button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulboff.gif'"&gt;Turn off the light&lt;/button&gt;
+            </code>
+          </pre>
+      </div>
+
       <h4>Ukázka: Ovládání obrázku pomocí tlačítek</h4>
       <div class="">
         <button onclick="document.getElementById('myImage').src='/img/javascript/pic_bulbon.gif'">Turn on the
@@ -284,46 +313,52 @@ alert('Prvek není viditelný');
     </section>
 
 
-    <div class="row">
-      <div class="col-md-6">
-        <pre>
-          <code>
-            function noveOkno(soubor) { 
-              window.open(soubor, "novyRam", "width=500,height=400") 
-            }
-          </code>
-        </pre>
+    <section class="odstavec">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Otevření nového okna pomocí JavaScriptu</h3>
+          <p>
+            Nyní si ukážeme, jak pomocí JavaScriptu otevřít nové okno, když klikneme na obrázek. V tomto případě se
+            otevře okno s konkrétním souborem, který je zadán ve funkci. Funkce <code>noveOkno(soubor)</code> využívá
+            metodu <code>window.open()</code>, která umožňuje otevřít nové okno nebo záložku s daným souborem.
+          </p>
+          <p>
+            Funkce <code>noveOkno</code> má jeden vstupní parametr <code>soubor</code>, což je cesta k obrázku nebo
+            souboru, který se má zobrazit. Parametry jako <code>width</code> a <code>height</code> určují velikost
+            nového okna. V příkladu níže je obrázek, na který když kliknete, otevře se nový rám s obrázkem v definované
+            velikosti.
+          </p>
+          <div class="example example-small">
+            <pre>
+              <code>
+function noveOkno(soubor) { 
+  window.open(soubor, "novyRam", "width=500,height=400") 
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Jak to funguje?</h3>
+          <p>
+            Když kliknete na obrázek, spustí se funkce <code>noveOkno()</code>. Tato funkce zavolá metodu
+            <code>window.open()</code>, která otevře nové okno s obrázkem. Parametr <code>soubor</code> odkazuje na
+            cestu k obrázku, který chceme zobrazit. V tomto případě obrázek <code>logo.jpg</code>.
+          </p>
+          <p>
+            <strong>Onclick Event:</strong> Kliknutím na obrázek (atribut <code>onclick</code>) se aktivuje
+            JavaScriptový kód, který provede otevření nového okna. Obrázek je součástí odkazu, a díky
+            <code>javascript:void(0)</code> nedojde k přesměrování na jinou stránku, ale spustí se JavaScriptová funkce.
+          </p>
+          <a href="javascript:void(0)" onclick="noveOkno('/img/logo.jpg')">
+            <img value="Klikni" src="/img/logo.jpg" alt="Klikněte pro otevření obrázku v novém okně">
+          </a>
+        </div>
       </div>
-      <div class="col-md-6">
-        <img value="Klikni" src="/img/logo.jpg" onclick="noveOkno('/img/javascript/pic_bulboff.gif')">
-      </div>
-    </div>
-    
+    </section>
 
-    <div class="odstavec">
-      <h2></h2>
-      <p class="usek-kodu">
-        <code>
-            &lt;body&gt;<br>
-          <font color="#800000">&lt;script&gt;</font><br>
-          var <font color="#FF0000">x</font> = "<font color="#008000">Obsah proměnné</font>";<br>
-          document.write(<font color="#FF0000">x</font>);<br>
-          <font color="#800000">&lt;/script&gt;</font><br>
-          &lt;/body&gt;
-          </code>
-      </p>
-    </div>
 
-    <div class="odstavec">
-      <table>
-        <tr>
-          <td><button onclick="casovac()">ukol</button></td>
-          <td>
-            <p id="casovac-text"><span id="casovac"></span></p>
-          </td>
-        </tr>
-      </table>
-    </div>
+
 
 
   </main>
@@ -343,8 +378,8 @@ alert('Prvek není viditelný');
   <script src="/js/javascript/lekce1.js"></script>
 
   <script>
-    function noveOkno(soubor) { 
-      window.open(soubor, "novyRam", "width=500,height=400") 
+    function noveOkno(soubor) {
+      window.open(soubor, "novyRam", "width=500,height=400")
     }
   </script>
 </body>

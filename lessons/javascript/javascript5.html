@@ -79,7 +79,7 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
+            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Předchozí lekce</button>
             <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/jQuery.html';">Následují lekce</button>
           </td>
           <td>
@@ -88,11 +88,172 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Wordpress</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-      Návod na přihlášení naleznete <a href="">zde</a>.
-    </p>
+    <h2>Lekcia 5. Vytvorenie slideru v JavaScript.</h2>
+
+    <h3>Vytvorenie jednoduchej slide-show</h3>
+    <p>Zaujímavým prvkom, ktorý je možné vytvoriť s pomocou JavaScriptu, je slide-show. Na jej vytvorenie bude potrebný kontajner pre slajdy a slajdy samotné.</p>
+
+    <p>Príklad slide-show:</p>
+    <ul id="slides">
+        <li class="slide showing">Slide 1</li>
+        <li class="slide">Slide 2</li>
+        <li class="slide">Slide 3</li>
+        <li class="slide">Slide 4</li>
+        <li class="slide">Slide 5</li>
+    </ul>
+
+    <h3>Základné štýly pre slider</h3>
+    <p>Do ich funkčných možností patrí možnosť:</p>
+    <ul>
+        <li>vytvárať kontajner pre slajdy</li>
+        <li>rozmiestňovať slajdy jeden nad druhým vo vnútri kontajneru</li>
+        <li>regulovať správanie slajdov pri objavení a zmiznutí</li>
+        <li>plynulo meniť priehľadnosť slajdov na vytvorenie efektu zhasínania a objavenia</li>
+    </ul>
+
+    <p>Je dôležité pamätať si, že pred prácou v CSS je potrebné zmeniť triedy a použité identifikátory, aby nedochádzalo ku konfliktom s vašimi stránkami. Poďme sa pozrieť na toto CSS:</p>
+
+    <pre><code>
+/* Prvotné štýly */
+#slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+    </code></pre>
+
+    <h3>Druhotné štýly</h3>
+    <p>Poďme do našej slide-show pridať rôzne štýly, aby bola zaujímavejšia. Na demonštráciu použijeme takéto štýly:</p>
+
+    <pre><code>
+.slide {
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1) {
+    background: red;
+}
+
+.slide:nth-of-type(2) {
+    background: orange;
+}
+
+.slide:nth-of-type(3) {
+    background: green;
+}
+
+.slide:nth-of-type(4) {
+    background: blue;
+}
+
+.slide:nth-of-type(5) {
+    background: purple;
+}
+    </code></pre>
+
+    <h3>JavaScript pre slider</h3>
+    <p>JavaScript pri práci so slajdami vykonáva krajne dôležitú úlohu – skrýva aktuálny slajd a zobrazuje nasledovný. Pre realizáciu tejto úlohy je potrebné zmeniť názvy tried slajdov. Kód JS:</p>
+
+    <pre><code>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide, 2000);
+
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+    </code></pre>
+
+    <h3>Pauza a ovládanie slideru</h3>
+    <p>Do slideru môžeme pridať ovládacie prvky, ako napríklad tlačidlo pauzy:</p>
+
+    <button class="controls" id="pause">Pause</button>
+
+    <p>JavaScript pre pauzu:</p>
+    <pre><code>
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow() {
+    pauseButton.innerHTML = 'Play';
+    playing = false;
+    clearInterval(slideInterval);
+}
+
+function playSlideshow() {
+    pauseButton.innerHTML = 'Pause';
+    playing = true;
+    slideInterval = setInterval(nextSlide, 2000);
+}
+
+pauseButton.onclick = function() {
+    if (playing) {
+        pauseSlideshow();
+    } else {
+        playSlideshow();
+    }
+};
+    </code></pre>
+
+    <h3>Ovládacie tlačidlá pre nasledujúci a predchádzajúci slajd</h3>
+    <p>Pridáme tlačidlá pre nasledujúci a predchádzajúci slajd:</p>
+
+    <button class="controls" id="previous">Previous</button>
+    <button class="controls" id="next">Next</button>
+
+    <p>JavaScript pre ovládanie:</p>
+    <pre><code>
+function nextSlide() {
+    goToSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+    goToSlide(currentSlide - 1);
+}
+
+function goToSlide(n) {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function() {
+    pauseSlideshow();
+    nextSlide();
+};
+
+previous.onclick = function() {
+    pauseSlideshow();
+    previousSlide();
+};
+    </code></pre>
 
 
 

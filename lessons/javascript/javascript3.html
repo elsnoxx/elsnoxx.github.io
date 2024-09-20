@@ -95,7 +95,125 @@
       Návod na přihlášení naleznete <a href="">zde</a>.
     </p>
 
+    <h3>Cykly</h3>
+    <p>Počas písania skriptov sa môžete stretnúť s problémom, kedy sa úkon jedného typu vykonáva niekoľkokrát. Napríklad je potrebné zoradiť čísla a vykonať v každom skripte rovnaký kód. Na zjednodušenie práce boli vytvorené cykly. Tie nás zbavujú potreby opakovania jednej časti kódu niekoľkokrát.</p>
 
+    <h4>Cyklus <code>while</code></h4>
+    <p>Prvý cyklus, o ktorom pôjde reč, je <code>while</code>. Vyzerá takto:</p>
+    <pre>
+<code>
+1. while (podmienka) {  
+2.   // kód, telo cyklu 
+3. }
+</code>
+    </pre>
+    <p>Kým je podmienka pravdivá, kód z tela cyklu sa bude vykonávať. Napríklad, cyklus nižšie zobrazí <code>i</code> kým <code>i&lt;3</code>:</p>
+    <pre>
+<code>
+1. var i = 0;  
+2. while (i &lt; 3) {  
+3.   alert(i);  
+4.   i++;  
+5. }
+</code>
+    </pre>
+    <p>Opakovanie cyklu sa vo vede nazýva „iterácia“. Cyklus v príklade hore robí tri iterácie. Teoreticky by sa cyklus mohol vykonávať večne, ak by v príklade vyššie nebolo <code>i++</code>.</p>
+
+    <h4>Cyklus <code>for</code></h4>
+    <p>V práci sa najčastejšie stretávame s cyklom <code>for</code>:</p>
+    <pre>
+<code>
+1. for (začiatok; podmienka; krok) {  
+2.   // telo cyklu  
+3. }
+</code>
+    </pre>
+    <p>Príklad cyklu, ktorý vykonáva <code>alert(i)</code> pre <code>i</code> od 0 do 2 vrátane (do 3):</p>
+    <pre>
+<code>
+1. var i;  
+2. for (i = 0; i &lt; 3; i++) {  
+3.   alert(i);  
+4. }
+</code>
+    </pre>
+    <p>V príklade:</p>
+    <ul>
+        <li>Začiatok: <code>i = 0;</code></li>
+        <li>Podmienka: <code>i &lt; 3;</code></li>
+        <li>Krok: <code>i++;</code></li>
+        <li>Telo: <code>alert(i);</code></li>
+    </ul>
+    
+    <h3>Funkcie</h3>
+    <p>Niekedy je potrebné opakovať rovnaký úkon v samostatných častiach programu. Napríklad je potrebné zobraziť správu počas privítania návštevníka, pri odhlásení zo stránky alebo z iného dôvodu.</p>
+
+    <h4>Príklad funkcie</h4>
+    <pre>
+<code>
+1. function showMessage() {  
+2.   alert('Ahojte priatelia!');  
+3. }
+</code>
+    </pre>
+    <p>V príklade sa ako prvé dá vidieť kľúčové slovo <code>function</code>, po ňom názov funkcie a telo funkcie.</p>
+    <pre>
+<code>
+1. showMessage();
+2. showMessage();
+</code>
+    </pre>
+    <p>Kód vyvolá správu dvakrát. Funkcie sú určené na to, aby nás zbavili nutnosti opakovať ten istý kód.</p>
+
+    <h4>Lokálne premenné</h4>
+    <p>Funkcia môže obsahovať lokálne premenné, odovzdané cez <code>var</code>. Tieto premenné sa dajú vidieť iba vo vnútri funkcie:</p>
+    <pre>
+<code>
+1. function showMessage() {  
+2.   var message = 'Ahoj, ja som Jano!';  
+3.   alert(message);  
+4. }
+5. showMessage();
+</code>
+    </pre>
+
+    <h4>Vonkajšie premenné</h4>
+    <p>Funkcia sa v určitých prípadoch môže obrátiť k vonkajšej premennej:</p>
+    <pre>
+<code>
+1. var userName = 'Jano';  
+2. function showMessage() {  
+3.   var message = 'Ahoj, ja som ' + userName;  
+4.   alert(message);  
+5. }
+6. showMessage();
+</code>
+    </pre>
+
+    <h4>Parametre</h4>
+    <p>Počas vyvolania funkcie je jej možné odovzdať určitú informáciu:</p>
+    <pre>
+<code>
+1. function showMessage(from, text) {  
+2.   from = '**' + from + '**';  
+3.   alert(from + ': ' + text);  
+4. }
+5. showMessage('Eva', 'Ahoj!');
+6. showMessage('Eva', 'Ako sa máš?');
+</code>
+    </pre>
+
+    <h4>Vrátenie hodnoty</h4>
+    <p>Pomocou funkcie môžeme vrátiť nejaký výsledok:</p>
+    <pre>
+<code>
+1. function sum(a, b) {  
+2.   return a + b;  
+3. }
+4. var test = sum(2, 5);  
+5. alert(test); // 7
+</code>
+    </pre>
 
 
 
