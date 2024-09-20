@@ -91,7 +91,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Minecraft minetest
     - lekce 1 - dodelat rozpracovane chybi screeny
-    - word a pdf k projektu
     - vytvorit scripty aby splnovali zadani samostatnych praci
     
 
@@ -109,11 +108,16 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## September 2024 - Update
 
 - Python Minecraft minetest
+    - word a pdf k projektu
     - projekt
 
 
 - Javascript
     - Lekce 1 - pridan obsah lekce
+    - Lekce 2 - pridan obsah lekce
+    - Lekce 3 - pridan obsah lekce
+    - Lekce 4 - pridan obsah lekce
+    - Lekce 5 - pridan obsah lekce
     - IDE - popsani jakeho IDE budeme pouzivat v ramci Javascriptu
 
 
