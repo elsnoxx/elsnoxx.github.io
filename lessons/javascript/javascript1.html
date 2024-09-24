@@ -357,9 +357,173 @@ function noveOkno(soubor) {
       </div>
     </section>
 
+    <section class="odstavec">
+      <h1>Příklady k procvičení</h1>
+      <section class="odstavec">
+        <h3>Příklad s document.write</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Tento příklad ukazuje, jak pomocí JavaScriptu napsat text na stránku.</p>
+            <script>
+              document.write("Toto je text napsaný pomocí document.write.");
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button
+              onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/documentWrite.txt', 'documentWrite')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
 
+      <section class="odstavec">
+        <h3>Příklad confirm()</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Funkce confirm() umožňuje uživateli potvrdit nebo zrušit akci.</p>
+            <button onclick="askConfirmation()">Potvrď akci</button>
+            <p id="response"></p>
+            <script>
+              function askConfirmation() {
+                const result = confirm("Opravdu chceš pokračovat?");
+                document.getElementById("response").textContent = result ? "Akce byla potvrzena." : "Akce byla zrušena.";
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button
+              onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/askConfirmation.txt', 'askConfirmation')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
 
+      <section class="odstavec">
+        <h3>Příklad alert()</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Tento příklad zobrazuje varovnou hlášku na obrazovce.</p>
+            <button onclick="showAlert()">Klikni na mě!</button>
+            <script>
+              function showAlert() {
+                alert("Toto je alertová hláška!");
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/showAlert.txt', 'showAlert')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
 
+      <section class="odstavec">
+        <h3>Příklad cyklu for</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
+            <ul id="list"></ul>
+            <script>
+              const list = document.getElementById("list");
+              for (let i = 1; i <= 5; i++) {
+                const listItem = document.createElement("li");
+                listItem.textContent = "Číslo " + i;
+                list.appendChild(listItem);
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="odstavec">
+        <h3>Použití proměnné</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Tento příklad ukazuje, jak použít proměnné v JavaScriptu.</p>
+            <script>
+              let message = "Ahoj, světe!";
+              document.write(message);
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/variableUsage.txt', 'variableUsage')">Zobrazit
+            kód</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="odstavec">
+        <h3>Příklad výpočtů s proměnnými</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Ukázka základního výpočtu součtu dvou proměnných.</p>
+            <button onclick="zobrazPriklad()">Zobrazit příklad</button>
+            <script>
+              function zobrazPriklad() {
+                let a = 5;
+                let b = 10;
+                let suma = a + b;
+                alert("Součet " + a + " a " + b + " je " + suma);
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/sumExample.txt', 'sumExample')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="odstavec">
+        <h3>Příklad prompt()</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Pomocí funkce prompt() můžeme získat vstup od uživatele.</p>
+            <button onclick="askName()">Zadej své jméno</button>
+            <p id="greeting"></p>
+            <script>
+              function askName() {
+                const name = prompt("Jak se jmenuješ?");
+                document.getElementById("greeting").textContent = "Ahoj, " + name + "!";
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/promptExample.txt', 'promptExample')">Zobrazit
+            kód</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="odstavec">
+        <h3>Příklad funkcí v JavaScriptu</h3>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Tento příklad ukazuje, jak vytvořit funkci pro výpočet čtverce čísla.</p>
+            <button onclick="calculateSquare()">Spočítej čtverec čísla 4</button>
+            <p id="result"></p>
+            <script>
+              function calculateSquare() {
+                let number = 4;
+                let square = number * number;
+                document.getElementById("result").textContent = "Čtverec čísla " + number + " je " + square;
+              }
+            </script>
+          </div>
+          <div class="col-md-3">
+            <button
+              onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/calculateSquare.txt', 'calculateSquare')">Zobrazit
+              kód</button>
+          </div>
+        </div>
+      </section>
+    </section>
 
   </main>
   <footer class="footer">
@@ -377,10 +541,15 @@ function noveOkno(soubor) {
 
   <script src="/js/javascript/lekce1.js"></script>
 
+
+
   <script>
     function noveOkno(soubor) {
       window.open(soubor, "novyRam", "width=500,height=400")
     }
+    function showCode(soubor, nazev) {
+        window.open(soubor, nazev, "width=1000,height=700");
+      }
   </script>
 </body>
 

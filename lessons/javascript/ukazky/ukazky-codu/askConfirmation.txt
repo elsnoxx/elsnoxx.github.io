@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="title">Příklad confirm()</p>
+        <button onclick="askConfirmation()">Potvrď akci</button>
+        <p id="response"></p>
+        <script>
+          function askConfirmation() {
+            const result = confirm("Opravdu chceš pokračovat?");
+            document.getElementById("response").textContent = result ? "Akce byla potvrzena." : "Akce byla zrušena.";
+          }
+        </script>
+</body>
+</html>

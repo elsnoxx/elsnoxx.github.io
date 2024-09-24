@@ -113,7 +113,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 
 - Javascript
-    - Lekce 1 - pridan obsah lekce
+    - Lekce 1 - pridan obsah lekce + priklady
     - Lekce 2 - pridan obsah lekce
     - Lekce 3 - pridan obsah lekce
     - Lekce 4 - pridan obsah lekce

@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Příklad funkcí v JavaScriptu</h3>
+    <p>Tento příklad ukazuje, jak vytvořit funkci pro výpočet čtverce čísla.</p>
+    <button onclick="calculateSquare()">Spočítej čtverec čísla 4</button>
+    <p id="result"></p>
+    <script>
+        function calculateSquare() {
+            let number = 4;
+            let square = number * number;
+            document.getElementById("result").textContent = "Čtverec čísla " + number + " je " + square;
+        }
+    </script>
+</body>
+</html>

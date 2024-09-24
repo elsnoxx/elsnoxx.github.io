@@ -1,0 +1,20 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Příklad alert()</h3>
+    <p>Tento příklad zobrazuje varovnou hlášku na obrazovce.</p>
+    <button onclick="showAlert()">Klikni na mě!</button>
+    <script>
+        function showAlert() {
+            alert("Toto je alertová hláška!");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Příklad cyklu for</h3>
+    <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
+    <ul id="list"></ul>
+    <script>
+        const list = document.getElementById("list");
+        for (let i = 1; i <= 5; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = "Číslo " + i;
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>
