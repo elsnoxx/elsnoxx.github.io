@@ -93,6 +93,15 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 1 - dodelat rozpracovane chybi screeny
     - vytvorit scripty aby splnovali zadani samostatnych praci
     
+- Python Minecraft EDU + python
+    - lekce 1
+    - lekce 2
+    - lekce 3
+    - lekce 4
+    - lekce 5
+    - projekt
+    - env - nafotit na lekci a potom obrazky pouzit na webove strance
+    
 
 - Construct 3
     - pridat ukazku chovani flash na space shooter
