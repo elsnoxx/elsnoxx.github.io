@@ -92,8 +92,41 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Seznámení s prostředím a první program</h1>
-    <
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Seznámení s prostředím a první programy</h1>
+    <p>
+      V této lekci si ukážeme práci s v prostředí Minecraft EDU. Ukážeme si jak se ovládá a kde budeme programovat pomocí pythonu naše ukázkové programy.
+      Ukážeme si jednotlivé příkazy a manipulace s Agentem.
+    </p>
+
+    <section class="odstavec">
+      <h2>První program - Ahoj světe!</h2>
+      <p>
+        Nyní si ukážeme jak v Minecraft Edu udělat aby jsme něco řekli do chatu. K tomu použijeme příkaz <code>player.say("Ahoj světe!")</code>. Pokud
+        se vám tohle podaří zkuste vypsat tento pozdrav v alespoň <strong>pěti</strong> jazycích.
+      </p>
+
+      <p>
+        To šlo ale rychle co? zkusíme si to trochu zpomalit abychom měli čas přečíst pozdravy jeden po druhém. K tomu bude potřeba příkaz <code>loops.pause(1000)</code>.
+        Hodnota v závorkách není jen tak ledajaká ale určuje nám kolik <strong>milisekund</strong> bude mezera mezi pozdravy. Takzvaně nám tato funkce uspí náš kód na tak dlouho jak jen mu určíme.
+      </p>
+      <h5>Kolik je milisekund sekund?</h5>
+      <p>
+        Jedna sekunda má přávě 1000 milisekund. Ale pokud nebudeš si jist můžeš použít kalkulačku níže a ta ti převede mezi sekundy a milisekundy tak aby ses nespletl.
+      </p>
+      <section class="odstavec">
+        <p>sem pridat kalkulačku</p>
+      </section>
+    </section>
+
+    <section class="odstavec">
+      <h2>Spawning kuřat</h2>
+      <p>
+        Nyní si ukážem příkaz <code>mobs.spawn()</code>. Ten se používá tak, že do příkazu přídáme dva parametry odělené čárkou. První bude název <strong>moba</strong> a druhý bude
+        pozice tedy ve tvaru <code>pos(0, 10, 0)</code>. Konečné volání funkce bude vypadat následovně <code>mobs.spawn(CHICKEN, pos(0, 10, 0))</code>.
+      </p>
+    </section>
+
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
