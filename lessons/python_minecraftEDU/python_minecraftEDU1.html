@@ -124,6 +124,41 @@
         Nyní si ukážem příkaz <code>mobs.spawn()</code>. Ten se používá tak, že do příkazu přídáme dva parametry odělené čárkou. První bude název <strong>moba</strong> a druhý bude
         pozice tedy ve tvaru <code>pos(0, 10, 0)</code>. Konečné volání funkce bude vypadat následovně <code>mobs.spawn(CHICKEN, pos(0, 10, 0))</code>.
       </p>
+
+      <h4>For cyklus</h4>
+      <p>
+        Nyní si připomeneme jak funguje for cyklus v Pythonu a jak ho správně vytvořit.
+      </p>
+
+      <h3>Opakování kódu pomocí <code>for</code> cyklu</h3>
+      <p>
+        Ted si každý vyskoušíte provést cyklus 4 krát a při tom spawnout slepice.
+      </p>
+    </section>
+
+    <section class="odstavec">
+      <h2>Tvorva vlastních příkazů v chatu</h2>
+      <p>
+        Nyní si ukážeme jak vytvořit svůj vlastní příkaz, který zavoláme z chatu. Předtím si ale budeme muset zopakovatk co je to funkce v Pythonu a jak se zapisuje.
+      </p>
+
+      <h4>Definice funkce</h4>
+      <p>
+        Nyní si připomeneme jak funguje funkce v Pythonu a jak ji správně vytvořit.
+      </p>
+
+      <h3>Příkaz na generování slepic</h3>
+      <p>
+        Jelikož jsme si jiŽ vytvořili kod ktery generuje slepice v cyklu. Přeneseme tento kod do funkce s nazvem <code>chickenrain()</code>. Poté aby tato funkce 
+        byla zavolatelná z chatu musíme napsat příkaz <code>player.on_chat("chicken", chickenrain)</code>. Teď pokud ve hře napíšte do chatu <strong>chicken</strong>
+        spustí se vám tato funkce a spawnou se slepice.
+      </p>
+
+      <h3>Příkáz na postavení věže</h3>
+      <p>
+        Jelikož můžeme mít ve funkci <strong>parametry</strong>. Ukážeme si tuto fukcionalitu na funkci, která nám postaví věž. K vytvoření tohoto příkazu bude ovšem potřeba
+        volání <strong>agenta</strong>
+      </p>
     </section>
 
 
