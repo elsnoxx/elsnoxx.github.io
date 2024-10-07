@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhádni číslo</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <h1>Uhádni číslo</h1>
+    <input type="number" id="guess" placeholder="Zadej číslo (1-10)">
+    <button onclick="checkGuess()">Zkontrolovat</button>
+    <p id="message"></p>
+    <script>
+        const numberToGuess = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            const guess = Number(document.getElementById('guess').value);
+            const message = document.getElementById('message');
+            if (guess === numberToGuess) {
+                message.innerText = 'Správně!';
+            } else {
+                message.innerText = 'Špatně! Zkus to znovu.';
+            }
+        }
+    </script>
+</body>
+</html>

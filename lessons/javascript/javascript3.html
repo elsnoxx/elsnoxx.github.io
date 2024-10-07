@@ -96,19 +96,19 @@
     <p>První cyklus, který si ukážeme, je <code>while</code>. Vypadá takto:</p>
     <pre>
 <code>
-1. while (podmínka) {  
-2.   // kód, tělo cyklu 
-3. }
+ while (podmínka) {  
+   // kód, tělo cyklu 
+ }
 </code>
     </pre>
     <p>Dokud je podmínka splněna, bude se kód v těle cyklu vykonávat. Například cyklus níže zobrazí hodnotu <code>i</code> dokud je menší než 3:</p>
     <pre>
 <code>
-1. var i = 0;  
-2. while (i &lt; 3) {  
-3.   alert(i);  
-4.   i++;  
-5. }
+ var i = 0;  
+ while (i &lt; 3) {  
+   alert(i);  
+   i++;  
+ }
 </code>
     </pre>
     <p>Jedno opakování cyklu se nazývá iterace. Cyklus v tomto příkladu provede tři iterace. Teoreticky by mohl cyklus běžet donekonečna, kdyby v příkladu nebylo <code>i++</code>.</p>
@@ -117,18 +117,18 @@
     <p>Nejčastěji používaný cyklus je <code>for</code>:</p>
     <pre>
 <code>
-1. for (začátek; podmínka; krok) {  
-2.   // tělo cyklu  
-3. }
+ for (začátek; podmínka; krok) {  
+   // tělo cyklu  
+ }
 </code>
     </pre>
     <p>Příklad cyklu, který zobrazí hodnotu <code>i</code> od 0 do 2 včetně:</p>
     <pre>
 <code>
-1. var i;  
-2. for (i = 0; i &lt; 3; i++) {  
-3.   alert(i);  
-4. }
+ var i;  
+ for (i = 0; i &lt; 3; i++) {  
+   alert(i);  
+ }
 </code>
     </pre>
     <p>V příkladu:</p>
@@ -145,16 +145,16 @@
     <h4>Příklad funkce</h4>
     <pre>
 <code>
-1. function showMessage() {  
-2.   alert('Ahoj, přátelé!');  
-3. }
+ function showMessage() {  
+   alert('Ahoj, přátelé!');  
+ }
 </code>
     </pre>
     <p>V příkladu vidíme klíčové slovo <code>function</code>, po něm název funkce a tělo funkce.</p>
     <pre>
 <code>
-1. showMessage();
-2. showMessage();
+ showMessage();
+ showMessage();
 </code>
     </pre>
     <p>Kód vyvolá zprávu dvakrát. Funkce nám šetří práci s opakováním stejného kódu.</p>
@@ -163,11 +163,11 @@
     <p>Funkce může obsahovat lokální proměnné, které jsou deklarovány uvnitř funkce a jsou viditelné jen tam:</p>
     <pre>
 <code>
-1. function showMessage() {  
-2.   var message = 'Ahoj, já jsem Jano!';  
-3.   alert(message);  
-4. }
-5. showMessage();
+ function showMessage() {  
+   var message = 'Ahoj, já jsem Jano!';  
+   alert(message);  
+ }
+ showMessage();
 </code>
     </pre>
 
@@ -175,12 +175,12 @@
     <p>Funkce může také přistupovat k vnějším proměnným:</p>
     <pre>
 <code>
-1. var userName = 'Jano';  
-2. function showMessage() {  
-3.   var message = 'Ahoj, já jsem ' + userName;  
-4.   alert(message);  
-5. }
-6. showMessage();
+ var userName = 'Jano';  
+ function showMessage() {  
+   var message = 'Ahoj, já jsem ' + userName;  
+   alert(message);  
+ }
+ showMessage();
 </code>
     </pre>
 
@@ -188,12 +188,12 @@
     <p>Při volání funkce jí můžeme předat informace prostřednictvím parametrů:</p>
     <pre>
 <code>
-1. function showMessage(from, text) {  
-2.   from = '**' + from + '**';  
-3.   alert(from + ': ' + text);  
-4. }
-5. showMessage('Eva', 'Ahoj!');
-6. showMessage('Eva', 'Jak se máš?');
+function showMessage(from, text) {  
+   from = '**' + from + '**';  
+   alert(from + ': ' + text);  
+ }
+ showMessage('Eva', 'Ahoj!');
+ showMessage('Eva', 'Jak se máš?');
 </code>
     </pre>
 
@@ -201,11 +201,11 @@
     <p>Funkce může také vrátit výsledek:</p>
     <pre>
 <code>
-1. function sum(a, b) {  
-2.   return a + b;  
-3. }
-4. var test = sum(2, 5);  
-5. alert(test); // 7
+ function sum(a, b) {  
+   return a + b;  
+ }
+ var test = sum(2, 5);  
+ alert(test); // 7
 </code>
     </pre>
 

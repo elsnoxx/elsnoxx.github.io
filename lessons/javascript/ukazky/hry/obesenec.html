@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hádání slova</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <h1>Hádání slova</h1>
+    <p id="word"></p>
+    <input type="text" id="letter" maxlength="1">
+    <button onclick="guessLetter()">Zkusit písmeno</button>
+    <p id="message"></p>
+    <script>
+        const wordToGuess = 'javascript';
+        let guessedLetters = [];
+
+        function updateWordDisplay() {
+            const displayWord = wordToGuess.split('').map(letter => guessedLetters.includes(letter) ? letter : '_').join(' ');
+            document.getElementById('word').innerText = displayWord;
+        }
+
+        function guessLetter() {
+            const letter = document.getElementById('letter').value.toLowerCase();
+            if (letter.length === 1 && !guessedLetters.includes(letter)) {
+                guessedLetters.push(letter);
+                updateWordDisplay();
+                document.getElementById('message').innerText = '';
+            } else {
+                document.getElementById('message').innerText = 'Neplatný pokus!';
+            }
+            document.getElementById('letter').value = '';
+        }
+
+        updateWordDisplay();
+    </script>
+</body>
+</html>
