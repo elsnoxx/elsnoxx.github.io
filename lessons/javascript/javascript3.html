@@ -80,8 +80,7 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript2.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Následují
-              lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Následující lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -90,20 +89,19 @@
       </table>
     </div>
 
-
     <h3>Cykly</h3>
-    <p>Počas písania skriptov sa môžete stretnúť s problémom, kedy sa úkon jedného typu vykonáva niekoľkokrát. Napríklad je potrebné zoradiť čísla a vykonať v každom skripte rovnaký kód. Na zjednodušenie práce boli vytvorené cykly. Tie nás zbavujú potreby opakovania jednej časti kódu niekoľkokrát.</p>
+    <p>Při psaní skriptů se můžete setkat s problémem, kdy je potřeba určitý úkon provést několikrát. Například seřadit čísla a opakovaně provést stejný kód. K usnadnění práce byly vytvořeny cykly, které nás zbavují nutnosti psát opakující se kód.</p>
 
     <h4>Cyklus <code>while</code></h4>
-    <p>Prvý cyklus, o ktorom pôjde reč, je <code>while</code>. Vyzerá takto:</p>
+    <p>První cyklus, který si ukážeme, je <code>while</code>. Vypadá takto:</p>
     <pre>
 <code>
-1. while (podmienka) {  
-2.   // kód, telo cyklu 
+1. while (podmínka) {  
+2.   // kód, tělo cyklu 
 3. }
 </code>
     </pre>
-    <p>Kým je podmienka pravdivá, kód z tela cyklu sa bude vykonávať. Napríklad, cyklus nižšie zobrazí <code>i</code> kým <code>i&lt;3</code>:</p>
+    <p>Dokud je podmínka splněna, bude se kód v těle cyklu vykonávat. Například cyklus níže zobrazí hodnotu <code>i</code> dokud je menší než 3:</p>
     <pre>
 <code>
 1. var i = 0;  
@@ -113,18 +111,18 @@
 5. }
 </code>
     </pre>
-    <p>Opakovanie cyklu sa vo vede nazýva „iterácia“. Cyklus v príklade hore robí tri iterácie. Teoreticky by sa cyklus mohol vykonávať večne, ak by v príklade vyššie nebolo <code>i++</code>.</p>
+    <p>Jedno opakování cyklu se nazývá iterace. Cyklus v tomto příkladu provede tři iterace. Teoreticky by mohl cyklus běžet donekonečna, kdyby v příkladu nebylo <code>i++</code>.</p>
 
     <h4>Cyklus <code>for</code></h4>
-    <p>V práci sa najčastejšie stretávame s cyklom <code>for</code>:</p>
+    <p>Nejčastěji používaný cyklus je <code>for</code>:</p>
     <pre>
 <code>
-1. for (začiatok; podmienka; krok) {  
-2.   // telo cyklu  
+1. for (začátek; podmínka; krok) {  
+2.   // tělo cyklu  
 3. }
 </code>
     </pre>
-    <p>Príklad cyklu, ktorý vykonáva <code>alert(i)</code> pre <code>i</code> od 0 do 2 vrátane (do 3):</p>
+    <p>Příklad cyklu, který zobrazí hodnotu <code>i</code> od 0 do 2 včetně:</p>
     <pre>
 <code>
 1. var i;  
@@ -133,61 +131,61 @@
 4. }
 </code>
     </pre>
-    <p>V príklade:</p>
+    <p>V příkladu:</p>
     <ul>
-        <li>Začiatok: <code>i = 0;</code></li>
-        <li>Podmienka: <code>i &lt; 3;</code></li>
+        <li>Začátek: <code>i = 0;</code></li>
+        <li>Podmínka: <code>i &lt; 3;</code></li>
         <li>Krok: <code>i++;</code></li>
-        <li>Telo: <code>alert(i);</code></li>
+        <li>Tělo: <code>alert(i);</code></li>
     </ul>
     
-    <h3>Funkcie</h3>
-    <p>Niekedy je potrebné opakovať rovnaký úkon v samostatných častiach programu. Napríklad je potrebné zobraziť správu počas privítania návštevníka, pri odhlásení zo stránky alebo z iného dôvodu.</p>
+    <h3>Funkce</h3>
+    <p>Někdy je potřeba opakovat stejný úkon v různých částech programu. Například při zobrazení zprávy při přihlášení uživatele, odhlášení nebo při jiné události.</p>
 
-    <h4>Príklad funkcie</h4>
+    <h4>Příklad funkce</h4>
     <pre>
 <code>
 1. function showMessage() {  
-2.   alert('Ahojte priatelia!');  
+2.   alert('Ahoj, přátelé!');  
 3. }
 </code>
     </pre>
-    <p>V príklade sa ako prvé dá vidieť kľúčové slovo <code>function</code>, po ňom názov funkcie a telo funkcie.</p>
+    <p>V příkladu vidíme klíčové slovo <code>function</code>, po něm název funkce a tělo funkce.</p>
     <pre>
 <code>
 1. showMessage();
 2. showMessage();
 </code>
     </pre>
-    <p>Kód vyvolá správu dvakrát. Funkcie sú určené na to, aby nás zbavili nutnosti opakovať ten istý kód.</p>
+    <p>Kód vyvolá zprávu dvakrát. Funkce nám šetří práci s opakováním stejného kódu.</p>
 
-    <h4>Lokálne premenné</h4>
-    <p>Funkcia môže obsahovať lokálne premenné, odovzdané cez <code>var</code>. Tieto premenné sa dajú vidieť iba vo vnútri funkcie:</p>
+    <h4>Lokální proměnné</h4>
+    <p>Funkce může obsahovat lokální proměnné, které jsou deklarovány uvnitř funkce a jsou viditelné jen tam:</p>
     <pre>
 <code>
 1. function showMessage() {  
-2.   var message = 'Ahoj, ja som Jano!';  
+2.   var message = 'Ahoj, já jsem Jano!';  
 3.   alert(message);  
 4. }
 5. showMessage();
 </code>
     </pre>
 
-    <h4>Vonkajšie premenné</h4>
-    <p>Funkcia sa v určitých prípadoch môže obrátiť k vonkajšej premennej:</p>
+    <h4>Vnější proměnné</h4>
+    <p>Funkce může také přistupovat k vnějším proměnným:</p>
     <pre>
 <code>
 1. var userName = 'Jano';  
 2. function showMessage() {  
-3.   var message = 'Ahoj, ja som ' + userName;  
+3.   var message = 'Ahoj, já jsem ' + userName;  
 4.   alert(message);  
 5. }
 6. showMessage();
 </code>
     </pre>
 
-    <h4>Parametre</h4>
-    <p>Počas vyvolania funkcie je jej možné odovzdať určitú informáciu:</p>
+    <h4>Parametry</h4>
+    <p>Při volání funkce jí můžeme předat informace prostřednictvím parametrů:</p>
     <pre>
 <code>
 1. function showMessage(from, text) {  
@@ -195,12 +193,12 @@
 3.   alert(from + ': ' + text);  
 4. }
 5. showMessage('Eva', 'Ahoj!');
-6. showMessage('Eva', 'Ako sa máš?');
+6. showMessage('Eva', 'Jak se máš?');
 </code>
     </pre>
 
-    <h4>Vrátenie hodnoty</h4>
-    <p>Pomocou funkcie môžeme vrátiť nejaký výsledok:</p>
+    <h4>Vrácení hodnoty</h4>
+    <p>Funkce může také vrátit výsledek:</p>
     <pre>
 <code>
 1. function sum(a, b) {  

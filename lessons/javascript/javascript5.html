@@ -88,33 +88,33 @@
         </tr>
       </table>
     </div>
-    <h2>Lekcia 5. Vytvorenie slideru v JavaScript.</h2>
+    <h2>Lekce 5. Vytvoření slideru v JavaScriptu.</h2>
 
-    <h3>Vytvorenie jednoduchej slide-show</h3>
-    <p>Zaujímavým prvkom, ktorý je možné vytvoriť s pomocou JavaScriptu, je slide-show. Na jej vytvorenie bude potrebný kontajner pre slajdy a slajdy samotné.</p>
+<h3>Vytvoření jednoduché slide-show</h3>
+<p>Zajímavým prvkem, který je možné vytvořit s pomocí JavaScriptu, je slide-show. K jejímu vytvoření bude potřebný kontejner pro slidery a slidy samotné.</p>
 
-    <p>Príklad slide-show:</p>
-    <ul id="slides">
-        <li class="slide showing">Slide 1</li>
-        <li class="slide">Slide 2</li>
-        <li class="slide">Slide 3</li>
-        <li class="slide">Slide 4</li>
-        <li class="slide">Slide 5</li>
-    </ul>
+<p>Příklad slide-show:</p>
+<ul id="slides">
+    <li class="slide showing">Slide 1</li>
+    <li class="slide">Slide 2</li>
+    <li class="slide">Slide 3</li>
+    <li class="slide">Slide 4</li>
+    <li class="slide">Slide 5</li>
+</ul>
 
-    <h3>Základné štýly pre slider</h3>
-    <p>Do ich funkčných možností patrí možnosť:</p>
-    <ul>
-        <li>vytvárať kontajner pre slajdy</li>
-        <li>rozmiestňovať slajdy jeden nad druhým vo vnútri kontajneru</li>
-        <li>regulovať správanie slajdov pri objavení a zmiznutí</li>
-        <li>plynulo meniť priehľadnosť slajdov na vytvorenie efektu zhasínania a objavenia</li>
-    </ul>
+<h3>Základní styly pro slider</h3>
+<p>Mezi jejich funkční možnosti patří možnost:</p>
+<ul>
+    <li>vytvářet kontejner pro slidy</li>
+    <li>rozmisťovat slidy jeden nad druhým uvnitř kontejneru</li>
+    <li>regulovat chování slidů při zobrazení a zmizení</li>
+    <li>plynule měnit průhlednost slidů pro vytvoření efektu zhasnutí a objevení</li>
+</ul>
 
-    <p>Je dôležité pamätať si, že pred prácou v CSS je potrebné zmeniť triedy a použité identifikátory, aby nedochádzalo ku konfliktom s vašimi stránkami. Poďme sa pozrieť na toto CSS:</p>
+<p>Je důležité mít na paměti, že před prací v CSS je třeba změnit třídy a použité identifikátory, aby nedocházelo k konfliktům s vašimi stránkami. Pojďme se podívat na toto CSS:</p>
 
-    <pre><code>
-/* Prvotné štýly */
+<pre><code>
+/* Prvotní styly */
 #slides {
     position: relative;
     height: 300px;
@@ -138,12 +138,12 @@
     opacity: 1;
     z-index: 2;
 }
-    </code></pre>
+</code></pre>
 
-    <h3>Druhotné štýly</h3>
-    <p>Poďme do našej slide-show pridať rôzne štýly, aby bola zaujímavejšia. Na demonštráciu použijeme takéto štýly:</p>
+<h3>Druhotné styly</h3>
+<p>Přidejme do naší slide-show různé styly, aby byla zajímavější. Na demonstrování použijeme následující styly:</p>
 
-    <pre><code>
+<pre><code>
 .slide {
     font-size: 40px;
     padding: 40px;
@@ -171,12 +171,12 @@
 .slide:nth-of-type(5) {
     background: purple;
 }
-    </code></pre>
+</code></pre>
 
-    <h3>JavaScript pre slider</h3>
-    <p>JavaScript pri práci so slajdami vykonáva krajne dôležitú úlohu – skrýva aktuálny slajd a zobrazuje nasledovný. Pre realizáciu tejto úlohy je potrebné zmeniť názvy tried slajdov. Kód JS:</p>
+<h3>JavaScript pro slider</h3>
+<p>JavaScript při práci se slidy vykonává zásadní úlohu – skrývá aktuální slid a zobrazuje následující. K realizaci této úlohy je třeba změnit názvy tříd slidů. Kód JS:</p>
 
-    <pre><code>
+<pre><code>
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 2000);
@@ -186,26 +186,26 @@ function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].className = 'slide showing';
 }
-    </code></pre>
+</code></pre>
 
-    <h3>Pauza a ovládanie slideru</h3>
-    <p>Do slideru môžeme pridať ovládacie prvky, ako napríklad tlačidlo pauzy:</p>
+<h3>Pauza a ovládání slideru</h3>
+<p>Do slideru můžeme přidat ovládací prvky, jako například tlačítko pauzy:</p>
 
-    <button class="controls" id="pause">Pause</button>
+<button class="controls" id="pause">Pauza</button>
 
-    <p>JavaScript pre pauzu:</p>
-    <pre><code>
+<p>JavaScript pro pauzu:</p>
+<pre><code>
 var playing = true;
 var pauseButton = document.getElementById('pause');
 
 function pauseSlideshow() {
-    pauseButton.innerHTML = 'Play';
+    pauseButton.innerHTML = 'Hraj';
     playing = false;
     clearInterval(slideInterval);
 }
 
 function playSlideshow() {
-    pauseButton.innerHTML = 'Pause';
+    pauseButton.innerHTML = 'Pauza';
     playing = true;
     slideInterval = setInterval(nextSlide, 2000);
 }
@@ -217,16 +217,16 @@ pauseButton.onclick = function() {
         playSlideshow();
     }
 };
-    </code></pre>
+</code></pre>
 
-    <h3>Ovládacie tlačidlá pre nasledujúci a predchádzajúci slajd</h3>
-    <p>Pridáme tlačidlá pre nasledujúci a predchádzajúci slajd:</p>
+<h3>Ovládací tlačítka pro následující a předchozí slid</h3>
+<p>Přidáme tlačítka pro následující a předchozí slid:</p>
 
-    <button class="controls" id="previous">Previous</button>
-    <button class="controls" id="next">Next</button>
+<button class="controls" id="previous">Předchozí</button>
+<button class="controls" id="next">Další</button>
 
-    <p>JavaScript pre ovládanie:</p>
-    <pre><code>
+<p>JavaScript pro ovládání:</p>
+<pre><code>
 function nextSlide() {
     goToSlide(currentSlide + 1);
 }
@@ -253,7 +253,8 @@ previous.onclick = function() {
     pauseSlideshow();
     previousSlide();
 };
-    </code></pre>
+</code></pre>
+
 
 
 
