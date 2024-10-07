@@ -230,55 +230,77 @@ alert('Ahoj, toto je úvodní zpráva!');
 
     <!-- Proměnné -->
     <section id="promenne">
-      <h3>Proměnné v JavaScript</h3>
-      <p>Proměnné v JavaScript se vytvářejí pomocí klíčového slova <code>var</code>. Proměnné slouží k ukládání
-        hodnot, které můžeme později použít.</p>
+      <h3>Proměnné v JavaScriptu</h3>
+      <p>Proměnné jsou jako malé krabičky, do kterých můžeme uložit různé informace. Když něco uložíme do proměnné, můžeme to později použít nebo změnit. V JavaScriptu používáme k vytvoření proměnných slova <code>var</code>, <code>let</code> nebo <code>const</code>.</p>
+
+      <h4>Typy proměnných</h4>
+      <ul>
+          <li><strong>Čísla:</strong> Umožňují nám pracovat s čísly. Například <code>let age = 10;</code></li>
+          <li><strong>Řetězce:</strong> Ukládají textové informace. Například <code>let name = "Petr";</code></li>
+          <li><strong>Logické hodnoty:</strong> Můžou být <code>true</code> (pravda) nebo <code>false</code> (nepravda). Například <code>let isStudent = true;</code></li>
+          <li><strong>Pole:</strong> Umožňují uložit více hodnot do jedné proměnné. Například <code>let colors = ["červená", "modrá", "zelená"];</code></li>
+          <li><strong>Objekty:</strong> Umožňují uložit komplexnější data, jako například jméno a věk uživatele. Například <code>let user = {name: "Petr", age: 30};</code></li>
+      </ul>
+
+      <h4>Příklad: Uložení zprávy do proměnné</h4>
       <div class="example">
-        <code>
-          <pre>
+          <code>
+              <pre>
 &lt;script&gt; 
-  var message = 'Ahoj!';
-  alert(message);
+  var message = 'Ahoj!'; // Uložíme zprávu do proměnné
+  alert(message); // Ukáže zprávu v okně
 &lt;/script&gt;
-          </pre>
-        </code>
+              </pre>
+          </code>
       </div>
+
       <h4>Ukázka: Definování více proměnných</h4>
       <div class="example">
-        <code>
-          <pre>
+          <code>
+              <pre>
 &lt;script&gt; 
-  var username = 'Petr';
-  var age = 30;
-  alert('Uživatel: ' + username + ', Věk: ' + age);
+  var username = 'Petr'; // Uložíme jméno do proměnné
+  var age = 30; // Uložíme věk do proměnné
+  alert('Uživatel: ' + username + ', Věk: ' + age); // Ukáže uživatelské jméno a věk
 &lt;/script&gt;
-          </pre>
-        </code>
+              </pre>
+          </code>
       </div>
-    </section>
 
-    <!-- Čísla a Logické hodnoty -->
-    <section id="cisla-logika">
+      <h4>Chytáky a zajímavosti</h4>
+      <ul>
+          <li><strong>Proměnné jsou dynamické:</strong> Můžeme změnit hodnotu proměnné kdykoliv. Například:
+              <code>age = 31;</code> změní věk uživatele na 31.</li>
+          <li><strong>Nejlepší praxe:</strong> Používejte <code>let</code> pro proměnné, které se mohou měnit, a <code>const</code> pro ty, které se nemění. To pomáhá zabránit chybám.</li>
+          <li><strong>Typová koherence:</strong> JavaScript je dynamicky typovaný jazyk, což znamená, že nemusíme definovat typ proměnné, když ji vytváříme.</li>
+          <li><strong>Proměnné se mohou překrývat:</strong> Pokud máme proměnnou s názvem <code>age</code> v jedné funkci a jinou <code>age</code> ve druhé funkci, nebudou si navzájem překážet.</li>
+      </ul>
+  </section>
+
+  <!-- Čísla a Logické hodnoty -->
+  <section id="cisla-logika">
       <h3>Čísla a Logické hodnoty</h3>
-      <p>V JavaScript pracujeme s čísly a logickými hodnotami. Číselné hodnoty mohou být celé nebo desetinné.
-        Logické
-        proměnné mohou mít hodnotu <code>true</code> nebo <code>false</code>.</p>
-
+      <p>V JavaScriptu můžeme pracovat s čísly. Můžeme mít celá čísla (např. 1, 2, 3) nebo desetinná čísla (např. 1.5, 2.75).</p>
+      
+      <h4>Co jsou logické hodnoty?</h4>
+      <p>Logické hodnoty jsou jako světlo, které může být buď zapnuté nebo vypnuté. V JavaScriptu říkáme, že logická hodnota může být buď <code>true</code> (pravda) nebo <code>false</code> (nepravda).</p>
 
       <h4>Ukázka: Práce s logickými hodnotami</h4>
       <div class="example">
-        <pre>
           <code>
-var isVisible = true;
-if (isVisible) {
-  alert('Prvek je viditelný');
-} else {
-  alert('Prvek není viditelný');
-}
+              <pre>
+&lt;script&gt;
+  var isVisible = true; // Říkáme, že prvek je viditelný
+  if (isVisible) { // Kontrolujeme, jestli je viditelný
+    alert('Prvek je viditelný'); // Pokud je viditelný, ukáže tuto zprávu
+  } else {
+    alert('Prvek není viditelný'); // Pokud není viditelný, ukáže tuto zprávu
+  }
+&lt;/script&gt;
+              </pre>
           </code>
-        </pre>
       </div>
-    </section>
+  </section>
 
 
     <!-- Práce s elementy pomocí document.getElementById -->
@@ -369,7 +391,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button
+            <button class="btn btn-info"
               onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/documentWrite.txt', 'documentWrite')">Zobrazit
               kód</button>
           </div>
@@ -381,7 +403,7 @@ function noveOkno(soubor) {
         <div class="row">
           <div class="col-md-8">
             <p>Funkce confirm() umožňuje uživateli potvrdit nebo zrušit akci.</p>
-            <button onclick="askConfirmation()">Potvrď akci</button>
+            <button  onclick="askConfirmation()">Potvrď akci</button>
             <p id="response"></p>
             <script>
               function askConfirmation() {
@@ -391,7 +413,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button
+            <button class="btn btn-info"
               onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/askConfirmation.txt', 'askConfirmation')">Zobrazit
               kód</button>
           </div>
@@ -411,7 +433,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/showAlert.txt', 'showAlert')">Zobrazit
+            <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/showAlert.txt', 'showAlert')">Zobrazit
               kód</button>
           </div>
         </div>
@@ -433,7 +455,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
+            <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
               kód</button>
           </div>
         </div>
@@ -450,7 +472,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button
+            <button class="btn btn-info" 
             onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/variableUsage.txt', 'variableUsage')">Zobrazit
             kód</button>
           </div>
@@ -473,7 +495,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/sumExample.txt', 'sumExample')">Zobrazit
+            <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/sumExample.txt', 'sumExample')">Zobrazit
               kód</button>
           </div>
         </div>
@@ -494,7 +516,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button
+            <button class="btn btn-info" 
             onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/promptExample.txt', 'promptExample')">Zobrazit
             kód</button>
           </div>
@@ -517,7 +539,7 @@ function noveOkno(soubor) {
             </script>
           </div>
           <div class="col-md-3">
-            <button
+            <button class="btn btn-info" 
               onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/calculateSquare.txt', 'calculateSquare')">Zobrazit
               kód</button>
           </div>
