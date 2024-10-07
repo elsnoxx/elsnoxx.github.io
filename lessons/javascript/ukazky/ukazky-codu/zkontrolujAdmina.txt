@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kód: Aritmetické operace</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Příklad s confirm a logickými hodnotami</h1>
+        <p>Zobrazí se otázka pro administrátora a JavaScript rozhodne na základě odpovědi.</p>
+        <button onclick="zkontrolujAdmina()">Zobrazit příklad</button>
+    </div>
+    <script>
+        function zkontrolujAdmina() {
+            let isAdmin = confirm("Jsi administrátor?");
+
+            if (isAdmin) {
+                alert("Vítej, administrátore!");
+            } else {
+                alert("Nemáš přístup!");
+            }
+        }
+    </script>
+</body>
+
+</html>

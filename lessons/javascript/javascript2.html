@@ -225,13 +225,135 @@ alert(x); // zobrazí -1
             }
         </code>
     </div>
+    <h1>Příklady operátorů v JavaScriptu</h1>
 
-    <h2>Praktické příklady</h2>
-    <h3>Příklad 1: Kontrola věku</h3>
-    <p><em>Obrázek 1</em></p>
+    <!-- Příklad 1: Aritmetické operace -->
+    <section class="odstavec">
+      <h3>Příklad základních operací s čísly</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Zadáš dvě čísla a JavaScript ti ukáže výsledek základních operací.</p>
+          <button onclick="aritmetickeOperace()">Zobrazit příklad</button>
+          <script>
+            function aritmetickeOperace() {
+              let cislo1 = prompt("Zadej první číslo:");
+              let cislo2 = prompt("Zadej druhé číslo:");
+              
+              let soucet = Number(cislo1) + Number(cislo2);
+              let rozdil = cislo1 - cislo2;
+              let nasobeni = cislo1 * cislo2;
+              let zbytek = cislo1 % cislo2;
 
-    <h3>Příklad 2: Kontrola času</h3>
-    <p><em>Obrázek 2</em></p>
+              alert("Součet: " + soucet + "\nRozdíl: " + rozdil + "\nNásobení: " + nasobeni + "\nZbytek po dělení: " + zbytek);
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/aritmetickeOperace.txt', 'aritmetickeOperace')">Zobrazit kód</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Příklad 2: Porovnání dvou čísel -->
+    <section class="odstavec">
+      <h3>Příklad porovnání dvou čísel</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Zadáš dvě čísla a zjistíš, které je větší, menší, nebo zda jsou shodné.</p>
+          <button onclick="porovnejCisla()">Zobrazit příklad</button>
+          <script>
+            function porovnejCisla() {
+              let cislo1 = prompt("Zadej první číslo:");
+              let cislo2 = prompt("Zadej druhé číslo:");
+
+              if (cislo1 > cislo2) {
+                alert(cislo1 + " je větší než " + cislo2);
+              } else if (cislo1 < cislo2) {
+                alert(cislo1 + " je menší než " + cislo2);
+              } else {
+                alert("Obě čísla jsou stejná.");
+              }
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/porovnejCisla.txt', 'porovnejCisla')">Zobrazit kód</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Příklad 3: Spojování textů -->
+    <section class="odstavec">
+      <h3>Příklad spojování textů</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>JavaScript zobrazí personalizovanou zprávu se jménem a věkem uživatele.</p>
+          <button onclick="zobrazInfo()">Zobrazit příklad</button>
+          <script>
+            function zobrazInfo() {
+              let jmeno = prompt("Jaké je tvoje jméno?");
+              let vek = prompt("Kolik ti je let?");
+              
+              alert("Ahoj, " + jmeno + ", je ti " + vek + " let!");
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zobrazInfo.txt', 'zobrazInfo')">Zobrazit kód</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Příklad 4: Kontrola hesla -->
+    <section class="odstavec">
+      <h3>Příklad kontroly hesla</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Uživatel zadá heslo a JavaScript zkontroluje, zda je správné.</p>
+          <button onclick="zkontrolujHeslo()">Zobrazit příklad</button>
+          <script>
+            function zkontrolujHeslo() {
+              let heslo = prompt("Zadej heslo:");
+              
+              if (heslo === "tajneheslo") {
+                alert("Vítej!");
+              } else {
+                alert("Špatné heslo!");
+              }
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujHeslo.txt', 'zkontrolujHeslo')">Zobrazit kód</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Příklad 5: Kontrola administrátora -->
+    <section class="odstavec">
+      <h3>Příklad s confirm a logickými hodnotami</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Zobrazí se otázka pro administrátora a JavaScript rozhodne na základě odpovědi.</p>
+          <button onclick="zkontrolujAdmina()">Zobrazit příklad</button>
+          <script>
+            function zkontrolujAdmina() {
+              let isAdmin = confirm("Jsi administrátor?");
+              
+              if (isAdmin) {
+                alert("Vítej, administrátore!");
+              } else {
+                alert("Nemáš přístup!");
+              }
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujAdmina.txt', 'zkontrolujAdmina')">Zobrazit kód</button>
+        </div>
+      </div>
+    </section>
+
 
 
 

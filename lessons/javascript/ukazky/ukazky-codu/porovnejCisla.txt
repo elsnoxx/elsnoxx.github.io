@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kód: Aritmetické operace</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Příklad porovnání dvou čísel</h1>
+        <p>Zadáš dvě čísla a zjistíš, které je větší, menší, nebo zda jsou shodné.</p>
+
+        <button onclick="porovnejCisla()">Zobrazit příklad</button>
+    </div>
+    <script>
+        function porovnejCisla() {
+            let cislo1 = prompt("Zadej první číslo:");
+            let cislo2 = prompt("Zadej druhé číslo:");
+
+            if (cislo1 > cislo2) {
+                alert(cislo1 + " je větší než " + cislo2);
+            } else if (cislo1 < cislo2) {
+                alert(cislo1 + " je menší než " + cislo2);
+            } else {
+                alert("Obě čísla jsou stejná.");
+            }
+        }
+    </script>
+</body>
+
+</html>

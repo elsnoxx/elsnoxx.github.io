@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kód: Aritmetické operace</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Příklad kontroly hesla</h1>
+        <p>Uživatel zadá heslo a JavaScript zkontroluje, zda je správné.</p>
+        <button onclick="zkontrolujHeslo()">Zobrazit příklad</button>
+    </div>
+    <script>
+        function zkontrolujHeslo() {
+            let heslo = prompt("Zadej heslo:");
+
+            if (heslo === "tajneheslo") {
+                alert("Vítej!");
+            } else {
+                alert("Špatné heslo!");
+            }
+        }
+    </script>
+</body>
+
+</html>
