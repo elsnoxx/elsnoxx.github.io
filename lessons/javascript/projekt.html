@@ -24,9 +24,30 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
+
+  <style>
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      /* Zajistí, že všechny karty budou mít stejnou výšku */
+    }
+
+    .card-body {
+      flex-grow: 1;
+      /* Tím se tělo karty rozprostře, aby vyplnilo zbytek prostoru */
+    }
+
+    .card-img-top {
+      height: 150px;
+      /* Nastavení výšky obrázku */
+      object-fit: cover;
+      /* Udržuje poměr stran obrázku */
+    }
+  </style>
 </head>
 
 <body>
@@ -53,8 +74,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -79,8 +102,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/jQuery.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/prezentace.html';">Následují lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/jQuery.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/prezentace.html';">Následují
+              lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -88,67 +113,10 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Wordpress</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat online nástroj <a href="">TinkerCAD editor</a>.
-      Návod na přihlášení naleznete <a href="">zde</a>.
-    </p>
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Projekt</h1>
+    
 
 
-
-    <div style="margin-bottom: 64px; ">
-      <h3>Lekce 1</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 2</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 3</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a></p>
-      </ul>
-
-      <h3>Lekce 4</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 5</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 6</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-
-      <h3>Lekce 7</h3>
-      <ul>
-        <h6>Obsah lekce - </h6>
-        <p>Materiály z lekce naleznete <a href="" target="_blank" rel="noopener noreferrer">zde</a>.</p>
-      </ul>
-      <h3>Projekt</h3>
-      <ul style="margin-bottom: 64px; ">
-        <p>
-          V dalších lekcích budete vypracovávat závěrečný projekt a prezentaci k němu. Veškeré materiály dostanete na
-          lekci.
-          K tvorbě projektu budou i potřebné znalosti z lekcí, které jsme jič probrali.
-          V případě nejasností se mi <a href="/contact.html">ozvete</a>.
-        </p>
-        <p>Podrobný popis <a href="">zde</a>.</p>
-      </ul>
-    </div>
 
 
   </main>
