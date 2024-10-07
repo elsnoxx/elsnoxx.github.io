@@ -254,6 +254,18 @@ p {
   cursor: pointer;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Zajistí, že všechny karty budou mít stejnou výšku */
+}
+.card-body {
+  flex-grow: 1; /* Tím se tělo karty rozprostře, aby vyplnilo zbytek prostoru */
+}
+.card-img-top {
+  height: 150px; /* Nastavení výšky obrázku */
+  object-fit: cover; /* Udržuje poměr stran obrázku */
+}
 
 
 /* 100% Image Width on Smaller Screens */
