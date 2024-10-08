@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Procvičování cyklů a funkcí v JavaScriptu">
+    <title>Procvičování JavaScriptu</title>
+
+    <!-- Potrebne skripty -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="/js/JQuery-general.js" defer></script>
+    <!-- Potrebne CSS -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/javascript/javascript.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main role="main" class="container" style="padding-top: 60px;">
+        <h3 style="margin-top: 20px;">Úkoly pro procvičení cyklů a funkcí v JavaScriptu</h3>
+
+        <div class="list-group">
+            <div class="list-group-item">
+                <h5>1. Čísla od 1 do 10</h5>
+                <p>Napiš program, který pomocí cyklu <code>for</code> zobrazí čísla od 1 do 10 pomocí <code>alert()</code>.</p>
+                <pre><code>
+for (var i = 1; i <= 10; i++) {
+    alert(i);
+}
+                </code></pre>
+            </div>
+
+            <div class="list-group-item">
+                <h5>2. Sčítání čísel</h5>
+                <p>Napiš funkci <code>sumNumbers</code>, která sečte všechna čísla od 1 do 100 a vrátí jejich součet.</p>
+                <pre><code>
+function sumNumbers() {
+    var sum = 0;
+    for (var i = 1; i <= 100; i++) {
+        sum += i;
+    }
+    return sum;
+}
+alert(sumNumbers()); // Zobrazí 5050
+                </code></pre>
+            </div>
+
+            <div class="list-group-item">
+                <h5>3. Zobrazování jmen</h5>
+                <p>Vytvoř pole s jmény a pomocí cyklu <code>for</code> zobraz každé jméno v samostatném okně.</p>
+                <pre><code>
+var names = ["Anna", "Petr", "Eva"];
+for (var i = 0; i < names.length; i++) {
+    alert(names[i]);
+}
+                </code></pre>
+            </div>
+
+            <div class="list-group-item">
+                <h5>4. Vytvořte počítadlo</h5>
+                <p>Napiš funkci <code>countTo</code>, která vezme číslo jako argument a pomocí cyklu <code>while</code> bude počítat od 1 do daného čísla.</p>
+                <pre><code>
+function countTo(n) {
+    var i = 1;
+    while (i <= n) {
+        alert(i);
+        i++;
+    }
+}
+countTo(5); // Zobrazí čísla 1 až 5
+                </code></pre>
+            </div>
+
+            <div class="list-group-item">
+                <h5>5. Násobení čísel</h5>
+                <p>Napiš funkci <code>multiplyTable</code>, která vezme číslo jako argument a zobrazí jeho násobkovou tabulku (od 1 do 10).</p>
+                <pre><code>
+function multiplyTable(num) {
+    for (var i = 1; i <= 10; i++) {
+        alert(num + " x " + i + " = " + (num * i));
+    }
+}
+multiplyTable(3); // Zobrazí násobkovou tabulku pro 3
+                </code></pre>
+            </div>
+
+            <div class="list-group-item">
+                <h5>6. Hvězdičkový trojúhelník</h5>
+                <p>Vytvoř program, který pomocí cyklu <code>for</code> vykreslí trojúhelník z hvězdiček.</p>
+                <pre><code>
+var rows = 5;
+for (var i = 1; i <= rows; i++) {
+    var stars = '';
+    for (var j = 1; j <= i; j++) {
+        stars += '*';
+    }
+    alert(stars);
+}
+                </code></pre>
+            </div>
+        </div>
+    </main>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

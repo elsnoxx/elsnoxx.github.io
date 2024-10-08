@@ -94,7 +94,7 @@
       </table>
     </div>
 
-    <h3>Cykly</h3>
+    <h1>Cykly</h1>
     <p>V programování se občas stane, že potřebujeme udělat stejnou věc několikrát. Například, když chceme seřadit čísla
       nebo vykonat stejný úkol vícekrát. Abychom se vyhnuli psaní stejného kódu znovu a znovu, používáme
       <strong>cykly</strong>. Cykly nám pomáhají opakovat určité příkazy, dokud není splněna nějaká podmínka.
@@ -104,7 +104,7 @@
     <p>Cyklus je jako automat, který dělá určité úkoly znovu a znovu, dokud mu neřekneme, aby přestal. Představ si to
       jako hru, kde se hráč snaží udělat něco, dokud se mu to nedaří.</p>
 
-    
+
     <section class="bg-light p-4 rounded mb-4 odstavec">
       <h4>Cyklus <code>while</code></h4>
       <div class="row">
@@ -157,7 +157,7 @@ while (i &lt; 3) {
     </section>
 
 
-    
+
     <section class="bg-light p-4 rounded mb-4 odstavec">
       <h4>Cyklus <code>for</code></h4>
       <div class="row">
@@ -213,7 +213,7 @@ for (var i = 0; i &lt; 3; i++) {
 
 
 
-    <h3 style="padding-top: 50px;">Funkce</h3>
+    <h1 style="padding-top: 50px;">Funkce</h1>
     <p>Někdy je potřeba opakovat stejný úkon v různých částech programu. Například při zobrazení zprávy při přihlášení
       uživatele, odhlášení nebo při jiné události.</p>
 
@@ -386,6 +386,48 @@ alert(test); // 7
       </div>
     </section>
 
+    <div class="samprace">
+      <div class="d-flex justify-content-between mb-4">
+        <h2>Samostatná práce</h2>
+        <button id="right" class="btn btn-success"
+        onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/samprace3.html', 'samprace3')">Řešení samostatné práce</button>
+      </div>
+      
+      <ul>
+        <li>
+          <h5>1. Čísla od 1 do 10</h5>
+          <p>Napiš program, který pomocí cyklu <code>for</code> zobrazí čísla od 1 do 10 pomocí <code>alert()</code>.</p>
+        </li>
+        <li>
+          <h5>2. Sčítání čísel</h5>
+          <p>Napiš funkci <code>sumNumbers</code>, která sečte všechna čísla od 1 do 100 a vrátí jejich součet.</p>
+        </li>
+        <li>
+          <h5>3. Zobrazování jmen</h5>
+          <p>Vytvoř pole s jmény a pomocí cyklu <code>for</code> zobraz každé jméno v samostatném okně.</p>
+        </li>
+        <li>
+          <h5>4. Vytvořte počítadlo</h5>
+          <p>Napiš funkci <code>countTo</code>, která vezme číslo jako argument a pomocí cyklu <code>while</code> bude počítat
+            od 1 do daného čísla.</p>
+        </li>
+        <li>
+          <h5>5. Násobení čísel</h5>
+          <p>Napiš funkci <code>multiplyTable</code>, která vezme číslo jako argument a zobrazí jeho násobkovou tabulku (od 1
+            do 10).</p>
+        </li>
+        <li>
+          <h5>6. Hvězdičkový trojúhelník</h5>
+          <p>Vytvoř program, který pomocí cyklu <code>for</code> vykreslí trojúhelník z hvězdiček.</p>      
+        </li>
+      </ul>
+    </div>
+    
+    
+
+
+
+
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
@@ -408,6 +450,17 @@ alert(test); // 7
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script>
+    function showCode(soubor){
+      var password = prompt('Enter the password to download the file:');
+      if(password.toLowerCase() == "teacher"){
+        window.open(soubor, "novyRam", "width=1200,height=1000")    
+      }else{
+        alert("incorrect password!! please try again");
+      }
+    }
+  </script>
 </body>
 
 </html>
