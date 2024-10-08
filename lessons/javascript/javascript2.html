@@ -238,7 +238,7 @@ alert(x); // zobrazí -1
             function aritmetickeOperace() {
               let cislo1 = prompt("Zadej první číslo:");
               let cislo2 = prompt("Zadej druhé číslo:");
-              
+
               let soucet = Number(cislo1) + Number(cislo2);
               let rozdil = cislo1 - cislo2;
               let nasobeni = cislo1 * cislo2;
@@ -249,7 +249,9 @@ alert(x); // zobrazí -1
           </script>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/aritmetickeOperace.txt', 'aritmetickeOperace')">Zobrazit kód</button>
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/aritmetickeOperace.txt', 'aritmetickeOperace')">Zobrazit
+            kód</button>
         </div>
       </div>
     </section>
@@ -277,7 +279,9 @@ alert(x); // zobrazí -1
           </script>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/porovnejCisla.txt', 'porovnejCisla')">Zobrazit kód</button>
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/porovnejCisla.txt', 'porovnejCisla')">Zobrazit
+            kód</button>
         </div>
       </div>
     </section>
@@ -293,13 +297,15 @@ alert(x); // zobrazí -1
             function zobrazInfo() {
               let jmeno = prompt("Jaké je tvoje jméno?");
               let vek = prompt("Kolik ti je let?");
-              
+
               alert("Ahoj, " + jmeno + ", je ti " + vek + " let!");
             }
           </script>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zobrazInfo.txt', 'zobrazInfo')">Zobrazit kód</button>
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zobrazInfo.txt', 'zobrazInfo')">Zobrazit
+            kód</button>
         </div>
       </div>
     </section>
@@ -314,7 +320,7 @@ alert(x); // zobrazí -1
           <script>
             function zkontrolujHeslo() {
               let heslo = prompt("Zadej heslo:");
-              
+
               if (heslo === "tajneheslo") {
                 alert("Vítej!");
               } else {
@@ -324,7 +330,9 @@ alert(x); // zobrazí -1
           </script>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujHeslo.txt', 'zkontrolujHeslo')">Zobrazit kód</button>
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujHeslo.txt', 'zkontrolujHeslo')">Zobrazit
+            kód</button>
         </div>
       </div>
     </section>
@@ -339,7 +347,7 @@ alert(x); // zobrazí -1
           <script>
             function zkontrolujAdmina() {
               let isAdmin = confirm("Jsi administrátor?");
-              
+
               if (isAdmin) {
                 alert("Vítej, administrátore!");
               } else {
@@ -349,76 +357,59 @@ alert(x); // zobrazí -1
           </script>
         </div>
         <div class="col-md-3">
-          <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujAdmina.txt', 'zkontrolujAdmina')">Zobrazit kód</button>
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/zkontrolujAdmina.txt', 'zkontrolujAdmina')">Zobrazit
+            kód</button>
         </div>
       </div>
     </section>
 
-
-
-
-
-    <section></section>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Webová kalkulačka</h3>
-        <p>
-          Nyní si ukážeme, jak vytvořit základní kalkulačku jako je tahle. Využijeme k tomu své znalosti HTML a CSS, a
-          nově nabyté znalosti v jazyce JavaScript.
-        </p>
-        <p>
-          Při vytváření této kalkulačky byl použit Boostrap pro snadné vytváření vzhledu, trocha CSS pro úpravu stylů
-          a JavaScript, který zajistí její funkčnost.
-        </p>
-        <p>
-          Kalkulačka umožňuje základní matematické operace jako sčítání, odčítání, násobení a dělení, a zvládá i
-          mazání a resetování vstupů.
-        </p>
+    <div class="samprace">
+      <div class="d-flex justify-content-between mb-4">
+        <h2>Samostatná práce</h2>
+        <button id="right" class="btn btn-success"
+          onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/samprace2.html', 'samprace')">Řešení samostatné
+          práce</button>
       </div>
-      <div class="col-md-8">
-        <div class="calculator">
-          <input type="text" id="display" class="form-control mb-3" readonly>
 
-          <div class="row">
-            <button onclick="clearDisplay()" class="btn btn-secondary col-3 calc-button">C</button>
-            <button onclick="deleteLast()" class="btn btn-secondary col-3 calc-button">DEL</button>
-            <button onclick="appendToDisplay('/')" class="btn btn-secondary col-3 calc-button">/</button>
-            <button onclick="appendToDisplay('*')" class="btn btn-secondary col-3 calc-button">*</button>
-          </div>
-
-          <div class="row">
-            <button onclick="appendToDisplay('7')" class="btn btn-light col-3 calc-button">7</button>
-            <button onclick="appendToDisplay('8')" class="btn btn-light col-3 calc-button">8</button>
-            <button onclick="appendToDisplay('9')" class="btn btn-light col-3 calc-button">9</button>
-            <button onclick="appendToDisplay('-')" class="btn btn-secondary col-3 calc-button">-</button>
-          </div>
-
-          <div class="row">
-            <button onclick="appendToDisplay('4')" class="btn btn-light col-3 calc-button">4</button>
-            <button onclick="appendToDisplay('5')" class="btn btn-light col-3 calc-button">5</button>
-            <button onclick="appendToDisplay('6')" class="btn btn-light col-3 calc-button">6</button>
-            <button onclick="appendToDisplay('+')" class="btn btn-secondary col-3 calc-button">+</button>
-          </div>
-
-          <div class="row">
-            <button onclick="appendToDisplay('1')" class="btn btn-light col-3 calc-button">1</button>
-            <button onclick="appendToDisplay('2')" class="btn btn-light col-3 calc-button">2</button>
-            <button onclick="appendToDisplay('3')" class="btn btn-light col-3 calc-button">3</button>
-            <button onclick="calculate()" class="btn btn-primary col-3 calc-button">=</button>
-          </div>
-
-          <div class="row">
-            <button onclick="appendToDisplay('0')" class="btn btn-light col-6 calc-button">0</button>
-            <button onclick="appendToDisplay('.')" class="btn btn-light col-3 calc-button">.</button>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li>
+          <h5>1. Aritmetické operace</h5>
+          <p>Napiš program, který vypočítá součet, rozdíl, součin a podíl dvou čísel, která uživatel zadá pomocí
+            <code>prompt()</code>.</p>
+        </li>
+        <li>
+          <h5>2. Zbytek po dělení</h5>
+          <p>Vytvoř funkci, která vezme dvě čísla jako argumenty a vrátí zbytek po dělení. Zobraz výsledek pomocí
+            <code>alert()</code>.</p>
+        </li>
+        <li>
+          <h5>3. Porovnání dvou čísel</h5>
+          <p>Napiš funkci, která zjistí, které z dvou zadaných čísel je větší, menší nebo zda jsou shodná. Výsledek
+            zobraz pomocí <code>alert()</code>.</p>
+        </li>
+        <li>
+          <h5>4. Spojování textů</h5>
+          <p>Vytvoř funkci, která vezme dvě jména jako argumenty a vrátí zprávu ve formátu "Ahoj, [jméno1] a [jméno2]!"
+          </p>
+        </li>
+        <li>
+          <h5>5. Podmínkový operátor</h5>
+          <p>Napiš program, který zkontroluje, zda je zadané číslo sudé nebo liché, a výsledek zobrazí uživateli.</p>
+        </li>
+        <li>
+          <h5>6. Uživatelský vstup a operátory</h5>
+          <p>Vytvoř program, který požádá uživatele o zadání věku a zkontroluje, zda je uživatel plnoletý (18 let a
+            více). Zobraz příslušnou zprávu.</p>
+        </li>
+      </ul>
     </div>
-    </section>
+
 
     <div>
       <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript1.html';">Předchozí lekce</button>
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/javascript/javascript1.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
           onclick="location.href = '/lessons/javascript/javascript3.html';">Následující lekce</button>
       </div>
@@ -459,6 +450,16 @@ alert(x); // zobrazí -1
         display.value = eval(display.value);
       } catch (e) {
         display.value = "Error";
+      }
+    }
+  </script>
+  <script>
+    function showCode(soubor) {
+      var password = prompt('Enter the password to download the file:');
+      if (password.toLowerCase() == "teacher") {
+        window.open(soubor, "novyRam", "width=1200,height=1000")
+      } else {
+        alert("incorrect password!! please try again");
       }
     }
   </script>
