@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skákačka se skóre a zrychlením</title>
+    <style>
+        body { font-family: Arial, sans-serif; overflow: hidden; margin: 0; }
+        #player { width: 50px; height: 50px; background-color: blue; position: absolute; bottom: 0; left: 50px; }
+        .obstacle { width: 50px; height: 50px; background-color: red; position: absolute; bottom: 0; }
+        #gameArea {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border: 2px solid #333;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skákačka se skóre a zrychlením</h1>
+    <div id="gameArea">
+        <div id="score">Skóre: 0</div>
+        <div id="player"></div>
+        <div id="obstacle1" class="obstacle"></div>
+        <div id="obstacle2" class="obstacle"></div>
+    </div>
+    <script>
+        const player = document.getElementById('player');
+        const gameArea = document.getElementById('gameArea');
+        const scoreDisplay = document.getElementById('score');
+        const obstacle1 = document.getElementById('obstacle1');
+        const obstacle2 = document.getElementById('obstacle2');
+
+        let isJumping = false;
+        let moveSpeed = 10;  // rychlost pohybu do stran
+        let playerPosition = 50;  // počáteční horizontální pozice
+        let gameAreaWidth = gameArea.offsetWidth;
+        let gameAreaHeight = gameArea.offsetHeight;
+
+        let obstacle1Position = 800; // počáteční pozice překážky 1
+        let obstacle2Position = 1200; // počáteční pozice překážky 2
+        let obstacleSpeed = 5; // výchozí rychlost překážek
+
+        let lastTime = 0; // poslední časová značka pro FPS kontrolu
+        let fps = 60; // cílové snímky za sekundu
+        let frameDuration = 1000 / fps; // kolik milisekund má jedna snímka
+        let score = 0; // herní skóre
+
+        let animationFrameId; // ID pro `requestAnimationFrame`
+
+        // Nastavení překážek
+        obstacle1.style.left = obstacle1Position + 'px';
+        obstacle2.style.left = obstacle2Position + 'px';
+        
+        document.addEventListener('keydown', function(event) {
+            // Pohyb do stran (šipky vlevo a vpravo)
+            if (event.code === 'ArrowLeft' && playerPosition > 0) {
+                moveLeft();
+            } else if (event.code === 'ArrowRight' && playerPosition < gameAreaWidth - 50) {
+                moveRight();
+            }
+
+            // Skok (mezerník nebo šipka nahoru)
+            if (event.code === 'ArrowUp' && !isJumping) {
+                jump();
+            }
+            if (event.code === 'ArrowDown' && !isJumping) {
+                moveDown();
+            }
+            if (event.code === 'Space' && !isJumping) {
+                jump();
+            }
+        });
+
+        function moveDown(){
+            // Kontrola, aby se hráč neztratil pod herní oblastí
+            if (playerBottom > 0) {
+                playerBottom -= 10; // posun dolů o 10px
+                player.style.bottom = playerBottom + 'px'; // aktualizace pozice hráče
+            }
+        }
+
+        function moveLeft() {
+            playerPosition -= moveSpeed;
+            player.style.left = playerPosition + 'px';
+        }
+
+        function moveRight() {
+            playerPosition += moveSpeed;
+            player.style.left = playerPosition + 'px';
+        }
+
+        function jump() {
+            isJumping = true;
+            let jumpHeight = 0;
+            const jumpInterval = setInterval(() => {
+                if (jumpHeight < 150) {
+                    jumpHeight += 5;
+                    player.style.bottom = jumpHeight + 'px';
+                } else {
+                    clearInterval(jumpInterval);
+                    fall();
+                }
+            }, 20);
+        }
+
+        function fall() {
+            const fallInterval = setInterval(() => {
+                const playerBottom = parseInt(player.style.bottom);
+                if (playerBottom <= 0) {
+                    clearInterval(fallInterval);
+                    player.style.bottom = '0px';  // Zastavení na zemi
+                    isJumping = false;
+                } else {
+                    player.style.bottom = (playerBottom - 5) + 'px';
+                }
+            }, 20);
+        }
+
+        // Detekce kolize
+        function detectCollision() {
+            const playerRect = player.getBoundingClientRect();
+            const obstacle1Rect = obstacle1.getBoundingClientRect();
+            const obstacle2Rect = obstacle2.getBoundingClientRect();
+
+            if (
+                playerRect.left < obstacle1Rect.right &&
+                playerRect.right > obstacle1Rect.left &&
+                playerRect.bottom > obstacle1Rect.top
+            ) {
+                alert("Kolize s překážkou 1!");
+                cancelAnimationFrame(animationFrameId); // Zastavit animaci
+                resetGame();
+            }
+
+            if (
+                playerRect.left < obstacle2Rect.right &&
+                playerRect.right > obstacle2Rect.left &&
+                playerRect.bottom > obstacle2Rect.top
+            ) {
+                alert("Kolize s překážkou 2!");
+                cancelAnimationFrame(animationFrameId); // Zastavit animaci
+                resetGame();
+            }
+        }
+
+        // Reset hry (hráče, překážek a skóre)
+        function resetGame() {
+            // Reset pozice hráče
+            playerPosition = 50;
+            player.style.left = playerPosition + 'px';
+            player.style.bottom = '0px';
+
+            // Reset pozice překážek na původní místa
+            obstacle1Position = 800;
+            obstacle2Position = 1200;
+
+            // Překážky budou pokračovat v pohybu
+            obstacle1.style.left = obstacle1Position + 'px';
+            obstacle2.style.left = obstacle2Position + 'px';
+
+            // Reset skóre
+            score = 0;
+            scoreDisplay.textContent = "Skóre: " + score;
+
+            // Reset rychlosti překážek
+            obstacleSpeed = 5;
+
+            // Restart animace
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Hlavní smyčka hry
+        function gameLoop(time) {
+            if (!lastTime) lastTime = time;
+            const deltaTime = time - lastTime;
+
+            if (deltaTime > frameDuration) {
+                // Zvýšení skóre
+                score += 1;
+
+                scoreDisplay.textContent = "Skóre: " + score;
+
+                // Zrychlení překážek podle skóre
+                if (score % 200 == 0) {
+                    obstacleSpeed += 1;
+                } 
+
+                // Pohyb překážek
+                obstacle1Position -= obstacleSpeed;
+                obstacle2Position -= obstacleSpeed;
+
+                // Reset překážky, pokud se dostane mimo obrazovku
+                if (obstacle1Position < -50) {
+                    obstacle1Position = gameAreaWidth;
+                }
+                if (obstacle2Position < -50) {
+                    obstacle2Position = gameAreaWidth;
+                }
+
+                obstacle1.style.left = obstacle1Position + 'px';
+                obstacle2.style.left = obstacle2Position + 'px';
+
+                detectCollision(); // Kontrola kolizí
+
+                lastTime = time; // Aktualizace času pro další snímek
+            }
+
+            // Pokračovat v animaci
+            animationFrameId = requestAnimationFrame(gameLoop);
+        }
+
+        // Spustit hru
+        requestAnimationFrame(gameLoop);
+    </script>
+</body>
+</html>
