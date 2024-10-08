@@ -14,6 +14,7 @@
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/javascript/javascript.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -24,7 +25,7 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -53,8 +54,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -79,8 +82,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript2.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Následující lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript2.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript4.html';">Následující lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -90,129 +95,301 @@
     </div>
 
     <h3>Cykly</h3>
-    <p>Při psaní skriptů se můžete setkat s problémem, kdy je potřeba určitý úkon provést několikrát. Například seřadit čísla a opakovaně provést stejný kód. K usnadnění práce byly vytvořeny cykly, které nás zbavují nutnosti psát opakující se kód.</p>
+    <p>V programování se občas stane, že potřebujeme udělat stejnou věc několikrát. Například, když chceme seřadit čísla
+      nebo vykonat stejný úkol vícekrát. Abychom se vyhnuli psaní stejného kódu znovu a znovu, používáme
+      <strong>cykly</strong>. Cykly nám pomáhají opakovat určité příkazy, dokud není splněna nějaká podmínka.
+    </p>
 
-    <h4>Cyklus <code>while</code></h4>
-    <p>První cyklus, který si ukážeme, je <code>while</code>. Vypadá takto:</p>
-    <pre>
-<code>
- while (podmínka) {  
-   // kód, tělo cyklu 
- }
-</code>
-    </pre>
-    <p>Dokud je podmínka splněna, bude se kód v těle cyklu vykonávat. Například cyklus níže zobrazí hodnotu <code>i</code> dokud je menší než 3:</p>
-    <pre>
-<code>
- var i = 0;  
- while (i &lt; 3) {  
-   alert(i);  
-   i++;  
- }
-</code>
-    </pre>
-    <p>Jedno opakování cyklu se nazývá iterace. Cyklus v tomto příkladu provede tři iterace. Teoreticky by mohl cyklus běžet donekonečna, kdyby v příkladu nebylo <code>i++</code>.</p>
+    <h4>Co je to cyklus?</h4>
+    <p>Cyklus je jako automat, který dělá určité úkoly znovu a znovu, dokud mu neřekneme, aby přestal. Představ si to
+      jako hru, kde se hráč snaží udělat něco, dokud se mu to nedaří.</p>
 
-    <h4>Cyklus <code>for</code></h4>
-    <p>Nejčastěji používaný cyklus je <code>for</code>:</p>
-    <pre>
-<code>
- for (začátek; podmínka; krok) {  
-   // tělo cyklu  
- }
-</code>
-    </pre>
-    <p>Příklad cyklu, který zobrazí hodnotu <code>i</code> od 0 do 2 včetně:</p>
-    <pre>
-<code>
- var i;  
- for (i = 0; i &lt; 3; i++) {  
-   alert(i);  
- }
-</code>
-    </pre>
-    <p>V příkladu:</p>
-    <ul>
-        <li>Začátek: <code>i = 0;</code></li>
-        <li>Podmínka: <code>i &lt; 3;</code></li>
-        <li>Krok: <code>i++;</code></li>
-        <li>Tělo: <code>alert(i);</code></li>
-    </ul>
     
-    <h3>Funkce</h3>
-    <p>Někdy je potřeba opakovat stejný úkon v různých částech programu. Například při zobrazení zprávy při přihlášení uživatele, odhlášení nebo při jiné události.</p>
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h4>Cyklus <code>while</code></h4>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            První cyklus, který si ukážeme, je <code>while</code>. Tento cyklus se opakuje, dokud je splněna
+            podmínka. Vypadá to takto:
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+            <div class="example">
+              <code>
+while (podmínka) {  
+  // kód, který se opakuje 
+}
+              </code>
+            </div>
+          </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3, napíšeme:
+          </p>
+          <p>
+            V tomto příkladu se cyklus provede třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1.
+          </p>
+          <p>
+            Každé provedení cyklu se nazývá <strong>iterace</strong>. Kdybychom zapomněli napsat <code>i++</code>,
+            cyklus by
+            běžel navždy!
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+            <div class="example">
+              <code>
+var i = 0;  
+while (i &lt; 3) {  
+  alert(i); // Zobrazí číslo
+  i++;      // Zvyšuje i o 1
+}
+              </code>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </section>
 
-    <h4>Příklad funkce</h4>
-    <pre>
-<code>
- function showMessage() {  
-   alert('Ahoj, přátelé!');  
- }
-</code>
-    </pre>
-    <p>V příkladu vidíme klíčové slovo <code>function</code>, po něm název funkce a tělo funkce.</p>
-    <pre>
-<code>
- showMessage();
- showMessage();
-</code>
-    </pre>
-    <p>Kód vyvolá zprávu dvakrát. Funkce nám šetří práci s opakováním stejného kódu.</p>
 
-    <h4>Lokální proměnné</h4>
-    <p>Funkce může obsahovat lokální proměnné, které jsou deklarovány uvnitř funkce a jsou viditelné jen tam:</p>
-    <pre>
-<code>
- function showMessage() {  
-   var message = 'Ahoj, já jsem Jano!';  
-   alert(message);  
- }
- showMessage();
-</code>
-    </pre>
+    
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h4>Cyklus <code>for</code></h4>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Dalším běžným cyklem je <code>for</code>. Tento cyklus je jako plán, kde říkáme, co se má stát a kolikrát:
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+            <div class="example">
+              <code>
+for (začátek; podmínka; krok) {  
+  // kód, který se provede 
+}
+              </code>
+            </div>
+          </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Zde je příklad, který ukáže čísla od 0 do 2:
+          </p>
+          <p>V tomto příkladu se děje:</p>
+          <ul>
+            <li><strong>Začátek:</strong> <code>i = 0;</code> (začínáme od nuly)</li>
+            <li><strong>Podmínka:</strong> <code>i &lt; 3;</code> (dokud je <code>i</code> menší než 3)</li>
+            <li><strong>Krok:</strong> <code>i++;</code> (zvyšujeme <code>i</code> o 1 po každé iteraci)</li>
+            <li><strong>Tělo:</strong> <code>alert(i);</code> (zobrazujeme aktuální číslo)</li>
+          </ul>
+          <p>
+            Celkově se cyklus <code>for</code> provede třikrát a zobrazí čísla 0, 1 a 2. Cykly nám pomáhají být
+            efektivnější a šetřit čas při psaní kódu!
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+            <div class="example">
+              <code>
+for (var i = 0; i &lt; 3; i++) {  
+  alert(i); // Zobrazí číslo
+}
+              </code>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </section>
 
-    <h4>Vnější proměnné</h4>
-    <p>Funkce může také přistupovat k vnějším proměnným:</p>
-    <pre>
-<code>
- var userName = 'Jano';  
- function showMessage() {  
-   var message = 'Ahoj, já jsem ' + userName;  
-   alert(message);  
- }
- showMessage();
-</code>
-    </pre>
 
-    <h4>Parametry</h4>
-    <p>Při volání funkce jí můžeme předat informace prostřednictvím parametrů:</p>
-    <pre>
-<code>
+
+
+
+    <h3 style="padding-top: 50px;">Funkce</h3>
+    <p>Někdy je potřeba opakovat stejný úkon v různých částech programu. Například při zobrazení zprávy při přihlášení
+      uživatele, odhlášení nebo při jiné události.</p>
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h4>Příklad funkce</h4>
+      <div class="row ">
+        <div class="col-md-7 d-flex align-items-start justify-content-center">
+          <ul>
+            <p>
+              Funkce je základní stavební prvek programování v JavaScriptu. V našem příkladu je vytvořena jednoduchá
+              funkce <code>showMessage</code>, která zobrazuje zprávu 'Ahoj, přátelé!'. Klíčové slovo
+              <code>function</code>
+              se používá k definování funkce, po něm následuje její název a tělo funkce, které obsahuje příkazy, které
+              se
+              vykonají, když je funkce zavolána.
+            </p>
+            <p>
+              V následujícím kódu se funkce <code>showMessage</code> volá dvakrát. Tento příklad ukazuje, jak
+              efektivně využívat funkce k opakování kódu bez nutnosti jeho duplikace. Místo toho, abychom
+              psali stejný příkaz pro zobrazení zprávy vícekrát, jednoduše zavoláme funkci.
+            </p>
+            <p>
+              Funkce nám šetří práci s opakováním stejného kódu, což zjednodušuje údržbu a čitelnost programu.
+            </p>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <pre>
+            <div class="example">
+              <code>
+function showMessage() {  
+  alert('Ahoj, přátelé!');  
+}
+showMessage();
+showMessage();
+              </code>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h4>Lokální proměnné</h4>
+      <div class="row">
+        <div class="col-md-7 d-flex align-items-start justify-content-center">
+          <ul>
+            <p>
+              Funkce v JavaScriptu může obsahovat lokální proměnné, které jsou deklarovány uvnitř jejího těla. Tyto
+              proměnné jsou přístupné pouze v rámci funkce, což znamená, že nejsou viditelné ani přístupné zvenčí.
+            </p>
+            <p>
+              Lokální proměnné se často používají k uchování hodnot, které jsou specifické pro danou funkci, aniž by
+              ovlivnily nebo kolidovaly s proměnnými definovanými v jiných částech kódu. To pomáhá udržovat
+              přehlednost a snižuje riziko chyb, které mohou vzniknout, pokud byste náhodně přepsali hodnotu
+              globální proměnné.
+            </p>
+            <p>
+              V následujícím příkladu vytvoříme funkci <code>showMessage</code>, která využívá lokální proměnnou
+              <code>message</code> k uložení textu, který se poté zobrazuje uživateli pomocí dialogového okna.
+            </p>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <pre>
+          <div class="example">
+            <code>
+function showMessage() {  
+  var message = 'Ahoj, já jsem Jano!';  
+  alert(message);  
+}
+showMessage();
+            </code>
+          </div>
+        </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h4>Vnější proměnné</h4>
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-start justify-content-center">
+          <ul>
+            <p>
+              Funkce v JavaScriptu může mít přístup k proměnným, které jsou definovány mimo její tělo. To umožňuje
+              funkcím
+              interagovat s proměnnými, které nejsou jejich parametry, což může být velmi užitečné pro sdílení dat mezi
+              různými částmi kódu.
+            </p>
+            <p>
+              Tento koncept je známý jako uzávěr (closure). Když funkce přistupuje k proměnné, která byla definována ve
+              vnějším prostředí, může ji využít k vytvoření specifických výstupů nebo chování. Například, pokud
+              máme proměnnou <code>userName</code>, která je definována mimo funkci, funkce může tuto proměnnou použít
+              a vrátit smysluplný text.
+            </p>
+            <p>
+              V následujícím příkladu vytvoříme funkci <code>showMessage</code>, která využívá vnější proměnnou
+              <code>userName</code> k tomu, aby uživateli zobrazila personalizovanou zprávu.
+            </p>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <pre>
+          <div class="example">
+            <code>
+var userName = 'Jano';  
+function showMessage() {  
+  var message = 'Ahoj, já jsem ' + userName;  
+  alert(message);  
+}
+showMessage();
+            </code>
+          </div>
+        </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h4>Parametry</h4>
+      <p>Při volání funkce jí můžeme předat informace prostřednictvím parametrů:</p>
+      <pre>
+      <div class="example">
+        <code>
 function showMessage(from, text) {  
-   from = '**' + from + '**';  
-   alert(from + ': ' + text);  
- }
- showMessage('Eva', 'Ahoj!');
- showMessage('Eva', 'Jak se máš?');
-</code>
+  from = '**' + from + '**';  
+  alert(from + ': ' + text);  
+}
+showMessage('Eva', 'Ahoj!');
+showMessage('Eva', 'Jak se máš?');
+          </code>
+      </div>
     </pre>
+    </section>
 
-    <h4>Vrácení hodnoty</h4>
-    <p>Funkce může také vrátit výsledek:</p>
-    <pre>
-<code>
- function sum(a, b) {  
-   return a + b;  
- }
- var test = sum(2, 5);  
- alert(test); // 7
-</code>
-    </pre>
-
+    <section class="bg-light p-4 rounded mb-4">
+      <h4>Vrácení hodnoty</h4>
+      <div class="row">
+        <div class="col-md-8 d-flex align-items-center justify-content-center">
+          <ul>
+            <p>
+              Funkce může také vrátit výsledek, což je důležitá vlastnost, která umožňuje použití výsledku funkce
+              v dalších operacích.
+            </p>
+            <p>
+              Například, pokud máte funkci, která provádí nějaký výpočet, můžete použít
+              klíčové slovo <code>return</code> k vrácení hodnoty, kterou chcete. To je užitečné v situacích,
+              kdy potřebujete získat výsledek z funkce a použít ho jinde v kódu.
+            </p>
+            <p>
+              V následujícím příkladu vytvoříme funkci <code>sum</code>, která sečte dvě čísla a vrátí jejich součet.
+            </p>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <pre>
+              <div class="example">
+                <code>
+function sum(a, b) {  
+  return a + b;  
+}
+var test = sum(2, 5);  
+alert(test); // 7
+                  </code>
+              </div>
+            </pre>
+        </div>
+      </div>
+    </section>
 
     <div>
       <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript2.html';">Předchozí lekce</button>
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/javascript/javascript2.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
           onclick="location.href = '/lessons/javascript/javascript4.html';">Následující lekce</button>
       </div>
