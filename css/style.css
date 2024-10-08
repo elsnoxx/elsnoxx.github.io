@@ -38,7 +38,8 @@ body>.container {
 }
 
 code {
-  font-size: 80%;
+  font-size: 100%;
+  font-weight: bold;
 }
 
 .code-funkce {
@@ -269,7 +270,7 @@ p {
 
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 2000px) {
   .modal-content {
     width: 100%;
   }
