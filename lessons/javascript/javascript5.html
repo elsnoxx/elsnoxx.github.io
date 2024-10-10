@@ -256,6 +256,28 @@ previous.onclick = function() {
 };
 </code></pre>
 
+<section class="odstavec">
+  <h3>Příklad cyklu for</h3>
+  <div class="row">
+    <div class="col-md-8">
+      <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
+      <ul id="list"></ul>
+      <script>
+        const list = document.getElementById("list");
+        for (let i = 1; i <= 5; i++) {
+          const listItem = document.createElement("li");
+          listItem.textContent = "Číslo " + i;
+          list.appendChild(listItem);
+        }
+      </script>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
+        kód</button>
+    </div>
+  </div>
+</section>
+
 
 
 
