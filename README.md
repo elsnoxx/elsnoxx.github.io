@@ -99,7 +99,20 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 3
     - lekce 4
     - lekce 5
-    - projekt
+    - projekt - https://docs.google.com/presentation/d/13ajISqaFyEFA9DhgRbM7KYHDZYge0TVz_j8usmI7koE/edit#slide=id.g2efc5b20fa1_0_21
+        - pyramida
+        - barevná duha
+        - šachovnice
+        - stavba abecedy a číslic z bloků, nebo stavba textu
+        - funkce která napíše text podle zadaného argumentu
+        - program pro stavbu domů / města
+        - Bazén.
+        - Vírivka.
+        - Akvárium.
+        - Veža Kamzík nad mestom Bratislava = dve pyramídy oproti sebe.
+        - Rybník.
+        - Lesík z náhodne vyberaných stromov.
+        - Pestovateľské záhony.
     - env - nafotit na lekci a potom obrazky pouzit na webove strance
     
 
@@ -111,6 +124,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Javascript
     - Nacrt co ukazovat ve vyuce https://www.jakpsatweb.cz/javascript/javascript-uvod.html
+
     
 # Versions
 
