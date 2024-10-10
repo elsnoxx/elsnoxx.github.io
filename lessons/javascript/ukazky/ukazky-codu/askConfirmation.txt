@@ -10,9 +10,13 @@
         <p id="response"></p>
         <script>
           function askConfirmation() {
-            const result = confirm("Opravdu chceš pokračovat?");
-            document.getElementById("response").textContent = result ? "Akce byla potvrzena." : "Akce byla zrušena.";
-          }
+                const vysledek = confirm("Opravdu chceš pokračovat?");
+                if (vysledek){
+                  document.getElementById("response").textContent = "Akce byla potvrzena.";
+                }else{
+                  document.getElementById("response").textContent ="Akce byla zrušena.";
+                }
+              }
         </script>
 </body>
 </html>
