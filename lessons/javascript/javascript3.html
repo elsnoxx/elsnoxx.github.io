@@ -12,6 +12,7 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/javascript.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/javascript/javascript.css" rel="stylesheet">
@@ -392,7 +393,7 @@ alert(test); // 7
       <div class="d-flex justify-content-between mb-4">
         <h2>Samostatná práce</h2>
         <button id="right" class="btn btn-success"
-        onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/samprace3.html', 'samprace3')">Řešení samostatné práce</button>
+        onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/samprace3.html', 'samprace3')">Řešení samostatné práce</button>
       </div>
       
       <ul>
@@ -453,16 +454,6 @@ alert(test); // 7
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <script>
-    function showCode(soubor){
-      var password = prompt('Enter the password to download the file:');
-      if(password.toLowerCase() == "teacher"){
-        window.open(soubor, "novyRam", "width=1200,height=1000")    
-      }else{
-        alert("incorrect password!! please try again");
-      }
-    }
-  </script>
 </body>
 
 </html>

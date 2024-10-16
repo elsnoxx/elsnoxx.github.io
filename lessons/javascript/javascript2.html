@@ -370,7 +370,7 @@ alert(x); // zobrazí -1
       <div class="d-flex justify-content-between mb-4">
         <h2>Samostatná práce</h2>
         <button id="right" class="btn btn-success"
-          onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/samprace2.html', 'samprace')">Řešení samostatné
+          onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/samprace2.html', 'samprace')">Řešení samostatné
           práce</button>
       </div>
 
@@ -456,11 +456,11 @@ alert(x); // zobrazí -1
     }
   </script>
   <script>
-    function showCode(soubor) {
+    function showCodePW(soubor){
       var password = prompt('Enter the password to download the file:');
-      if (password.toLowerCase() == "teacher") {
-        window.open(soubor, "novyRam", "width=1200,height=1000")
-      } else {
+      if(password.toLowerCase() == "teacher"){
+        window.open(soubor, "novyRam", "width=1200,height=1000")    
+      }else{
         alert("incorrect password!! please try again");
       }
     }
