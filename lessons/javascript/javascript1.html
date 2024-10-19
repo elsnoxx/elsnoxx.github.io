@@ -26,9 +26,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -496,6 +496,27 @@ function noveOkno(soubor) {
       </div>
     </section>
 
+    <!-- alert() -->
+    <section id="alert" class="bg-light p-4 rounded mb-4 section">
+      <h3>Funkce alert()</h3>
+      <p>
+        Příkaz <code>alert()</code> zobrazí jednoduché dialogové okno s textem a tlačítkem <strong>OK</strong>.
+        Používá se pro zobrazování zpráv nebo varování, které si uživatel musí přečíst a potvrdit.
+      </p>
+
+      <h4>Ukázka: Použití <code>alert()</code></h4>
+      <div class="example">
+        <pre><code>
+&lt;script&gt;
+alert("Toto je varovná zpráva!");
+&lt;/script&gt;
+</code></pre>
+      </div>
+      <p>Kliknutím na OK uživatel zavře dialogové okno.</p>
+
+      <p>Toto je nejjednodušší způsob, jak zobrazit varování nebo informaci uživateli.</p>
+    </section>
+
     <!-- prompt() -->
     <section id="prompt" class="bg-light p-4 rounded mb-4 section">
       <h3>Funkce prompt()</h3>
@@ -538,54 +559,6 @@ function noveOkno(soubor) {
 
     </section>
 
-    <!-- confirm() -->
-    <section id="confirm" class="bg-light p-4 rounded mb-4 section">
-      <h3>Funkce confirm()</h3>
-      <p>
-        Příkaz <code>confirm()</code> zobrazí dialogové okno s otázkou a dvěma tlačítky: <strong>OK</strong> a
-        <strong>Zrušit</strong>.
-        Uživatel může buď potvrdit akci tlačítkem OK (vrátí <code>true</code>), nebo ji zrušit (vrátí
-        <code>false</code>).
-      </p>
-
-      <h4>Ukázka: Použití <code>confirm()</code></h4>
-      <div class="example">
-        <pre><code>
-&lt;script&gt;
-  let result = confirm("Chceš pokračovat?");
-  if (result) {
-    console.log("Uživatel potvrdil akci.");
-  } else {
-    console.log("Uživatel akci zrušil.");
-  }
-&lt;/script&gt;
-    </code></pre>
-      </div>
-      <p>Kliknutím na OK uživatel potvrdí, kliknutím na Zrušit akci odmítne:</p>
-
-      <p>V závislosti na volbě uživatele se v konzoli zobrazí odpovídající zpráva.</p>
-    </section>
-
-    <!-- alert() -->
-    <section id="alert" class="bg-light p-4 rounded mb-4 section">
-      <h3>Funkce alert()</h3>
-      <p>
-        Příkaz <code>alert()</code> zobrazí jednoduché dialogové okno s textem a tlačítkem <strong>OK</strong>.
-        Používá se pro zobrazování zpráv nebo varování, které si uživatel musí přečíst a potvrdit.
-      </p>
-
-      <h4>Ukázka: Použití <code>alert()</code></h4>
-      <div class="example">
-        <pre><code>
-&lt;script&gt;
-  alert("Toto je varovná zpráva!");
-&lt;/script&gt;
-    </code></pre>
-      </div>
-      <p>Kliknutím na OK uživatel zavře dialogové okno.</p>
-
-      <p>Toto je nejjednodušší způsob, jak zobrazit varování nebo informaci uživateli.</p>
-    </section>
 
 
     <section class="odstavec">
@@ -607,31 +580,7 @@ function noveOkno(soubor) {
         </div>
       </section>
 
-      <section class="odstavec">
-        <h3>Příklad confirm()</h3>
-        <div class="row">
-          <div class="col-md-8">
-            <p>Funkce confirm() umožňuje uživateli potvrdit nebo zrušit akci.</p>
-            <button onclick="askConfirmation()">Potvrď akci</button>
-            <p id="response"></p>
-            <script>
-              function askConfirmation() {
-                const vysledek = confirm("Opravdu chceš pokračovat?");
-                if (vysledek) {
-                  document.getElementById("response").textContent = "Akce byla potvrzena.";
-                } else {
-                  document.getElementById("response").textContent = "Akce byla zrušena.";
-                }
-              }
-            </script>
-          </div>
-          <div class="col-md-3">
-            <button class="btn btn-info"
-              onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/askConfirmation.txt', 'askConfirmation')">Zobrazit
-              kód</button>
-          </div>
-        </div>
-      </section>
+
 
       <section class="odstavec">
         <h3>Příklad alert()</h3>
