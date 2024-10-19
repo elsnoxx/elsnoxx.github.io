@@ -26,9 +26,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -99,6 +99,7 @@
     </div>
 
     <h2>Operátory</h2>
+
     <p>Důležitou částí učení je seznámení se s různými termíny. Než se pustíme do podrobností, je potřeba znát pár
       základních pojmů, abychom lépe porozuměli. Začněme s pojmem <strong>operand</strong>. Operand je to, s čím pracuje
       operátor. Například:</p>
@@ -112,7 +113,7 @@
 
     <div class="example">
       <code>
-var x = 1;<br>
+let x = 1;<br>
 x = -x;<br>
 alert(x); // zobrazí -1
       </code>
@@ -122,112 +123,399 @@ alert(x); // zobrazí -1
 
     <div class="example">
       <code>
-            var x = 3, y = 6;<br>
+            let x = 3, y = 6;<br>
             alert(y - x); // zobrazí 3
         </code>
     </div>
+    <section class="bg-light p-4 rounded mb-4 section">
+      <h2>Sčítání a spojování textu</h2>
+      <p>Stejně jako v matematice, znak <code>+</code> slouží pro sčítání. Ale v JavaScriptu může také spojovat texty
+        (tzv. řetězce). Když použijeme <code>+</code> s texty, spojí je dohromady:</p>
 
-    <h2>Sčítání a spojování textu</h2>
-    <p>Stejně jako v matematice, znak <code>+</code> slouží pro sčítání. Ale v JavaScriptu může také spojovat texty
-      (tzv. řetězce). Když použijeme <code>+</code> s texty, spojí je dohromady:</p>
-
-    <div class="example">
-      <code>
-            var a = "moje" + "jméno";<br>
+      <div class="example">
+        <code>
+            let a = "moje" + "jméno";<br>
             alert(a); // zobrazí "mojejméno"
         </code>
-    </div>
+      </div>
 
-    <p>Když je alespoň jeden operand text, JavaScript převede i druhý operand na text:</p>
+      <p>Když je alespoň jeden operand text, JavaScript převede i druhý operand na text:</p>
 
-    <div class="example">
-      <code>
+      <div class="example">
+        <code>
             alert('3' + 2); // zobrazí "32"<br>
             alert(2 + '3'); // zobrazí "23"
         </code>
-    </div>
+      </div>
 
-    <h2>Přiřazování</h2>
-    <p>Operátor <code>=</code> se používá pro přiřazení hodnoty do proměnné:</p>
+      <h2>Přiřazování</h2>
+      <p>Operátor <code>=</code> se používá pro přiřazení hodnoty do proměnné:</p>
 
-    <div class="example">
-      <code>
-            var x = 2 * 2 + 2;<br>
+      <div class="example">
+        <code>
+            let x = 2 * 2 + 2;<br>
             alert(x); // zobrazí 6
         </code>
-    </div>
+      </div>
 
-    <h2>Zbytek po dělení <code>%</code></h2>
-    <p>Operátor <code>%</code> vypočítá zbytek po dělení dvou čísel:</p>
 
-    <div class="example">
-      <code>
+
+
+
+      <h2>Zbytek po dělení <code>%</code></h2>
+      <p>Operátor <code>%</code> vypočítá zbytek po dělení dvou čísel:</p>
+
+      <div class="example">
+        <code>
             alert(5 % 2); // zobrazí 1<br>
             alert(8 % 3); // zobrazí 2<br>
             alert(6 % 3); // zobrazí 0
         </code>
-    </div>
+      </div>
+    </section>
 
-    <h2>Porovnávací operátory a logické hodnoty</h2>
-    <p>Porovnávací operátory známe i z matematiky:</p>
-    <ul>
-      <li><code>&gt;</code> – větší než</li>
-      <li><code>&lt;</code> – menší než</li>
-      <li><code>&gt;=</code> – větší nebo rovno</li>
-      <li><code>&lt;=</code> – menší nebo rovno</li>
-      <li><code>==</code> – rovná se</li>
-      <li><code>!=</code> – nerovná se</li>
-    </ul>
+    <!-- confirm() -->
+    <section id="confirm" class="bg-light p-4 rounded mb-4 section">
+      <h3>Funkce confirm()</h3>
+      <p>
+        Příkaz <code>confirm()</code> zobrazí dialogové okno s otázkou a dvěma tlačítky: <strong>OK</strong> a
+        <strong>Zrušit</strong>.
+        Uživatel může buď potvrdit akci tlačítkem OK (vrátí <code>true</code>), nebo ji zrušit (vrátí
+        <code>false</code>).
+      </p>
 
-    <p>Logické hodnoty mohou být dvě:</p>
-    <ul>
-      <li><strong>true</strong> – pravda, ano</li>
-      <li><strong>false</strong> – lež, ne</li>
-    </ul>
+      <h4>Ukázka: Použití <code>confirm()</code></h4>
+      <div class="example">
+        <pre><code>
+&lt;script&gt;
+let result = confirm("Chceš pokračovat?");
+if (result) {
+console.log("Uživatel potvrdil akci.");
+} else {
+console.log("Uživatel akci zrušil.");
+}
+&lt;/script&gt;
+</code></pre>
+      </div>
+      <p>Kliknutím na OK uživatel potvrdí, kliknutím na Zrušit akci odmítne:</p>
 
-    <div class="example">
-      <code>
+      <p>V závislosti na volbě uživatele se v konzoli zobrazí odpovídající zpráva.</p>
+    </section>
+
+
+
+
+    <section class="bg-light p-4 rounded mb-4 section odstavec"">
+    <h2>Podmínky</h2>
+    <p>Operátor <code>if</code> umožňuje vykonat určitou akci jen tehdy, pokud je podmínka splněná. Zkus me se zamyslet jestli níže
+    uvedené kody jsou stejné a nebo výsledek bude jinačí.</p>
+      <div class=" row">
+      <div class="col-md-6">
+        <div class=" example">
+          <code>
+let rok = prompt('Kdy vznikl ITSTEP?');<br>
+if (rok != 2011) {<br>
+    alert('Bohužel, špatně!');<br>
+} else {<br>
+    alert('Správně!');<br>
+}
+              </code>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class=" example">
+          <code>
+let rok = prompt('Kdy vznikl ITSTEP?');<br>
+if (rok == 2011) {<br>
+    alert('Správně!');<br>
+} else {<br>
+    alert('Bohužel, špatně!');<br>
+}
+              </code>
+        </div>
+      </div>
+      </div>
+
+      <section>
+        <h2>Porovnávací operátory a logické hodnoty</h2>
+        <p>Porovnávací operátory známe i z matematiky:</p>
+        <table class="table table-striped table-responsive-xl" style="text-align: center;">
+          <thead class="thead-dark">
+            <th>SYMBOL</th>
+            <th>VÝZNAM</th>
+            <th>PŘÍKLAD 1</th>
+            <th>VÝSLEDEK</th>
+            <th>PŘÍKLAD 2</th>
+            <th>VÝSLEDEK</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&gt;</code></td>
+              <td>větší než</td>
+              <td>1 <code>&gt;</code> 0</td>
+              <td><strong>True</strong></td>
+              <td>5 <code>&gt;</code> 10</td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>&lt;</code></td>
+              <td>menší než</td>
+              <td>1 <code>&lt;</code> 0</td>
+              <td><strong>True</strong></td>
+              <td>11 <code>&lt;</code> 10</td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>&gt;=</code></td>
+              <td>větší nebo rovno</td>
+              <td>1 <code>&gt;=</code> 1</td>
+              <td><strong>True</strong></td>
+              <td>5 <code>&gt;=</code> 10</td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>&lt;=</code></td>
+              <td>menší nebo rovno</td>
+              <td>1 <code>&lt;=</code> 1</td>
+              <td><strong>True</strong></td>
+              <td>13 <code>&lt;=</code> 10</td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>==</code></td>
+              <td>rovná se</td>
+              <td>1 <code>==</code> 1</td>
+              <td><strong>True</strong></td>
+              <td>5 <code>==</code> 10</td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>!=</code></td>
+              <td>nerovná se</td>
+              <td>1 <code>!=</code> 0</td>
+              <td><strong>True</strong></td>
+              <td>5 <code>!=</code> 5</td>
+              <td><strong>False</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h4>Logické hodnoty mohou být dvě:</h4>
+        <ul>
+          <li><strong>true</strong> – pravda, ano</li>
+          <li><strong>false</strong> – lež, ne</li>
+        </ul>
+      </section>
+
+      <section class="odstavec">
+        <h2>Spojování podmínek pomocí logických operátorů</h2>
+        <p>Logické operátory <code>and</code>, <code>or</code> a <code>not</code> nám umožňují spojovat více podmínek.
+          Díky nim můžeme vytvářet složitější logické výrazy. Pojďme se podívat, jak fungují:</p>
+
+        <table class="table table-striped table-responsive-xl" style="text-align: center;">
+          <thead class="thead-dark">
+            <th>SYMBOL</th>
+            <th>NÁZEV</th>
+            <th>VÝZNAM</th>
+            <th>PŘÍKLAD 1</th>
+            <th>VÝSLEDEK</th>
+            <th>PŘÍKLAD 2</th>
+            <th>VÝSLEDEK</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&&</code></td>
+              <td><strong>AND</strong></td>
+              <td>všechny podmínky musí být splněny</td>
+              <td><code>(2 &gt; 1) && (3 &gt; 1)</code></td>
+              <td><strong>True</strong></td>
+              <td><code>(2 &gt; 1) && (3 &lt; 1)</code></td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>||</code></td>
+              <td><strong>OR</strong></td>
+              <td>stačí, aby jedna podmínka byla splněna</td>
+              <td><code>(2 &gt; 1) || (3 &lt; 1)</code></td>
+              <td><strong>True</strong></td>
+              <td><code>(2 &lt; 1) || (3 &lt; 1)</code></td>
+              <td><strong>False</strong></td>
+            </tr>
+            <tr>
+              <td><code>!</code></td>
+              <td><strong>NOT</strong></td>
+              <td> negace výrazu</td>
+              <td><code>!(2 &gt; 1)</code></td>
+              <td><strong>False</strong></td>
+              <td><code>!(3 &gt; 5)</code></td>
+              <td><strong>True</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Podívejme se ještě na konkrétní příklad použití těchto operátorů v JavaScriptu:</p>
+
+        <div class="example">
+          <code>
+      let vek = 18;<br>
+      let jmeno = 'Petr';<br>
+      if (vek >= 18 && jmeno == 'Petr') {<br>
+          alert('Vítej, Petře!');<br>
+      } else {<br>
+          alert('Přístup odepřen!');<br>
+      }<br><br>
+      
+      let heslo = 'tajne';<br>
+      if (vek < 18 || heslo != 'tajne') {<br>
+          alert('Přístup odepřen!');<br>
+      } else {<br>
+          alert('Vítej zpět!');<br>
+      }
+          </code>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Použití v JavaScriptu</h2>
+        <p>Níže naleznete ukázku jednoduchých porovnávacích operátorů v JavaScriptu:</p>
+        <div class="example">
+          <code>
             alert(2 > 1); // zobrazí true<br>
             alert(2 == 1); // zobrazí false<br>
             alert(2 != 1); // zobrazí true
-        </code>
-    </div>
+          </code>
+        </div>
+      
+        <p>Níže naleznete ukázku použití logických operátorů <code>and</code>, <code>or</code> a <code>not</code> v JavaScriptu:</p>
+        <div class="example">
+          <code>
+            alert(2 > 1 && 2 < 3); // zobrazí true (obě podmínky jsou pravdivé)<br>
+            alert(2 == 1 || 2 != 3); // zobrazí true (druhá podmínka je pravdivá)<br>
+            alert(!(2 == 1)); // zobrazí true (negace, protože 2 není rovno 1)
+          </code>
+        </div>
+      </section>
+      
 
-    <h2>Interakce s uživatelem</h2>
-    <h3>Prompt</h3>
-    <p>Funkce <code>prompt</code> zobrazí okno s otázkou a polem, kam může uživatel něco napsat:</p>
 
-    <div class="example">
-      <code>
-            var roky = prompt('Kolik máš let?', 10);<br>
-            alert('Máš ' + roky + ' let!');
-        </code>
-    </div>
+    </section>
 
-    <h3>Confirm</h3>
-    <p>Funkce <code>confirm</code> zobrazí okno s otázkou a dvěma tlačítky: OK a Zrušit:</p>
+    <section class="bg-light p-4 rounded mb-4 section odstavec">
+      <h2>Escape sekvence</h2>
+      <p>
+        Při práci s řetězci a programováním v jazyce JavaScript se často setkáme s situacemi, kdy potřebujeme vložit
+        speciální znaky do řetězce nebo uniknout z omezení běžného zápisu na webovou stránku. Právě k tomu slouží escape
+        sekvence. Tyto
+        sekvence umožňují vkládat do řetězce znaky, které by jinak nebylo možné jednoduše vepsat.
+      </p>
+      <p>
+        V jazyce JavaScript jsou escape sekvence zapsány jako kombinace obráceného lomítka "\" a některých
+        specifikovaných
+        znaků. Kombinací tohoto speciálního znaku s jiným znakem můžeme dosáhnout vložení speciálního symbolu do
+        řetězce.
+      </p>
 
-    <div class="example">
-      <code>
-            var isAdmin = confirm('Jsi administrátor?');<br>
-            alert(isAdmin); // zobrazí true nebo false
-        </code>
-    </div>
+      <div class="">
+        <table class="table table-striped table-responsive-xl" style="text-align: center;">
+          <thead class="thead-dark">
+            <tr>
+              <th style="width: 200px;">ESCAPE SEKVENCE</th>
+              <th style="width: 200px;">VÝZNAM</th>
+              <th style="width: 500px;">KÓD</th>
+              <th style="width: 300px;">UKÁZKA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>\n </td>
+              <td>nový řádek</td>
+              <td>jeden řádek + "\n" + druhý řádek</td>
+              <td>jeden řádek <br> druhý řádek</td>
+            </tr>
+            <tr>
+              <td>\t </td>
+              <td>tabuláror</td>
+              <td>velká + "\nt" + mezera</td>
+              <td>velká <span style="padding-left: 20px;"></span>mezera</td>
+            </tr>
+            <tr>
+              <td>\' </td>
+              <td>apostrof</td>
+              <td>vykreslí + "\'" + jako text</td>
+              <td>vykreslí ' jako text</td>
+            </tr>
+            <tr>
+              <td>\" </td>
+              <td>uvozovka</td>
+              <td>vykreslí + "\"" + jako text</td>
+              <td>vykreslí " jako text</td>
+            </tr>
+            <tr>
+              <td>\\ </td>
+              <td>opačné lomítko</td>
+              <td>vykreslí + "\\" + jako text</td>
+              <td>vykreslí \ jako text</td>
+            </tr>
+          </tbody>
+        </table>
 
-    <h2>Podmínky</h2>
-    <p>Operátor <code>if</code> umožňuje vykonat určitou akci jen tehdy, pokud je podmínka splněná:</p>
+      </div>
+      <br>
+      <h5>Ukázka použití:</h5>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="example">
+            <code>
+alert("Ahoj, jmenji se Richard" + "\n" <br>
++ "Jsem programátor a věnuji se právě vysvětlení problematiky"<br>
++ "\"" +  "escape sekvení" + "\"" +"".");
+            </code>
+          </div>
+        </div>
 
-    <div class="example">
-      <code>
-            var rok = prompt('V jakém roce vznikla akademie ITSTEP?', '');<br>
-            if (rok != 2011) {<br>
-                alert('Bohužel, špatně!');<br>
-            } else {<br>
-                alert('Správně!');<br>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+          <button onclick="escapeSekvence()" class="btn btn-info ">Zobrazit příklad</button>
+          <script>
+            function escapeSekvence() {
+              alert("Ahoj, jmenji se Richard" + "\n" + "Jsem programátor a věnuji se právě vysvětlení problematiky " + "\"" + "escape sekvení" + "\"" + ".");
             }
-        </code>
-    </div>
-    <h1>Příklady operátorů v JavaScriptu</h1>
+          </script>
+        </div>
+      </div>
+
+    </section>
+
+
+    <h1>Příklady na zopakování znalostí</h1>
+
+    <section class="odstavec">
+      <h3>Příklad confirm()</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Funkce confirm() umožňuje uživateli potvrdit nebo zrušit akci.</p>
+          <button onclick="askConfirmation()">Potvrď akci</button>
+          <p id="response"></p>
+          <script>
+            function askConfirmation() {
+              const vysledek = confirm("Opravdu chceš pokračovat?");
+              if (vysledek) {
+                document.getElementById("response").textContent = "Akce byla potvrzena.";
+              } else {
+                document.getElementById("response").textContent = "Akce byla zrušena.";
+              }
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/askConfirmation.txt', 'askConfirmation')">Zobrazit
+            kód</button>
+        </div>
+      </div>
+    </section>
 
     <!-- Příklad 1: Aritmetické operace -->
     <section class="odstavec">
@@ -378,12 +666,14 @@ alert(x); // zobrazí -1
         <li>
           <h5>1. Aritmetické operace</h5>
           <p>Napiš program, který vypočítá součet, rozdíl, součin a podíl dvou čísel, která uživatel zadá pomocí
-            <code>prompt()</code>.</p>
+            <code>prompt()</code>.
+          </p>
         </li>
         <li>
           <h5>2. Zbytek po dělení</h5>
           <p>Vytvoř funkci, která vezme dvě čísla jako argumenty a vrátí zbytek po dělení. Zobraz výsledek pomocí
-            <code>alert()</code>.</p>
+            <code>alert()</code>.
+          </p>
         </li>
         <li>
           <h5>3. Porovnání dvou čísel</h5>
@@ -456,11 +746,11 @@ alert(x); // zobrazí -1
     }
   </script>
   <script>
-    function showCodePW(soubor){
-      var password = prompt('Enter the password to download the file:');
-      if(password.toLowerCase() == "teacher"){
-        window.open(soubor, "novyRam", "width=1200,height=1000")    
-      }else{
+    function showCodePW(soubor) {
+      let password = prompt('Enter the password to download the file:');
+      if (password == "teacher") {
+        window.open(soubor, "novyRam", "width=1200,height=1000")
+      } else {
         alert("incorrect password!! please try again");
       }
     }
