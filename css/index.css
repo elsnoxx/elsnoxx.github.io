@@ -1,0 +1,18 @@
+.lekce {
+    width: 200px;
+    text-align: left;
+}
+
+.lekce-list{
+    margin: auto;
+    width: 50%;
+}
+
+.lekce-nadpis{
+    margin-top: 15px;
+    padding-right: 20%;
+}
+
+.row{
+    padding: 10px;
+}
