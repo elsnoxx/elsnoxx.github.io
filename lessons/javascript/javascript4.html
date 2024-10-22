@@ -25,9 +25,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -56,8 +56,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -82,8 +84,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript5.html';">Následují lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript5.html';">Následují lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -92,36 +96,274 @@
       </table>
     </div>
     <h2>Lekce 4. Práce s formuláři a tagy.</h2>
-    <h3>Práce s formulářem</h3>
-    <h4>Zadávání události v prohlížeči</h4>
-    <p>Neodmyslitelnou součástí fungování programů je vzájemné působení jednotlivých prvků. Abychom získali reakci na aktivitu návštěvníků a na vnitřní vzájemné působení skriptů, byly vytvořeny události.</p>
-    <p>Událost je jakýsi signál prohlížeče, který říká, že došlo k určité aktivitě. Typů událostí je poměrně mnoho. Pojďme se podívat na seznam nejčastěji používaných:</p>
-    <h4>Události myši:</h4>
-    <ul>
+
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h1>Co je DOM v JavaScriptu?</h1>
+      <p>
+        Představ si, že webová stránka je jako kniha. Když se díváš na stránku v prohlížeči, prohlížeč si ji načte a
+        udělá z ní takzvaný <strong>DOM</strong> (což znamená <em>Document Object Model</em> nebo <em>model objektu
+          dokumentu</em>). DOM je jako mapa, která ukazuje, jak je kniha (nebo webová stránka) uspořádaná.
+      </p>
+
+      <h2>Jak DOM funguje?</h2>
+      <p>
+        Když otevřeš webovou stránku, prohlížeč ji přetvoří do DOMu. Představ si, že každá část stránky (jako jsou
+        nadpisy, obrázky, a texty) je jako jednotlivé kousky skládačky. Všechny tyto kousky spolu tvoří celou stránku. V
+        DOMu je každý prvek na stránce nazýván <strong>uzel</strong>.
+      </p>
+
+      <h2>Jaké uzly existují?</h2>
+      <ul>
+        <li><strong>Elementní uzly</strong>: To jsou věci jako <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, nebo
+          <code>&lt;img&gt;</code>. Tyto uzly představují jednotlivé části stránky.
+        </li>
+        <li><strong>Textové uzly</strong>: Tyto uzly obsahují text, který vidíš na stránce. Například text v nadpisu
+          nebo odstavci.</li>
+        <li><strong>Atributové uzly</strong>: Tyto uzly mají informace o elementech, jako je barva, velikost nebo místo,
+          kde se nacházejí.</li>
+      </ul>
+
+      <h2>Co můžeš s DOMem dělat?</h2>
+      <p>
+        S DOMem můžeš dělat různé věci. Například můžeš:
+      </p>
+      <ul>
+        <li><strong>Číst obsah</strong>: Můžeš zjistit, co se nachází na stránce.</li>
+        <li><strong>Měnit obsah</strong>: Můžeš upravit text nebo obrázky na stránce.</li>
+        <li><strong>Přidávat nové prvky</strong>: Můžeš vytvořit nový text, obrázek nebo tlačítko a přidat ho na
+          stránku.</li>
+        <li><strong>Odstraňovat prvky</strong>: Můžeš také odstranit něco, co už na stránce není potřeba.</li>
+      </ul>
+
+      <h2>Příklad manipulace s DOMem</h2>
+      <p>
+        Pojďme se podívat na jednoduchý příklad. Máme tlačítko, které když klikneš, změní text na stránce. Tady je
+        ukázka, jak to funguje:
+      </p>
+
+      <div class="row">
+        <div class="col-md-7">
+          <div class="example">
+            <code>
+            <pre>
+&lt;h1 id="heading"&gt;Ahoj světe!&lt;/h1&gt;
+&lt;button id="changeButton"&gt;Změnit text&lt;/button&gt;
+
+&lt;script&gt;
+  // Tento kód vybere nadpis a tlačítko
+  const heading = document.getElementById('heading');
+  const button = document.getElementById('changeButton');
+
+  // Přidáme akci, která se stane, když klikneš na tlačítko
+  button.addEventListener('click', function() {
+      // Změní text nadpisu
+      heading.textContent = 'Text byl změněn!';
+  });
+&lt;/script&gt;
+            </pre>
+          </code>
+          </div>
+        </div>
+        <div class="col-md-5 d-flex align-items-center justify-content-center">
+          <div>
+            <h1 id="heading">Ahoj světe!</h1>
+            <button id="changeButton">Změnit text</button>
+            <script>
+              // Tento kód vybere nadpis a tlačítko
+              const heading = document.getElementById('heading');
+              const button = document.getElementById('changeButton');
+
+              // Přidáme akci, která se stane, když klikneš na tlačítko
+              button.addEventListener('click', function () {
+                // Změní text nadpisu
+                heading.textContent = 'Text byl změněn!';
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4">
+      <h2>Práce s formulářem</h2>
+      <h4>Zadávání události v prohlížeči</h4>
+      <p>Neodmyslitelnou součástí fungování programů je vzájemné působení jednotlivých prvků. Abychom získali reakci na
+        aktivitu návštěvníků a na vnitřní vzájemné působení skriptů, byly vytvořeny události.</p>
+      <p>Událost je jakýsi signál prohlížeče, který říká, že došlo k určité aktivitě. Typů událostí je poměrně mnoho.
+        Pojďme se podívat na seznam nejčastěji používaných:</p>
+      <h4>Události myši:</h4>
+      <ul>
         <li><strong>click</strong> – kliknutí na prvek levým tlačítkem myši</li>
         <li><strong>contextmenu</strong> – kliknutí na prvek pravým tlačítkem myši</li>
         <li><strong>mouseover</strong> – uživatel navádí myš na určitý prvek</li>
         <li><strong>mousedown</strong> a <strong>mouseup</strong> – tlačítko myši stlačeno nebo uvolněno</li>
         <li><strong>mousemove</strong> – pohyb myši</li>
-    </ul>
-    <h4>Události ovládacích prvků:</h4>
-    <ul>
+      </ul>
+      <h4>Události ovládacích prvků:</h4>
+      <ul>
         <li><strong>submit</strong> – návštěvník odeslal formulář &lt;form&gt;</li>
         <li><strong>focus</strong> – návštěvník se soustředí na prvek (např. klikl na &lt;input&gt;).</li>
-    </ul>
-    <h4>Události klávesnice:</h4>
-    <ul>
+      </ul>
+      <h4>Události klávesnice:</h4>
+      <ul>
         <li><strong>keydown</strong> – návštěvník stiskne klávesu</li>
         <li><strong>keyup</strong> – návštěvník uvolní klávesu</li>
-    </ul>
-    
+      </ul>
+
+      <section class="odstavec">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Ukázky použití</h5>
+            <div class="row">
+              <div class="col-md-3  mb-3">
+                <button id="alertButton" class="btn btn-info tlacitko-ukazka">Klikni mě!</button>
+              </div>
+              <div class="col-md-3  mb-3">
+                <button id="noRightClick" class="btn btn-info tlacitko-ukazka">Pravým tlačítkem klikni</button>
+              </div>
+              <div class="col-md-3  mb-3">
+                <button id="mouseDownButton" class="btn btn-info tlacitko-ukazka">Stiskni myš!</button>
+              </div>
+              <div class="col-md-3  mb-3">
+                <div id="mouseMoveArea" class="btn btn-info tlacitko-ukazka" style="width: 300px;">Pohyb myší</div>
+              </div>
+            </div>
+      
+            <!-- Událost click -->
+            <script>
+              const alertButton = document.getElementById('alertButton');
+              alertButton.addEventListener('click', function () {
+                alert('Tlačítko bylo kliknuto!');
+              });
+            </script>
+      
+            <!-- Událost contextmenu (pravé tlačítko) -->
+            <script>
+              const noRightClickDiv = document.getElementById('noRightClick');
+              noRightClickDiv.addEventListener('contextmenu', function (event) {
+                event.preventDefault();
+                alert('Použití pravého tlačítka myši je zablokováno.');
+              });
+            </script>
+      
+            <!-- Událost mousedown -->
+            <script>
+              const mouseDownButton = document.getElementById('mouseDownButton');
+              mouseDownButton.addEventListener('mousedown', function () {
+                alert('Tlačítko myši bylo stisknuto!');
+              });
+            </script>
+      
+            <!-- Událost mousemove -->
+            <script>
+              const mouseMoveArea = document.getElementById('mouseMoveArea');
+              mouseMoveArea.addEventListener('mousemove', function (event) {
+                mouseMoveArea.textContent = 'Pohyb myši: X: ' + event.clientX + ', Y: ' + event.clientY;
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+
+      <section class="odstavec">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Ukázka: Zobrazení stisknuté klávesy</h5>
+      
+            <!-- Oblast pro zobrazení stisknuté klávesy -->
+            <div id="keyDisplay" class="p-3 mb-3 border" style="height: 50px;">
+              Zde se zobrazí stisknutá klávesa
+            </div>
+      
+            <!-- Vysvětlení -->
+            <p>Stiskněte jakoukoli klávesu a bude zobrazena výše.</p>
+          </div>
+        </div>
+      
+        <script>
+          // Přidáme událost keydown na celou stránku
+          document.addEventListener('keydown', function(event) {
+            // Získání elementu pro zobrazení stisknuté klávesy
+            const keyDisplay = document.getElementById('keyDisplay');
+      
+            // Nastavení textu podle stisknuté klávesy
+            keyDisplay.textContent = 'Stisknutá klávesa: ' + event.key;
+          });
+        </script>
+      </section>
+      
+      
+
+      <section class="bg-light p-4 rounded mb-4">
+        <h3>Ukázka: Změna kurzoru pro různá tlačítka</h3>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonDefault" class="btn btn-info tlacitko-ukazka">Najeď na mě (výchozí)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonPointer" class="btn btn-info tlacitko-ukazka">Najeď na mě (pointer)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonMove" class="btn btn-info tlacitko-ukazka">Najeď na mě (move)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonCrosshair" class="btn btn-info tlacitko-ukazka">Najeď na mě (crosshair)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonText" class="btn btn-info tlacitko-ukazka">Najeď na mě (text)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonWait" class="btn btn-info tlacitko-ukazka">Najeď na mě (wait)!</button>
+          </div>
+          <div class="col-md-3 mb-3">
+            <button id="hoverButtonNotAllowed" class="btn btn-info tlacitko-ukazka">Najeď na mě (not-allowed)!</button>
+          </div>
+        </div>
+
+        <script>
+          // Funkce pro přidání kurzorového efektu
+          function addCursorChange(buttonId, cursorType) {
+            const button = document.getElementById(buttonId);
+
+            button.addEventListener('mouseover', function () {
+              button.style.backgroundColor = 'lightblue';
+              button.style.cursor = cursorType;
+            });
+
+            button.addEventListener('mouseout', function () {
+              button.style.backgroundColor = '';
+              button.style.cursor = 'default';
+            });
+          }
+
+          // Přiřazení kurzorových efektů různým tlačítkům
+          addCursorChange('hoverButtonDefault', 'default');
+          addCursorChange('hoverButtonPointer', 'pointer');
+          addCursorChange('hoverButtonMove', 'move');
+          addCursorChange('hoverButtonCrosshair', 'crosshair');
+          addCursorChange('hoverButtonText', 'text');
+          addCursorChange('hoverButtonWait', 'wait');
+          addCursorChange('hoverButtonNotAllowed', 'not-allowed');
+        </script>
+      </section>
+    </section>
+
+
+
+
+
+
     <h3>Přiřazení obslužných programů událostí</h3>
-    <p>Jak má program reagovat, když došlo k nějakému úkonu? Právě na sledování událostí byl vytvořen obslužný program. Obslužný program je určitá funkce, která zafunguje, jakmile dojde k nějaké události.</p>
+    <p>Jak má program reagovat, když došlo k nějakému úkonu? Právě na sledování událostí byl vytvořen obslužný program.
+      Obslužný program je určitou funkcí, která zafunguje, jakmile dojde k nějaké události.</p>
     <p>Existuje několik způsobů, pomocí kterých je možné přiřadit události obslužný program:</p>
-    <p>Obslužný program lze definovat přímo v návrhu, v atributu, který se nazývá <strong>on-událost</strong>. Například:</p>
-    
+    <p>Obslužný program lze definovat přímo v návrhu, v atributu, který se nazývá <strong>on-událost</strong>.
+      Například:</p>
+
     <pre><code>&lt;input value="Stiskni mě" onclick="alert('Klik!')" type="button"&gt;</code></pre>
-    
+
     <h3>Příklad s funkcí countRabbits:</h3>
     <pre><code>&lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
@@ -140,36 +382,36 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-    
+
     <h3>Získání hodnoty ze vstupního pole:</h3>
-    <p>Pokud máme ve stránce formulářové pole pro uživatele, potřebujeme ho mít možnost vybrat a pak s ním manipulovat. Například:</p>
-    
+    <p>Pokud máme ve stránce formulářové pole pro uživatele, potřebujeme ho mít možnost vybrat a pak s ním manipulovat.
+      Například:</p>
+
     <pre><code>&lt;input id="myInput" type="text"&gt;&lt;/input&gt;
 &lt;script&gt;
     var inputField = document.getElementById("myInput");
     alert(inputField.value);
 &lt;/script&gt;
 </code></pre>
-    
 
+    <h2>Práce s dokumentem</h2>
+    <h3>Úvod do DOM</h3>
+    <p>Během práce v HTML se můžeme setkat s dynamickými změnami na stránce. Základním prvkem práce s takovými změnami
+      je DOM (Document Object Model).</p>
+    <p>DOM představuje objektový model HTML dokumentů a slouží k dynamickým změnám prvků stránky pomocí JavaScriptu.</p>
 
-<h2>Práce s dokumentem</h2>
-<h3>Úvod do DOM</h3>
-<p>Během práce v HTML se můžeme setkat s dynamickými změnami na stránce. Základním prvkem práce s takovými změnami je DOM (Document Object Model).</p>
-<p>DOM představuje objektový model HTML dokumentů a slouží k dynamickým změnám prvků stránky pomocí JavaScriptu.</p>
+    <h3>Vyhledávání: getElement*</h3>
+    <p>DOM poskytuje metody pro vyhledávání prvků v dokumentu. Mezi hlavní metody patří:</p>
+    <ul>
+      <li><strong>document.getElementById</strong> - najde prvek podle atributu <code>id</code></li>
+      <li><strong>document.getElementsByTagName</strong> - najde všechny prvky s daným tagem</li>
+      <li><strong>document.getElementsByName</strong> - najde všechny prvky s atributem <code>name</code></li>
+    </ul>
 
-<h3>Vyhledávání: getElement*</h3>
-<p>DOM poskytuje metody pro vyhledávání prvků v dokumentu. Mezi hlavní metody patří:</p>
-<ul>
-    <li><strong>document.getElementById</strong> - najde prvek podle atributu <code>id</code></li>
-    <li><strong>document.getElementsByTagName</strong> - najde všechny prvky s daným tagem</li>
-    <li><strong>document.getElementsByName</strong> - najde všechny prvky s atributem <code>name</code></li>
-</ul>
+    <h3>Praktické příklady:</h3>
 
-<h3>Praktické příklady:</h3>
-
-<h4>Příklad 1: Po stisknutí tlačítka změnit hodnotu.</h4>
-<pre><code>&lt;html&gt;
+    <h4>Příklad 1: Po stisknutí tlačítka změnit hodnotu.</h4>
+    <pre><code>&lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
     &lt;script&gt;
@@ -188,8 +430,8 @@
 &lt;/html&gt;
 </code></pre>
 
-<h4>Příklad 2: Po stisknutí tlačítka se změní barva na náhodnou.</h4>
-<pre><code>&lt;html&gt;
+    <h4>Příklad 2: Po stisknutí tlačítka se změní barva na náhodnou.</h4>
+    <pre><code>&lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
     &lt;script&gt;
@@ -211,8 +453,8 @@
 &lt;/html&gt;
 </code></pre>
 
-<h4>Příklad 3: Malá kalkulačka.</h4>
-<pre><code>&lt;html&gt;
+    <h4>Příklad 3: Malá kalkulačka.</h4>
+    <pre><code>&lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
     &lt;script&gt;
@@ -238,11 +480,10 @@
 &lt;/html&gt;
 </code></pre>
 
-
-<h3>Úkoly k procvičení:</h3>
+    <h3>Úkoly k procvičení:</h3>
     <ol>
-        <li>Vytvořte tlačítko, které při stisknutí změní barvu pozadí stránky na modrou.</li>
-        <li>Vytvořte formulář, který při odeslání zobrazí hodnotu zadanou do pole.</li>
+      <li>Vytvořte tlačítko, které při stisknutí změní barvu pozadí stránky na modrou.</li>
+      <li>Vytvořte formulář, který při odeslání zobrazí hodnotu zadanou do pole.</li>
     </ol>
 
     <section>
@@ -303,13 +544,14 @@
       </div>
     </section>
 
-<div>
-  <div class="d-flex justify-content-between mb-4">
-    <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
-    <button id="right" class="btn btn-primary"
-      onclick="location.href = '/lessons/javascript/javascript5.html';">Následující lekce</button>
-  </div>
-</div>
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/javascript/javascript3.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/javascript/javascript5.html';">Následující lekce</button>
+      </div>
+    </div>
 
   </main>
   <footer class="footer">

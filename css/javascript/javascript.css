@@ -77,3 +77,9 @@
     background-color: rgb(248, 248, 141);
     margin-bottom: 30px;
   }
+
+  .tlacitko-ukazka {
+    margin: 5px 0;
+    padding: 10px 0;
+    width: 100%;
+  }
