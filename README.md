@@ -69,6 +69,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 2 pridat ukazku fazovace, zrychleni tempa, orezat ticho
     - lekce 2 upravit pospi funkci podle https://manual.audacityteam.org/man/index_of_effects_generators_and_analyzers.html
     - lekce 3 pridat vytvareni tonu a tak
+    - https://www.videolekce.cz/component/k2/itemlist/category/151-audacity
      
 - Roblox
     - pridani obrazku k strance lekce 1, pridat datum pridani robloxu na windows 2006
