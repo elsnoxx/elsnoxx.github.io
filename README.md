@@ -128,19 +128,25 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 # Versions
 
-## September 2024 - Update
+## October 2024 - Update
 
-- Python Minecraft minetest
-    - word a pdf k projektu
-    - projekt
+- General
+    - upravneni nahledu uvodni stranky
+    - pridani ikon
+    - navrzeni novych nahledoveho okna lekce
+
+- Construct 3
+    - upraveni nahledu lecke
 
 
-- Javascript
-    - Lekce 1 - pridan obsah lekce + priklady
-    - Lekce 2 - pridan obsah lekce
-    - Lekce 3 - pridan obsah lekce
-    - Lekce 4 - pridan obsah lekce
-    - Lekce 5 - pridan obsah lekce
-    - IDE - popsani jakeho IDE budeme pouzivat v ramci Javascriptu
+- Minecraft Edu
+    - vytvoreni lekce
+
+- JavaScript
+    - Lekce 1: upraveni textu
+    - Lekce 2: upraveni textu
+    - Lekce 3: upraveni textu
+    - upraveni nahledu lecke
+
 
 
