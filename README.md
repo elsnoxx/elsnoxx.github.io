@@ -119,12 +119,29 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Construct 3
     - pridat ukazku chovani flash na space shooter
+    - vylepsit na hlavni strance lekce odkaz pro stazeni materialu (teda obrazku), zkusit to udelet jako stranku kde bude i popis jak to spravne extrahovat a tak
+    - prejmenovat obrazky v materialech na ceske popisky
+    - pridat lepsi popis chovani a treba i jejich ikony jak vypadaji
     
 - Youtube
     - https://www.blackmagicdesign.com/products/davinciresolve
 
 - Javascript
     - Nacrt co ukazovat ve vyuce https://www.jakpsatweb.cz/javascript/javascript-uvod.html
+    - lekce 3 - uprava ukazky promennych ve funkci, vysvetleni var a let
+    - lekce 3 - po vysvetleni cyklu pridat ukol na otestovani zdali to pochopili
+    - lekce 3 - 3. sam prace - pridat alespon 3 jmena
+    - pridat ukazku a vysvetleni na generovani rondom cisla
+    - lekce 4 - UI a sam prace
+    - lekce 5 - UI a sam prace
+    - UI pro ukazkove hry
+    - ukoly pro javascript
+        - lekce 1
+        - lekce 2
+        - lekce 3
+        - lekce 4
+        - lekce 5
+    - projekt
 
     
 # Versions
@@ -148,6 +165,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - Lekce 2: upraveni textu
     - Lekce 3: upraveni textu
     - upraveni nahledu lecke
+    - lekce 2 - upravit escape sekvence tak aby tam byl alert
 
 
 
