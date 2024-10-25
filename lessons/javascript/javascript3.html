@@ -26,9 +26,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -96,6 +96,76 @@
         </tr>
       </table>
     </div>
+    
+    <h1>Generování náhodných čísel v JavaScriptu</h1>
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <div class="row odstavec">
+        <div class="col-md-5 d-flex align-items-start justify-content-center">
+          <ul>
+            <p>
+              V JavaScriptu můžeme generovat náhodná čísla pomocí vestavěné funkce <code>Math.random()</code>. Tato funkce vrací desetinné číslo mezi <strong>0 (včetně)</strong> a <strong>1 (vyloučeno)</strong>. 
+            </p>
+            <p>
+              Pokud ale chceme náhodné celé číslo, musíme tento výstup zpracovat, například vynásobením a zaokrouhlením.
+            </p>
+            <p>
+              Níže si ukážeme, jak můžeme generovat různá náhodná čísla:
+            </p>
+            <li><strong>Desetinné číslo</strong> mezi 0 a 1.</li>
+            <li><strong>Celé číslo</strong> mezi 0 a požadovaným maximálním číslem.</li>
+            <li><strong>Celé číslo</strong> v určitém rozsahu, např. mezi 1 a 100.</li>
+          </ul>
+        </div>
+        <div class="col-md-7">
+          <pre>
+          <div class="example">
+            <code>
+let randomDecimal = Math.random();
+console.log(randomDecimal);
+
+let randomInteger = Math.floor(Math.random() * 11);
+console.log(randomInteger);
+
+let randomInRange = Math.floor(Math.random() * 100) + 1; 
+console.log(randomInRange);
+            </code>
+          </div>
+          </pre>
+        </div>
+      </div>
+    
+      <div class="row mt-4">
+        <div class="col-md-4 d-flex align-items-start justify-content-center">
+          <ul>
+            <p><strong>Vysvětlení kroků:</strong></p>
+            <li>
+              <code>Math.random()</code> vrací náhodné desetinné číslo mezi 0 a 1.
+            </li>
+            <li>
+              <code>Math.floor()</code> zaokrouhluje číslo dolů na nejbližší celé číslo. Používá se k odstranění desetinné části.
+            </li>
+            <li>
+              Když chceme náhodné číslo v určitém rozsahu (např. 1 až 100), vynásobíme <code>Math.random()</code> maximálním číslem a přičteme <code>+1</code>, aby rozsah začínal na 1.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <pre>
+          <div class="example">
+            <code>
+function generateRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let randomInCustomRange = generateRandomInRange(50, 150);
+console.log(randomInCustomRange);
+            </code>
+          </div>
+          </pre>
+        </div>
+      </div>
+    </section>
+    
 
     <h1>Cykly</h1>
     <p>V programování se občas stane, že potřebujeme udělat stejnou věc několikrát. Například, když chceme seřadit čísla
@@ -198,7 +268,7 @@ for (začátek; podmínka; krok) {
             efektivnější a šetřit čas při psaní kódu!
           </p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 odstavec">
           <pre>
             <div class="example">
               <code>
@@ -211,6 +281,24 @@ for (var i = 0; i &lt; 3; i++) {
         </div>
       </div>
     </section>
+
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Cvičení</h2>
+          <button id="right" class="btn btn-success"
+          onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/cycleTest.txt', 'cycleTest')">Řešení samostatné práce</button>
+        </div>
+        <h5>Sečti 5 čísel</h5>
+        <p>
+          Napiš jednoduchý program, který se uživatele 5x zeptá na číslo, a pak všechna čísla sečte a zobrazí výsledek.
+          Můžeš použít cyklus <code>for</code> nebo <code>while</code> k tomu, aby se program ptal znovu a znovu.
+          Program můžeš napsat tak, aby čísla zadával pomocí <code>prompt</code>.
+          Nakonec program spočítá součet a zobrazí ho na stránce.
+        </p>
+      </div>
+    </section>
+    
 
     <h1 style="padding-top: 50px;">Funkce</h1>
     <p>Někdy je potřeba opakovat stejný úkon v různých částech programu. Například při zobrazení zprávy při přihlášení
@@ -294,25 +382,23 @@ showMessage();
     </section>
 
     <section class="bg-light p-4 rounded mb-4">
-      <h4>Vnější proměnné</h4>
+      <h4>Vnější vs. Vnitřní proměnné</h4>
       <div class="row">
         <div class="col-md-6 d-flex align-items-start justify-content-center">
           <ul>
             <p>
-              Funkce v JavaScriptu může mít přístup k proměnným, které jsou definovány mimo její tělo. To umožňuje
-              funkcím
-              interagovat s proměnnými, které nejsou jejich parametry, což může být velmi užitečné pro sdílení dat mezi
-              různými částmi kódu.
+              V JavaScriptu můžeme proměnné definovat jak vně funkce, tak i uvnitř funkce. Vnější proměnné jsou ty, které 
+              jsou definovány mimo funkci a jsou dostupné ve více částech kódu. Vnitřní proměnné jsou naopak definovány 
+              přímo uvnitř funkce a jsou dostupné pouze v této funkci.
             </p>
             <p>
-              Tento koncept je známý jako uzávěr (closure). Když funkce přistupuje k proměnné, která byla definována ve
-              vnějším prostředí, může ji využít k vytvoření specifických výstupů nebo chování. Například, pokud
-              máme proměnnou <code>userName</code>, která je definována mimo funkci, funkce může tuto proměnnou použít
-              a vrátit smysluplný text.
+              Funkce může přistupovat k vnějším proměnným, ale vnitřní proměnné jsou viditelné pouze pro samotnou funkci.
+              Vnější proměnná zůstává dostupná i po zavolání funkce, zatímco vnitřní proměnná existuje jen po dobu běhu funkce.
             </p>
             <p>
-              V následujícím příkladu vytvoříme funkci <code>showMessage</code>, která využívá vnější proměnnou
-              <code>userName</code> k tomu, aby uživateli zobrazila personalizovanou zprávu.
+              V následujícím příkladu máme vnější proměnnou <code>userName</code> a vnitřní proměnnou <code>message</code>.
+              Zatímco funkce <code>showMessage</code> může přistupovat k vnější proměnné <code>userName</code>, proměnná 
+              <code>message</code> je dostupná pouze uvnitř této funkce.
             </p>
           </ul>
         </div>
@@ -320,18 +406,21 @@ showMessage();
           <pre>
           <div class="example">
             <code>
-var userName = 'Jano';  
+var userName = 'Jano';
+
 function showMessage() {  
-  var message = 'Ahoj, já jsem ' + userName;  
-  alert(message);  
+  let message = 'Ahoj, já jsem ' + userName;
+  alert(message);
 }
+
 showMessage();
             </code>
           </div>
-        </pre>
+          </pre>
         </div>
       </div>
     </section>
+    
 
     <section class="bg-light p-4 rounded mb-4">
       <h4>Parametry</h4>
@@ -389,13 +478,15 @@ alert(test); // 7
       <div class="d-flex justify-content-between mb-4">
         <h2>Samostatná práce</h2>
         <button id="right" class="btn btn-success"
-        onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/samprace3.html', 'samprace3')">Řešení samostatné práce</button>
+          onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/samprace3.html', 'samprace3')">Řešení samostatné
+          práce</button>
       </div>
-      
+
       <ul>
         <li>
           <h5>1. Čísla od 1 do 10</h5>
-          <p>Napiš program, který pomocí cyklu <code>for</code> zobrazí čísla od 1 do 10 pomocí <code>alert()</code>.</p>
+          <p>Napiš program, který pomocí cyklu <code>for</code> zobrazí čísla od 1 do 10 pomocí <code>alert()</code>.
+          </p>
         </li>
         <li>
           <h5>2. Sčítání čísel</h5>
@@ -403,26 +494,29 @@ alert(test); // 7
         </li>
         <li>
           <h5>3. Zobrazování jmen</h5>
-          <p>Vytvoř pole s jmény a pomocí cyklu <code>for</code> zobraz každé jméno v samostatném okně.</p>
+          <p>Vytvoř pole s jmény a pomocí cyklu <code>for</code> zobraz každé jméno v samostatném okně. Pole by mělo
+            obsahovat alespoň 3 jména.</p>
         </li>
         <li>
           <h5>4. Vytvořte počítadlo</h5>
-          <p>Napiš funkci <code>countTo</code>, která vezme číslo jako argument a pomocí cyklu <code>while</code> bude počítat
+          <p>Napiš funkci <code>countTo</code>, která vezme číslo jako argument a pomocí cyklu <code>while</code> bude
+            počítat
             od 1 do daného čísla.</p>
         </li>
         <li>
           <h5>5. Násobení čísel</h5>
-          <p>Napiš funkci <code>multiplyTable</code>, která vezme číslo jako argument a zobrazí jeho násobkovou tabulku (od 1
+          <p>Napiš funkci <code>multiplyTable</code>, která vezme číslo jako argument a zobrazí jeho násobkovou tabulku
+            (od 1
             do 10).</p>
         </li>
         <li>
           <h5>6. Hvězdičkový trojúhelník</h5>
-          <p>Vytvoř program, který pomocí cyklu <code>for</code> vykreslí trojúhelník z hvězdiček.</p>      
+          <p>Vytvoř program, který pomocí cyklu <code>for</code> vykreslí trojúhelník z hvězdiček.</p>
         </li>
       </ul>
     </div>
-    
-    
+
+
 
 
 
