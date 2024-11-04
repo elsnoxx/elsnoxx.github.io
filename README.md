@@ -126,7 +126,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Javascript
     - Nacrt co ukazovat ve vyuce https://www.jakpsatweb.cz/javascript/javascript-uvod.html
-    - lekce 4 - UI a sam prace
     - lekce 5 - UI a sam prace
     - UI pro ukazkove hry
     - ukoly pro javascript
@@ -142,6 +141,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 ## November 2024 - Update
 
-
+- Javascript
+    - lekce 4 - UI a sam prace
 
 

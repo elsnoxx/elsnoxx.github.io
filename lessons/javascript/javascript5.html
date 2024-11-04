@@ -12,6 +12,8 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/javascript.js" defer></script>
+  <script src="/js/javascript/lekce5.js"></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/javascript/javascript.css" rel="stylesheet">
@@ -25,9 +27,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -56,8 +58,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -82,8 +86,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/javascript/JQuery.html';">Následují lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/javascript4.html';">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/javascript/JQuery.html';">Následují lekce</button>
           </td>
           <td>
             <p class="nav-link" id="cas-text"><span id="cas"></span></p>
@@ -93,30 +99,29 @@
     </div>
     <h2>Lekce 5. Vytvoření slideru v JavaScriptu.</h2>
 
-<h3>Vytvoření jednoduché slide-show</h3>
-<p>Zajímavým prvkem, který je možné vytvořit s pomocí JavaScriptu, je slide-show. K jejímu vytvoření bude potřebný kontejner pro slidery a slidy samotné.</p>
+    <h3>Vytvoření jednoduché slide-show</h3>
+    <p>Zajímavým prvkem, který je možné vytvořit s pomocí JavaScriptu, je slide-show. K jejímu vytvoření bude potřebný
+      kontejner pro slidery a slidy samotné.</p>
 
-<p>Příklad slide-show:</p>
-<ul id="slides">
-    <li class="slide showing">Slide 1</li>
-    <li class="slide">Slide 2</li>
-    <li class="slide">Slide 3</li>
-    <li class="slide">Slide 4</li>
-    <li class="slide">Slide 5</li>
-</ul>
+    <p>Příklad slide-show:</p>
+    <img id="obrazky" src="/img/javascript/slideshowImg/img1.jpeg" />
+    <script>
+      slideshow()
+    </script>
 
-<h3>Základní styly pro slider</h3>
-<p>Mezi jejich funkční možnosti patří možnost:</p>
-<ul>
-    <li>vytvářet kontejner pro slidy</li>
-    <li>rozmisťovat slidy jeden nad druhým uvnitř kontejneru</li>
-    <li>regulovat chování slidů při zobrazení a zmizení</li>
-    <li>plynule měnit průhlednost slidů pro vytvoření efektu zhasnutí a objevení</li>
-</ul>
+    <h3>Základní styly pro slider</h3>
+    <p>Mezi jejich funkční možnosti patří možnost:</p>
+    <ul>
+      <li>vytvářet kontejner pro slidy</li>
+      <li>rozmisťovat slidy jeden nad druhým uvnitř kontejneru</li>
+      <li>regulovat chování slidů při zobrazení a zmizení</li>
+      <li>plynule měnit průhlednost slidů pro vytvoření efektu zhasnutí a objevení</li>
+    </ul>
 
-<p>Je důležité mít na paměti, že před prací v CSS je třeba změnit třídy a použité identifikátory, aby nedocházelo k konfliktům s vašimi stránkami. Pojďme se podívat na toto CSS:</p>
+    <p>Je důležité mít na paměti, že před prací v CSS je třeba změnit třídy a použité identifikátory, aby nedocházelo k
+      konfliktům s vašimi stránkami. Pojďme se podívat na toto CSS:</p>
 
-<pre><code>
+    <pre><code>
 /* Prvotní styly */
 #slides {
     position: relative;
@@ -143,10 +148,10 @@
 }
 </code></pre>
 
-<h3>Druhotné styly</h3>
-<p>Přidejme do naší slide-show různé styly, aby byla zajímavější. Na demonstrování použijeme následující styly:</p>
+    <h3>Druhotné styly</h3>
+    <p>Přidejme do naší slide-show různé styly, aby byla zajímavější. Na demonstrování použijeme následující styly:</p>
 
-<pre><code>
+    <pre><code>
 .slide {
     font-size: 40px;
     padding: 40px;
@@ -176,10 +181,11 @@
 }
 </code></pre>
 
-<h3>JavaScript pro slider</h3>
-<p>JavaScript při práci se slidy vykonává zásadní úlohu – skrývá aktuální slid a zobrazuje následující. K realizaci této úlohy je třeba změnit názvy tříd slidů. Kód JS:</p>
+    <h3>JavaScript pro slider</h3>
+    <p>JavaScript při práci se slidy vykonává zásadní úlohu – skrývá aktuální slid a zobrazuje následující. K realizaci
+      této úlohy je třeba změnit názvy tříd slidů. Kód JS:</p>
 
-<pre><code>
+    <pre><code>
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 2000);
@@ -191,13 +197,13 @@ function nextSlide() {
 }
 </code></pre>
 
-<h3>Pauza a ovládání slideru</h3>
-<p>Do slideru můžeme přidat ovládací prvky, jako například tlačítko pauzy:</p>
+    <h3>Pauza a ovládání slideru</h3>
+    <p>Do slideru můžeme přidat ovládací prvky, jako například tlačítko pauzy:</p>
 
-<button class="controls" id="pause">Pauza</button>
+    <button class="controls" id="pause">Pauza</button>
 
-<p>JavaScript pro pauzu:</p>
-<pre><code>
+    <p>JavaScript pro pauzu:</p>
+    <pre><code>
 var playing = true;
 var pauseButton = document.getElementById('pause');
 
@@ -222,14 +228,14 @@ pauseButton.onclick = function() {
 };
 </code></pre>
 
-<h3>Ovládací tlačítka pro následující a předchozí slid</h3>
-<p>Přidáme tlačítka pro následující a předchozí slid:</p>
+    <h3>Ovládací tlačítka pro následující a předchozí slid</h3>
+    <p>Přidáme tlačítka pro následující a předchozí slid:</p>
 
-<button class="controls" id="previous">Předchozí</button>
-<button class="controls" id="next">Další</button>
+    <button class="controls" id="previous">Předchozí</button>
+    <button class="controls" id="next">Další</button>
 
-<p>JavaScript pro ovládání:</p>
-<pre><code>
+    <p>JavaScript pro ovládání:</p>
+    <pre><code>
 function nextSlide() {
     goToSlide(currentSlide + 1);
 }
@@ -258,27 +264,28 @@ previous.onclick = function() {
 };
 </code></pre>
 
-<section class="odstavec">
-  <h3>Příklad cyklu for</h3>
-  <div class="row">
-    <div class="col-md-8">
-      <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
-      <ul id="list"></ul>
-      <script>
-        const list = document.getElementById("list");
-        for (let i = 1; i <= 5; i++) {
-          const listItem = document.createElement("li");
-          listItem.textContent = "Číslo " + i;
-          list.appendChild(listItem);
-        }
-      </script>
-    </div>
-    <div class="col-md-3">
-      <button class="btn btn-info" onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
-        kód</button>
-    </div>
-  </div>
-</section>
+    <section class="odstavec">
+      <h3>Příklad cyklu for</h3>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
+          <ul id="list"></ul>
+          <script>
+            const list = document.getElementById("list");
+            for (let i = 1; i <= 5; i++) {
+              const listItem = document.createElement("li");
+              listItem.textContent = "Číslo " + i;
+              list.appendChild(listItem);
+            }
+          </script>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-info"
+            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
+            kód</button>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -286,7 +293,8 @@ previous.onclick = function() {
 
     <div>
       <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/javascript/javascript4.html';">Předchozí lekce</button>
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/javascript/javascript4.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
           onclick="location.href = '/lessons/javascript/jQuery.html';">Následující lekce</button>
       </div>
@@ -305,6 +313,9 @@ previous.onclick = function() {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
 </body>
 
 </html>
