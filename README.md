@@ -119,7 +119,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Construct 3
     - pridat ukazku chovani flash na space shooter
-    
     - pridat lepsi popis chovani a treba i jejich ikony jak vypadaji
     
 - Youtube
@@ -141,32 +140,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 # Versions
 
-## October 2024 - Update
+## November 2024 - Update
 
-- General
-    - upravneni nahledu uvodni stranky
-    - pridani ikon
-    - navrzeni novych nahledoveho okna lekce
-
-- Construct 3
-    - upraveni nahledu lecke
-    - prejmenovat obrazky v materialech na ceske popisky
-    - vylepsit na hlavni strance lekce odkaz pro stazeni materialu (teda obrazku), zkusit to udelet jako stranku kde bude i popis jak to spravne extrahovat a tak
-
-
-- Minecraft Edu
-    - vytvoreni lekce
-
-- JavaScript
-    - Lekce 1: upraveni textu
-    - Lekce 2: upraveni textu
-    - Lekce 3: upraveni textu
-    - upraveni nahledu lecke
-    - lekce 2 - upravit escape sekvence tak aby tam byl alert
-    - lekce 3 - 3. sam prace - pridat alespon 3 jmena
-    - lekce 3 - po vysvetleni cyklu pridat ukol na otestovani zdali to pochopili
-    - lekce 3 - uprava ukazky promennych ve funkci, vysvetleni var a let
-    - lekce 3 - pridat ukazku a vysvetleni na generovani random cisla
 
 
 
