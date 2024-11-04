@@ -12,6 +12,8 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/javascript.js" defer></script>
+  <script src="/js/javascript/lekce4.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/javascript/javascript.css" rel="stylesheet">
@@ -136,6 +138,14 @@
         <li><strong>Odstraňovat prvky</strong>: Můžeš také odstranit něco, co už na stránce není potřeba.</li>
       </ul>
 
+      <h2>Vyhledávání: getElement</h2>
+      <p>DOM poskytuje metody pro vyhledávání prvků v dokumentu. Mezi hlavní metody patří:</p>
+      <ul>
+        <li><strong>document.getElementById</strong> - najde prvek podle atributu <code>id</code></li>
+        <li><strong>document.getElementsByTagName</strong> - najde všechny prvky s daným tagem</li>
+        <li><strong>document.getElementsByName</strong> - najde všechny prvky s atributem <code>name</code></li>
+      </ul>
+
       <h2>Příklad manipulace s DOMem</h2>
       <p>
         Pojďme se podívat na jednoduchý příklad. Máme tlačítko, které když klikneš, změní text na stránce. Tady je
@@ -230,7 +240,7 @@
                 <div id="mouseMoveArea" class="btn btn-info tlacitko-ukazka" style="width: 300px;">Pohyb myší</div>
               </div>
             </div>
-      
+
             <!-- Událost click -->
             <script>
               const alertButton = document.getElementById('alertButton');
@@ -238,7 +248,7 @@
                 alert('Tlačítko bylo kliknuto!');
               });
             </script>
-      
+
             <!-- Událost contextmenu (pravé tlačítko) -->
             <script>
               const noRightClickDiv = document.getElementById('noRightClick');
@@ -247,7 +257,7 @@
                 alert('Použití pravého tlačítka myši je zablokováno.');
               });
             </script>
-      
+
             <!-- Událost mousedown -->
             <script>
               const mouseDownButton = document.getElementById('mouseDownButton');
@@ -255,7 +265,7 @@
                 alert('Tlačítko myši bylo stisknuto!');
               });
             </script>
-      
+
             <!-- Událost mousemove -->
             <script>
               const mouseMoveArea = document.getElementById('mouseMoveArea');
@@ -271,30 +281,30 @@
         <div class="row">
           <div class="col-md-6">
             <h5>Ukázka: Zobrazení stisknuté klávesy</h5>
-      
+
             <!-- Oblast pro zobrazení stisknuté klávesy -->
             <div id="keyDisplay" class="p-3 mb-3 border" style="height: 50px;">
               Zde se zobrazí stisknutá klávesa
             </div>
-      
+
             <!-- Vysvětlení -->
             <p>Stiskněte jakoukoli klávesu a bude zobrazena výše.</p>
           </div>
         </div>
-      
+
         <script>
           // Přidáme událost keydown na celou stránku
-          document.addEventListener('keydown', function(event) {
+          document.addEventListener('keydown', function (event) {
             // Získání elementu pro zobrazení stisknuté klávesy
             const keyDisplay = document.getElementById('keyDisplay');
-      
+
             // Nastavení textu podle stisknuté klávesy
             keyDisplay.textContent = 'Stisknutá klávesa: ' + event.key;
           });
         </script>
       </section>
-      
-      
+
+
 
       <section class="bg-light p-4 rounded mb-4">
         <h3>Ukázka: Změna kurzoru pro různá tlačítka</h3>
@@ -353,192 +363,178 @@
 
 
 
+    <section class="bg-light p-4 rounded mb-4">
+      <h3>Přiřazení obslužných programů událostí</h3>
+      <p>
+        Jak má program reagovat, když došlo k nějakému úkonu? Právě na sledování událostí byl vytvořen obslužný program.
+        Obslužný program je určitou funkcí, která zafunguje, jakmile dojde k nějaké události.
+      </p>
+      <p>
+        Existuje několik způsobů, pomocí kterých je možné přiřadit události obslužný program:
+      </p>
+      <p>
+        Obslužný program lze definovat přímo v návrhu, v atributu, který se nazývá <strong>on-událost</strong>.
+        Například:
+      </p>
+
+      <div class="row">
+        <div class="col-md-9">
+          <div class="example">
+            <pre><code>&lt;input value="Stiskni mě" onclick="alert('Klik!')" type="button"&gt;</code></pre>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+          <input value="Stiskni mě" onclick="alert('Klik!')" type="button">
+        </div>
+      </div>
+    </section>
+
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Cvičení</h2>
+          <button id="right" class="btn btn-success"
+            onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/countRabbits.txt', 'countRabbits')">Řešení
+            samostatné
+            práce</button>
+        </div>
+        <h5>Spočítej králíky</h5>
+        <div class="row">
+          <div class="col-md-9">
+            <p>
+              Napiš jednoduchý program, provede 3 krát cyklus, a pokaždé vypíše pomocí funkce <code>alert</code> Králík
+              a
+              jeho číslo. Pro ukázku naleznete tlačítko vedle.
+            </p>
+          </div>
+          <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <input value="Stiskni mě" onclick="countRabbits()" type="button" class="btn btn-danger">
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-    <h3>Přiřazení obslužných programů událostí</h3>
-    <p>Jak má program reagovat, když došlo k nějakému úkonu? Právě na sledování událostí byl vytvořen obslužný program.
-      Obslužný program je určitou funkcí, která zafunguje, jakmile dojde k nějaké události.</p>
-    <p>Existuje několik způsobů, pomocí kterých je možné přiřadit události obslužný program:</p>
-    <p>Obslužný program lze definovat přímo v návrhu, v atributu, který se nazývá <strong>on-událost</strong>.
-      Například:</p>
+    <section class="bg-light p-4 rounded mb-4">
+      <h3>Získání hodnoty ze vstupního pole:</h3>
+      <p>
+        Pokud máme ve stránce formulářové pole pro uživatele, potřebujeme ho mít možnost vybrat a pak s ním
+        manipulovat.
+        Například:
+      </p>
 
-    <pre><code>&lt;input value="Stiskni mě" onclick="alert('Klik!')" type="button"&gt;</code></pre>
-
-    <h3>Příklad s funkcí countRabbits:</h3>
-    <pre><code>&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;script&gt;
-        function countRabbits() {
-            for (var i = 1; i &lt;= 3; i++) {
-                alert("Králík číslo " + i);
-            }
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;input type="button" onclick="countRabbits()" value="Spočítat králíky!" /&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-    <h3>Získání hodnoty ze vstupního pole:</h3>
-    <p>Pokud máme ve stránce formulářové pole pro uživatele, potřebujeme ho mít možnost vybrat a pak s ním manipulovat.
-      Například:</p>
-
-    <pre><code>&lt;input id="myInput" type="text"&gt;&lt;/input&gt;
+      <div class="row">
+        <div class="col-md-9">
+          <div class="example">
+            <pre><code>
+&lt;input id="myInput" type="text"&gt;&lt;/input&gt;
 &lt;script&gt;
-    var inputField = document.getElementById("myInput");
+    let inputField = document.getElementById("myInput");
     alert(inputField.value);
 &lt;/script&gt;
-</code></pre>
+            </code></pre>
+          </div>
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-center">
+          <form>
+            <input id="myInput" type="text"></input>
+            <button onclick="getMyInput(event)" class="btn btn-primary" style="margin-top: 10px;">Tisk vstupu</button>
+          </form>
+          <script>
+            function getMyInput(event) {
+              event.preventDefault();
+              let inputField = document.getElementById("myInput");
+              alert(inputField.value);
+            }
+          </script>
+        </div>
+    </section>
 
-    <h2>Práce s dokumentem</h2>
-    <h3>Úvod do DOM</h3>
-    <p>Během práce v HTML se můžeme setkat s dynamickými změnami na stránce. Základním prvkem práce s takovými změnami
-      je DOM (Document Object Model).</p>
-    <p>DOM představuje objektový model HTML dokumentů a slouží k dynamickým změnám prvků stránky pomocí JavaScriptu.</p>
 
-    <h3>Vyhledávání: getElement*</h3>
-    <p>DOM poskytuje metody pro vyhledávání prvků v dokumentu. Mezi hlavní metody patří:</p>
-    <ul>
-      <li><strong>document.getElementById</strong> - najde prvek podle atributu <code>id</code></li>
-      <li><strong>document.getElementsByTagName</strong> - najde všechny prvky s daným tagem</li>
-      <li><strong>document.getElementsByName</strong> - najde všechny prvky s atributem <code>name</code></li>
-    </ul>
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h2>Praktické příklady:</h2>
+      <p>
+        Níže naleznete pár ukázkových příkladu. Kde se snažím o demstraci probrané látky a také lepší vyzuiální
+        vysvětlení.
+      </p>
 
-    <h3>Praktické příklady:</h3>
+      <section>
+        <h4>Příklad 1: Po stisknutí tlačítka se změní barva na náhodnou.</h4>
 
-    <h4>Příklad 1: Po stisknutí tlačítka změnit hodnotu.</h4>
-    <pre><code>&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;script&gt;
-        function onButton() {
-            var text = document.getElementById('text');
-            text.innerHTML = "Tlačítko už bylo stisknuto";
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form&gt;
-        &lt;p id="text"&gt;Tlačítko nikdo nestiskl!&lt;/p&gt;
-        &lt;input type="button" value="Stiskni mě!" onclick="onButton()" /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-6">
+            <p id="text" style="font-weight: bolder; font-size: xxx-large;">Demo text!</p>
+          </div>
+          <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <input type="button" value="Stiskni mě!" onclick="onButtonColorcChange()" />
+          </div>
+        </div>
+      </section>
 
-    <h4>Příklad 2: Po stisknutí tlačítka se změní barva na náhodnou.</h4>
-    <pre><code>&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;script&gt;
-        function onButton() {
-            var text = document.getElementById('text');
-            var r = Math.floor(Math.random() * 250);
-            var g = Math.floor(Math.random() * 250);
-            var b = Math.floor(Math.random() * 250);
-            text.style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form&gt;
-        &lt;p id="text"&gt;Demo text!&lt;/p&gt;
-        &lt;input type="button" value="Stiskni mě!" onclick="onButton()" /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+      <section>
+        <h4 class="mb-3">Příklad 2: Malá kalkulačka</h4>
+        <div class="center">
+          <form>
+            <div class="row mb-3 align-items-center">
+              <label for="a" class="col-sm-2 col-form-label">a:</label>
+              <div class="col-sm-4">
+                <input id="a" type="number" value="0" class="form-control">
+              </div>
+            </div>
 
-    <h4>Příklad 3: Malá kalkulačka.</h4>
-    <pre><code>&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8" /&gt;
-    &lt;script&gt;
-        function onButton() {
-            var aEl = document.getElementById('a');
-            var bEl = document.getElementById('b');
-            var cEl = document.getElementById('c');
-            var a = Number(aEl.value);
-            var b = Number(bEl.value);
-            var c = a + b;
-            cEl.value = c;
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form&gt;
-        &lt;p&gt;a:&lt;input id="a" type="number" value="0" /&gt;&lt;/p&gt;
-        &lt;p&gt;b:&lt;input id="b" type="number" value="0" /&gt;&lt;/p&gt;
-        &lt;p&gt;a + b:&lt;input id="c" readonly /&gt;&lt;/p&gt;
-        &lt;input type="button" value="Stiskni mě!" onclick="onButton()" /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+            <div class="row mb-3 align-items-center">
+              <label for="b" class="col-sm-2 col-form-label">b:</label>
+              <div class="col-sm-4">
+                <input id="b" type="number" value="0" class="form-control">
+              </div>
+            </div>
 
-    <h3>Úkoly k procvičení:</h3>
-    <ol>
-      <li>Vytvořte tlačítko, které při stisknutí změní barvu pozadí stránky na modrou.</li>
-      <li>Vytvořte formulář, který při odeslání zobrazí hodnotu zadanou do pole.</li>
-    </ol>
+            <div class="row mb-3 align-items-center">
+              <label for="c" class="col-sm-2 col-form-label">a + b:</label>
+              <div class="col-sm-4">
+                <input id="c" readonly class="form-control" style="background-color: #f0f0f0;">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <button type="button" onclick="onButtonCalc()" class="btn btn-primary w-100">Stiskni mě!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+
+
+
 
     <section>
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Webová kalkulačka</h3>
-          <p>
-            Nyní si ukážeme, jak vytvořit základní kalkulačku jako je tahle. Využijeme k tomu své znalosti HTML a CSS, a
-            nově nabyté znalosti v jazyce JavaScript.
-          </p>
-          <p>
-            Při vytváření této kalkulačky byl použit Boostrap pro snadné vytváření vzhledu, trocha CSS pro úpravu stylů
-            a JavaScript, který zajistí její funkčnost.
-          </p>
-          <p>
-            Kalkulačka umožňuje základní matematické operace jako sčítání, odčítání, násobení a dělení, a zvládá i
-            mazání a resetování vstupů.
-          </p>
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Samostaná práce</h2>
+          <button id="right" class="btn btn-success"
+            onclick="showCodePW('/lessons/javascript/ukazky/ukazky-codu/formulartest.txt', 'formulartest')">Řešení
+            samostatné
+            práce</button>
         </div>
-        <div class="col-md-8">
-          <div class="calculator">
-            <input type="text" id="display" class="form-control mb-3" readonly>
-
-            <div class="row">
-              <button onclick="clearDisplay()" class="btn btn-secondary col-3 calc-button">C</button>
-              <button onclick="deleteLast()" class="btn btn-secondary col-3 calc-button">DEL</button>
-              <button onclick="appendToDisplay('/')" class="btn btn-secondary col-3 calc-button">/</button>
-              <button onclick="appendToDisplay('*')" class="btn btn-secondary col-3 calc-button">*</button>
-            </div>
-
-            <div class="row">
-              <button onclick="appendToDisplay('7')" class="btn btn-light col-3 calc-button">7</button>
-              <button onclick="appendToDisplay('8')" class="btn btn-light col-3 calc-button">8</button>
-              <button onclick="appendToDisplay('9')" class="btn btn-light col-3 calc-button">9</button>
-              <button onclick="appendToDisplay('-')" class="btn btn-secondary col-3 calc-button">-</button>
-            </div>
-
-            <div class="row">
-              <button onclick="appendToDisplay('4')" class="btn btn-light col-3 calc-button">4</button>
-              <button onclick="appendToDisplay('5')" class="btn btn-light col-3 calc-button">5</button>
-              <button onclick="appendToDisplay('6')" class="btn btn-light col-3 calc-button">6</button>
-              <button onclick="appendToDisplay('+')" class="btn btn-secondary col-3 calc-button">+</button>
-            </div>
-
-            <div class="row">
-              <button onclick="appendToDisplay('1')" class="btn btn-light col-3 calc-button">1</button>
-              <button onclick="appendToDisplay('2')" class="btn btn-light col-3 calc-button">2</button>
-              <button onclick="appendToDisplay('3')" class="btn btn-light col-3 calc-button">3</button>
-              <button onclick="calculate()" class="btn btn-primary col-3 calc-button">=</button>
-            </div>
-
-            <div class="row">
-              <button onclick="appendToDisplay('0')" class="btn btn-light col-6 calc-button">0</button>
-              <button onclick="appendToDisplay('.')" class="btn btn-light col-3 calc-button">.</button>
-            </div>
+        <h5>Formulářový test</h5>
+        <div class="row">
+          <div class="col-md-9">
+            <p>
+              Napiš jednoduchý program, který přijme vstup od uživatele prostřednictvím formuláře. Program by měl
+              zpracovat zadané údaje a provést jednoduchou analýzu nebo výpočet. Můžeš například vytvořit kalkulačku,
+              která provádí základní aritmetické operace, nebo aplikaci, která odhaduje počet králíků na základě
+              zadaných parametrů. Nezapomeň na validaci vstupních údajů, aby byl uživatelský zážitek co nejlepší!
+            </p>
+            <p>
+              Cílem této úlohy je posílit tvé dovednosti v JavaScriptu, zejména v oblasti manipulace s DOM a zpracování
+              událostí. Také se zamysli nad tím, jak efektivně strukturovat kód a zajišťovat jeho opětovné použití.
+            </p>
+          </div>
+          <div class="col-md-3 d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary"
+              onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/formulartest.html', 'formulartest')">Test</button>
           </div>
         </div>
       </div>
