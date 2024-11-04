@@ -23,3 +23,9 @@ function onButtonCalc() {
     var c = a + b;
     cEl.value = c;
 }
+
+function getMyInput(event) {
+    event.preventDefault();
+    let inputField = document.getElementById("myInput");
+    alert(inputField.value);
+  }
