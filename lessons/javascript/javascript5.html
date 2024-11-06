@@ -17,6 +17,7 @@
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/javascript/javascript.css" rel="stylesheet">
+  <link href="/css/javascript/lekce5.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -99,29 +100,34 @@
     </div>
     <h2>Lekce 5. Vytvoření slideru v JavaScriptu.</h2>
 
-    <h3>Vytvoření jednoduché slide-show</h3>
-    <p>Zajímavým prvkem, který je možné vytvořit s pomocí JavaScriptu, je slide-show. K jejímu vytvoření bude potřebný
-      kontejner pro slidery a slidy samotné.</p>
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h3>Vytvoření jednoduché slide-show</h3>
+      <p>Zajímavým prvkem, který je možné vytvořit s pomocí JavaScriptu, je slide-show. K jejímu vytvoření bude potřebný
+        kontejner pro slidery a slidy samotné.</p>
 
-    <p>Příklad slide-show:</p>
-    <img id="obrazky" src="/img/javascript/slideshowImg/img1.jpeg" />
-    <script>
-      slideshow()
-    </script>
+      <p>Příklad slide-show:</p>
+      <img id="obrazky" src="/img/javascript/slideshowImg/img1.jpeg" />
+      <script>
+        slideshow()
+      </script>
+    </section>
 
-    <h3>Základní styly pro slider</h3>
-    <p>Mezi jejich funkční možnosti patří možnost:</p>
-    <ul>
-      <li>vytvářet kontejner pro slidy</li>
-      <li>rozmisťovat slidy jeden nad druhým uvnitř kontejneru</li>
-      <li>regulovat chování slidů při zobrazení a zmizení</li>
-      <li>plynule měnit průhlednost slidů pro vytvoření efektu zhasnutí a objevení</li>
-    </ul>
+    <section class="bg-light p-4 rounded mb-4 ">
 
-    <p>Je důležité mít na paměti, že před prací v CSS je třeba změnit třídy a použité identifikátory, aby nedocházelo k
-      konfliktům s vašimi stránkami. Pojďme se podívat na toto CSS:</p>
+      <h3>Základní styly pro slider</h3>
+      <p>Mezi jejich funkční možnosti patří možnost:</p>
+      <ul>
+        <li>vytvářet kontejner pro slidy</li>
+        <li>rozmisťovat slidy jeden nad druhým uvnitř kontejneru</li>
+        <li>regulovat chování slidů při zobrazení a zmizení</li>
+        <li>plynule měnit průhlednost slidů pro vytvoření efektu zhasnutí a objevení</li>
+      </ul>
 
-    <pre><code>
+      <p>Je důležité mít na paměti, že před prací v CSS je třeba změnit třídy a použité identifikátory, aby nedocházelo
+        k
+        konfliktům s vašimi stránkami. Pojďme se podívat na toto CSS:</p>
+
+      <pre><code>
 /* Prvotní styly */
 #slides {
     position: relative;
@@ -147,11 +153,27 @@
     z-index: 2;
 }
 </code></pre>
+      <ul id="slides">
+        <li class="slide showing"><img src="/img/javascript/slideshowImg/img1.jpeg" alt="Slide 1"
+            style="width:100%; height:100%;"></li>
+        <li class="slide"><img src="/img/javascript/slideshowImg/img2.jpeg" alt="Slide 2"
+            style="width:100%; height:100%;"></li>
+        <li class="slide"><img src="/img/javascript/slideshowImg/img3.jpeg" alt="Slide 3"
+            style="width:100%; height:100%;"></li>
+        <li class="slide"><img src="/img/javascript/slideshowImg/img4.jpeg" alt="Slide 4"
+            style="width:100%; height:100%;"></li>
+      </ul>
+      <script>
+        slideshow2()
+      </script>
+    </section>
 
-    <h3>Druhotné styly</h3>
-    <p>Přidejme do naší slide-show různé styly, aby byla zajímavější. Na demonstrování použijeme následující styly:</p>
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h3>Druhotné styly</h3>
+      <p>Přidejme do naší slide-show různé styly, aby byla zajímavější. Na demonstrování použijeme následující styly:
+      </p>
 
-    <pre><code>
+      <pre><code>
 .slide {
     font-size: 40px;
     padding: 40px;
@@ -181,11 +203,26 @@
 }
 </code></pre>
 
-    <h3>JavaScript pro slider</h3>
-    <p>JavaScript při práci se slidy vykonává zásadní úlohu – skrývá aktuální slid a zobrazuje následující. K realizaci
-      této úlohy je třeba změnit názvy tříd slidů. Kód JS:</p>
+      <ul id="slides3">
+        <li class="slide3 showing3">Slide 1: Červená</li>
+        <li class="slide3">Slide 2: Oranžová</li>
+        <li class="slide3">Slide 3: Zelená</li>
+        <li class="slide3">Slide 4: Modrá</li>
+        <li class="slide3">Slide 5: Fialová</li>
+      </ul>
 
-    <pre><code>
+      <script>
+        slideshow3();
+      </script>
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h3>JavaScript pro slider</h3>
+      <p>JavaScript při práci se slidy vykonává zásadní úlohu – skrývá aktuální slid a zobrazuje následující. K
+        realizaci
+        této úlohy je třeba změnit názvy tříd slidů. Kód JS:</p>
+
+      <pre><code>
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 2000);
@@ -197,13 +234,30 @@ function nextSlide() {
 }
 </code></pre>
 
-    <h3>Pauza a ovládání slideru</h3>
-    <p>Do slideru můžeme přidat ovládací prvky, jako například tlačítko pauzy:</p>
+      <ul id="slides4">
+        <li class="slide4 showing4">Slide 1: Červená</li>
+        <li class="slide4">Slide 2: Oranžová</li>
+        <li class="slide4">Slide 3: Zelená</li>
+        <li class="slide4">Slide 4: Modrá</li>
+        <li class="slide4">Slide 5: Fialová</li>
+      </ul>
 
-    <button class="controls" id="pause">Pauza</button>
+      <!-- Komponenta pro popis aktuálního slidu -->
+      <div id="slide-description">Aktuální slide: 1</div>
 
-    <p>JavaScript pro pauzu:</p>
-    <pre><code>
+      <script>
+        // Spustí slider s komponentou pro popis aktuálního slidu
+        slideshow4();
+      </script>
+    </section>
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h3>Pauza a ovládání slideru</h3>
+      <p>Do slideru můžeme přidat ovládací prvky, jako například tlačítko pauzy:</p>
+
+
+
+      <p>JavaScript pro pauzu:</p>
+      <pre><code>
 var playing = true;
 var pauseButton = document.getElementById('pause');
 
@@ -228,14 +282,29 @@ pauseButton.onclick = function() {
 };
 </code></pre>
 
-    <h3>Ovládací tlačítka pro následující a předchozí slid</h3>
-    <p>Přidáme tlačítka pro následující a předchozí slid:</p>
+      <!-- Container pro slider -->
+      <ul id="slides5">
+        <li class="slide5 showing5">Slide 1: Červená</li>
+        <li class="slide5">Slide 2: Oranžová</li>
+        <li class="slide5">Slide 3: Zelená</li>
+        <li class="slide5">Slide 4: Modrá</li>
+        <li class="slide5">Slide 5: Fialová</li>
+      </ul>
 
-    <button class="controls" id="previous">Předchozí</button>
-    <button class="controls" id="next">Další</button>
+      <!-- Tlačítko pro pauzu/spuštění -->
+      <button class="controls" id="pause">Pauza</button>
 
-    <p>JavaScript pro ovládání:</p>
-    <pre><code>
+      <script>
+        // Spustí slider s funkcí pro pauzu a spuštění
+        slideshow5();
+      </script>
+    </section>
+    <section class="bg-light p-4 rounded mb-4 ">
+      <h3>Ovládací tlačítka pro následující a předchozí slid</h3>
+      <p>Přidáme tlačítka pro následující a předchozí slid:</p>
+
+      <p>JavaScript pro ovládání:</p>
+      <pre><code>
 function nextSlide() {
     goToSlide(currentSlide + 1);
 }
@@ -264,30 +333,24 @@ previous.onclick = function() {
 };
 </code></pre>
 
-    <section class="odstavec">
-      <h3>Příklad cyklu for</h3>
-      <div class="row">
-        <div class="col-md-8">
-          <p>Tento příklad používá cyklus for k zobrazení čísel 1 až 5 jako seznam.</p>
-          <ul id="list"></ul>
-          <script>
-            const list = document.getElementById("list");
-            for (let i = 1; i <= 5; i++) {
-              const listItem = document.createElement("li");
-              listItem.textContent = "Číslo " + i;
-              list.appendChild(listItem);
-            }
-          </script>
-        </div>
-        <div class="col-md-3">
-          <button class="btn btn-info"
-            onclick="showCode('/lessons/javascript/ukazky/ukazky-codu/forLoop.txt', 'forLoop')">Zobrazit
-            kód</button>
-        </div>
-      </div>
+      <ul id="slides6">
+        <li class="slide6 showing6">Slide 1</li>
+        <li class="slide6">Slide 2</li>
+        <li class="slide6">Slide 3</li>
+        <li class="slide6">Slide 4</li>
+        <li class="slide6">Slide 5</li>
+      </ul>
+
+      <button id="previous6">Předchozí</button>
+      <button id="pause6">Pauza</button>
+      <button id="next6">Další</button>
+
+
+      <script>
+        slideshow6();
+      </script>
+
     </section>
-
-
 
 
 
