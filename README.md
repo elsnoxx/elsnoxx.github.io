@@ -135,6 +135,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         - lekce 4
         - lekce 5
     - projekt
+    - opravit test aby fungoval jak ma
+    - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
     
 # Versions
