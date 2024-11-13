@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hádání čísla</title>
+</head>
+<body>
+    <script>
+        var cislo = Math.floor(Math.random() * 10) + 1;
+        var uhadnuto = true;
+
+        while (uhadnuto) {
+            var tip = Number(prompt("Hádej číslo od 1 do 10:"));
+
+            if (tip === cislo) {
+                alert("Uhádl/a jsi!");
+                uhadnuto = false;
+            } else {
+                alert("Neuhádl/a jsi. Zkus to znovu.");
+            }
+        }
+    </script>
+</body>
+</html>

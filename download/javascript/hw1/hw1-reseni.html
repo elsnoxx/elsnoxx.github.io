@@ -1,0 +1,24 @@
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výpočet</title>
+</head>
+<body>
+    <script>
+        var soucet = 0;
+        for (var i = 0; i < 5; i++) {
+            var cislo = Number(prompt("Zadej číslo " + (i + 1) + ":"));
+            soucet += cislo;
+        }
+        
+        var nasobek = Number(prompt("Zadej číslo k násobení:"));
+        var vysledek = soucet * nasobek;
+        
+        vysledek = vysledek - 23;
+        vysledek = vysledek / 5;
+        
+        alert("Výsledek je: " + vysledek);
+    </script>
+</body>
+</html>
