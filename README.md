@@ -59,6 +59,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat tlacitka dropdown tak ze budou rozdelene podle tematickych okruhu, treba dropdown lekce -> okruhy -> jednotlive lekce
     - kouknout na https://github.com/xsuchy/programovani_pro_deti/tree/main
     - zkusit navrhnout seznam lekci pod card v boostrapu s fotky co se bude dit v lekci
+    - v novem navrhu je problem s obrazky pokud se zmensi plocha tak obrazky se nezmensi ale zalezi v jakem rozliseni
 
     
     
