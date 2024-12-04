@@ -12,9 +12,11 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/python/python.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
+  <link href="/css/python/intermedie.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -25,9 +27,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -56,8 +58,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -82,8 +86,12 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner.html';" class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner2.html';" class="btn btn-primary">Následují
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner2.html';"
+              class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -95,7 +103,7 @@
 
 
     <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Úvod, IDE, Prvni program, proměnné</h1>
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Úvod, IDE, Opakování, cyklus</h1>
       <p style="margin-bottom: 64px; ">
         Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
         <strong>Microsoft</strong> s názvem
@@ -105,67 +113,222 @@
     </div>
 
 
+
     lekce 1
 
-znovu ukazat prostredi - VSC + doplnky
+    znovu ukazat prostredi - VSC + doplnky
 
---------------------------------------------------------------------
-uvest do konvence pro zápis proměnných používané v této učebnici
+    --------------------------------------------------------------------
+    uvest do konvence pro zápis proměnných používané v této učebnici
 
-■ Všechny názvy budou psány v angličtině.
-■ Všechny názvy budou psány malými písmeny.
-■ Víceslovné názvy budou používat
-znak podtržítka „_“.
-■ Názvy proměnných budou popisné, a tedy samotný název bude sdělovat, k čemu proměnná slouží. Například pokud má proměnná obsahovat počet čísel, která se mají zadat, bylo by dobré ji nazvat „count“. Nebo pokud bude proměnná obsahovat křestní jméno
+    ■ Všechny názvy budou psány v angličtině.
+    ■ Všechny názvy budou psány malými písmeny.
+    ■ Víceslovné názvy budou používat
+    znak podtržítka „_“.
+    ■ Názvy proměnných budou popisné, a tedy samotný název bude sdělovat, k čemu proměnná slouží. Například pokud má
+    proměnná obsahovat počet čísel, která se mají zadat, bylo by dobré ji nazvat „count“. Nebo pokud bude proměnná
+    obsahovat křestní jméno
 
---------------------------------------------------------------------
+    --------------------------------------------------------------------
 
-Zopakovat cykly
--For, While
-- pridat i ukazky jak se tohle pise v pythonu
+    <h1>Opakování</h1>
 
-For cysklus
+    <p>potrabe vedet promenne, scitani a deleni, a funkci len(), int(), input(), str()</p>
 
-je vhodný pro situace, kdy je předem známo, kolikrát bude třeba cyklus opakovat. V základní podobě může být použit bez podmíněných konstrukcí. Pomocná proměnná a její změnu řídí samotný cyklus podle definované intervalu.
+    <h2>Cykly</h2>
+    <p>V programování se občas stane, že potřebujeme udělat stejnou věc několikrát. Například, když chceme seřadit čísla
+      nebo vykonat stejný úkol vícekrát. Abychom se vyhnuli psaní stejného kódu znovu a znovu, používáme
+      <strong>cykly</strong>. Cykly nám pomáhají opakovat určité příkazy, dokud není splněna nějaká podmínka.
+    </p>
 
-
-while cyklus
-
-je vhodný pro situace, kdy
-není předem známo, kolikrát bude nutné cyklus opakovat.
-opakovat, a proto musí být vždy použit ve spojení s
-
-s nějakou podmínkou, která se vyhodnocuje v každém kole cyklu. Pomocná proměnná pro tento cyklus musí být definována a spravována námi.
-
---------------------------------------------------------------------
-
-Ukazka pouziti - Sam prace na max 10 min
+    <h4>Co je to cyklus?</h4>
+    <p>Cyklus je jako automat, který dělá určité úkoly znovu a znovu, dokud mu neřekneme, aby přestal. Představ si to
+      jako hru, kde se hráč snaží udělat něco, dokud se mu to nedaří.</p>
 
 
-ja ukazu jak na sumu pak sam prace pro zaky jako rozsireni udelat aritmeticky prumer
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h4>Cyklus <code>while</code></h4>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Cyklus <code>while</code> je vhodný pro situace, kdy není předem známo, kolikrát bude nutné cyklus opakovat.
+            Tento cyklus se opakuje, dokud je splněna podmínka. Je proto často používán ve spojení s podmíněnými
+            konstrukcemi.
+          </p>
+          <p>
+            Pomocná proměnná musí být definována a spravována námi, aby bylo možné kontrolovat průběh cyklu. Základní
+            struktura vypadá takto:
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+              <div class="example">
+                <code>
+i = 0
+while (podmínka):
+    # kód, který se opakuje
+    i += 1  # Spravujeme proměnnou
+                </code>
+              </div>
+            </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3:
+          </p>
+          <p>
+            V tomto příkladu cyklus proběhne třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1. Každé
+            provedení cyklu se nazývá <strong>iterace</strong>.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+              <div class="example">
+                <code>
+i = 0
+while i < 3:
+    print(i)  # Zobrazí číslo
+    i += 1    # Zvyšuje i o 1
+                </code>
+              </div>
+            </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h4>Cyklus <code>for</code></h4>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Cyklus <code>for</code> je vhodný pro situace, kdy je předem známo, kolikrát bude třeba cyklus opakovat. V
+            Pythonu
+            se iteruje přes kolekce (například seznamy, řetězce) nebo pomocí funkce <code>range()</code>.
+          </p>
+          <p>
+            Pomocná proměnná a její změnu řídí samotný cyklus podle definovaného intervalu. Základní struktura vypadá
+            takto:
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre>
+              <div class="example">
+                <code>
+for prvek in kolekce:
+    # kód, který se provede pro každý prvek
+                </code>
+              </div>
+            </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Zde je příklad, který ukáže čísla od 0 do 2:
+          </p>
+          <ul>
+            <li><strong>Začátek:</strong> <code>range(3)</code> vytváří sekvenci čísel od 0 do 2.</li>
+            <li><strong>Podmínka:</strong> Cyklus pokračuje, dokud existují prvky k iteraci.</li>
+            <li><strong>Krok:</strong> Automaticky postupujeme k dalšímu číslu v sekvenci.</li>
+            <li><strong>Tělo:</strong> <code>print(i)</code> zobrazí aktuální číslo.</li>
+          </ul>
+          <p>
+            Cyklus <code>for</code> je velmi efektivní při práci s iterovatelnými objekty a šetří čas při psaní
+            opakujícího
+            se kódu!
+          </p>
+        </div>
+        <div class="col-md-5 odstavec">
+          <pre>
+              <div class="example">
+                <code>
+for i in range(3):  # range(3) generuje čísla 0, 1, 2
+    print(i)  # Zobrazí aktuální číslo
+                </code>
+              </div>
+            </pre>
+        </div>
+      </div>
+    </section>
 
 
-pouziti s cyklem for, potrabe vedet promenne, scitani a deleni, a funkci len(), int(), input(), str()
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Cvičení 1</h2>
+          <button id="right" class="btn btn-success"
+            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1_suma.py', 'lekce1_suma')">Řešení
+            samostatné
+            práce</button>
+        </div>
+        <h5>Suma z X čísel</h5>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>
+              Napiš jednoduchý program, který se uživatele zeptá na číslo kolik vstupů bude, a pak všechna čísla sečte a
+              zobrazí
+              výsledek.
+              Můžeš použít cyklus <code>for</code> nebo <code>while</code> k tomu, aby se program ptal znovu a znovu.
+              Nakonec program spočítá součet a zobrazí ho.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img class="myImg img-fluid" src="/img/python_intermedie/lekce1/suma.png" alt="Komíny"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
 
---------------------------------------------------------------------
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Cvičení 2</h2>
+          <button id="right" class="btn btn-success"
+            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1_aritmeticky_prumer.py', 'lekce1_aritmeticky_prumer')">Řešení
+            samostatné
+            práce</button>
+        </div>
+        <h5>Průměr z X čísel</h5>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>
+              Napiš jednoduchý program, který se uživatele zeptá na číslo kolik vstupů bude, a pak všechna čísla sečte
+              vydělí počtem vstupů a vypíše sumu a průměr.
+              Můžeš použít cyklus <code>for</code> nebo <code>while</code> k tomu, aby se program ptal znovu a znovu.
+              Nakonec program spočítá součet a zobrazí ho.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <img class="myImg img-fluid" src="/img/python_intermedie/lekce1/prumer.png" alt="Komíny"
+              style="width:100%; max-width:300px; height: auto" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
 
-Ukazka sumy a aritmetickeho prumeru pomoci while
-
-nechci tohle po zacich ale ukazat a vysvetlit na tom rozdil
-
---------------------------------------------------------------------
-
-Herni menu
-
-vysvetlit pouziti None slovaicka u promenne
-
-
-projit si a vytvorit takove menu za pomoci dokumentu lekce 2
 
 
 
 
     
+
+
+    --------------------------------------------------------------------
+
+    Herni menu
+
+    vysvetlit pouziti None slovaicka u promenne
+
+
+    projit si a vytvorit takove menu za pomoci dokumentu lekce 2
+
+
+
+
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
