@@ -113,27 +113,40 @@
     </div>
 
 
+    <div class="bg-light p-4 rounded mb-4 odstavec">
+      <h1>Konvence pro zápis proměnných</h1>
+      <p>Tato učebnice používá následující konvence pro pojmenování proměnných v kódu:</p>
+      <ul style="padding-left: 100px;">
+        <li>Všechny názvy budou psány v <strong>angličtině</strong>.</li>
+        <li>Všechny názvy budou psány <strong>malými písmeny</strong>.</li>
+        <li>Víceslovné názvy budou používat znak podtržítka <code>_</code> (například <code>first_name</code>).</li>
+        <li>Názvy proměnných budou popisné, aby bylo zřejmé, k čemu proměnná slouží.</li>
+      </ul>
+      <h4>Příklady:</h4>
+      <pre>
+  <code>
+  # Správné pojmenování
+count = 10               # počet čísel
+first_name = "John"      # křestní jméno
+total_sum = 100          # celkový součet
 
-    lekce 1
-
-    znovu ukazat prostredi - VSC + doplnky
-
-    --------------------------------------------------------------------
-    uvest do konvence pro zápis proměnných používané v této učebnici
-
-    ■ Všechny názvy budou psány v angličtině.
-    ■ Všechny názvy budou psány malými písmeny.
-    ■ Víceslovné názvy budou používat
-    znak podtržítka „_“.
-    ■ Názvy proměnných budou popisné, a tedy samotný název bude sdělovat, k čemu proměnná slouží. Například pokud má
-    proměnná obsahovat počet čísel, která se mají zadat, bylo by dobré ji nazvat „count“. Nebo pokud bude proměnná
-    obsahovat křestní jméno
-
-    --------------------------------------------------------------------
+# Špatné pojmenování
+x = 10                   # název není popisný
+a = "John"               # název není popisný
+sumTotal = 100           # porušuje konvenci malých písmen
+</code>
+      </pre>
+      <h4>Další poznámky:</h4>
+      <p>
+        Používání anglických názvů je důležité, protože to usnadňuje čtení kódu mezinárodním týmům.
+        Použití popisných názvů proměnných také přispívá k lepší čitelnosti kódu, což zvyšuje produktivitu a snižuje
+        pravděpodobnost chyb.
+      </p>
+    </div>
 
     <h1>Opakování</h1>
 
-    <p>potrabe vedet promenne, scitani a deleni, a funkci len(), int(), input(), str()</p>
+
 
     <h2>Cykly</h2>
     <p>V programování se občas stane, že potřebujeme udělat stejnou věc několikrát. Například, když chceme seřadit čísla
@@ -313,17 +326,139 @@ for i in range(3):  # range(3) generuje čísla 0, 1, 2
 
 
 
-    
 
 
-    --------------------------------------------------------------------
 
-    Herni menu
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2>Tvorba menu</h2>
+      <p>
+        Začneme s úvodními hlášky našeho programu. Poté si připravíme základními výpisi menu. Menu bude obsahovat
+        nasledujici funkcnosti.
+      </p>
+      <ul>
+        <li>[1] Výpis hráčov hokejového klubu</li>
+        <li>[2] Pridanie hráča za člena klubu</li>
+        <li>[3] Vyradenie hráča z členstva v klube</li>
+        <li>[4] Zotriedenie zoznamu hráčov</li>
+        <li>[0] Ukončenie programu</li>
+      </ul>
+      <p>
+        Následně si naprogramujeme proměnnou <strong>selection</strong>, kterou nastavíme na <strong>None</strong>.
+        Teď nám ještě zbývá udělůat logika pomocí <code>if</code>, <code>elif</code> a <code>else</code>. Takže pro
+        každou funkčnost meny vypíšeme výber uživatele.
+      </p>
+      <pre>
+        <div class="example">
+          <code>
+print(f"Zvolil si možnosť #{selection}.") # výpis pro výběry 1 až 4
+print("Program bol ukončený.") # výpis pro výběr 0
+print("Neznáma voľba.") # výpis pro šoppatný výběr
+          </code>
+        </div>
+      </pre>
 
-    vysvetlit pouziti None slovaicka u promenne
+      <p>
+        Pokud již máme vše vyzkoušíme si aplikaci zabalit do nekoněcného cyklu. Který bude končít právě pokud uživatel
+        zvolí možnost 0.
+        Předpis cyklu je uveden níže
+      </p>
+      <div class="example">
+        <code>
+while selection != 0:
+    # zde bude hlavní logika programu
+        </code>
+      </div>
+      </pre>
+
+      <p>
+        Vyzkoušej te si co se stane pokud zadáte do programu písmeno. Funguje?
+        Ne nefunguje a proč tomu tak je? Budem muset do naší apliklace ještě přidat jeden <code>if</code>
+        ,který nám bude hlídat jesli vstup je opravdu číslo.
+      </p>
+      <div class="example">
+        <code>
+if selection.isnumeric() == True:
+    # výběr funkčnosti
+else:
+    print("Neznáma voľba.")
+      </code>
+      </div>
+      </pre>
+
+      <p>
+        Tím pádem jsme udělali hlavní menu funkčí a hlídající špatné vstupy. Teď se teda vrhneme na funkčnost
+        jednotlivých fukcí našeho meny.
+      </p>
+      <ol>
+        <li>
+          <h6>Funkčnost 1</h6>
+          <p>
+            Pro vytvoření funkčnosti budeme potřebovat vytvořít si novou proměnnou s nazvem
+            <strong>hockey_club</strong>. Ta bude vytvořena na začátku programu.
+            Dále v <code>if</code>u kde se nachází detekce tohoto vstupu musíme přidat výpis tohoto seznamu.
+          </p>
+          <div class="example">
+            <code>
+print(f"Zvolil jsi možnost #{selection}.")
+print("Seznam členů klubu je: ")
+print(hockey_club)
+        </code>
+          </div>
+          </pre>
+        </li>
+        <li>
+          <h6>Funkčnost 2</h6>
+          <p>
+            Pro vytvoření funkčnosti budeme potřebovat vstup od uživatele, který nám zadá název jednoho hráče. Ten poté
+            pomocí funkce <code>append()</code> vložíme do seznamu <strong>hockey_club</strong>.
+          </p>
+          <div class="example">
+            <code>
+print(f"Zvolil jsi možnost #{selection}.")
+player_name = input("Zadej jméno hráče... ")
+hockey_club.append(player_name)
+        </code>
+          </div>
+          </pre>
+        </li>
+        <li>
+          <h6>Funkčnost 3</h6>
+          <p>
+            Pro vytvoření funkčnosti budeme potřebovat vstup od uživatele, který nám zadá pořadové číslo hráče. A poté ho ze 
+            seznamu <strong>hockey_club</strong> odstraníme. <strong>Nezapomeňte že programově je potřeba odečíst 1 od vstupu.</strong>
+            Také je potřeba před odstraněním zkontrolovat jestli vstup je možný pomocí <code>if</code>.
+          </p>
+          <div class="example">
+            <code>
+print(f"Zvolil jsi možnost #{selection}.")
+delete_player_number = int(input("Zadej pořadové číslo hráče pro ukončení jeho členství... "))
+
+if 0 < delete_player_number <= len(hockey_club):
+    del hockey_club[delete_player_number - 1]
+else:
+    print("Chyba: Hráč s tímto číslem neexistuje.")
+        </code>
+          </div>
+          </pre>
+        </li>
+        <li>
+          <h6>Funkčnost 4</h6>
+          <p>
+            Pro vytvoření funkčnosti budeme setřídíme seznam hráčů pomocí funkce <code>Sort()</code>. Poté vypíšeme celý seznam do konzole.
+          </p>
+          <div class="example">
+            <code>
+print(f"Zvolil jsi možnost #{selection}.")
+hockey_club.sort()
+print(hockey_club)
+        </code>
+          </div>
+          </pre>
+        </li>
+      </ol>
 
 
-    projit si a vytvorit takove menu za pomoci dokumentu lekce 2
+    </section>
 
 
 
