@@ -101,7 +101,10 @@ cpc_label.pack()
 middle_frame = tk.Frame(root, bg="#f7e7ce", pady=20)
 middle_frame.pack()
 
-click_button = tk.Button(middle_frame, text="Click me!", command=click_cookie, width=20, height=2, font=("Helvetica", 14), bg="#ffd27f", fg="#5a3e36")
+cookie = tk.PhotoImage(file="cookie.png")
+cookie = cookie.subsample(2,2)
+
+click_button = tk.Button(middle_frame, image=cookie, command=click_cookie, width=20, height=2, font=("Helvetica", 14), bg="#ffd27f", fg="#5a3e36")
 click_button.pack(pady=10)
 
 # Spodní rámec: Upgrady
