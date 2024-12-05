@@ -127,24 +127,36 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Javascript
     - Nacrt co ukazovat ve vyuce https://www.jakpsatweb.cz/javascript/javascript-uvod.html
-    - lekce 5 - UI a sam prace
     - UI pro ukazkove hry
+    - ukoly pro javascript
+        - lekce 5
+    - projekt
+    - opravit test aby fungoval jak ma
+    - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
+
+- Python Intermediate
+    - lekce 2 - UI + obsah, ukazkove programy
+    - lekce 3 - UI + obsah, ukazkove programy
+    - lekce 4 - UI + obsah, ukazkove programy
+    - lekce 5 - UI + obsah, ukazkove programy
+    - lekce 6 - UI + obsah, ukazkove programy
     - ukoly pro javascript
         - lekce 1
         - lekce 2
         - lekce 3
         - lekce 4
         - lekce 5
+        - lekce 6
     - projekt
-    - opravit test aby fungoval jak ma
-    - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
-    
 # Versions
 
-## November 2024 - Update
+## December 2024 - Update
 
-- Javascript
-    - lekce 4 - UI a sam prace
+- Python Intermediate
+    - vytvoreni noveho tematickeho celku
+    - lekce 1 - UI + obsah, ukazkove programy
+    - VSC + python
+    - hodnoceni lekce
 
 
