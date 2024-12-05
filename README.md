@@ -154,9 +154,12 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 ## December 2024 - Update
 
 - Python Intermediate
+    - uvodni stranka podle noveho UI
     - vytvoreni noveho tematickeho celku
     - lekce 1 - UI + obsah, ukazkove programy
     - VSC + python
     - hodnoceni lekce
 
+- Javascript
+    - oprava ikony u hodnoceni prezentace
 
