@@ -26,9 +26,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -57,8 +57,10 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -83,9 +85,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner1.html';"
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_intermediate/python_intermediate1.html';"
               class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner3.html';"
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_intermediate/python_intermediate3.html';"
               class="btn btn-primary">Následují
               lekce</button>
           </td>
@@ -97,22 +101,70 @@
     </div>
 
     <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Grafika, kreslení pomocí želvy, Cykly</h1>
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Algorytmi a Seznamy</h1>
       <p style="margin-bottom: 64px; ">
         Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
         <strong>Microsoft</strong> s názvem
         <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
-      </p>
-
-      <p>
-        V dnešní lekci si ukážeme jednu fantastickou věc, kterou má Python zabudovanou.
-        A to je krestlení za pomocí želvy nebo jiného tvaru.
-        Také se podíváma a vysvětlíme si jak fungují cykly.
+        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_intermediate/vsc.html">zde</a>.
       </p>
     </div>
 
-    
+    <section>
+      <p>
+        Vysvetlit co to jsou <a href="https://sk.wikipedia.org/wiki/Triediaci_algoritmus">algoritmy</a>, pripomenout
+        seznamy, jejich indexy
+      </p>
+      <p>
+        predstavit algoritmy bubblesort, selectsort či insertsort, zkusit k nim naji naimace jako gif jak tyhle funkce
+        funguji
+      </p>
+      <p>
+        nasledne zamerit se na buble sort, <a href="https://www.youtube.com/watch?v=9I2oOAr2okY">buble sort animace
+          video</a>
+      </p>
+    </section>
+
+    <section>
+      <h6>progmra pro trizeni</h6>
+      <ul>
+        <li>programova ukazka jak se dela v programu zamena hodnot v promennych viz soubor lekce2_zamena.py</li>
+        <li>rozdelime program na vstup od uzivatele a na samotne trizeni</li>
+        <li>vstup uzivatele
+          <ol>
+            <li>nekonecny cyklus, ten by mel jet tak dlouho dokud bude platny vstup, ten se bude urcovat podle
+              <code>.isnumeric()</code>
+            </li>
+
+            <ol>
+              <li>pokud se jedna o platny svtup mel by se pridat do seznamu</li>
+              <li>pokud spatny nastavi se logicka hodnota na flase a pak cyklus se vstupy ukonci</li>
+              <li>nasledne vypsat cely seznam jeste pred tim nez se setridi</li>
+            </ol>
+          </ol>
+        </li>
+        <li>
+          cyklus algoritmu
+          <ol>
+            <li>nyni si vytvorime potrebne promenne jako je <strong>exchange_happened</strong> a <strong>list_length =
+                len(my_sequence)</strong></li>
+            <li>dale v while cyklu pojedeme tolikrat dokud promenna <strong>exchange_happened</strong> bude true</li>
+            <li>v cyklu while si vytvorime cyklus for, ktery pojede od zacatku az do konce seznamu</li>
+            <li>v cyklu for nastavime podminky ze pokud cislo na ktere jsme bude vetsi nez nasledujici tak je vymenime,
+              jinak neudelame nic</li>
+          </ol>
+        </li>
+        <li>
+          jako predposledni krkok bude potreba vypsat statistiky jako je treba kolik iteraci cyklu bylo potreba na
+          setrizeni senzamu
+        </li>
+        <li>
+          jako posledni krok bude vypsat jiz setrizeny seznam
+        </li>
+      </ul>
+    </section>
+
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
