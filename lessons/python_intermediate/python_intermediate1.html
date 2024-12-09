@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
   <meta name="description" content="Python beginner lekce 1">
-  <title>Python - beginner</title>
+  <title>Python Intermediate</title>
 
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -123,7 +123,8 @@
         <li>Názvy proměnných budou popisné, aby bylo zřejmé, k čemu proměnná slouží.</li>
       </ul>
       <h4>Příklady:</h4>
-      <pre>
+      <div class="example">
+        <pre>
   <code>
   # Správné pojmenování
 count = 10               # počet čísel
@@ -136,6 +137,7 @@ a = "John"               # název není popisný
 sumTotal = 100           # porušuje konvenci malých písmen
 </code>
       </pre>
+      </div>
       <h4>Další poznámky:</h4>
       <p>
         Používání anglických názvů je důležité, protože to usnadňuje čtení kódu mezinárodním týmům.
@@ -174,30 +176,31 @@ sumTotal = 100           # porušuje konvenci malých písmen
           </p>
         </div>
         <div class="col-md-5">
-          <pre>
-              <div class="example">
+          <div class="example">
+            <pre>
                 <code>
 i = 0
 while (podmínka):
     # kód, který se opakuje
-    i += 1  # Spravujeme proměnnou
+    i += 1 
                 </code>
               </div>
             </pre>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
-          <p>
-            Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3:
-          </p>
-          <p>
-            V tomto příkladu cyklus proběhne třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1. Každé
-            provedení cyklu se nazývá <strong>iterace</strong>.
-          </p>
-        </div>
-        <div class="col-md-5">
-          <pre>
+        <div class="row">
+          <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+            <p>
+              Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3:
+            </p>
+            <p>
+              V tomto příkladu cyklus proběhne třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1.
+              Každé
+              provedení cyklu se nazývá <strong>iterace</strong>.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <pre>
               <div class="example">
                 <code>
 i = 0
@@ -207,8 +210,8 @@ while i < 3:
                 </code>
               </div>
             </pre>
+          </div>
         </div>
-      </div>
     </section>
 
     <section class="bg-light p-4 rounded mb-4 odstavec">
@@ -230,7 +233,7 @@ while i < 3:
               <div class="example">
                 <code>
 for prvek in kolekce:
-    # kód, který se provede pro každý prvek
+    # cyklus pro všechny prvky
                 </code>
               </div>
             </pre>
@@ -257,8 +260,10 @@ for prvek in kolekce:
           <pre>
               <div class="example">
                 <code>
-for i in range(3):  # range(3) generuje čísla 0, 1, 2
-    print(i)  # Zobrazí aktuální číslo
+# range(3) generuje čísla 0, 1, 2
+for i in range(3): 
+    # Zobrazí aktuální číslo 
+    print(i)  
                 </code>
               </div>
             </pre>
@@ -272,7 +277,7 @@ for i in range(3):  # range(3) generuje čísla 0, 1, 2
         <div class="d-flex justify-content-between mb-4">
           <h2>Cvičení 1</h2>
           <button id="right" class="btn btn-success"
-            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1_suma.py', 'lekce1_suma')">Řešení
+            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1/lekce1_suma.py', 'lekce1_suma')">Řešení
             samostatné
             práce</button>
         </div>
@@ -300,7 +305,7 @@ for i in range(3):  # range(3) generuje čísla 0, 1, 2
         <div class="d-flex justify-content-between mb-4">
           <h2>Cvičení 2</h2>
           <button id="right" class="btn btn-success"
-            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1_aritmeticky_prumer.py', 'lekce1_aritmeticky_prumer')">Řešení
+            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce1/lekce1_aritmeticky_prumer.py', 'lekce1_aritmeticky_prumer')">Řešení
             samostatné
             práce</button>
         </div>
@@ -332,7 +337,7 @@ for i in range(3):  # range(3) generuje čísla 0, 1, 2
     <section class="bg-light p-4 rounded mb-4 odstavec">
       <h2>Tvorba menu</h2>
       <p>
-        Začněme tím, že si vytvoříme úvodní hlášky našeho programu. Poté si naprogramujeme základní menu, které 
+        Začněme tím, že si vytvoříme úvodní hlášky našeho programu. Poté si naprogramujeme základní menu, které
         bude obsahovat následující funkčnosti:
       </p>
       <ul>
@@ -343,21 +348,26 @@ for i in range(3):  # range(3) generuje čísla 0, 1, 2
         <li>[0] Ukončení programu</li>
       </ul>
       <p>
-        Pro ovládání menu vytvoříme proměnnou <strong>selection</strong>, kterou nastavíme na <strong>None</strong>. Tato proměnná 
-        bude obsahovat výběr uživatele. Následně použijeme podmínky <code>if</code>, <code>elif</code> a <code>else</code> 
+        Pro ovládání menu vytvoříme proměnnou <strong>selection</strong>, kterou nastavíme na <strong>None</strong>.
+        Tato proměnná
+        bude obsahovat výběr uživatele. Následně použijeme podmínky <code>if</code>, <code>elif</code> a
+        <code>else</code>
         k implementaci jednotlivých možností menu.
       </p>
-      <pre>
-        <div class="example">
+      <div class="example">
+        <pre>
+
           <code>
 print(f"Zvolil jsi možnost #{selection}.")  # Výpis pro výběry 1 až 4
 print("Program byl ukončen.")               # Výpis pro výběr 0
 print("Neznámá volba.")                     # Výpis pro neplatný výběr
           </code>
-        </div>
+        
       </pre>
+      </div>
       <p>
-        Program následně zabalíme do nekonečné smyčky, která poběží, dokud uživatel nezvolí možnost 0 (ukončení programu).
+        Program následně zabalíme do nekonečné smyčky, která poběží, dokud uživatel nezvolí možnost 0 (ukončení
+        programu).
       </p>
       <div class="example">
         <code>
@@ -366,7 +376,7 @@ while selection != 0:
         </code>
       </div>
       <p>
-        Vyzkoušejte, co se stane, pokud zadáte do programu písmeno místo čísla. Program pravděpodobně skončí chybou. 
+        Vyzkoušejte, co se stane, pokud zadáte do programu písmeno místo čísla. Program pravděpodobně skončí chybou.
         Abychom takovým situacím předešli, přidáme podmínku, která zkontroluje, zda je vstup platné číslo.
       </p>
       <div class="example">
@@ -378,48 +388,57 @@ else:
         </code>
       </div>
       <p>
-        Tímto způsobem jsme vytvořili základní menu, které zvládá kontrolu nesprávných vstupů. Nyní se pustíme do implementace jednotlivých funkcí menu.
+        Tímto způsobem jsme vytvořili základní menu, které zvládá kontrolu nesprávných vstupů. Nyní se pustíme do
+        implementace jednotlivých funkcí menu.
       </p>
-    
+
       <ol>
         <li>
           <h6>Funkce 1: Výpis hráčů</h6>
           <p>
-            Nejprve vytvoříme seznam <strong>hockey_club</strong>, který bude obsahovat hráče klubu. Tuto proměnnou inicializujeme na začátku programu. 
+            Nejprve vytvoříme seznam <strong>hockey_club</strong>, který bude obsahovat hráče klubu. Tuto proměnnou
+            inicializujeme na začátku programu.
             V rámci výběru <code>1</code> vypíšeme aktuální seznam hráčů.
           </p>
           <div class="example">
+            <pre>
             <code>
 print(f"Zvolil jsi možnost #{selection}.")
 print("Seznam členů klubu je:")
 print(hockey_club)
             </code>
+          </pre>
           </div>
         </li>
-    
+
         <li>
           <h6>Funkce 2: Přidání hráče</h6>
           <p>
-            Pro přidání hráče požádáme uživatele o vstup (jméno hráče), který poté pomocí funkce <code>append()</code> přidáme 
+            Pro přidání hráče požádáme uživatele o vstup (jméno hráče), který poté pomocí funkce <code>append()</code>
+            přidáme
             do seznamu <strong>hockey_club</strong>.
           </p>
           <div class="example">
+            <pre>
             <code>
 print(f"Zvolil jsi možnost #{selection}.")
 player_name = input("Zadej jméno hráče: ")
 hockey_club.append(player_name)
             </code>
+          </pre>
           </div>
         </li>
-    
+
         <li>
           <h6>Funkce 3: Vyřazení hráče</h6>
           <p>
-            Pro vyřazení hráče si od uživatele vyžádáme pořadové číslo hráče v seznamu. Hráče poté odstraníme pomocí 
-            <code>del</code>, přičemž před odstraněním zkontrolujeme, zda je zadané číslo platné. Nezapomeňte, že indexy v seznamu 
+            Pro vyřazení hráče si od uživatele vyžádáme pořadové číslo hráče v seznamu. Hráče poté odstraníme pomocí
+            <code>del</code>, přičemž před odstraněním zkontrolujeme, zda je zadané číslo platné. Nezapomeňte, že indexy
+            v seznamu
             začínají od 0, proto musíme od čísla odečíst 1.
           </p>
           <div class="example">
+            <pre>
             <code>
 print(f"Zvolil jsi možnost #{selection}.")
 delete_player_number = int(input("Zadej pořadové číslo hráče: "))
@@ -429,32 +448,36 @@ if 0 < delete_player_number <= len(hockey_club):
 else:
     print("Chyba: Hráč s tímto číslem neexistuje.")
             </code>
+          </pre>
           </div>
         </li>
-    
+
         <li>
           <h6>Funkce 4: Seřazení hráčů</h6>
           <p>
-            Pro seřazení seznamu hráčů použijeme metodu <code>sort()</code>. Tím hráče seřadíme podle abecedy. Následně 
+            Pro seřazení seznamu hráčů použijeme metodu <code>sort()</code>. Tím hráče seřadíme podle abecedy. Následně
             vypíšeme aktuální seznam.
           </p>
           <div class="example">
+            <pre>
             <code>
 print(f"Zvolil jsi možnost #{selection}.")
 hockey_club.sort()
 print("Seznam hráčů byl seřazen:")
 print(hockey_club)
             </code>
+          </pre>
           </div>
         </li>
       </ol>
-    
+
       <p>
-        Po splnění těchto kroků máte plně funkční aplikaci s ovládacím menu. Vyzkoušejte si přidat, vypsat, odstranit nebo 
+        Po splnění těchto kroků máte plně funkční aplikaci s ovládacím menu. Vyzkoušejte si přidat, vypsat, odstranit
+        nebo
         seřadit hráče a ověřte, že vše funguje, jak má.
       </p>
     </section>
-    
+
 
 
 
@@ -471,9 +494,9 @@ print(hockey_club)
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/javascript/javascript-vsc.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/javascript/javascript2.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Následující lekce</button>
       </div>
     </div>
 

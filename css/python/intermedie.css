@@ -10,3 +10,178 @@
     padding: 10px 0;
     width: 100%;
   }
+
+  .example {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(163, 255, 212);
+    border: 1px solid #000;
+}
+
+
+.example code {
+    color: #000;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.example-small code {
+    font-size: small;
+}
+
+
+.example-code {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255, 248, 144);
+    border: 1px solid #000;
+    width: 500px;
+}
+
+/* Obecný styling sekce */
+.sorting-program {
+  background-color: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Comic Sans MS', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* Nadpis sekce */
+.section-title {
+  color: #ff5722;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Podnadpisy */
+.section-subtitle {
+  color: #ff9800;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+/* Popisy sekce */
+.section-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Kódové bloky */
+.code-block {
+  background-color: #f3f3f3;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-left: 5px solid #ff9800;
+  margin-bottom: 20px;
+}
+
+/* Odrážky a seznamy */
+ul, ol {
+  font-size: 1.2em;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+
+/* Sekce lekce */
+.lesson-section {
+  background-color: #f9f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.lesson-title {
+  color: #ff5722;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.lesson-text {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.link-primary {
+  color: #1e88e5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-secondary {
+  color: #ff5722;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Obrázky */
+.image-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.image-example {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 2px solid #ff5722;
+  border-radius: 8px;
+}
+
+.image-caption {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Sekce informací */
+.info-section {
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.info-title {
+  color: #ff9800;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.info-subtitle {
+  color: #f57c00;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.info-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Sekce třídění */
+.sorting-section {
+  margin-top: 40px;
+}
+
+.sorting-title {
+  color: #ff5722;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sorting-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}

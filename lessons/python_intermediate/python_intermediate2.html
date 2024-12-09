@@ -7,15 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
   <meta name="description" content="Python beginner lekce 2">
-  <title>Python - beginner</title>
+  <title>Python Intermediate</title>
 
 
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/python/python.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
+  <link href="/css/python/intermedie.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -100,70 +102,139 @@
       </table>
     </div>
 
-    <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Algorytmi a Seznamy</h1>
-      <p style="margin-bottom: 64px; ">
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_intermediate/vsc.html">zde</a>.
+    <div class="lesson-section">
+      <h1 class="lesson-title">Algoritmy a Seznamy</h1>
+      <p class="lesson-text">
+        V této lekci se naučíme, co jsou to <strong>algoritmy</strong> a jak fungují <strong>seznamy</strong>! 
+        K vytváření projektů budeme používat šikovné prostředí od <strong>Microsoftu</strong> s názvem 
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="link-primary">Visual Studio Code</a>. 
+        Potřebujete pomoc? Návod na stažení a zprovoznění najdete 
+        <a href="/lessons/python_intermediate/vsc.html" class="link-secondary">zde</a>.
       </p>
     </div>
-
-    <section>
-      <p>
-        Vysvetlit co to jsou <a href="https://sk.wikipedia.org/wiki/Triediaci_algoritmus">algoritmy</a>, pripomenout
-        seznamy, jejich indexy
+    
+    <div class="image-container">
+      <img class="image-example" src="/img/python_intermedie/lekce2/Bubble-sort-example-300px.gif" alt="Komíny" loading="lazy">
+      <p class="image-caption">👆 Podívejte se, jak funguje třídicí algoritmus! 👆</p>
+    </div>
+    
+    <section class="info-section">
+      <h2 class="info-title">Co jsou to algoritmy?</h2>
+      <p class="info-text">
+        Algoritmy jsou jako <strong>recepty</strong> v kuchařce – přesně říkají, co máme dělat krok za krokem. 
+        Více se dozvíte <a href="https://sk.wikipedia.org/wiki/Triediaci_algoritmus" class="link-primary">zde</a>. 🍳
       </p>
-      <p>
-        predstavit algoritmy bubblesort, selectsort či insertsort, zkusit k nim naji naimace jako gif jak tyhle funkce
-        funguji
-      </p>
-      <p>
-        nasledne zamerit se na buble sort, <a href="https://www.youtube.com/watch?v=9I2oOAr2okY">buble sort animace
-          video</a>
+      <h3 class="info-subtitle">Seznamy a indexy</h3>
+      <p class="info-text">
+        Seznam je jako dlouhý řetěz. Každý dílek (neboli prvek) má svoje místo, kterému říkáme <strong>index</strong>. 📍
       </p>
     </section>
-
-    <section>
-      <h6>progmra pro trizeni</h6>
-      <ul>
-        <li>programova ukazka jak se dela v programu zamena hodnot v promennych viz soubor lekce2_zamena.py</li>
-        <li>rozdelime program na vstup od uzivatele a na samotne trizeni</li>
-        <li>vstup uzivatele
-          <ol>
-            <li>nekonecny cyklus, ten by mel jet tak dlouho dokud bude platny vstup, ten se bude urcovat podle
-              <code>.isnumeric()</code>
-            </li>
-
-            <ol>
-              <li>pokud se jedna o platny svtup mel by se pridat do seznamu</li>
-              <li>pokud spatny nastavi se logicka hodnota na flase a pak cyklus se vstupy ukonci</li>
-              <li>nasledne vypsat cely seznam jeste pred tim nez se setridi</li>
-            </ol>
-          </ol>
-        </li>
-        <li>
-          cyklus algoritmu
-          <ol>
-            <li>nyni si vytvorime potrebne promenne jako je <strong>exchange_happened</strong> a <strong>list_length =
-                len(my_sequence)</strong></li>
-            <li>dale v while cyklu pojedeme tolikrat dokud promenna <strong>exchange_happened</strong> bude true</li>
-            <li>v cyklu while si vytvorime cyklus for, ktery pojede od zacatku az do konce seznamu</li>
-            <li>v cyklu for nastavime podminky ze pokud cislo na ktere jsme bude vetsi nez nasledujici tak je vymenime,
-              jinak neudelame nic</li>
-          </ol>
-        </li>
-        <li>
-          jako predposledni krkok bude potreba vypsat statistiky jako je treba kolik iteraci cyklu bylo potreba na
-          setrizeni senzamu
-        </li>
-        <li>
-          jako posledni krok bude vypsat jiz setrizeny seznam
-        </li>
-      </ul>
+    
+    <section class="sorting-section">
+      <h2 class="sorting-title">Třídicí algoritmy</h2>
+      <p class="sorting-text">
+        Představíme si algoritmy jako <strong>bubblesort</strong>, <strong>selectsort</strong> nebo <strong>insertsort</strong>. 
+        Mrkněte na <a href="https://www.youtube.com/watch?v=9I2oOAr2okY" class="link-primary">bubblesort video</a> a zjistěte, jak to celé funguje!
+      </p>
+      <div class="image-container">
+        <img class="image-example" src="/img/python_intermedie/lekce2/sort-fun.gif" alt="Třídicí algoritmus" loading="lazy">
+        <p class="image-caption">🎥 Podívejte se na animaci algoritmu Bubblesort!</p>
+      </div>
     </section>
-
+    
+    
+    <section class="sorting-program">
+      <h2 class="section-title">Program pro třídění</h2>
+      
+      <p class="section-description">
+        V této sekci si ukážeme, jak vytvořit program, který umí seřadit čísla! Postup je jednoduchý, rozdělíme si práci na několik částí.
+      </p>
+    
+      <h3 class="section-subtitle">🛠️ 1. Ukázka záměny hodnot</h3>
+      <p class="section-text">
+        V souboru <strong>lekce2_zamena.py</strong> máme jednoduchou ukázku, jak mezi sebou zaměnit hodnoty dvou proměnných:
+      </p>
+      <pre class="code-block">
+    <strong>Ukázka kódu:</strong>
+    x = 5
+    y = 10
+    
+    # Zaměna hodnot
+    temp = x
+    x = y
+    y = temp
+    
+    print("Hodnoty po záměně:", x, y)
+      </pre>
+    
+      <h3 class="section-subtitle">📥 2. Vstup od uživatele</h3>
+      <p class="section-text">
+        Nejprve připravíme část programu, kde uživatel zadává čísla. Použijeme nekonečný cyklus, který se ukončí jen, pokud vstup splňuje pravidla:
+      </p>
+      <pre class="code-block">
+    <strong>Ukázka kódu:</strong>
+    my_list = []
+    
+    while True:
+        user_input = input("Zadej číslo (nebo 'q' pro ukončení): ")
+        if user_input.isnumeric():
+            my_list.append(int(user_input))
+        elif user_input.lower() == 'q':
+            break
+        else:
+            print("Neplatný vstup, zkus to znovu.")
+    
+    print("Seznam před tříděním:", my_list)
+      </pre>
+    
+      <h3 class="section-subtitle">🔄 3. Cyklus algoritmu</h3>
+      <p class="section-text">
+        Nyní vytvoříme algoritmus Bubblesort, který seřadí seznam:
+      </p>
+      <pre class="code-block">
+    <strong>Ukázka kódu:</strong>
+    def bubble_sort(sequence):
+        exchange_happened = True
+        list_length = len(sequence)
+    
+        while exchange_happened:
+            exchange_happened = False
+            for i in range(list_length - 1):
+                if sequence[i] > sequence[i + 1]:
+                    # Záměna hodnot
+                    sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
+                    exchange_happened = True
+        return sequence
+    
+    sorted_list = bubble_sort(my_list)
+    print("Seznam po třídění:", sorted_list)
+      </pre>
+    
+      <h3 class="section-subtitle">📊 4. Statistika třídění</h3>
+      <p class="section-text">
+        Na závěr můžeme přidat statistiku, například počet iterací:
+      </p>
+      <pre class="code-block">
+    <strong>Ukázka kódu:</strong>
+    def bubble_sort_with_stats(sequence):
+        exchange_happened = True
+        list_length = len(sequence)
+        iterations = 0
+    
+        while exchange_happened:
+            exchange_happened = False
+            iterations += 1
+            for i in range(list_length - 1):
+                if sequence[i] > sequence[i + 1]:
+                    sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
+                    exchange_happened = True
+        return sequence, iterations
+    
+    sorted_list, total_iterations = bubble_sort_with_stats(my_list)
+    print(f"Seznam po třídění: {sorted_list}")
+    print(f"Počet iterací: {total_iterations}")
+      </pre>
+    </section>
 
 
     <!-- The Modal -->
@@ -171,6 +242,15 @@
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
       <div id="caption"></div>
+    </div>
+
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate1.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate3.html';">Následující lekce</button>
+      </div>
     </div>
 
   </main>
