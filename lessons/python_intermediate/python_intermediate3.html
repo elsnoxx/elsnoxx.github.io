@@ -25,9 +25,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -52,13 +52,16 @@
               Lekce
             </button>
             <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-<li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -83,9 +86,11 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner2.html';"
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner2.html';"
               class="btn btn-primary">Předchozí lekce</button>
-            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/python_beginner/python_beginner4.html';"
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_beginner/python_beginner4.html';"
               class="btn btn-primary">Následují
               lekce</button>
           </td>
@@ -96,7 +101,7 @@
       </table>
     </div>
     <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Podmínky, nekonečný cyklus, break</h1>
+      <h1 class="mt-5" style="margin-bottom: 64px; ">Terminál a barevné animace</h1>
       <p style="margin-bottom: 64px; ">
         Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
         <strong>Microsoft</strong> s názvem
@@ -105,12 +110,110 @@
       </p>
 
       <p>
-        V dnešní lekci si ukážeme jednu fantastickou věc, kterou má Python zabudovanou.
-        A to je krestlení za pomocí želvy nebo jiného tvaru.
-        Také se podíváma a vysvětlíme si jak fungují cykly.
+        V dnešní lekci si vysvětlíme co je to terminál, jak se používá v rámci použitelnosti s uživatelem.
+        Ukážeme si jak nainstalovat knohovnu <strong>Colorama</strong> k vylepšení práce v terminálu.
       </p>
     </div>
-   
+
+    <p>
+      Terminál je speciální nástroj, který nám umožňuje spouštět programy a zobrazovat jejich výsledky. Ve Visual Studio
+      Code (VSC) je terminál přístupný přímo ve spodní části okna a jmenuje se jednoduše <strong>TERMINAL</strong>.
+    </p>
+    <img src="terminal_vscode_example.png" alt="Ukázka terminálu ve Visual Studio Code">
+    <p>
+      V terminálu můžeme psát příkazy, které spustí naše programy, nebo dokonce ovládat náš počítač. Například můžeme:
+    </p>
+    <ul>
+      <li>Spustit Python skript (např. <code>python moje_programy.py</code>).</li>
+      <li>Zobrazit seznam souborů ve složce.</li>
+      <li>Změnit barvy a funkce terminálu.</li>
+    </ul>
+
+    <h2>Jak otevřít terminál ve VSC?</h2>
+    <p>
+      Je to snadné! Postupuj podle těchto kroků:
+    </p>
+    <ol>
+      <li>Otevři Visual Studio Code.</li>
+      <li>Klikni na horní menu <strong>View</strong> (Zobrazit).</li>
+      <li>Vyber možnost <strong>Terminal</strong> (Terminál).</li>
+    </ol>
+    <img src="vscode_open_terminal.png" alt="Jak otevřít terminál ve Visual Studio Code">
+    <p>
+      Nyní by se ti měl terminál zobrazit ve spodní části okna. Můžeš v něm psát příkazy a vidět výsledky svého
+      programu!
+    </p>
+
+    <h1>Knihovna <code>os</code> v Pythonu</h1>
+    <p>Knihovna <code>os</code> nám pomáhá pracovat s věcmi, jako jsou soubory, složky a operační systém. Tady je pár
+      užitečných příkazů:</p>
+    <ul>
+      <li>
+        <strong><code>os.getcwd()</code>:</strong> Vrací, ve které složce právě pracuješ.<br>
+        <div class="example">Příklad: Pokud jsi v <code>C:/MojeSoubory</code>, vrátí to právě tuto cestu.</div>
+      </li>
+      <li>
+        <strong><code>os.listdir()</code>:</strong> Ukáže seznam všech souborů a složek ve vybrané složce.<br>
+        <div class="example">Příklad: Vidíš soubory, jako třeba <code>dokument.txt</code> nebo <code>obrazek.png</code>.
+        </div>
+      </li>
+      <li>
+        <strong><code>os.mkdir()</code>:</strong> Vytvoří novou složku.<br>
+        <div class="example">Příklad: Pokud napíšeš <code>os.mkdir("NovaSlozka")</code>, vytvoří se složka s názvem
+          <code>NovaSlozka</code>.
+        </div>
+      </li>
+      <li>
+        <strong><code>os.remove()</code>:</strong> Smaže soubor.<br>
+        <div class="example">Příklad: Když máš soubor <code>test.txt</code> a napíšeš
+          <code>os.remove("test.txt")</code>, soubor se smaže.
+        </div>
+      </li>
+      <li>
+        <strong><code>os.system()</code>:</strong> Spouští příkazy operačního systému.<br>
+        <div class="example">Příklad: Můžeš spustit příkaz, který změní velikost terminálu nebo něco podobného.</div>
+      </li>
+      <li>
+        <strong>Nastavení velikosti terminálu:</strong> Změní velikost okna terminálu na určitý počet sloupců a
+        řádků.<br>
+        <div class="example">
+          <p><strong>Kód:</strong></p>
+          <pre><code>import os
+
+def set_terminal_size(columns, rows):
+    if os.name == 'nt':  # Windows
+        os.system(f'mode con: cols={columns} lines={rows}')
+    else:  # Linux, macOS
+        os.system(f'printf "\\e[8;{rows};{columns}t"')
+
+# Nastavení terminálu na 100 sloupců a 30 řádků
+set_terminal_size(100, 30)</code></pre>
+        </div>
+      </li>
+    </ul>
+
+
+    <p>
+      2. postup jak nainstalovat knihovnu colorama a jeji prvni pouziti
+      <code>
+        # import colorma module
+        from colorama import init, Fore, Back, Style
+        
+        # Initialize Colorama
+        init()
+        
+        # Print text with different colors and styles
+        print(Fore.RED + 'This text is red')
+        print(Back.GREEN + 'This text has a green background')
+        print(Style.BRIGHT + 'This text is bright')
+        print(Style.RESET_ALL + 'Back to normal text')
+      </code>
+    </p>
+
+    <p>
+      1. ukazka barevna mozaika, random generovani barev a naplneni terminalu
+    </p>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
