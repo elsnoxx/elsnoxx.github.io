@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkoly v Pythonu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .task {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Úkoly v Pythonu</h1>
+
+    <p class="timer" id="timer">Čas zbývá: 10:00</p>
+
+    <div class="task">
+        <h3>Úkol 1:</h3>
+        <p>Vytvoř náhodné číslo a zjisti, jestli je sudé nebo liché. (Použij knihovnu random.)</p>
+        <p><strong>Řešení:</strong> Pokud je náhodné číslo sudé, vypiš, že je sudé, jinak, že je liché.</p>
+    </div>
+
+    <div class="task">
+        <h3>Úkol 2:</h3>
+        <p>Pomocí knihovny colorama zbarvi text do jedné z barev podle náhody. (Použij random pro výběr barvy.)</p>
+        <p><strong>Řešení:</strong> Použij random pro náhodný výběr barvy a změň barvu textu pomocí colorama.</p>
+    </div>
+
+    <div class="task">
+        <h3>Úkol 3:</h3>
+        <p>Změř čas, jak dlouho trvá generování náhodného čísla (použij time). (Vyzkoušej generování náhodného čísla 10 000krát.)</p>
+        <p><strong>Řešení:</strong> Pomocí funkce time měř čas potřebný k generování náhodného čísla 10 000krát.</p>
+    </div>
+
+    <div class="task">
+        <h3>Úkol 4:</h3>
+        <p>Generuj náhodná písmena (od A do Z) po dobu 5 sekund. (Použij random pro výběr písmen a time pro časové omezení.)</p>
+        <p><strong>Řešení:</strong> Generuj náhodná písmena a tiskni je každou chvíli po dobu 5 sekund.</p>
+    </div>
+
+    <div class="task">
+        <h3>Úkol 5:</h3>
+        <p>Vytvoř program, který náhodně zvolí, jestli uživatel vyhraje nebo prohraje. (Použij random a colorama pro barevné zobrazení.)</p>
+        <p><strong>Řešení:</strong> Použij random pro výběr mezi "win" nebo "lose" a použij colorama pro zobrazení výsledku v různých barvách.</p>
+    </div>
+
+    <script>
+        let timeLeft = 600; // 10 minut v sekundách
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `Čas zbývá: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Čas vypršel!");
+            }
+            timeLeft--;
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>
