@@ -90,6 +90,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Python Beginer
     - lekce 6 obsah, zkontrolovat obsah
     - lekce 5, upravit ukol aby byl zajimavejsi + rozsirit to o pokracovani o seznamu
+    - na uvod vzdy udelat maly testik probranych znalosti
 
 - Python Minecraft minetest
     - lekce 1 - dodelat rozpracovane chybi screeny
@@ -135,6 +136,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
 - Python Intermediate
+    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti
     - lekce 3 - UI + obsah, ukazkove programy
     - lekce 4 - UI + obsah, ukazkove programy
     - lekce 5 - UI + obsah, ukazkove programy
