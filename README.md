@@ -136,7 +136,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
 - Python Intermediate
-    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti
+    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti, tak jak je u lekce 4
     - lekce 3 - UI + obsah, ukazkove programy
     - lekce 4 - UI + obsah, ukazkove programy
     - lekce 5 - UI + obsah, ukazkove programy
