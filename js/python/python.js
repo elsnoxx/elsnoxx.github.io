@@ -1,6 +1,6 @@
-function showCodePW(soubor) {
-    var password = prompt('Enter the password to download the file:');
-    if (password.toLowerCase() == "teacher") {
+function showCodePWreseni(soubor) {
+    var password = prompt('Enter the password to download the file: (date)');
+    if (password.toLowerCase() == "15012024") {
       window.open(soubor, "novyRam", "width=1200,height=1000")
     } else {
       alert("incorrect password!! please try again");
