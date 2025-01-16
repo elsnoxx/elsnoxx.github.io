@@ -27,8 +27,8 @@ print(random_color + "Toto je náhodně zbarvený text!")
 import time
 
 start_time = time.time()
-for _ in range(10000):
-    random.randint(1, 100)
+for i in range(10000):
+    i = random.randint(1, 100)
 end_time = time.time()
 
 print(f"Generování náhodných čísel trvalo {end_time - start_time} sekund.")
