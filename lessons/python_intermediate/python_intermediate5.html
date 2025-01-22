@@ -12,9 +12,11 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/python/python.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
+  <link href="/css/python/intermedie.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -25,9 +27,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -52,13 +54,16 @@
               Lekce
             </button>
             <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-<li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -96,17 +101,290 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Seznamy</h1>
+    <h1 class="mt-5" style="margin-bottom: 64px; ">Turtle a soubory</h1>
     <p style="margin-bottom: 64px; ">
-      Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
+      Pro vytváření našich úkolů budeme používat IDE neboli vývojové prostředí od společnosti
       <strong>Microsoft</strong> s názvem
       <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
       Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
     </p>
 
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Opakování</h1>
+            <p>
+              Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu.
+              Ověříte si své dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými
+              barvami.
+              Po dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <button id="right" class="btn btn-success"
+              onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce5_test.html', 'opakovani5')">
+              Zadání opakování
+            </button>
+
+            <button id="solution" class="btn btn-info"
+              onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce5.py')">
+              Zobrazit řešení
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Rozličné souborové formáty</h2>
+      <h3>Operační systém a formáty souborů</h3>
+      <ul>
+        <li>Operační systém nerozlišuje mezi formáty souborů.</li>
+        <li>Spravuje <strong>umístění</strong>, <strong>atributy</strong> (velikost, práva, datum), ale obsah řeší
+          konkrétní aplikace.</li>
+      </ul>
+      <h3>Příklady formátů souborů</h3>
+      <ul>
+        <li><strong>Binární:</strong> .DOC (MS Word), .PPTX (PowerPoint XML), .C3P (Construct3).</li>
+        <li><strong>Normované formáty:</strong> .HTML, .CSS, .JPG, .PNG.</li>
+        <li><strong>Rozdělení formátů:</strong></li>
+        <ul>
+          <li><strong>Textové:</strong> Lze číst (např. HTML, CSS).</li>
+          <li><strong>Binární:</strong> Nelze přímo interpretovat (např. JPG, MP3).</li>
+        </ul>
+      </ul>
+    </section>
+
+    <section class="lesson-section">
+      <h2>Bloková schéma práce s počítačem</h2>
+      <p>Uživatel → Aplikace → Operační systém → Hardware.</p>
+      <p><strong>Správa souborů:</strong> Probíhá v rovině operačního systému.</p>
+      <p><strong>Formát souborů:</strong> Řeší aplikace.</p>
+    </section>
+
+    <section class="lesson-section">
+      <div class="row">
+        <div class="col-md-9">
+          <h2>Korytnačí grafika a formát textových souborů</h2>
+        </div>
+        <div class="col-md-2">
+          <button id="right" class="btn btn-success"
+            onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce5/equilateral_triangle.turtledraw', 'lekce1_obrazek')">
+            Řešení samostatné práce
+          </button>
+        </div>
+      </div>
 
 
+      <h3>Cíl</h3>
+      <p>Ukládat instrukce pro kreslení do vlastního textového formátu.</p>
+      <p>Příklad: <code>.turtledraw</code></p>
+
+      <h3>Definice formátu</h3>
+      <ul>
+        <li><code>F + číslo</code>: Pohyb vpřed.</li>
+        <li><code>B + číslo</code>: Pohyb vzad.</li>
+        <li><code>R + číslo</code>: Otočení vpravo o zadaný úhel.</li>
+        <li><code>L + číslo</code>: Otočení vlevo o zadaný úhel.</li>
+        <li>Oddělovač instrukcí: <code>|</code>.</li>
+      </ul>
+
+      <h3>Ukázka kódu</h3>
+      <pre class="code-block">
+        <code>
+import turtle
+
+# Načtení souboru
+drawing_file = open("equilateral_triangle.turtledraw", mode="r", encoding="utf-8")
+drawing = drawing_file.read().split("|")
+drawing_file.close()
+
+# Nastavení plátna
+my_screen = turtle.Screen()
+my_screen.setup(600, 600)
+my_turtle = turtle.Turtle()
+
+# Zpracování instrukcí
+for instruction in drawing:
+  if instruction[0] == "F":
+      my_turtle.forward(int(instruction[1:]))
+  elif instruction[0] == "B":
+      my_turtle.backward(int(instruction[1:]))
+  elif instruction[0] == "L":
+      my_turtle.left(int(instruction[1:]))
+  elif instruction[0] == "R":
+      my_turtle.right(int(instruction[1:]))
+
+turtle.done()
+</code>
+          </pre>
+
+
+
+    </section>
+
+    <section class="odstavec">
+      <div class="samprace">
+        <div class="d-flex justify-content-between mb-4">
+          <h2>Cvičení 1</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <button id="right" class="btn btn-success"
+                onclick="showCodePW('/scripty-lekce/python/python_intermediate/lekce5/sampraceReseni.py', 'lekce1_obrazek')">
+                Řešení samostatné práce
+              </button>
+            </div>
+            <div class="col-md-6">
+              <a href="/scripty-lekce/python/python_intermediate/lekce5/vstupSamprace.turtledraw" download class="btn btn-info">
+                Stáhnout soubor
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <h5>Načtení a vykreslení obrázku</h5>
+        <div class="row">
+          <div class="col-sm-8">
+            <p>
+              Vaším úkolem je stáhnout soubor s instrukcemi pro kreslení obrázku ve formátu
+              <code>.turtledraw</code>. Obsah souboru rozdělte na jednotlivé instrukce, které poté použijete
+              k vykreslení obrázku pomocí knihovny <strong>turtle</strong>.
+            </p>
+            <ol>
+              <li>Stáhněte soubor z přiloženého odkazu.</li>
+              <li>Načtěte jeho obsah v Pythonu a rozdělte instrukce podle oddělovače <code>|</code>.</li>
+              <li>Použijte cyklus k postupnému zpracování instrukcí.</li>
+              <li>Vykreslete celý obrázek pomocí želví grafiky.</li>
+            </ol>
+            <p>
+              Instrukce se řídí těmito pravidly:
+            </p>
+            <ul>
+              <li><code>F + číslo</code>: Pohyb želvy vpřed.</li>
+              <li><code>B + číslo</code>: Pohyb želvy vzad.</li>
+              <li><code>R + číslo</code>: Otočení želvy doprava o zadaný úhel.</li>
+              <li><code>L + číslo</code>: Otočení želvy doleva o zadaný úhel.</li>
+              <li><code>C + číslo</code>: Kolečko pomocí želvy.</li>
+              <li><code>PD </code>: Pero nahoru a přestane kreslit.</li>
+              <li><code>PU </code>: Pero dolu a přestane kreslit.</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <img class="myImg img-fluid" src="/img/python_intermedie/lekce5/samprace.png" alt="Ukázkový obrázek"
+              style="width:100%; max-width:300px; height:auto;" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="lesson-section">
+      <h2>Programování: Párnost a nepárnost čísel</h2>
+      <h3>Logika</h3>
+      <ul>
+        <li>Číslo je sudé, pokud zbytek po dělení 2 je <code>0</code>.</li>
+        <li>Číslo je liché, pokud zbytek po dělení 2 není <code>0</code>.</li>
+      </ul>
     
+      <h3>Ukázka jednoduchého kódu</h3>
+      <pre class="code-block">
+        <code>
+user_number = int(input("Zadej číslo: "))
+if user_number % 2 == 0:
+    print("Číslo je sudé.")
+else:
+    print("Číslo je liché.")
+        </code>
+      </pre>
+    
+      <h3>Vysvětlení kódu:</h3>
+      <p>
+        V tomto příkladu se nejprve načte číslo zadané uživatelem jako vstup. Pomocí operátoru
+        <code>%</code> (modulo) se zjistí, zda zbytek po dělení 2 je <code>0</code>. Pokud ano, číslo je sudé,
+        jinak je liché. Výsledek je následně vypsán na obrazovku.
+      </p>
+    
+      <h3>Kresba podle párnosti</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="code-block">
+            <code>
+import turtle
+
+# Nastavení plátna a korytnačky
+my_screen = turtle.Screen()
+my_screen.setup(600, 600)
+my_turtle = turtle.Turtle()
+my_turtle.pensize(3)
+my_turtle.penup()
+my_turtle.goto(-250, -250)
+my_turtle.pendown()
+
+# Kresba
+for index in range(10):
+    my_turtle.forward(500)
+    if index % 2 == 0:
+        my_turtle.left(90)
+        my_turtle.forward(50)
+        my_turtle.left(90)
+    else:
+        my_turtle.right(90)
+        my_turtle.forward(50)
+        my_turtle.right(90)
+
+turtle.done()
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid" src="/img/python_intermedie/lekce5/parnost.png" alt="Ukázkový obrázek"
+          style="width:100%; max-width:300px; height:auto;" loading="lazy">
+        </div>
+      </div>
+ 
+    
+      <h3>Jak kód funguje:</h3>
+      <p>
+        Tento program kombinuje logiku párnosti a vizualizaci pomocí knihovny <code>turtle</code>. Želva
+        ("turtle") kreslí čáry na základě sudých a lichých indexů v cyklu:
+      </p>
+      <ul>
+        <li>Pokud je číslo sudé, želva se otočí doleva (<code>left(90)</code>).</li>
+        <li>Pokud je číslo liché, želva se otočí doprava (<code>right(90)</code>).</li>
+      </ul>
+      <p>
+        Kresba začíná v levém dolním rohu a postupuje směrem nahoru. Každý řádek je posunut o 50 jednotek
+        směrem nahoru a želva se na konci každého řádku otočí podle sudosti nebo lichosti aktuálního indexu
+        cyklu.
+      </p>
+    
+      <h3>Tipy k experimentování:</h3>
+      <ul>
+        <li>Změňte počet čar, které želva nakreslí, úpravou <code>range(10)</code> na jiný rozsah.</li>
+        <li>Pozměňte délku čar (<code>my_turtle.forward(500)</code>) a sledujte, jak to ovlivní výsledný vzor.</li>
+        <li>Vyzkoušejte jiné úhly otáčení než <code>90°</code>, například <code>45°</code> nebo <code>60°</code>.</li>
+      </ul>
+    
+      <h3>Co si odnést:</h3>
+      <p>
+        Tento příklad ukazuje, jak lze pomocí jednoduché logiky a cyklů vytvořit vizuální vzory.
+        Současně si procvičíte práci s knihovnou <code>turtle</code>, což je zábavný způsob, jak se učit
+        programovat.
+      </p>
+    </section>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" loading="lazy">
+      <div id="caption"></div>
+    </div>
+
+
 
   </main>
   <footer class="footer">
