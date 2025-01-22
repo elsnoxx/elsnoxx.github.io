@@ -12,8 +12,11 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/python/python.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/python.css" rel="stylesheet">
+  <link href="/css/python/intermedie.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -24,9 +27,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -51,13 +54,16 @@
               Lekce
             </button>
             <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-<li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -80,65 +86,97 @@
   <main role="main" class="container">
 
     <section class="odstavec">
-      <h1>Projekt - Hry</h1>
+      <h1>Projekty Python Intermediate</h1>
       <p>
-        Vašim projektem bude vytvořit hru. Buď si budete moct vybrat jednu z níže uvedených nebo si můžete vymyslet
-        nějakou svou hru.
-      </p>
-      <h5>Hra nesmí být jedna z těch, které jsme si ukazovali. Ani ty, od kterých máte zdrojové kódy z lekcí.</h5>
-    </section>
-
-    <section class="odstavec">
-      <h3>Piškvorky</h3>
-      <ul>
-        <li>Vytvoř hrací pole 3x3</li>
-        <li>Dva hráči se střídají v umisťování koleček a křížků na pole.</li>
-        <li>Hra končí, když jeden hráč postaví tři své symboly vedle sebe v řadě, sloupci nebo diagonále.</li>
-      </ul>
-
-      <h3>Pexeso</h3>
-      <ul>
-        <li>Vytvoř pole s obrázky a jejich dvojicemi.</li>
-        <li>Hráči otáčejí karty a snaží se najít dvojice stejných obrázků.</li>
-        <li>Hra končí, když jsou všechny dvojice nalezeny.</li>
-      </ul>
-
-      <h3>Interaktivní příběhová hra</h3>
-      <ul>
-        <li>Hra bude mít alespoň 5 možných konců.</li>
-        <li>Hra nesní obsahovat chyby a musí být plně funkční.</li>
-        <li>Hrač by měl mít životy a nějakou možnost bojovat.</li>
-        <li><strong>Bonus:</strong> Zkuste u hráče vytvořit i nějké další útoky nebo schopnosti.</li>
-      </ul>
-
-      <h3>Vlastní hra</h3>
-      <p>
-        Vymyslete si svou vlastní hru! Můžete si vybrat jakékoliv téma a vytvořit jednoduché pravidla. Buďte kreativní! 
-        Ovšem i tato hra se musí držet níže uvedených nároků.
+        Vyberte si jeden z níže uvedených projektů a zpracujte jej podle pokynů. Každý projekt má své specifické
+        požadavky,
+        které musí být splněny, aby bylo zadání považováno za dokončené. Ujistěte se, že váš kód obsahuje všechny
+        klíčové prvky,
+        jako je práce se soubory, využití knihovny <code>colorama</code> a správné zpracování nekonečných cyklů.
+        Doporučujeme také přidat vlastní vylepšení, aby byl projekt ještě zajímavější!
       </p>
     </section>
 
-    <section class="odstavec">
-      <h2>Nároky na hry</h2>
+
+    <section class="info-section">
+
+
+      <h2>1. Matematický Tutor Bot</h2>
+      <p><strong>Popis:</strong> Vytvořte interaktivního matematického bota, který generuje matematické úkoly,
+        kontroluje
+        odpovědi uživatele a poskytuje zpětnou vazbu. Uživatel bude mít možnost nastavit obtížnost, výběr typu úkolů
+        (sčítání, odčítání, násobení, dělení).</p>
+      <p><strong>Požadavky:</strong></p>
       <ul>
-        <li>
-          Hra by měla mít zajímavý a poutavý příběh, který hráče zaujme a udrží. Dialogy by měly být dobře napsané a přirozeně plynout v průběhu hry.
-        </li>
-        <li>
-          Hráč by měl mít možnost ovlivňovat průběh příběhu prostřednictvím svých rozhodnutí. Rozhodnutí hráče by měla mít vliv na to, jak se příběh vyvíjí a jaké konce jsou dosažitelné.
-        </li>
-        <li>
-          Hra by měla nabízet různé možné konce v závislosti na rozhodnutích hráče. Každý konec by měl být smysluplný a reagovat na předchozí akce hráče.
-        </li>
-        <li>
-          Dobrá uživatelská rozhraní (UI) a plynulé ovládání. Stabilní a bezchybný běh hry bez technických problémů.
-        </li>
-        <li>
-          Měla by být snadno pochopitelná pro hráče různých věkových skupin a úrovní dovedností.
+        <li><strong>Práce se soubory:</strong> Uložte historii odpovědí a skóre do textového souboru.</li>
+        <li><strong>Colorama:</strong> Použijte pro zbarvení textu při správné/špatné odpovědi.</li>
+        <li><strong>Nekonečný cyklus:</strong> Bot musí běžet dokud uživatel neukončí hru.</li>
+      </ul>
+      <p><strong>Vylepšení:</strong> Přidat možnost výběru kategorií úkolů (například geometrii, algebraické úpravy).
+      </p>
+    </section>
+
+    <section class="info-section">
+
+      <h2>2. Kvízový Bot</h2>
+      <p><strong>Popis:</strong> Vytvořte bota, který bude klást různé otázky z různých oblastí (historie, věda, sport).
+        Uživatel bude odpovídat, a bot bude poskytovat okamžitou zpětnou vazbu.</p>
+      <p><strong>Požadavky:</strong></p>
+      <ul>
+        <li><strong>Práce se soubory:</strong> Uložte otázky a odpovědi do souboru ve formátu CSV nebo JSON.</li>
+        <li><strong>Colorama:</strong> Použijte různé barvy pro správné a nesprávné odpovědi.</li>
+        <li><strong>Nekonečný cyklus:</strong> Aplikace by měla běžet až do momentu, kdy uživatel zvolí, že chce
+          skončit.
         </li>
       </ul>
+      <p><strong>Vylepšení:</strong> Možnost generovat skóre a uložit nejlepší výsledky do souboru.</p>
     </section>
-  
+    <section class="info-section">
+      <h2>3. Rostoucí Matematický Výpočetní Bot</h2>
+      <p><strong>Popis:</strong> Bot generuje stále těžší matematické úkoly. Na začátku uživatel dostává jednoduché
+        úkoly
+        a jak postupuje, úkoly se stávají složitějšími. Pokud uživatel správně odpoví, obtížnost se zvyšuje.</p>
+      <p><strong>Požadavky:</strong></p>
+      <ul>
+        <li><strong>Práce se soubory:</strong> Uložte pokrok uživatele, například jakou úroveň úkolů dokončil.</li>
+        <li><strong>Colorama:</strong> Zobrazujte úkoly v různých barvách (např. červená pro chyby, zelená pro správné
+          odpovědi).</li>
+        <li><strong>Nekonečný cyklus:</strong> Když uživatel odpoví špatně, můžete nabídnout možnost restartu nebo
+          vyřešení úkolu s nápovědou.</li>
+      </ul>
+    </section>
+
+    <section class="info-section">
+
+      <h2>4. Simulátor Kapesního Asistenta</h2>
+      <p><strong>Popis:</strong> Vytvořte simulátor malého kapesního asistenta, který bude umět vyřešit jednoduché
+        úkoly,
+        jako jsou výpočty, připomínky nebo provedení základních textových operací. Může také mít funkci "chatu" s
+        uživatelem, kde bot reaguje na různé textové vstupy.</p>
+      <p><strong>Požadavky:</strong></p>
+      <ul>
+        <li><strong>Práce se soubory:</strong> Můžete uložit všechny interakce do souboru pro pozdější analýzu.</li>
+        <li><strong>Colorama:</strong> Použijte různé barvy pro zobrazení výzev nebo odpovědí bota.</li>
+        <li><strong>Nekonečný cyklus:</strong> Bot běží a čeká na vstup uživatele, dokud není výslovně ukončen.</li>
+      </ul>
+      <p><strong>Vylepšení:</strong> Rozšiřte o podporu pro více jazyků nebo přidejte možnost zpracování dat.</p>
+    </section>
+    <section class="info-section">
+      <h2>5. Bot pro Různé Úkoly s Rozpoznáváním Čísel</h2>
+      <p><strong>Popis:</strong> Tento bot bude generovat úkoly jako například dělení, sčítání a odčítání a vyžaduje,
+        aby
+        uživatel zadával odpovědi ve formě čísel. Zároveň může přijímat příkazy, které změní jeho chování, například
+        přepnutí do režimu výpočtu složitějších úloh.</p>
+      <p><strong>Požadavky:</strong></p>
+      <ul>
+        <li><strong>Práce se soubory:</strong> Uložte zadání úkolů a odpovědí do souborů pro analýzu.</li>
+        <li><strong>Colorama:</strong> Používejte barvy pro interakci s uživatelem (např. červené pro špatné odpovědi,
+          zelené pro správné).</li>
+        <li><strong>Nekonečný cyklus:</strong> Bot musí běžet a opakovat úkoly, dokud uživatel nezastaví aplikaci.</li>
+      </ul>
+    </section>
+
+    
 
     <div class="odstavec">
       <table>
@@ -147,7 +185,7 @@
             <h5>Zadání projektu</h5>
           </td>
           <td style="padding-left: 50px;">
-            <button onClick='download("/download/python-beginer/projekt.pdf")' class="btn btn-primary"
+            <button onClick='download("/download/python-intermediete/projekt.pdf")' class="btn btn-primary"
               style="font-weight: bold;">
               stažení</button>
           </td>

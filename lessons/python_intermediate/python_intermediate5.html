@@ -375,6 +375,141 @@ turtle.done()
       </p>
     </section>
 
+    <section class="lesson-section">
+      <h2>Načítání náhodných barev ze seznamu a grafika s želvou</h2>
+      <p>
+        Připomeňme si tvar připomínající dlouhého hada z konce šesté lekce. 
+        Byl nakreslen jednou barvou. Nyní ho můžeme vylepšit tím, že každý 
+        úsek nakreslíme barvou, která bude náhodně vybrána ze seznamu deseti 
+        různých barev. V grafice s želvou je možné používat takzvané pojmenované barvy 
+        i barvy založené na modelu RGB, což je rozšířený barevný model ve světě 
+        počítačů.
+      </p>
+      <p>
+        Grafika s želvou je založena na knihovně TkInter, která obsahuje mnoho desítek pojmenovaných 
+        barev. Jejich přesný přehled si můžete ve vysokém rozlišení prohlédnout na odkazu, 
+        který spravuje vysoká škola Wellesley College.
+      </p>
+      <figure>
+        <figcaption>Obrázek 1 – část pojmenovaných barev, které je možné použít v grafice s želvou</figcaption>
+      </figure>
+    
+      <h3>Výstup programu:</h3>
+      <figure>
+        <figcaption>Obrázek 2 – výsledek programu s náhodným výběrem barev</figcaption>
+      </figure>
+    
+      <h3>Kód programu:</h3>
+      <pre class="code-block">
+        <code>
+import random
+import turtle
+
+my_colors = ["gray", "slate blue", "dodger blue", "cyan", "sea green", \
+              "gold2", "coral", "bisque2", "ivory4", "DarkOrchid1"]
+
+my_screen = turtle.Screen()
+my_screen.setup(600, 600)
+my_turtle = turtle.Turtle()
+my_turtle.shape("turtle")
+my_turtle.pensize(3)
+my_turtle.turtlesize(2)
+my_turtle.penup()
+my_turtle.back(250)
+my_turtle.left(90)
+my_turtle.back(250)
+my_turtle.right(90)
+my_turtle.speed(0)
+my_turtle.pendown()
+
+for index in range(21):
+    my_turtle.pencolor(random.choice(my_colors))
+    my_turtle.forward(500)
+
+    if index % 2 == 0:
+        my_turtle.left(90)
+        my_turtle.pencolor(random.choice(my_colors))
+        my_turtle.forward(25)
+        my_turtle.left(90)
+    else:
+        my_turtle.right(90)
+        my_turtle.pencolor(random.choice(my_colors))
+        my_turtle.forward(25)
+        my_turtle.right(90)
+
+turtle.done()
+        </code>
+      </pre>
+      <p>
+        Deset různých barev je uloženo v seznamu s názvem <code>my_colors</code>. 
+        Náhodnou barvu vybíráme před každou novou čárou pomocí metody 
+        <code>random.choice()</code>, jejímž argumentem je název seznamu.
+      </p>
+    
+      <h2>Opakující se barevné vzory a grafika s želvou</h2>
+      <p>
+        V programu výše jsme barvy vybírali náhodně. Ale co když bychom chtěli kreslit 
+        pomocí přesně se opakující sekvence barev? Například by mohlo jít o pojmenované 
+        barvy purple1, purple2, purple3, purple4, MediumPurple1, MediumPurple2, MediumPurple3 
+        a MediumPurple4 a tyto bychom chtěli opakovat dookola.
+      </p>
+      <p>
+        Očekávaný grafický výsledek je zobrazen na další straně. Takového výsledku dosáhneme, 
+        pokud programově vytvoříme sekvenci 0, 1, 2, 3, 4, 5, 6, 7, protože to jsou adresní 
+        místa v seznamu barev <code>my_colors</code>.
+      </p>
+    
+      <h3>Kód programu:</h3>
+      <pre class="code-block">
+        <code>
+import random
+import turtle
+
+my_colors = ["purple1", "purple2", "purple3", "purple4", "MediumPurple1", \
+              "MediumPurple2", "MediumPurple3", "MediumPurple4"]
+
+my_screen = turtle.Screen()
+my_screen.setup(600, 600)
+my_turtle = turtle.Turtle()
+my_turtle.shape("turtle")
+my_turtle.pensize(3)
+my_turtle.turtlesize(2)
+my_turtle.penup()
+my_turtle.back(250)
+my_turtle.left(90)
+my_turtle.back(250)
+my_turtle.right(90)
+my_turtle.speed(0)
+my_turtle.pendown()
+
+counter = 0
+for index in range(21):
+    position = counter % len(my_colors)
+    print(position)
+    my_turtle.pencolor(my_colors[position])
+    counter += 1
+    my_turtle.forward(500)
+
+    if index % 2 == 0:
+        my_turtle.left(90)
+        position = counter % len(my_colors)
+        my_turtle.pencolor(my_colors[position])
+        counter += 1
+        my_turtle.forward(25)
+        my_turtle.left(90)
+    else:
+        my_turtle.right(90)
+        position = counter % len(my_colors)
+        my_turtle.pencolor(my_colors[position])
+        counter += 1
+        my_turtle.forward(25)
+        my_turtle.right(90)
+
+turtle.done()
+        </code>
+      </pre>
+    </section>
+    
 
 
     <!-- The Modal -->
