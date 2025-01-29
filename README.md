@@ -65,6 +65,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     
 - Art of presentation
     - zkusit udelat neco jako type war, abych omezil tolik externich odkazů
+    - pridat do lekce ukazku animaci, jak mezi slajdy tak objekty jako text nadpis
     
 - Audacity
     - lekce 2 pridat ukazku fazovace, zrychleni tempa, orezat ticho
@@ -136,11 +137,9 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
 - Python Intermediate
-    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti, tak jak je u lekce 4
+    - zamyslet se jestli nechat takhle jednotlive kody na webu a nebo je vice vysvetlovat
     - lekce 3 - UI + obsah, ukazkove programy
-    - lekce 4 - UI + obsah, ukazkove programy
-    - lekce 5 - UI + obsah, ukazkove programy
-    - lekce 6 - UI + obsah, ukazkove programy
+    - navrhout ukazky jak by meli projekty vypadat, at to neni jen zadani
     - ukoly pro Python Intermediate
         - lekce 1
         - lekce 2
@@ -148,9 +147,26 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         - lekce 4
         - lekce 5
         - lekce 6
-    - projekt
+    - testik
+        - lekce 1
+        - lekce 2
+        - lekce 3
+        - lekce 4
+        - lekce 5
+
+    
 
 # Versions
+
+## January 2025 - Update
+
+- Python Intermediate
+    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti, tak jak je u lekce 4
+    - lekce 4 - UI + obsah, ukazkove programy
+    - lekce 5 - UI + obsah, ukazkove programy
+    - lekce 6 - UI + obsah, ukazkove programy
+    - projekt
+
 
 ## December 2024 - Update
 

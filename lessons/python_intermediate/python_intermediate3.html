@@ -12,9 +12,11 @@
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="/js/JQuery-general.js" defer></script>
+  <script src="/js/python/python.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
+  <link href="/css/python/intermedie.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -114,6 +116,32 @@
         Ukážeme si jak nainstalovat knohovnu <strong>Colorama</strong> k vylepšení práce v terminálu.
       </p>
     </div>
+
+    <section class="odstavec">
+      <div class="samprace">
+          <div class="row">
+              <div class="col-md-8">
+                  <h1>Opakování</h1>
+                  <p>
+                      Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu. 
+                      Ověříte si své dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými barvami. 
+                      Po dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
+                  </p>
+              </div>
+              <div class="col-md-4">
+                  <button id="right" class="btn btn-success"
+                          onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce4_test.html', 'opakovani1')">
+                      Zadání opakování
+                  </button>
+                  
+                  <button id="solution" class="btn btn-info"
+                          onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce4.py')">
+                      Zobrazit řešení
+                  </button>
+              </div>
+          </div>
+      </div>
+  </section>
 
     <p>
       Terminál je speciální nástroj, který nám umožňuje spouštět programy a zobrazovat jejich výsledky. Ve Visual Studio
@@ -219,6 +247,15 @@ set_terminal_size(100, 30)</code></pre>
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
       <div id="caption"></div>
+    </div>
+
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_intermediate/python_intermediate4.html';">Následující lekce</button>
+      </div>
     </div>
 
   </main>
