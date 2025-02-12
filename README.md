@@ -138,8 +138,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 
 - Python Intermediate
     - zamyslet se jestli nechat takhle jednotlive kody na webu a nebo je vice vysvetlovat
-    - lekce 3 - UI + obsah, ukazkove programy
     - navrhout ukazky jak by meli projekty vypadat, at to neni jen zadani
+    - opravit stylovani kodu tak jak je v lekce 3
     - ukoly pro Python Intermediate
         - lekce 1
         - lekce 2
@@ -148,15 +148,24 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         - lekce 5
         - lekce 6
     - testik
-        - lekce 1
-        - lekce 2
         - lekce 3
-        - lekce 4
-        - lekce 5
+        - lekce 6
+        
 
     
 
 # Versions
+
+## February 2025 - Update
+
+- Python Intermediate
+    - lekce 3 - UI + obsah, ukazkove programy
+    - sjednotit nadpisi v lekcich
+    - testik
+        - lekce 1
+        - lekce 2
+        - lekce 4
+        - lekce 5
 
 ## January 2025 - Update
 
