@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkoly v Pythonu</title>
+      <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .task {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5733;
+        }
+        .hint {
+            display: none; /* Skryj nápovědu, dokud není zobrazena */
+            margin-top: 10px;
+            color: #555;
+            font-style: italic;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Úkoly v Pythonu</h1>
+
+    <p class="timer" id="timer">Čas zbývá: 20:00</p>
+
+    <!-- Úkol 1 -->
+    <div class="task">
+        <h3>Úkol 1:</h3>
+        <p>Vytvoř náhodné číslo a zjisti, jestli je sudé nebo liché. (Použij knihovnu random.)</p>
+        <p><strong>Řešení:</strong> Pokud je náhodné číslo sudé, vypiš, že je sudé, jinak, že je liché.</p>
+        <button onclick="toggleHint(1)" class="btn btn-succes">Zobrazit nápovědu</button>
+        <div class="hint" id="hint-1">
+            Použij `random.randint` pro generování čísla a operátor `%` (modulo) pro kontrolu, zda je číslo dělitelné 2.
+        </div>
+    </div>
+
+    <!-- Úkol 2 -->
+    <div class="task">
+        <h3>Úkol 2:</h3>
+        <p>Pomocí knihovny colorama zbarvi text do jedné z barev podle náhody. (Použij random pro výběr barvy.)</p>
+        <p><strong>Řešení:</strong> Použij random pro náhodný výběr barvy a změň barvu textu pomocí colorama.</p>
+        <button onclick="toggleHint(2)">Zobrazit nápovědu</button>
+        <div class="hint" id="hint-2">
+            Použij `random.choice` pro výběr barvy ze seznamu barev definovaných v knihovně colorama.
+        </div>
+    </div>
+
+    <!-- Úkol 3 -->
+    <div class="task">
+        <h3>Úkol 3:</h3>
+        <p>Změř čas, jak dlouho trvá generování náhodného čísla (použij time). (Vyzkoušej generování náhodného čísla 10 000krát.)</p>
+        <p><strong>Řešení:</strong> Pomocí funkce time měř čas potřebný k generování náhodného čísla 10 000krát.</p>
+        <button onclick="toggleHint(3)">Zobrazit nápovědu</button>
+        <div class="hint" id="hint-3">
+            Použij `time.time` k zaznamenání času před a po smyčce. Odečti čas na začátku od času na konci.
+        </div>
+    </div>
+
+    <!-- Úkol 4 -->
+    <div class="task">
+        <h3>Úkol 4:</h3>
+        <p>Generuj náhodná písmena (od A do Z) po dobu 5 sekund. (Použij random pro výběr písmen a time pro časové omezení.)</p>
+        <p><strong>Řešení:</strong> Generuj náhodná písmena a tiskni je každou chvíli po dobu 5 sekund.</p>
+        <button onclick="toggleHint(4)">Zobrazit nápovědu</button>
+        <div class="hint" id="hint-4">
+            Použij `random.choice` pro výběr písmena z řetězce `'ABCDEFGHIJKLMNOPQRSTUVWXYZ'` a `time.time` k ukončení smyčky po 5 sekundách.
+        </div>
+    </div>
+
+    <!-- Úkol 5 -->
+    <div class="task">
+        <h3>Úkol 5:</h3>
+        <p>Vytvoř program, který náhodně zvolí, jestli uživatel vyhraje nebo prohraje. (Použij random a colorama pro barevné zobrazení.)</p>
+        <p><strong>Řešení:</strong> Použij random pro výběr mezi "win" nebo "lose" a použij colorama pro zobrazení výsledku v různých barvách.</p>
+        <button onclick="toggleHint(5)">Zobrazit nápovědu</button>
+        <div class="hint btn btn-success" id="hint-5">
+            Použij `random.choice` mezi `"win"` a `"lose"`. Pro barvu použij `colorama.Fore.GREEN` nebo `colorama.Fore.RED`.
+        </div>
+    </div>
+
+    <script>
+        // Funkce pro přepínání zobrazení nápovědy
+        function toggleHint(taskNumber) {
+            const hint = document.getElementById(`hint-${taskNumber}`);
+            if (hint.style.display === 'none' || hint.style.display === '') {
+                hint.style.display = 'block'; // Zobrazit nápovědu
+            } else {
+                hint.style.display = 'none'; // Skrýt nápovědu
+            }
+        }
+
+        let timeLeft = 1200; // 20 minut v sekundách
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `Čas zbývá: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Čas vypršel!");
+            }
+            timeLeft--;
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>

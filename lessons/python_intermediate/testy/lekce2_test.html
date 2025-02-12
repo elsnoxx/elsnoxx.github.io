@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkoly v Pythonu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .task {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            height: 100%;
+        }
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF5733;
+        }
+        .hint {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+            font-style: italic;
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-md-6 {
+            display: flex;
+        }
+        .task-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Úkoly v Pythonu</h1>
+    <p class="timer" id="timer">Čas zbývá: 20:00</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="task-container">
+                <div class="task">
+                    <h3>Úkol 1:</h3>
+                    <p>Sečtení všech čísel v seznamu</p>
+                    <code>
+                        <pre>
+seznam = [1, 2, 3, 4, 5]
+                        </pre>
+                    </code>
+                    <p><strong>Řešení:</strong> Použijte smyčku k sečtení všech prvků v seznamu.</p>
+                    <button onclick="toggleHint(1)" class="btn btn-success">Zobrazit nápovědu</button>
+                    <div class="hint" id="hint-1">
+                        Použij `sum(seznam)` nebo `for num in seznam:` a postupně sčítej hodnoty.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="task-container">
+                <div class="task">
+                    <h3>Úkol 2:</h3>
+                    <p>Načti jméno uživatele a pozdrav ho</p>
+                    <p><strong>Řešení:</strong> Použij funkci input() pro získání jména a vypiš pozdrav.</p>
+                    <button onclick="toggleHint(2)" class="btn btn-success">Zobrazit nápovědu</button>
+                    <div class="hint" id="hint-2">
+                        Použij `jmeno = input('Zadej své jméno: ')` a poté `print(f'Ahoj, {jmeno}!')`.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="task-container">
+                <div class="task">
+                    <h3>Úkol 3:</h3>
+                    <p>Převod stupňů Celsia na Fahrenheity</p>
+                    <p><strong>Řešení:</strong> Použij vzorec F = C * 9/5 + 32.</p>
+                    <button onclick="toggleHint(3)" class="btn btn-success">Zobrazit nápovědu</button>
+                    <div class="hint" id="hint-3">
+                        Použij `f = c * 9/5 + 32` pro převod teploty.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="task-container">
+                <div class="task">
+                    <h3>Úkol 4:</h3>
+                    <p>Rozhodni, zda číslo je kladné, záporné nebo nula</p>
+                    <p><strong>Řešení:</strong> Použij podmínky k rozhodnutí.</p>
+                    <button onclick="toggleHint(4)" class="btn btn-success">Zobrazit nápovědu</button>
+                    <div class="hint" id="hint-4">
+                        Použij `if cislo > 0`, `elif cislo < 0`, `else` pro vyhodnocení.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task">
+        <h3>Úkol 5:</h3>
+        <p>Nakresli obdélník ze znaků hvězdiček o zadané šířce a výšce</p>
+        <p><strong>Řešení:</strong> Použij smyčky k výpisu obdélníku.</p>
+        <button onclick="toggleHint(5)" class="btn btn-success">Zobrazit nápovědu</button>
+        <div class="hint" id="hint-5">
+            Použij `for i in range(vyska): print('*' * sirka)` pro výpis obdélníku.
+        </div>
+    </div>
+
+    <script>
+        function toggleHint(taskNumber) {
+            const hint = document.getElementById(`hint-${taskNumber}`);
+            hint.style.display = (hint.style.display === 'none' || hint.style.display === '') ? 'block' : 'none';
+        }
+
+        let timeLeft = 1200;
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `Čas zbývá: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Čas vypršel!");
+            }
+            timeLeft--;
+        }
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>
