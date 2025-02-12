@@ -17,6 +17,15 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
   <link href="/css/python/intermedie.css" rel="stylesheet">
+
+  <!-- Highliting for python codes -->
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -89,11 +98,10 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';"
-              class="btn btn-primary">Předchozí lekce</button>
+              onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Předchozí
+              lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_intermediate/python_intermediate4.html';"
-              class="btn btn-primary">Následují
+              onclick="location.href = '/lessons/python_intermediate/python_intermediate4.html';">Následující
               lekce</button>
           </td>
           <td>
@@ -102,111 +110,150 @@
         </tr>
       </table>
     </div>
-    <div class="odstavec">
-      <h1 class="mt-5" style="margin-bottom: 64px; ">Terminál a barevné animace</h1>
-      <p style="margin-bottom: 64px; ">
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
-      </p>
 
-      <p>
-        V dnešní lekci si vysvětlíme co je to terminál, jak se používá v rámci použitelnosti s uživatelem.
-        Ukážeme si jak nainstalovat knohovnu <strong>Colorama</strong> k vylepšení práce v terminálu.
+    <div class="lesson-section">
+      <h1 class="lesson-title">Terminál a barevné animace</h1>
+      <p class="lesson-text">
+        Pro vytváření našich projektů budeme používat IDE od společnosti <strong>Microsoft</strong> s názvem
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="link-primary">Visual
+          Studio Code</a>.
+        Návod na stažení a zprovoznění naleznete <a href="/lessons/python_beginner/vsc.html"
+          class="link-secondary">zde</a>.
+      </p>
+      <p class="lesson-text">
+        V dnešní lekci si vysvětlíme, co je to terminál a jak se používá v rámci uživatelské interakce. Také ukážeme,
+        jak nainstalovat knihovnu <strong>Colorama</strong> pro vylepšení práce v terminálu.
       </p>
     </div>
 
     <section class="odstavec">
       <div class="samprace">
-          <div class="row">
-              <div class="col-md-8">
-                  <h1>Opakování</h1>
-                  <p>
-                      Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu. 
-                      Ověříte si své dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými barvami. 
-                      Po dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
-                  </p>
-              </div>
-              <div class="col-md-4">
-                  <button id="right" class="btn btn-success"
-                          onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce4_test.html', 'opakovani1')">
-                      Zadání opakování
-                  </button>
-                  
-                  <button id="solution" class="btn btn-info"
-                          onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce4.py')">
-                      Zobrazit řešení
-                  </button>
-              </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Opakování</h1>
+            <p>
+              Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu. Ověříte si své
+              dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými barvami. Po
+              dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
+            </p>
           </div>
+          <div class="col-md-4">
+            <button id="right" class="btn btn-success"
+              onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce4_test.html', 'opakovani1')">
+              Zadání opakování
+            </button>
+
+            <button id="solution" class="btn btn-info"
+              onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce4.py')">
+              Zobrazit řešení
+            </button>
+          </div>
+        </div>
       </div>
-  </section>
+    </section>
 
-    <p>
-      Terminál je speciální nástroj, který nám umožňuje spouštět programy a zobrazovat jejich výsledky. Ve Visual Studio
-      Code (VSC) je terminál přístupný přímo ve spodní části okna a jmenuje se jednoduše <strong>TERMINAL</strong>.
-    </p>
-    <img src="terminal_vscode_example.png" alt="Ukázka terminálu ve Visual Studio Code">
-    <p>
-      V terminálu můžeme psát příkazy, které spustí naše programy, nebo dokonce ovládat náš počítač. Například můžeme:
-    </p>
-    <ul>
-      <li>Spustit Python skript (např. <code>python moje_programy.py</code>).</li>
-      <li>Zobrazit seznam souborů ve složce.</li>
-      <li>Změnit barvy a funkce terminálu.</li>
+    <section class="info-section">
+      <h2 class="info-title">Co je to terminál?</h2>
+      <p class="info-text">
+        Terminál je nástroj, který umožňuje spouštět programy a zobrazovat jejich výsledky. Ve Visual Studio Code (VSC)
+        je terminál přístupný ve spodní části okna a nazývá se jednoduše <strong>TERMINAL</strong>.
+      </p>
+      <img src="terminal_vscode_example.png" alt="Ukázka terminálu ve Visual Studio Code" class="image-example">
+    </section>
+
+    <section class="info-section">
+      <h3 class="info-subtitle">Jak otevřít terminál ve VSC?</h3>
+      <p class="info-text">
+        Otevření terminálu ve VSC je snadné! Postupuj podle těchto kroků:
+      </p>
+      <ol class="info-text">
+        <li>Otevři Visual Studio Code.</li>
+        <li>Klikni na horní menu <strong>View</strong> (Zobrazit).</li>
+        <li>Vyber možnost <strong>Terminal</strong> (Terminál).</li>
+      </ol>
+      <img src="vscode_open_terminal.png" alt="Jak otevřít terminál ve Visual Studio Code" class="image-example">
+    </section>
+
+    <section class="code-section">
+      <h2 class="code-title">Knihovna <code>os</code> v Pythonu</h2>
+      <p class="code-text">
+        Knihovna <code>os</code> nám pomáhá pracovat s věcmi, jako jsou soubory, složky a operační systém. Zde jsou
+        některé užitečné příkazy:
+      </p>
+      <ul class="code-list">
+        <li class="code-item">
+            <strong><code>os.getcwd()</code>:</strong> Vrací aktuální pracovní adresář.
+            <br>
+            <div class="example">
+                <p><strong>Příklad:</strong> Pokud je skript ve složce <strong>C:/MojeSoubory</strong>, program vypíše právě tuto cestu.</p>
+                <pre><code class="language-python">
+import os
+
+# Vypíše aktuální pracovní adresář
+print(os.getcwd())
+                </code></pre>
+            </div>
+        </li>
+
+        <li class="code-item">
+            <strong><code>os.listdir()</code>:</strong> Zobrazí seznam souborů v adresáři.
+            <br>
+            <div class="example">
+                <p><strong>Příklad:</strong> Tento kód vypíše všechny soubory ve složce, ve které se právě nacházíme.</p>
+                <pre><code class="language-python">
+import os
+
+# Vypíše všechny soubory ve složce
+for file in os.listdir():
+print(file)
+                </code></pre>
+            </div>
+        </li>
+        
+        <li class="code-item">
+            <strong><code>os.mkdir()</code>:</strong> Vytvoří novou složku.
+            <br>
+            <div class="example">
+                <p><strong>Příklad:</strong> Tento kód vytvoří složku s názvem "NovaSlozka" v aktuálním adresáři.</p>
+                <pre><code class="language-python">
+import os
+
+# Vytvoří novou složku
+os.mkdir('NovaSlozka')
+                </code></pre>
+            </div>
+        </li>
+
+        <li class="code-item">
+            <strong><code>os.remove()</code>:</strong> Smaže soubor.
+            <br>
+            <div class="example">
+                <p><strong>Příklad:</strong> Tento kód smaže soubor s názvem "test.txt" v aktuálním adresáři.</p>
+                <pre><code class="language-python">
+import os
+
+# Smaže soubor
+os.remove('test.txt')
+                </code></pre>
+            </div>
+        </li>
+
+        <li class="code-item">
+            <strong><code>os.system()</code>:</strong> Spustí příkaz operačního systému.
+            <br>
+            <div class="example">
+                <p><strong>Příklad:</strong> Tento kód spustí příkaz, který změní velikost terminálu (na Windows).</p>
+                <pre><code class="language-python">
+import os
+
+# Změní velikost terminálu
+os.system('mode con: cols=100 lines=30')
+                </code></pre>
+            </div>
+        </li>
     </ul>
-
-    <h2>Jak otevřít terminál ve VSC?</h2>
-    <p>
-      Je to snadné! Postupuj podle těchto kroků:
-    </p>
-    <ol>
-      <li>Otevři Visual Studio Code.</li>
-      <li>Klikni na horní menu <strong>View</strong> (Zobrazit).</li>
-      <li>Vyber možnost <strong>Terminal</strong> (Terminál).</li>
-    </ol>
-    <img src="vscode_open_terminal.png" alt="Jak otevřít terminál ve Visual Studio Code">
-    <p>
-      Nyní by se ti měl terminál zobrazit ve spodní části okna. Můžeš v něm psát příkazy a vidět výsledky svého
-      programu!
-    </p>
-
-    <h1>Knihovna <code>os</code> v Pythonu</h1>
-    <p>Knihovna <code>os</code> nám pomáhá pracovat s věcmi, jako jsou soubory, složky a operační systém. Tady je pár
-      užitečných příkazů:</p>
-    <ul>
-      <li>
-        <strong><code>os.getcwd()</code>:</strong> Vrací, ve které složce právě pracuješ.<br>
-        <div class="example">Příklad: Pokud jsi v <code>C:/MojeSoubory</code>, vrátí to právě tuto cestu.</div>
-      </li>
-      <li>
-        <strong><code>os.listdir()</code>:</strong> Ukáže seznam všech souborů a složek ve vybrané složce.<br>
-        <div class="example">Příklad: Vidíš soubory, jako třeba <code>dokument.txt</code> nebo <code>obrazek.png</code>.
-        </div>
-      </li>
-      <li>
-        <strong><code>os.mkdir()</code>:</strong> Vytvoří novou složku.<br>
-        <div class="example">Příklad: Pokud napíšeš <code>os.mkdir("NovaSlozka")</code>, vytvoří se složka s názvem
-          <code>NovaSlozka</code>.
-        </div>
-      </li>
-      <li>
-        <strong><code>os.remove()</code>:</strong> Smaže soubor.<br>
-        <div class="example">Příklad: Když máš soubor <code>test.txt</code> a napíšeš
-          <code>os.remove("test.txt")</code>, soubor se smaže.
-        </div>
-      </li>
-      <li>
-        <strong><code>os.system()</code>:</strong> Spouští příkazy operačního systému.<br>
-        <div class="example">Příklad: Můžeš spustit příkaz, který změní velikost terminálu nebo něco podobného.</div>
-      </li>
-      <li>
-        <strong>Nastavení velikosti terminálu:</strong> Změní velikost okna terminálu na určitý počet sloupců a
-        řádků.<br>
-        <div class="example">
-          <p><strong>Kód:</strong></p>
-          <pre><code>import os
+      <pre class="code-block">
+import os
 
 def set_terminal_size(columns, rows):
     if os.name == 'nt':  # Windows
@@ -215,50 +262,37 @@ def set_terminal_size(columns, rows):
         os.system(f'printf "\\e[8;{rows};{columns}t"')
 
 # Nastavení terminálu na 100 sloupců a 30 řádků
-set_terminal_size(100, 30)</code></pre>
-        </div>
-      </li>
-    </ul>
+set_terminal_size(100, 30)
+        </pre>
+    </section>
 
+    <section class="info-section">
+      <h2 class="info-title">Instalace a použití knihovny Colorama</h2>
+      <p class="info-text">
+        Nainstalujte knihovnu <strong>Colorama</strong> pro barevné texty v terminálu. Následuje příklad použití:
+      </p>
+      <pre class="code-block">
+from colorama import init, Fore, Back, Style
 
-    <p>
-      2. postup jak nainstalovat knihovnu colorama a jeji prvni pouziti
-      <code>
-        # import colorma module
-        from colorama import init, Fore, Back, Style
-        
-        # Initialize Colorama
-        init()
-        
-        # Print text with different colors and styles
-        print(Fore.RED + 'This text is red')
-        print(Back.GREEN + 'This text has a green background')
-        print(Style.BRIGHT + 'This text is bright')
-        print(Style.RESET_ALL + 'Back to normal text')
-      </code>
-    </p>
+# Inicializace Colorama
+init()
 
-    <p>
-      1. ukazka barevna mozaika, random generovani barev a naplneni terminalu
-    </p>
+# Tisk textu s různými barvami a styly
+print(Fore.RED + 'This text is red')
+print(Back.GREEN + 'This text has a green background')
+print(Style.BRIGHT + 'This text is bright')
+print(Style.RESET_ALL + 'Back to normal text')
+        </pre>
+    </section>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+    <div class="d-flex justify-content-between mb-4">
+      <button id="left" class="btn btn-primary"
+        onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Předchozí lekce</button>
+      <button id="right" class="btn btn-primary"
+        onclick="location.href = '/lessons/python_intermediate/python_intermediate4.html';">Následující lekce</button>
     </div>
-
-    <div>
-      <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Předchozí lekce</button>
-        <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_intermediate/python_intermediate4.html';">Následující lekce</button>
-      </div>
-    </div>
-
   </main>
+
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
       © <span id="currentYear"></span> Copyright:

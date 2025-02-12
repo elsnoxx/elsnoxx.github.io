@@ -101,13 +101,19 @@
         </tr>
       </table>
     </div>
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Turtle a soubory</h1>
-    <p style="margin-bottom: 64px; ">
-      Pro vytváření našich úkolů budeme používat IDE neboli vývojové prostředí od společnosti
-      <strong>Microsoft</strong> s názvem
-      <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-      Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
-    </p>
+
+    <div class="lesson-section">
+      <h1 class="lesson-title">Turtle a soubory</h1>
+      <p class="lesson-text">
+        V této lekci si zopakujeme práci s knihovou Turtle. Naučíme se, jak načítat instrukce pro kreslení z textového.
+        A povíme si něco více o typech souborů a fungování kódu běžící v operačním systému.
+
+        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
+        <strong>Microsoft</strong> s názvem
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
+        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
+      </p>
+    </div>
 
     <section class="odstavec">
       <div class="samprace">
@@ -127,10 +133,10 @@
               Zadání opakování
             </button>
 
-<!--             <button id="solution" class="btn btn-info"
+            <button id="solution" class="btn btn-info"
               onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce5.py')">
               Zobrazit řešení
-            </button> -->
+            </button>
           </div>
         </div>
       </div>
@@ -169,7 +175,8 @@
           <h2>Korytnačí grafika a formát textových souborů</h2>
         </div>
         <div class="col-md-2">
-          <a href="/scripty-lekce/python/python_intermediate/lekce5/equilateral_triangle.turtledraw" download class="btn btn-info">
+          <a href="/scripty-lekce/python/python_intermediate/lekce5/equilateral_triangle.turtledraw" download
+            class="btn btn-info">
             Stáhnout soubor
           </a>
         </div>
@@ -235,7 +242,8 @@ turtle.done()
               </button>
             </div>
             <div class="col-md-6">
-              <a href="/scripty-lekce/python/python_intermediate/lekce5/vstupSamprace.turtledraw" download class="btn btn-info">
+              <a href="/scripty-lekce/python/python_intermediate/lekce5/vstupSamprace.turtledraw" download
+                class="btn btn-info">
                 Stáhnout soubor
               </a>
             </div>
@@ -286,7 +294,7 @@ turtle.done()
         <li>Číslo je sudé, pokud zbytek po dělení 2 je <code>0</code>.</li>
         <li>Číslo je liché, pokud zbytek po dělení 2 není <code>0</code>.</li>
       </ul>
-    
+
       <h3>Ukázka jednoduchého kódu</h3>
       <pre class="code-block">
         <code>
@@ -297,14 +305,14 @@ else:
     print("Číslo je liché.")
         </code>
       </pre>
-    
+
       <h3>Vysvětlení kódu:</h3>
       <p>
         V tomto příkladu se nejprve načte číslo zadané uživatelem jako vstup. Pomocí operátoru
         <code>%</code> (modulo) se zjistí, zda zbytek po dělení 2 je <code>0</code>. Pokud ano, číslo je sudé,
         jinak je liché. Výsledek je následně vypsán na obrazovku.
       </p>
-    
+
       <h3>Kresba podle párnosti</h3>
       <div class="row">
         <div class="col-md-6">
@@ -339,11 +347,11 @@ turtle.done()
         </div>
         <div class="col-md-6">
           <img class="myImg img-fluid" src="/img/python_intermedie/lekce5/parnost.png" alt="Ukázkový obrázek"
-          style="width:100%; max-width:300px; height:auto;" loading="lazy">
+            style="width:100%; max-width:300px; height:auto;" loading="lazy">
         </div>
       </div>
- 
-    
+
+
       <h3>Jak kód funguje:</h3>
       <p>
         Tento program kombinuje logiku párnosti a vizualizaci pomocí knihovny <code>turtle</code>. Želva
@@ -358,14 +366,14 @@ turtle.done()
         směrem nahoru a želva se na konci každého řádku otočí podle sudosti nebo lichosti aktuálního indexu
         cyklu.
       </p>
-    
+
       <h3>Tipy k experimentování:</h3>
       <ul>
         <li>Změňte počet čar, které želva nakreslí, úpravou <code>range(10)</code> na jiný rozsah.</li>
         <li>Pozměňte délku čar (<code>my_turtle.forward(500)</code>) a sledujte, jak to ovlivní výsledný vzor.</li>
         <li>Vyzkoušejte jiné úhly otáčení než <code>90°</code>, například <code>45°</code> nebo <code>60°</code>.</li>
       </ul>
-    
+
       <h3>Co si odnést:</h3>
       <p>
         Tento příklad ukazuje, jak lze pomocí jednoduché logiky a cyklů vytvořit vizuální vzory.
@@ -377,27 +385,27 @@ turtle.done()
     <section class="lesson-section">
       <h2>Načítání náhodných barev ze seznamu a grafika s želvou</h2>
       <p>
-        Připomeňme si tvar připomínající dlouhého hada z konce šesté lekce. 
-        Byl nakreslen jednou barvou. Nyní ho můžeme vylepšit tím, že každý 
-        úsek nakreslíme barvou, která bude náhodně vybrána ze seznamu deseti 
-        různých barev. V grafice s želvou je možné používat takzvané pojmenované barvy 
-        i barvy založené na modelu RGB, což je rozšířený barevný model ve světě 
+        Připomeňme si tvar připomínající dlouhého hada z konce šesté lekce.
+        Byl nakreslen jednou barvou. Nyní ho můžeme vylepšit tím, že každý
+        úsek nakreslíme barvou, která bude náhodně vybrána ze seznamu deseti
+        různých barev. V grafice s želvou je možné používat takzvané pojmenované barvy
+        i barvy založené na modelu RGB, což je rozšířený barevný model ve světě
         počítačů.
       </p>
       <p>
-        Grafika s želvou je založena na knihovně TkInter, která obsahuje mnoho desítek pojmenovaných 
-        barev. Jejich přesný přehled si můžete ve vysokém rozlišení prohlédnout na odkazu, 
+        Grafika s želvou je založena na knihovně TkInter, která obsahuje mnoho desítek pojmenovaných
+        barev. Jejich přesný přehled si můžete ve vysokém rozlišení prohlédnout na odkazu,
         který spravuje vysoká škola Wellesley College.
       </p>
       <figure>
         <figcaption>Obrázek 1 – část pojmenovaných barev, které je možné použít v grafice s želvou</figcaption>
       </figure>
-    
+
       <h3>Výstup programu:</h3>
       <figure>
         <figcaption>Obrázek 2 – výsledek programu s náhodným výběrem barev</figcaption>
       </figure>
-    
+
       <h3>Kód programu:</h3>
       <pre class="code-block">
         <code>
@@ -440,24 +448,24 @@ turtle.done()
         </code>
       </pre>
       <p>
-        Deset různých barev je uloženo v seznamu s názvem <code>my_colors</code>. 
-        Náhodnou barvu vybíráme před každou novou čárou pomocí metody 
+        Deset různých barev je uloženo v seznamu s názvem <code>my_colors</code>.
+        Náhodnou barvu vybíráme před každou novou čárou pomocí metody
         <code>random.choice()</code>, jejímž argumentem je název seznamu.
       </p>
-    
+
       <h2>Opakující se barevné vzory a grafika s želvou</h2>
       <p>
-        V programu výše jsme barvy vybírali náhodně. Ale co když bychom chtěli kreslit 
-        pomocí přesně se opakující sekvence barev? Například by mohlo jít o pojmenované 
-        barvy purple1, purple2, purple3, purple4, MediumPurple1, MediumPurple2, MediumPurple3 
+        V programu výše jsme barvy vybírali náhodně. Ale co když bychom chtěli kreslit
+        pomocí přesně se opakující sekvence barev? Například by mohlo jít o pojmenované
+        barvy purple1, purple2, purple3, purple4, MediumPurple1, MediumPurple2, MediumPurple3
         a MediumPurple4 a tyto bychom chtěli opakovat dookola.
       </p>
       <p>
-        Očekávaný grafický výsledek je zobrazen na další straně. Takového výsledku dosáhneme, 
-        pokud programově vytvoříme sekvenci 0, 1, 2, 3, 4, 5, 6, 7, protože to jsou adresní 
+        Očekávaný grafický výsledek je zobrazen na další straně. Takového výsledku dosáhneme,
+        pokud programově vytvoříme sekvenci 0, 1, 2, 3, 4, 5, 6, 7, protože to jsou adresní
         místa v seznamu barev <code>my_colors</code>.
       </p>
-    
+
       <h3>Kód programu:</h3>
       <pre class="code-block">
         <code>
@@ -508,7 +516,7 @@ turtle.done()
         </code>
       </pre>
     </section>
-    
+
 
 
     <!-- The Modal -->
