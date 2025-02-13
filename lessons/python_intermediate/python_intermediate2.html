@@ -18,6 +18,15 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
   <link href="/css/python/intermedie.css" rel="stylesheet">
+
+  <!-- Highliting for python codes -->
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -59,9 +68,12 @@
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -104,161 +116,179 @@
     <div class="lesson-section">
       <h1 class="lesson-title">Algoritmy a Seznamy</h1>
       <p class="lesson-text">
-        V této lekci se naučíme, co jsou to <strong>algoritmy</strong> a jak fungují <strong>seznamy</strong>! 
-        K vytváření projektů budeme používat šikovné prostředí od <strong>Microsoftu</strong> s názvem 
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="link-primary">Visual Studio Code</a>. 
-        Potřebujete pomoc? Návod na stažení a zprovoznění najdete 
+        V této lekci se naučíme, co jsou to <strong>algoritmy</strong> a jak fungují <strong>seznamy</strong>!
+        K vytváření projektů budeme používat šikovné prostředí od <strong>Microsoftu</strong> s názvem
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="link-primary">Visual
+          Studio Code</a>.
+        Potřebujete pomoc? Návod na stažení a zprovoznění najdete
         <a href="/lessons/python_intermediate/vsc.html" class="link-secondary">zde</a>.
       </p>
     </div>
 
     <section class="odstavec">
       <div class="samprace">
-          <div class="row">
-              <div class="col-md-8">
-                  <h1>Opakování</h1>
-                  <p>
-                      Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu. 
-                      Ověříte si své dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými barvami. 
-                      Po dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
-                  </p>
-              </div>
-              <div class="col-md-4">
-                  <button id="right" class="btn btn-success"
-                          onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce4_test.html', 'opakovani1')">
-                      Zadání opakování
-                  </button>
-                  
-                  <button id="solution" class="btn btn-info"
-                          onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce2.py')">
-                      Zobrazit řešení
-                  </button>
-              </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Opakování</h1>
+            <p>
+              Tento test je zaměřen na procvičení základních a středně pokročilých konceptů v Pythonu.
+              Ověříte si své dovednosti v oblasti generování náhodných čísel, měření času a manipulace s textovými
+              barvami.
+              Po dokončení testu budete mít možnost zkontrolovat své odpovědi a získat zpětnou vazbu.
+            </p>
           </div>
+          <div class="col-md-4">
+            <button id="right" class="btn btn-success"
+              onclick="showCodePWopakovani('/lessons/python_intermediate/testy/lekce4_test.html', 'opakovani1')">
+              Zadání opakování
+            </button>
+
+            <button id="solution" class="btn btn-info"
+              onclick="showCodePWreseni('/scripty-lekce/python/python_intermediate/opakovani/opakovani_lekce2.py')">
+              Zobrazit řešení
+            </button>
+          </div>
+        </div>
       </div>
-  </section>
-    
-    
-    
+    </section>
+
+
+
     <section class="info-section">
       <h2 class="info-title">Co jsou to algoritmy?</h2>
       <p class="info-text">
-        Algoritmy jsou jako <strong>recepty</strong> v kuchařce – přesně říkají, co máme dělat krok za krokem. 
+        Algoritmy jsou jako <strong>recepty</strong> v kuchařce – přesně říkají, co máme dělat krok za krokem.
         Více se dozvíte <a href="https://sk.wikipedia.org/wiki/Triediaci_algoritmus" class="link-primary">zde</a>. 🍳
       </p>
       <h3 class="info-subtitle">Seznamy a indexy</h3>
       <p class="info-text">
-        Seznam je jako dlouhý řetěz. Každý dílek (neboli prvek) má svoje místo, kterému říkáme <strong>index</strong>. 📍
+        Seznam je jako dlouhý řetěz. Každý dílek (neboli prvek) má svoje místo, kterému říkáme <strong>index</strong>.
+        📍
       </p>
       <div class="image-container">
-        <img class="image-example" src="/img/python_intermedie/lekce2/Bubble-sort-example-300px.gif" alt="Komíny" loading="lazy">
+        <img class="image-example" src="/img/python_intermedie/lekce2/Bubble-sort-example-300px.gif" alt="Komíny"
+          loading="lazy">
         <p class="image-caption">👆 Podívejte se, jak funguje třídicí algoritmus! 👆</p>
       </div>
     </section>
-    
+
     <section class="sorting-section">
       <h2 class="sorting-title">Třídicí algoritmy</h2>
       <p class="sorting-text">
-        Představíme si algoritmy jako <strong>bubblesort</strong>, <strong>selectsort</strong> nebo <strong>insertsort</strong>. 
-        Mrkněte na <a href="https://www.youtube.com/watch?v=9I2oOAr2okY" class="link-primary">bubblesort video</a> a zjistěte, jak to celé funguje!
+        Představíme si algoritmy jako <strong>bubblesort</strong>, <strong>selectsort</strong> nebo
+        <strong>insertsort</strong>.
+        Mrkněte na <a href="https://www.youtube.com/watch?v=9I2oOAr2okY" class="link-primary">bubblesort video</a> a
+        zjistěte, jak to celé funguje!
       </p>
       <div class="image-container">
-        <img class="image-example" src="/img/python_intermedie/lekce2/sort-fun.gif" alt="Třídicí algoritmus" loading="lazy">
+        <img class="image-example" src="/img/python_intermedie/lekce2/sort-fun.gif" alt="Třídicí algoritmus"
+          loading="lazy">
         <p class="image-caption">🎥 Podívejte se na animaci algoritmu Bubblesort!</p>
       </div>
     </section>
-    
-    
+
+
     <section class="sorting-program">
       <h2 class="section-title">Program pro třídění</h2>
-      
+
       <p class="section-description">
-        V této sekci si ukážeme, jak vytvořit program, který umí seřadit čísla! Postup je jednoduchý, rozdělíme si práci na několik částí.
+        V této sekci si ukážeme, jak vytvořit program, který umí seřadit čísla! Postup je jednoduchý, rozdělíme si práci
+        na několik částí.
       </p>
-    
+
       <h3 class="section-subtitle">🛠️ 1. Ukázka záměny hodnot</h3>
       <p class="section-text">
-        V souboru <strong>lekce2_zamena.py</strong> máme jednoduchou ukázku, jak mezi sebou zaměnit hodnoty dvou proměnných:
+        V souboru <strong>lekce2_zamena.py</strong> máme jednoduchou ukázku, jak mezi sebou zaměnit hodnoty dvou
+        proměnných:
       </p>
+      <h4><strong>Ukázka kódu:</strong></h4>
       <pre class="code-block">
-    <strong>Ukázka kódu:</strong>
-    x = 5
-    y = 10
-    
-    # Zaměna hodnot
-    temp = x
-    x = y
-    y = temp
-    
-    print("Hodnoty po záměně:", x, y)
+        <code class="language-python">
+x = 5
+y = 10
+
+# Zaměna hodnot
+temp = x
+x = y
+y = temp
+
+print("Hodnoty po záměně:", x, y)
+    </code>
       </pre>
-    
+
       <h3 class="section-subtitle">📥 2. Vstup od uživatele</h3>
       <p class="section-text">
-        Nejprve připravíme část programu, kde uživatel zadává čísla. Použijeme nekonečný cyklus, který se ukončí jen, pokud vstup splňuje pravidla:
+        Nejprve připravíme část programu, kde uživatel zadává čísla. Použijeme nekonečný cyklus, který se ukončí jen,
+        pokud vstup splňuje pravidla:
       </p>
+      <h4><strong>Ukázka kódu:</strong></h4>
       <pre class="code-block">
-    <strong>Ukázka kódu:</strong>
-    my_list = []
-    
-    while True:
-        user_input = input("Zadej číslo (nebo 'q' pro ukončení): ")
-        if user_input.isnumeric():
-            my_list.append(int(user_input))
-        elif user_input.lower() == 'q':
-            break
-        else:
-            print("Neplatný vstup, zkus to znovu.")
-    
-    print("Seznam před tříděním:", my_list)
+        <code class="language-python">
+my_list = []
+
+while True:
+    user_input = input("Zadej číslo (nebo 'q' pro ukončení): ")
+    if user_input.isnumeric():
+        my_list.append(int(user_input))
+    elif user_input.lower() == 'q':
+        break
+    else:
+        print("Neplatný vstup, zkus to znovu.")
+
+print("Seznam před tříděním:", my_list)
+    </code>
       </pre>
-    
+
       <h3 class="section-subtitle">🔄 3. Cyklus algoritmu</h3>
       <p class="section-text">
         Nyní vytvoříme algoritmus Bubblesort, který seřadí seznam:
       </p>
+      <h4><strong>Ukázka kódu:</strong></h4>
       <pre class="code-block">
-    <strong>Ukázka kódu:</strong>
-    def bubble_sort(sequence):
-        exchange_happened = True
-        list_length = len(sequence)
-    
-        while exchange_happened:
-            exchange_happened = False
-            for i in range(list_length - 1):
-                if sequence[i] > sequence[i + 1]:
-                    # Záměna hodnot
-                    sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
-                    exchange_happened = True
-        return sequence
-    
-    sorted_list = bubble_sort(my_list)
-    print("Seznam po třídění:", sorted_list)
+        <code class="language-python">
+def bubble_sort(sequence):
+    exchange_happened = True
+    list_length = len(sequence)
+
+    while exchange_happened:
+        exchange_happened = False
+        for i in range(list_length - 1):
+            if sequence[i] > sequence[i + 1]:
+                # Záměna hodnot
+                sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
+                exchange_happened = True
+    return sequence
+
+sorted_list = bubble_sort(my_list)
+print("Seznam po třídění:", sorted_list)
+    </code>
       </pre>
-    
+
       <h3 class="section-subtitle">📊 4. Statistika třídění</h3>
       <p class="section-text">
         Na závěr můžeme přidat statistiku, například počet iterací:
       </p>
+      <h4><strong>Ukázka kódu:</strong></h4>
       <pre class="code-block">
-    <strong>Ukázka kódu:</strong>
-    def bubble_sort_with_stats(sequence):
-        exchange_happened = True
-        list_length = len(sequence)
-        iterations = 0
-    
-        while exchange_happened:
-            exchange_happened = False
-            iterations += 1
-            for i in range(list_length - 1):
-                if sequence[i] > sequence[i + 1]:
-                    sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
-                    exchange_happened = True
-        return sequence, iterations
-    
-    sorted_list, total_iterations = bubble_sort_with_stats(my_list)
-    print(f"Seznam po třídění: {sorted_list}")
-    print(f"Počet iterací: {total_iterations}")
+        <code class="language-python">
+def bubble_sort_with_stats(sequence):
+    exchange_happened = True
+    list_length = len(sequence)
+    iterations = 0
+
+    while exchange_happened:
+        exchange_happened = False
+        iterations += 1
+        for i in range(list_length - 1):
+            if sequence[i] > sequence[i + 1]:
+                sequence[i], sequence[i + 1] = sequence[i + 1], sequence[i]
+                exchange_happened = True
+    return sequence, iterations
+
+sorted_list, total_iterations = bubble_sort_with_stats(my_list)
+print(f"Seznam po třídění: {sorted_list}")
+print(f"Počet iterací: {total_iterations}")
+</code>
       </pre>
     </section>
 

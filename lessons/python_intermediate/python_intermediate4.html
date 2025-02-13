@@ -17,6 +17,15 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
   <link href="/css/python/intermedie.css" rel="stylesheet">
+  
+  <!-- Highliting for python codes -->
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -255,7 +264,7 @@
         Nyní uvedeme zdrojový kód programu, který načte náš soubor a vypíše jeho parametry a obsah:
       </p>
       <pre class="code-block">
-        <code>
+        <code class="language-python">
 car_file = open("european_car_producers.txt", mode="r")
 car_file_content = car_file.read()
 print(car_file)
@@ -335,7 +344,7 @@ car_file.close()
         prázdné položky seznamu.
       </p>
       <pre class="code-block">
-        <code>
+        <code class="language-python">
 car_file = open("european_car_producers.txt", mode="r")
 car_file_content = car_file.read()
 car_list = car_file_content.split("\n")
@@ -358,7 +367,7 @@ car_file.close()
         takto:
       </p>
       <pre class="code-block">
-        <code>
+        <code class="language-python">
 import random
 my_file = open("random_numbers.txt", mode="w")
 for index in range(10):
@@ -400,7 +409,7 @@ my_file.close()
         pro náhodné pořadí prezentací ve třídě.
       </p>
       <pre class="code-block">
-        <code>
+        <code class="language-python">
 import random
 my_random_numbers = []
 for index in range(10):

@@ -17,6 +17,15 @@
   <link href="/css/style.css" rel="stylesheet">
   <link href="/css/python.css" rel="stylesheet">
   <link href="/css/python/intermedie.css" rel="stylesheet">
+
+  <!-- Highliting for python codes -->
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -154,8 +163,8 @@
       </ul>
       <h4>Příklady:</h4>
       <div class="example">
-        <pre>
-  <code>
+        <pre class="code-block">
+        <code class="language-python">
   # Správné pojmenování
 count = 10               # počet čísel
 first_name = "John"      # křestní jméno
@@ -206,9 +215,8 @@ sumTotal = 100           # porušuje konvenci malých písmen
           </p>
         </div>
         <div class="col-md-5">
-          <div class="example">
-            <pre>
-                <code>
+          <pre class="code-block">
+            <code class="language-python">
 i = 0
 while (podmínka):
     # kód, který se opakuje
@@ -216,23 +224,22 @@ while (podmínka):
                 </code>
               </div>
             </pre>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
-            <p>
-              Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3:
-            </p>
-            <p>
-              V tomto příkladu cyklus proběhne třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1.
-              Každé
-              provedení cyklu se nazývá <strong>iterace</strong>.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <pre>
-              <div class="example">
-                <code>
+      </div>
+      <div class="row">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+          <p>
+            Například, pokud chceme zobrazit číslo <code>i</code>, dokud je menší než 3:
+          </p>
+          <p>
+            V tomto příkladu cyklus proběhne třikrát, protože <code>i</code> začíná na 0 a pokaždé se zvyšuje o 1.
+            Každé
+            provedení cyklu se nazývá <strong>iterace</strong>.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <pre class="code-block">
+              <code class="language-python">
 i = 0
 while i < 3:
     print(i)  # Zobrazí číslo
@@ -240,8 +247,8 @@ while i < 3:
                 </code>
               </div>
             </pre>
-          </div>
         </div>
+      </div>
     </section>
 
     <section class="bg-light p-4 rounded mb-4 odstavec">
@@ -259,9 +266,8 @@ while i < 3:
           </p>
         </div>
         <div class="col-md-5">
-          <pre>
-              <div class="example">
-                <code>
+          <pre class="code-block">
+            <code class="language-python">
 for prvek in kolekce:
     # cyklus pro všechny prvky
                 </code>
@@ -287,9 +293,8 @@ for prvek in kolekce:
           </p>
         </div>
         <div class="col-md-5 odstavec">
-          <pre>
-              <div class="example">
-                <code>
+          <pre class="code-block">
+            <code class="language-python">
 # range(3) generuje čísla 0, 1, 2
 for i in range(3): 
     # Zobrazí aktuální číslo 
@@ -384,39 +389,35 @@ for i in range(3):
         <code>else</code>
         k implementaci jednotlivých možností menu.
       </p>
-      <div class="example">
-        <pre>
-
-          <code>
+      <pre class="code-block">
+        <code class="language-python">
 print(f"Zvolil jsi možnost #{selection}.")  # Výpis pro výběry 1 až 4
 print("Program byl ukončen.")               # Výpis pro výběr 0
 print("Neznámá volba.")                     # Výpis pro neplatný výběr
           </code>
-        
       </pre>
-      </div>
       <p>
         Program následně zabalíme do nekonečné smyčky, která poběží, dokud uživatel nezvolí možnost 0 (ukončení
         programu).
       </p>
-      <div class="example">
-        <code>
+      <pre class="code-block">
+        <code class="language-python">
 while selection != 0:
     # Zde bude hlavní logika programu
         </code>
-      </div>
+      </pre>
       <p>
         Vyzkoušejte, co se stane, pokud zadáte do programu písmeno místo čísla. Program pravděpodobně skončí chybou.
         Abychom takovým situacím předešli, přidáme podmínku, která zkontroluje, zda je vstup platné číslo.
       </p>
-      <div class="example">
-        <code>
+      <pre class="code-block">
+        <code class="language-python">
 if selection.isnumeric():
     # Výběr funkčnosti
 else:
     print("Neznámá volba.")
         </code>
-      </div>
+      </pre>
       <p>
         Tímto způsobem jsme vytvořili základní menu, které zvládá kontrolu nesprávných vstupů. Nyní se pustíme do
         implementace jednotlivých funkcí menu.
@@ -430,15 +431,13 @@ else:
             inicializujeme na začátku programu.
             V rámci výběru <code>1</code> vypíšeme aktuální seznam hráčů.
           </p>
-          <div class="example">
-            <pre>
-            <code>
+          <pre class="code-block">
+            <code class="language-python">
 print(f"Zvolil jsi možnost #{selection}.")
 print("Seznam členů klubu je:")
 print(hockey_club)
             </code>
           </pre>
-          </div>
         </li>
 
         <li>
@@ -448,15 +447,13 @@ print(hockey_club)
             přidáme
             do seznamu <strong>hockey_club</strong>.
           </p>
-          <div class="example">
-            <pre>
-            <code>
+          <pre class="code-block">
+            <code class="language-python">
 print(f"Zvolil jsi možnost #{selection}.")
 player_name = input("Zadej jméno hráče: ")
 hockey_club.append(player_name)
             </code>
           </pre>
-          </div>
         </li>
 
         <li>
@@ -467,9 +464,8 @@ hockey_club.append(player_name)
             v seznamu
             začínají od 0, proto musíme od čísla odečíst 1.
           </p>
-          <div class="example">
-            <pre>
-            <code>
+          <pre class="code-block">
+            <code class="language-python">
 print(f"Zvolil jsi možnost #{selection}.")
 delete_player_number = int(input("Zadej pořadové číslo hráče: "))
 
@@ -479,7 +475,6 @@ else:
     print("Chyba: Hráč s tímto číslem neexistuje.")
             </code>
           </pre>
-          </div>
         </li>
 
         <li>
@@ -488,16 +483,14 @@ else:
             Pro seřazení seznamu hráčů použijeme metodu <code>sort()</code>. Tím hráče seřadíme podle abecedy. Následně
             vypíšeme aktuální seznam.
           </p>
-          <div class="example">
-            <pre>
-            <code>
+          <pre class="code-block">
+            <code class="language-python">
 print(f"Zvolil jsi možnost #{selection}.")
 hockey_club.sort()
 print("Seznam hráčů byl seřazen:")
 print(hockey_club)
             </code>
           </pre>
-          </div>
         </li>
       </ol>
 

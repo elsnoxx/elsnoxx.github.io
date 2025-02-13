@@ -182,77 +182,79 @@
       </p>
       <ul class="code-list">
         <li class="code-item">
-            <strong><code>os.getcwd()</code>:</strong> Vrací aktuální pracovní adresář.
-            <br>
-            <div class="example">
-                <p><strong>Příklad:</strong> Pokud je skript ve složce <strong>C:/MojeSoubory</strong>, program vypíše právě tuto cestu.</p>
-                <pre><code class="language-python">
+          <strong><code>os.getcwd()</code>:</strong> Vrací aktuální pracovní adresář.
+          <br>
+          <div class="example">
+            <p><strong>Příklad:</strong> Pokud je skript ve složce <strong>C:/MojeSoubory</strong>, program vypíše právě
+              tuto cestu.</p>
+            <pre><code class="language-python">
 import os
 
 # Vypíše aktuální pracovní adresář
 print(os.getcwd())
                 </code></pre>
-            </div>
+          </div>
         </li>
 
         <li class="code-item">
-            <strong><code>os.listdir()</code>:</strong> Zobrazí seznam souborů v adresáři.
-            <br>
-            <div class="example">
-                <p><strong>Příklad:</strong> Tento kód vypíše všechny soubory ve složce, ve které se právě nacházíme.</p>
-                <pre><code class="language-python">
+          <strong><code>os.listdir()</code>:</strong> Zobrazí seznam souborů v adresáři.
+          <br>
+          <div class="example">
+            <p><strong>Příklad:</strong> Tento kód vypíše všechny soubory ve složce, ve které se právě nacházíme.</p>
+            <pre><code class="language-python">
 import os
 
 # Vypíše všechny soubory ve složce
 for file in os.listdir():
 print(file)
                 </code></pre>
-            </div>
+          </div>
         </li>
-        
+
         <li class="code-item">
-            <strong><code>os.mkdir()</code>:</strong> Vytvoří novou složku.
-            <br>
-            <div class="example">
-                <p><strong>Příklad:</strong> Tento kód vytvoří složku s názvem "NovaSlozka" v aktuálním adresáři.</p>
-                <pre><code class="language-python">
+          <strong><code>os.mkdir()</code>:</strong> Vytvoří novou složku.
+          <br>
+          <div class="example">
+            <p><strong>Příklad:</strong> Tento kód vytvoří složku s názvem "NovaSlozka" v aktuálním adresáři.</p>
+            <pre><code class="language-python">
 import os
 
 # Vytvoří novou složku
 os.mkdir('NovaSlozka')
                 </code></pre>
-            </div>
+          </div>
         </li>
 
         <li class="code-item">
-            <strong><code>os.remove()</code>:</strong> Smaže soubor.
-            <br>
-            <div class="example">
-                <p><strong>Příklad:</strong> Tento kód smaže soubor s názvem "test.txt" v aktuálním adresáři.</p>
-                <pre><code class="language-python">
+          <strong><code>os.remove()</code>:</strong> Smaže soubor.
+          <br>
+          <div class="example">
+            <p><strong>Příklad:</strong> Tento kód smaže soubor s názvem "test.txt" v aktuálním adresáři.</p>
+            <pre><code class="language-python">
 import os
 
 # Smaže soubor
 os.remove('test.txt')
                 </code></pre>
-            </div>
+          </div>
         </li>
 
         <li class="code-item">
-            <strong><code>os.system()</code>:</strong> Spustí příkaz operačního systému.
-            <br>
-            <div class="example">
-                <p><strong>Příklad:</strong> Tento kód spustí příkaz, který změní velikost terminálu (na Windows).</p>
-                <pre><code class="language-python">
+          <strong><code>os.system()</code>:</strong> Spustí příkaz operačního systému.
+          <br>
+          <div class="example">
+            <p><strong>Příklad:</strong> Tento kód spustí příkaz, který změní velikost terminálu (na Windows).</p>
+            <pre><code class="language-python">
 import os
 
 # Změní velikost terminálu
 os.system('mode con: cols=100 lines=30')
                 </code></pre>
-            </div>
+          </div>
         </li>
-    </ul>
+      </ul>
       <pre class="code-block">
+        <code class="language-python">
 import os
 
 def set_terminal_size(columns, rows):
@@ -263,7 +265,8 @@ def set_terminal_size(columns, rows):
 
 # Nastavení terminálu na 100 sloupců a 30 řádků
 set_terminal_size(100, 30)
-        </pre>
+</code>
+</pre>
     </section>
 
     <section class="info-section">
@@ -272,6 +275,7 @@ set_terminal_size(100, 30)
         Nainstalujte knihovnu <strong>Colorama</strong> pro barevné texty v terminálu. Následuje příklad použití:
       </p>
       <pre class="code-block">
+        <code class="language-python">
 from colorama import init, Fore, Back, Style
 
 # Inicializace Colorama
@@ -282,6 +286,7 @@ print(Fore.RED + 'This text is red')
 print(Back.GREEN + 'This text has a green background')
 print(Style.BRIGHT + 'This text is bright')
 print(Style.RESET_ALL + 'Back to normal text')
+</code>
         </pre>
     </section>
 
