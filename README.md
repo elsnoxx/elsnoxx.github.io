@@ -137,9 +137,6 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pridat do lekce 4 i jak pomoci javascriptu pridat novy list viz ukol c. 9
 
 - Python Intermediate
-    - zamyslet se jestli nechat takhle jednotlive kody na webu a nebo je vice vysvetlovat
-    - navrhout ukazky jak by meli projekty vypadat, at to neni jen zadani
-    - opravit stylovani kodu tak jak je v lekce 3
     - ukoly pro Python Intermediate
         - lekce 1
         - lekce 2
@@ -161,6 +158,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
 - Python Intermediate
     - lekce 3 - UI + obsah, ukazkove programy
     - sjednotit nadpisi v lekcich
+    - opravit stylovani kodu tak jak je v lekce 3
     - testik
         - lekce 1
         - lekce 2
