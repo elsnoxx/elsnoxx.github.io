@@ -24,9 +24,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -51,13 +51,16 @@
               Lekce
             </button>
             <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-<li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -87,11 +90,11 @@
               <strong>Thuncable</strong> je online služba a vývojové prostředí, které nám umzní vytvářet mobilní
               aplikace pro Android a iOS. Tato služba je zdarma a je dostupná na <a
                 href="https://thunkable.com/">thunkable.com</a>.
-                V ní budeme vytvářet mobilní aplikace pomocí blokového programování.
+              V ní budeme vytvářet mobilní aplikace pomocí blokového programování.
             </p>
           </td>
           <td>
-            <img class="myImg" src="/img/python/IDE/vsc.avif" alt="Vývojove prostředí pro práci s Pythonem"
+            <img class="myImg" src="/img/t" alt="Vývojove prostředí pro práci s Pythonem"
               style="width:100%; max-width:3000px; height: auto" loading="lazy">
           </td>
         </tr>
@@ -100,54 +103,80 @@
 
     <div class="odstavec">
       <h2>Vytvoření účtu do Thuncable</h2>
-      <p>
-        Níže uvedené body vás navedou ke spravné instalaci vývojového prostředí.
-        Pokud by však něco selhalo co nejrychleji se mi <a href="/contact.html">ozvěte</a>.
-        A pokusím vás navést spravným směrem.
-      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            Níže uvedené body vás navedou ke spravnému nastavení webového prostředí.
+            Klikněte na tlačítko "Sign Up" a vyplňte formulář.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid" src="/img/thuncable/env/mainpage.png" alt="Stěny vesmíré stanice - pohled z boku"
+            style="width:100%; max-width:300px; height: auto" loading="lazy">
+        </div>
+      </div>
 
-      <h4> Návod na zprovoznění IDE: </h4>
-      <ul>
-        <li>
-          Nejprve si stáhněte Python pomocí tohoto <a
-            href="https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe">ODKAZU</a>
-        </li>
-        <li>
-          Stažení vývojového prostředí za pomocí odkazu <a
-            href="https://code.visualstudio.com/docs/?dv=win64user">zde</a>
-        </li>
-        <li>
-          <div class="row">
-            <div class="col-md-6">
-              Poté v Rozšíření si stáhněte tyto rozšíření:
-              <ul>
-                <li>
-                  ms-python.vscode-pylance
-                </li>
-                <li>
-                  ms-python.python
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <img class="myImg" src="/img/python/IDE/extension.png"
-              alt="Kde najít rozšíření ve Visual Studio Code"
-              style="width:100%; max-width:200px; height: auto" loading="lazy">
-            </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p id="description">1. Klikněte na ikonu</p>
+        </div>
+        <div class="col-md-6">
+          <div id="imageContainer" style="position: relative; width: 100%; max-width: 300px;">
+            <img id="carouselImage" src="/img/thuncable/env/live_testing.png"
+              alt="Stěny vesmírné stanice - pohled z boku" style="width:100%; height: auto;" loading="lazy">
           </div>
-        </li>
-        <li>
-          Po těchto krocích by jste měli mít hotové a nainstalované vývojové prostředí.
-        </li>
-      </ul>
-    </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
+          <div style="display: flex; justify-content: space-between; width: 100%; max-width: 300px; margin-top: 10px;">
+            <button onclick="prevImage()">Předchozí</button>
+            <button onclick="nextImage()">Další</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const steps = [
+          "1. Klikněte na ikonu",
+          "2. Otevřete aplikaci",
+          "3. Připojte se k síti",
+          "4. Ověřte připojení",
+          "5. Spusťte testování"
+        ];
+
+        const images = [
+          "/img/thuncable/env/live_testing.png",
+          "/img/thuncable/env/mobile_app_1.jpg",
+          "/img/thuncable/env/mobile_app_2.jpg",
+          "/img/thuncable/env/live_testing_2.png",
+          "/img/thuncable/env/mobile_app_3.jpg"
+        ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+          document.getElementById("carouselImage").src = images[index];
+          document.getElementById("description").innerText = steps[index];
+        }
+
+        function prevImage() {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(currentIndex);
+        }
+
+        function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+        }
+      </script>
+
+
+
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
   </main>
   <footer class="footer">
