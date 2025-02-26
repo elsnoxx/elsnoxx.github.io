@@ -89,10 +89,10 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_intermediate/python_intermediate.html';"
+              onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment.html';"
               class="btn btn-primary">Předchozí lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';"
+              onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment2.html';"
               class="btn btn-primary">Následují
               lekce</button>
           </td>
@@ -163,67 +163,170 @@
       </div>
     </div>
 
-    <div class="lesson-section">
+    <section class="bg-light p-4 rounded mb-4 odstavec">
       <h2 class="text-center mt-4">První aplikace v Thunkable</h2>
-      
+
       <div class="row align-items-center mb-4">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <p>
-              V tomto příkladu si ukážeme práci s designem a také s <strong>Blocks</strong>. 
+              V tomto příkladu si ukážeme práci s designem a také s <strong>Blocks</strong>.
               Vytvoříme jednoduchou aplikaci, která po stisku tlačítka vloží text do textového pole.
             </p>
             <p>
-              V designovém rozhraní přidáme na plochu komponenty <strong>Button</strong> a <strong>Label</strong>. 
+              V designovém rozhraní přidáme na plochu komponenty <strong>Button</strong> a <strong>Label</strong>.
               Poté se přesuneme do <strong>Blocks</strong> a naprogramujeme funkčnost tlačítka.
             </p>
           </div>
         </div>
         <div class="col-md-4 text-center">
-          <img class="myImg img-fluid rounded shadow" 
-            src="/img/thuncable/lekce1/layout-first-application.png"
-            alt="Vytváření nového projektu v Thunkable"
-            loading="lazy">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce1/layout-first-application.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
         </div>
       </div>
-    
+
       <hr>
-    
+
       <div class="row align-items-center">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <p>
-              Po kliknutí na komponentu <strong>tlačítka</strong> uvidíme všechny jeho dostupné události a akce. 
-              První z nich je <em>kliknutí na tlačítko</em>. Přidáme ji do našeho programu, který tak začne reagovat na stisknutí tlačítka.
+              Po kliknutí na komponentu <strong>tlačítka</strong> uvidíme všechny jeho dostupné události a akce.
+              První z nich je <em>kliknutí na tlačítko</em>. Přidáme ji do našeho programu, který tak začne reagovat na
+              stisknutí tlačítka.
             </p>
             <p>
               Nyní potřebujeme najít akci <strong>labelu</strong>, která umožní nastavit jeho text:
             </p>
             <p>
-              Label obsahuje mnoho akcí typu <em>set</em>, tedy nastavit. Můžeme nejen upravit text, 
+              Label obsahuje mnoho akcí typu <em>set</em>, tedy nastavit. Můžeme nejen upravit text,
               ale také změnit jeho <strong>barvu, font</strong> a další parametry.
             </p>
             <p>
-              Jakmile akci <em>nastavení textu</em> vložíme do programu, upravíme hodnotu a vznikne náš výsledný program:
+              Jakmile akci <em>nastavení textu</em> vložíme do programu, upravíme hodnotu a vznikne náš výsledný
+              program:
             </p>
           </div>
         </div>
         <div class="col-md-4 text-center">
-          <img class="myImg img-fluid rounded shadow" 
-            src="/img/thuncable/lekce1/layout-first-application.png"
-            alt="Nastavení textu v Thunkable"
-            loading="lazy">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce1/layout-first-application.png"
+            alt="Nastavení textu v Thunkable" loading="lazy">
         </div>
       </div>
+    </section>
+
+    <h5>Nyní nám již zbývá aplikaci otestovat jak na webu tak v mobilu.</h5>
     </div>
-    
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Aplikace převodníku</h2>
+      <p>
+        Pojďme se teď pustit do nového – náročnějšího – projektu. Půjde o
+        převodník (konvertor). Převodník je aplikace, která převádí jednotky
+        na jiné (metry na kilometry nebo míle), nebo umí převádět měny
+        (koruny na eura), nebo cokoliv jiného (cukrovou vatu na pendreky
+        podle jejich ceny). Naše aplikace bude převádět míle na kilometry –
+        uživatel zadá počet mil, klepne na tlačítko pro převod, a aplikace mu
+        vypíše, kolik kilometrů to je. <br>
+        <strong>Přepočet míle na km je následující: 1 míle je 1.609 km.</strong>
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty převodníku</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> bude v něm název aplikace, aby uživatelé věděli, že
+                aplikace převádí míle na kilometry.
+              </li>
+              <li>
+                <strong>Text Input:</strong> textové pole, do kterého může člověk psát přímo po
+                spuštění aplikace. Sem bude uživatel zadávat počet mil
+                k převodu.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko, kterým se potvrdí zadání počtu mil.
+              </li>
+              <li>
+                <strong>Label:</strong> další label, ve kterém se zobrazí výsledek.
+              </li>
+              <li>
+                <strong>Label:</strong> poslední label uvede, kdo je autorem aplikace.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce1/prevod-km-to-mil.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Uživatel nejdřív do textového pole zadá počet mil, které chce převést.
+              Samotný program převodu začne až po kliknutí na tlačítko:
+            </p>
+            <p>
+              Po kliknutí na tlačítko se vybere obsah vstupního pole, vynásobí se
+              1.609 (počet kilometrů na míli) a výsledek se zobrazí do výsledného
+              labelu.
+            </p>
+            <p>
+              Protože pro převod budeme potřebovat nějaké matematické činnosti,
+              budeme je hledat v sekci <strong>Math</strong>. Najdeme tu sčítání, odčítání, násobení
+              i dělení, náhodné číslo <strong>(random integer from ... to ...)</strong>, zaokrouhlení
+              <strong>(round)</strong> a další funkce.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce1/prevod-km-to-mil-logika.png"
+            alt="Nastavení textu v Thunkable" loading="lazy">
+        </div>
+      </div>
+      </div>
+
       <h5>Nyní nám již zbývá aplikaci otestovat jak na webu tak v mobilu.</h5>
-    </div>
+    </section>
 
 
 
 
-
+    <div class="container">
+      <h3>Samostatný úkol: Aplikace se zvuky zvířat</h3>
+      <p>
+          Vaším úkolem je vytvořit v <a href="https://www.thunkable.com" target="_blank">Thunkable</a> mobilní aplikaci, 
+          která bude přehrávat zvuky alespoň čtyř různých zvířat. Každý zvuk se aktivuje, když uživatel stiskne příslušné tlačítko.
+      </p>
+  
+      <h4>Požadavky na aplikaci:</h4>
+      <ul>
+          <li>V aplikaci budou alespoň <strong>čtyři tlačítka</strong>, každé pro jedno zvíře.</li>
+          <li>Každé tlačítko bude mít jako <strong>pozadí obrázek zvířete</strong>.</li>
+          <li>Po stisknutí tlačítka se přehraje <strong>zvuk zvířete</strong>.</li>
+          <li>Zvukové soubory můžete najít například na <a href="https://commons.wikimedia.org/wiki/Category:Mudchute_Park_and_Farm" target="_blank">Commons Wikimedia</a>.</li>
+      </ul>
+  
+      <h4>Bonusový úkol:</h4>
+      <p>
+          Přidejte do aplikace <strong>další interaktivní prvek</strong>, například změnu pozadí po kliknutí nebo animaci tlačítek.
+      </p>
+  
+      <h4>Odevzdání:</h4>
+      <p>
+          Po dokončení aplikace pořiďte <strong>screenshot</strong> a odešlete jej společně s odkazem na váš projekt.
+      </p>
+  
+      <a href="https://www.thunkable.com" target="_blank" class="btn">Začít s Thunkable</a>
+  </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -235,9 +338,9 @@
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_intermediate/python_intermediate.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_intermediate/python_intermediate2.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment2.html';">Následující lekce</button>
       </div>
     </div>
 
