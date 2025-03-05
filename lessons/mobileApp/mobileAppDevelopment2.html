@@ -116,8 +116,144 @@
     </div>
 
     
-    <p>to be done</p>
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Čtečka čárových kódů</h2>
+      <p>
+        Pojďme se teď pustit do nového projektu. Půjde o
+        aplikaci, která bude využívat fotoaparát a bude shopná přečíst čárový kód. Tato aplikace bude
+        využívat fotoaparát, který je v každém mobilním zařízení.
+      </p>
+  
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace na čtení kódu</h3>
+      
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko, kterým se spustí skener kódu.
+              </li>
+              <li>
+                <strong>Image:</strong> zobrazovací místo pro naskenovaný kód.
+              </li>
+              <li>
+                <strong>Label:</strong> zobrazí obsah naskenovaného kódu.
+              </li>
+              <li>
+                <strong>Label:</strong> informace o autorovi aplikace.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/ctecka_kodu_model.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Nejprve bude nutné si říct, jak vytvořit akci skeneru. Tuto akci najdeme v
+              <strong>App Features</strong> pod názvem Scanner.
+            </p>
+            <p>
+              Po kliknutí na tuto funkci vybereme <strong>scan QR/Barcode</strong>
+              a tuto akci přidáme do našeho programu. Následně, tak jak je na obrázku vedle, pomocí pravého tlačítka vybereme <strong>Show advanced block</strong>.
+            </p>
+            <p>
+              Poté zbývá už jen přidat akci <strong>set label text</strong>, abychom zobrazili obsah naskenovaného kódu.
+            </p>
+            <p>
+              Po kliknutí na tlačítko se spustí skener a uživatel může naskenovat QR kód nebo čárový kód.
+              Výsledek se následně zobrazí v našem Label.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/ctecka_kodu_logic.png"
+            alt="Nastavení skeneru v Thunkable" loading="lazy">
+        </div>
+      </div>
+      </div>
+      
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+    </section>
 
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Načítání obrázku z knohovny obrázku</h2>
+      <p>
+        Pojďme se teď pustit do nového projektu. Půjde o
+        aplikaci, která nebude využívat fotoaparát ale bude načítat obrázky. Takové obrázky které již byly jednou nafoceny a jsou uloŽeny ve vašem zařízení.
+        Přesněji obrázku uložene v kinhovne obrázku ve mobilním zařízení.
+      </p>
+  
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace pro načítání obrázku</h3>
+      
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko, kterým se otevře galerie pro výběr obrázku.
+              </li>
+              <li>
+                <strong>Image:</strong> zobrazovací místo pro načtený obrázek.
+              </li>
+              <li>
+                <strong>Label:</strong> informace o autorovi aplikace.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/knihovna_zobrazeni_model.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Nejprve si ukážeme, jak vytvořit akci pro výběr obrázku z knihovny. Tuto akci najdeme v
+              <strong>App Features</strong> pod názvem Image Picker.
+            </p>
+            <p>
+              Po přidání této funkce do našeho programu nastavíme, aby po kliknutí na tlačítko
+              bylo možné vybrat obrázek z galerie zařízení.
+            </p>
+            <p>
+              Následně přidáme akci <strong>set image</strong>, která zobrazí vybraný obrázek v komponentě Image.
+            </p>
+            <p>
+              Po kliknutí na tlačítko se otevře knihovna obrázků v zařízení, kde uživatel vybere požadovaný soubor.
+              Vybraný obrázek se následně zobrazí v aplikaci.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/knihovna_zobrazeni_logika.png"
+            alt="Nastavení výběru obrázku v Thunkable" loading="lazy">
+        </div>
+      </div>
+      </div>
+      
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+    </section>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
