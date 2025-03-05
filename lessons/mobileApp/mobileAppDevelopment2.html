@@ -15,6 +15,7 @@
 
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/thuncable.css" rel="stylesheet">
 
 
   <!-- Google tag (gtag.js) -->
@@ -104,18 +105,15 @@
     </div>
 
     <div class="lesson-section">
-      <h1 class="lesson-title">Úvod, IDE, Opakování, cyklus</h1>
+      <h1 class="lesson-title">Proměnné a logické úkony</h1>
       <p class="lesson-text">
-        V této lekci si zopakujeme základy programování v Pythonu a naučíme se, jak vytvořit základní menu. Předvedeme
-        si také cykly <code>while</code> a <code>for</code>. A nastavím si konveci pro psaní kódu.
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
+        V této lekci si ukážeme práci s proměnnými na platformě <a href="https://thunkable.com/" target="_blank"
+          rel="noopener noreferrer">Thunkable</a>.
+        A představíme si jak se používají logické funkce.
       </p>
     </div>
 
-    
+
     <section class="bg-light p-4 rounded mb-4 odstavec">
       <h2 class="text-center mt-4">Čtečka čárových kódů</h2>
       <p>
@@ -123,12 +121,12 @@
         aplikaci, která bude využívat fotoaparát a bude shopná přečíst čárový kód. Tato aplikace bude
         využívat fotoaparát, který je v každém mobilním zařízení.
       </p>
-  
+
       <div class="row align-items-center mb-4">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <h3>Komponenty aplikace na čtení kódu</h3>
-      
+
             <ul>
               <li>
                 <strong>Label:</strong> zobrazí název aplikace.
@@ -153,9 +151,9 @@
             alt="Vytváření nového projektu v Thunkable" loading="lazy">
         </div>
       </div>
-      
+
       <hr>
-      
+
       <div class="row align-items-center">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
@@ -165,7 +163,8 @@
             </p>
             <p>
               Po kliknutí na tuto funkci vybereme <strong>scan QR/Barcode</strong>
-              a tuto akci přidáme do našeho programu. Následně, tak jak je na obrázku vedle, pomocí pravého tlačítka vybereme <strong>Show advanced block</strong>.
+              a tuto akci přidáme do našeho programu. Následně, tak jak je na obrázku vedle, pomocí pravého tlačítka
+              vybereme <strong>Show advanced block</strong>.
             </p>
             <p>
               Poté zbývá už jen přidat akci <strong>set label text</strong>, abychom zobrazili obsah naskenovaného kódu.
@@ -182,7 +181,7 @@
         </div>
       </div>
       </div>
-      
+
       <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
     </section>
 
@@ -192,15 +191,16 @@
       <h2 class="text-center mt-4">Načítání obrázku z knohovny obrázku</h2>
       <p>
         Pojďme se teď pustit do nového projektu. Půjde o
-        aplikaci, která nebude využívat fotoaparát ale bude načítat obrázky. Takové obrázky které již byly jednou nafoceny a jsou uloŽeny ve vašem zařízení.
+        aplikaci, která nebude využívat fotoaparát ale bude načítat obrázky. Takové obrázky které již byly jednou
+        nafoceny a jsou uloŽeny ve vašem zařízení.
         Přesněji obrázku uložene v kinhovne obrázku ve mobilním zařízení.
       </p>
-  
+
       <div class="row align-items-center mb-4">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <h3>Komponenty aplikace pro načítání obrázku</h3>
-      
+
             <ul>
               <li>
                 <strong>Label:</strong> zobrazí název aplikace.
@@ -222,9 +222,9 @@
             alt="Vytváření nového projektu v Thunkable" loading="lazy">
         </div>
       </div>
-      
+
       <hr>
-      
+
       <div class="row align-items-center">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
@@ -250,8 +250,407 @@
             alt="Nastavení výběru obrázku v Thunkable" loading="lazy">
         </div>
       </div>
+
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Proměnné v Thuncable</h2>
+      <p>
+        Proměnné jsou kontejnery, které obsahují čísla, texty, výsledky
+        výpočtu nebo jiné důležité hodnoty v aplikaci, v samotném mobilním
+        zařízení nebo v cloudu.
+      </p>
+      <p>
+        Namísto opakování tich jistých hodnot lze použít proměnnou všude
+        tam, kde je to potřeba.
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty pro vytvoření proměnné</h3>
+
+            <ul>
+              <li>
+                V Thunkable existují tři typy proměnných: proměnná aplikace (<span class="variable">app
+                  variable</span>),
+                proměnná cloudu (<span class="variable">cloud variable</span>), proměnná úložiště
+                (<span class="variable">stored variable</span>).
+              </li>
+              <li>
+                Chcete-li vytvořit proměnnou, přejděte do režimu <strong>Blocks</strong>, kde na
+                postranním panelu najděte kategorii <span class="variable">Variables</span> (Proměnné). Chcete-li
+                vytvořit novou proměnnou, přetáhnete initialize <span class="variable">app variable name to</span>.
+              </li>
+              <li>
+                Můžete vidět, že typ proměnné (aplikace/uložená/cloud) a název
+                proměnné lze změnit.
+              </li>
+              <li>
+                <strong>Pamatujte: Název proměnné musí být jedinečný a informativní. Pre
+                  zápis názvů proměnných budeme používat camelCase. Volá se tak
+                  proto, že připomíná tvar zvířete velblouda. Pravidlo zápisu je také, že
+                  prvé slovo píšeme malým počátečním písmem a každé další velkým
+                  počátečním písmem.</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/variables.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
       </div>
-      
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Inicializace proměnné na TEXT</h3>
+
+            <ul>
+              <li>
+                <span class="variable">App variable</span> (Proměnné aplikace) nám umožňují ukládat data napříč
+                Screens (Obrazovkami) v naší aplikaci. Po ukončení aplikace však
+                budou ztraceny veškerý uložený průběh a data, která mala v sebe
+                proměnné.
+              </li>
+              <li>
+                Pojďme vytvořit proměnnou aplikace „myMood“, která bude
+                uchovávat textovou hodnotu <span class="text">„Ok“</span>.
+              </li>
+              <li>
+                Přejděte do části <span class="text">Text</span> a vyberte prázdný String <span class="text">" "</span>.
+                Přetáhněte tento
+                blok na proměnnou myMood a změňte String na <span class="text">„Ok“</span>.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/text.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Načítání obrázku z knohovny obrázku</h2>
+      <p>
+        Dobře, to bylo velmi jednoduché. Nyní pojďme dál a změňme hodnotu proměnné na základě zadání
+        uživatele.
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace pro načítání obrázku</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko <strong>„Save My Mood“</strong>.
+              </li>
+              <li>
+                <strong>Input:</strong> textový input.
+              </li>
+              <li>
+                <strong>Label:</strong> informace o autorovi aplikace.
+              </li>
+            </ul>
+            <p>
+              Co se stane, je, že uživatel zadá svou náladu, poté stiskne tlačítko „Save
+              My Mood“ a ta se zobrazí na štítku. Například "I am...happy". Takže
+              „happy“ musel být ten uloženy input.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/mood_model.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Pojďme k blokům a pojďme napsat logiku programu.
+            </p>
+            <p>
+              Instanci proměnné (1) najdeme v kategorii <span class="variable">Variables</span>. Pokud nemůžete
+              najít svou proměnnou, zkuste její název zadat ručně pomocí bloku (2)
+              (název proměnné uvedete namísto <span class="text">name</span>)
+            </p>
+            <p>
+              Implementujme funkci vstupu a uložení. Když uživatel klikne na
+              tlačítko "Save My Mood", proměnná myMood bude přepsána novou
+              hodnotou. Vzhledem k tomu, že <strong>každá proměnná v Thunkable je
+                globální proměnná</strong> (neexistují žádné lokální proměnné), nestaráme se
+              o rozsah (Variable Scope).
+            </p>
+            <p>
+              Chcete-li nastavit novou hodnotu proměnné, přejděte opět do
+              kategorie <span class="variable">Variables</span> a najděte tam odpovídající blok <span
+                class="variable">set app variable
+                myMood to</span>.
+            </p>
+            <p>
+              Pomocou <span class="text">join</span> bloku z kategorie <span class="text">Text</span>, nastavíme tedy
+              text moodLabel na zřetězené „I am...“ (text původního štítku) + proměnnou myMood (vstup uživatele).
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/mood_logic.png"
+            alt="Nastavení výběru obrázku v Thunkable" loading="lazy">
+        </div>
+      </div>
+      </div>
+
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+      <p>
+
+      </p>
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Druhy proměnných v Thunkable</h2>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Ukládání a uchovávání dat</h3>
+            <p>
+              Co vidíme? Hmm... Naše nálada je pryč. Jak se tomu můžeme vyhnout?
+              Můžeme mít naši náladu uloženou do nekonečna (dokud ji nezměníme) v aplikaci? Ano, můžeme! Řešením je typ
+              proměnné
+              <span class="variable">stored variable</span>.
+            </p>
+            <p>
+              Opětovným přechodem do režimu <strong>Blocks</strong> a nahrazením <span class="variable">app
+                variable</span>
+              s <span class="variable">stored variable</span> a přidáním <span class="variable">when TestingAppVariable
+                opens</span>
+              (TestingAppVariable je náš Screen) se nám úspěšně podařilo zachovat stav naší nálady v aplikaci. Nyní,
+              když zadáme svou náladu,
+              zavřeme aplikaci a znovu ji otevřeme, naše nálada tam bude stále.
+            </p>
+            <p>
+              Nyní jste pochopili užitečnost uložené proměnné (<span class="variable">stored variable</span>).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Cloudové proměnné</h3>
+            <p>
+              Ale co <span class="variable">cloudová proměnná</span>? Je velmi podobná uložené proměnné.
+              Data uložená v cloudové proměnné nebudou po ukončení uživatelské relace smazána.
+              Ale kde? Jak název napovídá, budou uložena online, v cloudu Thunkable.
+            </p>
+            <p>
+              Aby uživatel mohl přistupovat k datům z této proměnné, musí mít připojení k internetu.
+              Cloudové proměnné mohou ukládat pouze textové hodnoty a objekty.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Shrnutí</h3>
+            <ul>
+              <li>
+                Data uložená v <span class="variable">app variable</span> budou po ukončení aplikace smazána.
+              </li>
+              <li>
+                Data uložená v <span class="variable">stored variable</span> se uloží do samotného mobilního zařízení.
+                To znamená, že je lze načíst z předchozí relace.
+              </li>
+              <li>
+                Data uložená do <span class="variable">cloud variable</span> budou uložena v cloudové databázi
+                Thunkable.
+                Uživatel však musí mít připojení k internetu, aby k nim měl přístup.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Ovládání, funkce a kontroly v Thuncable</h2>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Ovládání</h3>
+
+            <ul>
+              <li>
+                Nyní se pojďme ponořit do logických operátorů a řídicích struktur v
+                Thunkable.
+              </li>
+              <li>
+                Za prvé, abychom mohli porovnat dva prvky, potřebujeme logické
+                bloky. Najdete je v kategorii Logic. Nejdůležitější logické operátory jsou
+                označeny červenými šipkami.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/ovladani.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Kontrol IF</h3>
+            <ul>
+              <li>
+                První ovládací struktura, kterou najdete v každém programovacím
+                jazyce, je if...do... V Thunkable najdete tuto strukturu v kategorie
+                Control.
+              </li>
+              <li>
+                Tato struktura vám umožňuje kontrolovat určitý stav. Například chcete
+                zkontrolovat, aby se počet jablek rovnal 5, a pak nastavit proměnnou
+                numberOfApples na 5.
+              </li>
+              <li>
+                Kliknutím na kolečko lze přetahovat jednotlivé bloky else a else if do
+hlavního ovládacího bloku.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/control.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Funkce</h3>
+            <ul>
+              <li>
+                Funkce nám umožňují znovu použít kód, čímž přispívají k jednomu z
+nejdůležitějších pravidel programování: vyhnout se opakování a
+redundanci. Ve většině případů lze programovat bez použití funkcí, ale
+aplikace se rychle stane obrovským nečitelným nepořádkem se
+spoustou opakování a plýtváním místem.
+              </li>
+              <li>
+                Existují dva hlavní typy funkcí:
+                <ol>
+                  <li>
+                    Funkce bez explicitního výstupu
+                  </li>
+                  <li>
+                    Funkce s explicitním výstupem
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Funkční bloky v Thunkable najdeme v kategorii Funkce.
+Funkce bez explicitního výstupu se používají v situaci, kdy je nutné
+komprimovat aplikaci pro lepší čitelnost a strukturu.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/funkce.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Applikace pro výpočet pythagorove věty</h2>
+      <p>
+        Pojďme si procvičit a vytvořit funkci, která vypočítá třetí stranu
+trojúhelníku. Odpovídající geometrická věta se nazývá <a href="https://cs.wikipedia.org/wiki/Pythagorova_v%C4%9Bta">Pythagorova
+věta.</a>
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace pro načítání obrázku</h3>
+
+            <p>
+              Vytvořte uživatelské rozhraní pro tuto funkci.
+            </p>
+            <p>
+              Nezapomeňte omezit typ vstupu pouze na číselné hodnoty přepnutím
+typu klávesnice na numeric v nabídce přizpůsobení vstupu.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/pythagor.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Nyní, abychom mohli vypočítat třetí stranu, musíme zvážit tři případy.
+První případ je, když jsou zadány strany <span class="green-text">a</span> a <span class="green-text">b</span> a hledá se <span class="green-text">c</span>. Druhy je,
+když jsou <strong>zadány strany <span class="blue-text">a</span> a <span class="blue-text">b</span> a hledá se <span class="blue-text">c</span>. Třetí je, když jsou zadány
+strany <span class="red-text">b</span> a <span class="red-text">c</span> a hledá se <span class="red-text">a</span>.</strong>
+            </p>
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                Pro výpočet každé strany používáme následující vzorce.
+              </div>
+              <div class="col-md-6">
+                <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/vzorce.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+              </div>
+            </div>
+            <p>
+              <strong>Velmi důležité: Není dovoleno, aby žádná strana trojúhelníku byla
+negativna. Rovněž není dovoleno, aby strana c byla menší než strana
+a nebo strana b,</strong> protože pokud je c menší než a nebo b, pak vše pod
+odmocninou bude záporné a celá odmocnina je <a href="https://cs.wikipedia.org/wiki/Komplexn%C3%AD_%C4%8D%C3%ADslo">komplexní číslo</a>!
+            </p>
+            <p>
+              K získání druhé odmocniny čísla používáme „absolute“ blok, který přepneme na „square root“.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce2/knihovna_zobrazeni_logika.png"
+            alt="Nastavení výběru obrázku v Thunkable" loading="lazy">
+        </div>
+      </div>
+
       <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
     </section>
 
