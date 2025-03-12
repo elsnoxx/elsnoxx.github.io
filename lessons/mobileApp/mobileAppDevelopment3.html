@@ -104,20 +104,385 @@
     </div>
 
     <div class="lesson-section">
-      <h1 class="lesson-title">Úvod, IDE, Opakování, cyklus</h1>
+      <h1 class="lesson-title">Listy a databáze</h1>
       <p class="lesson-text">
-        V této lekci si zopakujeme základy programování v Pythonu a naučíme se, jak vytvořit základní menu. Předvedeme
-        si také cykly <code>while</code> a <code>for</code>. A nastavím si konveci pro psaní kódu.
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
+        V této lekci si ukážeme práci s listmy na platformě <a href="https://thunkable.com/" target="_blank"
+          rel="noopener noreferrer">Thunkable</a>.
+        A představíme si jak se používají databázi a vysvětléme jak funguje.
       </p>
     </div>
 
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Změna barvy pozadí</h2>
+      <p>
+        Pojďme se teď pustit do nového projektu. Půjde o
+        aplikaci, která bude měnit pozadí. Bude to velmi jednoduchá aplikace na procvičení konstrukci podmínek.
+        Při změně pozadí musíte taky myslet na to, aby se barva všech textů změnila a byla viditelná.
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace na čtení kódu</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko, kterým se bude měnit pozadí aplikace.
+              </li>
+              <li>
+                <strong>Label:</strong> informace o autorovi aplikace.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/ifelse-model.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Přidejte proměnnou barvaPozadi, která bude uchovávat aktuální barvu pozadí.
+            </p>
+            <p>
+              Vložte tlačítko do aplikace, například btnZmenPozadi. Přidejte blok when btnZmenPozadi Click (událost při
+              kliknutí na tlačítko).
+            </p>
+            <p>
+              Použijte podmínkový blok if...else. Zkontrolujte hodnotu proměnné barvaPozadi.
+            </p>
+            <p>
+              Po změně barvy pozadí upravte i barvu textů. Pokud je pozadí tmavé, nastavte texty na bílou. Pokud je
+              pozadí světlé, nastavte texty na černou.
+            </p>
+            <p>
+              Po změně barvy uložte novou hodnotu do barvaPozadi, aby byla správně použita při dalším kliknutí.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/ifelse-logic.png"
+            alt="Nastavení skeneru v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Kalkulačka BMI</h2>
+      <p>
+        V tomto projektu vytvoříme jednoduchou aplikaci, která spočítá BMI (Body Mass Index)
+        na základě zadané výšky a váhy. Cílem je procvičit použití funkcí a podmínkových bloků if...else.
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Text Input:</strong> pro zadání výšky (v metrech).
+              </li>
+              <li>
+                <strong>Text Input:</strong> pro zadání váhy (v kilogramech).
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko pro výpočet BMI.
+              </li>
+              <li>
+                <strong>Label:</strong> zobrazí výsledek BMI a slovní popis.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/bmi-model.png"
+            alt="Vytváření kalkulačky BMI v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Vytvořte funkci <code>vypocetBMI</code>, která přijme dva vstupy: výšku a váhu.
+            </p>
+            <p>
+              Použijte vzorec pro výpočet BMI: <code>BMI = váha / (výška * výška)</code>.
+            </p>
+            <p>
+              Použijte podmínkový blok <code>if...else</code> pro určení kategorie BMI:
+            </p>
+            <ul>
+              <li><code>BMI < 18.5</code>: "Podváha"</li>
+              <li><code>BMI 18.5 - 24.9</code>: "Normální váha"</li>
+              <li><code>BMI 25 - 29.9</code>: "Nadváha"</li>
+              <li><code>BMI ≥ 30</code>: "Obezita"</li>
+            </ul>
+            <p>
+              Výsledek zobrazte v textovém poli společně se slovním popisem.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/bmi-logic.png"
+            alt="Logika kalkulačky BMI v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <h5>Nyní aplikaci otestujte a rozšiřte ji například o doporučení na základě výsledků!</h5>
+
+    </section>
 
 
-    <p>to be done</p>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Listy v Thunkable</h2>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <ul>
+              <li>
+                <strong>Co jsou listy?</strong>
+                <p>Listy (seznamy) v Thunkable umožňují ukládat a spravovat více hodnot v jedné proměnné. Každý prvek v
+                  listu má svůj index, který začíná od 1.</p>
+              </li>
+              <li>
+                <strong>Práce s listy</strong>
+                <ul>
+                  <li>Listy lze vytvářet pomocí bloku <code>make a list</code>.</li>
+                  <li>Přístup k prvkům se provádí pomocí <code>get item from list</code>.</li>
+                  <li>Můžete přidávat nové prvky pomocí <code>add item to list</code>.</li>
+                  <li>Odstraňování položek probíhá přes <code>remove item from list</code>.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Použití v aplikacích</strong>
+                <p>Listy se hodí například pro správu kontaktů, seznamy úkolů nebo dynamické menu. Pro zobrazení dat z
+                  listu lze použít <code>List Viewer</code>, který umožňuje uživateli interaktivně vybírat položky.</p>
+              </li>
+              <li>
+                <strong>Iterace přes list</strong>
+                <p>Pomocí smyčky <code>for each item in list</code> můžete projít všechny položky a provést s nimi
+                  určitou
+                  akci, například změnit barvu prvků nebo spočítat počet položek.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/list.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Generátor náhodných úkolů</h2>
+      <p>
+        Vytvoříme aplikaci, která bude náhodně vybírat úkoly ze seznamu a zobrazovat je uživateli.
+        Tento projekt je skvělý pro procvičení práce s listy v Thunkable.
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko pro vygenerování náhodného úkolu.
+              </li>
+              <li>
+                <strong>Label:</strong> zobrazí vybraný úkol.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/list-model.png"
+            alt="Vytváření seznamové aplikace v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Nejprve vytvořte seznam (list), který bude obsahovat různé úkoly, například:
+              <code>["Udělěj 10 dřepů", "Přečti si kapitolu knihy", "Vypij sklenici vody"]</code>.
+            </p>
+            <p>
+              Přidejte tlačítko <code>btnGenerujUkol</code> a nastavte mu akci při kliknutí.
+            </p>
+            <p>
+              Použijte blok <code>pick random item from list</code> a zobrazte náhodně vybraný úkol v textovém
+              poli.
+            </p>
+            <p>
+              Přidejte možnost upravit seznam úkolů, například umožněním přidání nového úkolu přes textové pole a
+              tlačítko.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/list-logic1.png"
+            alt="Logika seznamové aplikace v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <h5>Nyní stačí aplikaci otestovat a rozšířit podle potřeby!</h5>
+
+    </section>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Data Sources v Thunkable</h2>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <ul>
+              <li>
+                <strong>Co jsou Data Sources?</strong>
+                <p>Data Sources (datové zdroje) v Thunkable umožňují ukládat a spravovat strukturovaná data přímo v
+                  aplikaci.
+                  Jsou ideální pro práci s databázemi, tabulkami nebo propojení s cloudovými službami, jako je Google
+                  Sheets
+                  nebo Airtable.</p>
+              </li>
+              <li>
+                <strong>Jak vytvořit Data Source?</strong>
+                <ul>
+                  <li>Otevřete Thunkable a přejděte do sekce <code>Data</code>.</li>
+                  <li>Klikněte na <code>Add Data Source</code> a vyberte typ databáze (Google Sheets, Airtable, Local
+                    DB).</li>
+                  <li>Připojte datový zdroj a nastavte potřebná pole.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Práce s daty</strong>
+                <ul>
+                  <li>Pro získání dat použijte bloky <code>Get Value</code> nebo <code>Get Row</code>.</li>
+                  <li>Pro zápis nových dat využijte <code>Create Row</code> nebo <code>Update Value</code>.</li>
+                  <li>Data můžete mazat pomocí <code>Delete Row</code>.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Použití v aplikacích</strong>
+                <p>Data Sources jsou vhodné pro aplikace pracující s dynamickými daty, například správu uživatelských
+                  profilů,
+                  zobrazování seznamů produktů nebo sledování úkolů v reálném čase.</p>
+              </li>
+              <li>
+                <strong>Zobrazení dat</strong>
+                <p>Pro práci s daty v uživatelském rozhraní se používají komponenty jako <code>Data Viewer List</code>
+                  nebo <code>Data Viewer Grid</code>, které umožňují snadnou prezentaci databázových záznamů.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/dataSource.png"
+            alt="Použití Data Sources v Thunkable" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Přihlašovací aplikace s tajným obsahem</h2>
+      <p>
+          Vytvoříme aplikaci, která umožní uživateli přihlásit se pomocí jména a hesla. 
+          Pokud přihlášení proběhne úspěšně, aplikace zobrazí tajný obsah. Tento projekt 
+          je skvělý pro procvičení práce s Data Sources a navigací mezi obrazovkami v Thunkable.
+      </p>
+  
+      <div class="row align-items-center mb-4">
+          <div class="col-md-8">
+              <div class="card p-3 shadow-sm">
+                  <h3>Komponenty aplikace</h3>
+                  <ul>
+                      <li><strong>Screen 1 (Přihlášení):</strong> obsahuje přihlašovací formulář.</li>
+                      <li><strong>Screen 2 (Tajný obsah):</strong> zobrazí se po úspěšném přihlášení.</li>
+                      <li><strong>Text Input:</strong> pole pro zadání uživatelského jména.</li>
+                      <li><strong>Text Input:</strong> pole pro zadání hesla.</li>
+                      <li><strong>Button:</strong> tlačítko pro ověření přihlašovacích údajů.</li>
+                      <li><strong>Label:</strong> zobrazí stav přihlášení (úspěch/neúspěch).</li>
+                      <li><strong>Data Source:</strong> ukládá uživatelská jména a hesla.</li>
+                      <li><strong>Button (na druhé obrazovce):</strong> umožní odhlášení a návrat na přihlašovací stránku.</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-4 text-center">
+              <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/login-model.png"
+                  alt="Vytváření přihlašovací aplikace v Thunkable" loading="lazy">
+          </div>
+      </div>
+  
+      <hr>
+  
+      <div class="row align-items-center">
+          <div class="col-md-8">
+              <div class="card p-3 shadow-sm">
+                  <h3>Logika aplikace</h3>
+                  <p>
+                      Nejprve vytvořte Data Source, kde budou uložena uživatelská jména a hesla.
+                      Můžete použít Google Sheets nebo Local DB.
+                  </p>
+                  <p>
+                      Přidejte do aplikace dvě obrazovky: <strong>Screen 1</strong> (přihlášení) a 
+                      <strong>Screen 2</strong> (tajný obsah).
+                  </p>
+                  <p>
+                      Po kliknutí na tlačítko <code>btnPrihlasit</code> aplikace porovná zadané údaje s daty uloženými 
+                      v Data Source. Pokud se shodují, přesměruje uživatele na Screen 2 pomocí bloku 
+                      <code>navigate to Screen 2</code>.
+                  </p>
+                  <p>
+                      Použijte podmínkový blok <code>if...else</code> k ověření údajů a navigaci na skrytou stránku s obsahem.
+                  </p>
+                  <p>
+                      Přidejte na Screen 2 tlačítko <code>btnOdhlasit</code>, které uživatele vrátí zpět na přihlašovací stránku
+                      pomocí bloku <code>navigate to Screen 1</code>.
+                  </p>
+                  <p>
+                      Pro lepší zabezpečení můžete hesla uložit jako hashované hodnoty a porovnávat je pomocí kódu.
+                  </p>
+              </div>
+          </div>
+          <div class="col-md-4 text-center">
+              <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/login-logic.png"
+                  alt="Logika přihlašovací aplikace v Thunkable" loading="lazy">
+          </div>
+      </div>
+  
+      <h5>Aplikace je nyní připravena k testování. Vyzkoušejte ji na mobilu i webu!</h5>
+  </section>
+  
+
+
+
 
 
     <!-- The Modal -->
