@@ -74,80 +74,95 @@
         </ul>
       </div>
     </nav>
+    <style>
+      .hover-effect:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease-in-out;
+      }
+  
+      .shadow-lg {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
+  
+      h1 {
+          font-family: 'Arial', sans-serif;
+          font-weight: bold;
+      }
+  
+      .text-primary {
+          color: #2575fc !important;
+      }
+  
+      .text-warning {
+          color: #f1c40f !important;
+      }
+  
+      a {
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+  
+      a:hover {
+          color: #f1c40f;
+      }
+  
+      .container {
+          max-width: 960px;
+      }
+  </style>
   </header>
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Kontakt</h1>
-    <div class="odstavec">
-      <table>
-        <tr>
-          <td>
-            <h4>Jmenuji se Richard Ficek, a jsem lektorem v <a href="https://ostrava.itstep.org/">StepIT academy</a>.
-            </h4>
-          </td>
-          <td>
-            <img src="/img/foto.avif" alt="terms-construct" width="150" height="150">
-          </td>
-        </tr>
-      </table>
-    </div>
+    <h1 class="text-center mb-4" style="background: linear-gradient(to right, #6a11cb, #2575fc); color: white; padding: 20px; border-radius: 10px;">Kontakt</h1>
+    
+    <section class="mb-5">
+        <h4 class="text-primary">Jmenuji se Richard Ficek, a jsem lektorem v <a href="https://ostrava.itstep.org/" target="_blank" class="text-decoration-none text-warning">StepIT academy</a>.</h4>
+        <figure class="d-flex align-items-center justify-content-between mb-4">
+            <img src="/img/foto.avif" alt="Richard Ficek" width="150" height="150" class="rounded-circle shadow-lg">
+        </figure>
+    </section>
 
-    <div class="odstavec">
-      <p>V přípaďe datazů pište na email:
-      <h5><a href="mailto:ficek_r@itstep.academy">ficek_r@itstep.academy</a></h5>
-      </p>
-      <p>V přípaďe potřeby discord server:
-        <a href="https://discord.gg/vv3Nf6krVg">
-          <h5>https://discord.gg/vv3Nf6krVg</h5>
-        </a>
-      </p>
-    </div>
+    <section class="mb-5">
+        <p>V případě dotazů pište na email:</p>
+        <h5><a href="mailto:ficek_r@itstep.academy" class="text-primary">ficek_r@itstep.academy</a></h5>
+        <p>V případě potřeby se připojte na můj Discord server:</p>
+        <h5><a href="https://discord.gg/vv3Nf6krVg" target="_blank" class="text-primary">https://discord.gg/vv3Nf6krVg</a></h5>
+    </section>
 
-    <div class="odstavec">
-      <h4>Mezi mé zájmy patří:</h4>
+    <section class="mb-5">
+        <h4 class="text-primary">Mezi mé zájmy patří:</h4>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="/img/contact/age-of-empires-2.avif" alt="Age of Empires 2" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 100%; height: auto;" loading="lazy">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="/img/contact/minecraft.avif" alt="Minecraft" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 100%; height: auto;" loading="lazy">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="/img/contact/world-of-tanks.avif" alt="World of Tanks" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 100%; height: auto;" loading="lazy">
+            </div>
+        </div>
+    </section>
 
-      <table>
-        <tr>
-          <td>
-            <img class="myImg" src="/img/contact/age-of-empires-2.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:200px; height: auto" loading="lazy">
-          </td>
-          <td>
-            <img class="myImg" src="/img/contact/minecraft.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:200px; height: auto" loading="lazy">
-          </td>
-          <td>
-            <img class="myImg" src="/img/contact/world-of-tanks.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:200px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="odstavec">
-      <h4>Mé dovednosti jsou:</h4>
-
-      <table>
-        <tr>
-          <td>
-            <img class="myImg" src="/img/contact/c-sharp.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:100px; height: auto" loading="lazy">
-          </td>
-          <td>
-            <img class="myImg" src="/img/contact/C-logo.png" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:110px; height: auto" loading="lazy">
-          </td>
-          <td>
-            <img class="myImg" src="/img/contact/html-css.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:200px; height: auto" loading="lazy">
-          </td>
-          <td>
-            <img class="myImg" src="/img/contact/python.avif" alt="Prostředí pro upravu zvuku"
-              style="width:100%; max-width:100px; height: auto" loading="lazy">
-          </td>
-        </tr>
-      </table>
+    <section class="mb-5">
+        <h4 class="text-primary">Mé dovednosti jsou:</h4>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <img src="/img/contact/c-sharp.avif" alt="C#" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 100px;" loading="lazy">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="/img/contact/C-logo.png" alt="C" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 110px;" loading="lazy">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="/img/contact/html-css.avif" alt="HTML, CSS" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 200px;" loading="lazy">
+            </div>
+            <div class="col-md-3 mb-3">
+                <img src="/img/contact/python.avif" alt="Python" class="img-fluid rounded shadow-lg hover-effect" style="max-width: 100px;" loading="lazy">
+            </div>
+        </div>
+    </section>
+    </section>
     </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
