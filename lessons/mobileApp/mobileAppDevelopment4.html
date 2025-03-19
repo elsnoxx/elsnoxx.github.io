@@ -348,59 +348,99 @@
         <li><strong>Sensing</strong>: Bloky pro detekci interakcí, například když se objekt dotkne okraje obrazovky.
         </li>
       </ul>
-
-      <h3>5. Příklad aplikace: Odrážející se míč</h3>
-      <p>Nyní si ukážeme, jak vytvořit jednoduchou aplikaci, která obsahuje odrážející se míč. Tato aplikace bude
-        využívat komponentu Canvas a její bloky pro pohyb a detekci kolizí.</p>
-
-      <h4>Krok 1: Přidání tlačítka</h4>
-      <p>Začněte přidáním tlačítka na obrazovku s názvem <code>dropButton</code>. Po kliknutí na toto tlačítko bude míč
-        vypuštěn ze středu obrazovky a bude se odrážet od okrajů.</p>
-      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/dropButton.png"
-        alt="Tlačítko dropButton v Thunkable" loading="lazy">
-
-      <h4>Krok 2: Nastavení Canvas</h4>
-      <p>Vytvořte komponentu **Canvas** a přejmenujte ji na <code>Canvas</code>. Vytvořte podkomponentu **Stage1** a
-        přejmenujte ji na <code>ballStage</code>.</p>
-      <p>Importujte obrázek míče do <code>Sprite_Type1</code> a nastavte jeho velikost na 75x90 px. Přejmenujte tento
-        Sprite Type na <code>ballType</code>.</p>
-      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/ballType.png" alt="Importování míče do Canvas"
-        loading="lazy">
-
-      <h4>Krok 3: Přidání Sprite</h4>
-      <p>Vytvořte nový **Sprite** z <code>ballType</code> a nastavte jeho počáteční pozici na X: 150 a Y: 250.</p>
-
-      <h4>Krok 4: Bloky pro spuštění animace</h4>
-      <p>Vytvořte blok, který se spustí při kliknutí na tlačítko <code>dropButton</code>. Tento blok nastaví pozici míče
-        na X: 150 a Y: 250, a nastaví rychlost pohybu míče.</p>
-      <p>Přidejte blok pro detekci kolize s okraji, který způsobí, že se míč odrazí od okraje obrazovky v náhodném
-        směru.</p>
-      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/ballMovement.png" alt="Bloky pro pohyb míče"
-        loading="lazy">
-
-      <h4>Krok 5: Výsledek</h4>
-      <p>Po kliknutí na tlačítko se míč odrazí od okrajů obrazovky a bude se pohybovat podle nastavené rychlosti a
-        směru.</p>
-      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/finalResult.png" alt="Výsledný pohyb míče"
-        loading="lazy">
     </section>
 
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Canvas v Thunkable - Krok za krokem</h2>
+      <p class="text-center">Následující kroky vám ukáží, jak vytvořit jednoduchou aplikaci v Thunkable, která obsahuje
+        odrážející se míč. Každý krok bude vysvětlen s obrázky a kódy, které pomohou lépe pochopit celý proces.</p>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
-
-    <div>
-      <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment3.html';">Předchozí lekce</button>
-        <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment5.html';">Následující lekce</button>
+      <!-- Krok 1 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h4>Krok 1: Přidání tlačítka</h4>
+          <p>Začněte přidáním tlačítka na obrazovku s názvem <code>dropButton</code>. Po kliknutí na toto tlačítko bude
+            míč vypuštěn ze středu obrazovky a bude se odrážet od okrajů.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/step1-button.png"
+            alt="Tlačítko dropButton v Thunkable" loading="lazy">
+        </div>
       </div>
-    </div>
+
+      <!-- Krok 2 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h4>Krok 2: Nastavení Canvas</h4>
+          <p>Vytvořte komponentu <strong>Canvas</strong> a přejmenujte ji na <code>Canvas</code>. Vytvořte podkomponentu
+            <strong>Stage1</strong> a přejmenujte ji na <code>ballStage</code>.</p>
+          <p>Importujte obrázek míče do <code>Sprite_Type1</code> a nastavte jeho velikost na 75x90 px. Přejmenujte
+            tento Sprite Type na <code>ballType</code>.</p>
+          <a href="https://www.flaticon.com/" class="btn btn-success">Flaticon for Icons</a>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/step2-ball.png"
+            alt="Importování míče do Canvas" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Krok 3 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h4>Krok 3: Přidání Sprite</h4>
+          <p>Vytvořte nový **Sprite** z <code>ballType</code> a nastavte jeho počáteční pozici na X: 150 a Y: 250.</p>
+        </div>
+        <div class="col-md-6">
+          <!-- Tady by měl být obrázek, pokud je k dispozici -->
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/step3-sprite.png" alt="Přidání Sprite"
+            loading="lazy">
+        </div>
+      </div>
+
+      <!-- Krok 4 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h4>Krok 4: Bloky pro spuštění animace</h4>
+          <p>Vytvořte blok, který se spustí při kliknutí na tlačítko <code>dropButton</code>. Tento blok nastaví pozici
+            míče na X: 150 a Y: 250, a nastaví rychlost pohybu míče.</p>
+          <p>Přidejte blok pro detekci kolize s okraji, který způsobí, že se míč odrazí od okraje obrazovky v náhodném
+            směru.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/step4.png" alt="Bloky pro pohyb míče"
+            loading="lazy">
+        </div>
+      </div>
+
+      <!-- Krok 5 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <h4>Krok 5: Výsledek</h4>
+          <p>Po kliknutí na tlačítko se míč odrazí od okrajů obrazovky a bude se pohybovat podle nastavené rychlosti a
+            směru.</p>
+        </div>
+        <div class="col-md-6">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce4/step5.png" alt="Výsledný pohyb míče"
+            loading="lazy">
+        </div>
+      </div>
+
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+
+      <div>
+        <div class="d-flex justify-content-between mb-4">
+          <button id="left" class="btn btn-primary"
+            onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment3.html';">Předchozí lekce</button>
+          <button id="right" class="btn btn-primary"
+            onclick="location.href = '/lessons/mobileApp/mobileAppDevelopment5.html';">Následující lekce</button>
+        </div>
+      </div>
 
   </main>
   <footer class="footer">
