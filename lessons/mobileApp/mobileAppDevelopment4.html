@@ -103,19 +103,287 @@
     </div>
 
     <div class="lesson-section">
-      <h1 class="lesson-title">Úvod, IDE, Opakování, cyklus</h1>
+      <h1 class="lesson-title">Canva</h1>
       <p class="lesson-text">
-        V této lekci si zopakujeme základy programování v Pythonu a naučíme se, jak vytvořit základní menu. Předvedeme
-        si také cykly <code>while</code> a <code>for</code>. A nastavím si konveci pro psaní kódu.
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
+        V této lekci si ukážeme práci s listmy na platformě <a href="https://thunkable.com/" target="_blank"
+          rel="noopener noreferrer">Thunkable</a>.
+        A představíme si jak se používají databázi a vysvětléme jak funguje.
       </p>
     </div>
 
-    <p>to be done</p>
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Sdílené úložiště</h2>
+      <p>
+        V předchozích lekcích jsme pracovali s různými typy úložišť v telefonu. Pokud potřebujeme nějaké údaje uložit
+        jen dočasně,
+        a zároveň k nim chceme mít snadný přístup, uložíme je do proměnné.
+        Pokud k nějakým údajům budeme potřebovat dlouhodobý přístup i po zavření aplikace, je vhodné použít databázi.
+      </p>
+      <p>
+        Co kdybychom ale chtěli mít k ukládaným datům přístup odkudkoliv? V takovém případě je ideální využít cloudové
+        úložiště,
+        které je přístupné online. Nezáleží na tom, kde jsou data fyzicky uložena, důležité je, že k nim můžeme
+        přistupovat odkudkoliv.
+      </p>
+      <p>
+        Jednoduchým a populárním řešením je například <strong>Google Drive</strong>, který poskytuje zdarma 15GB
+        prostoru pro ukládání
+        souborů, videí, fotek a dalších dat.
+      </p>
+      <hr>
+    </section>
 
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h3>Úkol č. 1: Ochrana aplikace</h3>
+      <div class="task-container row">
+        <div class="col-md-8">
+          <p>
+            Vytvořte v <strong>Thunkable</strong> nový projekt s přihlašováním uživatele.
+            Přístup na hlavní obrazovku aplikace bude umožněn pouze po zadání správného hesla.
+            Použijte znalosti z předchozích lekcí. Aplikace začne obrazovkou pro zadání hesla,
+            a teprve po správném zadání se uživatel přesune na obrazovku pro zapisování a čtení poznámek.
+          </p>
+        </div>
+        <div class="col-md-4 text-center align-items-center">
+          <img src="/img/thuncable/lekce3/login-model.png" alt="Login Screen" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 2: Vytvoření Google tabulky</h3>
+      <div class="task-container row">
+        <div class="col-md-8">
+          <p>
+            Nejprve vytvořte tabulku na <strong>Google Drive</strong>. Tato tabulka bude sloužit pro ukládání poznámek a
+            informací o jejich autorech a datu zápisu.
+          </p>
+          <ul>
+            <li>Tabulka bude mít tři sloupce: <strong>Autor</strong>, <strong>Datum</strong> a
+              <strong>Poznámka</strong>.
+            </li>
+            <li>Každý nový záznam bude přidán jako nový řádek v tabulce.</li>
+            <li>Zápis poznámek bude provádět přímo mobilní aplikace.</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center align-items-center">
+          <img src="/img/thuncable/lekce4/ukol2.png" alt="Google Sheets" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 3: Vytvoření datového zdroje</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            V <strong>Thunkable</strong> vytvořte nový <strong>datový zdroj</strong> a propojte ho s tabulkou na Google
+            Drive.
+          </p>
+          <ul>
+            <li>Vytvořte nový datový zdroj a vyberte možnost <strong>Google Sheets</strong>.</li>
+            <li>Přihlaste se svým Google účtem, kde máte vytvořenou tabulku.</li>
+            <li>Vyberte příslušnou tabulku a potvrďte její propojení.</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol3.png" alt="Data Source" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 4: Vytvoření layoutu</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            Po úspěšném přihlášení se zobrazí obrazovka s přehledem všech poznámek z Google tabulky.
+            Aplikace nabídne také tlačítko pro <strong>odhlášení</strong> (návrat na přihlašovací stránku)
+            a <strong>přidání nové poznámky</strong>.
+          </p>
+          <p>
+            Pro zobrazení seznamu poznámek použijte komponentu <strong>List Viewer</strong>, která umožní dynamické
+            načítání
+            záznamů z tabulky.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol4.png" alt="App Layout" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 5: Zobrazení poznámek</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            Po otevření obrazovky s poznámkami aplikace automaticky načte aktuální záznamy z tabulky a zobrazí je v
+            seznamu.
+          </p>
+          <ul>
+            <li>Vytvořte tři proměnné pro ukládání seznamu autorů, dat a samotných poznámek.</li>
+            <li>Při každém načtení obrazovky se aktualizují data z tabulky.</li>
+            <li>Použijte funkci <code>List of values</code> pro načtení dat z Google tabulky.</li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol5.png" alt="Notes List" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 6: Seznam údajů z tabulky</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            Poznámky se budou zobrazovat ve formátu: <br>
+            <code>Honza | 30.6. | Koupit chleba</code> <br>
+            <code>Jana | 30.6. | Pozítří přijede babička.</code> <br>
+          </p>
+          <p>
+            Pro spojení údajů o autorovi, datu a poznámce použijte funkci <code>join</code>.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol6.png" alt="Table Structure" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 7: Zřetězení údajů</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            Vytvořte cyklus, který spojí hodnoty ze tří seznamů (autor, datum, poznámka) do jednoho textového řetězce a
+            uloží je do seznamu poznámek.
+          </p>
+          <p>
+            Použijte proměnnou <code>i</code> pro iteraci přes záznamy a spojování textů pomocí znaku <code>|</code>.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol7.png" alt="Join Data" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 8: Zobrazení poznámek</h3>
+      <div class="task-container row">
+        <div class="col-md-8 d-flex align-items-center">
+          <p>
+            Jakmile je seznam poznámek připraven, zobrazte ho v komponentě <strong>List Viewer</strong>.
+            Každý záznam by měl obsahovat autora, datum a text poznámky v jednom řádku.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol8.png" alt="Final List" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h3>Úkol č. 9.: Přidávání poznámek</h3>
+      <div class="task-container row">
+        <div class="col-md-8 align-items-center">
+          <p>
+            Jakmile uživatel klikne na tlačítko pro novou poznámku, aplikace se
+            přesune na novou obrazovku. Zde budou tři pole pro zadání údajů:
+            Údaj o autorovi, údaj o datu a samotná poznámka:
+          </p>
+          <p>
+            Po klepnutí na potvrzovací tlačítko musí dojít k uložení do Google
+            tabulky. K tomu použijeme kód datového zdroje create row (vytvoření
+            nového řádku v tabulce).
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="/img/thuncable/lekce4/ukol9.png" alt="Final List" class="myImg img-fluid rounded shadow">
+          <img src="/img/thuncable/lekce4/ukol9-logic.png" alt="Final List" class="myImg img-fluid rounded shadow">
+        </div>
+      </div>
+
+      <h5>Aplikace je nyní připravena! Vyzkoušejte ji na mobilním zařízení a testujte její funkčnost.</h5>
+    </section>
+
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Canvas v Thunkable</h2>
+      <p class="text-center">V tomto článku se podíváme na komponentu **Canvas** v Thunkable, která je ideální pro
+        tvorbu her a animací v mobilních aplikacích. Canvas umožňuje animovat objekty, pracovat s fyzikou a vytvářet
+        různé vizuální efekty. Seznámíme se s tím, jak přidat komponenty a vytvořit jednoduchou aplikaci, kde se míč
+        odráží od okrajů obrazovky.</p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>1. Co je Canvas v Thunkable?</h3>
+            <p>Canvas je komponenta, která slouží jako herní engine uvnitř Thunkable. Umožňuje vytvářet animace, fyziku
+              a manipulovat s objekty na obrazovce. Canvas je ideální pro tvorbu her a interaktivních aplikací. Pomocí
+              něj můžete animovat obrázky, detekovat kolize a vytvářet dynamické prostředí.</p>
+            <p>Canvas najdete v sekci komponent Thunkable, kde jej stačí přetáhnout na obrazovku vaší aplikace. Můžete
+              jej použít k vytvoření různých scén, na kterých budou interagovat objekty, jako jsou obrázky, štítky,
+              tlačítka a další.</p>
+
+            <h3>2. Klíčové komponenty Canvas</h3>
+            <p>Canvas v Thunkable má několik podkomponent, které umožňují detailní práci s objekty:</p>
+            <ul>
+              <li><strong>Stage</strong>: Hlavní scéna, která seskupuje všechny objekty na plátno. Každá Canvas
+                komponenta má alespoň jednu Stage.</li>
+              <li><strong>Sprite Types</strong>: Obrázky, které importujete do aplikace a které následně použijete k
+                vytváření instancí objektů.</li>
+              <li><strong>Sprites</strong>: Konkrétní objekty, které jsou vytvořeny z <code>Sprite Types</code> a
+                umístěny na scénu.</li>
+            </ul>
+
+            <h3>3. Jak přidat Canvas do Thunkable?</h3>
+            <p>V Thunkable přetáhněte komponentu **Canvas** z nabídky komponent na obrazovku. Jakmile ji přetáhnete,
+              uvidíte, že se automaticky přidá podkomponenta **Stage**. Canvas také umožňuje přidávat a spravovat různé
+              typy **Sprite** a jejich interakce.</p>
+            <img class="myImg img-fluid rounded shadow" src="/img/thunkable/canvas-ui.png"
+              alt="Přidání Canvas do Thunkable" loading="lazy">
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thunkable/canvas-example.png"
+            alt="Ukázka Canvas v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <h3>4. Jak pracovat s bloky v Canvas?</h3>
+      <p>Canvas v Thunkable obsahuje různé bloky pro manipulaci s objekty. Některé z nich zahrnují:</p>
+      <ul>
+        <li><strong>Motion</strong>: Bloky pro pohyb objektů, nastavování rychlosti a směru.</li>
+        <li><strong>Direction</strong>: Bloky pro změnu směru pohybu objektů a nastavení úhlu.</li>
+        <li><strong>Events</strong>: Bloky pro detekci událostí, například kliknutí na objekt nebo kolize s jinými
+          objekty.</li>
+        <li><strong>Looks</strong>: Bloky pro změnu vzhledu objektů, například jejich viditelnost nebo velikost.</li>
+        <li><strong>Sensing</strong>: Bloky pro detekci interakcí, například když se objekt dotkne okraje obrazovky.
+        </li>
+      </ul>
+
+      <h3>5. Příklad aplikace: Odrážející se míč</h3>
+      <p>Nyní si ukážeme, jak vytvořit jednoduchou aplikaci, která obsahuje odrážející se míč. Tato aplikace bude
+        využívat komponentu Canvas a její bloky pro pohyb a detekci kolizí.</p>
+
+      <h4>Krok 1: Přidání tlačítka</h4>
+      <p>Začněte přidáním tlačítka na obrazovku s názvem <code>dropButton</code>. Po kliknutí na toto tlačítko bude míč
+        vypuštěn ze středu obrazovky a bude se odrážet od okrajů.</p>
+      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/dropButton.png"
+        alt="Tlačítko dropButton v Thunkable" loading="lazy">
+
+      <h4>Krok 2: Nastavení Canvas</h4>
+      <p>Vytvořte komponentu **Canvas** a přejmenujte ji na <code>Canvas</code>. Vytvořte podkomponentu **Stage1** a
+        přejmenujte ji na <code>ballStage</code>.</p>
+      <p>Importujte obrázek míče do <code>Sprite_Type1</code> a nastavte jeho velikost na 75x90 px. Přejmenujte tento
+        Sprite Type na <code>ballType</code>.</p>
+      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/ballType.png" alt="Importování míče do Canvas"
+        loading="lazy">
+
+      <h4>Krok 3: Přidání Sprite</h4>
+      <p>Vytvořte nový **Sprite** z <code>ballType</code> a nastavte jeho počáteční pozici na X: 150 a Y: 250.</p>
+
+      <h4>Krok 4: Bloky pro spuštění animace</h4>
+      <p>Vytvořte blok, který se spustí při kliknutí na tlačítko <code>dropButton</code>. Tento blok nastaví pozici míče
+        na X: 150 a Y: 250, a nastaví rychlost pohybu míče.</p>
+      <p>Přidejte blok pro detekci kolize s okraji, který způsobí, že se míč odrazí od okraje obrazovky v náhodném
+        směru.</p>
+      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/ballMovement.png" alt="Bloky pro pohyb míče"
+        loading="lazy">
+
+      <h4>Krok 5: Výsledek</h4>
+      <p>Po kliknutí na tlačítko se míč odrazí od okrajů obrazovky a bude se pohybovat podle nastavené rychlosti a
+        směru.</p>
+      <img class="myImg img-fluid rounded shadow" src="/img/thunkable/finalResult.png" alt="Výsledný pohyb míče"
+        loading="lazy">
+    </section>
 
 
     <!-- The Modal -->
