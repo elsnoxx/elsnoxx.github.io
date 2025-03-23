@@ -148,43 +148,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         - lekce 3
         - lekce 6
         
-
+- Python web
+    - pro django, flask a fastapi predstavit na projekto TODO aplikace
+        - viz url https://github.com/patrickloeber/python-fun/tree/master/webapps
+        - upravit ale zdojoveko kody bez db spise pracovat jako s lokanim souborem a ukladanim
     
-
-# Versions
-
-## February 2025 - Update
-
-- Python Intermediate
-    - lekce 3 - UI + obsah, ukazkove programy
-    - sjednotit nadpisi v lekcich
-    - opravit stylovani kodu tak jak je v lekce 3
-    - testik
-        - lekce 1
-        - lekce 2
-        - lekce 4
-        - lekce 5
-
-## January 2025 - Update
-
-- Python Intermediate
-    - na uvod kazde lekce vzdy udelat maly testik probranych znalosti, tak jak je u lekce 4
-    - lekce 4 - UI + obsah, ukazkove programy
-    - lekce 5 - UI + obsah, ukazkove programy
-    - lekce 6 - UI + obsah, ukazkove programy
-    - projekt
-
-
-## December 2024 - Update
-
-- Python Intermediate
-    - uvodni stranka podle noveho UI
-    - vytvoreni noveho tematickeho celku
-    - lekce 1 - UI + obsah, ukazkove programy
-    - lekce 2 - UI + obsah, ukazkove programy
-    - VSC + python
-    - hodnoceni lekce
-
-- Javascript
-    - oprava ikony u hodnoceni prezentace
-
