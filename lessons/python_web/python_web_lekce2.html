@@ -22,7 +22,7 @@
   <!-- Přidání Prism.js JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
-  
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -93,10 +93,10 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_web/python_web.html';"
+            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_web/python_web_lekce1.html';"
               class="btn btn-primary">Předchozí lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce2.html';" class="btn btn-primary">Následují
+              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -151,6 +151,114 @@
         <p>🔹 Tento kód funguje pro Windows (<code>cls</code>) i Linux/macOS (<code>clear</code>).</p>
       </div>
 
+      <div class="libraries">
+        <h2>📝 Modulace kódu – Rozdělení do souborů</h2>
+        <p>
+          Python umožňuje rozdělit program do menších částí (modulů), které usnadňují správu kódu. Každý modul má svou
+          vlastní funkčnost a může být importován do hlavního programu. Výhody modulace kódu jsou přehlednost, snadnější
+          úpravy a rozšíření.
+        </p>
+
+        <h3>📂 Struktura projektu</h3>
+        <pre><code>
+/ai_assistent
+    ├── main.py  # Hlavní program
+    ├── prikazy.py  # Moduly pro příkazy
+    ├── utils.py  # Pomocné funkce
+        </code></pre>
+
+        <section class="bg-light p-4 rounded mb-4 odstavec">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="command">
+                <h3>Hlavní program: <code>main.py</code></h3>
+                <p>
+                  Hlavní program spouští asistenta a zpracovává uživatelské příkazy. Využívá moduly <code>prikazy</code>
+                  a
+                  <code>utils</code>.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <pre><code class="language-python">
+import prikazy
+import utils
+
+def main():
+    utils.clear_console()
+    print("Hello, I am your AI assistant. How can I help you?")
+    
+    while True:
+        prikazy.vypis_menu()
+        volba = input("Zadejte číslo příkazu: ")
+        prikazy.zpracuj_prikaz(volba)
+
+if __name__ == "__main__":
+    main()
+             </code></pre>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="command">
+                <h3>Modul příkazů: <code>prikazy.py</code></h3>
+                <p>
+                  Modul obsahuje funkce pro zpracování uživatelských příkazů. Každá funkce reaguje na konkrétní příkaz.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <pre><code class="language-python">
+def vypis_menu():
+    print("1 - Zkontrolovat sudé/liché číslo")
+    print("2 - Najít maximum dvou čísel")
+    print("4 - Ukončit")
+
+def zpracuj_prikaz(volba):
+    if volba == "1":
+        cislo = int(input("Zadejte číslo: "))
+        print("Sudé" if cislo % 2 == 0 else "Liché")
+    elif volba == "2":
+        a = int(input("Zadejte první číslo: "))
+        b = int(input("Zadejte druhé číslo: "))
+        print(f"Maximum je: {max(a, b)}")
+    elif volba == "4":
+        exit()
+    else:
+        print("Neplatná volba, zkuste to znovu.")
+             </code></pre>
+            </div>
+          </div>
+
+
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="command">
+                <h3>Modul nástrojů: <code>utils.py</code></h3>
+                <p>
+                  Modul obsahuje funkce pro zpracování uživatelských příkazů. Každá funkce reaguje na konkrétní příkaz.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <pre><code class="language-python">
+import os
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+             </code></pre>
+            </div>
+          </div>
+        </section>
+        <h3>🎯 Výhody rozdělení kódu:</h3>
+        <ul>
+          <li>✔️ Kód je přehlednější.</li>
+          <li>✔️ Každý modul má svou vlastní funkčnost.</li>
+          <li>✔️ Snazší úpravy a rozšíření.</li>
+        </ul>
+      </div>
+
       <div class="section-assistent">
         <h3>Úvodní Příkaz</h3>
         <div class="command">
@@ -183,6 +291,11 @@
             <div class="command">
               <h3>Příkaz 3-5 - Operace s čísly</h3>
               <p>Najdi maximum, minimum nebo proveď základní matematické operace.</p>
+              <ul>
+                <li>Příkaz 3: Najde maximum dvou čísel.</li>
+                <li>Příkaz 4: Najde minimum dvou čísel.</li>
+                <li>Příkaz 5: Provádí základní matematické operace (sčítání, odčítání, násobení, průměr).</li>
+            </ul>
             </div>
           </div>
           <div class="col-md-6">
@@ -280,12 +393,36 @@
           </div>
         </div>
 
-        <div class="command">
-          <h3>Příkaz 23 - Zvýrazněné číslo v rozsahu</h3>
-          <p>Vypíše čísla v rozsahu a označí konkrétní číslo vykřičníkem.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 23 - Zvýrazněné číslo v rozsahu</h3>
+              <p>Vypíše čísla v rozsahu a označí konkrétní číslo vykřičníkem.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 24 - Generování random čísla</h3>
+              <p>
+                Program vygeneruje náhodné číslo v zadaném rozsahu.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Template pro našeho AI asistenta</h2>
+      <p class="lead">
+        Pomocí víže uvedeného tlačíkta si můžete stáhnout nástřel zrojového kódu, který obsahuje šablony pro jednotlivé příkazy.
+        Stačí je doplnit o kód a můžete si tak procvičit základy programování v Pythonu. V případě potřeby se můžete
+        inspirovat v ukázkách kódu výše.
+      </p>
+      <a href="/lessons/python_web/pracovni listy/lekce2/low-ai-assistent.zip" class="btn btn-success" download>Stáhnout pracovní list</a>
+    </section>
+
 
 
 
@@ -299,9 +436,9 @@
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce1.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce2.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Následující lekce</button>
       </div>
     </div>
 
