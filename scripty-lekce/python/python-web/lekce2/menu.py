@@ -25,7 +25,8 @@ def zobraz_menu(vybrana_volba=None):
     21. Převod mezi měnami
     22. Vygenerovat náhodné číslo (opět)
     23. Hrát hru "Hádej číslo"
-    24. Konec
+    24. Výpis logu ze souboru
+    25. Konec
     """
     print(Fore.RESET, end="")
 

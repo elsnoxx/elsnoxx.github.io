@@ -1,6 +1,7 @@
 import random
 import math
 import time
+import utils
 from colorama import Fore
 
 def sudost_lichost():
@@ -15,13 +16,17 @@ def sudost_lichost():
             cislo = int(input("Zadejte číslo: "))
             if cislo == 0:
                 print(Fore.RED + "Nula není ani sudá, ani lichá.")
+                utils.log_to_file("Uživatel zadal číslo 0.")
             elif cislo % 2 == 0:
                 print(Fore.GREEN + f"{cislo} je sudé.")
+                utils.log_to_file(f"Uživatel zadal sudé číslo: {cislo}")
             else:
                 print(Fore.RED + f"{cislo} je liché.")
+                utils.log_to_file(f"Uživatel zadal liché číslo: {cislo}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísla.")
 
 def nasobek_sedmi():
     """
@@ -35,11 +40,14 @@ def nasobek_sedmi():
             cislo = int(input("Zadejte číslo: "))
             if cislo % 7 == 0:
                 print(Fore.GREEN + f"{cislo} je násobkem 7.")
+                utils.log_to_file(f"Uživatel zadal číslo násobek 7: {cislo}")
             else:
                 print(Fore.RED + f"{cislo} není násobkem 7.")
+                utils.log_to_file(f"Uživatel zadal číslo nenásobek 7: {cislo}")
             break
         except ValueError:
-            print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")    
+            print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísla.")  
 
 
 def max_dvou_cisel():
@@ -56,9 +64,11 @@ def max_dvou_cisel():
             a = int(input("Zadejte první číslo: "))
             b = int(input("Zadejte druhé číslo: "))
             print(Fore.CYAN + f"Maximum je: {max(a, b)}")
+            utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, maximum je {max(a, b)}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísel.")
 
 def min_dvou_cisel():
     """
@@ -74,9 +84,12 @@ def min_dvou_cisel():
             a = int(input("Zadejte první číslo: "))
             b = int(input("Zadejte druhé číslo: "))
             print(Fore.CYAN + f"Minimum je: {min(a, b)}")
+            utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, minimum je {min(a, b)}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísel.")
+
 
 def aritmeticke_operace():
     """
@@ -97,17 +110,28 @@ def aritmeticke_operace():
 
             if operace == "+":
                 print(Fore.CYAN + f"Výsledek: {a + b}")
+                utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, operace +, výsledek {a + b}")
             elif operace == "-":
                 print(Fore.CYAN + f"Výsledek: {a - b}")
+                utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, operace -, výsledek {a - b}")
             elif operace == "*":
                 print(Fore.CYAN + f"Výsledek: {a * b}")
+                utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, operace *, výsledek {a * b}")
             elif operace == "/":
-                print(Fore.CYAN + f"Výsledek: {a / b}" if b != 0 else Fore.RED + "Dělení nulou není možné!")
+                if b != 0:
+                    print(Fore.CYAN + f"Výsledek: {a / b}")
+                    utils.log_to_file(f"Uživatel zadal čísla {a} a {b}, operace /, výsledek {a / b}")
+                else:
+                    print(Fore.RED + "Dělení nulou není možné!")
+                    utils.log_to_file("Uživatel se pokusil dělit nulou.")
             else:
                 print(Fore.RED + "Neplatná operace.")
+                utils.log_to_file(f"Uživatel zadal neplatnou operaci: {operace}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísel nebo operace.")
+
 
 def prevod_sekund():
     """
@@ -124,10 +148,11 @@ def prevod_sekund():
             minuty = (sekundy % 3600) // 60
             sekundy = sekundy % 60
             print(Fore.YELLOW + f"Do půlnoci zbývá: {hodiny} hodin, {minuty} minut, {sekundy} sekund.")
+            utils.log_to_file(f"Uživatel zadal čas v sekundách: {hodiny} hodin, {minuty} minut, {sekundy} sekund.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
-
+            utils.log_to_file("Neplatný vstup při zadávání času v sekundách.")
 def obvod_obsah_kruhu():
     """
     Funkce vypočítá obvod nebo obsah kruhu na základě zadaného průměru.
@@ -144,13 +169,18 @@ def obvod_obsah_kruhu():
 
             if volba == "o":
                 print(f"Obvod kruhu: {math.pi * prumer}")
+                utils.log_to_file(f"Uživatel zadal průměr {prumer}, výpočet obvodu.")
             elif volba == "p":
                 print(f"Obsah kruhu: {math.pi * (prumer / 2) ** 2}")
+                utils.log_to_file(f"Uživatel zadal průměr {prumer}, výpočet obsahu.")
             else:
                 print(Fore.RED + "Neplatná volba.")
+                utils.log_to_file(f"Uživatel zadal neplatnou volbu: {volba}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání průměru kruhu.")
+
 
 def generuj_nahodne_cislo():
     """
@@ -158,7 +188,9 @@ def generuj_nahodne_cislo():
 
     :vstup None: Funkce nevyžaduje žádné parametry.
     """
-    print(Fore.MAGENTA + f"Vygenerované číslo: {random.randint(1, 100)}")
+    cislo = random.randint(1, 100)
+    print(Fore.MAGENTA + f"Vygenerované číslo: {cislo}")
+    utils.log_to_file(f"Vygenerované číslo: {cislo}")
 
 def vypocet_ceny():
     """
@@ -177,9 +209,12 @@ def vypocet_ceny():
             sleva = float(input("Zadejte slevu v procentech: "))
             celkova_cena = mnozstvi * cena * (1 - sleva / 100)
             print(f"Cena objednávky je: {celkova_cena} Kč")
+            utils.log_to_file(f"Uživatel zadal množství {mnozstvi}, cenu za jednotku {cena}, slevu {sleva}%, celková cena {celkova_cena} Kč")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím platná čísla.")
+            utils.log_to_file("Neplatný vstup při zadávání množství, ceny nebo slevy.")
+
 
 def doba_stahovani():
     """
@@ -196,9 +231,12 @@ def doba_stahovani():
             rychlost = float(input("Zadejte rychlost stahování v Mbps: "))
             doba = velikost / (rychlost / 8)
             print(f"Doba stahování je: {doba} minut")
+            utils.log_to_file(f"Uživatel zadal velikost souboru {velikost} MB, rychlost stahování {rychlost} Mbps, doba stahování {doba} minut")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím platná čísla.")
+            utils.log_to_file("Neplatný vstup při zadávání velikosti souboru nebo rychlosti stahování.")
+
 
 def casove_pozdravy():
     """
@@ -214,21 +252,32 @@ def casove_pozdravy():
     """
     while True:
         try:
-            hodina = int(input("Zadejte hodinu (0-23): "))
-            if 0 <= hodina < 6:
-                print("Dobré ráno!")
-            elif 6 <= hodina < 12:
-                print("Dobrý den!")
-            elif 12 <= hodina < 18:
-                print("Dobré odpoledne!")
-            elif 18 <= hodina < 24:
-                print("Dobrý večer!")
-            else:
-                print(Fore.RED + "Neplatná hodina!")
+            cislo = input("Zadejte číslo pro kontrolu (šestimístné): ")
+            if len(cislo) != 6 or not cislo.isdigit():
+                print(Fore.RED + "Neplatný vstup. Zadejte prosím šestimístné číslo.")
+                utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
+                continue
+
+            cislo = int(cislo)
+            navstevovane = set()
+            
+            while cislo != 1 and cislo != 4:
+                if cislo in navstevovane:
+                    print(Fore.RED + f"{cislo} není šťastné číslo.")
+                    utils.log_to_file(f"Číslo {cislo} není šťastné číslo.")
+                    break
+                navstevovane.add(cislo)
+                cislo = sum(int(digit)**2 for digit in str(cislo))
+            if cislo == 1:
+                print(Fore.GREEN + f"{cislo} je šťastné číslo.")
+                utils.log_to_file(f"Číslo {cislo} je šťastné číslo.")
+            elif cislo == 4:
+                print(Fore.RED + f"{cislo} není šťastné číslo.")
+                utils.log_to_file(f"Číslo {cislo} není šťastné číslo.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
-
+            utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
 
 def stastne_cislo():
     """
@@ -241,27 +290,22 @@ def stastne_cislo():
     """
     while True:
         try:
-            cislo = input("Zadejte číslo pro kontrolu (šestimístné): ")
+            cislo = input("Zadejte šestimístné číslo pro prohození číslic: ")
             if len(cislo) != 6 or not cislo.isdigit():
                 print(Fore.RED + "Neplatný vstup. Zadejte prosím šestimístné číslo.")
+                utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
                 continue
 
-            cislo = int(cislo)
-            navstevovane = set()
-            
-            while cislo != 1 and cislo != 4:
-                if cislo in navstevovane:
-                    print(Fore.RED + f"{cislo} není šťastné číslo.")
-                    break
-                navstevovane.add(cislo)
-                cislo = sum(int(digit)**2 for digit in str(cislo))
-            if cislo == 1:
-                print(Fore.GREEN + f"{cislo} je šťastné číslo.")
-            elif cislo == 4:
-                print(Fore.RED + f"{cislo} není šťastné číslo.")
+            cislo = list(cislo)
+            cislo[0], cislo[-1] = cislo[-1], cislo[0]
+            prohozeno = ''.join(cislo)
+
+            print(Fore.CYAN + f"Po prohození číslic je nové číslo: {prohozeno}")
+            utils.log_to_file(f"Uživatel zadal číslo {cislo}, po prohození: {prohozeno}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
 
 
 def prohozeni_cislic():
@@ -277,6 +321,7 @@ def prohozeni_cislic():
             cislo = input("Zadejte šestimístné číslo pro prohození číslic: ")
             if len(cislo) != 6 or not cislo.isdigit():
                 print(Fore.RED + "Neplatný vstup. Zadejte prosím šestimístné číslo.")
+                utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
                 continue
 
             cislo = list(cislo)
@@ -284,9 +329,11 @@ def prohozeni_cislic():
             prohozeno = ''.join(cislo)
 
             print(Fore.CYAN + f"Po prohození číslic je nové číslo: {prohozeno}")
+            utils.log_to_file(f"Uživatel zadal číslo {cislo}, po prohození: {prohozeno}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání šestimístného čísla.")
 
 def rocni_obdobi():
     """
@@ -305,17 +352,23 @@ def rocni_obdobi():
             mesic = int(input("Zadejte číslo měsíce (1-12): "))
             if mesic == 1 or mesic == 2 or mesic == 12:
                 print(Fore.GREEN + "Zima")
+                utils.log_to_file(f"Uživatel zadal měsíc {mesic}, roční období: Zima")
             elif mesic == 3 or mesic == 4 or mesic == 5:
                 print(Fore.GREEN + "Jaro")
+                utils.log_to_file(f"Uživatel zadal měsíc {mesic}, roční období: Jaro")
             elif mesic == 6 or mesic == 7 or mesic == 8:
                 print(Fore.GREEN + "Léto")
+                utils.log_to_file(f"Uživatel zadal měsíc {mesic}, roční období: Léto")
             elif mesic == 9 or mesic == 10 or mesic == 11:
                 print(Fore.GREEN + "Podzim")
+                utils.log_to_file(f"Uživatel zadal měsíc {mesic}, roční období: Podzim")
             else:
                 print(Fore.RED + "Neplatný měsíc. Zadejte číslo od 1 do 12.")
+                utils.log_to_file(f"Uživatel zadal neplatný měsíc: {mesic}")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání měsíce.")
 
 def vypis_vsech_cisel():
     """
@@ -334,9 +387,11 @@ def vypis_vsech_cisel():
             for cislo in range(zacatek, konec + 1):
                 print(cislo, end=" ")
             print()
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, všechna čísla v rozsahu vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
 
 def vypis_lichych_cisel():
     """
@@ -356,9 +411,11 @@ def vypis_lichych_cisel():
                 if cislo % 2 != 0:
                     print(cislo, end=" ")
             print()
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, lichá čísla v rozsahu vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
 
 def vypis_cisel_sestupne():
     """
@@ -377,9 +434,11 @@ def vypis_cisel_sestupne():
             for cislo in range(zacatek, konec - 1, -1):
                 print(cislo, end=" ")
             print()
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, čísla v sestupném pořadí vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
 
 def vypis_sudych_cisel():
     """
@@ -399,9 +458,11 @@ def vypis_sudych_cisel():
                 if cislo % 2 == 0:
                     print(cislo, end=" ")
             print()
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, sudá čísla v rozsahu vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
 
 def serazeni_rozsahu():
     """
@@ -419,9 +480,12 @@ def serazeni_rozsahu():
             serazeno = sorted(range(zacatek, konec + 1))
             print(Fore.CYAN + "Seřazený rozsah čísel:")
             print(serazeno)
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, seřazený rozsah čísel vypsán.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
+
 
 def vypis_korekce_poradi():
     """
@@ -432,7 +496,7 @@ def vypis_korekce_poradi():
     :vstup zacatek: Počáteční číslo rozsahu.
     :vstup konec: Konec čísla rozsahu.
     """
-    while True:
+while True:
         try:
             zacatek = int(input("Zadejte počáteční číslo: "))
             konec = int(input("Zadejte koncové číslo: "))
@@ -441,9 +505,11 @@ def vypis_korekce_poradi():
             rozsah.sort()
             print(Fore.CYAN + "Čísla s automatickou korekcí pořadí:")
             print(rozsah)
+            utils.log_to_file(f"Uživatel zadal rozsah od {zacatek} do {konec}, čísla s automatickou korekcí pořadí vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání rozsahu čísel.")
 
 def tabulka_nasobeni():
     """
@@ -459,9 +525,11 @@ def tabulka_nasobeni():
             print(Fore.CYAN + f"Násobilka čísla {cislo}:")
             for i in range(1, 11):
                 print(f"{cislo} x {i} = {cislo * i}")
+            utils.log_to_file(f"Uživatel zadal číslo {cislo}, násobilka vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísla pro násobilku.")
 
 def prevod_men():
     """
@@ -488,11 +556,14 @@ def prevod_men():
             if z_mena in menove_kurzy and na_mena in menove_kurzy:
                 prevedena_castka = cislo * (menove_kurzy[na_mena] / menove_kurzy[z_mena])
                 print(Fore.CYAN + f"{cislo} {z_mena} je {prevedena_castka:.2f} {na_mena}.")
+                utils.log_to_file(f"Uživatel zadal částku {cislo}, měnu {z_mena} a cílovou měnu {na_mena}, převedená částka {prevedena_castka:.2f}.")
                 break
             else:
                 print(Fore.RED + "Neplatné měny. Zadejte prosím měny z následujících možností: CZK, EUR, USD.")
+                utils.log_to_file(f"Uživatel zadal neplatné měny: {z_mena} nebo {na_mena}.")
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím platnou částku.")
+            utils.log_to_file("Neplatný vstup při zadávání částky k převodu.")
 
 def hraj_hadej_cislo():
     """
@@ -513,13 +584,17 @@ def hraj_hadej_cislo():
             pokusy += 1
             if hadane_cislo < cislo_k_hadani:
                 print(Fore.RED + "Zadané číslo je příliš malé.")
+                utils.log_to_file(f"Uživatel zadal číslo {hadane_cislo}, které je příliš malé.")
             elif hadane_cislo > cislo_k_hadani:
                 print(Fore.RED + "Zadané číslo je příliš velké.")
+                utils.log_to_file(f"Uživatel zadal číslo {hadane_cislo}, které je příliš velké.")
             else:
                 print(Fore.GREEN + f"Gratulujeme! Uhodli jste číslo {cislo_k_hadani} za {pokusy} pokusů.")
+                utils.log_to_file(f"Uživatel uhodl číslo {cislo_k_hadani} za {pokusy} pokusů.")
                 break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím celé číslo.")
+            utils.log_to_file("Neplatný vstup při zadávání čísla pro hru 'Hádej číslo'.")
 
 def mark_number_in_list():
     """
@@ -540,9 +615,11 @@ def mark_number_in_list():
                     print(Fore.GREEN + f"{number}!")
                 else:
                     print(number)
+            utils.log_to_file(f"Uživatel zadal seznam čísel {numbers} a číslo k označení {target}.")
             break
         except ValueError:
             print(Fore.RED + "Neplatný vstup. Zadejte prosím seznam čísel oddělených mezerou.")
+            utils.log_to_file("Neplatný vstup při zadávání seznamu čísel nebo cílového čísla.")
 
 def table_of_multiplication():
     """
@@ -558,9 +635,11 @@ def table_of_multiplication():
             print(Fore.CYAN + f"Multiplication table of {number}:")
             for i in range(1, 11):
                 print(f"{number} x {i} = {number * i}")
+            utils.log_to_file(f"Uživatel zadal číslo {number}, násobilka vypsána.")
             break
         except ValueError:
             print(Fore.RED + "Invalid input. Please enter an integer.")
+            utils.log_to_file("Neplatný vstup při zadávání čísla pro násobilku.")
 
 def zpracuj_prikaz(volba):
     prikazy = {
@@ -587,6 +666,7 @@ def zpracuj_prikaz(volba):
         "21": prevod_men,
         "22": generuj_nahodne_cislo,
         "23": hraj_hadej_cislo,
+        "25": utils.read_from_file,
         "24": exit
     }
 
