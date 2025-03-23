@@ -15,6 +15,14 @@
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/python/web_dev.css">
+
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
   <script>
@@ -99,229 +107,185 @@
     </div>
 
     <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
-      <h1 class="h2 text-primary mb-4">Úvodní lekce</h1>
-      <p class="lead">V této lekci si ukážeme, v jakém vývojovém prostředí (IDE) budeme pracovat a co všechno k tomu
-        budete potřebovat. Na začátku si také ověříme vaše dosavadní znalosti programování.</p>
-      <p class="lead">Nejprve začneme krátkým dotazníkem, který nám pomůže zjistit vaši úroveň. Pokud jste úplní
-        začátečníci, žádný problém! Postupně vás provedeme základy programování a ukážeme vám, jak na to.</p>
-      <a href="testiky/test_znalostí.html" class="btn btn-warning">Vyplnit dotazník</a>
+      <h1 class="h2 text-primary mb-4">Opakovací programovací lekce</h1>
+      <p class="lead">
+        V této lekci si zopakujeme základy programování a vytvoříme si jednoduchého asistenta, který bude zpracovávat
+        naše příkazy. Pomocí něj si procvičíme základní operace s čísly, podmínky a cykly. Také se podíváme na práci s
+        textem a výstupem na obrazovku. Zopakojeme si praci se soubory. A ukážeme si jak správně dělit program do modulů
+        a funkci.
+      </p>
     </section>
 
 
-    <h2>Low-AI assistent</h2>
-    <p>
-      Pojdme se vrhnout do světa AI a vytvořme si vlastního asistenta. V této lekci si ukážeme, jak vytvořit si
-      vlastního asistenta, který umět zpracovávat naše příkazy.
-      Aplikace bude tvořena nekonečným cyklem, a bude reagovat na naše příkazy. Při stratu vypíšeme jednoduché menu a
-      budeme čekat na příkazy.
-      Jako prvni bude že náš asistent bude schopen vypsat na obrazovku text "Hello, I am your AI assistent. How can I
-      help you?"
-    </p>
+    <div class="container-assistent">
+      <h2>Low-AI Asistent</h2>
+      <div class="section-assistent">
+        <p>
+          Vítejte ve světě AI! Vytvoříme si jednoduchého asistenta, který bude zpracovávat naše příkazy.
+          Aplikace bude obsahovat nekonečný cyklus, ve kterém bude reagovat na zadané příkazy.
+          Při startu zobrazíme menu a počkáme na vstup uživatele.
+        </p>
+      </div>
 
-    <ul>
-      <li>
-        <h3>Příkaz č.1</h3>
-        <p>
-          Uživatel zadá číslo. Zkontrolujte, zda je sudé nebo liché. Pokud je číslo sudé, vypíše se číslo a text „Sudé
-          číslo“. Pokud je číslo liché, vypište číslo a text „Liché číslo“.
-        </p>
-        <p>
-          todo ukazka jak to
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.2</h3>
-        <p>
-          Uživatel zadá číslo. Zkontrolujte, zda je násobkem čísla 7. Pokud ano, vypište číslo a text „Vaše číslo je
-          násobkem čísla 7“. Pokud tomu tak není, vypíše číslo a text „Vaše číslo není násobkem 7“.
-        </p>
-        <p>
-          todo ukazka jak to
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.3</h3>
-        <p>
-          Uživatel zadá dvě čísla. Najděte maximum dvou čísel a vypište je.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.4</h3>
-        <p>
-          Uživatel zadá dvě čísla. Najděte minimum dvou čísel a vypište je.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.5</h3>
-        <p>
-          Uživatel zadá dvě čísla. Na základě volby uživatele vypište výsledek součtu, rozdílu, součinu těchto čísel
-          nebo jejich aritmetický průměr.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.6</h3>
-        <p>
-          Uživatel zadá čas v sekundách od začátku dne. Na základě uživatelovy volby vypočítejte, kolik hodin, minut a
-          sekund zbývá do půlnoci.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.7</h3>
-        <p>
-          Uživatel zadá průměr kruhu. Na základě volby uživatele vypočítejte plochu nebo obvod kruhu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.8</h3>
-        <p>
-          Uživatel zadá cenu jedné herní konzole, její množství a slevu. Na základě volby uživatele vypočítejte celkovou
-          částku objednávky nebo cenu jedné herní konzole včetně slevy.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.9</h3>
-        Uživatel zadá velikost souboru v gigabajtech a šířku pásma v bitech za sekundu. Na základě volby uživatele
-        vypočítejte, kolik hodin nebo minut nebo sekund bude trvat stažení souboru.
-      </li>
-      <li>
-        <h3>Příkaz č.10</h3>
-        <p>
-          Uživatel zadá hodinu (od 0 do 23). Pokud je přijatá hodnota v rozmezí od 0 do 6, vypište „Dobrou noc“; pokud
-          od 6 do 13, vypište „Dobré ráno“; pokud od 13 do 17, vypište „Dobrý den“; pokud od 17 do 0, vypište „Dobrý
-          večer“. Horní hranice rozsahu se nezapočítává. Například je-li zadáno 6, patří 6 do rozsahu od 6 do 13.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.11</h3>
-        <p>
-          Uživatel zadá šestimístné číslo. Napište program, který určí, zda je toto číslo šťastné. (Šťastné číslo je
-          šestimístné číslo, jehož součet prvních tří číslic je roven součtu posledních tří číslic.)
-        </p>
-        <p>
-          Například 123321 je šťastné číslo, protože 1+2+3 = 3+2+1.
-        </p>
-        <p>
-          Ale 378423 není šťastné číslo, protože 3+7+8 != 4+2+3.
-        </p>
-        <p>
-          Pokud uživatel zadal jiné než šestimístné číslo, zobrazte chybovou zprávu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.12</h3>
-        <p>
-          Uživatel zadá šestimístné číslo. Vyměňte první a šestou číslici, stejně jako druhou a pátou.
-        </p>
-        <p>
-          Například z čísla 723895 by se mělo stát 593827.
-        </p>
-        <p>
-          Pokud uživatel zadal jiné než šestimístné číslo, zobrazte chybovou zprávu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.13</h3>
-        <p>
-          Uživatel zadá číslo měsíce (od 1 do 12). Na základě zadaného čísla program zobrazí jednu z následujících
-          možností: Zima, pokud je číslo 1, 2 nebo 12, Jaro, pokud je číslo v rozmezí 3 až 5, Léto, pokud je číslo 6 až
-          8, Podzim, pokud je číslo 9 až 11.
-        </p>
-        <p>
-          Pokud je číslo mimo rozsah, zobrazí chybové hlášení.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.14</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.15</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna lichá čísla v zadaném rozsahu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.16</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.17</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna sudá čísla v zadaném rozsahu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.18</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu v sestupném pořadí.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.19</h3>
-        <p>
-          Uživatel zadá dvě čísla. Vypište všechna lichá čísla v zadaném rozsahu. Pokud jsou koncový a počáteční bod
-          rozsahu nesprávné, normalizujte je. Řekněme, že uživatel zadal 33 a 13, normalizace přiřadí 13 na začátek a 33
-          na konec rozsahu.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.20</h3>
-        <p>
-          Vytiskněte tabulku násobení pro uživatelem zadané číslo. Pokud uživatel zadal číslo 7, měl by být výstup
-          následující.
-        </p>
+      <div class="libraries">
+        <h3>Použité knihovny</h3>
+        <p>Aplikace využívá následující Python knihovny:</p>
         <ul>
-          <li>
-            7 * 1 = 7
-          </li>
-          <li>
-            7 * 2 = 14
-          </li>
-          <li>
-            7 * 3 = 21
-          </li>
+          <li><code>colorama</code> – Barevné výstupy v konzoli.</li>
+          <li><code>os</code> – Práce se souborovým systémem a prostředím.</li>
+          <li><code>random</code> – Generování náhodných čísel.</li>
+          <li><code>time</code> – Práce s časem a měření výkonu.</li>
+          <li><code>math</code> – Matematické operace.</li>
         </ul>
-      </li>
-      <li>
-        <h3>Příkaz č.21</h3>
-        <p>
-          Napište program pro převod měn. Realizujte dialog s uživatelem prostřednictvím nabídky.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.22</h3>
-        <p>
-          Vypracujte hru Hádej číslo. Program vybere číslo v rozsahu od 1 do 500. V tomto rozsahu je možné hádat čísla.
-          Uživatel se jej pokusí uhodnout. Po každém pokusu program napoví, zda je číslo větší nebo menší než uhodnuté
-          číslo. Nakonec program zobrazí statistiku: kolik pokusů bylo potřeba k uhodnutí čísla, jak dlouho to trvalo.
-          Zajistěte ukončení zadáním 0, pokud uživatele hádání čísla přestane bavit.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.23</h3>
-        <p>
-          Uživatel zadá počáteční a koncový bod rozsahu a číslo. Pokud číslo není v rozsahu, program požádá uživatele,
-          aby číslo zadal znovu, a tak dále, dokud uživatel nezadá číslo správně. Program zobrazí všechna čísla v
-          rozsahu a zvýrazní číslo vykřičníkem. Například: 1 2 3 !4! 5 6 7.
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.24</h3>
-        <p>
 
-        </p>
-      </li>
-      <li>
-        <h3>Příkaz č.25</h3>
-        <p>
+        <h4>🧹 Mazání konzole</h4>
+        <p>V programu můžeme mazat konzoli pomocí knihovny <code>os</code>:</p>
+        <pre><code class="language-python">
+    import os
+    
+    def clear_console():
+        os.system('cls' if os.name == 'nt' else 'clear')
+    
+    clear_console()  # Vyčistí konzoli
+        </code></pre>
+        <p>🔹 Tento kód funguje pro Windows (<code>cls</code>) i Linux/macOS (<code>clear</code>).</p>
+      </div>
 
-        </p>
-      </li>
-    </ul>
+      <div class="section-assistent">
+        <h3>Úvodní Příkaz</h3>
+        <div class="command">
+          <p>
+            První úkol asistenta je zobrazit na obrazovce text:<br>
+            <b>"Hello, I am your AI assistant. How can I help you?"</b>
+          </p>
+        </div>
+      </div>
+
+      <div class="section-assistent">
+        <h3>Seznam příkazů</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 1 - Sudé nebo liché číslo</h3>
+              <p>Uživatel zadá číslo a program určí, zda je sudé nebo liché.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 2 - Násobek čísla 7</h3>
+              <p>Program zjistí, zda je zadané číslo násobkem 7.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 3-5 - Operace s čísly</h3>
+              <p>Najdi maximum, minimum nebo proveď základní matematické operace.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 6 - Čas do půlnoci</h3>
+              <p>Uživatel zadá čas v sekundách a program spočítá, kolik času zbývá do půlnoci.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 7 - Výpočty pro kruh</h3>
+              <p>Uživatel zadá průměr kruhu a program vypočítá jeho obvod nebo plochu.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 8 - Výpočet ceny</h3>
+              <p>Program vypočítá cenu objednávky podle množství a slevy.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 9 - Doba stahování</h3>
+              <p>Program spočítá, jak dlouho bude trvat stažení souboru.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 10 - Časové pozdravy</h3>
+              <p>Program podle zadané hodiny zobrazí pozdrav (Dobré ráno, Dobrý den...).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 11-12 - Práce s čísly</h3>
+              <p>Kontrola šťastného čísla a výměna číslic v šestimístném čísle.</p>
+              <ul>
+                <li>Příkaz 11: Zjistí, zda je číslo "šťastné".</li>
+                <li>Příkaz 12: Prohodí cifry v čísle podle pravidel.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 13 - Roční období</h3>
+              <p>Program určí roční období podle čísla měsíce.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 14-19 - Práce s rozsahy čísel</h3>
+              <p>Vypište čísla v rozsahu podle různých kritérií (sudá, lichá, sestupně...).</p>
+              <ul>
+                <li>Příkaz 14: Výpis všech čísel v rozsahu.</li>
+                <li>Příkaz 15: Výpis lichých čísel.</li>
+                <li>Příkaz 16: Výpis všech čísel v sestupném pořadí.</li>
+                <li>Příkaz 17: Výpis sudých čísel.</li>
+                <li>Příkaz 18: Seřazení rozsahu.</li>
+                <li>Příkaz 19: Výpis čísel s automatickou korekcí pořadí.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 20 - Tabulka násobení</h3>
+              <p>Program vypíše násobilku pro zadané číslo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 21 - Převod měn</h3>
+              <p>Umožní převod mezi různými měnami.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="command">
+              <h3>Příkaz 22 - Hádej číslo</h3>
+              <p>Hra, ve které uživatel hádá náhodně vygenerované číslo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="command">
+          <h3>Příkaz 23 - Zvýrazněné číslo v rozsahu</h3>
+          <p>Vypíše čísla v rozsahu a označí konkrétní číslo vykřičníkem.</p>
+        </div>
+      </div>
+    </div>
 
 
 
