@@ -104,18 +104,100 @@
     </div>
 
     <div class="lesson-section">
-      <h1 class="lesson-title">Úvod, IDE, Opakování, cyklus</h1>
+      <h1 class="lesson-title">Cookie clicker, REST API</h1>
       <p class="lesson-text">
-        V této lekci si zopakujeme základy programování v Pythonu a naučíme se, jak vytvořit základní menu. Předvedeme
-        si také cykly <code>while</code> a <code>for</code>. A nastavím si konveci pro psaní kódu.
-        Pro vytváření našich projeků budeme používat IDE neboli vývojové prostředí od společnosti
-        <strong>Microsoft</strong> s názvem
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>.
-        Návod na stažení a zprovozněni naleznete <a href="/lessons/python_beginner/vsc.html">zde</a>.
+        V této lekci si vysvětlíme jak vytvořit jednoduchou hru, která se jmenuje Cookie clicker. Hra je jednoduchá,
+        klikáte na tlačítko a získáváte body. Body se ukládají do databáze a můžete si je zobrazit na stránce. Hra je
+        vytvořena v Thunkable a databáze je vytvořena v Google Sheets. Také si vysvětlíme co je to REST API a jak ho
+        použít.      
       </p>
     </div>
 
-  <p>to be done</p>
+
+<div class="container mt-5">
+        <h1 class="text-center mb-4">Co je API, REST a JSON?</h1>
+
+        <!-- Sekce 1: Co je API? -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Co je API?</h2>
+            </div>
+            <div class="card-body">
+                <p>API (Application Programming Interface) je rozhraní, které umožňuje komunikaci mezi různými softwarem. Představte si, že sedíte u stolu v restauraci s nabídkou, ze které si můžete objednat. Kuchyně je „software“, který připraví vaši objednávku. Chybí však kritické spojení pro komunikaci vaší objednávky do kuchyně a doručení vašeho jídla zpět na váš stůl. Zde přichází na řadu číšník, který je vlastně API.</p>
+                <p><strong>Příklad:</strong> Představte si, že si rezervujete let online. Při zadání informací o letu vlastně komunikujete s API letecké společnosti, které vám vrací dostupné lety a ceny.</p>
+                <img src="/img/thuncable/lekce5/api.png" class="img-fluid mb-3" alt="API Example">
+            </div>
+        </div>
+
+        <!-- Sekce 2: Co je REST? -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Co je REST?</h2>
+            </div>
+            <div class="card-body">
+                <p>REST (Representational State Transfer) je soubor instrukcí, jak vytvořit efektivní, rychlá a spolehlivá webová API. RESTful API je přístupné prostřednictvím URL, používá HTTP metody a přenáší data ve formátu JSON.</p>
+                <p><strong>Příklad:</strong> RESTful API se používá v mnoha aplikacích pro získávání dat, jako jsou například informace o počasí nebo letecké spoje. </p>
+                <img src="/img/thuncable/lekce5/rest-api.png" class="img-fluid mb-3" alt="REST Example">
+            </div>
+        </div>
+
+        <!-- Sekce 3: Co je JSON? -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Co je JSON?</h2>
+            </div>
+            <div class="card-body">
+                <p>JSON (JavaScript Object Notation) je formát pro výměnu dat. Používá se pro přenos dat mezi klientem a serverem. JSON popisuje objekty, abstraktní entity a jejich vztahy. Formát vypadá takto:</p>
+                <pre>
+{
+    "first_key": "first_value",
+    "second_key": "second_value"
+}
+                </pre>
+                <p>JSON může obsahovat i vnořené objekty:</p>
+                <pre>
+{
+    "emp_id": 120412,
+    "name": "Smith Jones",
+    "address": {
+        "street": "Washington 24th Street",
+        "city": "New York"
+    }
+}
+                </pre>
+            </div>
+        </div>
+
+        <!-- Sekce 4: HTTP Požadavky -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>HTTP Požadavky</h2>
+            </div>
+            <div class="card-body">
+                <p>HTTP (Hypertext Transfer Protocol) je protokol pro komunikaci mezi systémy na webu. Zde jsou základní HTTP metody:</p>
+                <ul>
+                    <li><strong>GET</strong> – Načítá data ze serveru.</li>
+                    <li><strong>POST</strong> – Odesílá data na server.</li>
+                    <li><strong>PUT</strong> – Vytváří nebo nahrazuje zdroj.</li>
+                    <li><strong>DELETE</strong> – Odstraní zadaný prostředek.</li>
+                </ul>
+                <img src="/img/thuncable/lekce5/http-methods.png" class="img-fluid mb-3" alt="HTTP Methods">
+            </div>
+        </div>
+
+        <!-- Sekce 5: Shrnutí -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Jak využíváme API, REST a JSON?</h2>
+            </div>
+            <div class="card-body">
+                <p>V praxi API, REST a JSON používáme pro získání a odesílání dat mezi aplikacemi a servery. Můžeme například použít API pro zobrazení informací o počasí, letech, nebo dokonce pro ovládání jiných zařízení. Díky těmto technologiím můžeme aplikace rychle propojit s databázemi a jinými online službami.</p>
+                <img src="/img/thuncable/lekce5/mainly-rest-api.png" class="img-fluid mb-3" alt="API Use Case">
+            </div>
+        </div>
+
+    </div>
+  
 
 
 
