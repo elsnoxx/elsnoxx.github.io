@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-adsense-account" content="ca-pub-7668654631963540">
+  <meta name="description" content="Hlavní stránka lekce JavaScript">
+  <title>Python Web Dev</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/python/web_dev.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
+
+  <link rel="icon" href="/img/coding.png">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html"><img src="/img/learning.png" alt="logo home button" loading="lazy"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/youtube/youtube.html">Youtube</a></li>
+              <li><a class="dropdown-item" href="/lessons/prezentace/prezentace.html">Art of Presentation</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="container mt-5 pt-5">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_web/python_web.html';"
+              class="btn btn-primary">Předchozí lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce2.html';" class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h1 class="h2 text-primary mb-4">Úvodní lekce</h1>
+      <p class="lead">V této lekci si ukážeme, v jakém vývojovém prostředí (IDE) budeme pracovat a co všechno k tomu
+        budete potřebovat. Na začátku si také ověříme vaše dosavadní znalosti programování.</p>
+      <p class="lead">Nejprve začneme krátkým dotazníkem, který nám pomůže zjistit vaši úroveň. Pokud jste úplní
+        začátečníci, žádný problém! Postupně vás provedeme základy programování a ukážeme vám, jak na to.</p>
+      <a href="testiky/test_znalostí.html" class="btn btn-warning">Vyplnit dotazník</a>
+    </section>
+
+
+    <h2>Low-AI assistent</h2>
+    <p>
+      Pojdme se vrhnout do světa AI a vytvořme si vlastního asistenta. V této lekci si ukážeme, jak vytvořit si
+      vlastního asistenta, který umět zpracovávat naše příkazy.
+      Aplikace bude tvořena nekonečným cyklem, a bude reagovat na naše příkazy. Při stratu vypíšeme jednoduché menu a
+      budeme čekat na příkazy.
+      Jako prvni bude že náš asistent bude schopen vypsat na obrazovku text "Hello, I am your AI assistent. How can I
+      help you?"
+    </p>
+
+    <ul>
+      <li>
+        <h3>Příkaz č.1</h3>
+        <p>
+          Uživatel zadá číslo. Zkontrolujte, zda je sudé nebo liché. Pokud je číslo sudé, vypíše se číslo a text „Sudé
+          číslo“. Pokud je číslo liché, vypište číslo a text „Liché číslo“.
+        </p>
+        <p>
+          todo ukazka jak to
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.2</h3>
+        <p>
+          Uživatel zadá číslo. Zkontrolujte, zda je násobkem čísla 7. Pokud ano, vypište číslo a text „Vaše číslo je
+          násobkem čísla 7“. Pokud tomu tak není, vypíše číslo a text „Vaše číslo není násobkem 7“.
+        </p>
+        <p>
+          todo ukazka jak to
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.3</h3>
+        <p>
+          Uživatel zadá dvě čísla. Najděte maximum dvou čísel a vypište je.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.4</h3>
+        <p>
+          Uživatel zadá dvě čísla. Najděte minimum dvou čísel a vypište je.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.5</h3>
+        <p>
+          Uživatel zadá dvě čísla. Na základě volby uživatele vypište výsledek součtu, rozdílu, součinu těchto čísel
+          nebo jejich aritmetický průměr.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.6</h3>
+        <p>
+          Uživatel zadá čas v sekundách od začátku dne. Na základě uživatelovy volby vypočítejte, kolik hodin, minut a
+          sekund zbývá do půlnoci.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.7</h3>
+        <p>
+          Uživatel zadá průměr kruhu. Na základě volby uživatele vypočítejte plochu nebo obvod kruhu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.8</h3>
+        <p>
+          Uživatel zadá cenu jedné herní konzole, její množství a slevu. Na základě volby uživatele vypočítejte celkovou
+          částku objednávky nebo cenu jedné herní konzole včetně slevy.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.9</h3>
+        Uživatel zadá velikost souboru v gigabajtech a šířku pásma v bitech za sekundu. Na základě volby uživatele
+        vypočítejte, kolik hodin nebo minut nebo sekund bude trvat stažení souboru.
+      </li>
+      <li>
+        <h3>Příkaz č.10</h3>
+        <p>
+          Uživatel zadá hodinu (od 0 do 23). Pokud je přijatá hodnota v rozmezí od 0 do 6, vypište „Dobrou noc“; pokud
+          od 6 do 13, vypište „Dobré ráno“; pokud od 13 do 17, vypište „Dobrý den“; pokud od 17 do 0, vypište „Dobrý
+          večer“. Horní hranice rozsahu se nezapočítává. Například je-li zadáno 6, patří 6 do rozsahu od 6 do 13.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.11</h3>
+        <p>
+          Uživatel zadá šestimístné číslo. Napište program, který určí, zda je toto číslo šťastné. (Šťastné číslo je
+          šestimístné číslo, jehož součet prvních tří číslic je roven součtu posledních tří číslic.)
+        </p>
+        <p>
+          Například 123321 je šťastné číslo, protože 1+2+3 = 3+2+1.
+        </p>
+        <p>
+          Ale 378423 není šťastné číslo, protože 3+7+8 != 4+2+3.
+        </p>
+        <p>
+          Pokud uživatel zadal jiné než šestimístné číslo, zobrazte chybovou zprávu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.12</h3>
+        <p>
+          Uživatel zadá šestimístné číslo. Vyměňte první a šestou číslici, stejně jako druhou a pátou.
+        </p>
+        <p>
+          Například z čísla 723895 by se mělo stát 593827.
+        </p>
+        <p>
+          Pokud uživatel zadal jiné než šestimístné číslo, zobrazte chybovou zprávu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.13</h3>
+        <p>
+          Uživatel zadá číslo měsíce (od 1 do 12). Na základě zadaného čísla program zobrazí jednu z následujících
+          možností: Zima, pokud je číslo 1, 2 nebo 12, Jaro, pokud je číslo v rozmezí 3 až 5, Léto, pokud je číslo 6 až
+          8, Podzim, pokud je číslo 9 až 11.
+        </p>
+        <p>
+          Pokud je číslo mimo rozsah, zobrazí chybové hlášení.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.14</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.15</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna lichá čísla v zadaném rozsahu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.16</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.17</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna sudá čísla v zadaném rozsahu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.18</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna čísla v zadaném rozsahu v sestupném pořadí.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.19</h3>
+        <p>
+          Uživatel zadá dvě čísla. Vypište všechna lichá čísla v zadaném rozsahu. Pokud jsou koncový a počáteční bod
+          rozsahu nesprávné, normalizujte je. Řekněme, že uživatel zadal 33 a 13, normalizace přiřadí 13 na začátek a 33
+          na konec rozsahu.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.20</h3>
+        <p>
+          Vytiskněte tabulku násobení pro uživatelem zadané číslo. Pokud uživatel zadal číslo 7, měl by být výstup
+          následující.
+        </p>
+        <ul>
+          <li>
+            7 * 1 = 7
+          </li>
+          <li>
+            7 * 2 = 14
+          </li>
+          <li>
+            7 * 3 = 21
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>Příkaz č.21</h3>
+        <p>
+          Napište program pro převod měn. Realizujte dialog s uživatelem prostřednictvím nabídky.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.22</h3>
+        <p>
+          Vypracujte hru Hádej číslo. Program vybere číslo v rozsahu od 1 do 500. V tomto rozsahu je možné hádat čísla.
+          Uživatel se jej pokusí uhodnout. Po každém pokusu program napoví, zda je číslo větší nebo menší než uhodnuté
+          číslo. Nakonec program zobrazí statistiku: kolik pokusů bylo potřeba k uhodnutí čísla, jak dlouho to trvalo.
+          Zajistěte ukončení zadáním 0, pokud uživatele hádání čísla přestane bavit.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.23</h3>
+        <p>
+          Uživatel zadá počáteční a koncový bod rozsahu a číslo. Pokud číslo není v rozsahu, program požádá uživatele,
+          aby číslo zadal znovu, a tak dále, dokud uživatel nezadá číslo správně. Program zobrazí všechna čísla v
+          rozsahu a zvýrazní číslo vykřičníkem. Například: 1 2 3 !4! 5 6 7.
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.24</h3>
+        <p>
+
+        </p>
+      </li>
+      <li>
+        <h3>Příkaz č.25</h3>
+        <p>
+
+        </p>
+      </li>
+    </ul>
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web_lekce2.html';">Následující lekce</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
+      © <span id="currentYear"></span> Copyright:
+      <a class="text-reset fw-bold" href="/contact.html">Richard Ficek</a>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
