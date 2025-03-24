@@ -666,7 +666,7 @@ def zpracuj_prikaz(volba):
         "21": prevod_men,
         "22": generuj_nahodne_cislo,
         "23": hraj_hadej_cislo,
-        "25": utils.read_from_file,
+        "24": utils.read_from_file,
         "24": exit
     }
 
