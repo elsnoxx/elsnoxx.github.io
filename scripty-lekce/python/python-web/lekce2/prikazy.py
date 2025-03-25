@@ -1,6 +1,5 @@
 import random
 import math
-import time
 import utils
 from colorama import Fore
 
@@ -496,7 +495,7 @@ def vypis_korekce_poradi():
     :vstup zacatek: Počáteční číslo rozsahu.
     :vstup konec: Konec čísla rozsahu.
     """
-while True:
+    while True:
         try:
             zacatek = int(input("Zadejte počáteční číslo: "))
             konec = int(input("Zadejte koncové číslo: "))
@@ -641,36 +640,3 @@ def table_of_multiplication():
             print(Fore.RED + "Invalid input. Please enter an integer.")
             utils.log_to_file("Neplatný vstup při zadávání čísla pro násobilku.")
 
-def zpracuj_prikaz(volba):
-    prikazy = {
-        "1": sudost_lichost,
-        "2": nasobek_sedmi,
-        "3": max_dvou_cisel,
-        "4": min_dvou_cisel,
-        "5": aritmeticke_operace,
-        "6": prevod_sekund,
-        "7": obvod_obsah_kruhu,
-        "8": generuj_nahodne_cislo,
-        "9": vypocet_ceny,
-        "10": doba_stahovani,
-        "11": casove_pozdravy,
-        "12": stastne_cislo,
-        "13": prohozeni_cislic,
-        "14": rocni_obdobi,
-        "15": vypis_vsech_cisel,
-        "16": vypis_lichych_cisel,
-        "17": vypis_cisel_sestupne,
-        "18": vypis_sudych_cisel,
-        "19": serazeni_rozsahu,
-        "20": vypis_korekce_poradi,
-        "21": prevod_men,
-        "22": generuj_nahodne_cislo,
-        "23": hraj_hadej_cislo,
-        "24": utils.read_from_file,
-        "24": exit
-    }
-
-    if volba in prikazy:
-        prikazy[volba]()
-    else:
-        print(Fore.RED + "Neplatná volba, zkuste to znovu.")

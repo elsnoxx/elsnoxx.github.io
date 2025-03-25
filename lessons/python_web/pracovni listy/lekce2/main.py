@@ -20,6 +20,9 @@ def main():
         # Uživatelský vstup pro výběr příkazu
         volba = input(Fore.YELLOW + "Zadejte číslo příkazu: ")
 
+        # Zaloguje uživatelský vstup
+        utils.log_to_file(f"Uživatel zadal příkaz: {volba}")
+        
         # Vyčistí konzoli po zadání volby
         utils.clear_console()
 

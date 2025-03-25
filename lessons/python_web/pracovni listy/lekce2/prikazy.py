@@ -1,6 +1,5 @@
 import random
 import math
-import time
 from colorama import Fore
 
 def sudost_lichost():

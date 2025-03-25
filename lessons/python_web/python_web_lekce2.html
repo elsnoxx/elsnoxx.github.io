@@ -130,13 +130,26 @@
       <div class="libraries">
         <h3>Použité knihovny</h3>
         <p>Aplikace využívá následující Python knihovny:</p>
-        <ul>
-          <li><code>colorama</code> – Barevné výstupy v konzoli.</li>
-          <li><code>os</code> – Práce se souborovým systémem a prostředím.</li>
-          <li><code>random</code> – Generování náhodných čísel.</li>
-          <li><code>time</code> – Práce s časem a měření výkonu.</li>
-          <li><code>math</code> – Matematické operace.</li>
-        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><code>colorama</code> – Barevné výstupy v konzoli.</li>
+              <li><code>os</code> – Práce se souborovým systémem a prostředím.</li>
+              <li><code>random</code> – Generování náhodných čísel.</li>
+              <li><code>time</code> – Práce s časem a měření výkonu.</li>
+              <li><code>math</code> – Matematické operace.</li>
+              <li><code>sys</code> – pro ukončení programu (<code>sys.exit()</code>).</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p>
+              Pokud máte problém s rozjetím programu, budete muset nainstalovat knihovnu <code>colorama</code>, 
+              která není ve standardním balíčku Pythonu. To můžete provést pomocí následujícího příkazu:
+          </p>
+          <pre><code class="language-python">pip install colorama</code></pre>
+          </div>
+        </div>
+        
 
         <h4>🧹 Mazání konzole</h4>
         <p>V programu můžeme mazat konzoli pomocí knihovny <code>os</code>:</p>

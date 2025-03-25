@@ -16,8 +16,7 @@ def main():
         utils.log_to_file(f"Uživatel zadal příkaz: {volba}")
         utils.clear_console()
         menu.zobraz_menu(volba)
-        
-        prikazy.zpracuj_prikaz(volba)
+        utils.zpracuj_prikaz(volba)
         
         
         
