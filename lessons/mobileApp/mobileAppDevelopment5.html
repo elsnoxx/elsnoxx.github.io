@@ -331,7 +331,7 @@
     <section class="bg-light p-4 rounded mb-4 odstavec">
       <h2 class="text-center mt-4">Aplikace pro zobrazení počasí</h2>
       <p>
-        Pojďme si vytvořit aplikaci, která s využitím Weather API. 
+        Pojďme si vytvořit aplikaci, která s využitím Weather API.
       </p>
 
       <div class="row align-items-center mb-4">
@@ -365,13 +365,29 @@
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <p>
-
+              Přidej tlačítko s názvem getWeather, které bude sloužit k vyvolání API požadavku.
             </p>
             <p>
-              https://api.weatherapi.com/v1/current.json
-            </p>
-            <p>
+              Vytvoř nový Web API komponent (Web_API1). Nakonfiguruj jeho Get metodu tak, aby volala URL API pro získání
+              aktuálního počasí. Nastav požadovanou URL:
+              <br>
               https://api.weatherapi.com/v1/current.json?key=939716ed2d204c008ef151039252603&q=Prague
+              <br>
+              Ujisti se, že odpověď bude ve formátu JSON.
+            </p>
+
+            <p>
+              V bloku when getWeather Click zavolej Web_API1's Get, aby odeslalo požadavek.
+
+              Nastav, že pokud odpověď dorazí (response), tak ji uložíme do proměnné.
+            </p>
+            <p>
+              Pomocí bloku get object from JSON response extrahuj objekt.
+
+              Poté získáme hodnotu current.temp_c, která obsahuje teplotu ve stupních Celsia.
+            </p>
+            <p>
+              Nastav textový prvek result tak, aby zobrazoval teplotu spolu s jednotkou C.
             </p>
           </div>
         </div>

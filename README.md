@@ -163,6 +163,7 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - lekce 5
         - prace s json soubory, a jejich využiti pri tvorbu webove aplikace
         - prace s json souborem a http odpovedmi pomoci request knihovny
+        - ukazka s reques popmoci weather api https://api.weatherapi.com/v1/current.json?key=939716ed2d204c008ef151039252603&q=Prague
         - vysvetleni protokolu http, pak jeho typu (get, post, update, delete)
     - lekce 6
         - navrhove vzory pri tvorbe webu MVC atd.
