@@ -106,41 +106,61 @@
       <h1 class="lesson-title">Cookie clicker, REST API</h1>
       <p class="lesson-text">
         V této lekci si vysvětlíme jak vytvořit jednoduchou hru, která se jmenuje Cookie clicker. Hra je jednoduchá,
-        klikáte na tlačítko a získáváte body. Body se ukládají do databáze a můžete si je zobrazit na stránce. Hra je
-        vytvořena v Thunkable a databáze je vytvořena v Google Sheets. Také si vysvětlíme co je to REST API a jak ho
+        klikáte na tlačítko a získáváte body. Také si vysvětlíme co je to REST API a jak ho
         použít.
       </p>
     </div>
 
     <section class="bg-light p-4 rounded mb-4 odstavec">
-      <h2 class="text-center mt-4">Změna barvy pozadí</h2>
+      <h2 class="text-center mt-4">Vytvoření Cookie Clickeru v Thunkable</h2>
       <p>
-        Pojďme se teď pustit do nového projektu. Půjde o
-        aplikaci, která bude měnit pozadí. Bude to velmi jednoduchá aplikace na procvičení konstrukci podmínek.
-        Při změně pozadí musíte taky myslet na to, aby se barva všech textů změnila a byla viditelná.
+        Vytvoříme jednoduchou hru <strong>Cookie Clicker</strong> v Thunkable, kde bude hráč sbírat body klikáním na
+        obrázek sušenky.
+        Tento projekt slouží k procvičení <strong>proměnných, událostí (when click) a podmínek (if...else)</strong>.
       </p>
 
+      <h3>Komponenty aplikace</h3>
       <div class="row align-items-center mb-4">
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
-            <h3>Komponenty aplikace na čtení kódu</h3>
-
+            <h3>Plocha 1 - main screen</h3>
             <ul>
-              <li>
-                <strong>Label:</strong> zobrazí název aplikace.
-              </li>
-              <li>
-                <strong>Button:</strong> tlačítko, kterým se bude měnit pozadí aplikace.
-              </li>
-              <li>
-                <strong>Label:</strong> informace o autorovi aplikace.
-              </li>
+              <li><strong>Label:</strong> zobrazí aktuální počet bodů.</li>
+              <li><strong>Label:</strong> zobrazí aktulání počet CPS (Cookie per second)</li>
+              <li><strong>Button (btnCookie):</strong> obrázek sušenky, který hráč kliká pro získání bodů.</li>
             </ul>
           </div>
         </div>
         <div class="col-md-4 text-center">
-          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/ifelse-model.png"
-            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce5/screen1.png"
+            alt="Vytváření Cookie Clickeru v Thunkable" loading="lazy">
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="https://www.flaticon.com/" class="btn btn-success" style="margin: 10px;">Flaticon for Icons</a>
+          </div>
+          <div class="col-md-6">
+            <a href="/img/thuncable/lekce5/cookie.png" class="btn btn-success" download>Stáhnout pracovní list</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Plocha 2 - upgrades screen</h3>
+            <ul>
+              <li><strong>Label:</strong> zobrazí aktuální počet bodů.</li>
+              <li><strong>Label:</strong> informace o vylepšení auto clickeru</li>
+              <li><strong>Button (btnCookie):</strong> Text bude cena za auto clicker</li>
+              <li><strong>Label:</strong> informace o vylepšení auto pusher</li>
+              <li><strong>Button (btnCookie):</strong> Text bude cena za auto pusher</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce5/screen2.png"
+            alt="Vytváření Cookie Clickeru v Thunkable" loading="lazy">
         </div>
       </div>
 
@@ -150,33 +170,67 @@
         <div class="col-md-8">
           <div class="card p-3 shadow-sm">
             <p>
-              Přidejte proměnnou barvaPozadi, která bude uchovávat aktuální barvu pozadí.
+              Nejprve je nutné vytvořit dvě globální proměnné, které budou sloužit k uchování důležitých hodnot ve hře.
+              Proměnná CPS (cookies per second) je nastavena na hodnotu 1, což znamená, že každou sekundu hráč získá
+              jednu sušenku. Druhá proměnná cookies je nastavena na 0, protože hráč na začátku nemá žádné sušenky.
             </p>
             <p>
-              Vložte tlačítko do aplikace, například btnZmenPozadi. Přidejte blok when btnZmenPozadi Click (událost při
-              kliknutí na tlačítko).
+              Když uživatel klikne na tlačítko cookie, spustí se funkce addCookies. Tato funkce zvýší počet sušenek
+              (cookies) o aktuální hodnotu proměnné CPS. Zároveň se aktualizuje text na popisku (Label1), aby hráč viděl
+              aktuální počet sušenek.
             </p>
             <p>
-              Použijte podmínkový blok if...else. Zkontrolujte hodnotu proměnné barvaPozadi.
+              Aby se sušenky přičítaly i automaticky, je využit časovač s názvem CookieTimer. Tento časovač se spustí a
+              v pravidelných intervalech volá funkci addCookies, čímž se sušenky přičítají i bez nutnosti klikání.
             </p>
             <p>
-              Po změně barvy pozadí upravte i barvu textů. Pokud je pozadí tmavé, nastavte texty na bílou. Pokud je
-              pozadí světlé, nastavte texty na černou.
+              Když se otevře Screen1, je potřeba zobrazit aktuální počet sušenek a hodnotu CPS. To je zajištěno
+              nastavením textových popisků ihned po načtení obrazovky. Díky tomu má hráč vždy přehled o svém aktuálním
+              stavu.
             </p>
             <p>
-              Po změně barvy uložte novou hodnotu do barvaPozadi, aby byla správně použita při dalším kliknutí.
+              V aplikaci je také tlačítko Upgrade, které slouží k otevření obrazovky Screen2. Kliknutím na toto tlačítko
+              se hráč přesměruje na druhou obrazovku, kde pravděpodobně bude možné vylepšit hru, například zvýšit
+              hodnotu CPS.
             </p>
           </div>
         </div>
         <div class="col-md-4 text-center">
-          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/ifelse-logic.png"
-            alt="Nastavení skeneru v Thunkable" loading="lazy">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce5/screen1-logic.png"
+            alt="Logika hry Cookie Clicker v Thunkable" loading="lazy">
         </div>
       </div>
-
-      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
-
+      <br><br>
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+              Při spuštění Screen2 se nastaví ceny a základní hodnoty upgradů, jako jsou autoclicker, autopusher, farm a
+              factory. Každý upgrade má svou počáteční cenu a ovlivňuje rychlost získávání sušenek.
+            </p>
+            <p>
+              Po otevření Screen2 se zobrazí aktuální počet sušenek, aby hráč viděl svůj postup
+            </p>
+            <p>
+              Kliknutím na tlačítko autoclicker nebo autopusher se nejprve ověří, zda hráč má dostatek sušenek. Pokud
+              ano, cena upgradu se odečte, zvýší se rychlost generování sušenek (CPS), cena upgradu se zvýší o 20 % a
+              aktualizují se texty tlačítek a počtu sušenek.
+            </p>
+            <p>
+              Kliknutím na tlačítko back se hráč vrátí na Screen1, kde může pokračovat ve sbírání sušenek a využívat
+              zakoupené upgrady.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce5/screen2-logic.png"
+            alt="Logika hry Cookie Clicker v Thunkable" loading="lazy">
+        </div>
+      </div>
+      <br>
+      <h5>Otestujte aplikaci v Thunkable Live na webu i mobilu.</h5>
     </section>
+
 
 
     <div class="container mt-5">
@@ -273,6 +327,63 @@
       </div>
 
     </div>
+
+    <section class="bg-light p-4 rounded mb-4 odstavec">
+      <h2 class="text-center mt-4">Aplikace pro zobrazení počasí</h2>
+      <p>
+        Pojďme si vytvořit aplikaci, která s využitím Weather API. 
+      </p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <h3>Komponenty aplikace na čtení kódu</h3>
+
+            <ul>
+              <li>
+                <strong>Label:</strong> zobrazí název aplikace.
+              </li>
+              <li>
+                <strong>Button:</strong> tlačítko, které zavolá weather API.
+              </li>
+              <li>
+                <strong>Label:</strong> zobrazí výsledek po zavolaní API.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce5/rest-api-model.png"
+            alt="Vytváření nového projektu v Thunkable" loading="lazy">
+        </div>
+        <a href="https://www.weatherapi.com/docs/" class="btn btn-success" style="margin: 10px;">Weather API docs</a>
+      </div>
+
+      <hr>
+
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="card p-3 shadow-sm">
+            <p>
+
+            </p>
+            <p>
+              https://api.weatherapi.com/v1/current.json
+            </p>
+            <p>
+              https://api.weatherapi.com/v1/current.json?key=939716ed2d204c008ef151039252603&q=Prague
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img class="myImg img-fluid rounded shadow" src="/img/thuncable/lekce3/ifelse-logic.png"
+            alt="Nastavení skeneru v Thunkable" loading="lazy">
+        </div>
+      </div>
+
+      <h5>Nyní nám již zbývá aplikaci otestovat jak na webu, tak v mobilu.</h5>
+
+    </section>
 
 
 
