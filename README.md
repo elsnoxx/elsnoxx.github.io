@@ -150,6 +150,8 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         
 - Python web
     - opravit si ten souborproblem s prikazi a utils, menu dela binec
+    - https://www.youtube.com/watch?v=6f-J80vqvew&list=PLQ8x_VWW6Aktg8FNSIKCRYtFg_ZO5oPEG
+    - https://docs.google.com/document/d/141NXWaWjALhCXdlyMyRwZ_oxGvHYxt8a_3OCI2OC110/edit?tab=t.0
     - pro django, flask a fastapi predstavit na projekto TODO aplikace
         - viz url https://github.com/patrickloeber/python-fun/tree/master/webapps
         - upravit ale zdojoveko kody bez db spise pracovat jako s lokanim souborem a ukladanim
