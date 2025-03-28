@@ -217,6 +217,143 @@
       </div>
     </section>
 
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h1 class="h2 text-primary mb-4">Version control Github</h1>
+      <p class="lead">
+        V této lekci si představíme práci s github repozitářem. Github je webová platforma pro správu verzí a
+        spolupráci na kódu. Využívá se pro sledování změn v kódu, řešení problémů a spolupráci s ostatními
+        programátory. My v lekcích budeme používat Github Desktop pro jednoduchou práci s repozitářem.
+        Aplikace nám usnadní práci a umožní nám jednoduše stahovat, nahrávat a spravovat kód bez znalosti složitých
+        příkazů.
+      </p>
+    </section>
+
+    <section class="lesson mb-5 p-4 bg-light rounded shadow">
+      <h2 class="h3 text-primary mb-4">Kdy a na co použít Tuples, Sets, Dictionaries</h2>
+    
+      <h3 class="h4 text-success">Tuples – Neměnné a rychlé sekvence</h3>
+      <p class="lead">
+        <strong>Kdy použít:</strong> Když potřebujete <em>neměnné</em> (immutable) sekvence hodnot. Jsou rychlejší než seznamy a lze je použít jako klíče ve slovnících.
+      </p>
+      <pre><code class="language-python">
+coordinates = (50.07, 14.42)
+user_info = ("Alice", 25, "Programmer")
+
+</code></pre>
+    
+      <h3 class="h4 text-success">Sets – Unikátní hodnoty bez pořadí</h3>
+      <p class="lead">
+        <strong>Kdy použít:</strong> Když potřebujete <em>unikátní prvky</em> a rychlé vyhledávání. Hodí se pro množinové operace jako sjednocení a průnik.
+      </p>
+      <pre><code class="language-python">
+unique_numbers = {1, 2, 3, 4, 5}
+stopwords = {"a", "the", "and", "is"}
+print("the" in stopwords)  # True
+  </code></pre>
+    
+      <h3 class="h4 text-success">Dictionaries – Klíč-hodnota struktura</h3>
+      <p class="lead">
+        <strong>Kdy použít:</strong> Když chcete data <em>párovat klíč-hodnota</em> pro rychlé vyhledávání. Ideální pro ukládání informací a počítání výskytů.
+      </p>
+      <pre><code class="language-python">
+user = {"name": "Alice", "age": 25, "job": "Programmer"}
+word_count = {"apple": 2, "banana": 3, "orange": 1}
+  </code></pre>
+    
+      <h3 class="h4 text-primary">Shrnutí</h3>
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Potřebuji...</th>
+            <th>Co použít</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Neměnné a rychlé uložení více hodnot</td>
+            <td><strong>Tuple</strong></td>
+          </tr>
+          <tr>
+            <td>Unikátní prvky bez pořadí, rychlé vyhledávání</td>
+            <td><strong>Set</strong></td>
+          </tr>
+          <tr>
+            <td>Klíč-hodnota strukturu pro rychlé vyhledávání</td>
+            <td><strong>Dictionary</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="lesson mb-5 p-4 bg-light rounded shadow">
+      <h2 class="h3 text-primary mb-4">Hledání (Search) a třídění (Sort) v Pythonu</h2>
+    
+      <h3 class="h4 text-success">Hledání (Search) v seznamech a slovnících</h3>
+      <p class="lead">
+        Hledání v Pythonu může být prováděno několika způsoby. Základní metody jsou <strong>lineární hledání</strong> (O(n)) a <strong>binární hledání</strong> (O(log n)).
+      </p>
+    
+      <h4 class="h5 text-warning">1. Lineární hledání (Linear Search)</h4>
+      <p>Prohledává seznam prvek po prvku. Vhodné pro malé nebo neuspořádané seznamy.</p>
+      <pre><code>numbers = [3, 7, 2, 9, 4]
+    target = 9
+    if target in numbers:
+        print("Hodnota nalezena!")</code></pre>
+    
+      <h4 class="h5 text-warning">2. Binární hledání (Binary Search)</h4>
+      <p>Funguje pouze na <strong>seřazených seznamech</strong> a je mnohem rychlejší.</p>
+      <pre><code>import bisect
+    numbers = [1, 3, 5, 7, 9]
+    index = bisect.bisect_left(numbers, 5)
+    print(f"Hodnota 5 je na indexu {index}")</code></pre>
+    
+      <h3 class="h4 text-success">Třídění (Sort) v Pythonu</h3>
+      <p class="lead">
+        Python nabízí několik způsobů třídění, od jednoduchého `.sort()` po složitější třídění podle klíčů.
+      </p>
+    
+      <h4 class="h5 text-warning">1. Základní třídění pomocí `sort()` a `sorted()`</h4>
+      <p>`sort()` mění původní seznam, zatímco `sorted()` vrací nový seřazený seznam.</p>
+      <pre><code>numbers = [5, 2, 9, 1, 5]
+    numbers.sort()
+    print(numbers)  # [1, 2, 5, 5, 9]</code></pre>
+    
+      <h4 class="h5 text-warning">2. Třídění podle vlastního klíče</h4>
+      <p>Použití argumentu `key` pro třídění podle specifických kritérií.</p>
+      <pre><code>people = [("Alice", 25), ("Bob", 30), ("Charlie", 20)]
+    people.sort(key=lambda x: x[1])
+    print(people)  # Seřazeno podle věku</code></pre>
+    
+      <h3 class="h4 text-primary">Shrnutí</h3>
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>Potřebuji...</th>
+            <th>Co použít</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Najít prvek v malém nebo neuspořádaném seznamu</td>
+            <td><strong>Lineární hledání (`in`, `.index()`)</strong></td>
+          </tr>
+          <tr>
+            <td>Najít prvek v seřazeném seznamu</td>
+            <td><strong>Binární hledání (`bisect` modul)</strong></td>
+          </tr>
+          <tr>
+            <td>Seřadit seznam čísel</td>
+            <td><strong>`sort()` nebo `sorted()`</strong></td>
+          </tr>
+          <tr>
+            <td>Seřadit seznam objektů podle klíče</td>
+            <td><strong>`sort(key=...)`</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+
     
 
 
