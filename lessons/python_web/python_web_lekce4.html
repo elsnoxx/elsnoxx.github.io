@@ -93,8 +93,9 @@
       <table class="moveAndTime">
         <tr>
           <td>
-            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/python_web/python_web_lekce1.html';"
-              class="btn btn-primary">Předchozí lekce</button>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce1.html';" class="btn btn-primary">Předchozí
+              lekce</button>
             <button id="right" class="btn btn-primary"
               onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Následují
               lekce</button>
@@ -106,18 +107,76 @@
       </table>
     </div>
 
-    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
-      <h1 class="h2 text-primary mb-4">Opakovací programovací lekce</h1>
-      <p class="lead">
-        V této lekci si zopakujeme základy programování a vytvoříme si jednoduchého asistenta, který bude zpracovávat
-        naše příkazy. Pomocí něj si procvičíme základní operace s čísly, podmínky a cykly. Také se podíváme na práci s
-        textem a výstupem na obrazovku. Zopakojeme si praci se soubory. A ukážeme si jak správně dělit program do modulů
-        a funkci.
-      </p>
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shado">
+      <h1 class="h2 text-primary mb-4">Co je objektově orientované programování (OOP)?</h1>
+      <p>OOP je programovací přístup zaměřený na objekty a jejich interakce. Mezi hlavní principy OOP patří:</p>
+      <ul class="lead">
+        <li><strong>Zapouzdření</strong> - skrytí interních dat objektu</li>
+        <li><strong>Dědičnost</strong> - nová třída může zdědit vlastnosti jiné třídy</li>
+        <li><strong>Polymorfismus</strong> - stejná metoda se může chovat různě</li>
+        <li><strong>Abstrakce</strong> - skrytí složitých detailů implementace</li>
+      </ul>
     </section>
 
-
+    <section class="lesson bg-light">
+      <h2>Třídy a objekty</h2>
+      <p>V Pythonu definujeme třídu a vytvoříme objekt takto:</p>
+      <pre><code class="language-python">
+class Auto:
+  def __init__(self, znacka, barva):
+      self.znacka = znacka
+      self.barva = barva
   
+  def info(self):
+      print(f"Auto: {self.znacka}, Barva: {self.barva}")
+
+moje_auto = Auto("Škoda", "modrá")
+moje_auto.info()
+  </code></pre>
+    </section>
+
+    <section class="lesson bg-light">
+      <h2>Zapouzdření</h2>
+      <p>Použití soukromých atributů a metod:</p>
+      <pre><code class="language-python">
+class BankovniUcet:
+  def __init__(self, majitel, zustatek):
+      self.majitel = majitel
+      self.__zustatek = zustatek
+
+  def vklad(self, castka):
+      self.__zustatek += castka
+
+  def get_zustatek(self):
+      return self.__zustatek
+  </code></pre>
+    </section>
+
+    <section class="lesson bg-light">
+      <h2>Dědičnost</h2>
+      <p>Ukázka dědičnosti mezi třídami:</p>
+      <pre><code class="language-python">
+class Zvire:
+  def __init__(self, jmeno):
+      self.jmeno = jmeno
+
+  def zvuk(self):
+      pass
+
+class Pes(Zvire):
+  def zvuk(self):
+      return "Haf haf!"
+  </code></pre>
+    </section>
+
+    <section class="lesson bg-light">
+      <h2>Polymorfismus</h2>
+      <p>Metoda se chová různě podle třídy objektu:</p>
+      <pre><code class="language-python">
+def udelej_zvuk(vozidlo):
+  print(vozidlo.zvuk())
+  </code></pre>
+    </section>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
