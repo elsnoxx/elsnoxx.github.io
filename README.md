@@ -149,24 +149,18 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
         - lekce 6
         
 - Python web
-    - opravit si ten souborproblem s prikazi a utils, menu dela binec
     - https://www.youtube.com/watch?v=6f-J80vqvew&list=PLQ8x_VWW6Aktg8FNSIKCRYtFg_ZO5oPEG
     - https://docs.google.com/document/d/141NXWaWjALhCXdlyMyRwZ_oxGvHYxt8a_3OCI2OC110/edit?tab=t.0
     - pro django, flask a fastapi predstavit na projekto TODO aplikace
         - viz url https://github.com/patrickloeber/python-fun/tree/master/webapps
         - upravit ale zdojoveko kody bez db spise pracovat jako s lokanim souborem a ukladanim
 
-    - lekce 3
-        - Tuples, Sets, Dictionaries
-        - Sort, Search
-        - version control pomocí githubu, venovat tomu cas a vse podrobne vysvetlit, jak udelat commit jak rollback atd.
-    - lekce 4
-        - zaklady OOP v pythonu
+
     - lekce 5
         - prace s json soubory, a jejich využiti pri tvorbu webove aplikace
         - prace s json souborem a http odpovedmi pomoci request knihovny
         - ukazka s reques popmoci weather api https://api.weatherapi.com/v1/current.json?key=939716ed2d204c008ef151039252603&q=Prague
-        - vysvetleni protokolu http, pak jeho typu (get, post, update, delete)
+        
     - lekce 6
         - navrhove vzory pri tvorbe webu MVC atd.
         - zkusit si vytvorit jednoduchý webserver v pythonu
