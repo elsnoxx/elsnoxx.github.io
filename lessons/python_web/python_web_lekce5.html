@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-adsense-account" content="ca-pub-7668654631963540">
+  <meta name="description" content="Hlavní stránka lekce JavaScript">
+  <title>Python Web Dev</title>
+
+  <!-- Potrebne skripty -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="/js/JQuery-general.js" defer></script>
+  <!-- Potrebne CSS -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/python/web_dev.css">
+
+  <!-- Přidání Prism.js CSS pro barevné formátování kódu -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+  <!-- Přidání Prism.js JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XPWG9HLN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4XPWG9HLN2');
+  </script>
+
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
+
+  <link rel="icon" href="/img/coding.png">
+</head>
+
+<body>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/index.html"><img src="/img/learning.png" alt="logo home button" loading="lazy"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" role="button" id="defaultDropdown" data-toggle="dropdown"
+              data-bs-auto-close="true" aria-expanded="false">
+              Lekce
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
+              <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
+              <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
+              <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
+              <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
+              <li><a class="dropdown-item" href="/lessons/youtube/youtube.html">Youtube</a></li>
+              <li><a class="dropdown-item" href="/lessons/prezentace/prezentace.html">Art of Presentation</a></li>
+            </ul>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="/Mystat.html">Mystat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="container mt-5 pt-5">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Předchozí
+              lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce5.html';" class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h1 class="h2 text-primary mb-4">API, REST, JSON</h1>
+      <p class="lead">
+        V této lekci se naučíme, co je API, REST a JSON. Tyto technologie jsou klíčové pro moderní webový vývoj a
+        umožňují efektivní komunikaci mezi aplikacemi a servery. Pochopení těchto konceptů nám pomůže lépe porozumět
+        tomu, jak fungují webové aplikace a jak můžeme efektivně pracovat s daty.
+      </p>
+    </section>
+
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Co je API, REST a JSON?</h1>
+
+      <!-- Sekce 1: Co je API? -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Co je API?</h2>
+        </div>
+        <div class="card-body">
+          <p>API (Application Programming Interface) je rozhraní, které umožňuje komunikaci mezi různými softwarem.
+            Představte si, že sedíte u stolu v restauraci s nabídkou, ze které si můžete objednat. Kuchyně je
+            „software“, který připraví vaši objednávku. Chybí však kritické spojení pro komunikaci vaší objednávky do
+            kuchyně a doručení vašeho jídla zpět na váš stůl. Zde přichází na řadu číšník, který je vlastně API.</p>
+          <p><strong>Příklad:</strong> Představte si, že si rezervujete let online. Při zadání informací o letu vlastně
+            komunikujete s API letecké společnosti, které vám vrací dostupné lety a ceny.</p>
+          <img src="/img/thuncable/lekce5/api.png" class="img-fluid mb-3" alt="API Example">
+        </div>
+      </div>
+
+      <!-- Sekce 2: Co je REST? -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Co je REST?</h2>
+        </div>
+        <div class="card-body">
+          <p>REST (Representational State Transfer) je soubor instrukcí, jak vytvořit efektivní, rychlá a spolehlivá
+            webová API. RESTful API je přístupné prostřednictvím URL, používá HTTP metody a přenáší data ve formátu
+            JSON.</p>
+          <p><strong>Příklad:</strong> RESTful API se používá v mnoha aplikacích pro získávání dat, jako jsou například
+            informace o počasí nebo letecké spoje. </p>
+          <img src="/img/thuncable/lekce5/rest-api.png" class="img-fluid mb-3" alt="REST Example">
+        </div>
+      </div>
+
+      <!-- Sekce 3: Co je JSON? -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Co je JSON?</h2>
+        </div>
+        <div class="card-body">
+          <p>JSON (JavaScript Object Notation) je formát pro výměnu dat. Používá se pro přenos dat mezi klientem a
+            serverem. JSON popisuje objekty, abstraktní entity a jejich vztahy. Formát vypadá takto:</p>
+          <pre>
+{
+    "first_key": "first_value",
+    "second_key": "second_value"
+}
+                </pre>
+          <p>JSON může obsahovat i vnořené objekty:</p>
+          <pre>
+{
+    "emp_id": 120412,
+    "name": "Smith Jones",
+    "address": {
+        "street": "Washington 24th Street",
+        "city": "New York"
+    }
+}
+                </pre>
+        </div>
+      </div>
+
+      <!-- Sekce 4: HTTP Požadavky -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>HTTP Požadavky</h2>
+        </div>
+        <div class="card-body">
+          <p>HTTP (Hypertext Transfer Protocol) je protokol pro komunikaci mezi systémy na webu. Zde jsou základní HTTP
+            metody:</p>
+          <ul>
+            <li><strong>GET</strong> – Načítá data ze serveru.</li>
+            <li><strong>POST</strong> – Odesílá data na server.</li>
+            <li><strong>PUT</strong> – Vytváří nebo nahrazuje zdroj.</li>
+            <li><strong>DELETE</strong> – Odstraní zadaný prostředek.</li>
+          </ul>
+          <img src="/img/thuncable/lekce5/http-methods.png" class="img-fluid mb-3" alt="HTTP Methods">
+        </div>
+      </div>
+
+      <!-- Sekce 5: Shrnutí -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <h2>Jak využíváme API, REST a JSON?</h2>
+        </div>
+        <div class="card-body">
+          <p>V praxi API, REST a JSON používáme pro získání a odesílání dat mezi aplikacemi a servery. Můžeme například
+            použít API pro zobrazení informací o počasí, letech, nebo dokonce pro ovládání jiných zařízení. Díky těmto
+            technologiím můžeme aplikace rychle propojit s databázemi a jinými online službami.</p>
+          <img src="/img/thuncable/lekce5/mainly-rest-api.png" class="img-fluid mb-3" alt="API Use Case">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sekce 6: Práce s JSON soubory -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h2>Práce s JSON soubory</h2>
+      </div>
+      <div class="card-body">
+        <p>JSON (JavaScript Object Notation) je lehký formát pro výměnu dat. V Pythonu můžeme JSON snadno číst a
+          zapisovat pomocí modulu <code>json</code>.</p>
+        <h3>1. Čtení JSON souboru</h3>
+        <pre><code class="language-python">
+import json
+
+# Načtení JSON souboru
+with open('data.json', 'r') as file:
+    data = json.load(file)
+
+# Přístup k datům
+print(data['name'])
+print(data['address']['city'])
+    </code></pre>
+
+        <h3>2. Zápis do JSON souboru</h3>
+        <pre><code class="language-python">
+import json
+
+# Data k uložení
+data = {
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "street": "123 Main St",
+        "city": "New York"
+    }
+}
+
+# Zápis do JSON souboru
+with open('data.json', 'w') as file:
+    json.dump(data, file, indent=4)
+    </code></pre>
+        <p>JSON soubory jsou užitečné pro ukládání konfigurací, dat aplikací nebo pro výměnu dat mezi klientem a
+          serverem.</p>
+      </div>
+    </div>
+
+    <!-- Sekce 7: Práce s JSON a HTTP odpověďmi pomocí knihovny requests -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h2>Práce s JSON a HTTP odpověďmi pomocí knihovny requests</h2>
+      </div>
+      <div class="card-body">
+        <p>Knihovna <code>requests</code> umožňuje snadnou práci s HTTP požadavky. Můžeme ji použít pro získání dat ve
+          formátu JSON z API.</p>
+        <h3>1. Základní GET požadavek</h3>
+        <pre><code class="language-python">
+import requests
+
+# Odeslání GET požadavku
+response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
+
+# Získání dat ve formátu JSON
+data = response.json()
+
+# Přístup k datům
+print(data['title'])
+print(data['body'])
+    </code></pre>
+
+        <h3>2. Odeslání POST požadavku</h3>
+        <pre><code class="language-python">
+import requests
+
+# Data k odeslání
+payload = {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+}
+
+# Odeslání POST požadavku
+response = requests.post('https://jsonplaceholder.typicode.com/posts', json=payload)
+
+# Získání odpovědi
+print(response.status_code)
+print(response.json())
+    </code></pre>
+        <p>Tato metoda je užitečná pro komunikaci s API, například při odesílání dat na server nebo získávání dat z API.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sekce 8: Ukázka práce s Weather API -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h2>Ukázka práce s Weather API</h2>
+      </div>
+      <div class="card-body">
+        <p>Weather API poskytuje informace o aktuálním počasí. Pomocí knihovny <code>requests</code> můžeme získat data
+          o počasí pro konkrétní město.</p>
+        <h3>1. Získání aktuálního počasí</h3>
+        <pre><code class="language-python">
+import requests
+
+# URL API a klíč
+url = 'https://api.weatherapi.com/v1/current.json'
+params = {
+    'key': '939716ed2d204c008ef151039252603',
+    'q': 'Prague'
+}
+
+# Odeslání GET požadavku
+response = requests.get(url, params=params)
+
+# Získání dat ve formátu JSON
+data = response.json()
+
+# Výpis informací o počasí
+print(f"Město: {data['location']['name']}")
+print(f"Teplota: {data['current']['temp_c']} °C")
+print(f"Stav: {data['current']['condition']['text']}")
+    </code></pre>
+        <p>Tento příklad ukazuje, jak získat aktuální informace o počasí pro město Praha pomocí Weather API.</p>
+      </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web_lekce5.html';">Následující lekce</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
+      © <span id="currentYear"></span> Copyright:
+      <a class="text-reset fw-bold" href="/contact.html">Richard Ficek</a>
+    </div>
+  </footer>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
