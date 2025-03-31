@@ -238,9 +238,9 @@ petr_age = people_ages.get("Petr")
 print(petr_age)
 
 # Úkol 2
-# Vytvoř set obsahující názvy zvířat. Přidej do tohoto setu nové zvíře "kočka".
-animals = {"pes", "králík", "had"}
-animals.add("kočka")
+# Vytvoř slovník obsahující názvy zvířat jako klíče a jejich počty jako hodnoty. Přidej do tohoto slovníku nové zvíře "kočka" s počtem 1.
+animals = {"pes": 2, "králík": 3, "had": 1}
+animals["kočka"] = 1  # Přidání nového zvířete "kočka" s počtem 1
 print(animals)
 
 # Úkol 3: Práce s hodnotami v dictionary

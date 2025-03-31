@@ -26,8 +26,8 @@ b = 10
 # Úkol 5: Iterace přes tuple
 # Máš tuple obsahující názvy měst: ("Brno", "Praha", "Ostrava"). Jak vypíšeš každé město na nový řádek?
 cities = ("Brno", "Praha", "Ostrava")
-for city in cities:
-    print(city)
+
+
 
 # Úkol 6: Zanořené tuple
 # Máš tuple obsahující informace o osobách: (("Alice", 25), ("Bob", 30), ("Charlie", 22)).
@@ -178,7 +178,7 @@ vety = [
 
 
 # Úkol 2
-# Vytvoř set obsahující názvy zvířat. Přidej do tohoto setu nové zvíře "kočka".
+# Vytvoř slovník obsahující názvy zvířat jako klíče a jejich počty jako hodnoty. Přidej do tohoto slovníku nové zvíře "kočka" s počtem 1.
 
 
 
