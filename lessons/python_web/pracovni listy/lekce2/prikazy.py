@@ -1,6 +1,8 @@
 import random
 import math
+import utils
 from colorama import Fore
+
 
 def sudost_lichost():
     """

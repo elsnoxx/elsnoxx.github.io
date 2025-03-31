@@ -1,4 +1,5 @@
 import os
+import prikazy
 import menu
 import utils
 from colorama import Fore, Style, init
