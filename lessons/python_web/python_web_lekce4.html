@@ -94,10 +94,10 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce1.html';" class="btn btn-primary">Předchozí
+              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Předchozí
               lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Následují
+              onclick="location.href = '/lessons/python_web/python_web_lekce5.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -107,75 +107,189 @@
       </table>
     </div>
 
-    <section class="lesson mb-5 p-4 bg-dark text-white rounded shado">
-      <h1 class="h2 text-primary mb-4">Co je objektově orientované programování (OOP)?</h1>
-      <p>OOP je programovací přístup zaměřený na objekty a jejich interakce. Mezi hlavní principy OOP patří:</p>
-      <ul class="lead">
-        <li><strong>Zapouzdření</strong> - skrytí interních dat objektu</li>
-        <li><strong>Dědičnost</strong> - nová třída může zdědit vlastnosti jiné třídy</li>
-        <li><strong>Polymorfismus</strong> - stejná metoda se může chovat různě</li>
-        <li><strong>Abstrakce</strong> - skrytí složitých detailů implementace</li>
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h1 class="h2 text-primary mb-4">OOP Python a Opakování HTML</h1>
+      <p class="lead">
+        V této lekci se zaměříme na základy objektově orientovaného programování (OOP) v Pythonu a zopakujeme si
+        základy HTML. OOP je důležitý koncept, který nám umožňuje strukturovat kód efektivněji a usnadňuje
+        jeho údržbu.
+      </p>
+    </section>
+
+    <section class="lesson mb-5 p-4 bg-light rounded shadow">
+      <h2>Základy OOP v Pythonu</h2>
+      <p>Objektově orientované programování (OOP) je způsob, jak strukturovat kód pomocí tříd a objektů. Zde jsou
+        základní koncepty:</p>
+
+      <h3>1. Třídy a objekty</h3>
+      <p>Třída je šablona pro vytvoření objektů. Objekt je konkrétní instance třídy.</p>
+      <pre><code class="language-python">
+# Definice třídy
+class Auto:
+    def __init__(self, znacka, barva):
+        self.znacka = znacka  # Atribut třídy
+        self.barva = barva    # Atribut třídy
+
+    def info(self):  # Metoda třídy
+        print(f"Auto: {self.znacka}, Barva: {self.barva}")
+
+# Vytvoření objektu
+moje_auto = Auto("Škoda", "modrá")
+moje_auto.info()
+      </code></pre>
+
+      <h3>2. Zapouzdření</h3>
+      <p>Zapouzdření znamená skrytí interních dat objektu. Používáme soukromé atributy (začínající dvěma podtržítky).
+      </p>
+      <pre><code class="language-python">
+class BankovniUcet:
+    def __init__(self, majitel, zustatek):
+        self.majitel = majitel
+        self.__zustatek = zustatek  # Soukromý atribut
+
+    def vklad(self, castka):
+        self.__zustatek += castka
+
+    def get_zustatek(self):
+        return self.__zustatek
+
+# Použití
+ucet = BankovniUcet("Jan Novák", 1000)
+ucet.vklad(500)
+print(f"Zůstatek: {ucet.get_zustatek()} Kč")
+      </code></pre>
+
+      <h3>3. Dědičnost</h3>
+      <p>Dědičnost umožňuje vytvořit novou třídu, která dědí vlastnosti a metody jiné třídy.</p>
+      <pre><code class="language-python">
+class Zvire:
+    def __init__(self, jmeno):
+        self.jmeno = jmeno
+
+    def zvuk(self):
+        pass  # Abstraktní metoda
+
+class Pes(Zvire):
+    def zvuk(self):
+        return "Haf haf!"
+
+class Kocka(Zvire):
+    def zvuk(self):
+        return "Mňau!"
+
+# Použití
+pes = Pes("Rex")
+kocka = Kocka("Micka")
+print(f"{pes.jmeno} říká: {pes.zvuk()}")
+print(f"{kocka.jmeno} říká: {kocka.zvuk()}")
+      </code></pre>
+
+      <h3>4. Polymorfismus</h3>
+      <p>Polymorfismus umožňuje, aby stejná metoda fungovala různě podle třídy objektu.</p>
+      <pre><code class="language-python">
+def udelej_zvuk(zvire):
+    print(zvire.zvuk())
+
+# Použití
+udelej_zvuk(pes)  # Výstup: Haf haf!
+udelej_zvuk(kocka)  # Výstup: Mňau!
+      </code></pre>
+    </section>
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Pracovní list - Python OOP</h2>
+      <p class="lead">
+        Pomocí víže uvedeného tlačíkta si můžete stáhnout pracovní list k této lekci. Pracovní list obsahuje
+        úkoly, které si můžete vyzkoušet a procvičit.
+      </p>
+      <a href="/lessons/python_web/pracovni listy/lekce4/lekce4.py" class="btn btn-success" download>Stáhnout pracovní
+        list</a>
+    </section>
+
+    <section class="lesson mb-5 p-4 bg-light rounded shadow">
+      <h2>Základy HTML</h2>
+      <p>HTML (HyperText Markup Language) je základní jazyk pro tvorbu webových stránek. Používá se k vytváření
+        struktury a obsahu webu.</p>
+
+      <h3>1. Struktura HTML dokumentu</h3>
+      <p>Každý HTML dokument má základní strukturu:</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="cs"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Název stránky&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Vítejte na mé stránce!&lt;/h1&gt;
+  &lt;p&gt;Toto je základní HTML dokument.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+      <h3>2. Základní HTML tagy</h3>
+      <p>HTML používá značky (tagy) k definování různých částí obsahu. Zde jsou některé základní tagy:</p>
+      <ul>
+        <li><code>&lt;h1&gt; až &lt;h6&gt;</code>: Nadpisy (h1 je největší, h6 nejmenší)</li>
+        <li><code>&lt;p&gt;</code>: Odstavec</li>
+        <li><code>&lt;a&gt;</code>: Odkaz</li>
+        <li><code>&lt;img&gt;</code>: Obrázek</li>
+        <li><code>&lt;ul&gt;</code> a <code>&lt;li&gt;</code>: Neuspořádaný seznam</li>
+        <li><code>&lt;ol&gt;</code> a <code>&lt;li&gt;</code>: Uspořádaný seznam</li>
+        <li><code>&lt;table&gt;</code>: Tabulka</li>
+      </ul>
+
+      <h3>3. Příklad použití základních tagů</h3>
+      <p>Zde je příklad jednoduché webové stránky:</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="cs"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Moje první stránka&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Vítejte!&lt;/h1&gt;
+  &lt;p&gt;Toto je moje první webová stránka.&lt;/p&gt;
+  &lt;a href="https://www.example.com"&gt;Klikněte zde pro více informací&lt;/a&gt;
+  &lt;h2&gt;Obrázek&lt;/h2&gt;
+  &lt;img src="obrazek.jpg" alt="Popis obrázku" width="300"&gt;
+  &lt;h2&gt;Seznam&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Položka 1&lt;/li&gt;
+    &lt;li&gt;Položka 2&lt;/li&gt;
+    &lt;li&gt;Položka 3&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
+      <h3>4. Komentáře v HTML</h3>
+      <p>Komentáře se používají k přidání poznámek do kódu. Nejsou viditelné na stránce:</p>
+      <pre><code class="language-html">
+&lt;!-- Toto je komentář --&gt;
+&lt;p&gt;Tento text bude viditelný na stránce.&lt;/p&gt;
+      </code></pre>
+
+      <h3>5. Základní atributy</h3>
+      <p>HTML tagy mohou mít atributy, které poskytují další informace:</p>
+      <ul>
+        <li><code>href</code>: Používá se u <code>&lt;a&gt;</code> pro definování odkazu.</li>
+        <li><code>src</code>: Používá se u <code>&lt;img&gt;</code> pro definování cesty k obrázku.</li>
+        <li><code>alt</code>: Alternativní text pro obrázek.</li>
+        <li><code>id</code>: Jedinečný identifikátor prvku.</li>
+        <li><code>class</code>: Třída prvku pro stylování pomocí CSS.</li>
       </ul>
     </section>
 
-    <section class="lesson bg-light">
-      <h2>Třídy a objekty</h2>
-      <p>V Pythonu definujeme třídu a vytvoříme objekt takto:</p>
-      <pre><code class="language-python">
-class Auto:
-  def __init__(self, znacka, barva):
-      self.znacka = znacka
-      self.barva = barva
-  
-  def info(self):
-      print(f"Auto: {self.znacka}, Barva: {self.barva}")
-
-moje_auto = Auto("Škoda", "modrá")
-moje_auto.info()
-  </code></pre>
-    </section>
-
-    <section class="lesson bg-light">
-      <h2>Zapouzdření</h2>
-      <p>Použití soukromých atributů a metod:</p>
-      <pre><code class="language-python">
-class BankovniUcet:
-  def __init__(self, majitel, zustatek):
-      self.majitel = majitel
-      self.__zustatek = zustatek
-
-  def vklad(self, castka):
-      self.__zustatek += castka
-
-  def get_zustatek(self):
-      return self.__zustatek
-  </code></pre>
-    </section>
-
-    <section class="lesson bg-light">
-      <h2>Dědičnost</h2>
-      <p>Ukázka dědičnosti mezi třídami:</p>
-      <pre><code class="language-python">
-class Zvire:
-  def __init__(self, jmeno):
-      self.jmeno = jmeno
-
-  def zvuk(self):
-      pass
-
-class Pes(Zvire):
-  def zvuk(self):
-      return "Haf haf!"
-  </code></pre>
-    </section>
-
-    <section class="lesson bg-light">
-      <h2>Polymorfismus</h2>
-      <p>Metoda se chová různě podle třídy objektu:</p>
-      <pre><code class="language-python">
-def udelej_zvuk(vozidlo):
-  print(vozidlo.zvuk())
-  </code></pre>
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Pracovní list - Opakování HTML</h2>
+      <p class="lead">
+        Pomocí víže uvedeného tlačíkta si můžete stáhnout pracovní list k této lekci. Pracovní list obsahuje
+        úkoly, které si můžete vyzkoušet a procvičit.
+      </p>
+      <a href="/lessons/python_web/pracovni listy/lekce4/lekce4-web.html" class="btn btn-success" download>Stáhnout
+        pracovní list</a>
     </section>
 
     <!-- The Modal -->
@@ -188,9 +302,9 @@ def udelej_zvuk(vozidlo):
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce1.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce5.html';">Následující lekce</button>
       </div>
     </div>
 
