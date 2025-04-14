@@ -349,9 +349,9 @@ if response.status_code == 200:
     
     # 5. Vypíšeme základní informace o ekonomickém subjektu
     print("\nZÁKLADNÍ INFORMACE O SUBJEKTU:")
-    print(f"Název: {data['nazev']}")
+    print(f"Název: {data['obchodniJmeno']}")
     print(f"IČO: {data['ico']}")
-    print(f"Právní forma: {data['pravniForma']['nazev']}")
+    print(f"Právní forma: {data['pravniForma']}")
     print(f"Adresa: {data['sidlo']['textovaAdresa']}")
 else:
     print(f"Chyba při komunikaci s API. Stavový kód: {response.status_code}")
