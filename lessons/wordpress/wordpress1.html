@@ -11,6 +11,7 @@
 
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
@@ -24,9 +25,9 @@
     gtag('config', 'G-4XPWG9HLN2');
   </script>
 
-<!-- adsence -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
-     crossorigin="anonymous"></script>
+  <!-- adsence -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7668654631963540"
+    crossorigin="anonymous"></script>
 
   <link rel="icon" href="/img/coding.png">
 </head>
@@ -51,13 +52,16 @@
               Lekce
             </button>
             <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-<li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
+              <li><a class="dropdown-item" href="/lessons/construct/construct3.html">Construct-3</a></li>
               <li><a class="dropdown-item" href="/lessons/tinkercad/tinkercad.html">TinkerCAD</a></li>
               <li><a class="dropdown-item" href="/lessons/wordpress/wordpress.html">Wordpress</a></li>
               <li><a class="dropdown-item" href="/lessons/html-css/html-css.html">HTML CSS</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a></li>
-              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python - Intermediate</a></li>
+              <li><a class="dropdown-item" href="/lessons/python_beginner/python_beginner.html">Python - beginner</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_minecraft/python_minecraft.html">Python - minecraft</a>
+              </li>
+              <li><a class="dropdown-item" href="/lessons/python_intermediate/python_intermediate.html">Python -
+                  Intermediate</a></li>
               <li><a class="dropdown-item" href="/lessons/roblox/roblox.html">Roblox</a></li>
               <li><a class="dropdown-item" href="/lessons/javascript/javascript.html">JavaScript</a></li>
               <li><a class="dropdown-item" href="/lessons/audacity/audacity.html">AudaCity</a></li>
@@ -78,66 +82,93 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1 class="mt-5" style="margin-bottom: 64px; ">Wordpress</h1>
-    <div class="odstavec">
-      <p>
-        Dneska se vrheme na vysvětlení důležitých názvů, vytvoření si účtu na webovém hostingu a vytvoření si první
-        webové stránky jako je tato.
-      </p>
-      <iframe src="https://stepit22.wordpress.com/" width="100%" height="409" style="border:5;"></iframe>
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary" onclick="location.href = '/lessons/wordpress/wordpress.html';"
+              class="btn btn-primary">Předchozí
+              lekce</button>
+            <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/wordpress/wordpress2.html';"
+              class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
     </div>
-    <h1>Teorie</h1>
-    <div class="pododstavec">
-      <h3>CMS system</h3>
-      <p>
-        CMS je zkratka pro systém správy obsahu, který umožňuje pracovat více vývojářům na jednom projektu.
-      </p>
-      <p>
-        Existuje spousta CMS systémů a rozlišit je můžeme podle toho v jakém jazyce byly napsané.
-        Ty nejoblíbenější a ten se kterým budeme pracovat byly napsané v jazyce PHP.
-      </p>
-      <p>
-        <strong>Příklady PHP CMS:</strong>
-      <div style="padding-left: 100px;">
-        <ul>
-          <li>WordPress</li>
-          <li>Drupal</li>
-          <li>Joomla</li>
-          <li>Magento</li>
-        </ul>
+
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <h1 class="display-4 mb-4">WordPress - Lekce 1</h1>
+      <h4><i class="fas fa-book-open mr-2"></i> Co se naučíme v této lekci</h4>
+      <p>V této lekci se seznámíme s WordPressem, jeho historií a základními funkcemi. Naučíme se také, jak si založit
+        účet na WordPress.com a vytvořit první web.</p>
+    </div>
+
+
+    <div class="card mb-5 border-primary shadow">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-desktop mr-2"></i> Zobrazení stránky ve WordPressu</h2>
       </div>
-      </p>
+      <div class="card-body">
+        <p class="lead">
+          Orientace v administračním rozhraní WordPressu je jednoduchá díky přehlednému menu a ikonám:
+        </p>
+
+        <div class="row">
+          <div class="col-md-8 shadow-sm bg-light p-4 center">
+            <div class="bg-light mb-3 overflow-hidden odstavec">
+                <h5><i class="fas fa-home text-primary mr-2"></i> Ikona domečku</h5>
+                <p>
+                  Při kliknutí na ikonu domečku <i class="fas fa-home"></i> se dostanete na hlavní stránku WordPressu,
+                  kde se nachází všechny stránky a články, které jste vytvořili. Na hlavní stránce najdete také
+                  ikonu pro přidání nového článku nebo stránky.
+                </p>
+            </div>
+        
+            <div class="bg-light overflow-hidden odstavec">
+                <h5><i class="fab fa-wordpress text-primary mr-2"></i> Ikona WordPressu</h5>
+                <p>
+                  Pokud kliknete na ikonu černého kolečka s bílým písmenem W <i class="fab fa-wordpress"></i>,
+                  dostanete se do administrace WordPressu, kde můžete upravovat všechny stránky a články,
+                  spravovat pluginy, měnit vzhled a nastavení celého webu.
+                </p>
+            </div>
+          </div>
+        
+          <div class="col-lg-4">
+            <figure class="figure">
+              <img src="/img/wordpress/lekce1/sidebar.png" alt="WordPress navigační panel"
+                class="figure-img img-fluid rounded shadow-sm">
+              <figcaption class="figure-caption text-center">Navigační panel WordPressu s hlavními ovládacími prvky</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="pododstavec" style="padding-left: 50px;">
-      <h3>CMS WordPress</h3>
-      <p>
-        <strong>WordPress</strong> je open source, který je napsaný v jazyce <strong>PHP</strong>. Ten k ukládání dat
-        používá databázi <strong>MSSQL</strong>.
-      </p>
-      <p>
-        <strong>WordPress</strong> existuje na dvou webových službách. Jedna je <a
-          href="https://wordpress.org/">wordpress.org</a>
-        ta vyžaduje složitější nastavení a větší znalosti. A druhá je <a
-          href="https://wordpress.com/">wordpress.com</a>,
-        kterou budeme používat my jelikož je jednoduchá na nastavení.
-      </p>
+    
+
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
     </div>
 
-
-    <div class="odstavec">
-      <h1>Vytvoření hostingu</h1>
-      <p>
-        Jelikož budeme využívat webový hosting od
-        <a href="https://wordpress.com/">wordpress.com</a> takže se přesuneme na stránku kde naleznete návod a vrhneme
-        se na vytvoření účtu a prvné webové stránky.
-      </p>
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/wordpress/wordpress.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/wordpress/wordpress2.html';">Následující lekce</button>
+      </div>
     </div>
-
-
-
-
-
 
 
   </main>
@@ -156,3 +187,4 @@
 </body>
 
 </html>
+```

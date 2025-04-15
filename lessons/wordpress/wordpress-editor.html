@@ -11,6 +11,7 @@
 
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="/js/JQuery-general.js" defer></script>
   <!-- Potrebne CSS -->
   <link href="/css/style.css" rel="stylesheet">
@@ -81,97 +82,414 @@
 
   <!-- Begin page content -->
   <main role="main" class="container">
-    <h1>Návod na přihlášení do Wordpress editoru</h1>
-    <p>
-      Nejprve si vytvoříme učet <a href="https://wordpress.com/start/user?user_email=">Wordpress editoru</a>.
-      <strong>Vždy obrázky vázané k posutupu se nachází hned vedle textu. A po kliknutí se obrázky zvětší.</strong>
-    </p>
-    <div class="odstavec">
-      <table>
-        <tr>
-          <td>
-            <p>
-              Po otevření odkazy si vytvoříte svůj účet. K němu potřebujete svou emailovou adresu pak svou přezdívku
-              a musí te si vytvořit heslo.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/wordpress/login.avif" alt="Přihlašovací okna wordpressu"
-              style="width:100%; max-width:300px; height: auto;" loading="lazy">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              Po úspěšném prvním kroku ná stránka vyzve k vytvoření domény. Stačí tam napsat vaše jméno přijmení.
-              Tam si vybereme s označením <strong>FREE</strong>. Klikneme na tlačítko <strong>SELECT</strong>. Po té
-              se přesuneme o kron níže.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/wordpress/login-url.avif" alt="Výbre URL adresy"
-              style="width:100%; max-width:300px; height: auto;" loading="lazy">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              Teď nás čeká vybrání si správného plánu. Jelikož k naši práci bohatě stačí talČítko <strong>Start with
-                Free</strong>.
-              Poté už je na vás zdali chcete platit za jednotlivé stránky nebo ne.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/wordpress/login-plan.avif" alt="Výbre plánu webových stránek"
-              style="width:100%; max-width:300px; height: auto;" loading="lazy">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              Tuhle stránku přeskočíme tím že vpravo nahoře vybereme <strong>Skip to Dashboard</strong>
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/wordpress/login-goals.avif" alt="Přeskočení a nezadání našich cílů"
-              style="width:100%; max-width:300px; height: auto;" loading="lazy">
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              Poslední krok už jen zbývá v tom že vybrereme talčítko <strong>Launche your site</strong>.
-              A pokud jste došli až sem tak gratuluji máte vytvořený své prostředí pro tvorbu webových stránek.
-            </p>
-          </td>
-          <td>
-            <img class="myImg" src="/img/wordpress/login-launch.avif" alt="Vytvoření a spuštění stránky"
-              style="width:100%; max-width:300px; height: auto;" loading="lazy">
-          </td>
-        </tr>
-      </table>
-
-    </div>
-    <div class="odstavec">
-      <p>Pokud by se vyskytl jaký koliv problém při postupu neváhejte a kontaktujet mě a emailové adrese
-        <strong>ficek_r@itstep.academy</strong>
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <h1 class="display-4 mb-4">Úvod do WordPress editoru</h1>
+      <p class="lead">
+        Nejprve si vytvoříme účet <a href="https://wordpress.com/start/user?user_email=" class="btn btn-sm btn-primary ml-2" target="_blank">WordPress editoru <i class="fas fa-external-link-alt"></i></a>
       </p>
     </div>
+    
+    <hr style="border: 3px solid #000; margin-top: 20px; margin-bottom: 20px;">
 
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">
+        <h3>Co je CMS systém?</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <strong>Systém správy obsahu (CMS)</strong> je počítačová aplikace nebo sada speciálních programů, pomocí kterých lze vytvářet, upravovat a spravovat digitální obsah pro další zveřejnění na webových stránkách.
+            </p>
+            <p>
+              Kromě toho CMS umožňuje:
+            </p>
+            <ul>
+              <li>Archivovat informace</li>
+              <li>Spravovat webové stránky</li>
+              <li>Přidělovat uživatelům různé role a režim přístupu</li>
+              <li>Distribuovat obsah webových stránek</li>
+              <li>Zobrazovat zprávy o zdroji</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/wordpress/lekce1/cms-diagram.jpg" alt="CMS diagram" class="img-fluid rounded">
+            <p class="text-center mt-2"><small>Obrázek 1: Schéma fungování CMS</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <hr style="border: 3px solid #000; margin-top: 20px; margin-bottom: 20px;">
 
+    <div class="card mb-4">
+      <div class="card-header bg-success text-white">
+        <h3>Výhody CMS systémů</h3>
+      </div>
+      <div class="card-body">
+        <p>Před rozhodnutím o použití CMS byste měli pečlivě analyzovat výhody a nevýhody práce se systémy pro správu obsahu.</p>
+        <p>Pozitivní aspekty používání systému CMS zahrnují:</p>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-success p-2">1</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Bezplatné používání a intuitivní jednoduchost systémů</h5>
+            <p>
+              Kromě toho, že většina CMS je zdarma nebo má možnost bezplatného předplatného s omezenou funkčností, jsou také poměrně jednoduché a intuitivní v používání. V takových systémech se platí pouze za individuální nastavení, za jedinečný nebo jednoduše zajímavý design či dodatečné zabezpečení webu.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-success p-2">2</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Možnost upravovat obsah odděleně od designu</h5>
+            <p>
+              Pomocí CMS můžete upravovat obsah odděleně od designu, není třeba znát kódování. Přidávat informace na webové stránky mohou i uživatelé, kteří nemají technické dovednosti.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-success p-2">3</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Možnost omezit přístup</h5>
+            <p>
+              V procesu spolupráce na obsahu můžete jednotlivým členům týmu přidělit role, a tím omezit jejich možnost ovlivňovat obsah. Například správci obsahu lze přidělit roli správce a běžnému copywriterovi roli autora. Díky tomu nebudou problémy se zabezpečením přístupu k obsahu.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-success p-2">4</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Rychlá aktualizace</h5>
+            <p>
+              Výhodou CMS je možnost rychle a snadno aktualizovat obsah a vzhled webových stránek. Například vytvoření a formátování publikace zabere mnohem méně času než použití kódu. Pokud je navíc potřeba změnit záhlaví a zápatí, položky menu nebo jiné prvky, lze to pomocí CMS provést během několika minut.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-success p-2">5</span>
+          </div>
+          <div class="col-md-11">
+            <h5>SEO-friendly</h5>
+            <p>
+              Mnoho systémů CMS má vestavěné funkce pro SEO optimalizaci nadpisů, metadat a přizpůsobitelnou, čitelnou adresu URL. Můžete také připojit další zásuvné moduly pro optimalizaci obsahu.
+            </p>
+            <img src="/img/wordpress/lekce1/seo-tools.jpg" alt="SEO nástroje" class="img-fluid rounded" style="max-height: 200px;">
+            <p class="text-center"><small>Obrázek 2: SEO nástroje v CMS systémech</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card mb-4">
+      <div class="card-header bg-danger text-white">
+        <h3>Nevýhody CMS systémů</h3>
+      </div>
+      <div class="card-body">
+        <p>Mezi nevýhody používání systémů pro správu obsahu patří:</p>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-danger p-2">1</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Možnost bezpečnostní hrozby</h5>
+            <p>
+              Bezpečnost je důležitým prvkem webových stránek. Někdy služby CMS nemohou poskytnout dostatečně silnou ochranu proti hackerům, zejména pokud je web založen na bezplatném předplatném. V takových případech je třeba přijmout další opatření, například implementovat dvoufázové ověřování.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-danger p-2">2</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Klišovitý design</h5>
+            <p>
+              Při výběru standardního designu nebo standardních motivů se můžete setkat s tím, že jsou již použity na jiných webových stránkách. Aby byly vaše webové stránky jedinečné, měla by být šablona přizpůsobena konkrétnímu zdroji.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col-md-1 text-center">
+            <span class="badge badge-danger p-2">3</span>
+          </div>
+          <div class="col-md-11">
+            <h5>Omezení funkčnosti</h5>
+            <p>
+              Při použití CMS se můžete setkat s vážným problémem - omezenou funkčností webových stránek. To je způsobeno tím, že systém nezvládá některé procesy bez přepsání kódu. Takový problém může mít vliv na zobrazení obsahu nebo jednotlivých funkcí webu. Při práci se systémy je třeba důkladně otestovat dostupné funkce, aby nedošlo k jejich nesprávnému fungování.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="card mb-4">
+      <div class="card-header bg-info text-white">
+        <h3>WordPress - nejpopulárnější CMS</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <strong>WordPress je nejoblíbenějším systémem CMS na světě.</strong>
+            </p>
+            <p>
+              Systém si získal oblibu díky snadnému zadávání, intuitivnímu rozhraní a rozsáhlým funkcím. WordPress nevyžaduje speciální podmínky pro instalaci, takže jej lze používat téměř na každém moderním hostingu.
+            </p>
+            <p>
+              Nespornou výhodou WordPressu je obrovské množství pluginů, které pomáhají přizpůsobit webové stránky potřebám vývojářů. Velké množství témat pro webové stránky navíc umožňuje vybrat si design, který nejpřesněji odhaluje vlastnosti vytvářeného zdroje.
+            </p>
+            <p>
+              WordPress je ideální pro vytváření blogů nebo malých webových stránek, například brožur nebo osobních stránek. Díky možnosti rozšíření funkcí pomocí zásuvných modulů však WordPress umožňuje vytvářet i vícestránkové weby a e-shopy.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/wordpress/logo.png" alt="WordPress logo" class="img-fluid rounded mb-3 d-block mx-auto">
+            <p class="text-center"><small>Obrázek 5: Logo WordPressu</small></p>
+            <div class="alert alert-info">
+              <h5>Věděli jste?</h5>
+              <p>WordPress pohání více než 40% všech webových stránek na internetu!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Průvodce kroky registrace -->
+    <div class="card border-primary mb-5">
+      <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="fas fa-list-ol mr-2"></i> Postup registrace krok za krokem</h3>
+      </div>
+      <div class="card-body">
+        
+        <!-- Krok 1: Vytvoření účtu -->
+        <div class="card mb-4 shadow-sm border-left-primary">
+          <div class="card-header bg-light">
+            <h4 class="mb-0">
+              <span class="badge badge-primary badge-pill mr-2">1</span>
+              Vytvoření účtu
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="card-text">
+                  Po otevření odkazu si vytvoříte svůj účet. K němu potřebujete:
+                </p>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item bg-light"><i class="fas fa-envelope mr-2 text-primary"></i> Vaši emailovou adresu</li>
+                  <li class="list-group-item bg-light"><i class="fas fa-user mr-2 text-primary"></i> Přezdívku nebo uživatelské jméno</li>
+                  <li class="list-group-item bg-light"><i class="fas fa-lock mr-2 text-primary"></i> Silné heslo</li>
+                </ul>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="img-hover-zoom">
+                  <img class="myImg img-thumbnail" src="/img/wordpress/lekce1/login.avif" alt="Přihlašovací okna WordPressu" loading="lazy">
+                  <div class="caption mt-2">Přihlašovací formulář</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Krok 2: Výběr domény -->
+        <div class="card mb-4 shadow-sm border-left-primary">
+          <div class="card-header bg-light">
+            <h4 class="mb-0">
+              <span class="badge badge-primary badge-pill mr-2">2</span>
+              Výběr domény
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="card-text">
+                  Po úspěšném prvním kroku vás stránka vyzve k vytvoření domény. Pro naše účely:
+                </p>
+                <ol>
+                  <li>Zadejte vaše jméno a příjmení</li>
+                  <li>Vyberte doménu s označením <span class="badge badge-success">FREE</span></li>
+                  <li>Klikněte na tlačítko <button class="btn btn-sm btn-success">SELECT</button></li>
+                </ol>
+                <div class="alert alert-warning">
+                  <i class="fas fa-exclamation-triangle mr-2"></i> Vždy vybírejte bezplatnou verzi pro účely našeho kurzu.
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="img-hover-zoom">
+                  <img class="myImg img-thumbnail" src="/img/wordpress/lekce1/login-url.avif" alt="Výběr URL adresy" loading="lazy">
+                  <div class="caption mt-2">Výběr URL adresy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Krok 3: Výběr plánu -->
+        <div class="card mb-4 shadow-sm border-left-primary">
+          <div class="card-header bg-light">
+            <h4 class="mb-0">
+              <span class="badge badge-primary badge-pill mr-2">3</span>
+              Výběr plánu
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="card-text">
+                  Teď nás čeká výběr správného plánu. Pro naše potřeby:
+                </p>
+                <div class="alert alert-success">
+                  <strong><i class="fas fa-check-circle mr-2"></i> Klikněte na tlačítko "Start with Free"</strong>
+                </div>
+                <p>Poté už je na vás, zda chcete platit za další funkce (pro účely kurzu to nebude potřeba).</p>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="img-hover-zoom">
+                  <img class="myImg img-thumbnail" src="/img/wordpress/lekce1/login-plan.avif" alt="Výběr plánu webových stránek" loading="lazy">
+                  <div class="caption mt-2">Výběr plánu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Krok 4: Přeskočení nastavení cílů -->
+        <div class="card mb-4 shadow-sm border-left-primary">
+          <div class="card-header bg-light">
+            <h4 class="mb-0">
+              <span class="badge badge-primary badge-pill mr-2">4</span>
+              Přeskočení nastavení cílů
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="card-text">
+                  Tuto stránku můžeme přeskočit:
+                </p>
+                <div class="bg-light p-3 rounded border">
+                  <p class="mb-0">Klikněte na <strong>"Skip to Dashboard"</strong> v pravém horním rohu</p>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="img-hover-zoom">
+                  <img class="myImg img-thumbnail" src="/img/wordpress/lekce1/login-goals.avif" alt="Přeskočení a nezadání našich cílů" loading="lazy">
+                  <div class="caption mt-2">Přeskočení nastavení cílů</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Krok 5: Spuštění webu -->
+        <div class="card mb-4 shadow-sm border-left-primary">
+          <div class="card-header bg-light">
+            <h4 class="mb-0">
+              <span class="badge badge-primary badge-pill mr-2">5</span>
+              Spuštění webu
+            </h4>
+          </div>
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <p class="card-text">
+                  V posledním kroku už jen stačí:
+                </p>
+                <div class="bg-success text-white p-3 rounded mb-3">
+                  <p class="mb-0"><i class="fas fa-rocket mr-2"></i> Klikněte na tlačítko <strong>"Launch your site"</strong></p>
+                </div>
+                <div class="alert alert-success">
+                  <h5><i class="fas fa-trophy mr-2"></i> Gratulujeme!</h5>
+                  <p class="mb-0">Pokud jste došli až sem, máte úspěšně vytvořené prostředí pro tvorbu webových stránek.</p>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="img-hover-zoom">
+                  <img class="myImg img-thumbnail" src="/img/wordpress/lekce1/login-launch.avif" alt="Vytvoření a spuštění stránky" loading="lazy">
+                  <div class="caption mt-2">Spuštění webu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Závěrečné informace -->
+    <div class="alert alert-info mb-5">
+      <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+          <i class="fas fa-question-circle fa-3x mr-3"></i>
+        </div>
+        <div>
+          <h4 class="alert-heading">Potřebujete pomoc?</h4>
+          <p class="mb-0">Pokud by se vyskytl jakýkoliv problém při postupu, neváhejte a kontaktujte mě na emailové adrese 
+          <a href="mailto:ficek_r@itstep.academy" class="alert-link">ficek_r@itstep.academy</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Co dál? -->
+    <div class="card border-success mb-5">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0"><i class="fas fa-forward mr-2"></i> Co dál?</h3>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Nyní, když máte vytvořený účet, můžete pokračovat k dalším lekcím, kde se naučíte:</p>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card h-100 border-primary">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-edit mr-2 text-primary"></i> Vytvářet stránky a příspěvky</h5>
+                <p class="card-text">Naučíte se pracovat s editorem a vytvářet obsah.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100 border-success">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-paint-brush mr-2 text-success"></i> Upravovat vzhled</h5>
+                <p class="card-text">Přizpůsobíte si téma a design vašeho webu.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card h-100 border-info">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-puzzle-piece mr-2 text-info"></i> Pracovat s pluginy</h5>
+                <p class="card-text">Rozšíříte funkce svého webu pomocí doplňků.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="img01" loading="lazy">
+      <img class="modal-content" id="img01">
       <div id="caption"></div>
     </div>
-
-
   </main>
+
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
       © <span id="currentYear"></span> Copyright:
