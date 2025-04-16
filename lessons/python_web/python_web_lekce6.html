@@ -107,7 +107,380 @@
       </table>
     </div>
 
-    
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <h1 class="display-4 mb-4">Python Web Development: Flask Framework</h1>
+      <p class="lead">
+        V této lekci se seznámíme se základy webového frameworku Flask, naučíme se vytvořit jednoduchou webovou aplikaci a pochopíme základní koncepty a příkazy.
+      </p>
+      <hr class="my-4">
+      <p>Flask je lehký a flexibilní webový framework pro Python, který je ideální pro začátečníky i pokročilé vývojáře.</p>
+    </div>
+
+    <!-- Co je to Flask -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-question-circle mr-2"></i> Co je to Flask?</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <strong>Flask</strong> je mikro-webový framework napsaný v Pythonu. Označení "mikro" neznamená, že celá vaše webová aplikace musí být v jednom souboru, 
+              ale spíše to, že Flask se snaží udržet jádro jednoduché, ale přitom rozšiřitelné.
+            </p>
+            <p>Mezi hlavní výhody Flask patří:</p>
+            <ul>
+              <li>Jednoduchý a snadno pochopitelný kód</li>
+              <li>Minimalistický přístup s možností rozšíření</li>
+              <li>Ideální pro malé až středně velké projekty</li>
+              <li>Vynikající dokumentace</li>
+              <li>Aktivní komunita</li>
+              <li>Kompatibilita s mnoha knihovnami a nástroji</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/python_web/flask_logo.png" alt="Flask Logo" class="img-fluid rounded shadow-sm">
+            <div class="alert alert-info mt-3">
+              <strong>Věděli jste?</strong> Flask byl vytvořen jako aprílový žert v roce 2010, ale díky své jednoduchosti a eleganci se rychle stal jedním z nejoblíbenějších webových frameworků pro Python.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instalace a nastavení -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0"><i class="fas fa-download mr-2"></i> Instalace a nastavení</h2>
+      </div>
+      <div class="card-body">
+        <p>Než začneme pracovat s Flaskem, potřebujeme ho nainstalovat. Nejjednodušší způsob je použít správce balíčků <code>pip</code>:</p>
+        
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-bash">pip install flask</code></pre>
+        </div>
+        
+        <div class="alert alert-warning">
+          <i class="fas fa-exclamation-triangle mr-2"></i> Doporučujeme používat virtuální prostředí pro každý projekt, abyste oddělili závislosti pro různé projekty.
+        </div>
+        
+        <h4 class="mt-4">Vytvoření virtuálního prostředí</h4>
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-bash"># Vytvoření virtuálního prostředí
+python -m venv venv
+
+# Aktivace virtuálního prostředí (Windows)
+venv\Scripts\activate
+
+# Aktivace virtuálního prostředí (macOS/Linux)
+source venv/bin/activate
+
+# Nyní nainstalujte Flask
+pip install flask</code></pre>
+        </div>
+        
+        <p>Po instalaci můžeme ověřit, zda je Flask správně nainstalován:</p>
+        <div class="bg-dark p-3 rounded">
+          <pre><code class="language-python">import flask
+print(flask.__version__)</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- První Flask aplikace -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-code mr-2"></i> Vytvoření první Flask aplikace</h2>
+      </div>
+      <div class="card-body">
+        <p>Vytvoříme jednoduchý soubor <code>app.py</code> s minimální Flask aplikací:</p>
+        
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-python">from flask import Flask
+
+# Vytvoření instance Flask aplikace
+app = Flask(__name__)
+
+# Vytvoření routy pro hlavní stránku
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+# Spuštění aplikace při přímém spuštění tohoto souboru
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+        </div>
+        
+        <h4>Spuštění aplikace</h4>
+        <p>Aplikaci můžeme spustit přímo z příkazové řádky:</p>
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-bash">python app.py</code></pre>
+        </div>
+        
+        <p>Po spuštění aplikace bude dostupná na adrese <a href="http://127.0.0.1:5000/" target="_blank">http://127.0.0.1:5000/</a> (localhost na portu 5000).</p>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="alert alert-success">
+              <h5><i class="fas fa-check-circle mr-2"></i> Co se právě stalo?</h5>
+              <ol>
+                <li>Vytvořili jsme instanci Flask aplikace</li>
+                <li>Definovali jsme funkci <code>hello_world()</code> a propojili ji s URL cestou <code>'/'</code></li>
+                <li>Spustili jsme vývojový server s aktivovaným režimem ladění</li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card border-info">
+              <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Režim ladění (debug mode)</h5>
+              </div>
+              <div class="card-body">
+                <p>Parameter <code>debug=True</code> zajistí, že:</p>
+                <ul>
+                  <li>Server se automaticky restartuje při změnách kódu</li>
+                  <li>Zobrazí interaktivní debugger při chybách</li>
+                  <li><strong>Poznámka:</strong> V produkčním prostředí by měl být vypnutý!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Základní příkazy a koncepty -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-warning text-dark">
+        <h2 class="mb-0"><i class="fas fa-terminal mr-2"></i> Základní příkazy a koncepty</h2>
+      </div>
+      <div class="card-body">
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <h4>1. Routy (Routes)</h4>
+            <p>Routy určují, jaká funkce se má spustit při návštěvě konkrétní URL:</p>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python">@app.route('/about')
+def about():
+    return 'O nás'
+
+@app.route('/user/<username>')
+def show_user(username):
+    return f'Uživatel: {username}'</code></pre>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4>2. Dynamické routy</h4>
+            <p>Flask podporuje dynamické segmenty v URL cestách:</p>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python"># Cesta s parametrem (int)
+@app.route('/post/<int:post_id>')
+def show_post(post_id):
+    return f'Příspěvek číslo: {post_id}'
+
+# Cesta s parametrem (string)
+@app.route('/category/<category>')
+def show_category(category):
+    return f'Kategorie: {category}'</code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <h4>3. HTTP metody</h4>
+            <p>Ve výchozím nastavení reagují routy pouze na GET požadavky. Můžete specifikovat další metody:</p>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python">@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # zpracování přihlášení
+        return 'Zpracování přihlášení'
+    else:
+        # zobrazení přihlašovacího formuláře
+        return 'Přihlašovací formulář'</code></pre>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4>4. Templates (Šablony)</h4>
+            <p>Pro vykreslení HTML používá Flask šablonovací systém Jinja2:</p>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python">from flask import render_template
+
+@app.route('/hello/<name>')
+def hello(name):
+    return render_template('hello.html', name=name)</code></pre>
+            </div>
+            <p>Soubor <code>hello.html</code> (v adresáři <code>templates</code>):</p>
+            <div class="bg-dark p-3 rounded">
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello {{ name }}!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <h4>5. Zpracování formulářů</h4>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python">from flask import request
+
+@app.route('/form', methods=['GET', 'POST'])
+def form():
+    if request.method == 'POST':
+        name = request.form['name']
+        return f'Zdravím, {name}!'
+    return '''
+        &lt;form method="post"&gt;
+            &lt;input name="name"&gt;
+            &lt;button type="submit"&gt;Odeslat&lt;/button&gt;
+        &lt;/form&gt;
+    '''</code></pre>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h4>6. Redirecty a chyby</h4>
+            <div class="bg-dark p-3 rounded mb-3">
+              <pre><code class="language-python">from flask import redirect, url_for, abort
+
+@app.route('/redirect')
+def redirect_example():
+    # Přesměrování na jinou stránku
+    return redirect(url_for('hello_world'))
+
+@app.route('/error')
+def error_example():
+    # Vyvolání chyby 404
+    abort(404)
+
+# Vlastní stránka pro chybu 404
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Stránka nebyla nalezena", 404</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Praktický projekt -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-danger text-white">
+        <h2 class="mb-0"><i class="fas fa-project-diagram mr-2"></i> Praktický projekt: Todo aplikace</h2>
+      </div>
+      <div class="card-body">
+        <p>Pojďme vytvořit jednoduchou aplikaci pro správu úkolů, která bude demonstrovat základní koncepty:</p>
+        
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-python">from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+# Jednoduchá databáze úkolů (v produkci byste použili skutečnou databázi)
+todos = []
+
+@app.route('/')
+def index():
+    return render_template('index.html', todos=todos)
+
+@app.route('/add', methods=['POST'])
+def add():
+    todo = request.form.get('todo')
+    if todo:
+        todos.append({'task': todo, 'done': False})
+    return redirect(url_for('index'))
+
+@app.route('/complete/<int:index>')
+def complete(index):
+    if 0 <= index < len(todos):
+        todos[index]['done'] = not todos[index]['done']
+    return redirect(url_for('index'))
+
+@app.route('/delete/<int:index>')
+def delete(index):
+    if 0 <= index < len(todos):
+        del todos[index]
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+        </div>
+        
+        <p>Šablona <code>index.html</code> (v adresáři <code>templates</code>):</p>
+        <div class="bg-dark p-3 rounded mb-4">
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Todo Aplikace&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;h1&gt;Todo Aplikace&lt;/h1&gt;
+        
+        &lt;form action="/add" method="post" class="mb-4"&gt;
+            &lt;div class="input-group"&gt;
+                &lt;input type="text" name="todo" class="form-control" placeholder="Nový úkol"&gt;
+                &lt;div class="input-group-append"&gt;
+                    &lt;button class="btn btn-primary" type="submit"&gt;Přidat&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        
+        &lt;ul class="list-group"&gt;
+            {% for index, todo in enumerate(todos) %}
+            &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+                &lt;span {% if todo.done %}class="text-muted" style="text-decoration: line-through"{% endif %}&gt;
+                    {{ todo.task }}
+                &lt;/span&gt;
+                &lt;div&gt;
+                    &lt;a href="{{ url_for('complete', index=index) }}" class="btn btn-sm {% if todo.done %}btn-secondary{% else %}btn-success{% endif %}"&gt;
+                        {% if todo.done %}Označit jako nesplněné{% else %}Označit jako splněné{% endif %}
+                    &lt;/a&gt;
+                    &lt;a href="{{ url_for('delete', index=index) }}" class="btn btn-sm btn-danger"&gt;Smazat&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            {% endfor %}
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Shrnutí a další kroky -->
+    <div class="card mb-5 shadow-sm">        
+        <div class="alert alert-primary mt-4">
+          <h5><i class="fas fa-book mr-2"></i> Užitečné zdroje pro další studium:</h5>
+          <ul>
+            <li><a href="https://flask.palletsprojects.com/" target="_blank">Oficiální dokumentace Flask</a></li>
+            <li><a href="https://flask.palletsprojects.com/en/2.0.x/tutorial/" target="_blank">Oficiální tutoriál Flask</a></li>
+            <li><a href="https://www.fullstackpython.com/flask.html" target="_blank">Flask na Full Stack Python</a></li>
+            <li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">The Flask Mega-Tutorial</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Pracovní list - Pokemon API</h2>
+      <p class="lead">
+        Pomocí víže uvedeného tlačíkta si můžete stáhnout pracovní list k této lekci. Pracovní list obsahuje
+        úkoly, které si můžete vyzkoušet a procvičit.
+      </p>
+      <a href="/lessons/python_web/pracovni listy/lekce6/zadani_prac_listu.html" class="btn btn-success">Stáhnout
+        pracovní list</a>
+    </section>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>

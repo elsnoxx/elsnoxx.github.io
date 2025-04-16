@@ -1,0 +1,294 @@
+{
+  "questions": [
+    {
+      "question": "Jaké je hlavní město České republiky?",
+      "options": [
+        "Brno",
+        "Ostrava",
+        "Praha",
+        "Plzeň"
+      ],
+      "answer": "Praha"
+    },
+    {
+      "question": "Která řeka protéká Prahou?",
+      "options": [
+        "Labe",
+        "Vltava",
+        "Odra",
+        "Morava"
+      ],
+      "answer": "Vltava"
+    },
+    {
+      "question": "Který je nejvyšší vrchol České republiky?",
+      "options": [
+        "Praděd",
+        "Lysá hora",
+        "Sněžka",
+        "Klínovec"
+      ],
+      "answer": "Sněžka"
+    },
+    {
+      "question": "Ve kterém roce vznikla samostatná Česká republika?",
+      "options": [
+        "1989",
+        "1990",
+        "1993",
+        "1998"
+      ],
+      "answer": "1993"
+    },
+    {
+      "question": "Kdo byl první český prezident?",
+      "options": [
+        "Václav Havel",
+        "Václav Klaus",
+        "Miloš Zeman",
+        "Tomáš Garrigue Masaryk"
+      ],
+      "answer": "Václav Havel"
+    },
+    {
+      "question": "Který český panovník je nazýván Otcem vlasti?",
+      "options": [
+        "Karel IV.",
+        "Václav IV.",
+        "Jiří z Poděbrad",
+        "Přemysl Otakar II."
+      ],
+      "answer": "Karel IV."
+    },
+    {
+      "question": "Jaký je chemický vzorec vody?",
+      "options": [
+        "H2O",
+        "CO2",
+        "O2",
+        "CH4"
+      ],
+      "answer": "H2O"
+    },
+    {
+      "question": "Jaká je nejbližší hvězda k Zemi?",
+      "options": [
+        "Proxima Centauri",
+        "Polárka",
+        "Slunce",
+        "Sirius"
+      ],
+      "answer": "Slunce"
+    },
+    {
+      "question": "Kolik planet má naše sluneční soustava?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "8"
+    },
+    {
+      "question": "Kdo napsal knihu Babička?",
+      "options": [
+        "Karel Čapek",
+        "Božena Němcová",
+        "Karel Hynek Mácha",
+        "Alois Jirásek"
+      ],
+      "answer": "Božena Němcová"
+    },
+    {
+      "question": "Který český skladatel složil Mou vlast?",
+      "options": [
+        "Antonín Dvořák",
+        "Bedřich Smetana",
+        "Leoš Janáček",
+        "Josef Suk"
+      ],
+      "answer": "Bedřich Smetana"
+    },
+    {
+      "question": "Jaký sport hraje Jaromír Jágr?",
+      "options": [
+        "Fotbal",
+        "Hokej",
+        "Tenis",
+        "Basketball"
+      ],
+      "answer": "Hokej"
+    },
+    {
+      "question": "Kolik hráčů má fotbalový tým na hřišti?",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "11"
+    },
+    {
+      "question": "Který programovací jazyk je nejčastěji používán pro vývoj webových aplikací?",
+      "options": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript"
+      ],
+      "answer": "JavaScript"
+    },
+    {
+      "question": "Který operační systém vyvinula společnost Microsoft?",
+      "options": [
+        "macOS",
+        "Linux",
+        "Windows",
+        "Android"
+      ],
+      "answer": "Windows"
+    },
+    {
+      "question": "Kolik je 2^10 (2 na desátou)?",
+      "options": [
+        "512",
+        "1024",
+        "2048",
+        "4096"
+      ],
+      "answer": "1024"
+    },
+    {
+      "question": "Které číslo následuje v posloupnosti: 2, 3, 5, 7, 11, ...?",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "answer": "13"
+    },
+    {
+      "question": "Který film získal nejvíce Oscarů v historii?",
+      "options": [
+        "Titanic",
+        "Pán prstenů: Návrat krále",
+        "Ben Hur",
+        "Hvězdné války"
+      ],
+      "answer": "Titanic"
+    },
+    {
+      "question": "Kdo režíroval film 'Pelíšky'?",
+      "options": [
+        "Jiří Menzel",
+        "Jan Svěrák",
+        "Jan Hřebejk",
+        "Miloš Forman"
+      ],
+      "answer": "Jan Hřebejk"
+    },
+    {
+      "question": "Jaká je tradiční česká vánoční ryba?",
+      "options": [
+        "Losos",
+        "Pstruh",
+        "Kapr",
+        "Sumec"
+      ],
+      "answer": "Kapr"
+    },
+    {
+      "question": "Která surovina je hlavní součástí svíčkové omáčky?",
+      "options": [
+        "Hovězí maso",
+        "Vepřové maso",
+        "Kuřecí maso",
+        "Kachní maso"
+      ],
+      "answer": "Hovězí maso"
+    },
+    {
+      "question": "Kdo byl prvním člověkem ve vesmíru?",
+      "options": [
+        "Neil Armstrong",
+        "Jurij Gagarin",
+        "Vladimír Remek",
+        "Alan Shepard"
+      ],
+      "answer": "Jurij Gagarin"
+    },
+    {
+      "question": "Ve kterém roce byla založena Univerzita Karlova?",
+      "options": [
+        "1248",
+        "1348",
+        "1448",
+        "1548"
+      ],
+      "answer": "1348"
+    },
+    {
+      "question": "Který je největší savec na světě?",
+      "options": [
+        "Slon africký",
+        "Žirafa",
+        "Plejtvák obrovský",
+        "Gorila"
+      ],
+      "answer": "Plejtvák obrovský"
+    },
+    {
+      "question": "Kolik zubů má dospělý člověk?",
+      "options": [
+        "28",
+        "30",
+        "32",
+        "36"
+      ],
+      "answer": "32"
+    },
+    {
+      "question": "Kdo je autorem sochy Svobody v New Yorku?",
+      "options": [
+        "Auguste Rodin",
+        "Frédéric Bartholdi",
+        "Michelangelo",
+        "Pablo Picasso"
+      ],
+      "answer": "Frédéric Bartholdi"
+    },
+    {
+      "question": "Co je to HTML?",
+      "options": [
+        "Programovací jazyk",
+        "Značkovací jazyk pro tvorbu webových stránek",
+        "Operační systém",
+        "Grafický editor"
+      ],
+      "answer": "Značkovací jazyk pro tvorbu webových stránek"
+    },
+    {
+      "question": "Který prvek má chemickou značku Au?",
+      "options": [
+        "Stříbro",
+        "Železo",
+        "Zlato",
+        "Hliník"
+      ],
+      "answer": "Zlato"
+    },
+    {
+      "question": "Jaká je nejdelší řeka světa?",
+      "options": [
+        "Amazonka",
+        "Nil",
+        "Mississippi",
+        "Jang-c'-ťiang"
+      ],
+      "answer": "Nil"
+    }
+  ]
+}

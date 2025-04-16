@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Citáty od {{ author }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'base.html' %}
+    
+    <div class="container mt-4">
+        <h1>Citáty od {{ author }}</h1>
+        <a href="{{ url_for('index') }}" class="btn btn-primary mb-3">Zpět na seznam citátů</a>
+        
+        {% if quotes %}
+            <ul class="list-group">
+                {% for quote in quotes %}
+                    <li class="list-group-item">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">{{ quote.text }}</p>
+                            <footer class="blockquote-footer">{{ quote.author }}</footer>
+                        </blockquote>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Žádné citáty od tohoto autora nebyly nalezeny.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
