@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Wordpress lekce 1">
+  <meta name="description" content="WordPress: Tvorba blogové stránky krok za krokem">
   <meta name="google-adsense-account" content="ca-pub-7668654631963540">
-  <title>Wordpress</title>
+  <title>WordPress - Tvorba blogu</title>
 
   <!-- Potrebne skripty -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -90,7 +90,7 @@
               class="btn btn-primary">Předchozí
               lekce</button>
             <button id="right" class="btn btn-primary" onclick="location.href = '/lessons/wordpress/wordpress2.html';"
-              class="btn btn-primary">Následují
+              class="btn btn-primary">Následující
               lekce</button>
           </td>
           <td>
@@ -101,58 +101,538 @@
     </div>
 
     <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
-      <h1 class="display-4 mb-4">WordPress - Lekce 1</h1>
+      <h1 class="display-4 mb-4">Tvorba blogové stránky ve WordPressu</h1>
       <h4><i class="fas fa-book-open mr-2"></i> Co se naučíme v této lekci</h4>
-      <p>V této lekci se seznámíme s WordPressem, jeho historií a základními funkcemi. Naučíme se také, jak si založit
-        účet na WordPress.com a vytvořit první web.</p>
+      <p>V této lekci si ukážeme, jak vytvořit vlastní blogovou stránku ve WordPressu krok za krokem. Projdeme si
+        založení účtu, nastavení vzhledu, vytvoření prvních příspěvků a ukážeme si základní funkce a úpravy.</p>
     </div>
 
-
+    <!-- SEKCE 1: ZALOŽENÍ ÚČTU -->
     <div class="card mb-5 border-primary shadow">
       <div class="card-header bg-primary text-white">
-        <h2 class="mb-0"><i class="fas fa-desktop mr-2"></i> Zobrazení stránky ve WordPressu</h2>
+        <h2 class="mb-0"><i class="fas fa-user-plus mr-2"></i> Krok 1: Založení účtu na WordPress.com</h2>
       </div>
       <div class="card-body">
         <p class="lead">
-          Orientace v administračním rozhraní WordPressu je jednoduchá díky přehlednému menu a ikonám:
+          Prvním krokem k vytvoření blogu je založení účtu na platformě WordPress.com:
         </p>
 
         <div class="row">
-          <div class="col-md-8 shadow-sm bg-light p-4 center">
-            <div class="bg-light mb-3 overflow-hidden odstavec">
-                <h5><i class="fas fa-home text-primary mr-2"></i> Ikona domečku</h5>
-                <p>
-                  Při kliknutí na ikonu domečku <i class="fas fa-home"></i> se dostanete na hlavní stránku WordPressu,
-                  kde se nachází všechny stránky a články, které jste vytvořili. Na hlavní stránce najdete také
-                  ikonu pro přidání nového článku nebo stránky.
-                </p>
-            </div>
-        
-            <div class="bg-light overflow-hidden odstavec">
-                <h5><i class="fab fa-wordpress text-primary mr-2"></i> Ikona WordPressu</h5>
-                <p>
-                  Pokud kliknete na ikonu černého kolečka s bílým písmenem W <i class="fab fa-wordpress"></i>,
-                  dostanete se do administrace WordPressu, kde můžete upravovat všechny stránky a články,
-                  spravovat pluginy, měnit vzhled a nastavení celého webu.
-                </p>
+          <div class="col-md-8">
+            <ol class="mb-4">
+              <li class="mb-2">Navštivte stránku <a href="https://wordpress.com" target="_blank">WordPress.com</a></li>
+              <li class="mb-2">Klikněte na tlačítko <span class="badge badge-success">Začít</span> nebo <span
+                  class="badge badge-success">Get Started</span></li>
+              <li class="mb-2">Vyplňte svou e-mailovou adresu, uživatelské jméno a heslo</li>
+              <li class="mb-2">Vyberte doménu pro svůj blog (např. mojblog.wordpress.com)</li>
+              <li class="mb-2">Zvolte plán (pro začátek je vhodný bezplatný plán)</li>
+              <li>Potvrďte svůj e-mail kliknutím na potvrzovací odkaz</li>
+            </ol>
+            <div class="alert alert-info" role="alert">
+              <i class="fas fa-info-circle mr-2"></i> WordPress.com nabízí bezplatné hostování s omezenými funkcemi,
+              které je ideální pro začátečníky.
             </div>
           </div>
-        
           <div class="col-lg-4">
             <figure class="figure">
-              <img src="/img/wordpress/lekce1/sidebar.png" alt="WordPress navigační panel"
+              <img src="/img/wordpress/lekce1/signup.png" alt="Registrační formulář WordPress"
                 class="figure-img img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-center">Navigační panel WordPressu s hlavními ovládacími prvky</figcaption>
+              <figcaption class="figure-caption text-center">Registrační formulář na WordPress.com</figcaption>
             </figure>
           </div>
         </div>
       </div>
     </div>
 
-    
+    <!-- SEKCE 2: DASHBOARD A PRVNÍ SEZNÁMENÍ -->
+    <div class="card mb-5 border-success shadow">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0"><i class="fas fa-tachometer-alt mr-2"></i> Krok 2: Orientace v administraci</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Po přihlášení se dostanete do administračního rozhraní WordPress, kde najdete všechny potřebné nástroje pro
+          správu blogu:
+        </p>
 
+        <div class="row">
+          <div class="col-md-8 shadow-sm bg-light p-4">
+            <div class="bg-light mb-3 overflow-hidden">
+              <h5><i class="fas fa-home text-success mr-2"></i> Dashboard</h5>
+              <p>
+                Úvodní obrazovka poskytuje rychlý přehled o vašem blogu - statistiky návštěvnosti, návrhy pro vylepšení
+                a přístup k příspěvkům.
+              </p>
+            </div>
 
+            <div class="bg-light mb-3 overflow-hidden">
+              <h5><i class="fas fa-edit text-success mr-2"></i> Příspěvky</h5>
+              <p>
+                Sekce pro vytváření a správu článků na vašem blogu. Zde se nachází přehled všech příspěvků, možnost
+                vytvářet
+                nové a spravovat kategorie a štítky.
+              </p>
+            </div>
 
+            <div class="bg-light mb-3 overflow-hidden">
+              <h5><i class="fas fa-image text-success mr-2"></i> Média</h5>
+              <p>
+                Knihovna pro nahrávání a správu obrázků, videí a dalších souborů, které chcete použít na svém blogu.
+              </p>
+            </div>
+
+            <div class="bg-light overflow-hidden">
+              <h5><i class="fas fa-paint-brush text-success mr-2"></i> Vzhled</h5>
+              <p>
+                Sekce pro úpravu vzhledu blogu - výběr šablony, úprava barev, hlavičky, patičky a dalších vizuálních
+                prvků.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <figure class="figure">
+              <img src="/img/wordpress/lekce1/dashboard.png" alt="WordPress administrace"
+                class="figure-img img-fluid rounded shadow-sm">
+              <figcaption class="figure-caption text-center">Administrační rozhraní WordPressu</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 3: VYTVOŘENÍ PRVNÍHO PŘÍSPĚVKU -->
+    <div class="card mb-5 border-danger shadow">
+      <div class="card-header bg-danger text-white">
+        <h2 class="mb-0"><i class="fas fa-pencil-alt mr-2"></i> Krok 3: Vytvoření prvního příspěvku</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Každý blog začíná svým prvním příspěvkem. Pojďme si ukázat, jak jej vytvořit:
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-md-7">
+            <ol>
+              <li class="mb-3">V levém menu klikněte na <strong>Příspěvky</strong> a poté na <strong>Přidat
+                  nový</strong></li>
+              <li class="mb-3">Zadejte název příspěvku (např. "Můj první blogový příspěvek")</li>
+              <li class="mb-3">Do textového editoru napište obsah svého příspěvku
+                <ul class="mt-2">
+                  <li>Můžete přidávat nadpisy, odstavce, seznamy</li>
+                  <li>Vkládat obrázky pomocí tlačítka "Přidat média"</li>
+                  <li>Formátovat text pomocí nástrojové lišty</li>
+                </ul>
+              </li>
+              <li class="mb-3">Přidejte kategorie a štítky v pravém postranním panelu</li>
+              <li class="mb-3">Nastavte náhledový obrázek (featured image)</li>
+              <li>Klikněte na tlačítko <span class="badge badge-primary">Publikovat</span> pro zveřejnění příspěvku</li>
+            </ol>
+          </div>
+          <div class="col-md-5">
+            <figure class="figure">
+              <img src="/img/wordpress/lekce1/new-post.png" alt="Editor příspěvků WordPress"
+                class="figure-img img-fluid rounded shadow-sm">
+              <figcaption class="figure-caption text-center">Editor příspěvků s Gutenberg bloky</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <i class="fas fa-lightbulb mr-2"></i> <strong>Tip:</strong> WordPress používá blokový editor Gutenberg, který
+          umožňuje snadnou tvorbu
+          komplexního obsahu pomocí různých typů bloků (text, obrázky, galerie, videa, citace, atd.).
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <h5 class="text-danger"><i class="fas fa-cube mr-2"></i> Základní typy bloků v editoru:</h5>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h6 class="card-title"><i class="fas fa-paragraph text-primary mr-2"></i> Odstavec</h6>
+                    <p class="card-text small">Základní blok pro text a formátování.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h6 class="card-title"><i class="fas fa-heading text-success mr-2"></i> Nadpis</h6>
+                    <p class="card-text small">Pro vytváření hierarchie nadpisů H2-H6.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h6 class="card-title"><i class="fas fa-image text-info mr-2"></i> Obrázek</h6>
+                    <p class="card-text small">Pro nahrání a vložení obrázků.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h6 class="card-title"><i class="fas fa-list text-warning mr-2"></i> Seznam</h6>
+                    <p class="card-text small">Pro vytvoření odrážkového nebo číslovaného seznamu.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 4: VYTVOŘENÍ A NASTAVENÍ STRÁNEK -->
+    <div class="card mb-5 border-info shadow">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-file-alt mr-2"></i> Krok 4: Vytvoření základních stránek</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Každý blog potřebuje několik základních stránek, které poskytnou čtenářům důležité informace.
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-md-7">
+            <h5>Postup vytvoření stránky:</h5>
+            <ol>
+              <li class="mb-2">V levém menu klikněte na <strong>Stránky</strong> a poté <strong>Přidat novou</strong>
+              </li>
+              <li class="mb-2">Zadejte název stránky (např. "O mně", "Kontakt")</li>
+              <li class="mb-2">Do editoru vložte obsah stránky</li>
+              <li class="mb-2">Přidejte obrázky nebo další média dle potřeby</li>
+              <li>Klikněte na <strong>Publikovat</strong> pro zveřejnění stránky</li>
+            </ol>
+          </div>
+          <div class="col-md-5">
+            <div class="card bg-light">
+              <div class="card-header">
+                <h5 class="mb-0">Vytvořte tyto stránky:</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Úvodní stránka
+                  <span class="badge badge-primary badge-pill">Povinné</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  O mně / O blogu
+                  <span class="badge badge-primary badge-pill">Povinné</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Kontakt
+                  <span class="badge badge-primary badge-pill">Povinné</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Kategorie příspěvků
+                  <span class="badge badge-secondary badge-pill">Volitelné</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <h5><i class="fas fa-tasks mr-2"></i> Úkol pro studenty:</h5>
+          <p>Vytvořte všechny povinné stránky pro váš blog. Na stránce "O mně" uveďte informace o sobě a účelu blogu.
+            Na kontaktní stránce vytvořte kontaktní formulář pomocí bloku "Formulář" nebo "Contact Form".</p>
+          <p><strong>Čas:</strong> 20 minut</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 5: PŘÍSPĚVKY A OBSAH -->
+    <div class="card mb-5 border-warning shadow">
+      <div class="card-header bg-warning text-dark">
+        <h2 class="mb-0"><i class="fas fa-blog mr-2"></i> Krok 5: Vytvoření obsahu blogu</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Obsah je nejdůležitější součástí každého úspěšného blogu. V této části vytvoříte několik příspěvků.
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h5>Požadavky na obsah:</h5>
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>Typ obsahu</th>
+                  <th>Minimální počet</th>
+                  <th>Popis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fas fa-pencil-alt text-primary mr-2"></i> Příspěvky</td>
+                  <td class="text-center">3</td>
+                  <td>Vytvořte minimálně tři příspěvky na různá témata související s vaším blogem</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-image text-success mr-2"></i> Obrázky</td>
+                  <td class="text-center">5</td>
+                  <td>Každý příspěvek by měl obsahovat alespoň jeden obrázek, úvodní stránka také</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-tag text-danger mr-2"></i> Kategorie</td>
+                  <td class="text-center">2</td>
+                  <td>Rozdělte příspěvky do alespoň dvou odlišných kategorií</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-light h-100">
+              <div class="card-body">
+                <h5><i class="fas fa-lightbulb text-warning"></i> Tipy pro dobrý obsah:</h5>
+                <ul class="pl-3">
+                  <li>Používejte zajímavé, poutavé nadpisy</li>
+                  <li>Rozdělte text do odstavců pro lepší čitelnost</li>
+                  <li>Využívejte obrázky pro oživení obsahu</li>
+                  <li>Přidejte relevantní odkazy na zdroje</li>
+                  <li>Ukončete příspěvek výzvou k akci nebo otázkou</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <h5><i class="fas fa-tasks mr-2"></i> Úkol pro studenty:</h5>
+          <p>Vytvořte minimálně tři příspěvky na svém blogu. První příspěvek může být představení blogu,
+            zbylé dva by se měly týkat vašeho zvoleného tématu. Nezapomeňte každý příspěvek zařadit do kategorie,
+            přidat náhledový obrázek a použít různé formátovací prvky.</p>
+          <p><strong>Čas:</strong> 30 minut</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 6: NAVIGACE A MENU -->
+    <div class="card mb-5 border-primary shadow">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-bars mr-2"></i> Krok 6: Nastavení menu a navigace</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Správně nastavená navigace pomáhá čtenářům snadno se orientovat na vašem blogu.
+        </p>
+
+        <div class="row">
+          <div class="col-md-7">
+            <h5>Postup vytvoření menu:</h5>
+            <ol>
+              <li class="mb-2">V administraci přejděte na <strong>Vzhled</strong> → <strong>Menu</strong></li>
+              <li class="mb-2">Vytvořte nové menu, pokud ještě není vytvořeno</li>
+              <li class="mb-2">V levé části vyberte stránky nebo kategorie, které chcete přidat do menu</li>
+              <li class="mb-2">Klikněte na tlačítko <strong>Přidat do menu</strong></li>
+              <li class="mb-2">Uspořádejte položky přetažením (drag and drop)</li>
+              <li class="mb-2">V sekci <strong>Umístění menu</strong> vyberte <strong>Primární menu</strong></li>
+              <li>Klikněte na tlačítko <strong>Uložit menu</strong></li>
+            </ol>
+          </div>
+          <div class="col-md-5">
+            <figure class="figure">
+              <img src="/img/wordpress/lekce1/menu-settings.png" alt="Nastavení menu WordPress"
+                class="figure-img img-fluid rounded shadow-sm">
+              <figcaption class="figure-caption text-center">Editor menu ve WordPressu</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="alert alert-primary mt-4">
+          <h5><i class="fas fa-tasks mr-2"></i> Úkol pro studenty:</h5>
+          <p>Vytvořte přehledné hlavní menu, které bude obsahovat odkaz na úvodní stránku, stránku s příspěvky,
+            všechny vytvořené stránky a odkazy na kategorie. Menu uspořádejte logicky a přehledně.</p>
+          <p><strong>Čas:</strong> 15 minut</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 7: WIDGETY A POSTRANNÍ PANEL -->
+    <div class="card mb-5 border-success shadow">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0"><i class="fas fa-th-large mr-2"></i> Krok 7: Přidání widgetů a doplňků</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Widgety jsou malé funkční bloky, které můžete přidat do postranního panelu nebo patičky vašeho webu.
+        </p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Užitečné widgety pro blog:</h5>
+            <div class="list-group mb-4">
+              <div class="list-group-item list-group-item-action">
+                <i class="fas fa-search text-primary mr-2"></i> <strong>Vyhledávání</strong> - umožňuje čtenářům hledat
+                obsah
+              </div>
+              <div class="list-group-item list-group-item-action">
+                <i class="fas fa-list text-success mr-2"></i> <strong>Kategorie</strong> - zobrazuje seznam kategorií
+              </div>
+              <div class="list-group-item list-group-item-action">
+                <i class="fas fa-clock text-info mr-2"></i> <strong>Nejnovější příspěvky</strong> - seznam posledních
+                článků
+              </div>
+              <div class="list-group-item list-group-item-action">
+                <i class="fas fa-tags text-warning mr-2"></i> <strong>Oblak štítků</strong> - vizuální zobrazení štítků
+              </div>
+              <div class="list-group-item list-group-item-action">
+                <i class="fas fa-user text-danger mr-2"></i> <strong>O mně</strong> - krátký popis autora s fotografií
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>Postup přidání widgetů:</h5>
+            <ol>
+              <li class="mb-2">V administraci klikněte na <strong>Vzhled</strong> → <strong>Widgety</strong></li>
+              <li class="mb-2">V levé části najdete dostupné widgety</li>
+              <li class="mb-2">Vyberte widget a přetáhněte ho do požadované oblasti (sidebar, patička, apod.)</li>
+              <li class="mb-2">Nastavte widget podle potřeby (název, počet zobrazených položek, apod.)</li>
+              <li>Klikněte na tlačítko <strong>Uložit</strong></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="alert alert-success mt-4">
+          <h5><i class="fas fa-tasks mr-2"></i> Úkol pro studenty:</h5>
+          <p>Přidejte do postranního panelu vašeho blogu alespoň tři různé widgety, které budou užitečné pro vaše
+            čtenáře.
+            Ujistěte se, že widgety jsou logicky uspořádány a mají vhodná nastavení.</p>
+          <p><strong>Čas:</strong> 15 minut</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEKCE 8: FINÁLNÍ KONTROLA A PREZENTACE -->
+    <div class="card mb-5 border-secondary shadow">
+      <div class="card-header bg-secondary text-white">
+        <h2 class="mb-0"><i class="fas fa-check-circle mr-2"></i> Krok 8: Finální úpravy a prezentace projektu</h2>
+      </div>
+      <div class="card-body">
+        <p class="lead">
+          Před dokončením projektu je důležité zkontrolovat všechny části vašeho blogu a zajistit, že vše funguje
+          správně.
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-lg-6 col-md-12">
+            <h5><i class="fas fa-clipboard-check mr-2"></i> Kontrolní seznam:</h5>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check1">
+                  <label for="check1" class="mb-0">Fungující úvodní stránka s poutavým obsahem</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check2">
+                  <label for="check2" class="mb-0">Stránka "O mně" s relevantními informacemi</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check3">
+                  <label for="check3" class="mb-0">Kontaktní stránka s funkčním formulářem</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check4">
+                  <label for="check4" class="mb-0">Minimálně 3 publikované příspěvky s obrázky</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check5">
+                  <label for="check5" class="mb-0">Příspěvky rozdělené do kategorií</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check6">
+                  <label for="check6" class="mb-0">Přehledné hlavní menu s logickou strukturou</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check7">
+                  <label for="check7" class="mb-0">Postranní panel s widgety</label>
+                </li>
+                <li class="list-group-item d-flex align-items-center">
+                  <input type="checkbox" class="mr-2" id="check8">
+                  <label for="check8" class="mb-0">Konzistentní vzhled a barevné schéma</label>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 col-md-12">
+            <h5><i class="fas fa-share-alt mr-2"></i> Prezentace projektu:</h5>
+            <p>Na konci lekce představíte svůj blog spolužákům a lektorovi. Připravte si krátkou prezentaci, která bude obsahovat:</p>
+            <ul>
+              <li>Název a téma blogu</li>
+              <li>Cílovou skupinu čtenářů</li>
+              <li>Ukázku nejzajímavějšího obsahu</li>
+              <li>Co bylo při tvorbě nejnáročnější</li>
+              <li>Jaké další vylepšení plánujete do budoucna</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div class="alert alert-secondary mt-4">
+          <h5><i class="fas fa-tasks mr-2"></i> Závěrečný úkol:</h5>
+          <p>Projděte všechny body kontrolního seznamu a zajistěte, že váš blog splňuje všechny požadavky.
+            Připravte si tříminutovou prezentaci vašeho blogu.</p>
+          <p><strong>Čas:</strong> 15 minut</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HODNOCENÍ PROJEKTU -->
+    <div class="card mb-5 border-dark">
+      <div class="card-header bg-dark text-white">
+        <h2 class="mb-0"><i class="fas fa-star mr-2"></i> Hodnotící kritéria projektu</h2>
+      </div>
+      <div class="card-body">
+        <p>Váš WordPress blog bude hodnocen podle následujících kritérií:</p>
+
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>Kritérium</th>
+              <th>Popis</th>
+              <th class="text-center">Bodů (max)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-paint-brush text-primary mr-2"></i> Vzhled a design</td>
+              <td>Vizuální konzistence, přehlednost, čitelnost, barevné sladění</td>
+              <td class="text-center">20</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-file-alt text-success mr-2"></i> Obsah</td>
+              <td>Kvalita textů, relevance k tématu, formátování, použití multimédií</td>
+              <td class="text-center">30</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-sitemap text-info mr-2"></i> Struktura</td>
+              <td>Logické uspořádání menu, stránek, kategorií a widgetů</td>
+              <td class="text-center">20</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-cog text-warning mr-2"></i> Funkcionalita</td>
+              <td>Fungující odkazy, formuláře, widgety a další interaktivní prvky</td>
+              <td class="text-center">20</td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-rocket text-danger mr-2"></i> Kreativita a originalita</td>
+              <td>Osobitý přístup, zajímavé nápady nad rámec základních požadavků</td>
+              <td class="text-center">10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="alert alert-dark mt-4">
+          <h5><i class="fas fa-trophy mr-2"></i> Bonusové body:</h5>
+          <p class="mb-0">Můžete získat až 10 bonusových bodů za nadstandardní prvky jako SEO optimalizace,
+            napojení na sociální sítě, vlastní logo, pokročilé formátování nebo implementaci doplňků.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -169,9 +649,8 @@
           onclick="location.href = '/lessons/wordpress/wordpress2.html';">Následující lekce</button>
       </div>
     </div>
-
-
   </main>
+
   <footer class="footer">
     <div class="container" style="background-color: rgba(0, 0, 0, 0.025); text-align: center;">
       © <span id="currentYear"></span> Copyright:
@@ -187,4 +666,3 @@
 </body>
 
 </html>
-```
