@@ -154,17 +154,16 @@ Tato vyhytávka se skvěle hodní na nalezení chybějících věcí na webové 
     - pro django, flask a fastapi predstavit na projekto TODO aplikace
         - viz url https://github.com/patrickloeber/python-fun/tree/master/webapps
         - upravit ale zdojoveko kody bez db spise pracovat jako s lokanim souborem a ukladanim
-
-
-    - lekce 5
-        - prace s json soubory, a jejich využiti pri tvorbu webove aplikace
-        - prace s json souborem a http odpovedmi pomoci request knihovny
-        - ukazka s reques popmoci weather api https://api.weatherapi.com/v1/current.json?key=939716ed2d204c008ef151039252603&q=Prague
         
     - lekce 6
+        - prvni web - TO DO aplikaci
+        - DU tvorba webu o nich, nejaky formulár alespon 3 stranky atd.
+        
+
+
+    - Veči co zahrnout do lekci
         - navrhove vzory pri tvorbe webu MVC atd.
         - zkusit si vytvorit jednoduchý webserver v pythonu
-    - lekce 7
         - databaza a jejich vyuzit v pythonu
         - zkusit si nainstalovat sqlexpres server
     

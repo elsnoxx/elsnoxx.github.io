@@ -139,7 +139,7 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <img src="/img/python_web/flask_logo.png" alt="Flask Logo" class="img-fluid rounded shadow-sm">
+            <img src="/img/python_web/flask_logo.svg" alt="Flask Logo" class="img-fluid rounded shadow-sm">
             <div class="alert alert-info mt-3">
               <strong>Věděli jste?</strong> Flask byl vytvořen jako aprílový žert v roce 2010, ale díky své jednoduchosti a eleganci se rychle stal jedním z nejoblíbenějších webových frameworků pro Python.
             </div>
@@ -370,92 +370,7 @@ def page_not_found(e):
       </div>
     </div>
 
-    <!-- Praktický projekt -->
-    <div class="card mb-5 shadow-sm">
-      <div class="card-header bg-danger text-white">
-        <h2 class="mb-0"><i class="fas fa-project-diagram mr-2"></i> Praktický projekt: Todo aplikace</h2>
-      </div>
-      <div class="card-body">
-        <p>Pojďme vytvořit jednoduchou aplikaci pro správu úkolů, která bude demonstrovat základní koncepty:</p>
-        
-        <div class="bg-dark p-3 rounded mb-4">
-          <pre><code class="language-python">from flask import Flask, render_template, request, redirect, url_for
-
-app = Flask(__name__)
-
-# Jednoduchá databáze úkolů (v produkci byste použili skutečnou databázi)
-todos = []
-
-@app.route('/')
-def index():
-    return render_template('index.html', todos=todos)
-
-@app.route('/add', methods=['POST'])
-def add():
-    todo = request.form.get('todo')
-    if todo:
-        todos.append({'task': todo, 'done': False})
-    return redirect(url_for('index'))
-
-@app.route('/complete/<int:index>')
-def complete(index):
-    if 0 <= index < len(todos):
-        todos[index]['done'] = not todos[index]['done']
-    return redirect(url_for('index'))
-
-@app.route('/delete/<int:index>')
-def delete(index):
-    if 0 <= index < len(todos):
-        del todos[index]
-    return redirect(url_for('index'))
-
-if __name__ == '__main__':
-    app.run(debug=True)</code></pre>
-        </div>
-        
-        <p>Šablona <code>index.html</code> (v adresáři <code>templates</code>):</p>
-        <div class="bg-dark p-3 rounded mb-4">
-          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Todo Aplikace&lt;/title&gt;
-    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="container mt-5"&gt;
-        &lt;h1&gt;Todo Aplikace&lt;/h1&gt;
-        
-        &lt;form action="/add" method="post" class="mb-4"&gt;
-            &lt;div class="input-group"&gt;
-                &lt;input type="text" name="todo" class="form-control" placeholder="Nový úkol"&gt;
-                &lt;div class="input-group-append"&gt;
-                    &lt;button class="btn btn-primary" type="submit"&gt;Přidat&lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
-        
-        &lt;ul class="list-group"&gt;
-            {% for index, todo in enumerate(todos) %}
-            &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
-                &lt;span {% if todo.done %}class="text-muted" style="text-decoration: line-through"{% endif %}&gt;
-                    {{ todo.task }}
-                &lt;/span&gt;
-                &lt;div&gt;
-                    &lt;a href="{{ url_for('complete', index=index) }}" class="btn btn-sm {% if todo.done %}btn-secondary{% else %}btn-success{% endif %}"&gt;
-                        {% if todo.done %}Označit jako nesplněné{% else %}Označit jako splněné{% endif %}
-                    &lt;/a&gt;
-                    &lt;a href="{{ url_for('delete', index=index) }}" class="btn btn-sm btn-danger"&gt;Smazat&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-            {% endfor %}
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-        </div>
-        
-      </div>
-    </div>
+    
 
     <!-- Shrnutí a další kroky -->
     <div class="card mb-5 shadow-sm">        
@@ -472,12 +387,12 @@ if __name__ == '__main__':
     </div>
 
     <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
-      <h2 class="h3 text-warning mb-4">Pracovní list - Pokemon API</h2>
+      <h2 class="h3 text-warning mb-4">Pracovní list - ToDo web</h2>
       <p class="lead">
         Pomocí víže uvedeného tlačíkta si můžete stáhnout pracovní list k této lekci. Pracovní list obsahuje
         úkoly, které si můžete vyzkoušet a procvičit.
       </p>
-      <a href="/lessons/python_web/pracovni listy/lekce6/zadani_prac_listu.html" class="btn btn-success">Stáhnout
+      <a href="/lessons/python_web/pracovni listy/lekce6/pracovni-list-template/todo-app-template.zip" class="btn btn-success" download>Stáhnout
         pracovní list</a>
     </section>
 
