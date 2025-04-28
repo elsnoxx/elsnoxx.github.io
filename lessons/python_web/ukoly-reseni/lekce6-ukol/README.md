@@ -1,11 +1,11 @@
-# Osobní web – Python Flask projekt
+# 🌐 Osobní web – Python Flask projekt
 
-## Zadání
+## 🎯 Cíl
+Vytvoř jednoduchý osobní web pomocí frameworku **Flask**. Web bude obsahovat několik stránek, využívat šablony a statické soubory.
 
-Vytvoř jednoduchý osobní web pomocí frameworku Flask. Web bude obsahovat několik stránek a bude využívat šablony a statické soubory.
+---
 
-### Požadavky:
-
+## 🔧 Požadavky
 - Použij Python a Flask.
 - Web musí obsahovat minimálně tyto stránky:
   - **Domovská stránka** (`home.html`)
@@ -13,19 +13,20 @@ Vytvoř jednoduchý osobní web pomocí frameworku Flask. Web bude obsahovat ně
   - **Kontakt** (`contact.html`)
 - Každá stránka bude mít vlastní šablonu v adresáři `templates/`.
 - Na stránkách použij obrázky z adresáře `static/img/`.
-- Vytvoř jednoduchou navigaci mezi stránkami.
-- Využij základní styly (můžeš použít Bootstrap nebo vlastní CSS).
+- Vytvoř jednoduchou **navigaci** mezi stránkami.
+- Využij základní styly (můžeš použít **Bootstrap** nebo vlastní CSS).
 - Spuštění aplikace bude zajištěno souborem `app.py`.
-
-### Bonus:
-
-- Přidej další stránku dle vlastního výběru (např. projekty, zájmy, galerie...).
-- Přidej kontaktní formulář (odesílání nemusí být funkční).
-- Použij dědičnost šablon (base template).
 
 ---
 
-## Struktura projektu
+## 🌟 Bonusové úkoly
+- Přidej další stránku dle vlastního výběru (např. projekty, zájmy, galerie...).
+- Přidej **kontaktní formulář** (odesílání nemusí být funkční).
+- Použij **dědičnost šablon** (base template).
+
+---
+
+## 📁 Struktura projektu
 
 ```
 lekce6-ukol/
@@ -40,26 +41,23 @@ lekce6-ukol/
     ├── about.html
     ├── contact.html
 ```
+
 ---
 
-## Jak spustit aplikaci
+## ▶️ Jak spustit aplikaci
 
 1. Nainstaluj Flask (např. `pip install flask`).
 2. Spusť aplikaci příkazem:
-
    ```
    python app.py
    ```
-
-3. Otevři webový prohlížeč a přejdi na adresu `http://localhost:5000`.
+3. Otevři webový prohlížeč a přejdi na adresu [http://localhost:5000](http://localhost:5000).
 
 ---
 
-## Inspirace
+## 💡 Inspirace
 
 - [Flask dokumentace](https://flask.palletsprojects.com/)
 - [Bootstrap](https://getbootstrap.com/)
-
----
 
 > Projekt slouží k procvičení základů práce s Flaskem, šablonami a statickými soubory.
