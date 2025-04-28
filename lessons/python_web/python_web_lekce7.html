@@ -94,10 +94,10 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Předchozí
+              onclick="location.href = '/lessons/python_web/python_web_lekce6.html';" class="btn btn-primary">Předchozí
               lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce5.html';" class="btn btn-primary">Následují
+              onclick="location.href = '/lessons/python_web/python_web_lekce8.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -106,8 +106,268 @@
         </tr>
       </table>
     </div>
-
     
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <h1 class="display-4 mb-4">Python Web Development: Flask Framework</h1>
+      <p class="lead">
+        V této lekci se seznámíme se základy webového frameworku Flask, naučíme se vytvořit jednoduchou webovou aplikaci a pochopíme základní koncepty a příkazy.
+      </p>
+      <hr class="my-4">
+      <p>Flask je lehký a flexibilní webový framework pro Python, který je ideální pro začátečníky i pokročilé vývojáře.</p>
+    </div>
+
+    <!-- Co je to Flask -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-question-circle mr-2"></i> Co je to Flask?</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-8">
+            <p>
+              <strong>Flask</strong> je mikro-webový framework napsaný v Pythonu. Označení "mikro" neznamená, že celá vaše webová aplikace musí být v jednom souboru,
+              ale spíše to, že Flask se snaží udržet jádro jednoduché, ale přitom rozšiřitelné.
+            </p>
+            <p>Mezi hlavní výhody Flask patří:</p>
+            <ul>
+              <li>Jednoduchý a snadno pochopitelný kód</li>
+              <li>Minimalistický přístup s možností rozšíření</li>
+              <li>Ideální pro malé až středně velké projekty</li>
+              <li>Vynikající dokumentace</li>
+              <li>Aktivní komunita</li>
+              <li>Kompatibilita s mnoha knihovnami a nástroji</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="/img/python_web/flask_logo.svg" alt="Flask Logo" class="img-fluid rounded shadow-sm">
+            <div class="alert alert-info mt-3">
+              <strong>Věděli jste?</strong> Flask byl vytvořen jako aprílový žert v roce 2010, ale díky své jednoduchosti a eleganci se rychle stal jedním z nejoblíbenějších webových frameworků pro Python.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-secondary text-white">
+        <h2 class="mb-0"><i class="fas fa-file-code mr-2"></i> Práce s HTML šablonami ve Flasku (Jinja2)</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          Flask používá šablonovací systém <strong>Jinja2</strong> pro generování dynamických HTML stránek. Šablony jsou
+          běžně ukládány do složky <code>templates</code> v kořenovém adresáři projektu.
+        </p>
+        <h5>Struktura projektu:</h5>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-treeview">my_flask_app/
+├── app.py
+└── templates/
+    └── index.html
+</code></pre>
+        </div>
+        <h5>Příklad použití <code>render_template</code>:</h5>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-python">from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html', name='Svět')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+        </div>
+        <h5>Obsah souboru <code>templates/index.html</code>:</h5>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="cs"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Úvodní stránka&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Vítej, {{ name }}!&lt;/h1&gt;
+    &lt;p&gt;Toto je stránka vykreslená pomocí Flasku a Jinja2 šablony.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </div>
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Tip:</strong> Pomocí složky <code>templates</code> můžete vytvářet více HTML souborů a dynamicky je
+          vykreslovat podle potřeby. V šablonách lze používat proměnné, cykly a podmínky.
+        </div>
+        <h5>Další možnosti Jinja2:</h5>
+        <ul>
+          <li>Používání proměnných: <code>{{ promenna }}</code></li>
+          <li>Podmínky: <code>{% if ... %} ... {% endif %}</code></li>
+          <li>Cyklus: <code>{% for item in seznam %} ... {% endfor %}</code></li>
+          <li>Vkládání dalších šablon: <code>{% include 'footer.html' %}</code></li>
+          <li>Dědičnost šablon: <code>{% extends 'base.html' %}</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-globe mr-2"></i> Dynamický web a generování obsahu ve Flasku</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          Moderní webové aplikace nejsou jen statické stránky, ale často generují svůj obsah dynamicky podle požadavků
+          uživatele, dat z databáze nebo jiných vstupů.
+          <strong>Flask</strong> umožňuje jednoduše vytvářet dynamické weby pomocí tzv. šablon a předávání proměnných z
+          Pythonu do HTML.
+        </p>
+        <h5>Jak funguje generování dynamického webu ve Flasku?</h5>
+        <ul>
+          <li>Uživatel odešle požadavek na určitou stránku (např. <code>/uzivatele</code>).</li>
+          <li>Flask v Pythonu zpracuje tento požadavek, připraví data (např. seznam uživatelů z databáze).</li>
+          <li>Pomocí funkce <code>render_template</code> předá data do HTML šablony.</li>
+          <li>HTML šablona (Jinja2) vygeneruje výslednou stránku, která se zobrazí uživateli.</li>
+        </ul>
+        <h5>Příklad – seznam uživatelů:</h5>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-python">from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/uzivatele')
+def uzivatele():
+    users = ["Anna", "Petr", "Jana"]
+    return render_template('uzivatele.html', users=users)
+</code></pre>
+        </div>
+        <p>Soubor <code>templates/uzivatele.html</code>:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">&lt;h2&gt;Seznam uživatelů&lt;/h2&gt;
+&lt;ul&gt;
+  {% for user in users %}
+    &lt;li&gt;{{ user }}&lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+        </div>
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Tip:</strong> Pomocí šablon můžete jednoduše generovat tabulky, seznamy, formuláře nebo celé stránky
+          podle dat, která připravíte v Pythonu.
+        </div>
+        <h5>Co dalšího lze dynamicky generovat?</h5>
+        <ul>
+          <li>Obsah podle přihlášeného uživatele</li>
+          <li>Výsledky vyhledávání</li>
+          <li>Tabulky z databáze</li>
+          <li>Grafy, statistiky, reporty</li>
+          <li>Stránky s formuláři a jejich zpracování</li>
+        </ul>
+        <p>
+          Díky dynamickému generování obsahu můžete vytvářet interaktivní a užitečné webové aplikace, které reagují na
+          potřeby uživatelů a pracují s aktuálními daty.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vložte např. za stávající sekci o dynamickém webu -->
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-warning text-dark">
+        <h2 class="mb-0"><i class="fas fa-code mr-2"></i> Další ukázky generování obsahu v HTML šabloně (Jinja2)</h2>
+      </div>
+      <div class="card-body">
+        <h5>1. Podmíněné zobrazení obsahu</h5>
+        <p>Pomocí <code>if</code> lze zobrazit různé části stránky podle dat z Pythonu:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">{% if users %}
+  &lt;ul&gt;
+    {% for user in users %}
+      &lt;li&gt;{{ user }}&lt;/li&gt;
+    {% endfor %}
+  &lt;/ul&gt;
+{% else %}
+  &lt;p&gt;Žádní uživatelé nebyli nalezeni.&lt;/p&gt;
+{% endif %}
+</code></pre>
+        </div>
+
+        <h5>2. Generování tabulky z dat</h5>
+        <p>Tabulku lze jednoduše vytvořit cyklem přes seznam slovníků:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Jméno&lt;/th&gt;&lt;th&gt;Věk&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    {% for osoba in osoby %}
+      &lt;tr&gt;
+        &lt;td&gt;{{ osoba.jmeno }}&lt;/td&gt;
+        &lt;td&gt;{{ osoba.vek }}&lt;/td&gt;
+      &lt;/tr&gt;
+    {% endfor %}
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+        </div>
+        <p>Python kód:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-python">osoby = [
+    {"jmeno": "Anna", "vek": 23},
+    {"jmeno": "Petr", "vek": 31}
+]
+return render_template("tabulka.html", osoby=osoby)
+</code></pre>
+        </div>
+
+        <h5>3. Vkládání jiné šablony (include)</h5>
+        <p>Části stránky lze rozdělit do více souborů a vkládat je podle potřeby:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">{% include 'footer.html' %}
+</code></pre>
+        </div>
+
+        <h5>4. Dědičnost šablon (extends)</h5>
+        <p>Pro větší projekty je vhodné mít základní šablonu a z ní dědit:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">{% extends 'base.html' %}
+{% block content %}
+  &lt;h1&gt;Toto je obsah stránky&lt;/h1&gt;
+{% endblock %}
+</code></pre>
+        </div>
+        <p>V <code>base.html</code> musí být definován blok:</p>
+        <div class="bg-dark p-3 rounded mb-3">
+          <pre><code class="language-html">&lt;body&gt;
+  {% block content %}{% endblock %}
+&lt;/body&gt;
+</code></pre>
+        </div>
+
+        <div class="alert alert-warning mt-4">
+          <i class="fas fa-lightbulb mr-2"></i>
+          <strong>Tip:</strong> Pomocí těchto technik můžete vytvářet přehledné, znovupoužitelné a dynamické šablony pro
+          celý web.
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Shrnutí a další kroky -->
+    <div class="card mb-5 shadow-sm">
+      <div class="alert alert-primary mt-4">
+        <h5><i class="fas fa-book mr-2"></i> Užitečné zdroje pro další studium:</h5>
+        <ul>
+          <li><a href="https://flask.palletsprojects.com/" target="_blank">Oficiální dokumentace Flask</a></li>
+          <li><a href="https://flask.palletsprojects.com/en/2.0.x/tutorial/" target="_blank">Oficiální tutoriál
+              Flask</a></li>
+          <li><a href="https://www.fullstackpython.com/flask.html" target="_blank">Flask na Full Stack Python</a></li>
+          <li><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world"
+              target="_blank">The Flask Mega-Tutorial</a></li>
+        </ul>
+      </div>
+    </div>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
@@ -118,9 +378,9 @@
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce6.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce5.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce8.html';">Následující lekce</button>
       </div>
     </div>
 

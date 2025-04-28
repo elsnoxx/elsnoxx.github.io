@@ -1,0 +1,57 @@
+body {
+    background: #f8f9fa;
+}
+
+.main-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #007bff;
+}
+
+.movie-img,
+.main-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #bbb;
+}
+
+.card {
+    margin-bottom: 24px;
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.centered {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.back-link {
+    margin-top: 32px;
+}
+
+.center-box {
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #bbb;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 0;
+    color: #888;
+}

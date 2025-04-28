@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Mé oblíbené filmy a hry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 class="main-title">Mé oblíbené filmy a hry</h1>
+    <div class="container">
+        <div class="row d-flex dual-columns">
+            <!-- Filmy -->
+            <div class="col-lg-6">
+                <h2 class="section-title">Filmy</h2>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/avengerEndgame.webp" alt="Avengers: Endgame" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Avengers: Endgame</h5>
+                                <p class="card-text">Epické zakončení marvelovské ságy, kde se hrdinové spojí proti Thanosovi.</p>
+                                <a href="avengers" class="btn btn-outline-primary btn-sm detail-link">Detail</a>
+                                <a href="https://www.csfd.cz/film/262458-avengers-endgame/" target="_blank" class="btn btn-outline-primary btn-sm detail-link">CSFD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/Batman.webp" alt="Batman: Temný rytíř" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Batman: Temný rytíř</h5>
+                                <p class="card-text">Temný a napínavý příběh o boji Batmana proti Jokerovi v Gotham City.</p>
+                                <a href="batman" class="btn btn-outline-primary btn-sm detail-link">Detail</a>
+                                <a href="https://www.csfd.cz/film/223273-temny-rytir/" target="_blank" class="btn btn-outline-primary btn-sm detail-link">CSFD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/Inception.webp" alt="Inception" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Inception</h5>
+                                <p class="card-text">Sci-fi thriller o snech v hlavní roli s Leonardem DiCapriem.</p>
+                                <a href="inception" class="btn btn-outline-primary btn-sm detail-link">Detail</a>
+                                <a href="https://www.csfd.cz/film/254390-inception/" target="_blank" class="btn btn-outline-primary btn-sm detail-link">CSFD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hry -->
+            <div class="col-lg-6">
+                <h2 class="section-title">Hry</h2>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/AgeofEmpiresII.webp" alt="Age of Empires II" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Age of Empires II</h5>
+                                <p class="card-text">Legendární strategická hra, kde budujete civilizaci a bojujete v historických bitvách.</p>
+                                <a href="ageofempires" class="btn btn-outline-success btn-sm detail-link">Detail</a>
+                                <a href="https://www.ageofempires.com/games/aoeiide/" target="_blank" class="btn btn-outline-success btn-sm detail-link">Web page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/Minecraft.jpg" alt="Minecraft" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Minecraft</h5>
+                                <p class="card-text">Kreativní sandbox hra, kde můžete stavět, těžit a objevovat nekonečný svět z kostek.</p>
+                                <a href="minecraft" class="btn btn-outline-success btn-sm detail-link">Detail</a>
+                                <a href="https://www.minecraft.net/" target="_blank" class="btn btn-outline-success btn-sm detail-link">Web page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-4 p-3">
+                            <img src="/static/img/CallofDuty.jpg" alt="Call of Duty" class="movie-img">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Call of Duty</h5>
+                                <p class="card-text">Akční střílečka z pohledu první osoby, známá svými napínavými misemi a multiplayerem.</p>
+                                <a href="callofduty" class="btn btn-outline-success btn-sm detail-link">Detail</a>
+                                <a href="https://www.callofduty.com/" target="_blank" class="btn btn-outline-success btn-sm detail-link">Web page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Richard Ficek & Mé oblíbené filmy a hry</p>
+        <a href="/napsat" class="btn btn-primary">Odeslat odpověď</a>
+    </footer>
+</body>
+</html>

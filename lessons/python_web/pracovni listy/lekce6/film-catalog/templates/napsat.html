@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Napiš svůj oblíbený film</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="center-box">
+        <h1 class="section-title">Napiš svůj oblíbený film nebo hru</h1>
+        <form action="/napsat" method="POST">
+            <label for="film">Název:</label><br>
+            <input type="text" id="film" name="film" required>
+            <br><br>
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+</body>
+</html>
