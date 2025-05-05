@@ -128,8 +128,9 @@ def styled():
     <html>
       <head>
         <style>
-          body { background: #f0f0f0; font-family: Arial; }
-          h1 { color: #007bff; }
+          body { background: gray; }
+          h1 { color: red; }
+          p { color: blue; }
         </style>
       </head>
       <body>
