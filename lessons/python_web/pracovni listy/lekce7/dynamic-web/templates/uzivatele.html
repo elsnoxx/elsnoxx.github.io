@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam uživatelů</title>
+</head>
+<body>
+    <h1>Seznam uživatelů</h1>
+    {% if users %}
+        <ul>
+        {% for user in users %}
+            <li>{{ user }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Žádní uživatelé nejsou k dispozici.</p>
+    {% endif %}
+</body>
+</html>

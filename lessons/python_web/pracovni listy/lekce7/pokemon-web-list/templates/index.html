@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Vyhledávač</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Vyhledávač</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Zadej jméno Pokémona" required>
+            <button type="submit">Hledat</button>
+        </form>
+        <!-- Úkol: Pokud existuje proměnná error, zobraz ji uživateli. -->
+        <!-- Použij podmínku {% if error %} ... {% endif %} a uvnitř zobraz {{ error }} -->
+
+        <!-- Úkol: Pokud existuje proměnná data, zobraz informace o Pokémonovi. -->
+        <!-- Použij podmínku {% if data %} ... {% endif %} -->
+
+        <div class="pokemon-info">
+            <!-- Zobraz obrázek Pokémona pomocí {{ data.img }} a {{ data.name }} -->
+            <img src="" alt="">
+            <!-- Zobraz jméno Pokémona pomocí {{ data.name }} -->
+            <h2></h2>
+            <!-- Zobraz další informace pomocí {{ data.id }}, {{ data.base_experience }}, {{ data.height }}, {{ data.weight }} -->
+            <div><span class="label">Pokédex číslo:</span> </div>
+            <div><span class="label">Základní zkušenost:</span></div>
+            <div><span class="label">Výška:</span>  dm</div>
+            <div><span class="label">Váha:</span>  hg</div>
+            <!-- Zobraz typy a schopnosti pomocí {{ data.types|join(', ') }} a {{ data.abilities|join(', ') }} -->
+            <div><span class="label">Typy:</span> </div>
+            <div><span class="label">Schopnosti:</span> </div>
+            <!-- Zobraz statistiky pomocí {{ data.stats }} -->
+            <div><span class="label">Statistiky:</span>
+                <ul style="list-style:none; padding:0;">
+                    <li>HP: </li>
+                    <li>Attack: </li>
+                    <li>Defense: </li>
+                    <li>Special Attack: </li>
+                    <li>Special Defense: </li>
+                    <li>Speed: </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Konec podmínky pro data -->
+    </div>
+</body>
+</html>

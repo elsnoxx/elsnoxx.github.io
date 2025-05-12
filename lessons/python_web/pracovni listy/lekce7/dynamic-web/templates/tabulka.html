@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabulka osob</title>
+</head>
+<body>
+    <h1>Tabulka osob</h1>
+    <table border="1">
+        <tr><th>Jméno</th><th>Věk</th></tr>
+        {% for osoba in osoby %}
+            <tr>
+                <td>{{ osoba.jmeno }}</td>
+                <td>{{ osoba.vek }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

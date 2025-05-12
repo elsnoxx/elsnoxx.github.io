@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Vyhledávač</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Vyhledávač</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Zadej jméno Pokémona" required>
+            <button type="submit">Hledat</button>
+        </form>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        {% if data %}
+        <div class="pokemon-info">
+            <img src="{{ data.img }}" alt="{{ data.name }}">
+            <h2>{{ data.name }}</h2>
+            <div><span class="label">Pokédex číslo:</span> {{ data.id }}</div>
+            <div><span class="label">Základní zkušenost:</span> {{ data.base_experience }}</div>
+            <div><span class="label">Výška:</span> {{ data.height }} dm</div>
+            <div><span class="label">Váha:</span> {{ data.weight }} hg</div>
+            <div><span class="label">Typy:</span> {{ data.types|join(', ') }}</div>
+            <div><span class="label">Schopnosti:</span> {{ data.abilities|join(', ') }}</div>
+            <div><span class="label">Statistiky:</span>
+                <ul style="list-style:none; padding:0;">
+                    <li>HP: {{ data.stats.hp }}</li>
+                    <li>Attack: {{ data.stats.attack }}</li>
+                    <li>Defense: {{ data.stats.defense }}</li>
+                    <li>Special Attack: {{ data.stats['special-attack'] }}</li>
+                    <li>Special Defense: {{ data.stats['special-defense'] }}</li>
+                    <li>Speed: {{ data.stats.speed }}</li>
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
