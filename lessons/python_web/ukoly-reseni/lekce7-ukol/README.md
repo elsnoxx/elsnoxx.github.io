@@ -1,63 +1,69 @@
-# 🌐 Osobní web – Python Flask projekt
+# Vizualizace dat z veřejného API – ISS (Mezinárodní vesmírná stanice)
 
-## 🎯 Cíl
-Vytvoř jednoduchý osobní web pomocí frameworku **Flask**. Web bude obsahovat několik stránek, využívat šablony a statické soubory.
+## Zadání úkolu
 
----
-
-## 🔧 Požadavky
-- Použij Python a Flask.
-- Web musí obsahovat minimálně tyto stránky:
-  - **Domovská stránka** (`home.html`)
-  - **O mně** (`about.html`)
-  - **Kontakt** (`contact.html`)
-- Každá stránka bude mít vlastní šablonu v adresáři `templates/`.
-- Na stránkách použij obrázky z adresáře `static/img/`.
-- Vytvoř jednoduchou **navigaci** mezi stránkami.
-- Využij základní styly (můžeš použít **Bootstrap** nebo vlastní CSS).
-- Spuštění aplikace bude zajištěno souborem `app.py`.
+V tomto úkolu si vyzkoušíš, jak získat data z veřejného API, zpracovat je v Pythonu a zobrazit na webové stránce pomocí Flasku. Konkrétně budeš pracovat s API, které poskytuje informace o aktuální poloze Mezinárodní vesmírné stanice (ISS) a o lidech, kteří jsou právě ve vesmíru.
 
 ---
 
-## 🌟 Bonusové úkoly
-- Přidej další stránku dle vlastního výběru (např. projekty, zájmy, galerie...).
-- Přidej **kontaktní formulář** (odesílání nemusí být funkční).
-- Použij **dědičnost šablon** (base template).
+## Co budeš dělat
+
+1. **Stáhneš data z veřejného API**  
+   Použiješ API [open-notify.org](http://open-notify.org/), které nabízí:
+   - Aktuální polohu ISS (`/iss-now.json`)
+   - Seznam lidí ve vesmíru (`/astros.json`)
+
+2. **Vytvoříš jednoduchou Flask aplikaci**
+   - V souboru `app.py` stáhneš data z API pomocí knihovny `requests`.
+   - Data zpracuješ a předáš do HTML šablony.
+
+3. **Vytvoříš HTML šablonu**
+   - V souboru `templates/index.html` zobrazíš:
+     - Aktuální čas, zeměpisnou šířku a délku ISS.
+     - Mapu s aktuální polohou ISS (např. pomocí Google Maps iframe).
+     - Seznam lidí, kteří jsou právě ve vesmíru, včetně jejich jména a vesmírné lodi/station.
+   - **Použij tyto URL adresy pro dotazování na data:**
+     - Aktuální poloha ISS: `http://api.open-notify.org/iss-now.json`
+     - Seznam lidí ve vesmíru: `http://api.open-notify.org/astros.json`
 
 ---
 
-## 📁 Struktura projektu
+## Postup
 
+1. **Nainstaluj potřebné knihovny:**
 ```
-lekce6-ukol/
-├── app.py
-├── static/
-│   ├── img/
-│   │   └── logos.jpg
-│   └── css/
-│       └── style.css
-└── templates/
-    ├── home.html
-    ├── about.html
-    ├── contact.html
+pip install flask requests
 ```
 
+2. **Vytvoř soubor `app.py`**  
+Tento soubor bude obsahovat logiku pro získání dat z API a jejich předání do šablony.
+
+3. **Vytvoř složku `templates` a do ní soubor `iss.html`**  
+V této šabloně zobrazíš získaná data přehledně uživateli.
+
+4. **Spusť aplikaci:**
+```
+python app.py
+```
+
+A otevři stránku [http://localhost:5000](http://localhost:5000) ve svém prohlížeči.
+
 ---
 
-## ▶️ Jak spustit aplikaci
+## Co si procvičíš
 
-1. Nainstaluj Flask (např. `pip install flask`).
-2. Spusť aplikaci příkazem:
-   ```
-   python app.py
-   ```
-3. Otevři webový prohlížeč a přejdi na adresu [http://localhost:5000](http://localhost:5000).
+- Práci s veřejným API (HTTP požadavky, JSON data)
+- Základy webového frameworku Flask
+- Předávání dat do HTML šablony a jejich vizualizaci
+- Základy práce s mapou v HTML (iframe)
 
 ---
 
-## 💡 Inspirace
+## Bonus
 
-- [Flask dokumentace](https://flask.palletsprojects.com/)
-- [Bootstrap](https://getbootstrap.com/)
+- Zobraz na mapě i další informace (např. popisek s časem).
+- Přidej automatické obnovení dat (např. každých 30 sekund pomocí JavaScriptu).
 
-> Projekt slouží k procvičení základů práce s Flaskem, šablonami a statickými soubory.
+---
+
+**Hodně štěstí!**
