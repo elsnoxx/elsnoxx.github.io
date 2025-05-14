@@ -11,7 +11,7 @@ Tento soubor ukazuje, jak:
 Každá route (funkce s @app.route) odpovídá jedné stránce webu.
 """
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -53,6 +53,8 @@ def pozdrav_param(jmeno):
     # Ukázka práce s parametrem v URL
     # Hodnota <jmeno> z adresy se pošle do šablony pozdrav.html
     return ""
+
+
 
 if __name__ == '__main__':
     # Spuštění aplikace v režimu debug (vhodné pro vývoj)
