@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Můj seznam</title>
+</head>
+<body>
+    <h1>Můj seznam</h1>
+    <form method="post" action="{{ url_for('pridat') }}">
+        <input type="text" name="polozka" placeholder="Zadej položku" required>
+        <button type="submit">Přidat</button>
+    </form>
+    <ul>
+        {% for polozka in seznam %}
+            <li>
+                {{ polozka }}
+                <form method="post" action="{{ url_for('odebrat', index=loop.index0) }}" style="display:inline;">
+                    <button type="submit">Smazat</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
