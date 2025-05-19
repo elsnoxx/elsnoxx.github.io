@@ -61,7 +61,7 @@
             
             <li class="{% if todo.done %}done{% endif %}">
                 <!-- Formulář pro označení úkolu jako splněný -->
-                <form action="/done/{{ loop.index0 }}" method="post" style="display:inline;">
+                <form action="" method="post" style="display:inline;">
                     <button type="submit" class="btn-action" title="Označit jako splněné/nesplněné">
                         
                     </button>
@@ -85,9 +85,9 @@
                     <br><small class="text-muted">Zadáno: </small>
                 </span>
                 <!-- Odkaz na editaci úkolu -->
-                <a href="/edit/{{ loop.index0 }}" class="btn-action" title="Upravit úkol">✏️</a>
+                <a href="" class="btn-action" title="Upravit úkol">✏️</a>
                 <!-- Odkaz na smazání úkolu -->
-                <a href="/delete/{{ loop.index0 }}" class="btn-action" title="Smazat úkol">🗑️</a>
+                <a href="" class="btn-action" title="Smazat úkol">🗑️</a>
             </li>
             
         </ul>

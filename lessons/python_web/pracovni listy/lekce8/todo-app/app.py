@@ -49,8 +49,15 @@ def edit(idx):
     if 0 <= idx < len(todos):
         if request.method == 'POST':
             new_text = request.form.get('ukol')
-            if new_text:
-                todos[idx]['text'] = new_text
+            new_poznamka = request.form.get('poznamka')
+            new_ocekavane = request.form.get('ocekavane')
+            new_predmet = request.form.get('predmet')
+            
+            todos[idx]['text'] = new_text
+            todos[idx]['poznamka'] = new_poznamka
+            todos[idx]['ocekavane'] = new_ocekavane
+            todos[idx]['predmet'] = new_predmet
+
             return redirect('/')
         return render_template('edit.html', todo=todos[idx], idx=idx)
     return redirect('/')

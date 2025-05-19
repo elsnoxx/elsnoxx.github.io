@@ -107,7 +107,91 @@
       </table>
     </div>
 
-    
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <div class="card-body">
+        <h2 class="card-title">Vytvoření jednoduché TODO aplikace ve Flasku</h2>
+
+        <div class="col-md-6 mb-3">
+          <h5>Jak bude aplikace fungovat?</h5>
+          <ul>
+            <li>Uživatel uvidí seznam aktuálních úkolů (TODO list).</li>
+            <li>Nový úkol lze přidat pomocí jednoduchého formuláře.</li>
+            <li>Každý úkol můžeš označit jako splněný nebo ho smazat.</li>
+            <li>Stav úkolů se uchovává pouze v paměti aplikace (v Python proměnné), po restartu serveru se smaže.</li>
+          </ul>
+        </div>
+        <p class="card-text">
+          Výsledkem bude jednoduchá, ale funkční webová aplikace, kterou si můžeš dále rozšiřovat.
+        </p>
+      </div>
+      
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+  <div class="card-header bg-info text-white">
+    <h2 class="mb-0"><i class="fas fa-globe mr-2"></i> Co se v lekci naučíš?</h2>
+  </div>
+  <div class="row no-gutters align-items-center">
+    <div class="col-md-6 mb-3">
+      <ul>
+        <li>Jak vytvořit základní Flask aplikaci a spustit ji.</li>
+        <li>Jak navrhnout a stylovat HTML šablony pro zobrazení úkolů (TODO listu).</li>
+        <li>Jak přidávat nové úkoly pomocí formuláře.</li>
+        <li>Jak označovat úkoly jako splněné a mazat je.</li>
+        <li>Jak zobrazit historii změn úkolů.</li>
+        <li>Jak upravit vzhled aplikace pomocí CSS, aby odpovídal stylu předchozí lekce.</li>
+      </ul>
+    </div>
+    <div class="col-md-6 mb-3 text-center">
+      <img src="/img/python_web/lekce8/todoapp.png" alt="Ukázka editace úkolu v TODO aplikaci" class="img-fluid rounded shadow-sm my-2" style="max-width: 100%;">
+    </div>
+  </div>
+</div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-globe mr-2"></i> Jaké endpointy aplikace budeš vytvářet?</h2>
+      </div>
+      <div class="col-md-6 mb-3">
+        <ul>
+          <li><strong>/</strong> &mdash; Hlavní stránka s výpisem úkolů a formulářem pro přidání nového úkolu (GET,
+            POST).
+          </li>
+          <li><strong>/done/&lt;id&gt;</strong> &mdash; Označení úkolu jako splněného (GET nebo POST).</li>
+          <li><strong>/delete/&lt;id&gt;</strong> &mdash; Smazání úkolu (GET nebo POST).</li>
+          <li><strong>/history</strong> &mdash; Zobrazení historie změn.</li>
+          <li><strong>/edit/&lt;id&gt;</strong> &mdash; Úprava existujícího úkolu (GET, POST).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-globe mr-2"></i> Jak budou data ukládána?</h2>
+      </div>
+      <div class="col-md-6 mb-3">
+
+        <ul>
+          <li>Úkoly budou uloženy v seznamu (list) v Pythonu na straně serveru.</li>
+          <li>Každý úkol bude slovník s klíči např. <code>text</code> (popis úkolu) a <code>done</code>
+            (True/False).</li>
+          <li>Historie změn bude také seznam slovníků s informací o provedené akci a čase.</li>
+          <li>Pro jednoduchost nebude použita žádná databáze.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Pracovní list - To Do</h2>
+      <p class="lead">
+        Pomocí víže uvedeného tlačíkta si můžete stáhnout pracovní list k této lekci. Pracovní list obsahuje
+        úkoly, které si můžete vyzkoušet a procvičit.
+      </p>
+      <a href="/lessons/python_web/pracovni listy/lekce8/pracovni-list-template/todo-app-template.zip" class="btn btn-success" download>Stáhnout
+        pracovní list</a>
+    </section>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
