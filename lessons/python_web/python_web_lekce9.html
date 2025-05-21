@@ -89,40 +89,472 @@
   </header>
 
   <main role="main" class="container mt-5 pt-5">
-    <div>
-      <table class="moveAndTime">
-        <tr>
-          <td>
-            <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce3.html';" class="btn btn-primary">Předchozí
-              lekce</button>
-            <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce5.html';" class="btn btn-primary">Následují
-              lekce</button>
-          </td>
-          <td>
-            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
-          </td>
-        </tr>
-      </table>
-    </div>
 
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
-
-    <div>
-      <div class="d-flex justify-content-between mb-4">
-        <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce3.html';">Předchozí lekce</button>
-        <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce5.html';">Následující lekce</button>
+    <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
+      <div class="card-body">
+        <h2 class="card-title">Co je to MVC a proč ho používat?</h2>
+        <div class="col-md-8 mb-3">
+          <ul>
+            <li><strong>MVC</strong> znamená <b>Model-View-Controller</b> – je to architektonický vzor pro návrh
+              aplikací.</li>
+            <li>
+              <b>Model</b> – stará se o data a logiku aplikace (např. práce s databází).
+            </li>
+            <li>
+              <b>View</b> – zobrazuje data uživateli (HTML šablony, stránky).
+            </li>
+            <li>
+              <b>Controller</b> – zpracovává požadavky uživatele, propojuje model a view.
+            </li>
+          </ul>
+        </div>
+        <p class="card-text">
+          MVC pomáhá oddělit jednotlivé části aplikace, což usnadňuje údržbu a rozšiřování kódu.
+        </p>
+        <div class="text-center">
+          <img src="/img/python_web/lekce9/mvc-scheme.png" alt="MVC schéma" class="img-fluid rounded shadow-sm my-2"
+            style="max-width: 400px;">
+        </div>
       </div>
     </div>
+
+    <section class="card mb-5 shadow-sm">
+      <div class="card-header bg-dark text-white">
+        <h2 class="mb-0"><i class="fas fa-lightbulb mr-2"></i> Design Patterns, MVC a MVT</h2>
+      </div>
+      <div class="card-body">
+        <h3 class="h5 text-primary">Co jsou design patterns?</h3>
+        <p>
+          Design patterns (návrhové vzory) jsou osvědčené postupy, jak řešit běžné problémy při vývoji softwaru. Pomáhají psát přehledný, udržitelný a znovupoužitelný kód. Stejně jako stavební plány nebo recepty, i návrhové vzory dávají vývojářům jasný návod, jak postupovat.
+        </p>
+        <h3 class="h5 text-primary">MVC a MVT</h3>
+        <div class="row text-center mb-3">
+          <div class="col-4">
+            <img src="/img/python_web/lekce9/model.png" alt="Model" style="max-width:60px;">
+            <div><b>Model</b></div>
+            <small>Data a logika</small>
+          </div>
+          <div class="col-4">
+            <img src="/img/python_web/lekce9/view.png" alt="View" style="max-width:60px;">
+            <div><b>View</b></div>
+            <small>Zobrazení</small>
+          </div>
+          <div class="col-4">
+            <img src="/img/python_web/lekce9/controller.png" alt="Controller" style="max-width:60px;">
+            <div><b>Controller</b></div>
+            <small>Řízení</small>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <b>MVC (Model-View-Controller)</b> je architektonický vzor, který rozděluje aplikaci na tři části:
+            <ul>
+              <li><b>Model</b> – stará se o data a logiku aplikace (např. práce s databází).</li>
+              <li><b>View</b> – zobrazuje data uživateli (HTML šablony, stránky).</li>
+              <li><b>Controller</b> – zpracovává požadavky uživatele, propojuje model a view.</li>
+            </ul>
+          </li>
+          <li>
+            <b>MVT (Model-View-Template)</b> je varianta MVC používaná v Djangu:
+            <ul>
+              <li>
+                <img src="/img/python_web/lekce9/template.png" alt="Template" style="max-width:30px;vertical-align:middle;">
+                <b>Template</b> – šablona, která určuje, jak budou data zobrazena uživateli.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="text-center my-3">
+          <img src="/img/python_web/lekce9/mvc-scheme.png" alt="MVC schéma" class="img-fluid rounded shadow-sm" style="max-width: 400px;">
+        </div>
+        <p>
+          Hlavní výhodou těchto vzorů je oddělení jednotlivých částí aplikace, což usnadňuje údržbu, testování a rozšiřování kódu.
+        </p>
+        <h3 class="h5 text-primary">Proč je to důležité?</h3>
+        <ul>
+          <li><i class="fas fa-users text-success"></i> Umožňuje více lidem pracovat na jedné aplikaci (každý na jiné části).</li>
+          <li><i class="fas fa-tools text-info"></i> Zjednodušuje úpravy a rozšiřování aplikace.</li>
+          <li><i class="fas fa-eye text-warning"></i> Zvyšuje přehlednost a kvalitu kódu.</li>
+        </ul>
+        <p class="mb-0">
+          V této lekci si ukážeme, jak MVC/MVT funguje v praxi na jednoduchých příkladech v Djangu.
+        </p>
+      </div>
+    </section>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-cubes mr-2"></i> Jak funguje MVC v praxi?</h2>
+      </div>
+      <div class="row no-gutters align-items-center">
+        <div class="col-md-7 mb-3">
+          <ul>
+            <li>Uživatel odešle požadavek (např. klikne na tlačítko).</li>
+            <li><b>Controller</b> přijme požadavek, zpracuje ho a požádá <b>Model</b> o data.</li>
+            <li><b>Model</b> vrátí data Controlleru.</li>
+            <li><b>Controller</b> předá data <b>View</b>, které je zobrazí uživateli.</li>
+          </ul>
+        </div>
+        <div class="col-md-5 mb-3 text-center">
+          <img src="/img/python_web/lekce9/mvc-flow.png" alt="MVC flow" class="img-fluid rounded shadow-sm my-2"
+            style="max-width: 300px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0"><i class="fab fa-python mr-2"></i> MVC v Pythonu pomocí Django</h2>
+      </div>
+      <div class="col-md-8 mb-3">
+        <ul>
+          <li><b>Django</b> je populární Python framework, který využívá principy MVC (v Djangu se často označuje jako
+            MVT – Model-View-Template).</li>
+          <li>
+            <b>Model</b> – třídy v <code>models.py</code>, které popisují data (např. tabulky v databázi).
+          </li>
+          <li>
+            <b>View</b> – funkce nebo třídy v <code>views.py</code>, které zpracovávají požadavky a vrací odpovědi.
+          </li>
+          <li>
+            <b>Template</b> – HTML šablony, které zobrazují data uživateli.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 mb-3">
+        <p class="mb-2"><b>Příklad jednoduchého View v Djangu:</b></p>
+        <pre><code class="language-python"># views.py
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse("Ahoj světe!")</code></pre>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="mb-0"><i class="fas fa-rocket mr-2"></i> Vytvoření a spuštění první Python (Django) aplikace</h2>
+          <a href="https://www.djangoproject.com/" target="_blank" class="btn btn-light btn-sm">Oficiální
+            dokumentace</a>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>
+          Vyzkoušej si vytvořit a spustit jednoduchou Django aplikaci pomocí <b>pip</b> a příkazové řádky. Postupuj
+          podle těchto kroků:
+        </p>
+        <ol>
+          <li>
+            <b>Nainstaluj Django pomocí pip:</b>
+            <pre class="bg-dark text-white p-2 rounded mb-3"><code>pip install django</code></pre>
+          </li>
+          <li>
+            <b>Vytvoř nový Django projekt:</b>
+            <pre class="bg-dark text-white p-2 rounded mb-3"><code>django-admin startproject mujprojekt</code></pre>
+          </li>
+          <li>
+            <b>Přejdi do složky projektu:</b>
+            <pre class="bg-dark text-white p-2 rounded mb-3"><code>cd mujprojekt</code></pre>
+          </li>
+          <li>
+            <b>Spusť vývojový server:</b>
+            <pre class="bg-dark text-white p-2 rounded mb-3"><code>python manage.py runserver</code></pre>
+          </li>
+          <li>
+            <b>Otevři prohlížeč a zadej adresu:</b> <code>http://127.0.0.1:8000/</code> <b> a uvidíš úvodní obrazovku
+              Django projektu:</b> <br>
+
+            <div class="text-center my-3">
+              <img src="/img/python_web/lekce9/django-first-web.png" alt="Úvodní obrazovka Django projektu"
+                class="img-fluid rounded shadow-sm" style="max-width: 500px;">
+            </div>
+          </li>
+          <li>
+            <b>Můžeš vytvořit aplikaci v rámci projektu:</b>
+            <pre class="bg-dark text-white p-2 rounded mb-3"><code>python manage.py startapp mojeaplikace</code></pre>
+            <div>
+              Aplikaci pak přidej do <code>INSTALLED_APPS</code> v souboru <code>settings.py</code>.
+            </div>
+          </li>
+        </ol>
+        <p>
+          Pokud narazíš na problém, podívej se do oficiální dokumentace <a
+            href="https://docs.djangoproject.com/cs/4.2/intro/tutorial01/" target="_blank">Django</a> nebo se zeptej
+          lektora.
+        </p>
+      </div>
+    </div>
+
+    <!-- Začátek sekce Struktura adresářů v Django projektu -->
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-secondary text-white">
+        <h2 class="mb-0"><i class="fas fa-folder-open mr-2"></i> Struktura adresářů v Django projektu</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          Po vytvoření nového Django projektu a aplikace bude adresářová struktura vypadat například takto:
+        </p>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <ul>
+              <li>
+                <b>manage.py</b> – Hlavní skript pro správu projektu (spouštění serveru, migrace databáze, spouštění
+                aplikací).
+              </li>
+              <li>
+                <b>db.sqlite3</b> – Výchozí databázový soubor (pokud používáš SQLite).
+              </li>
+              <li>
+                <b>mujprojekt/</b> – Hlavní složka projektu, obsahuje konfiguraci projektu:
+                <ul>
+                  <li>
+                    <b>__init__.py</b> – Označuje složku jako Python balíček.
+                  </li>
+                  <li>
+                    <b>settings.py</b> – Hlavní konfigurační soubor projektu (nastavení databáze, aplikací, jazyků,
+                    atd.).
+                  </li>
+                  <li>
+                    <b>urls.py</b> – Definuje URL adresy a směrování požadavků v rámci projektu.
+                  </li>
+                  <li>
+                    <b>wsgi.py</b> – Slouží ke spuštění projektu na serveru (produkční nasazení, WSGI).
+                  </li>
+                  <li>
+                    <b>asgi.py</b> – Slouží pro asynchronní nasazení (např. WebSockety, ASGI).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <b>mojeaplikace/</b> – Složka tvé aplikace (každá aplikace má vlastní složku):
+                <ul>
+                  <li>
+                    <b>__init__.py</b> – Označuje složku jako Python balíček.
+                  </li>
+                  <li>
+                    <b>admin.py</b> – Nastavení administrace pro tuto aplikaci (co bude vidět v Django adminu).
+                  </li>
+                  <li>
+                    <b>apps.py</b> – Konfigurace aplikace (název, nastavení).
+                  </li>
+                  <li>
+                    <b>models.py</b> – Definice datových modelů (tabulky v databázi).
+                  </li>
+                  <li>
+                    <b>views.py</b> – Funkce nebo třídy, které zpracovávají požadavky a vrací odpovědi (logika
+                    aplikace).
+                  </li>
+                  <li>
+                    <b>tests.py</b> – Testy pro tuto aplikaci.
+                  </li>
+                  <li>
+                    <b>migrations/</b> – Složka s migracemi databáze (změny v modelech).
+                    <ul>
+                      <li>
+                        <b>__init__.py</b> – Označuje složku jako Python balíček.
+                      </li>
+                      <li>
+                        <b>další soubory</b> – Jednotlivé migrace (např. 0001_initial.py).
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 mb-3 d-flex justify-content-center align-items-center" style="min-height: 350px;">
+            <img src="/img/python_web/lekce9/struktura-projektu.png" alt="Struktura adresářů Django projektu"
+              class="img-fluid rounded shadow-sm" style="max-width: 500px;">
+          </div>
+        </div>
+
+
+        <p>
+          <b>Tip:</b> Nejčastěji budeš pracovat se soubory <code>settings.py</code>, <code>urls.py</code> (v hlavním
+          projektu), a v aplikaci <code>models.py</code>, <code>views.py</code>, případně <code>admin.py</code> a
+          složkou <code>migrations/</code>.
+        </p>
+      </div>
+    </div>
+    <!-- Konec sekce -->
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-warning text-dark">
+        <h2 class="mb-0"><i class="fas fa-tasks mr-2"></i> Co si v lekci vyzkoušíš?</h2>
+      </div>
+      <div class="col-md-8 mb-3">
+        <ul>
+          <li>Vysvětlíš si princip MVC na jednoduchém příkladu.</li>
+          <li>Vyzkoušíš si vytvořit základní Django projekt a aplikaci.</li>
+          <li>Navrhneš jednoduchý Model, View a Template.</li>
+          <li>Vyzkoušíš si, jak spolu jednotlivé části komunikují.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Můžeš vložit např. jako novou sekci do své lekce -->
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-home mr-2"></i> Jak vytvořit úvodní stránku v Django aplikaci</h2>
+      </div>
+      <div class="card-body">
+        <ol>
+          <li>
+            <b>Vytvoř view (funkci) pro úvodní stránku:</b>
+            <pre><code class="language-python"># mojeaplikace/views.py
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+</code></pre>
+          </li>
+          <li>
+            <b>Vytvoř šablonu (template):</b>
+            <ul>
+              <li>V adresáři <code>mojeaplikace</code> vytvoř složku <code>templates</code> (pokud ji nemáš).</li>
+              <li>Do ní vlož soubor <code>home.html</code>:</li>
+            </ul>
+            <pre><code class="language-html">&lt;!-- mojeaplikace/templates/home.html --&gt;
+&lt;h1&gt;Vítej na úvodní stránce!&lt;/h1&gt;
+&lt;p&gt;Toto je tvoje první Django stránka.&lt;/p&gt;
+</code></pre>
+          </li>
+          <li>
+            <b>Zaregistruj URL adresu:</b>
+            <ul>
+              <li>V souboru <code>mojeaplikace/urls.py</code> (pokud neexistuje, vytvoř ho):</li>
+            </ul>
+            <pre><code class="language-python"># mojeaplikace/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+</code></pre>
+            <ul>
+              <li>V hlavním <code>urls.py</code> projektu přidej odkaz na <code>mojeaplikace</code>:</li>
+            </ul>
+            <pre><code class="language-python"># mujprojekt/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('mojeaplikace.urls')),  # úvodní stránka bude na /
+]
+</code></pre>
+          </li>
+          <li>
+            <b>Spusť server a otevři <code>http://127.0.0.1:8000/</code></b>
+            <ul>
+              <li>Měla by se zobrazit tvoje úvodní stránka!</li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          <b>Tip:</b> Pokud šablona není nalezena, zkontroluj, že máš správně nastavené <code>TEMPLATES</code> v
+          <code>settings.py</code> a že složka <code>templates</code> je ve správném adresáři.
+        </p>
+      </div>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+      <div class="card-header bg-light text-dark">
+        <h2 class="mb-0"><i class="fas fa-bolt mr-2"></i> Nejjednodušší Django projekt bez databáze – krok za krokem
+        </h2>
+      </div>
+      <div class="card-body">
+        <p>
+          Pokud si chceš rychle vyzkoušet, jak Django funguje bez práce s databází, můžeš vytvořit úplně jednoduchý
+          projekt, který zobrazí jen úvodní stránku. Tento postup ti ukáže základní principy práce s view, URL a
+          šablonou.
+        </p>
+        <ol>
+          <li>
+            <b>Vytvoř nový projekt a aplikaci:</b>
+            <pre><code class="language-bash">django-admin startproject mujprojekt
+cd mujprojekt
+python manage.py startapp mojeaplikace
+</code></pre>
+          </li>
+          <li>
+            <b>Přidej aplikaci do <code>INSTALLED_APPS</code> v <code>settings.py</code>:</b>
+            <pre><code class="language-python">INSTALLED_APPS = [
+    # ... ostatní aplikace ...
+    'mojeaplikace',
+]
+</code></pre>
+          </li>
+          <li>
+            <b>Vytvoř view pro úvodní stránku:</b>
+            <pre><code class="language-python"># mojeaplikace/views.py
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'home.html')
+</code></pre>
+          </li>
+          <li>
+            <b>Vytvoř šablonu:</b>
+            <ul>
+              <li>Vytvoř složku <code>mojeaplikace/templates/</code> a do ní soubor <code>home.html</code>:</li>
+            </ul>
+            <pre><code class="language-html">&lt;!-- mojeaplikace/templates/home.html --&gt;
+&lt;h1&gt;Vítej na stránce!&lt;/h1&gt;
+&lt;p&gt;Toto je tvoje první Django stránka bez databáze.&lt;/p&gt;
+</code></pre>
+          </li>
+          <li>
+            <b>Vytvoř <code>urls.py</code> v aplikaci:</b>
+            <pre><code class="language-python"># mojeaplikace/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
+</code></pre>
+          </li>
+          <li>
+            <b>Propoj aplikaci v hlavním <code>urls.py</code> projektu:</b>
+            <pre><code class="language-python"># mujprojekt/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('mojeaplikace.urls')),
+]
+</code></pre>
+          </li>
+          <li>
+            <b>Spusť server a otevři <code>http://127.0.0.1:8000/</code>:</b>
+            <pre><code class="language-bash">python manage.py runserver</code></pre>
+            <ul>
+              <li>Uvidíš jednoduchou úvodní stránku bez databáze.</li>
+            </ul>
+          </li>
+        </ol>
+        <p>
+          <b>Tip:</b> Tento miniprojekt je ideální pro pochopení základní struktury Django aplikace bez zbytečných
+          komplikací.
+        </p>
+      </div>
+    </div>
+
+    <section class="lesson mb-5 p-4 bg-dark text-white rounded shadow">
+      <h2 class="h3 text-warning mb-4">Ukázka první aplikace - MVC a Django</h2>
+      <p class="lead">
+        Stáhni si ukázku k této lekci a vyzkoušej si podle ní vytvořit vlastní jednoduchou Django aplikaci podle zadání.
+      </p>
+      <a href="/lessons/python_web/pracovni%20listy/lekce9/ukazkova-prace.zip" class="btn btn-success"
+        download>
+        <i class="fas fa-download"></i> Stáhnout pracovní list
+      </a>
+    </section>
 
   </main>
 
