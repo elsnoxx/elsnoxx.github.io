@@ -89,6 +89,23 @@
   </header>
 
   <main role="main" class="container mt-5 pt-5">
+    <div>
+      <table class="moveAndTime">
+        <tr>
+          <td>
+            <button id="left" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce8.html';" class="btn btn-primary">Předchozí
+              lekce</button>
+            <button id="right" class="btn btn-primary"
+              onclick="location.href = '/lessons/python_web/python_web_lekce10.html';" class="btn btn-primary">Následují
+              lekce</button>
+          </td>
+          <td>
+            <p class="nav-link" id="cas-text"><span id="cas"></span></p>
+          </td>
+        </tr>
+      </table>
+    </div>
 
     <div class="jumbotron bg-light rounded-lg shadow-sm mb-5">
       <div class="card-body">
@@ -555,6 +572,15 @@ urlpatterns = [
         <i class="fas fa-download"></i> Stáhnout pracovní list
       </a>
     </section>
+
+    <div>
+      <div class="d-flex justify-content-between mb-4">
+        <button id="left" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web_lekce8.html';">Předchozí lekce</button>
+        <button id="right" class="btn btn-primary"
+          onclick="location.href = '/lessons/python_web/python_web_lekce10.html';">Následující lekce</button>
+      </div>
+    </div>
 
   </main>
 
