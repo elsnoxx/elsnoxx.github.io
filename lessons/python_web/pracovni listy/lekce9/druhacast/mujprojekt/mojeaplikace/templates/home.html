@@ -10,6 +10,17 @@
     <!-- mojeaplikace/templates/home.html -->
     <h1>Vítej na stránce!</h1>
     <p>Toto je tvoje první Django stránka bez databáze.</p>
+    <!-- home.html -->
+    <h1>O mně</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="jmeno" placeholder="Tvé jméno"><br>
+        <textarea name="zprava" placeholder="Tvoje zpráva"></textarea><br>
+        <button type="submit">Odeslat</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
 </body>
 
 </html>
