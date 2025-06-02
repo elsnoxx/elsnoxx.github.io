@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Detail oddělení</title>
+</head>
+<body>
+    <h1>Detail oddělení</h1>
+    <p>Číslo: {{ oddeleni.deptno }}</p>
+    <p>Název: {{ oddeleni.dname }}</p>
+    <a href="{% url 'oddeleni_list' %}">Zpět na seznam oddělení</a>
+</body>
+</html>

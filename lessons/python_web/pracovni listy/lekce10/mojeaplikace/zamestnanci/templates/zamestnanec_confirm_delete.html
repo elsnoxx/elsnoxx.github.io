@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smazat zaměstnance</title>
+</head>
+<body>
+    <h1>Opravdu chceš smazat {{ zamestnanec.ename }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Smazat</button>
+    </form>
+    <a href="{% url 'zamestnanci_list' %}">Zpět na seznam zaměstnanců</a>
+</body>
+</html>

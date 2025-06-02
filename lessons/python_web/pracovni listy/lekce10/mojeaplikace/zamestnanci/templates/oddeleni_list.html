@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Seznam oddělení</title>
+</head>
+<body>
+    <h1>Seznam oddělení</h1>
+    <a href="{% url 'oddeleni_add' %}">Přidat oddělení</a>
+    <ul>
+        {% for oddeleni in oddeleni %}
+            <li>
+                {{ oddeleni.dname }} ({{ oddeleni.deptno }})
+                <a href="{% url 'oddeleni_detail' oddeleni.deptno %}">Detail</a>
+                <a href="{% url 'oddeleni_edit' oddeleni.deptno %}">Upravit</a>
+                <a href="{% url 'oddeleni_delete' oddeleni.deptno %}">Smazat</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Zpět na hlavní stránku</a>
+</body>
+</html>

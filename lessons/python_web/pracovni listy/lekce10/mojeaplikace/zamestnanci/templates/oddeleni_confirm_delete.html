@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Smazat oddělení</title>
+</head>
+<body>
+    <h1>Opravdu chceš smazat oddělení "{{ oddeleni.dname }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Smazat</button>
+    </form>
+    <a href="{% url 'oddeleni_list' %}">Zpět na seznam oddělení</a>
+</body>
+</html>

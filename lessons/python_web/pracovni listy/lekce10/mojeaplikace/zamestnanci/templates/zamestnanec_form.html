@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulář zaměstnance</title>
+</head>
+<body>
+    <h1>{% if zamestnanec %}Upravit{% else %}Přidat{% endif %} zaměstnance</h1>
+    <form method="post">
+        {% csrf_token %}        
+        <label for="ename">Jméno:</label>
+        <input type="text" name="ename" id="ename" value="{{ zamestnanec.ename|default:'' }}"><br>
+
+        <label for="job">Pozice:</label>
+        <input type="text" name="job" id="job" value="{{ zamestnanec.job|default:'' }}"><br>
+
+        <label for="mgr">Nadřízený (číslo):</label>
+        <input type="text" name="mgr" id="mgr" value="{{ zamestnanec.mgr|default:'' }}"><br>
+
+        <label for="hiredate">Datum nástupu:</label>
+        <input type="date" name="hiredate" id="hiredate" value="{{ zamestnanec.hiredate|date:'Y-m-d'|default:'' }}"><br>
+
+        <label for="sal">Plat:</label>
+        <input type="number" step="0.01" name="sal" id="sal" value="{{ zamestnanec.sal|default:'' }}"><br>
+
+        <label for="comm">Prémie:</label>
+        <input type="number" step="0.01" name="comm" id="comm" value="{{ zamestnanec.comm|default:'' }}"><br>
+
+        <label for="deptno">Oddělení (číslo):</label>
+        <input type="text" name="deptno" id="deptno" value="{{ zamestnanec.deptno.deptno|default:'' }}"><br>
+
+        <button type="submit">Uložit</button>
+    </form>
+    <a href="{% url 'zamestnanci_list' %}">Zpět na seznam zaměstnanců</a>
+</body>
+</html>

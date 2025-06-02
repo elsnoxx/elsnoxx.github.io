@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Zaměstnanci</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Jméno</th>
+                <th>Příjmení</th>
+                <th>Oddělení</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for zamestnanec in zamestnanci %}
+            <tr>
+                <td>{{ zamestnanec.empno }}</td>
+                <td>{{ zamestnanec.ename }}</td>
+                <td>{{ zamestnanec.job }}</td>
+                <td>{{ zamestnanec.hiredate }}</td>
+                <td>{{ zamestnanec.oddeleni.nazev }}</td>
+                <td>
+                    <a href="{% url 'zamestnanec_detail' zamestnanec.empno %}">Detail</a>
+                    <a href="{% url 'zamestnanec_edit' zamestnanec.empno %}">Upravit</a>
+                    <a href="{% url 'zamestnanec_delete' zamestnanec.empno %}">Smazat</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail zaměstnance</title>
+</head>
+<body>
+    <h1>Detail zaměstnance</h1>
+    <p>Číslo: {{ zamestnanec.empno }}</p>
+    <p>Jméno: {{ zamestnanec.ename }}</p>
+    <p>Pozice: {{ zamestnanec.job }}</p>
+    <p>Oddělení: {{ zamestnanec.deptno.dname }}</p>
+    <p>Plat: {{ zamestnanec.sal }}</p>
+    <p>Datum nástupu: {{ zamestnanec.hiredate }}</p>
+    <a href="{% url 'zamestnanci_list' %}">Zpět na seznam zaměstnanců</a>
+</body>
+</html>
