@@ -17,7 +17,6 @@ def zamestnanec_add(request):
     if request.method == 'POST':
         ename = request.POST['ename']
         job = request.POST['job']
-        mgr = request.POST.get('mgr', None)
         hiredate = request.POST['hiredate']
         sal = request.POST['sal']
         comm = request.POST.get('comm', None)
@@ -26,7 +25,6 @@ def zamestnanec_add(request):
         Employee.objects.create(
             ename=ename,
             job=job,
-            mgr=mgr,
             hiredate=hiredate,
             sal=sal,
             comm=comm,

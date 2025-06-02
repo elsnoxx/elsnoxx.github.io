@@ -107,140 +107,91 @@
       </table>
     </div>
 
-    <h1>databaze sql + django modely</h1>
-
-    <p>
-      ukazka v <a href="https://livesql.oracle.com/ords/f?p=590:41:110367629411516:::41:P41_ID:333667445241506780258350156571847879837">online oracle databazi</a>, vysvetleni co je co jak funguje sql, kuzat prikazy select, insert, update, delete, create table
-    </p>
-    <p>
-      ukazka EMP and DEPT tabulek, ukazka jak se vytvori tabulka, jak se vlozi data, jak se vybere data, jak se upravi data, jak se smazou data
-    </p>
-
-    ✏️ 1. Úvod: Co je databáze a SQL?
-👉 Vysvětli:
-
-Databáze = místo, kde ukládáme data (tabulky).
-
-SQL = jazyk pro práci s daty (dotazování, vkládání, mazání).
-
-Tabulka = něco jako tabulka v Excelu, má řádky a sloupce.
-
-
-
-✏️ 2. Ukázka základního SELECT
-Použij Live SQL (https://livesql.oracle.com/ords/f?p=590:41:110367629411516:::41:P41_ID:333667445241506780258350156571847879837) a napiš:
-
-sql
-Copy
-Edit
--- Vypsání všech zaměstnanců
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-database mr-2"></i> Databáze, SQL a Django modely</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          V této lekci se naučíme, jak pracovat s databázemi pomocí jazyka SQL a jak integrovat databázi do Django
+          aplikace pomocí modelů.
+        </p>
+        <p>
+          Nejprve si ukážeme základní SQL příkazy pro práci s databází, poté si vytvoříme Django projekt a aplikaci,
+          přidáme modely a nakonec si ukážeme, jak s nimi pracovat v Pythonu.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Ukázka SQL příkazů -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h3 class="mb-0"><i class="fas fa-database mr-2"></i> 1. Práce s databází v SQL</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><b>Databáze</b> = místo, kde ukládáme data (tabulky).</li>
+          <li><b>SQL</b> = jazyk pro práci s daty (dotazování, vkládání, mazání).</li>
+          <li><b>Tabulka</b> = něco jako tabulka v Excelu, má řádky a sloupce.</li>
+        </ul>
+<h5>Základní SQL příkazy</h5>
+            <p>Ukázka v <a href="https://livesql.oracle.com/ords/f?p=590:41:110367629411516:::41:P41_ID:333667445241506780258350156571847879837"
+                target="_blank">online Oracle databázi</a></p>
+            <pre><code class="language-sql">-- Vypsání všech zaměstnanců
 SELECT * FROM EMP;
 
 -- Vypsání všech oddělení
 SELECT * FROM DEPT;
-
-
-
-3. Vybrané sloupce a WHERE
-sql
-Copy
-Edit
--- Vypsat jen jména a platy
-SELECT ENAME, SAL
-FROM EMP;
-
--- Vypsat zaměstnance s platem vyšším než 2000
-SELECT ENAME, SAL
-FROM EMP
-WHERE SAL > 2000;
-
-
- 4. Seskupování a souhrny
-sql
-Copy
-Edit
--- Celkový počet zaměstnanců
+            </code></pre>
+            <pre><code class="language-sql">-- Vybrané sloupce a WHERE
+SELECT ENAME, SAL FROM EMP;
+SELECT ENAME, SAL FROM EMP WHERE SAL &gt; 2000;
+            </code></pre>
+            <pre><code class="language-sql">-- Seskupování a souhrny
 SELECT COUNT(*) FROM EMP;
-
--- Průměrný plat
 SELECT AVG(SAL) FROM EMP;
-
--- Součet platů
 SELECT SUM(SAL) FROM EMP;
-
-
-5. Spojování tabulek (JOIN)
-sql
-Copy
-Edit
--- Připojit oddělení k zaměstnancům
+            </code></pre>
+            <pre><code class="language-sql">-- Spojování tabulek (JOIN)
 SELECT E.ENAME, E.SAL, D.DNAME
 FROM EMP E
-JOIN DEPT D
-ON E.DEPTNO = D.DEPTNO;
-
-
-6. Vkládání dat (INSERT)
-sql
-Copy
-Edit
--- Vložit nového zaměstnance
+JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
+            </code></pre>
+            <pre><code class="language-sql">-- Vkládání dat (INSERT)
 INSERT INTO EMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
 VALUES (9999, 'NOVAK', 'ANALYST', NULL, SYSDATE, 3000, NULL, 10);
+            </code></pre>
+            <pre><code class="language-sql">-- Aktualizace a mazání (UPDATE, DELETE)
+UPDATE EMP SET SAL = SAL + 500 WHERE ENAME = 'NOVAK';
+DELETE FROM EMP WHERE ENAME = 'NOVAK';
+            </code></pre>
+      </div>
+    </div>
 
-
-7. Smazání a aktualizace (DELETE a UPDATE)
-sql
-Copy
-Edit
--- Aktualizace platu zaměstnance
-UPDATE EMP
-SET SAL = SAL + 500
-WHERE ENAME = 'NOVAK';
-
--- Smazání zaměstnance
-DELETE FROM EMP
-WHERE ENAME = 'NOVAK';
-    
-
-<p>
-  vysvetleni jak tohle budeme pouzivat vramci prace django, jak se vytvari modely, jak se vytvari tabulky, jak se pracuje s daty v ramci djangovych modelu
-</p>
-
-Vytvoření Django projektu a aplikace
-V terminálu (nebo VS Code) spusť:
-
-bash
-Copy
-Edit
-python -m django startproject mojeaplikace
+    <!-- Nastavení Djanga a admin menu -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h3 class="mb-0"><i class="fab fa-python mr-2"></i> 2. Nastavení Django projektu a admin menu</h3>
+      </div>
+      <div class="card-body">
+        <ol>
+          <li>
+            <b>Vytvoření projektu a aplikace:</b>
+            <pre><code class="language-bash">django-admin startproject moje_aplikace
 cd moje_aplikace
 python manage.py startapp zamestnanci
-📝 Poznámka:
-
-moje_aplikace je název projektu.
-
-zamestnanci je název aplikace (část projektu).
-
-Nastavení aplikace v settings.py
-V souboru moje_aplikace/settings.py najdi sekci INSTALLED_APPS a přidej tam svou appku:
-
-python
-Copy
-Edit
-INSTALLED_APPS = [
+</code></pre>
+          </li>
+          <li>
+            <b>Přidání aplikace do <code>settings.py</code>:</b>
+            <pre><code class="language-python">INSTALLED_APPS = [
     ...
     'zamestnanci',
-]
-
-
- Vytvoření modelů (models.py)
-V souboru zamestnanci/models.py napiš:
-
-python
-Copy
-Edit
-from django.db import models
+]</code></pre>
+          </li>
+          <li>
+            <b>Modely v <code>models.py</code>:</b>
+            <pre><code class="language-python">from django.db import models
 
 class Department(models.Model):
     deptno = models.IntegerField(primary_key=True)
@@ -253,7 +204,6 @@ class Employee(models.Model):
     empno = models.IntegerField(primary_key=True)
     ename = models.CharField(max_length=50)
     job = models.CharField(max_length=30)
-    mgr = models.IntegerField(null=True, blank=True)
     hiredate = models.DateField()
     sal = models.DecimalField(max_digits=10, decimal_places=2)
     comm = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
@@ -261,98 +211,77 @@ class Employee(models.Model):
 
     def __str__(self):
         return self.ename
-📝 Poznámka:
-
-__str__ metoda umožní, aby se v adminu a shellu zobrazovalo pěkně jméno (například místo Employee object bude John Smith).
-
-ForeignKey propojuje zaměstnance s oddělením.
-
-
-Vytvoření migrací
-Teď Django přeloží naše modely na SQL příkazy.
-
-V terminálu spusť:
-
-bash
-Copy
-Edit
-python manage.py makemigrations zamestnanci
-👉 Django vypíše něco jako:
-
-sql
-Copy
-Edit
-Migrations for 'zamestnanci':
-  zamestnanci/migrations/0001_initial.py
-    - Create model Department
-    - Create model Employee
-Pak spusť:
-
-bash
-Copy
-Edit
-python manage.py migrate
-👉 Django provede SQL příkazy v databázi (standardně SQLite) a vytvoří tabulky.
-
-řidání modelů do administrace (admin.py)
-V souboru zamestnanci/admin.py napiš:
-
-python
-Copy
-Edit
+</code></pre>
+          </li>
+          <li>
+            <b>Přidání modelů do admin rozhraní (<code>admin.py</code>):</b>
+                        <pre><code class="language-python"># admin.py
 from django.contrib import admin
 from .models import Employee, Department
 
 admin.site.register(Employee)
 admin.site.register(Department)
-👉 Tím řekneš Django adminu, aby zpřístupnil tabulky Employee a Department přes webové rozhraní.
-puštění vývojového serveru
-V terminálu spusť:
-
-bash
-Copy
-Edit
-python manage.py runserver
-a v prohlížeči otevři:
-
-arduino
-Copy
-Edit
-http://127.0.0.1:8000/admin/
-
-Vytvoření administrátorského uživatele
-Aby ses do adminu mohl přihlásit, musíš vytvořit účet:
-
-bash
-Copy
-Edit
+</code></pre>
+          </li>
+          <li>
+            <b>Migrace a admin menu:</b>
+            <pre><code class="language-bash">python manage.py makemigrations zamestnanci
+python manage.py migrate
 python manage.py createsuperuser
-👉 Django se tě zeptá na:
+python manage.py runserver
+</code></pre>
 
-Uživatelské jméno (třeba admin)
+            <div class="alert alert-success mt-2">
+              <b>Tip:</b> V adminu můžeš přidávat a upravovat data jako v tabulce!
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
 
-Email (klidně vynech)
+    <!-- Práce s modely a objekty ve views -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h3 class="mb-0"><i class="fas fa-code mr-2"></i> 3. Práce s modely a objekty v Pythonu (views)</h3>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><b>Získání všech zaměstnanců:</b>
+            <pre><code class="language-python">from .models import Employee
 
-Heslo
-
-Po vytvoření se přihlas do adminu.
-
-Naklikání dat
-V admin rozhraní:
-✅ Klikni na Departments → Přidat oddělení (např. 10 – SALES, 20 – IT).
-✅ Klikni na Employees → Přidat zaměstnance a vyplň hodnoty (včetně výběru oddělení).
-
-Tím dětem ukážeš:
-
-Jak tabulky souvisí s modely.
-
-Že se data ukládají do databáze a že je můžeš editovat přes klikání (bez psaní SQL).
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+zamestnanci = Employee.objects.all()
+for z in zamestnanci:
+    print(z.ename, z.sal)
+</code></pre>
+          </li>
+          <li><b>Vyhledání podle podmínky:</b>
+            <pre><code class="language-python">vysoke_platy = Employee.objects.filter(sal__gt=2000)
+</code></pre>
+          </li>
+          <li><b>Přidání nového zaměstnance:</b>
+            <pre><code class="language-python">novy = Employee(
+    empno=1001,
+    ename="Karel",
+    job="Programátor",
+    hiredate="2024-06-01",
+    sal=3500,
+    deptno=Department.objects.get(deptno=10)
+)
+novy.save()
+</code></pre>
+          </li>
+          <li><b>Úprava a mazání:</b>
+            <pre><code class="language-python">z = Employee.objects.get(empno=1001)
+z.sal = 4000
+z.save()
+z.delete()
+</code></pre>
+          </li>
+        </ul>
+        <div class="alert alert-info mt-2">
+          <b>Všechny tyto příkazy můžeš použít ve views, shellu nebo v admin rozhraní!</b>
+        </div>
+      </div>
     </div>
 
     <div>
