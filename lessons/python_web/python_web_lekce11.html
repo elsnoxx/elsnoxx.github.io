@@ -346,6 +346,7 @@ urlpatterns = [
 ]</code></pre>
 
 
+
         <div class="alert alert-success mt-3">
           <i class="fas fa-check-circle mr-2"></i>
           <strong>Výsledek:</strong> Máme připravený Django projekt s databázovým modelem a admin rozhraním. V dalších
@@ -353,6 +354,185 @@ urlpatterns = [
         </div>
       </div>
     </div>
+
+    <!-- VIEWS -->
+<div class="card mb-4 shadow-sm">
+  <div class="card-header bg-dark text-white">
+    <h2 class="mb-0"><i class="fas fa-code mr-2"></i> Krok 5: Vytvoření Views (pohledů)</h2>
+  </div>
+  <div class="card-body">
+    <p>
+      Views jsou funkce, které zpracovávají HTTP požadavky a vracejí HTTP odpovědi. Každá view funkce odpovídá jednomu endpointu naší aplikace.
+    </p>
+    
+    <h5>Skeleton souboru views.py s komentáři:</h5>
+    <pre><code class="language-python"># todo_app/views.py
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .models import Todo
+from django.utils import timezone
+
+def index(request):
+    """Hlavní stránka s přidáváním úkolů"""
+    if request.method == 'POST':
+        # Získej data z formuláře (ukol, poznamka, ocekavane, predmet)
+        # Vytvoř nový Todo objekt pomocí Todo.objects.create()
+        # Přesměruj na stejnou stránku
+        pass
+    
+    # Načti všechny úkoly kde deleted=False, seřaď podle data vytvoření
+    # Vrať render s template 'index.html' a seznamem úkolů
+    pass
+
+def done(request, pk):
+    """Označení úkolu jako splněného/nesplněného"""
+    if request.method == 'POST':
+        # Najdi úkol podle pk pomocí get_object_or_404
+        # Přepni hodnotu done (True/False)
+        # Pokud je done=True, nastav completed=aktuální čas
+        # Pokud je done=False, nastav completed=None
+        # Ulož změny pomocí save()
+        pass
+    # Přesměruj na hlavní stránku
+    pass
+
+def delete(request, pk):
+    """Soft delete úkolu"""
+    # Najdi úkol podle pk
+    # Nastav deleted=True a deleted_at=aktuální čas
+    # Ulož změny
+    # Přesměruj na hlavní stránku
+    pass
+
+def edit(request, pk):
+    """Editace existujícího úkolu"""
+    # Najdi úkol podle pk
+    if request.method == 'POST':
+        # Aktualizuj všechna pole úkolu z formuláře
+        # Ulož změny
+        # Přesměruj na hlavní stránku
+        pass
+    # Pro GET požadavek vrať template 'edit.html' s úkolem
+    pass
+
+def history(request):
+    """Zobrazení historie splněných a smazaných úkolů"""
+    # Načti splněné úkoly: done=True, deleted=False
+    # Načti smazané úkoly: deleted=True
+    # Vrať template 'history.html' s oběma seznamy
+    pass</code></pre>
+    
+    <h5 class="mt-4">Vysvětlení jednotlivých views:</h5>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card border-primary">
+          <div class="card-header bg-primary text-white">
+            <h6 class="mb-0">📝 index(request)</h6>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0">
+              <li><strong>GET:</strong> Zobrazí všechny nesmazané úkoly</li>
+              <li><strong>POST:</strong> Přidá nový úkol do databáze</li>
+              <li>Filtr: <code>Todo.objects.filter(deleted=False)</code></li>
+              <li>Řazení: <code>.order_by('-created')</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card border-success">
+          <div class="card-header bg-success text-white">
+            <h6 class="mb-0">✅ done(request, pk)</h6>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0">
+              <li>Toggle: <code>todo.done = not todo.done</code></li>
+              <li>Čas: <code>todo.completed = timezone.now()</code></li>
+              <li>Bezpečnost: <code>get_object_or_404(Todo, pk=pk)</code></li>
+              <li>Přesměrování: <code>return redirect('index')</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="card border-danger">
+          <div class="card-header bg-danger text-white">
+            <h6 class="mb-0">🗑️ delete(request, pk)</h6>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0">
+              <li><strong>Soft delete:</strong> <code>todo.deleted = True</code></li>
+              <li>Čas smazání: <code>todo.deleted_at = timezone.now()</code></li>
+              <li>Zachování dat pro historii</li>
+              <li>Bezpečnější než skutečné mazání</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="card border-warning">
+          <div class="card-header bg-warning text-dark">
+            <h6 class="mb-0">✏️ edit(request, pk)</h6>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0">
+              <li><strong>GET:</strong> <code>render(request, 'edit.html', {'todo': todo})</code></li>
+              <li><strong>POST:</strong> Aktualizace všech polí</li>
+              <li>Formulář předvyplněný aktuálními daty</li>
+              <li>Validace a uložení změn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card border-info mt-3">
+      <div class="card-header bg-info text-white">
+        <h6 class="mb-0">📚 history(request)</h6>
+      </div>
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Splněné: <code>Todo.objects.filter(done=True, deleted=False)</code></li>
+          <li>Smazané: <code>Todo.objects.filter(deleted=True)</code></li>
+          <li>Řazení podle času: <code>.order_by('-completed')</code></li>
+          <li>Dva seznamy v jednom template</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="alert alert-info mt-4">
+      <h6><i class="fas fa-lightbulb mr-2"></i>Klíčové Django funkce:</h6>
+      <ul class="mb-0">
+        <li><strong><code>get_object_or_404(Model, pk=pk)</code>:</strong> Bezpečně načte objekt</li>
+        <li><strong><code>request.method == 'POST'</code>:</strong> Kontrola typu požadavku</li>
+        <li><strong><code>request.POST.get('field')</code>:</strong> Získání dat z formuláře</li>
+        <li><strong><code>redirect('url_name')</code>:</strong> Přesměrování</li>
+        <li><strong><code>render(request, 'template.html', context)</code>:</strong> Vykreslení</li>
+      </ul>
+    </div>
+    
+    <h5 class="mt-4">URL konfigurace:</h5>
+    <pre><code class="language-python"># todo_projekt/urls.py
+from django.contrib import admin
+from django.urls import path
+from todo_app import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('done/&lt;int:pk&gt;/', views.done, name='done'),
+    path('delete/&lt;int:pk&gt;/', views.delete, name='delete'),
+    path('edit/&lt;int:pk&gt;/', views.edit, name='edit'),
+    path('history/', views.history, name='history'),
+]</code></pre>
+  </div>
+</div>
 
     <div>
       <div class="d-flex justify-content-between mb-4">
