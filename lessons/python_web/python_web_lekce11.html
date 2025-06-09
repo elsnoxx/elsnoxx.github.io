@@ -109,21 +109,248 @@
 
     <div class="card mb-4 shadow-sm">
       <div class="card-header bg-primary text-white">
-        <h2 class="mb-0"><i class="fas fa-database mr-2"></i> Databáze, SQL a Django modely</h2>
+        <h2 class="mb-0"><i class="fas fa-database mr-2"></i> ToDo aplikace v Djangu</h2>
       </div>
       <div class="card-body">
         <p>
-          V této lekci se naučíme, jak pracovat s databázemi pomocí jazyka SQL a jak integrovat databázi do Django
-          aplikace pomocí modelů.
+          V této lekci se si vyzkoušíme předělat námi vztvořenou aplikace ve Flasku do Djanga.
         </p>
         <p>
-          Nejprve si ukážeme základní SQL příkazy pro práci s databází, poté si vytvoříme Django projekt a aplikaci,
-          přidáme modely a nakonec si ukážeme, jak s nimi pracovat v Pythonu.
+          Nejprve si ukážeme jak vypadala nase aplikace ve Flasku, kterou jsme si vytvořili v předchozí lekci.
+          A potom se vrhneme na přepis do Djanga.
         </p>
       </div>
     </div>
+
+    <!-- ÚVOD -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-tasks mr-2"></i> Úvod - Převod Flask TODO aplikace do Djanga</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          V předchozí lekci jsme si vytvořili TODO aplikaci ve Flasku. Nyní si ukážeme, jak tutéž aplikaci přepsat do
+          Djanga s využitím databáze místo seznamů v paměti.
+        </p>
+        <h5 class="mt-3">Co naše TODO aplikace umí:</h5>
+        <ul>
+          <li>Přidávání nových úkolů s popisem, poznámkou, očekávaným termínem a předmětem</li>
+          <li>Označování úkolů jako splněných</li>
+          <li>Mazání úkolů</li>
+          <li>Editace existujících úkolů</li>
+          <li>Zobrazení historie splněných a smazaných úkolů</li>
+        </ul>
+        <div class="alert alert-info mt-3">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Výhoda Djanga:</strong> Data se budou ukládat do databáze, takže se neztratí po restartu serveru!
+        </div>
+      </div>
+    </div>
+
+    <!-- INICIALIZACE PROJEKTU -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h2 class="mb-0"><i class="fas fa-rocket mr-2"></i> Krok 1: Inicializace Django projektu</h2>
+      </div>
+      <div class="card-body">
+        <ol>
+          <li>
+            <b>Vytvoření projektu a aplikace:</b>
+            <pre><code class="language-bash">django-admin startproject todo_projekt
+cd todo_projekt
+python manage.py startapp todo_app</code></pre>
+          </li>
+          <li>
+            <b>Přidání aplikace do <code>settings.py</code>:</b>
+            <pre><code class="language-python">INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'todo_app',  # naše aplikace
+]</code></pre>
+          </li>
+          <li>
+            <b>Vytvoření složek pro šablony a statické soubory:</b>
+            <pre><code class="language-bash">mkdir todo_app/templates
+mkdir todo_app/static
+mkdir todo_app/static/css
+mkdir todo_app/static/js</code></pre>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- VYTVOŘENÍ MODELŮ -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-warning text-dark">
+        <h2 class="mb-0"><i class="fas fa-database mr-2"></i> Krok 2: Vytvoření modelů a jejich migrace</h2>
+      </div>
+      <div class="card-body">
+        <h5>Model pro TODO úkoly:</h5>
+        <pre><code class="language-python"># todo_app/models.py
+from django.db import models
+from django.utils import timezone
+
+class Todo(models.Model):
+    text = models.CharField(max_length=200, verbose_name="Úkol")
+    poznamka = models.TextField(blank=True, verbose_name="Poznámka")
+    ocekavane = models.DateField(null=True, blank=True, verbose_name="Očekávaný termín")
+    predmet = models.CharField(max_length=100, blank=True, verbose_name="Předmět")
+    done = models.BooleanField(default=False, verbose_name="Splněno")
+    created = models.DateTimeField(default=timezone.now, verbose_name="Vytvořeno")
+    completed = models.DateTimeField(null=True, blank=True, verbose_name="Dokončeno")
+    deleted = models.BooleanField(default=False, verbose_name="Smazáno")
+    deleted_at = models.DateTimeField(null=True, blank=True, verbose_name="Smazáno v")
     
+    class Meta:
+        verbose_name = "TODO úkol"
+        verbose_name_plural = "TODO úkoly"
+        ordering = ['-created']
     
+    def __str__(self):
+        return self.text</code></pre>
+
+        <h5 class="mt-4">Spuštění migrací:</h5>
+        <pre><code class="language-bash">python manage.py makemigrations todo_app
+python manage.py migrate</code></pre>
+
+        <div class="alert alert-info mt-3">
+          <i class="fas fa-info-circle mr-2"></i>
+          <strong>Vysvětlení polí:</strong><br>
+          - <code>text</code>: Hlavní popis úkolu<br>
+          - <code>poznamka</code>: Volitelná poznámka<br>
+          - <code>ocekavane</code>: Termín splnění<br>
+          - <code>predmet</code>: Kategorie/předmět úkolu<br>
+          - <code>done</code>: Zda je úkol splněn<br>
+          - <code>deleted</code>: Soft delete - úkol není skutečně smazán
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPERUSER -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h2 class="mb-0"><i class="fas fa-user-shield mr-2"></i> Krok 3: Vytvoření superuživatele a admin rozhraní</h2>
+      </div>
+      <div class="card-body">
+        <ol>
+          <li>
+            <b>Vytvoření superuživatele:</b>
+            <pre><code class="language-bash">python manage.py createsuperuser</code></pre>
+            <div class="alert alert-warning mt-2">
+              <i class="fas fa-exclamation-triangle mr-2"></i>
+              Django se zeptá na uživatelské jméno, email a heslo. Heslo musí být dostatečně silné!
+            </div>
+          </li>
+          <li>
+            <b>Registrace modelu v admin rozhraní:</b>
+            <pre><code class="language-python"># todo_app/admin.py
+from django.contrib import admin
+from .models import Todo
+
+@admin.register(Todo)
+class TodoAdmin(admin.ModelAdmin):
+    list_display = ['text', 'predmet', 'ocekavane', 'done', 'created']
+    list_filter = ['done', 'deleted', 'predmet', 'created']
+    search_fields = ['text', 'poznamka']
+    list_editable = ['done']
+    date_hierarchy = 'created'</code></pre>
+          </li>
+          <li>
+            <b>Spuštění serveru a přístup k adminu:</b>
+            <pre><code class="language-bash">python manage.py runserver</code></pre>
+            <p>Přejdi na <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> a
+              přihlas se svými údaji.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ENDPOINTY -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-secondary text-white">
+        <h2 class="mb-0"><i class="fas fa-route mr-2"></i> Krok 4: Popis endpointů a jejich funkce</h2>
+      </div>
+      <div class="card-body">
+        <h5>Přehled všech URL adres, které budeme vytvářet:</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th>URL</th>
+                <th>Název</th>
+                <th>Metody</th>
+                <th>Funkce</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>/</code></td>
+                <td>home</td>
+                <td>GET, POST</td>
+                <td>Hlavní stránka - zobrazení úkolů a přidání nového</td>
+              </tr>
+              <tr>
+                <td><code>/done/&lt;int:pk&gt;/</code></td>
+                <td>done</td>
+                <td>POST</td>
+                <td>Označení úkolu jako splněného</td>
+              </tr>
+              <tr>
+                <td><code>/delete/&lt;int:pk&gt;/</code></td>
+                <td>delete</td>
+                <td>GET</td>
+                <td>Smazání (soft delete) úkolu</td>
+              </tr>
+              <tr>
+                <td><code>/edit/&lt;int:pk&gt;/</code></td>
+                <td>edit</td>
+                <td>GET, POST</td>
+                <td>Editace existujícího úkolu</td>
+              </tr>
+              <tr>
+                <td><code>/history/</code></td>
+                <td>history</td>
+                <td>GET</td>
+                <td>Zobrazení splněných a smazaných úkolů</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5 class="mt-4">Ukázka URL konfigurace:</h5>
+        <pre><code class="language-python"># todo_app/urls.py
+from django.urls import path
+from . import views
+
+app_name = 'todo_app'
+urlpatterns = [
+    path('', views.index, name='home'),
+    path('done/&lt;int:pk&gt;/', views.done, name='done'),
+    path('delete/&lt;int:pk&gt;/', views.delete, name='delete'),
+    path('edit/&lt;int:pk&gt;/', views.edit, name='edit'),
+    path('history/', views.history, name='history'),
+]</code></pre>
+
+        <pre><code class="language-python"># todo_projekt/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('todo_app.urls')),
+]</code></pre>
+
+        <div class="alert alert-success mt-3">
+          <i class="fas fa-check-circle mr-2"></i>
+          <strong>Výsledek:</strong> Máme připravený Django projekt s databázovým modelem a admin rozhraním. V dalších
+          krocích vytvoříme views a šablony pro frontend aplikaci.
+        </div>
+      </div>
+    </div>
 
     <div>
       <div class="d-flex justify-content-between mb-4">
