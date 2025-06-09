@@ -94,10 +94,10 @@
         <tr>
           <td>
             <button id="left" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce9.html';" class="btn btn-primary">Předchozí
+              onclick="location.href = '/lessons/python_web/python_web_lekce10.html';" class="btn btn-primary">Předchozí
               lekce</button>
             <button id="right" class="btn btn-primary"
-              onclick="location.href = '/lessons/python_web/python_web_lekce11.html';" class="btn btn-primary">Následují
+              onclick="location.href = '/lessons/python_web/python_web_lekce12.html';" class="btn btn-primary">Následují
               lekce</button>
           </td>
           <td>
@@ -123,173 +123,14 @@
       </div>
     </div>
     
-    <!-- Ukázka SQL příkazů -->
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header bg-info text-white">
-        <h3 class="mb-0"><i class="fas fa-database mr-2"></i> 1. Práce s databází v SQL</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><b>Databáze</b> = místo, kde ukládáme data (tabulky).</li>
-          <li><b>SQL</b> = jazyk pro práci s daty (dotazování, vkládání, mazání).</li>
-          <li><b>Tabulka</b> = něco jako tabulka v Excelu, má řádky a sloupce.</li>
-        </ul>
-<h5>Základní SQL příkazy</h5>
-            <p>Ukázka v <a href="https://livesql.oracle.com/ords/f?p=590:41:110367629411516:::41:P41_ID:333667445241506780258350156571847879837"
-                target="_blank">online Oracle databázi</a></p>
-            <pre><code class="language-sql">-- Vypsání všech zaměstnanců
-SELECT * FROM EMP;
-
--- Vypsání všech oddělení
-SELECT * FROM DEPT;
-            </code></pre>
-            <pre><code class="language-sql">-- Vybrané sloupce a WHERE
-SELECT ENAME, SAL FROM EMP;
-SELECT ENAME, SAL FROM EMP WHERE SAL &gt; 2000;
-            </code></pre>
-            <pre><code class="language-sql">-- Seskupování a souhrny
-SELECT COUNT(*) FROM EMP;
-SELECT AVG(SAL) FROM EMP;
-SELECT SUM(SAL) FROM EMP;
-            </code></pre>
-            <pre><code class="language-sql">-- Spojování tabulek (JOIN)
-SELECT E.ENAME, E.SAL, D.DNAME
-FROM EMP E
-JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
-            </code></pre>
-            <pre><code class="language-sql">-- Vkládání dat (INSERT)
-INSERT INTO EMP (EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO)
-VALUES (9999, 'NOVAK', 'ANALYST', NULL, SYSDATE, 3000, NULL, 10);
-            </code></pre>
-            <pre><code class="language-sql">-- Aktualizace a mazání (UPDATE, DELETE)
-UPDATE EMP SET SAL = SAL + 500 WHERE ENAME = 'NOVAK';
-DELETE FROM EMP WHERE ENAME = 'NOVAK';
-            </code></pre>
-      </div>
-    </div>
-
-    <!-- Nastavení Djanga a admin menu -->
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <h3 class="mb-0"><i class="fab fa-python mr-2"></i> 2. Nastavení Django projektu a admin menu</h3>
-      </div>
-      <div class="card-body">
-        <ol>
-          <li>
-            <b>Vytvoření projektu a aplikace:</b>
-            <pre><code class="language-bash">django-admin startproject moje_aplikace
-cd moje_aplikace
-python manage.py startapp zamestnanci
-</code></pre>
-          </li>
-          <li>
-            <b>Přidání aplikace do <code>settings.py</code>:</b>
-            <pre><code class="language-python">INSTALLED_APPS = [
-    ...
-    'zamestnanci',
-]</code></pre>
-          </li>
-          <li>
-            <b>Modely v <code>models.py</code>:</b>
-            <pre><code class="language-python">from django.db import models
-
-class Department(models.Model):
-    deptno = models.IntegerField(primary_key=True)
-    dname = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.dname
-
-class Employee(models.Model):
-    empno = models.IntegerField(primary_key=True)
-    ename = models.CharField(max_length=50)
-    job = models.CharField(max_length=30)
-    hiredate = models.DateField()
-    sal = models.DecimalField(max_digits=10, decimal_places=2)
-    comm = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    deptno = models.ForeignKey(Department, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.ename
-</code></pre>
-          </li>
-          <li>
-            <b>Přidání modelů do admin rozhraní (<code>admin.py</code>):</b>
-                        <pre><code class="language-python"># admin.py
-from django.contrib import admin
-from .models import Employee, Department
-
-admin.site.register(Employee)
-admin.site.register(Department)
-</code></pre>
-          </li>
-          <li>
-            <b>Migrace a admin menu:</b>
-            <pre><code class="language-bash">python manage.py makemigrations zamestnanci
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-</code></pre>
-
-            <div class="alert alert-success mt-2">
-              <b>Tip:</b> V adminu můžeš přidávat a upravovat data jako v tabulce!
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- Práce s modely a objekty ve views -->
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header bg-success text-white">
-        <h3 class="mb-0"><i class="fas fa-code mr-2"></i> 3. Práce s modely a objekty v Pythonu (views)</h3>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><b>Získání všech zaměstnanců:</b>
-            <pre><code class="language-python">from .models import Employee
-
-zamestnanci = Employee.objects.all()
-for z in zamestnanci:
-    print(z.ename, z.sal)
-</code></pre>
-          </li>
-          <li><b>Vyhledání podle podmínky:</b>
-            <pre><code class="language-python">vysoke_platy = Employee.objects.filter(sal__gt=2000)
-</code></pre>
-          </li>
-          <li><b>Přidání nového zaměstnance:</b>
-            <pre><code class="language-python">novy = Employee(
-    empno=1001,
-    ename="Karel",
-    job="Programátor",
-    hiredate="2024-06-01",
-    sal=3500,
-    deptno=Department.objects.get(deptno=10)
-)
-novy.save()
-</code></pre>
-          </li>
-          <li><b>Úprava a mazání:</b>
-            <pre><code class="language-python">z = Employee.objects.get(empno=1001)
-z.sal = 4000
-z.save()
-z.delete()
-</code></pre>
-          </li>
-        </ul>
-        <div class="alert alert-info mt-2">
-          <b>Všechny tyto příkazy můžeš použít ve views, shellu nebo v admin rozhraní!</b>
-        </div>
-      </div>
-    </div>
+    
 
     <div>
       <div class="d-flex justify-content-between mb-4">
         <button id="left" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce9.html';">Předchozí lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce10.html';">Předchozí lekce</button>
         <button id="right" class="btn btn-primary"
-          onclick="location.href = '/lessons/python_web/python_web_lekce11.html';">Následující lekce</button>
+          onclick="location.href = '/lessons/python_web/python_web_lekce12.html';">Následující lekce</button>
       </div>
     </div>
 
