@@ -156,9 +156,12 @@
         <ol>
           <li>
             <b>Vytvoření projektu a aplikace:</b>
-            <pre><code class="language-bash">django-admin startproject todo_projekt
+            <pre><code class="language-bash">
+django-admin startproject todo_projekt
+python manage.py startapp todo_app
 cd todo_projekt
-python manage.py startapp todo_app</code></pre>
+python manage.py runserver
+</code></pre>
           </li>
           <li>
             <b>Přidání aplikace do <code>settings.py</code>:</b>
@@ -175,9 +178,9 @@ python manage.py startapp todo_app</code></pre>
           <li>
             <b>Vytvoření složek pro šablony a statické soubory:</b>
             <pre><code class="language-bash">mkdir todo_app/templates
-mkdir todo_app/static
-mkdir todo_app/static/css
-mkdir todo_app/static/js</code></pre>
+todo_app/static
+todo_app/static/css
+todo_app/static/js</code></pre>
           </li>
         </ol>
       </div>
@@ -195,23 +198,28 @@ from django.db import models
 from django.utils import timezone
 
 class Todo(models.Model):
-    text = models.CharField(max_length=200, verbose_name="Úkol")
-    poznamka = models.TextField(blank=True, verbose_name="Poznámka")
-    ocekavane = models.DateField(null=True, blank=True, verbose_name="Očekávaný termín")
-    predmet = models.CharField(max_length=100, blank=True, verbose_name="Předmět")
-    done = models.BooleanField(default=False, verbose_name="Splněno")
-    created = models.DateTimeField(default=timezone.now, verbose_name="Vytvořeno")
-    completed = models.DateTimeField(null=True, blank=True, verbose_name="Dokončeno")
-    deleted = models.BooleanField(default=False, verbose_name="Smazáno")
-    deleted_at = models.DateTimeField(null=True, blank=True, verbose_name="Smazáno v")
+    # text => charField, maximalní délka 200 znaků, nazev "Úkol"
+    text = NULL
+    # poznamka => textField, volitelné, nazev "Poznámka"
+    poznamka = NULL
+    # ocekavane => dateField, volitelné, nazev "Očekávaný
+    ocekavane = NULL
+    # predmet => charField, maximalní délka 100 znaků, volitelné, nazev "Předmět"
+    predmet = NULL
+    # done => booleanField, výchozí hodnota False, nazev "Splněno"
+    done = NULL
+    # created => dateTimeField, výchozí hodnota aktuální čas, nazev "Vytvořeno"
+    created = NULL
+    # completed => dateTimeField, volitelné, nazev "Dokončeno"
+    completed = NULL
+    # deleted => booleanField, výchozí hodnota False, nazev "Smazáno"
+    deleted = NULL
+    # deleted_at => dateTimeField, volitelné, nazev "Smazáno v"
+    deleted_at = NULL
     
-    class Meta:
-        verbose_name = "TODO úkol"
-        verbose_name_plural = "TODO úkoly"
-        ordering = ['-created']
-    
+    # Přidání metody pro zobrazení úkolu __str__
     def __str__(self):
-        return self.text</code></pre>
+</code></pre>
 
         <h5 class="mt-4">Spuštění migrací:</h5>
         <pre><code class="language-bash">python manage.py makemigrations todo_app
@@ -322,27 +330,21 @@ class TodoAdmin(admin.ModelAdmin):
         </div>
 
         <h5 class="mt-4">Ukázka URL konfigurace:</h5>
-        <pre><code class="language-python"># todo_app/urls.py
+        <pre><code class="language-python"># todo_projekt/urls.py
+from django.contrib import admin
 from django.urls import path
-from . import views
+from todo_app import views
 
 app_name = 'todo_app'
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('done/&lt;int:pk&gt;/', views.done, name='done'),
-    path('delete/&lt;int:pk&gt;/', views.delete, name='delete'),
-    path('edit/&lt;int:pk&gt;/', views.edit, name='edit'),
-    path('history/', views.history, name='history'),
+    path('admin/'), # admin rozhraní
+    path(''), # /
+    path('done'), # done/1
+    path('delete'), # delete/1
+    path('edit'), # edit/1
+    path('history/'), # history/
 ]</code></pre>
 
-        <pre><code class="language-python"># todo_projekt/urls.py
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('todo_app.urls')),
-]</code></pre>
 
         <div class="alert alert-success mt-3">
           <i class="fas fa-check-circle mr-2"></i>

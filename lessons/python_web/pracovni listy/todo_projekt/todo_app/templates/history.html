@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Jednoduchý To-Do List</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <nav style="margin-bottom: 2em;">
+        <a href="{% url 'index' %}">Domů</a> |
+        <a href="{% url 'history' %}">Historie</a>
+    </nav>
+    <h1>History of To-Do List</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="todo-list">
+                <h2>Splněné úkoly</h2>
+                {% if splnene %}
+                    <ul>
+                        {% for todo in splnene %}
+                            <li class="done">
+                                <strong>{{ todo.text }}</strong>
+                                {% if todo.poznamka %}<br><small>Poznámka: {{ todo.poznamka }}</small>{% endif %}
+                                {% if todo.predmet %}<br><small>Předmět: {{ todo.predmet }}</small>{% endif %}
+                                <br><small>Zadáno: {{ todo.created }}</small>
+                                <br><small style="color: #388e3c;">Splněno: {{ todo.completed }}</small>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p>Počet splněných úkolů: <strong>{{ splnene|length }}</strong></p>
+                {% else %}
+                    <p>Žádné splněné úkoly.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="todo-list">
+                <h2>Smazané úkoly</h2>
+                {% if smazane %}
+                    <ul>
+                        {% for todo in smazane %}
+                            <li class="deleted">
+                                <strong>{{ todo.text }}</strong>
+                                {% if todo.poznamka %}<br><small>Poznámka: {{ todo.poznamka }}</small>{% endif %}
+                                {% if todo.predmet %}<br><small>Předmět: {{ todo.predmet }}</small>{% endif %}
+                                <br><small>Zadáno: {{ todo.created }}</small>
+                                {% if todo.deleted %}
+                                    <br><small style="color: #b71c1c;">Smazáno: {{ todo.deleted }}</small>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p>Počet smazaných úkolů: <strong>{{ smazane|length }}</strong></p>
+                {% else %}
+                    <p>Žádné smazané úkoly.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
