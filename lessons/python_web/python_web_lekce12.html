@@ -107,6 +107,375 @@
       </table>
     </div>
 
+    <!-- Přidat mezi <main> a závěrečné navigační tlačítka -->
+
+<div class="container mt-5">
+  <h1 class="text-center mb-5">🔐 Django Autentizace a Autorizace</h1>
+
+  <!-- ÚVOD DO AUTENTIZACE -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h2 class="mb-0"><i class="fas fa-user-shield mr-2"></i> Co je autentizace a autorizace?</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-info">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">🔑 Autentizace (Authentication)</h5>
+            </div>
+            <div class="card-body">
+              <p><strong>Kdo jsi?</strong> - Ověření identity uživatele</p>
+              <ul>
+                <li>Přihlášení pomocí jména a hesla</li>
+                <li>Ověření, že uživatel je opravdu ten, za koho se vydává</li>
+                <li>Vytvoření session pro přihlášeného uživatele</li>
+              </ul>
+              <div class="alert alert-info">
+                <strong>Příklad:</strong> Když zadáte jméno "admin" a heslo "123456", Django ověří, zda tento uživatel existuje a heslo je správné.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card border-warning">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="mb-0">🛡️ Autorizace (Authorization)</h5>
+            </div>
+            <div class="card-body">
+              <p><strong>Co smíš dělat?</strong> - Řízení přístupu k funkcím</p>
+              <ul>
+                <li>Kontrola oprávnění pro konkrétní akce</li>
+                <li>Omezení přístupu k určitým stránkám</li>
+                <li>Filtrování dat podle uživatele</li>
+              </ul>
+              <div class="alert alert-warning">
+                <strong>Příklad:</strong> Přihlášený uživatel vidí pouze své TODO úkoly, ne úkoly jiných uživatelů.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DJANGO UŽIVATELSKÝ SYSTÉM -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h2 class="mb-0"><i class="fas fa-users mr-2"></i> Django uživatelský systém</h2>
+    </div>
+    <div class="card-body">
+      <p>Django má vestavěný robustní systém pro správu uživatelů v <code>django.contrib.auth</code>.</p>
+      
+      <h5>Hlavní komponenty:</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card border-primary">
+            <div class="card-header bg-primary text-white">
+              <h6 class="mb-0">👤 User Model</h6>
+            </div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li><code>username</code></li>
+                <li><code>email</code></li>
+                <li><code>password</code> (hashované)</li>
+                <li><code>first_name</code>, <code>last_name</code></li>
+                <li><code>is_active</code>, <code>is_staff</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card border-success">
+            <div class="card-header bg-success text-white">
+              <h6 class="mb-0">🔐 Authentication Views</h6>
+            </div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li><code>authenticate()</code></li>
+                <li><code>login()</code></li>
+                <li><code>logout()</code></li>
+                <li><code>@login_required</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card border-warning">
+            <div class="card-header bg-warning text-dark">
+              <h6 class="mb-0">🛡️ Permissions</h6>
+            </div>
+            <div class="card-body">
+              <ul class="mb-0">
+                <li>Skupiny uživatelů</li>
+                <li>Oprávnění na model</li>
+                <li>Vlastní oprávnění</li>
+                <li>Superuser přístup</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPLEMENTACE V TODO PROJEKTU -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h2 class="mb-0"><i class="fas fa-code mr-2"></i> Implementace v TODO projektu</h2>
+    </div>
+    <div class="card-body">
+      
+      <h5>Krok 1: Úprava modelu Todo</h5>
+      <pre><code class="language-python"># todo_app/models.py
+from django.db import models
+from django.contrib.auth.models import User
+from django.utils import timezone
+
+class Todo(models.Model):
+    # Přidání vazby na uživatele
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    # Původní pole
+    text = models.CharField(max_length=200, verbose_name="Úkol")
+    poznamka = models.TextField(blank=True, verbose_name="Poznámka")
+    ocekavane = models.DateField(null=True, blank=True, verbose_name="Očekávaný termín")
+    predmet = models.CharField(max_length=100, blank=True, verbose_name="Předmět")
+    done = models.BooleanField(default=False, verbose_name="Splněno")
+    created = models.DateTimeField(default=timezone.now, verbose_name="Vytvořeno")
+    completed = models.DateTimeField(null=True, blank=True, verbose_name="Dokončeno")
+    deleted = models.BooleanField(default=False, verbose_name="Smazáno")
+    deleted_at = models.DateTimeField(null=True, blank=True, verbose_name="Smazáno v")
+
+    def __str__(self):
+        return f"{self.user.username}: {self.text}"</code></pre>
+
+      <h5 class="mt-4">Krok 2: Vytvoření a aplikování migrací</h5>
+      <div class="alert alert-warning">
+        <h6><i class="fas fa-exclamation-triangle mr-2"></i>Důležité migrace!</h6>
+        <p>Po přidání pole <code>user</code> do existujícího modelu musíte vytvořit migraci:</p>
+      </div>
+      
+      <pre><code class="language-bash"># 1. Vytvoření migrace
+python manage.py makemigrations
+
+# Django se zeptá, co dělat s existujícími záznamy:
+# Vyberte možnost "1" a zadejte ID superusera (obvykle 1)
+
+# 2. Aplikování migrace
+python manage.py migrate
+
+# 3. Vytvoření superusera (pokud ještě nemáte)
+python manage.py createsuperuser</code></pre>
+
+      <h5 class="mt-4">Krok 3: Aktualizace views.py</h5>
+      <p>Nyní musíme upravit všechny views tak, aby podporovaly autentizaci. Hlavní změny:</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card border-info">
+            <div class="card-header bg-info text-white">
+              <h6 class="mb-0">🔐 Autentizační views</h6>
+            </div>
+            <div class="card-body">
+              <p><strong>Nové funkce pro přihlašování:</strong></p>
+              <ul>
+                <li><code>register()</code> - Registrace nových uživatelů</li>
+                <li><code>user_login()</code> - Přihlášení uživatele</li>
+                <li><code>user_logout()</code> - Odhlášení uživatele</li>
+              </ul>
+              <div class="alert alert-info">
+                <small>💡 Používáme vestavěný <code>UserCreationForm</code> pro jednoduchou registraci</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card border-warning">
+            <div class="card-header bg-warning text-dark">
+              <h6 class="mb-0">🛡️ Ochrana TODO views</h6>
+            </div>
+            <div class="card-body">
+              <p><strong>Každá TODO view musí:</strong></p>
+              <ul>
+                <li>Mít dekorátor <code>@login_required</code></li>
+                <li>Filtrovat data podle <code>request.user</code></li>
+                <li>Kontrolovat vlastnictví úkolů</li>
+              </ul>
+              <div class="alert alert-warning">
+                <small>⚠️ Bez těchto kontrol by uživatelé viděli všechny úkoly!</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="mt-3">Klíčové importy:</h6>
+      <pre><code class="language-python"># todo_app/views.py
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from django.contrib.auth.forms import UserCreationForm</code></pre>
+
+      <h6 class="mt-3">Příklad přihlašovací funkce:</h6>
+      <pre><code class="language-python">def user_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            auth_login(request, user)
+            return redirect('index')
+        else:
+            return render(request, 'login.html', {'error': 'Neplatné údaje'})
+    return render(request, 'login.html')</code></pre>
+
+      <h6 class="mt-3">Příklad chráněné TODO view:</h6>
+      <pre><code class="language-python">@login_required
+def index(request):
+    if request.method == 'POST':
+        # Při vytváření úkolu přiřadíme aktuálního uživatele
+        Todo.objects.create(
+            user=request.user,  # ← Klíčové!
+            text=request.POST.get('ukol'),
+            # ... ostatní pole
+        )
+    
+    # Zobrazíme pouze úkoly aktuálního uživatele
+    todos = Todo.objects.filter(user=request.user, deleted=False)
+    return render(request, 'index.html', {'todos': todos})</code></pre>
+
+      <div class="alert alert-success mt-3">
+        <h6><i class="fas fa-check mr-2"></i>Důležité principy v kódu:</h6>
+        <ul class="mb-0">
+          <li><strong>Všude <code>user=request.user</code>:</strong> Zajišťuje, že uživatel vidí pouze svá data</li>
+          <li><strong><code>@login_required</code>:</strong> Automaticky přesměruje nepřihlášené uživatele</li>
+          <li><strong><code>get_object_or_404(Todo, pk=pk, user=request.user)</code>:</strong> Kontrola vlastnictví</li>
+          <li><strong>Přejmenování funkcí:</strong> <code>user_login</code> místo <code>login</code> kvůli konfliktu názvů</li>
+        </ul>
+      </div>
+
+      <div class="alert alert-info mt-3">
+        <strong>💡 Pro kompletní kód:</strong> Všechne views (<code>done</code>, <code>delete</code>, <code>edit</code>, <code>history</code>) 
+        postupte stejně - přidejte <code>@login_required</code> a filtrujte podle <code>user=request.user</code>.
+      </div>
+    </div>
+  </div>
+
+  <!-- BEZPEČNOSTNÍ PRINCIPY -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h2 class="mb-0"><i class="fas fa-shield-alt mr-2"></i> Bezpečnostní principy</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>✅ Co Django dělá automaticky:</h5>
+          <ul>
+            <li><strong>Hashování hesel:</strong> Hesla se nikdy neukládají v čitelné formě</li>
+            <li><strong>CSRF ochrana:</strong> Ochrana proti Cross-Site Request Forgery</li>
+            <li><strong>Session management:</strong> Bezpečné správa uživatelských sessions</li>
+            <li><strong>SQL Injection ochrana:</strong> ORM chrání před SQL útoky</li>
+          </ul>
+        </div>
+        
+        <div class="col-md-6">
+          <h5>🔧 Co musíte implementovat:</h5>
+          <ul>
+            <li><strong>@login_required:</strong> Označit views vyžadující přihlášení</li>
+            <li><strong>Filtrování dat:</strong> Zobrazovat pouze data patřící uživateli</li>
+            <li><strong>Kontrola vlastnictví:</strong> <code>user=request.user</code> v queries</li>
+            <li><strong>Validace vstupů:</strong> Ověřování dat od uživatelů</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="alert alert-danger mt-3">
+        <h6><i class="fas fa-exclamation-triangle mr-2"></i>Časté bezpečnostní chyby:</h6>
+        <ul class="mb-0">
+          <li><strong>Zapomenutí @login_required:</strong> Nepřihlášení uživatelé mohou přistupovat k datům</li>
+          <li><strong>Chybějící filtrování uživatelů:</strong> Uživatel vidí data jiných uživatelů</li>
+          <li><strong>Nekontrolované pk parametry:</strong> Úprava cizích záznamů pomocí URL</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTOVÁNÍ AUTENTIZACE -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h2 class="mb-0"><i class="fas fa-vial mr-2"></i> Testování a ladění</h2>
+    </div>
+    <div class="card-body">
+      <h5>Postup testování:</h5>
+      <ol>
+        <li><strong>Vytvořte několik testovacích uživatelů</strong> přes registraci nebo admin</li>
+        <li><strong>Přihlaste se jako první uživatel</strong> a vytvořte nějaké úkoly</li>
+        <li><strong>Odhlaste se a přihlaste jako druhý uživatel</strong></li>
+        <li><strong>Ověřte, že vidíte pouze své úkoly</strong></li>
+        <li><strong>Zkuste přistoupit k URL úkolu jiného uživatele</strong> (měla by vrátit 404)</li>
+      </ol>
+      
+      <div class="alert alert-success">
+        <h6><i class="fas fa-check mr-2"></i>Správné chování:</h6>
+        <ul class="mb-0">
+          <li>Nepřihlášený uživatel je přesměrován na /login/</li>
+          <li>Každý uživatel vidí pouze své úkoly</li>
+          <li>URL jako /edit/5/ funguje pouze pro vlastníka úkolu ID 5</li>
+          <li>Po odhlášení nelze přistupovat k chráněným stránkám</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PŘÍKAZY PRO MIGRACE -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-secondary text-white">
+      <h2 class="mb-0"><i class="fas fa-terminal mr-2"></i> Důležité příkazy</h2>
+    </div>
+    <div class="card-body">
+      <h5>Správa migrací:</h5>
+      <pre><code class="language-bash"># Vytvoření migrace po změně modelu
+python manage.py makemigrations
+
+# Zobrazení SQL kódu migrace
+python manage.py sqlmigrate todo_app 0001
+
+# Aplikování migrací
+python manage.py migrate
+
+# Kontrola stavu migrací
+python manage.py showmigrations
+
+# Vytvoření superusera
+python manage.py createsuperuser</code></pre>
+
+      <h5>Správa uživatelů v Django shellu:</h5>
+      <pre><code class="language-bash"># Spuštění Django shellu
+python manage.py shell
+
+# V shellu:
+from django.contrib.auth.models import User
+
+# Vytvoření uživatele
+user = User.objects.create_user('testuser', 'test@example.com', 'heslo123')
+
+# Seznam všech uživatelů
+User.objects.all()
+
+# Najít uživatele
+user = User.objects.get(username='testuser')
+
+# Změna hesla
+user.set_password('nove_heslo')
+user.save()</code></pre>
+    </div>
+  </div>
+</div>
+
     
 
     <div>

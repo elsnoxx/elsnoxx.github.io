@@ -1,0 +1,308 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #1976d2;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1em;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+}
+
+/* Původní pravidlo změňte na specifičtější */
+main:not(.admin-stats), .todo-list {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 2em;
+    max-width: 2000px;
+    margin: 2em auto;
+}
+
+/* KOMPLETNÍ ADMIN STATISTIKY CSS - ODSTRAŇTE DUPLICITY */
+main.admin-stats {
+    background: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07) !important;
+    max-width: none !important;
+    width: 95vw !important;
+    margin: 1em auto !important;
+    padding: 1em !important;
+}
+
+/* Bootstrap override pro admin karty */
+.admin-stats .container-fluid {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.admin-stats .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.admin-stats .col-lg-2,
+.admin-stats .col-md-4, 
+.admin-stats .col-sm-6 {
+    flex: 1 1 auto !important;
+    min-width: 180px !important;
+    max-width: none !important;
+    padding: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Na širších obrazovkách vynutíme 5 karet vedle sebe */
+@media (min-width: 992px) {
+    .admin-stats .col-lg-2 {
+        flex: 1 1 calc(20% - 1rem) !important;
+        max-width: calc(20% - 1rem) !important;
+    }
+}
+
+/* Na středních obrazovkách 3 karty vedle sebe */
+@media (min-width: 768px) and (max-width: 991px) {
+    .admin-stats .col-md-4 {
+        flex: 1 1 calc(33.333% - 1rem) !important;
+        max-width: calc(33.333% - 1rem) !important;
+    }
+}
+
+/* Na malých obrazovkách 2 karty vedle sebe */
+@media (max-width: 767px) {
+    .admin-stats .col-sm-6 {
+        flex: 1 1 calc(50% - 1rem) !important;
+        max-width: calc(50% - 1rem) !important;
+    }
+}
+
+.admin-stats .card {
+    height: 100% !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    transition: transform 0.2s !important;
+    margin: 0 !important;
+}
+
+.admin-stats .card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+/* Tabulka přes celou šířku */
+.admin-stats .table-responsive {
+    width: 100% !important;
+    overflow-x: auto !important;
+}
+
+.admin-stats .table {
+    width: 100% !important;
+    min-width: 800px !important;
+}
+
+h1 {
+    color: #1976d2;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.todo-list form, 
+main > form:not(.auth-form) {
+    margin-bottom: 1.5em;
+    display: flex;
+    gap: 0.5em;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.5em;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border 0.2s;
+}
+input[type="text"]:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #e3f2fd;
+}
+
+button[type="submit"], .btn-action {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.2em;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-left: 0.2em;
+}
+button[type="submit"]:hover, .btn-action:hover {
+    background: #1565c0;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0f4fa;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+li.done {
+    background: #e0f7fa;
+    color: #888;
+    text-decoration: line-through;
+}
+
+li.deleted {
+    background: #ffebee;
+    color: #b71c1c;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+li form {
+    margin: 0;
+    display: inline;
+}
+
+li span {
+    flex: 1;
+    margin-left: 0.5em;
+    font-size: 1.05em;
+}
+
+a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #b71c1c;
+}
+
+/* Styles for login/register forms */
+.login-form, .register-form {
+    margin-bottom: 1.5em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    display: block;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: #1976d2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+    background: #e3f2fd;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.alert {
+    padding: 0.75em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* Auth form specific styling */
+main form.auth-form,
+main .auth-form {
+    display: block;
+    gap: 0;
+    margin-bottom: 1.5em;
+}
+
+main form.auth-form .form-group,
+main .auth-form .form-group {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+/* Error list styling */
+ul.errorlist {
+    color: #721c24;
+    background: #ffebee;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    list-style: none;
+}
+
+ul.errorlist li {
+    background: none;
+    margin: 0;
+    padding: 0;
+    display: list-item;
+}
