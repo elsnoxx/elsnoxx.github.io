@@ -7,6 +7,7 @@ const workExperience = [
         description: "Správa hardware a software ve výrobě, implementace a údržba MES (Manufacturing Execution System) systémů pro optimalizaci výrobních procesů.",
         skills: ["MES", "Hardware", "Software", ".NET"],
         color: "blue",
+        logo: "https://media.licdn.com/dms/image/v2/D560BAQFctTvIDtEcSA/company-logo_200_200/B56Z2VSsHNGoAI-/0/1776326198308/hyundai_autoever_europe_czech_republik_logo?e=1778716800&v=beta&t=gv_rUoHYb5ctD81k26Uned4QarYDhgYu-7ncAjKJvZk",
         isActive: true
     },
     {
@@ -17,6 +18,7 @@ const workExperience = [
         description: "Výuka programování a IT technologií, příprava výukových materiálů a vedení praktických workshopů pro studenty různých úrovní.",
         skills: ["Vzdělávání", "Programování", "IT", "Python", "HTML", "JavaScript"],
         color: "green",
+        logo: "https://media.licdn.com/dms/image/v2/C510BAQEyfKQsdWriRg/company-logo_200_200/company-logo_200_200/0/1631375274397?e=1778716800&v=beta&t=gLYGfoUiGj44fwf6QpzTl3maJ2-eS6DncoDPAnbAdZM",
         isActive: false
     },
     {
@@ -27,6 +29,7 @@ const workExperience = [
         description: "Kompletní správa a tvorba webových stránek klubu, včetně design, development, SEO optimalizace a pravidelných aktualizací obsahu.",
         skills: ["Web Development", "Design", "SEO"],
         color: "purple",
+        logo: "./works-logo/Logo-DIXI-JPG.jpg",
         isActive: false
     }
 ];
@@ -85,7 +88,8 @@ export default function Timeline() {
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                                     {job.position}
                                 </h3>
-                                <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-3">
+                                <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-3 flex items-center gap-2">
+                                    <img src={job.logo} alt={`${job.company} logo`} className="w-6 h-6 rounded-full" />
                                     {job.company}
                                 </div>
                                 <p className="text-base text-gray-600 dark:text-gray-400 mb-4">

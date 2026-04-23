@@ -1,6 +1,7 @@
 import Me from "../components/me";
 
 import meImg from "../assets/img/me.jpeg";
+import Timeline from "../components/Timeline";
 
 
 export default function HomePage() {
@@ -14,10 +15,14 @@ export default function HomePage() {
 
         {/* Pravý sloupec */}
         <div className="flex-1">
-          <h1 className="text-3xl font-bold mb-4">Vítejte na mé osobní stránce</h1>
           <Me />
         </div>
-      </section>      
+      </section>
+
+      <section className="p-4 max-w-6xl mx-auto">
+        <Timeline />
+      </section>
+
     </>
   );
 }

@@ -1,17 +1,26 @@
+import React from "react";
+
 let projects = [
   { 
     name: "Web pro vyučování programování", 
     description: "Interaktivní webová aplikace pro výuku základů programování.", 
     technologies: ["HTML", "JavaScript", "Bootstrap"],
     githubUrl: "https://github.com/elsnoxx/elsnoxx.github.io",
-    liveUrl: "https://elsnoxx.github.io/" // volitelné
+    liveUrl: null
   },
   { 
     name: "Image Transfer Desktop App", 
     description: "Aplikace pro přenos obrázků mezi zařízeními v lokální síti.", 
     technologies: [".Net Framework", "WPF"],
     githubUrl: "https://github.com/elsnoxx/IMG-Transfer",
-    liveUrl: null // pokud nemá live demo
+    liveUrl: null
+  },
+  { 
+    name: "Bachelor Thesis - Biofeedback Multiplayer Games", 
+    description: "Výzkum a vývoj multiplayerových her využívajících biofeedback pro zlepšení zážitku.", 
+    technologies: [".Net 10", "SignalR", "React", "API", "Docker", "BLE LOW energy"],
+    githubUrl: "https://github.com/elsnoxx/Bachelor-thesis/tree/main",
+    liveUrl: null
   },
 ]
 

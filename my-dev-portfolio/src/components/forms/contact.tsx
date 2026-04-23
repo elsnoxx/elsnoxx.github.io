@@ -1,7 +1,7 @@
 
 export default function ContactForm() {
     return (
-        <form className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+        <form className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-6 text-center">Kontaktujte mě</h2>
             <div className="mb-4">
                 <label className="block text-gray-700 font-medium mb-2" htmlFor="name">
