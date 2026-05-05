@@ -189,4 +189,4 @@ def evaluate_stock(ticker_symbol):
     }
 
 # Spuštění pro Apple
-evaluate_stock("AAPL")
+# evaluate_stock("AAPL")
