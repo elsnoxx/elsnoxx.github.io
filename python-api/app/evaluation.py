@@ -107,86 +107,133 @@ def current_ratio_analysis(current_ratio):
             return "weak liquidity"
     return "Current ratio is not available"
 
+# --- GROWTH ---
+def growth_analysis(revenue_growth, earnings_growth):
+    # revenue_growth: info.get('revenueGrowth')
+    # earnings_growth: info.get('earningsGrowth')
+    score = 0
+    if revenue_growth and revenue_growth > 0.10: score += 1 # Růst tržeb > 10%
+    if earnings_growth and earnings_growth > 0.15: score += 1 # Růst zisku > 15%
+    
+    if score == 2: return "Aggressive Growth"
+    if score == 1: return "Steady Growth"
+    return "Stagnant / Value"
+
+# --- DEBT (Zadluženost) ---
+def debt_analysis(debt_to_equity):
+    # debt_to_equity: info.get('debtToEquity') -> v % (např. 150 = 1.5)
+    if debt_to_equity is None: return "Unknown"
+    if debt_to_equity < 50: return "Low Debt (Safe)"
+    if debt_to_equity < 100: return "Moderate Debt"
+    return "High Debt (Risk)"
+
+# --- CASH FLOW KVALITA ---
+def cash_flow_quality(fcf, net_income):
+    # Poměr FCF k čistému zisku - ukazuje, jestli zisk nejsou jen "čísla na papíře"
+    if not fcf or not net_income or net_income == 0: return "Unknown"
+    ratio = fcf / net_income
+    if ratio > 1: return "High Quality (Cash Cow)"
+    if ratio > 0.7: return "Good Quality"
+    return "Low Quality (Accounting Profit only)"
+
+# --- TECHNICKÁ ANALÝZA (Základy) ---
+def technical_summary(current_price, ma50, ma200):
+    # ma50: info.get('fiftyDayAverage')
+    # ma200: info.get('twoHundredDayAverage')
+    if not ma50 or not ma200: return "N/A"
+    
+    if current_price > ma50 > ma200:
+        return "Strong Bullish Trend"
+    if current_price < ma50 < ma200:
+        return "Strong Bearish Trend"
+    return "Sideways / Consolidation"
+
 def evaluate_stock(ticker_symbol):
-    # 1. Stažení dat pouze JEDNOU
+    # 1. Inicializace a stažení dat (včetně session pro prevenci 429)
     stock = yf.Ticker(ticker_symbol)
-    info = stock.info  # Toto je nejtěžší operace, uděláme ji jen jednou
+    info = stock.info
     
     if not info or 'currentPrice' not in info:
-        print(f"Chyba: Data pro {ticker_symbol} nebyla nalezena.")
-        return
+        return {"error": f"Ticker {ticker_symbol} nebyl nalezen nebo chybí data."}
 
-    # 2. Extrakce proměnných z info
-    price = info.get('currentPrice')
-    eps = info.get('trailingEps')
-    book_value = info.get('bookValue')
-    fcf = info.get('freeCashflow')
-    shares = info.get('sharesOutstanding')
-    div_rate = info.get('dividendRate')
-    pe = info.get('trailingPE')
-    beta = info.get('beta')
-    div_yield = info.get('dividendYield')
-    roe = info.get('returnOnEquity')
-    roic = info.get('returnOnAssets') # YFinance nemá čisté ROIC, ROA je nejbližší náhrada
-    net_margin = info.get('profitMargins')
-    curr_ratio = info.get('currentRatio')
-
-    # Odhad růstu (buď z info, nebo vlastní fixní odhad)
-    # yfinance občas vrací 'earningsQuarterlyGrowth'
-    growth = 0.10  # Konzervativní odhad 10 %
-
-    # 3. Výpočty Fair Price
-    g_price = graham_number(eps, book_value)
-    gr_price = graham_number_revision(eps, growth * 100)
-    dcf_price = simplified_dcf(fcf, growth, shares)
-    ddm_price = gordon_growth_model(div_rate, 0.05) # Předpoklad 5% růst dividendy
-    peg = peg_ratio(pe, growth * 100)
-
-    # 4. Výpis Výsledků
-    print(f"\n" + "="*40)
-    print(f" ANALÝZA AKCIE: {ticker_symbol} ".center(40, "="))
-    print(f"Aktuální cena: {price} USD")
-    print("-" * 40)
-    
-    print(f"{'Metoda':<25} | {'Férová cena':<10}")
-    print("-" * 40)
-    print(f"{'Grahamovo číslo':<25} | {round(g_price, 2) if g_price else 'N/A'}")
-    print(f"{'Graham Revidovaný':<25} | {round(gr_price, 2) if gr_price else 'N/A'}")
-    print(f"{'DCF Model (5y)':<25} | {round(dcf_price, 2) if dcf_price else 'N/A'}")
-    print(f"{'Gordon Model (DDM)':<25} | {round(ddm_price, 2) if ddm_price else 'N/A'}")
-    
-    print("-" * 40)
-    print(f"PEG Ratio: {round(peg, 2) if peg else 'N/A'} (Ideál < 1.0)")
-    print(f"Beta (Riziko): {beta_analysis(beta)}")
-    print(f"Ziskovost (ROE): {roe_analysis(roe)}")
-    print(f"Likvidita: {current_ratio_analysis(curr_ratio)}")
-    print("-" * 40)
-
-    # 5. Výpočet průměrné férové ceny a Margin of Safety
-    # Vezmeme průměr z dostupných metod kromě základního Grahama (který bývá u tech moc nízko)
-    valid_prices = [p for p in [gr_price, dcf_price, ddm_price] if p]
-    if valid_prices:
-        avg_fair_price = sum(valid_prices) / len(valid_prices)
-        margin = ((avg_fair_price - price) / avg_fair_price) * 100
-        print(f"PRŮMĚRNÁ FÉROVÁ CENA: {round(avg_fair_price, 2)} USD")
-        print(f"MARGIN OF SAFETY: {round(margin, 2)} %")
-        if margin > 0:
-            print("STAV: Akcie je pravděpodobně PODHODNOCENÁ")
-        else:
-            print("STAV: Akcie je pravděpodobně NADHODNOCENÁ")
-    print("="*40)
-    return {
-        "ticker": ticker_symbol,
-        "current_price": price,
-        "graham_number": g_price,
-        "graham_revision": gr_price,
-        "dcf_price": dcf_price,
-        "ddm_price": ddm_price,
-        "peg_ratio": peg,
-        "beta_analysis": beta_analysis(beta),
-        "roe_analysis": roe_analysis(roe),
-        "current_ratio_analysis": current_ratio_analysis(curr_ratio),
+    # 2. Sběr surových dat (Raw Data)
+    raw_data = {
+        "symbol": ticker_symbol,
+        "current_price": info.get('currentPrice'),
+        "eps": info.get('trailingEps'),
+        "book_value": info.get('bookValue'),
+        "fcf": info.get('freeCashflow'),
+        "shares_outstanding": info.get('sharesOutstanding'),
+        "dividend_rate": info.get('dividendRate'),
+        "dividend_yield": info.get('dividendYield'),
+        "pe_ratio": info.get('trailingPE'),
+        "beta": info.get('beta'),
+        "roe": info.get('returnOnEquity'),
+        "net_margin": info.get('profitMargins'),
+        "current_ratio": info.get('currentRatio'),
+        "low_52w": info.get('fiftyTwoWeekLow'),
+        "high_52w": info.get('fiftyTwoWeekHigh'),
     }
 
-# Spuštění pro Apple
-# evaluate_stock("AAPL")
+    # Konstanty pro výpočty
+    growth_est = 0.10  # 10% růst
+    discount_rate = 0.10
+    terminal_growth = 0.02
+
+    # 3. Výpočty Valuací (volání tvých existujících funkcí)
+    valuations = {
+        "graham_number": graham_number(raw_data['eps'], raw_data['book_value']),
+        "graham_revision": graham_number_revision(raw_data['eps'], growth_est * 100),
+        "dcf_price": simplified_dcf(raw_data['fcf'], growth_est, raw_data['shares_outstanding'], discount_rate, terminal_growth),
+        "gordon_model": gordon_growth_model(raw_data['dividend_rate'], 0.05, discount_rate),
+        "pe_multiple_fair": pe_multiples(raw_data['eps'], info.get('forwardPE', 20))
+    }
+
+    # 4. Slovní hodnocení (Indikátory)
+    indicators = {
+        "beta_status": beta_analysis(raw_data['beta']),
+        "dividend_status": dividend_analysis(raw_data['dividend_yield']),
+        "roe_status": roe_analysis(raw_data['roe']),
+        "margin_status": netp_profit_margin_analysis(raw_data['net_margin']),
+        "liquidity_status": current_ratio_analysis(raw_data['current_ratio']),
+        "price_position_52w": "bottom" if raw_data['current_price'] < (raw_data['low_52w'] * 1.1) else "top" if raw_data['current_price'] > (raw_data['high_52w'] * 0.9) else "middle"
+    }
+
+    # 5. Finální shrnutí
+    valid_prices = [p for p in [valuations["graham_revision"], valuations["dcf_price"], valuations["pe_multiple_fair"]] if p]
+    avg_fair_price = sum(valid_prices) / len(valid_prices) if valid_prices else None
+    
+    summary = {
+        "average_fair_price": avg_fair_price,
+        "margin_of_safety": ((avg_fair_price - raw_data['current_price']) / avg_fair_price * 100) if avg_fair_price else None,
+        "recommendation": "BUY" if (avg_fair_price and avg_fair_price > raw_data['current_price']) else "SELL/HOLD"
+    }
+
+    extended_analysis = {
+        "growth_profile": growth_analysis(info.get('revenueGrowth'), info.get('earningsGrowth')),
+        "debt_risk": debt_analysis(info.get('debtToEquity')),
+        "cash_flow_reliability": cash_flow_quality(info.get('freeCashflow'), info.get('netIncomeToCommon')),
+        "technical_trend": technical_summary(
+            info.get('currentPrice'), 
+            info.get('fiftyDayAverage'), 
+            info.get('twoHundredDayAverage')
+        )
+    }
+
+    # 2. Kontext trhu (Relativní ocenění vůči sektoru)
+    # yfinance neposkytuje průměr sektoru přímo, ale můžeme srovnat P/E s indexem S&P 500 (cca 20-25)
+    market_context = {
+        "market_premium": "Above Market" if (info.get('trailingPE') or 0) > 25 else "Below Market",
+        "sector": info.get('sector'),
+        "industry": info.get('industry')
+    }
+
+    # Finální spojení do návratového objektu
+    return {
+        "raw_data": raw_data,
+        "valuations": valuations,
+        "indicators": indicators,
+        "advanced_analysis": extended_analysis,
+        "market_context": market_context,
+        "summary": summary
+    }
