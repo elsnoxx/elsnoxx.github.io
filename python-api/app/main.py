@@ -1,6 +1,7 @@
 from http.client import HTTPException
 from fastapi import FastAPI
-from evaluation import evaluate_stock
+from app.evaluation import evaluate_stock
+from app.emailService import sentEmail
 
 app = FastAPI()
 
@@ -20,3 +21,11 @@ def evaluate_stock_endpoint(ticker_symbol: str):
     if evaluation is None:
         raise HTTPException(status_code=404, detail="Data not found")
     return {"ticker": ticker_symbol, "evaluation": evaluation}
+
+@app.get("/sent_email/{email}/{subject}")
+def send_email_endpoint(email: str, subject: str):
+    result, message = sentEmail(email, subject)
+    if result is True:
+        return {"message": message}
+    else:
+        return {"message": "Error sending email", "error": message}

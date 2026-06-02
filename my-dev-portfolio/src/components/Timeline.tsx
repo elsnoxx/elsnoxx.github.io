@@ -7,7 +7,7 @@ const workExperience = [
         description: "Správa hardware a software ve výrobě, implementace a údržba MES (Manufacturing Execution System) systémů pro optimalizaci výrobních procesů.",
         skills: ["MES", "Hardware", "Software", ".NET"],
         color: "blue",
-        logo: "https://media.licdn.com/dms/image/v2/D560BAQFctTvIDtEcSA/company-logo_200_200/B56Z2VSsHNGoAI-/0/1776326198308/hyundai_autoever_europe_czech_republik_logo?e=1778716800&v=beta&t=gv_rUoHYb5ctD81k26Uned4QarYDhgYu-7ncAjKJvZk",
+        logo: "https://media.licdn.com/dms/image/v2/D560BAQFctTvIDtEcSA/company-logo_200_200/B56Z2VSsHNGoAI-/0/1776326198308/hyundai_autoever_europe_czech_republik_logo?e=1781740800&v=beta&t=PkVsBtJhQTW5r2fhckS3fg3gBL5BPWnj1m4umFnwUFI",
         isActive: true
     },
     {
@@ -18,7 +18,7 @@ const workExperience = [
         description: "Výuka programování a IT technologií, příprava výukových materiálů a vedení praktických workshopů pro studenty různých úrovní.",
         skills: ["Vzdělávání", "Programování", "IT", "Python", "HTML", "JavaScript"],
         color: "green",
-        logo: "https://media.licdn.com/dms/image/v2/C510BAQEyfKQsdWriRg/company-logo_200_200/company-logo_200_200/0/1631375274397?e=1778716800&v=beta&t=gLYGfoUiGj44fwf6QpzTl3maJ2-eS6DncoDPAnbAdZM",
+        logo: "https://media.licdn.com/dms/image/v2/C510BAQEyfKQsdWriRg/company-logo_200_200/company-logo_200_200/0/1631375274397?e=1781740800&v=beta&t=eJ_BwGObJsO3YMPDYoAiIjnwLyWVILcxHYsA_0b7bZs",
         isActive: false
     },
     {
